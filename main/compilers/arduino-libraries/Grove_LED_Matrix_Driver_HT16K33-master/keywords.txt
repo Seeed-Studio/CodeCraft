@@ -1,0 +1,45 @@
+#######################################
+# Syntax Coloring Map For debug_lvc
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+Matrix_8x8  KEYWORD1
+orientation_type_t  KEYWORD1
+action_type_t   KEYWORD1
+blink_type_t    KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+init	KEYWORD2
+setBlinkRate	KEYWORD2
+setBrightness	KEYWORD2
+display 	KEYWORD2
+clear	KEYWORD2
+setDisplayOffset	KEYWORD2
+setDisplayOrientation	KEYWORD2
+writePixel	KEYWORD2
+writeBar	KEYWORD2
+writeIcon	KEYWORD2
+writeNumber	KEYWORD2
+writeString	KEYWORD2
+writeOnePicture KEYWORD2
+writePictures	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+MAX_BIG_BUFFER_SIZE	LITERAL1
+HT16K33_DEFAULT_I2C_ADDR	LITERAL1
+DISPLAY_ROTATE_0	LITERAL1
+DISPLAY_ROTATE_90	LITERAL1
+DISPLAY_ROTATE_180	LITERAL1
+DISPLAY_ROTATE_270	LITERAL1
+ACTION_SCROLLING	LITERAL1
+ACTION_SHIFT	LITERAL1
+BLINK_OFF	LITERAL1
+BLINK_2HZ	LITERAL1
+BLINK_1HZ	LITERAL1
+

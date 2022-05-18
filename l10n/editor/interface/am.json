@@ -1,0 +1,1266 @@
+{
+    "gui.backpack.errorBackpack": {
+        "message": "ስሕተት በየቦርሳውን ጭነት",
+        "description": "Error backpack message"
+    },
+    "gui.backpack.loadingBackpack": {
+        "message": "በመጫን ላይ...",
+        "description": "Loading backpack message"
+    },
+    "gui.backpack.emptyBackpack": {
+        "message": "ቦርሳው ባዶ ነው",
+        "description": "Empty backpack message"
+    },
+    "gui.unsupportedBrowser.label": {
+        "message": "አሳሽው አልተደገፈም ",
+        "description": ""
+    },
+    "gui.unsupportedBrowser.description": {
+        "message": "ይቅርታ ግን Scratch 3.0 Internet Explorerና Vivaldiና Opera ዌይስ Silk አይደግፍም። ዘመናዊ አሳሽ እንደ Google Chrome፣ Mozilla Firefox፣ ዌይስ Microsoft Edge እንዲጠቅሙ እናማፀናለን።",
+        "description": "Unsupported browser description"
+    },
+    "gui.unsupportedBrowser.back": {
+        "message": "ኋላ",
+        "description": "Button to go back in unsupported browser modal"
+    },
+    "gui.unsupportedBrowser.previewfaq": {
+        "message": "ተጨማሪ ለመልመድ፣ {previewFaqLink} ይጎብኙ ",
+        "description": "Invitation to try 3.0 preview"
+    },
+    "gui.unsupportedBrowser.previewfaqlinktext": {
+        "message": "በብዛት የሚጠየቁ ጥያቄዎች",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.cameraModal.cameraModalTitle": {
+        "message": "ፎቶ ቅረጽ",
+        "description": "Title for prompt to take a picture (to add as a new costume)."
+    },
+    "gui.cameraModal.loadingCameraMessage": {
+        "message": "ካሜራውን በመጫን ላይ...",
+        "description": "Notification to the user that the camera is loading"
+    },
+    "gui.cameraModal.permissionRequest": {
+        "message": "ይርስዎን ፍቃድ ያስፈልገናል ካመራዎን ለመጠቀም ",
+        "description": "Notification to the user that the app needs camera access"
+    },
+    "gui.cameraModal.retakePhoto": {
+        "message": "ደግሞ ፎቶ ቅረጽ ",
+        "description": "A button that allows the user to take the picture again, replacing the old one"
+    },
+    "gui.cameraModal.save": {
+        "message": "አስቀምጥ",
+        "description": "A button that allows the user to save the photo they took as a costume"
+    },
+    "gui.cameraModal.takePhoto": {
+        "message": "ፎቶ ቅረጽ",
+        "description": "A button to take a photo"
+    },
+    "gui.cameraModal.loadingCaption": {
+        "message": "በመጫን ላይ...",
+        "description": "A caption for a disabled button while the video from the camera is still loading"
+    },
+    "gui.cameraModal.enableCameraCaption": {
+        "message": "ካሜራ አብራ ",
+        "description": "A caption for a disabled button prompting the user to enable camera access"
+    },
+    "gui.cards.all-tutorials": {
+        "message": "መማሪያዎች",
+        "description": "Title for button to return to tutorials library"
+    },
+    "gui.cards.close": {
+        "message": "ዝጋ",
+        "description": "Title for button to close how-to card"
+    },
+    "gui.cards.more-things-to-try": {
+        "message": "ተጨማሪ ነገሮች ለመሞከር!",
+        "description": "Title card with more things to try"
+    },
+    "gui.cards.see-more": {
+        "message": "ተጨማሪ እዩ ",
+        "description": "Title for button to see more in how-to library"
+    },
+    "gui.comingSoon.message1": {
+        "message": "አትጨነቁ፣ የሰራንበት ነው {emoji}",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.comingSoon.message2": {
+        "message": "በቅርቡ ይደርሳል...",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.comingSoon.message3": {
+        "message": "የሰራንበት ነው {emoji}",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.connection.auto-scanning.noPeripheralsFound": {
+        "message": " ምንም መሳሪያዎች አልተገኙም ",
+        "description": "Text shown when no devices could be found"
+    },
+    "gui.connection.auto-scanning.prescan": {
+        "message": "መሳርያዎን ጠጋ አድርጉ፣ ከዛ ፍለጋውን ይጀምሩ።",
+        "description": "Prompt for beginning the search"
+    },
+    "gui.connection.auto-scanning.pressbutton": {
+        "message": "መሳርያዎቻቹን ላይ ያለውን ቁልፍ ጫን አድርጉ።",
+        "description": "Prompt for pushing the button on the device"
+    },
+    "gui.connection.auto-scanning.start-search": {
+        "message": "ፍለጋ ጀምር",
+        "description": "Button in prompt for starting a search"
+    },
+    "gui.connection.connecting-searchbutton": {
+        "message": "በፍለጋ ላይ...",
+        "description": "Label indicating that search is in progress"
+    },
+    "gui.connection.auto-scanning.try-again": {
+        "message": "እንደገና ይሞክሩ ",
+        "description": "Button in prompt for trying a device search again"
+    },
+    "gui.connection.connected": {
+        "message": "ተገናኝቷል",
+        "description": "Message indicating that a device was connected"
+    },
+    "gui.connection.disconnect": {
+        "message": "አቋርጥ",
+        "description": "Button to disconnect the device"
+    },
+    "gui.connection.go-to-editor": {
+        "message": "ወደ አርታዒ ሂድ",
+        "description": "Button to return to the editor"
+    },
+    "gui.connection.connecting-cancelbutton": {
+        "message": "በመገናኘት ላይ...",
+        "description": "Label indicating that connection is in progress"
+    },
+    "gui.connection.error.errorMessage": {
+        "message": "ዌይ፣ አንድ ስሕተት ተጋጠመ።",
+        "description": "The device connection process has encountered an error."
+    },
+    "gui.connection.error.tryagainbutton": {
+        "message": "እንደገና ይሞክሩ ",
+        "description": "Button to initiate trying the device connection again after an error"
+    },
+    "gui.connection.error.helpbutton": {
+        "message": "እርዳታ",
+        "description": "Button to view help content"
+    },
+    "gui.connection.peripheral-name-label": {
+        "message": "የመሳሪያ ስም",
+        "description": "Label for field showing the device name"
+    },
+    "gui.connection.connect": {
+        "message": "አገናኝ",
+        "description": "Button to start connecting to a specific device"
+    },
+    "gui.connection.scanning.lookingforperipherals": {
+        "message": "መሳሪያዎች የተፈለጉ ነው",
+        "description": "Text shown while scanning for devices"
+    },
+    "gui.connection.scanning.noPeripheralsFound": {
+        "message": " ምንም መሳሪያዎች አልተገኙም ",
+        "description": "Text shown when no devices could be found"
+    },
+    "gui.connection.scanning.instructions": {
+        "message": "መሳሪያዎን በላይ ያለውን ዝርዝር ይምረጡ።",
+        "description": "Prompt for choosing a device to connect to"
+    },
+    "gui.connection.search": {
+        "message": "አድስ",
+        "description": "Button in prompt for starting a search"
+    },
+    "gui.connection.unavailable.installscratchlink": {
+        "message": "Scratch Linkን እንደጫኑና እንደሚሰራ አረጋግጡ",
+        "description": "Message for getting Scratch Link installed"
+    },
+    "gui.connection.unavailable.enablebluetooth": {
+        "message": "Bluetooth እንደበራ አረጋግጡ",
+        "description": "Message for making sure Bluetooth is enabled"
+    },
+    "gui.connection.unavailable.tryagainbutton": {
+        "message": "እንደገና ይሞክሩ ",
+        "description": "Button to initiate trying the device connection again after an error"
+    },
+    "gui.connection.unavailable.helpbutton": {
+        "message": "እርዳታ",
+        "description": "Button to view help content"
+    },
+    "gui.controls.go": {
+        "message": "ሂድ",
+        "description": "Green flag button title"
+    },
+    "gui.controls.stop": {
+        "message": "አቁም",
+        "description": "Stop button title"
+    },
+    "gui.crashMessage.label": {
+        "message": "Oops! Something went wrong.",
+        "description": "Crash Message title"
+    },
+    "gui.crashMessage.description": {
+        "message": "We are so sorry, but it looks like Scratch has crashed. This bug has been\n                        automatically reported to the Scratch Team. Please refresh your page to try\n                        again.",
+        "description": "Message to inform the user that page has crashed."
+    },
+    "gui.crashMessage.reload": {
+        "message": "Reload",
+        "description": "Button to reload the page when page crashes"
+    },
+    "gui.customProcedures.myblockModalTitle": {
+        "message": "ጡብ ፍጠር",
+        "description": "Title for the modal where you create a custom block."
+    },
+    "gui.customProcedures.addAnInputNumberText": {
+        "message": "ግቤት ጨምር",
+        "description": "Label for button to add a number/text input"
+    },
+    "gui.customProcedures.numberTextType": {
+        "message": "ቁጥር ዌይስ ጽሁፍ",
+        "description": "Description of the number/text input type"
+    },
+    "gui.customProcedures.addAnInputBoolean": {
+        "message": "ግቤት ጨምር",
+        "description": "Label for button to add a boolean input"
+    },
+    "gui.customProcedures.booleanType": {
+        "message": "ቡልያዊ",
+        "description": "Description of the boolean input type"
+    },
+    "gui.customProcedures.addALabel": {
+        "message": "መሰየሚያ ለጥፍ",
+        "description": "Label for button to add a label"
+    },
+    "gui.customProcedures.runWithoutScreenRefresh": {
+        "message": "ፕሮግራሙን ያለ ስክሪኑ ማደስ ክፈት",
+        "description": "Label for checkbox to run without screen refresh"
+    },
+    "gui.customProcedures.cancel": {
+        "message": "ይቁም",
+        "description": "Label for button to cancel custom procedure edits"
+    },
+    "gui.customProcedures.ok": {
+        "message": "እሺ",
+        "description": "Label for button to save new custom procedure"
+    },
+    "gui.SpriteInfo.direction": {
+        "message": "አቅጣጫ",
+        "description": "Sprite info direction label"
+    },
+    "gui.directionPicker.rotationStyles.allAround": {
+        "message": "ዙሪያውን",
+        "description": "Button to change to the all around rotation style"
+    },
+    "gui.directionPicker.rotationStyles.leftRight": {
+        "message": "ግራ/ቀኝ",
+        "description": "Button to change to the left-right rotation style"
+    },
+    "gui.directionPicker.rotationStyles.dontRotate": {
+        "message": "አትዞር",
+        "description": "Button to change to the dont rotate rotation style"
+    },
+    "gui.gui.addExtension": {
+        "message": "ቅጥያ ጨምር",
+        "description": "Button to add an extension in the target pane"
+    },
+    "gui.gui.codeTab": {
+        "message": "ኮድ",
+        "description": "Button to get to the code panel"
+    },
+    "gui.gui.backdropsTab": {
+        "message": "የጀርባ ምስሎች",
+        "description": "Button to get to the backdrops panel"
+    },
+    "gui.gui.costumesTab": {
+        "message": "አልባሳት",
+        "description": "Button to get to the costumes panel"
+    },
+    "gui.gui.soundsTab": {
+        "message": "ድምጾች",
+        "description": "Button to get to the sounds panel"
+    },
+    "gui.importInfo.title": {
+        "message": "የScratch 2.0 ፕሮጀክት እይ",
+        "description": "Scratch 2.0 import modal label - for accessibility"
+    },
+    "gui.importInfo.betamessage": {
+        "message": "አንድ አገናኝ ለየእርስዎ የተጋራ Scratch ፕሮጀክት አስገቡ። ለውጦች በዚ 3.0 Beta የሚሰሩ አይቀመጡም።",
+        "description": "Import project message"
+    },
+    "gui.importInfo.message": {
+        "message": "አንድ አገናኝ ለየእርስዎ የተጋራ Scratch ፕሮጀክት አስገቡ። ለውጦች በዚ 3.0 Preview የሚሰሩ አይቀመጡም።",
+        "description": "Import project message"
+    },
+    "gui.importInfo.invalidFormatError": {
+        "message": "ዌይኔ፣ ያ የፕሮጀክት አገናኝ ዌይም መታወቅያ ቁርትን ልክ አይደልም።",
+        "description": "Invalid project link or id message"
+    },
+    "gui.importModal.viewproject": {
+        "message": "ዕየታ",
+        "description": "Label for button to load a scratch 2.0 project"
+    },
+    "gui.importInfo.goback": {
+        "message": "ተመለሱ",
+        "description": "Label for button to back out of importing a project"
+    },
+    "gui.importInfo.previewfaq": {
+        "message": "ተጨማሪ ለመልመድ፣ {previewFaqLink} ይጎብኙ።",
+        "description": "Invitation to try 3.0 preview"
+    },
+    "gui.importInfo.previewfaqlinktext": {
+        "message": "በብዛት የሚጠየቁ ጥያቄዎች",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.extensionLibrary.comingSoon": {
+        "message": "በቅርቡ ይመጣል",
+        "description": "Label for extensions that are not yet implemented"
+    },
+    "gui.library.filterPlaceholder": {
+        "message": "ፈልጉ",
+        "description": "Placeholder text for library search field"
+    },
+    "gui.library.allTag": {
+        "message": "ሁሉም",
+        "description": "Label for library tag to revert to all items after filtering by tag."
+    },
+    "gui.loader.message1": {
+        "message": "ጥምሮች በመፍጠር ላይ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message2": {
+        "message": "ስፕራይት በመጫን ላይ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message3": {
+        "message": "ድምጽ በመጫን ላይ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message4": {
+        "message": "ቅጥያ በመጫን ላይ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message5": {
+        "message": "ድመት በማጎራት ላይ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message6": {
+        "message": "ናኖዎች በማሰራጨት ላይ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message7": {
+        "message": "ጎቦዎች በመንፋት ላይ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message8": {
+        "message": "ኤሞጂዎች በማዘጋቸት ላይ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.headline": {
+        "message": "ፕሮጀክት በመጫን ላይ",
+        "description": "Main loading message"
+    },
+    "gui.menuBar.LanguageSelector": {
+        "message": "የቋንቋ መምረጫ",
+        "description": "accessibility text for the language selection menu"
+    },
+    "gui.menuBar.tutorialsLibrary": {
+        "message": "መማሪያዎች",
+        "description": "accessibility text for the tutorials button"
+    },
+    "gui.menuBar.restoreSprite": {
+        "message": "ስፕራይቱን መልስ",
+        "description": "Menu bar item for restoring the last deleted sprite."
+    },
+    "gui.menuBar.restoreSound": {
+        "message": "ድምጹን መልስ",
+        "description": "Menu bar item for restoring the last deleted sound."
+    },
+    "gui.menuBar.restoreCostume": {
+        "message": "ልብሱን መልስ",
+        "description": "Menu bar item for restoring the last deleted costume."
+    },
+    "gui.menuBar.restore": {
+        "message": "መልስ",
+        "description": "Menu bar item for restoring the last deleted item in its disabled state."
+    },
+    "gui.menuBar.saveNow": {
+        "message": "አሁን አስቀምጥ",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.share": {
+        "message": "አጋራ",
+        "description": "Label for project share button"
+    },
+    "gui.menuBar.file": {
+        "message": "ፋይል",
+        "description": "Text for file dropdown menu"
+    },
+    "gui.menuBar.new": {
+        "message": "አዲስ",
+        "description": "Menu bar item for creating a new project"
+    },
+    "gui.menuBar.saveAsCopy": {
+        "message": "እንደ ቅጂ  አስቀምጥ",
+        "description": "Menu bar item for saving as a copy"
+    },
+    "gui.menuBar.uploadFromComputer": {
+        "message": "ከኮምፒዩተርዎ ይጫን",
+        "description": "Menu bar item for uploading a project from your computer"
+    },
+    "gui.menuBar.downloadToComputer": {
+        "message": "ወደ ኮምፒዩተርዎ ይቀመጥ",
+        "description": "Menu bar item for downloading a project to your computer"
+    },
+    "gui.menuBar.edit": {
+        "message": "ቀይር",
+        "description": "Text for edit dropdown menu"
+    },
+    "gui.menuBar.turboModeOff": {
+        "message": "ቱርቦ ሞድ አጥፋ",
+        "description": "Menu bar item for turning off turbo mode"
+    },
+    "gui.menuBar.turboModeOn": {
+        "message": "ቱርቦ ሞድ አብራ",
+        "description": "Menu bar item for turning on turbo mode"
+    },
+    "gui.menuBar.seeCommunity": {
+        "message": "ህብረተሰቡን ይዩ",
+        "description": "Label for see community button"
+    },
+    "gui.menuBar.joinScratch": {
+        "message": "የScratch አባል ይሁኑ",
+        "description": "Link for creating a Scratch account"
+    },
+    "gui.menuBar.signIn": {
+        "message": "ግቡ",
+        "description": "Link for signing in to your Scratch account"
+    },
+    "gui.menuBar.giveFeedback": {
+        "message": "አስተያየት ይስጡ",
+        "description": "Label for feedback form modal button"
+    },
+    "gui.gui.projectTitlePlaceholder": {
+        "message": "Project title here",
+        "description": "Placeholder for project title when blank"
+    },
+    "gui.modal.help": {
+        "message": "እርዳታ",
+        "description": "Help button in modal"
+    },
+    "gui.modal.back": {
+        "message": "ኋላ",
+        "description": "Back button in modal"
+    },
+    "gui.monitor.listMonitor.empty": {
+        "message": "(empty)",
+        "description": "Text shown on a list monitor when a list is empty"
+    },
+    "gui.monitor.listMonitor.listLength": {
+        "message": "length {length}",
+        "description": "Length label on list monitors. DO NOT translate {length} (with brackets)."
+    },
+    "gui.monitor.contextMenu.default": {
+        "message": "መደበኛ የሚነበብ ነገር",
+        "description": "Menu item to switch to the default monitor"
+    },
+    "gui.monitor.contextMenu.large": {
+        "message": "ትልቅ የሚነበብ ነገር",
+        "description": "Menu item to switch to the large monitor"
+    },
+    "gui.monitor.contextMenu.slider": {
+        "message": "ማንሸራተቻ",
+        "description": "Menu item to switch to the slider monitor"
+    },
+    "gui.previewInfo.label": {
+        "message": "Scratch 3.0 ይሞክሩ",
+        "description": "Scratch 3.0 modal label - for accessibility"
+    },
+    "gui.previewInfo.welcome": {
+        "message": "እንኳን ድህና መጡ ወደ የScratch 3.0 Beta",
+        "description": "Header for Preview Info Modal"
+    },
+    "gui.previewModal.notnowtooltip": {
+        "message": "አሁን አደለም",
+        "description": "Tooltip for Not Now button"
+    },
+    "gui.previewModal.tryittooltip": {
+        "message": "ይሞክሩት",
+        "description": "Tooltip for Try It button"
+    },
+    "gui.previewModal.viewprojecttooltip": {
+        "message": "2.0 ፕሮጀክት ይዩ",
+        "description": "Tooltip for View 2.0 Project button"
+    },
+    "gui.previewInfo.betawelcome": {
+        "message": "እንኳን ድህና መጡ ወደ የScratch 3.0 Beta",
+        "description": "Header for Beta Info Modal"
+    },
+    "gui.previewInfo.invitation": {
+        "message": "የሚቀጥለው Scratch ስሪትን በመስራት ላይ ነን። እንዲሞክሩት ተደስተናል!",
+        "description": "Invitation to try 3.0 Beta"
+    },
+    "gui.previewInfo.notnow": {
+        "message": "አሁን አደለም",
+        "description": "Label for button to back out of trying Scratch 3.0 Beta"
+    },
+    "gui.previewModal.tryit": {
+        "message": "ሞክሩት! {caticon}",
+        "description": "Label for button to try Scratch 3.0 Beta"
+    },
+    "gui.previewModal.viewproject": {
+        "message": "2.0 ፕሮጀክት ይዩ",
+        "description": "Label for button to import a 2.0 project"
+    },
+    "gui.previewInfo.previewfaq": {
+        "message": "ተጨማሪ ለመልመድ፣ {previewFaqLink} ይጎብኙ።",
+        "description": "Invitation to try 3.0 Beta"
+    },
+    "gui.previewInfo.previewfaqlinktext": {
+        "message": "በብዛት የሚጠየቁ ጥያቄዎች",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.gui.variableScopeOptionAllSprites": {
+        "message": "ለሁሉም ስፕራይቶች",
+        "description": "Option message when creating a variable for making it available to all sprites"
+    },
+    "gui.gui.variableScopeOptionSpriteOnly": {
+        "message": "ለዚህ ስፕራይት ብቻ",
+        "description": "Option message when creating a varaible for making it only available to the current sprite"
+    },
+    "gui.gui.variablePrompt": {
+        "message": "ተጨማሪ ምርጫዎች",
+        "description": "Dropdown message for variable/list options"
+    },
+    "gui.gui.variablePromptAllSpritesMessage": {
+        "message": "ይህ ተለዋዋጭ ለሁሉም ስፕራይቶች ጠቀቃሚ ይሆናል።",
+        "description": "A message that displays in a variable modal when the stage is selected indicating that the variable being created will available to all sprites."
+    },
+    "gui.prompt.cancel": {
+        "message": "ይቁም",
+        "description": "Button in prompt for cancelling the dialog"
+    },
+    "gui.prompt.ok": {
+        "message": "እሺ",
+        "description": "Button in prompt for confirming the dialog"
+    },
+    "gui.playbackStep.stopMsg": {
+        "message": "አቁም",
+        "description": "Stop/Play button in recording playback"
+    },
+    "gui.playbackStep.playMsg": {
+        "message": "ይጫወታሉ",
+        "description": "Stop/Play button in recording playback"
+    },
+    "gui.playbackStep.loadingMsg": {
+        "message": "በመጫን ላይ...",
+        "description": "Loading/Save button in recording playback"
+    },
+    "gui.playbackStep.saveMsg": {
+        "message": "አስቀምጥ",
+        "description": "Loading/Save button in recording playback"
+    },
+    "gui.playbackStep.reRecordMsg": {
+        "message": "በድጋሜ ቅዳ",
+        "description": "Button to re-record sound in recording playback"
+    },
+    "gui.recordModal.title": {
+        "message": "ድምጹ ቅዳ",
+        "description": "Recording modal title"
+    },
+    "gui.recordingStep.beginRecord": {
+        "message": "Begin recording by clicking the button below",
+        "description": "Message for recording sound modal"
+    },
+    "gui.recordingStep.permission": {
+        "message": "{arrow}We need your permission to use your microphone",
+        "description": "Permission required notice in recording sound modal. Do not translate {arrow}"
+    },
+    "gui.recordingStep.stop": {
+        "message": "Stop recording",
+        "description": "Stop recording button label"
+    },
+    "gui.recordingStep.record": {
+        "message": "ቅዳ",
+        "description": "Record button label"
+    },
+    "gui.soundEditor.sound": {
+        "message": "ድምጽ",
+        "description": "Label for the name of the sound"
+    },
+    "gui.soundEditor.play": {
+        "message": "ይጫወታሉ",
+        "description": "Title of the button to start playing the sound"
+    },
+    "gui.soundEditor.stop": {
+        "message": "አቁም",
+        "description": "Title of the button to stop the sound"
+    },
+    "gui.soundEditor.trim": {
+        "message": "ቁረጥ",
+        "description": "Title of the button to start trimminging the sound"
+    },
+    "gui.soundEditor.save": {
+        "message": "አስቀምጥ",
+        "description": "Title of the button to save trimmed sound"
+    },
+    "gui.soundEditor.undo": {
+        "message": "መልስ",
+        "description": "Title of the button to undo"
+    },
+    "gui.soundEditor.redo": {
+        "message": "ድጋሜ አድርግ",
+        "description": "Title of the button to redo"
+    },
+    "gui.soundEditor.faster": {
+        "message": "በፍጥነት",
+        "description": "Title of the button to apply the faster effect"
+    },
+    "gui.soundEditor.slower": {
+        "message": "በዝግታ",
+        "description": "Title of the button to apply the slower effect"
+    },
+    "gui.soundEditor.echo": {
+        "message": "ማስተጋባት",
+        "description": "Title of the button to apply the echo effect"
+    },
+    "gui.soundEditor.robot": {
+        "message": "ሮቦት",
+        "description": "Title of the button to apply the robot effect"
+    },
+    "gui.soundEditor.louder": {
+        "message": "ከፍ በል",
+        "description": "Title of the button to apply the louder effect"
+    },
+    "gui.soundEditor.softer": {
+        "message": "ቀስ በል",
+        "description": "Title of the button to apply thr.softer effect"
+    },
+    "gui.soundEditor.reverse": {
+        "message": "ቀልብስ",
+        "description": "Title of the button to apply the reverse effect"
+    },
+    "gui.SpriteInfo.spritePlaceholder": {
+        "message": "ስም",
+        "description": "Placeholder text for sprite name"
+    },
+    "gui.SpriteInfo.sprite": {
+        "message": "ገፀ-ባህርይ",
+        "description": "Sprite info label"
+    },
+    "gui.SpriteInfo.show": {
+        "message": "አሳይ",
+        "description": "Sprite info show label"
+    },
+    "gui.SpriteInfo.size": {
+        "message": "ልክ",
+        "description": "Sprite info size label"
+    },
+    "gui.spriteSelectorItem.contextMenuDuplicate": {
+        "message": "አባዛ",
+        "description": "Menu item to duplicate in the right click menu"
+    },
+    "gui.spriteSelectorItem.contextMenuDelete": {
+        "message": "ደምስስ",
+        "description": "Menu item to delete in the right click menu"
+    },
+    "gui.spriteSelectorItem.contextMenuExport": {
+        "message": "ማስወጣት",
+        "description": "Menu item to export the selected item"
+    },
+    "gui.spriteSelector.addSpriteFromLibrary": {
+        "message": "ስፕራይትን ምረጥ",
+        "description": "Button to add a sprite in the target pane from library"
+    },
+    "gui.spriteSelector.addSpriteFromPaint": {
+        "message": "ቀለም ቅባ",
+        "description": "Button to add a sprite in the target pane from paint"
+    },
+    "gui.spriteSelector.addSpriteFromSurprise": {
+        "message": "አድናቆት",
+        "description": "Button to add a random sprite in the target pane"
+    },
+    "gui.spriteSelector.addSpriteFromFile": {
+        "message": "ስፕራይቱን ስቀል",
+        "description": "Button to add a sprite in the target pane from file"
+    },
+    "gui.stageHeader.stageSizeLarge": {
+        "message": "ወደ የተለቀ መድረክ ለውጥ",
+        "description": "Button to change stage size to large"
+    },
+    "gui.stageHeader.stageSizeSmall": {
+        "message": "ወደ ያነሰ መድረክ ለውጥ",
+        "description": "Button to change stage size to small"
+    },
+    "gui.stageHeader.stageSizeFull": {
+        "message": "ሙሉ ማሳያ ሞድ ውስጥ ግባ",
+        "description": "Button to change stage size to full screen"
+    },
+    "gui.stageHeader.stageSizeUnFull": {
+        "message": "ከሙሉ ማሳያ ሞድ ውስጥ ውጣ",
+        "description": "Button to get out of full screen mode"
+    },
+    "gui.stageHeader.fullscreenControl": {
+        "message": "ሙሉ ማሳይ አመራር",
+        "description": "Button to enter/exit full screen mode"
+    },
+    "gui.spriteSelector.addBackdropFromLibrary": {
+        "message": "የጀርባ ምስል ይምረጡ",
+        "description": "Button to add a stage in the target pane from library"
+    },
+    "gui.stageSelector.addBackdropFromPaint": {
+        "message": "ቀለም ቅባ",
+        "description": "Button to add a stage in the target pane from paint"
+    },
+    "gui.stageSelector.addBackdropFromSurprise": {
+        "message": "አድናቆት",
+        "description": "Button to add a random stage in the target pane"
+    },
+    "gui.stageSelector.addBackdropFromFile": {
+        "message": "የጀርባ ምስሉን ስቀል",
+        "description": "Button to add a stage in the target pane from file"
+    },
+    "gui.stageSelector.stage": {
+        "message": "መድረክ",
+        "description": "Label for the stage in the stage selector"
+    },
+    "gui.stageSelector.backdrops": {
+        "message": "የጀርባ ምስሎች",
+        "description": "Label for the backdrops in the stage selector"
+    },
+    "gui.turboMode.active": {
+        "message": "ተርቦ ሞድ",
+        "description": "Label indicating turbo mode is active"
+    },
+    "gui.webglModal.label": {
+        "message": "የእርስዎ አሳሽ WebGL አይደግፍም",
+        "description": "WebGL missing title"
+    },
+    "gui.webglModal.description": {
+        "message": "ይቅርታ፣ የእርዎ አሳሽ ዌይስ ኮምፒዩተር {webGlLink}ን አይደግፍም። ይህ ቴክኖሎጂ አስፈላጊ ነው ለScratch 3.0።",
+        "description": "WebGL missing message"
+    },
+    "gui.webglModal.webgllink": {
+        "message": "WebGLን አይደግፍም",
+        "description": "link part of your browser does not support WebGL message"
+    },
+    "gui.webglModal.back": {
+        "message": "ኋላ",
+        "description": "Label for button go back when browser is unsupported"
+    },
+    "gui.webglModal.previewfaq": {
+        "message": "ተጨማሪ ለመልመድ፣ {previewFaqLink} ይጎብኙ።",
+        "description": "Scratch 3.0 FAQ description"
+    },
+    "gui.webglModal.previewfaqlinktext": {
+        "message": "በብዛት የሚጠየቁ ጥያቄዎች",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.costumeLibrary.chooseABackdrop": {
+        "message": "የጀርባ ምስል ይምረጡ",
+        "description": "Heading for the backdrop library"
+    },
+    "gui.costumeLibrary.chooseACostume": {
+        "message": "ልብስ ይምረጡ",
+        "description": "Heading for the costume library"
+    },
+    "gui.costumeTab.addBackdropFromLibrary": {
+        "message": "የጀርባ ምስል ይምረጡ",
+        "description": "Button to add a backdrop in the editor tab"
+    },
+    "gui.costumeTab.addCostumeFromLibrary": {
+        "message": "ልብስ ይምረጡ",
+        "description": "Button to add a costume in the editor tab"
+    },
+    "gui.costumeTab.addBlankCostume": {
+        "message": "ቀለም ቅባ",
+        "description": "Button to add a blank costume in the editor tab"
+    },
+    "gui.costumeTab.addSurpriseCostume": {
+        "message": "አድናቆት",
+        "description": "Button to add a surprise costume in the editor tab"
+    },
+    "gui.costumeTab.addFileBackdrop": {
+        "message": "የጀርባ ምስሉን ስቀል",
+        "description": "Button to add a backdrop by uploading a file in the editor tab"
+    },
+    "gui.costumeTab.addFileCostume": {
+        "message": "ልብሱን ስቀል",
+        "description": "Button to add a costume by uploading a file in the editor tab"
+    },
+    "gui.costumeTab.addCameraCostume": {
+        "message": "ካሜራ",
+        "description": "Button to use the camera to create a costume costume in the editor tab"
+    },
+    "gui.extensionLibrary.chooseAnExtension": {
+        "message": "ቅጥያ ይምረጡ",
+        "description": "Heading for the extension library"
+    },
+    "gui.extensionLibrary.extensionUrl": {
+        "message": "የቅጥያው ገፅ አድራሻ ያስገቡ",
+        "description": "Prompt for unoffical extension url"
+    },
+    "gui.projectLoader.loadError": {
+        "message": "የተመረጠው ፕሮጀክት ሰንድ ለመጫን አልተሳካም",
+        "description": "An error that displays when a local project file fails to load."
+    },
+    "gui.recordingStep.alertMsg": {
+        "message": "መቅዳት መጀመር አልተቻለም",
+        "description": "Alert for recording error"
+    },
+    "gui.soundLibrary.chooseASound": {
+        "message": "ድምጽ ይምረጡ",
+        "description": "Heading for the sound library"
+    },
+    "gui.soundTab.fileUploadSound": {
+        "message": "ድምጹን ስቀል",
+        "description": "Button to upload sound from file in the editor tab"
+    },
+    "gui.soundTab.surpriseSound": {
+        "message": "አድናቆት",
+        "description": "Button to get a random sound in the editor tab"
+    },
+    "gui.soundTab.recordSound": {
+        "message": "ቅዳ",
+        "description": "Button to record a sound in the editor tab"
+    },
+    "gui.soundTab.addSoundFromLibrary": {
+        "message": "ድምጽ ይምረጡ",
+        "description": "Button to add a sound in the editor tab"
+    },
+    "gui.spriteLibrary.chooseASprite": {
+        "message": "ስፕራይትን ምረጥ",
+        "description": "Heading for the sprite library"
+    },
+    "gui.tipsLibrary.tutorials": {
+        "message": "አጋዥ ስልጠና ይምረጡ",
+        "description": "Heading for the help/tutorials library"
+    },
+    "gui.defaultProject.meow": {
+        "message": "Meow",
+        "description": "Name for the meow sound"
+    },
+    "gui.defaultProject.variable": {
+        "message": "my variable",
+        "description": "Name for the default variable"
+    },
+    "gui.howtos.intro-move-sayhello-hat.name": {
+        "message": "መጀመር",
+        "description": "Name for the 'Getting Started' how-to"
+    },
+    "gui.howtos.intro-move.step_stepMove": {
+        "message": "የእንቅስቃሴ ብሎኬታ ይጨመር",
+        "description": "Step name for 'Add a move block' step"
+    },
+    "gui.howtos.add-a-move-block.step_stepMoveSayHello": {
+        "message": "አረንጓዴ ባንዲራው ጠቅ ይድረጉ ለመጀመር",
+        "description": "Step name for 'Add A Say Block' step"
+    },
+    "gui.howtos.animate-a-name.name": {
+        "message": "ስምዎን ያቀናብሩ",
+        "description": "Name for the 'Animate a Name' how-to"
+    },
+    "gui.howtos.animate-a-name.step_AnimatePickLetter": {
+        "message": "የፊደል ስፕራይት ይምረጡ",
+        "description": "Step name for 'Pick a Letter Sprite' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimatePlaySound": {
+        "message": "ድምጽ ይጫወት ጠቅ ሲደረግ",
+        "description": "Step name for 'Play a Sound When Clicked' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimatePickLetter2": {
+        "message": "ሌላ ፊደል ይምረጡ",
+        "description": "Step name for 'Pick Another Letter Sprite"
+    },
+    "gui.howtos.animate-a-name.step_AnimateChangeColor": {
+        "message": "ቀለም ቀይር",
+        "description": "Step name for 'Change color' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimateSpin": {
+        "message": "ተጨማሪ የፊደል ስፕራይት ይምረጡና ያዘዋውሩት",
+        "description": "Step name for 'Pick Another Letter Sprite & Make It Spin' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimateGrow": {
+        "message": "ተጨማሪ የፊደል ስፕራይት ይምረጡና ያሳድጉት",
+        "description": "Step name for 'Pick Another Letter Sprite & Make It Grow!' step"
+    },
+    "gui.howtos.make-music.name": {
+        "message": "ሙዚቃ ይፍጠሩ",
+        "description": "Name for the 'Make Music' how-to"
+    },
+    "gui.howtos.Make-Music.step_PickInstrument": {
+        "message": "የመሳሪያ ስፕራይት ይምረጡ",
+        "description": "Step name for 'Pick an Instrument Sprite' step"
+    },
+    "gui.howtos.Make-Music.step_PlaySoundClick": {
+        "message": "ድምጽ አጫውት ጠቅ ሲደረግ",
+        "description": "Step name for 'Play Sound When Clicked' step"
+    },
+    "gui.howtos.Make-Music.step_MakeSong": {
+        "message": "ዘፈን ይፍጠሩ",
+        "description": "Step name for 'Create a Song' step"
+    },
+    "gui.howtos.make-music.step_MakeBeat": {
+        "message": "ታምቡር ይምረጡና ምት ይስሩ",
+        "description": "Step name for 'Choose a Drum & Make a Beat' step"
+    },
+    "gui.howtos.make-music.step_MakeBeatBox": {
+        "message": "የማይክሮፎን ስፕራይቱንና አድናቆት ቢትቦክሱን ይምረጡ",
+        "description": "Step name for 'Choose the Microphone Sprite & Surprise Beatbox' step"
+    },
+    "gui.howtos.make-a-game.name": {
+        "message": "የጠቅ ጨዋታ ይገንቡ",
+        "description": "Name for the 'Make a Clicker Game' how-to"
+    },
+    "gui.howtos.Make-A-Game.step_GamePickSprite": {
+        "message": "ስፕራይትን ይምረጡ",
+        "description": "Step name for 'Pick A Sprite' step"
+    },
+    "gui.howtos.make-a-game.step_GamePlaySound": {
+        "message": "ድምጽ አጫውት ጠቅ ሲደረግ",
+        "description": "Play Sound When Clicked' step"
+    },
+    "gui.howtos.make-a-game.step_GameAddScore": {
+        "message": "የቆጣሪ ተለዋዋጭ ይፍጠሩ",
+        "description": "Step name for 'Create Score Variable' step"
+    },
+    "gui.howtos.make-a-game.step_GameChangeScore": {
+        "message": "ጠቅ ሲደረግ ቆጣሪው ይጨመር",
+        "description": "Step name for 'When Clicked Increase Score' step"
+    },
+    "gui.howtos.make-a-game.step_Random": {
+        "message": "ወደ ራንደም ቦታ ሂድ",
+        "description": "Step name for 'Go to a random position' step"
+    },
+    "gui.howtos.make-music.step_GameChangeColor": {
+        "message": "ቀለም ቀይር",
+        "description": "Step name for 'Change Color' step"
+    },
+    "gui.howtos.make-music.step_ResetScore": {
+        "message": "ቆጣሪውን ደግምህ አስጀምር",
+        "description": "Step name for 'Reset Score' step"
+    },
+    "gui.howtos.make-a-chase-game.name": {
+        "message": "የክትትል ጨዋታ ይገንቡ",
+        "description": "Name for the 'Make a Chase Game' how-to"
+    },
+    "gui.howtos.Chase-Game.step_BG": {
+        "message": "የጀርባ ምስልን ጨምር",
+        "description": "Step name for 'Add a Backdrop' step"
+    },
+    "gui.howtos.chase-game.step_AddOcto": {
+        "message": "ስፕራይትን ጨምር",
+        "description": "Step name for 'Add a Sprite' step"
+    },
+    "gui.howtos.make-music.step_LeftRight": {
+        "message": "ወደ ቀኝና ግራ ተንቀሳቅስ ከየቀስት ቁልፎች",
+        "description": "Step name for 'Move Right & Left With Arrow Keys' step"
+    },
+    "gui.howtos.Chase-Game.step_UpDown": {
+        "message": "ወደ ላይና ታች ተንቀሳቅስ ከየቀስት ቁልፎች",
+        "description": "Step name for 'Move Up & Down With Arrow Keys' step"
+    },
+    "gui.howtos.Chase-Game.step_AddStar": {
+        "message": "ሌላ ስፕራይት ጨምር",
+        "description": "Step name for 'Add Another Sprite' step"
+    },
+    "gui.howtos.Chase-Game.step_MoveRandom": {
+        "message": "በራንደም ተንቀሳቅስ",
+        "description": "Step name for 'Move Randomly' step"
+    },
+    "gui.howtos.Chase-Game.step_WhenTouch": {
+        "message": "በኦክቶፐስ ስፕራይቱ፣ ሲነካ ድምጽ አጫውት",
+        "description": "Step name for 'In Octopus Sprite, When Touching Play Sound' step"
+    },
+    "gui.howtos.Chase-Game.step_ScoreVariable": {
+        "message": "የቆጣሪ ተለዋዋጭ ይፍጠሩ",
+        "description": "Step name for 'Create Score Variable"
+    },
+    "gui.howtos.Chase-Game.ScoreWhenTouch": {
+        "message": "በኦክቶፐስ ስፕራይቱ፣ ሲነካ ቆጣሪ ጨምር",
+        "description": "Step name for 'In Octopus Sprite, When Touching Add Score step"
+    },
+    "gui.howtos.add-sprite.name": {
+        "message": "ስፕራይትን ጨምር",
+        "description": "Name for the 'Add a Sprite' how-to"
+    },
+    "gui.howtos.add-sprite.step_addSprite": {
+        "message": "ስፕራይትን ጨምር",
+        "description": "Step name for 'Add a new sprite' step"
+    },
+    "gui.howtos.add-a-backdrop.name": {
+        "message": "የጀርባ ምስል ጨምር",
+        "description": "Name for the 'Add a Backdrop' how-to"
+    },
+    "gui.howtos.change-size.name": {
+        "message": "ልኩን ቀይር",
+        "description": "Name for the 'Change Size' how-to"
+    },
+    "gui.howtos.glide-around.name": {
+        "message": "ተንሸራተት",
+        "description": "Name for the 'Glide Around' how-to"
+    },
+    "gui.howtos.record-a-sound.name": {
+        "message": "ድምጽን ቅዳ",
+        "description": "Record A Sound' how-to"
+    },
+    "gui.howtos.spin-video.name": {
+        "message": "አሽከርክረው",
+        "description": "Name for the 'Make It Spin' how-to"
+    },
+    "gui.howtos.hide-and-show.name": {
+        "message": "ደብቅና አሳይ",
+        "description": "Name for the 'Hide and Show' how-to"
+    },
+    "gui.howtos.switch-costume.name": {
+        "message": "ስፕራይትን አኒሜት አድርግ",
+        "description": "Name for the 'Animate a Sprite' how-to"
+    },
+    "gui.howtos.move-around-with-arrow-keys.name": {
+        "message": "ቀስት ቁልፎች ይጠቀሙ",
+        "description": "Name for the 'Use Arrow Keys' how-to"
+    },
+    "gui.howtos.add-effects.name": {
+        "message": "ተጽእኖዎች ጨምር",
+        "description": "Name for the 'Add Effects' how-to"
+    },
+    "gui.extension.music.name": {
+        "message": "ሙዚቃ",
+        "description": "Name for the 'Music' extension"
+    },
+    "gui.extension.music.description": {
+        "message": "መሳሪያዎችና ታምቡሮች ተጫወት",
+        "description": "Description for the 'Music' extension"
+    },
+    "gui.extension.pen.name": {
+        "message": "ብዕር",
+        "description": "Name for the 'Pen' extension"
+    },
+    "gui.extension.pen.description": {
+        "message": "ከየእርስዎ ስፕራይቶች ይሳሉ",
+        "description": "Description for the 'Pen' extension"
+    },
+    "gui.extension.videosensing.name": {
+        "message": "የቪድዮ ህዋስ",
+        "description": "Name for the 'Video Sensing' extension"
+    },
+    "gui.extension.videosensing.description": {
+        "message": "እንቅስቃሴ ስማ ከካሜራው",
+        "description": "Description for the 'Video Sensing' extension"
+    },
+    "gui.extension.translate.name": {
+        "message": "Translate",
+        "description": "Name for the Translate extension"
+    },
+    "gui.extension.translate.description": {
+        "message": "ቃል ወደ ብዙ ቋንቋዎች ተርጉም",
+        "description": "Description for the Translate extension"
+    },
+    "gui.extension.microbit.description": {
+        "message": "የእርስዎ ፕሮጀክቶች ያገናኙ ከዓለሙ ጋር",
+        "description": "Description for the 'micro:bit' extension"
+    },
+    "gui.extension.microbit.connectingMessage": {
+        "message": "በመገናኘት ላይ ነው",
+        "description": "Message to help people connect to their micro:bit."
+    },
+    "gui.extension.ev3.description": {
+        "message": "በይነግንኙነት ሮቦቶችና ተጨማሪ ነገሮች ይገንቡ",
+        "description": "Description for the 'LEGO MINDSTORMS EV3' extension"
+    },
+    "gui.extension.ev3.connectingMessage": {
+        "message": "በመገናኘት ላይ ነው። EV3 ላይ ያለው ዕስፒልዎ ወደ 1234 እንደተቀየረ ያረጋግጡ።",
+        "description": "Message to help people connect to their EV3. Must note the PIN should be 1234."
+    },
+    "gui.extension.wedo2.description": {
+        "message": "ከሞተሮችና ቃኚዎች ይገንቡ።",
+        "description": "Description for the 'LEGO WeDo 2.0' extension"
+    },
+    "gui.extension.wedo2.connectingMessage": {
+        "message": "በመገናኘት ላይ ነው",
+        "description": "Message to help people connect to their WeDo."
+    },
+    "gui.libraryTags.all": {
+        "message": "ሁሉም",
+        "description": "Tag for filtering a library for everything"
+    },
+    "gui.libraryTags.animals": {
+        "message": "እንስሳት",
+        "description": "Tag for filtering a library for animals"
+    },
+    "gui.libraryTags.dance": {
+        "message": "ጭፈራ",
+        "description": "Tag for filtering a library for dance"
+    },
+    "gui.libraryTags.effects": {
+        "message": "ለውጥ",
+        "description": "Tag for filtering a library for effects"
+    },
+    "gui.libraryTags.fantasy": {
+        "message": "ምናባዊ",
+        "description": "Tag for filtering a library for fantasy"
+    },
+    "gui.libraryTags.fashion": {
+        "message": "ሞድ",
+        "description": "Tag for filtering a library for fashion"
+    },
+    "gui.libraryTags.food": {
+        "message": "Food",
+        "description": "Tag for filtering a library for food"
+    },
+    "gui.libraryTags.indoors": {
+        "message": "ቤት ውስጥ",
+        "description": "Tag for filtering a library for indoors"
+    },
+    "gui.libraryTags.loops": {
+        "message": "Loops",
+        "description": "Tag for filtering a library for loops"
+    },
+    "gui.libraryTags.music": {
+        "message": "ሙዚቃ",
+        "description": "Tag for filtering a library for music"
+    },
+    "gui.libraryTags.notes": {
+        "message": "Notes",
+        "description": "Tag for filtering a library for notes"
+    },
+    "gui.libraryTags.outdoors": {
+        "message": "ከቤት ውጭ",
+        "description": "Tag for filtering a library for outdoors"
+    },
+    "gui.libraryTags.patterns": {
+        "message": "Patterns",
+        "description": "Tag for filtering a library for patterns"
+    },
+    "gui.libraryTags.people": {
+        "message": "ሰዎች",
+        "description": "Tag for filtering a library for people"
+    },
+    "gui.libraryTags.percussion": {
+        "message": "ከበሮ መሰል መሳሪያዎች",
+        "description": "Tag for filtering a library for percussion"
+    },
+    "gui.libraryTags.space": {
+        "message": "ክፍት ቦታ",
+        "description": "Tag for filtering a library for space"
+    },
+    "gui.libraryTags.sports": {
+        "message": "ስፖርቶች",
+        "description": "Tag for filtering a library for sports"
+    },
+    "gui.libraryTags.underwater": {
+        "message": "ውሃ ውስጥ",
+        "description": "Tag for filtering a library for underwater"
+    },
+    "gui.libraryTags.voice": {
+        "message": "Voice",
+        "description": "Tag for filtering a library for voice"
+    },
+    "gui.libraryTags.wacky": {
+        "message": "Wacky",
+        "description": "Tag for filtering a library for wacky"
+    },
+    "gui.opcodeLabels.direction": {
+        "message": "አቅጣጫ",
+        "description": "Label for the direction monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.xposition": {
+        "message": "x postion",
+        "description": "Label for the x position monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.yposition": {
+        "message": "y postion",
+        "description": "Label for the y position monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.size": {
+        "message": "መጠን",
+        "description": "Label for the size monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.costumename": {
+        "message": "የአልባሳት ስም",
+        "description": "Label for the costume name monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.costumenumber": {
+        "message": "costume number",
+        "description": "Label for the costume number monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.backdropname": {
+        "message": "የጀርባ ምስል ስም",
+        "description": "Label for the backdrop name monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.backdropnumber": {
+        "message": "backdrop number",
+        "description": "Label for the backdrop number monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.volume": {
+        "message": "የድምጽ መጠን",
+        "description": "Label for the volume monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.tempo": {
+        "message": "ምት",
+        "description": "Label for the tempo monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.answer": {
+        "message": "መልስ",
+        "description": "Label for the answer monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.loudness": {
+        "message": "ጮክታ",
+        "description": "Label for the loudness monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.username": {
+        "message": "የተጠቃሚ ስም",
+        "description": "Label for the username monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.year": {
+        "message": "አመት",
+        "description": "Label for the current year monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.month": {
+        "message": "ወር",
+        "description": "Label for the current month monitor when shown on the stage."
+    },
+    "gui.opcodeLabels.date": {
+        "message": "ቀን",
+        "description": "Label for the current date monitor when shown on the stage. Shows the current day of the month"
+    },
+    "gui.opcodeLabels.dayofweek": {
+        "message": "dayofweek",
+        "description": "Label for the current dayofweek monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.hour": {
+        "message": "ሰዓት",
+        "description": "Label for the current hour monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.minute": {
+        "message": "ደቂቃ",
+        "description": "Label for the current minute monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.second": {
+        "message": "ሁለተኛ",
+        "description": "Label for the current second monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.timer": {
+        "message": "የጊዜ ቆጣሪ",
+        "description": "Label for the timer monitor when shown on the stage"
+    },
+    "gui.sharedMessages.backdrop": {
+        "message": "backdrop{index}",
+        "description": "Default name for a new backdrop, scratch will automatically adjust the number if necessary"
+    },
+    "gui.sharedMessages.costume": {
+        "message": "costume{index}",
+        "description": "Default name for a new costume, scratch will automatically adjust the number if necessary"
+    },
+    "gui.sharedMessages.sprite": {
+        "message": "Sprite{index}",
+        "description": "Default name for a new sprite, scratch will automatically adjust the number if necessary"
+    },
+    "gui.sharedMessages.pop": {
+        "message": "ብቅ ማለት",
+        "description": "Name of the pop sound, the default sound added to a sprite"
+    },
+    "gui.gui.defaultProjectTitle": {
+        "message": "Scratch Project",
+        "description": "Default title for project"
+    },
+    "gui.backpack.header": {
+        "message": "ቦርሳ",
+        "description": "Button to open the backpack"
+    }
+}

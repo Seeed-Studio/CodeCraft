@@ -1,0 +1,211 @@
+@import "../../css/z-index.css";
+@import "../../css/units.css";
+
+.zwb-project-box-sidepane {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    height: calc(100vh - 100%);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+    z-index: $z-index-coding-course;
+    user-select: none;
+}
+
+/* 侧边栏宽度 */
+.zwb-project-box-sidepane-show {
+    width: 25.375rem;
+}
+
+.zwb-project-box-sidepane-hidden{
+    width: 0;
+}
+
+
+@media screen and (min-width: 1921px) {
+    /* 侧边栏宽度 */
+    .zwb-project-box-sidepane-show {
+        width: 25.375rem;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    /* 侧边栏宽度 */
+    .zwb-project-box-sidepane-show {
+        width: 22.375rem;
+    }
+}
+
+
+.expand-btn {
+    position: absolute;
+    right: 100%;
+    top: 4.8125rem;
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expand-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.containerShow {
+    display: block;
+    height: 100%;
+}
+
+.containerHidden {
+    display: none;
+}
+
+
+.drag-bt {
+    width: 20px;
+    height: 44px;
+    position: absolute;
+    left: 0;
+    top: calc( 50% - 22px );
+    cursor: move;
+}
+
+.drag-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.sampleCdcGroup {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 4.375rem;
+    border-bottom: solid rgba(222,229,235,1) 1px;
+}
+
+.sampleTitle {
+    margin-left: 1.25rem;
+    margin-right: 0.88rem;
+    font-size: 1rem;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(44,57,70,1);
+}
+
+.sampleSelect {
+    width: 13rem !important;
+    height: 1.875rem !important;
+    background: rgba(255,255,255,1) !important;
+    border: solid rgba(229,229,237,1) 1px !important;
+    border-radius: 0.25rem !important;
+}
+
+.sampleSelectList {
+    border: 1px solid rgba(229, 229, 237, 1) !important;
+    box-shadow:0px 3px 10px 0px rgba(0, 0, 0, 0.1) !important;
+    border-radius:5px !important;
+}
+
+.shareBtn {
+    position: absolute;
+    width: 1.6875rem;
+    height: 50%;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.shareIcon {
+    width: 1.1875rem;
+    height: 1.25rem;
+}
+
+.detailHtml {
+    width: 100%;
+    height: calc(100% - 4.375rem);
+    padding-left: 1.25rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    user-select: text;
+}
+
+.shareModal {
+    width: 43.75rem;
+    height: 13.375rem;
+}
+
+.shareTitle {
+    font-size: 1.25rem;
+    font-family: SourceHanSansSC;
+    font-weight: 400;
+    color: rgba(85,101,117,1);
+    margin: 1.875rem 0 0 1.875rem;
+}
+
+.shareContent {
+    margin: 1.25rem 1.875rem 2rem;
+    height: 3.375rem;
+    background: rgba(255,255,255,1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.shareLink {
+    font-size: 0.9rem;
+    font-family: SourceHanSansSC;
+    font-weight: 400;
+    color: rgba(191,198,205,1);
+    /* width: 2.0rem; */
+    margin: 0 1.25rem;
+    text-align: center;
+}
+
+.shareLinkText {
+    font-size: 0.9rem;
+    font-family: SourceHanSansSC;
+    font-weight: 400;
+    color: rgba(85,101,117,1);
+    user-select: text;
+}
+
+.bottomBar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bottomBtn {
+    border-radius: 5px;
+    margin-right: 1.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-family: SourceHanSansSC;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.cancelBtn {
+    width: 4.25rem;
+    height: 2.5rem;
+    color: rgba(85,101,117,1);
+}
+
+.copyBtn {
+    max-width: 12rem;
+    min-width: 6.25rem;
+    height: 2.5rem;
+    background: rgba(28,139,244,1);
+    color: rgba(255,255,255,1);
+    padding: 1rem;
+}
+
+.copySuccess {
+    background:rgba(80,220,135,1);
+}

@@ -1,0 +1,124 @@
+.view-more-content{
+  width:47.5rem;
+  min-height:33.13rem;
+  background:rgba(255,255,255,1);
+  padding-bottom: 24px;
+}
+
+.view-more-header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5.28rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.view-more-left{
+  margin-left: 1.88rem;
+  margin-top: 1.5rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  font-size:0.88rem;
+  font-weight:400;
+  color:rgba(75,159,240,1);
+
+  cursor: pointer;
+}
+
+.view-more-left img{
+  width: 0.88rem;
+  margin-right: 0.5rem;
+}
+
+.view-more-title{
+  margin-top: 3.25rem;
+  font-size:1.5rem;
+  font-weight:bold;
+  color:rgba(113,117,130,1);
+  text-align: center;
+}
+
+.view-more-logo{
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+.view-more-logo img{
+
+  width: 11.25rem;
+
+  min-width: 180px;
+  min-height: 118.33px;
+
+  margin: auto;
+}
+
+.view-more-des{
+
+  height: 8.06rem;
+
+  margin-top: 3.31rem;
+  margin-left: 1.88rem;
+  margin-right: 1.55rem;
+
+  border-top:2px solid rgba(232,239,247,1);
+  border-bottom:2px solid rgba(232,239,247,1);
+
+}
+
+.view-more-des-content{
+  height: 4.44rem;
+  line-height: 1.5em;
+  font-size:0.88rem;
+  font-weight:400;
+  color:rgba(113,117,130,1);
+  margin: 1.8rem 0;
+  overflow-y: auto;
+}
+
+.view-more-des-content::-webkit-scrollbar {
+  width: 6px;
+  background-color: none;
+}
+
+.view-more-des-content::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+.view-more-des-content::-webkit-scrollbar-thumb {
+  background: rgba(188, 192, 201, 1);
+  opacity: 0.5;
+  border-radius: 10px;
+}
+
+.view-more-des-content::-webkit-scrollbar-button:start {
+  background-size: 12px 12px;
+}
+
+.view-more-des-content::-webkit-scrollbar-button:end {
+  background-size: 12px 12px;
+}
+
+.view-more-buttons{
+  margin-top: 1.88rem;
+  text-align: center;
+}
+
+.view-more-button{
+  min-width:8.88rem;
+  height:2.38rem;
+  border-radius:1.6rem;
+}
+
+.doc-link-text {
+  font-size:0.88rem;
+  font-weight:400;
+  color:rgba(75,159,240,1);
+  text-decoration: none;
+}

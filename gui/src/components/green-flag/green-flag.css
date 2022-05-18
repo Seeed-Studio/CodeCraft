@@ -1,0 +1,40 @@
+@import "../../css/colors.css";
+.flag-container {
+  height: 1.62rem;
+  line-height: 1.62rem;
+  font-size: 0.75rem;
+  color: #717582;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(232, 239, 247, 1);
+  border-radius: 1rem;
+  padding-right: 0.5rem;
+  padding-left: 0.2rem;
+}
+
+.flag-container:hover {
+  cursor: pointer;
+}
+
+.flag-container:hover .green-flag {
+  transform: scale(1.1);
+}
+
+.green-flag {
+  width: 25px;
+  height: 25px;
+  padding: 0.31rem;
+  border-radius: 0.25rem;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.1s;
+  vertical-align: middle;
+  margin-bottom: 0.1rem;
+}
+
+/* .green-flag:hover {
+    transform: scale(1.2);
+  } */
+
+/* .green-flag.is-active {
+  background-color: $motion-transparent;
+} */

@@ -1,0 +1,165 @@
+@import "../../css/colors.css";
+@import "../../css/units.css";
+.library-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-basis: 12.75rem;
+  width: 12.75rem;
+  height: 12.75rem;
+  /* min-height: 14rem; */
+  margin: $space auto;
+  /* padding: 1rem 1rem 0 1rem; */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $text-primary;
+  background: white;
+  border-width: 2px;
+  border-style: solid;
+  /* border-color: $ui-black-transparent; */
+  /* border-radius: $space; */
+  border-color: #D5DEE9;
+  border-radius: 10px;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.library-item:hover {
+  border: 2px solid rgba(81, 221, 212, 1);
+  box-shadow: 0rem 0rem 1rem 0rem rgba(81, 221, 212, 0.5);
+}
+
+.library-item:hover .library-item-delete {
+  display: inline;
+}
+
+.library-item-delete {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+  padding: 0 6px;
+  background: #000;
+  opacity: 0.3;
+  color: #fff;
+  border-radius: 10px;
+  display: none;
+}
+
+.library-item-delete:hover {
+  opacity: 0.5;
+}
+
+.disabled {
+  opacity: .5;
+  cursor: auto;
+}
+
+.disabled:hover {
+  border-color: $ui-black-transparent;
+}
+
+.library-item-image-container-wrapper {
+  /* height: 100px; */
+  width: 100%;
+  height: 9.56rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.library-item-image-container {
+  position: absolute;
+  width: 100%;
+  height: 9.56rem;
+}
+
+.library-item-image-loading-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.library-item-image {
+  width: 100%;
+  height: 100%;
+}
+
+.library-item-image-loading {
+  width: 70px;
+  height: 70px;
+  margin-top: 3rem;
+}
+
+.library-item-name {
+  /* margin: 0.7rem 0; */
+  /* text-align: center; */
+  /*
+        For truncating overflowing text gracefully
+        Min-width is for a bug: https://css-tricks.com/flexbox-truncated-text
+    */
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: rgba(113, 117, 130, 1);
+
+  line-height: 1.45rem;
+  margin: 0;
+  width: 96%;
+}
+
+.featured-item {
+  flex-basis: 14rem;
+  max-width: 14rem;
+  height: auto;
+  overflow: hidden;
+  padding: 0;
+}
+
+.featured-image-container {
+  position: relative;
+}
+
+.featured-image {
+  width: 100%;
+}
+
+.featured-text {
+  font-weight: bold;
+  width: 100%;
+  text-align: start;
+  padding: 0.63rem;
+}
+
+.featured-description {
+  display: block;
+  font-weight: normal;
+  line-height: 2;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(171, 185, 198, 1);
+}
+
+.coming-soon-text {
+  position: absolute;
+  background-color: $data-primary;
+  border-radius: 1rem;
+  box-shadow: 0 0 .5rem hsla(0, 0%, 0%, .25);
+  padding: .5rem 1rem;
+  font-size: .875rem;
+  font-weight: bold;
+  color: $ui-white;
+}
+
+/* [dir="ltr"] .coming-soon-text {
+  transform: translate(calc(2 * $space), calc(2 * $space));
+}
+
+[dir="rtl"] .coming-soon-text {
+  transform: translate(calc(-2 * $space), calc(2 * $space));
+} */
+
+.featured-margin {
+  padding: 0.8rem 0.1rem;
+}

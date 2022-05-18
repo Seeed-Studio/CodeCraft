@@ -1,0 +1,14 @@
+.modal {
+    width: 54rem;
+    height: 37.5rem;
+    padding: 2rem 1rem 0;
+}
+
+.title {
+    text-align: center;
+    height: 1.13rem;
+    font-size: 1.13rem;
+    top: 2rem;
+    width: 100%;
+    color: #717582;
+}

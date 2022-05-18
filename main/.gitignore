@@ -1,0 +1,27 @@
+# Mac OS
+.DS_Store
+
+# NPM
+/node_modules
+/__config
+/__imgCache
+/buildCache
+yarn.lock
+package-lock.json
+yarn-error.log
+npm-*
+
+# generated locale files
+/locales
+
+# generated build files
+/build
+
+# app
+app/gui
+app/shell
+app/node_modules
+app/yarn.lock
+app/package-lock.json
+app/yarn-error.log
+

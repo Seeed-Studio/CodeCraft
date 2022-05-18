@@ -1,0 +1,22 @@
+@import "../../css/units.css";
+@import "../../css/colors.css";
+.stage-wrapper {
+  box-sizing: border-box;
+}
+
+.stage-canvas-wrapper {
+  /* Hides negative space between edge of rounded corners + container, when selected */
+  user-select: none;
+  background: transparent;
+}
+
+.stage-menu-wrapper {
+  /* background:rgba(242,247,251,1); */
+  /* border:2px solid rgba(232,239,247,1); */
+  border-radius: 0px 0px 10px 10px;
+  padding-left: 5px;
+  padding-right: 8px;
+  background: rgba(242, 247, 251, 1);
+  border: 0.0625rem solid rgba(232, 239, 247, 1);
+  border-top: none;
+}

@@ -1,0 +1,66 @@
+.upgrade-fail-page {
+  width: 420px;
+  border-radius: 6px;
+}
+
+.upgrade-fail-content-wrap {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(242, 247, 251, 1);
+  margin: 0px 0px 30px 0px;
+}
+
+.upgrade-fail-label {
+  padding-top: 20px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: rgba(51, 51, 51, 1);
+}
+
+.upgrade-fail-bottom-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.upgrade-fail-cancel {
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  display: inline-block;
+  background: rgba(255, 255, 255, 1);
+  border: 0.5px solid rgba(222, 227, 232, 1);
+  font-weight: normal;
+  border-radius: 4px;
+  font-size: 16px;
+  color: rgba(51, 51, 51, 1);
+}
+
+.upgrade-fail-cancel:hover {
+  color: rgba(51, 51, 51, 1);
+  background: rgba(237, 241, 245, 1);
+  border: 1px solid rgba(222, 227, 232, 1);
+}
+
+.upgrade-fail-retry {
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 20px;
+  background: rgba(246, 58, 126, 1);
+  border: 0.5px solid rgba(195, 33, 92, 1);
+  font-weight: normal;
+  border-radius: 4px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.upgrade-fail-retry:hover {
+  color: rgba(255, 255, 255, 1);
+  background: rgba(223, 43, 108, 1);
+  border: 1px solid rgba(195, 33, 92, 1);
+}

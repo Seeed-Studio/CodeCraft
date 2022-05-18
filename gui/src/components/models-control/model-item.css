@@ -1,0 +1,205 @@
+.model-item-wrapper{
+    width:auto;
+    min-width: fit-content;
+    min-height:15rem;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(229,229,237,1);
+    border-radius:0.25rem;
+    margin: 0.625rem 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+.model-image-wrapper{
+    width: 18.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.model-big-img{
+    width: 11rem;
+    height: 10.94remrem;
+}
+
+.model-small-img{
+    width: 3.38rem;
+    height: 2.75remrem;
+
+    margin-left: 1.25rem;
+}
+
+.model-item{
+    width: 42.24rem;
+    margin: 3.24rem 0;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.model-info-row{
+    width: 100%;
+    height: 2.56rem;
+    margin: 0.5rem 0rem;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.model-datas-height{
+    height: auto;
+    margin: 0rem 0rem;
+}
+
+.model-info-row .label{
+    width: 6.6rem;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    font-size:0.88rem;
+    font-family:PingFang SC;
+    font-weight:400;
+    color:rgba(85,101,117,1);
+
+    padding-right: 0.88rem;
+
+    white-space: nowrap;
+}
+
+.model-info-row .content{
+    flex-grow: 1;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background:rgba(240,245,251,1);
+    border:1px solid rgba(229,229,237,1);
+    border-radius:0.25rem;
+
+    padding: 0 1.24rem;
+}
+
+.model-info-row .name-input{
+    flex-grow: 1;
+    margin-right: 5rem;
+    user-select: text;
+}
+
+.model-data-item{
+    flex-grow: 1;
+    height: 2.56rem;
+    display: flex;
+    flex-direction: row;
+    margin: 0.625rem 0;
+}
+
+.model-data-item .mark-wrap{
+    width: 2.64rem;
+    height: auto;
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+.model-data-item .category-name{
+    font-size:0.88rem;
+    font-family:PingFang SC;
+    font-weight:400;
+    color:rgba(85,101,117,1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 1.2rem;
+}
+
+.model-data-item .category-input{
+    flex-grow: 1;
+    background:rgba(240,245,251,1);
+    border:1px solid rgba(229,229,237,1);
+    border-radius:0.25rem;
+
+    padding: 0 1.24rem;
+    user-select: text;
+}
+
+.model-data-item .category-operate{
+    width: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 0.315rem;
+}
+
+.model-data-item .sigle-add{
+    justify-content: flex-start;
+}
+
+.model-data-item .category-operate img{
+    width:1.5rem;
+    height:1.5rem;
+    margin:0 0.315rem;
+
+    cursor: pointer;
+}
+
+.model-data-list{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    margin-left: 3.96rem;
+}
+
+.mark-line{
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 0.5rem;
+    border-left: 1px solid #CCCCCD;
+    border-bottom: 1px solid #CCCCCD;
+
+    margin-right: 0.56rem;
+}
+
+.datas-mark-line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 2.5rem;
+    width: 1px;
+    height: calc(100% - 2.5rem);
+    border-left: 1px solid #CCCCCD;
+}
+
+.model-del-wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 3rem;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.model-del-wrapper img{
+    width: 1.38rem;
+    height: 1.5rem;
+    cursor: pointer;
+}

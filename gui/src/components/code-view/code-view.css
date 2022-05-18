@@ -1,0 +1,113 @@
+@import "../../css/z-index.css";
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.code-view-box *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.code-view-box {
+    position: absolute;
+    top:100%;
+    right:0;
+    width:calc( 100% - 16.0rem );
+    height:calc( 100vh - 100% );
+    background:#fff;
+    box-shadow:0rem 0rem 2rem 0rem rgba(0, 0, 0, 0.16);
+    z-index: $z-index-code-view;
+}
+
+.title{
+    height:3rem;
+    width: 100%;
+    color: #4A9CF0;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    /* text-align: center; */
+    border-bottom: solid #E8EFF7 2px;
+    overflow: hidden;
+    /* padding-right: 3rem; */
+}
+.close-bt{
+    width:1rem;
+    height:1rem;
+    background-size:1rem; 
+    background-image: url(./btn_out@2x.png);
+    float: left;
+    margin:1rem;
+    cursor: pointer;
+}
+.title-text{
+    width: 6rem;
+    display: block;
+    float: left;
+    margin-left: 1rem;
+}
+
+.download-btn{
+    width:6.25rem;
+    height:1.88rem;
+
+    line-height: 1.88rem;
+
+    font-size:0.88rem;
+    font-weight:400;
+    color:rgba(74,156,240,1);
+    text-align: center;
+
+    display: block;
+    float: right;
+
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+
+    border: 0.09rem solid rgba(74,156,240,1);
+    border-radius: 1rem;
+
+    cursor: pointer;
+}
+.download-btn:hover{
+    color:rgba(255,255,255,1);
+    background:rgba(74,156,240,1);
+    border: 0.09rem solid rgba(74,156,240,1);
+}
+
+.download-btn:focus{
+    color:rgba(255,255,255,1);
+    background:rgba(74,156,240,1);
+    border: 0.09rem solid rgba(74,156,240,1);
+}
+
+.monaco-box{
+    /* padding-top:1rem; */
+    width:100%;
+    height:calc( 100% - 3rem);
+    overflow: hidden;
+}
+
+.drag-bt{
+    width:20px;
+    height:42px;
+    background-image: url(./icon_drag.png);
+    position: absolute;
+    left:-20px;
+    top:calc( 50% - 21px );
+    cursor:move;
+}
+
+.upload-wrapper{
+    left: -20.4rem;
+    bottom: 0.4rem;
+    margin-right: 0.4rem;
+    position: absolute;
+    width:20rem;
+    height:3.54rem;
+    text-align: right;
+}

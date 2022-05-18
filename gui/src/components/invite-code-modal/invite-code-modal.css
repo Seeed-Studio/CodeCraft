@@ -1,0 +1,60 @@
+.inviteModal {
+    width: 45rem;
+    padding: 0 2rem;
+    font-size: 1rem;
+}
+
+.inviteCodeContainer {
+    margin: 3rem auto 2rem;
+    text-align: center;
+}
+
+.lines {
+    border-top: 1px solid #ddd;
+    margin: 1.5rem 0;
+}
+
+.inviteCodeText1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+}
+
+.inviteCodeText1>span {
+    color: #1C8BF4;
+}
+
+.hasInvited {
+    margin-bottom: 1rem;
+}
+
+.userTable {
+    max-height: 32rem;
+    overflow: auto;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.tableLineHeader {
+    border: 1px solid #ddd;
+    background: #E1E1E1;
+}
+
+.tableLine {
+    border: 1px solid #ddd;
+    border-top: none;
+    display: flex;
+}
+
+.tableCell {
+    width: 50%;
+    padding: 1.25rem .625em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+}
+
+.tableCellLeft {
+    border-right: 1px solid #ddd;
+}

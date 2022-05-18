@@ -1,0 +1,74 @@
+/* default */
+
+.upload-succ-box {
+  /* width: 22.75rem;
+  height: 19.38rem; */
+  top: 0px;
+}
+
+.center-box-default {
+  width: 19.25rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.center-box-grove {
+  width: 22.75rem;
+  height: 18rem;
+  text-align: center;
+}
+
+.icon {
+  display: inline-block;
+  margin-top: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.icon-succ {
+  background: #68E7BE;
+  background-image: url(./icon-succ.png);
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgba(113, 117, 130, 1);
+}
+
+.bt {
+  margin-top: 30px;
+}
+
+/* grovezero */
+
+.grovezero-upload-succ-box {
+  width: 364px;
+  height: 310px;
+}
+
+.grovezero-title {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #717582;
+}
+
+.grovezero-prompt {
+  color: #ABB9C6;
+  font-size: 12px;
+  margin-top: 20px;
+  padding: 0 15px;
+}
+
+.grovezero-icon {
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 9.69rem;
+  height: 7.63rem;
+  background-image: url(./icon-succ-grovezero.png);
+}
+
+.grovezero-bt {
+  margin-top: 20px;
+}

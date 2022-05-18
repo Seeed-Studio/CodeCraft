@@ -1,0 +1,159 @@
+@import "../../css/units.css";
+@import "../../css/colors.css";
+@import "../../css/z-index.css";
+
+.stage {
+    /*
+        Fixes a few extra pixels of margin/padding, that adds on to the bottom
+        of the element, which messes up the chrome padding consistency
+    */
+    display: block;
+
+    border-radius: 10px 10px 0px 0px;
+    border: 0.0625rem solid rgba(232,239,247,1);
+
+    overflow: hidden;
+
+    /* @todo: This is for overriding the value being set somewhere. Where is it being set? */
+    background-color: transparent;
+
+    /* Allow custom touch handling to prevent scrolling on Edge */
+    touch-action: none;
+
+    /* Make sure border is not included in size calculation */
+    box-sizing: content-box !important;
+}
+
+.stage-fullScreen{
+    border-radius: 10px;
+    margin-top: auto;
+}
+
+.with-color-picker {
+    cursor: none;
+    z-index: $z-index-stage-with-color-picker;
+}
+
+.color-picker-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    display: block;
+    z-index: $z-index-stage-color-picker-background;
+    top: 0;
+    left: 0;
+}
+
+.stage-wrapper {
+    position: relative;
+}
+
+.stage-wrapper-overlay {
+  position: fixed;
+  /* top: $stage-menu-height; */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: calc(100% - 2.65rem);
+  /* bottom: $stage-menu-height; */
+  z-index: $z-index-stage-wrapper-overlay;
+  /* background-color: $ui-white; */
+  background: rgba(242, 247, 251, 1);
+  /* spacing between stage and control bar (on the top), or between
+    stage and window edges (on left/right/bottom) */
+  padding: 0.31rem;
+
+  border: 2px solid #E8EFF7;
+
+  display: flex;
+  justify-content: center;
+
+}
+
+/* wraps only main content of overlay player, not monitors */
+.stage-overlay-content {
+    outline: none;
+    margin: auto;
+    border: $stage-full-screen-border-width solid rgb(126, 133, 151);
+    padding: 0;
+    border-radius: $space;
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+}
+
+.stage-overlay-content-border-override {
+    border: none;
+}
+
+/* adjust monitors when stage is standard size:
+shift them down and right to compensate for the stage's border */
+.stage-wrapper .monitor-wrapper {
+    top: $stage-standard-border-width;
+    left: $stage-standard-border-width;
+}
+
+/* adjust monitors when stage is full screen:
+.stage-wrapper-overlay uses position: fixed instead of relative, so we need
+to adjust for the border using a different method */
+.stage-wrapper-overlay .monitor-wrapper {
+    padding-top: calc($stage-full-screen-stage-padding + $stage-full-screen-border-width);
+    padding-bottom: calc($stage-full-screen-stage-padding + $stage-full-screen-border-width);
+}
+
+.monitor-wrapper,
+.color-picker-wrapper,
+.frame-wrapper,
+.green-flag-overlay-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.monitor-fullScreen{
+    top: 3.12rem;
+}
+
+.dragging-sprite {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $z-index-dragging-sprite;
+    filter: drop-shadow(5px 5px 5px $ui-black-transparent);
+ }
+
+.stage-bottom-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    top: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.mic-indicator {
+    transform-origin: bottom right;
+    z-index: $z-index-stage-indicator;
+    pointer-events: none;
+    align-self: flex-end;
+}
+
+.question-wrapper {
+    z-index: $z-index-stage-question;
+    pointer-events: auto;
+}
+
+.stage-container {
+  display: flex;
+  height: 100%;
+}

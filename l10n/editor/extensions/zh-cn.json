@@ -1,0 +1,1060 @@
+{
+    "ev3.beepNote": {
+        "message": "鸣笛[NOTE][TIME]秒",
+        "description": "play some note on EV3 for some time"
+    },
+    "ev3.buttonPressed": {
+        "message": "按下按钮[PORT]？",
+        "description": "is a button on some port pressed?"
+    },
+    "ev3.getBrightness": {
+        "message": "亮度",
+        "description": "gets measured brightness"
+    },
+    "ev3.getDistance": {
+        "message": "距离",
+        "description": "gets measured distance"
+    },
+    "ev3.getMotorPosition": {
+        "message": "马达[PORT]的位置",
+        "description": "get the measured degrees a motor has turned"
+    },
+    "ev3.motorSetPower": {
+        "message": "马达[PORT]功率设为[POWER]%",
+        "description": "set a motor's power to some value"
+    },
+    "ev3.motorTurnClockwise": {
+        "message": "马达[PORT]正转[TIME]秒",
+        "description": "turn a motor clockwise for some time"
+    },
+    "ev3.motorTurnCounterClockwise": {
+        "message": "马达[PORT]反转[TIME]秒",
+        "description": "turn a motor counter-clockwise for some time"
+    },
+    "ev3.whenBrightnessLessThan": {
+        "message": "当亮度 < [DISTANCE]",
+        "description": "when value measured by brightness sensor is less than some value"
+    },
+    "ev3.whenButtonPressed": {
+        "message": "当按下按钮[PORT]",
+        "description": "when a button connected to a port is pressed"
+    },
+    "ev3.whenDistanceLessThan": {
+        "message": "当距离 < [DISTANCE]",
+        "description": "when the value measured by the distance sensor is less than some value"
+    },
+    "mark.detection.property.x": {
+        "message": "X中心坐标",
+        "description": ""
+    },
+    "mark.detection.property.y": {
+        "message": "Y中心坐标",
+        "description": ""
+    },
+    "mark.detection.property.a": {
+        "message": "面积",
+        "description": ""
+    },
+    "microbit.buttonsMenu.any": {
+        "message": "任意",
+        "description": "label for \"any\" element in button picker for micro:bit extension"
+    },
+    "microbit.clearDisplay": {
+        "message": "清空屏幕",
+        "description": "display nothing on the micro:bit display"
+    },
+    "microbit.defaultTextToDisplay": {
+        "message": "你好！",
+        "description": "default text to display.\n                                IMPORTANT - the micro:bit only supports letters a-z, A-Z.\n                                Please substitute a default word in your language\n                                that can be written with those characters,\n                                substitute non-accented characters or leave it as \"Hello!\".\n                                Check the micro:bit site documentation for details"
+    },
+    "microbit.displaySymbol": {
+        "message": "显示[MATRIX]",
+        "description": "display a pattern on the micro:bit display"
+    },
+    "microbit.displayText": {
+        "message": "显示文本[TEXT]",
+        "description": "display text on the micro:bit display"
+    },
+    "microbit.gesturesMenu.jumped": {
+        "message": "抛起",
+        "description": "label for jumped gesture in gesture picker for micro:bit extension"
+    },
+    "microbit.gesturesMenu.moved": {
+        "message": "移动",
+        "description": "label for moved gesture in gesture picker for micro:bit extension"
+    },
+    "microbit.gesturesMenu.shaken": {
+        "message": "晃动",
+        "description": "label for shaken gesture in gesture picker for micro:bit extension"
+    },
+    "microbit.isButtonPressed": {
+        "message": "按下[BTN]按钮？",
+        "description": "is the selected button on the micro:bit pressed?"
+    },
+    "microbit.isTilted": {
+        "message": "向[DIRECTION]倾斜？",
+        "description": "is the micro:bit is tilted in a direction?"
+    },
+    "microbit.pinStateMenu.off": {
+        "message": "低电平",
+        "description": "label for off element in pin state picker for micro:bit extension"
+    },
+    "microbit.pinStateMenu.on": {
+        "message": "高电平",
+        "description": "label for on element in pin state picker for micro:bit extension"
+    },
+    "microbit.tiltAngle": {
+        "message": "向[DIRECTION]倾角",
+        "description": "how much the micro:bit is tilted in a direction"
+    },
+    "microbit.tiltDirectionMenu.any": {
+        "message": "任意",
+        "description": "label for any direction element in tilt direction picker for micro:bit extension"
+    },
+    "microbit.tiltDirectionMenu.back": {
+        "message": "后",
+        "description": "label for back element in tilt direction picker for micro:bit extension"
+    },
+    "microbit.tiltDirectionMenu.front": {
+        "message": "前",
+        "description": "label for front element in tilt direction picker for micro:bit extension"
+    },
+    "microbit.tiltDirectionMenu.left": {
+        "message": "左",
+        "description": "label for left element in tilt direction picker for micro:bit extension"
+    },
+    "microbit.tiltDirectionMenu.right": {
+        "message": "右",
+        "description": "label for right element in tilt direction picker for micro:bit extension"
+    },
+    "microbit.whenButtonPressed": {
+        "message": "当按下[BTN]按钮",
+        "description": "when the selected button on the micro:bit is pressed"
+    },
+    "microbit.whenGesture": {
+        "message": "当被[GESTURE]",
+        "description": "when the selected gesture is detected by the micro:bit"
+    },
+    "microbit.whenPinConnected": {
+        "message": "当引脚[PIN]链接",
+        "description": "when the pin detects a connection to Earth/Ground"
+    },
+    "microbit.whenTilted": {
+        "message": "当向[DIRECTION]倾斜",
+        "description": "when the micro:bit is tilted in a direction"
+    },
+    "music.categoryName": {
+        "message": "音乐",
+        "description": "Label for the Music extension category"
+    },
+    "music.changeTempo": {
+        "message": "将演奏速度增加[TEMPO]",
+        "description": "change tempo (speed) for notes, drums, and rests played"
+    },
+    "music.drumBass": {
+        "message": "(2) 低音鼓",
+        "description": "Sound of bass drum as used in a standard drum kit"
+    },
+    "music.drumBongo": {
+        "message": "(13) 邦戈鼓",
+        "description": "Sound of a bongo being struck"
+    },
+    "music.drumCabasa": {
+        "message": "(15) 卡巴萨",
+        "description": "Sound of a cabasa being shaken"
+    },
+    "music.drumClaves": {
+        "message": "(9) 音棒",
+        "description": "Sound of claves being struck together"
+    },
+    "music.drumClosedHiHat": {
+        "message": "(6) 闭击踩镲",
+        "description": "Sound of a drum stick hitting a hi-hat while closed"
+    },
+    "music.drumConga": {
+        "message": "(14) 康加鼓",
+        "description": "Sound of a conga being struck"
+    },
+    "music.drumCowbell": {
+        "message": "(11) 牛铃",
+        "description": "Sound of a cowbell being struck"
+    },
+    "music.drumCrashCymbal": {
+        "message": "(4) 碎音钹",
+        "description": "Sound of a drum stick hitting a crash cymbal"
+    },
+    "music.drumCuica": {
+        "message": "(18) 锯加鼓",
+        "description": "Sound of a cuica being played"
+    },
+    "music.drumGuiro": {
+        "message": "(16) 刮瓜",
+        "description": "Sound of a guiro being played"
+    },
+    "music.drumHandClap": {
+        "message": "(8) 鼓掌",
+        "description": "Sound of two hands clapping together"
+    },
+    "music.drumOpenHiHat": {
+        "message": "(5) 开击踩镲",
+        "description": "Sound of a drum stick hitting a hi-hat while open"
+    },
+    "music.drumSideStick": {
+        "message": "(3) 敲鼓边",
+        "description": "Sound of a drum stick hitting the side of a drum (usually the snare)"
+    },
+    "music.drumSnare": {
+        "message": "(1) 小军鼓",
+        "description": "Sound of snare drum as used in a standard drum kit"
+    },
+    "music.drumTambourine": {
+        "message": "(7) 铃鼓",
+        "description": "Sound of a tambourine being struck"
+    },
+    "music.drumTriangle": {
+        "message": "(12) 三角铁",
+        "description": "Sound of a triangle (instrument) being struck"
+    },
+    "music.drumVibraslap": {
+        "message": "(17) 颤音器",
+        "description": "Sound of a Vibraslap being played"
+    },
+    "music.drumWoodBlock": {
+        "message": "(10) 木鱼",
+        "description": "Sound of a wood block being struck"
+    },
+    "music.getTempo": {
+        "message": "演奏速度",
+        "description": "get the current tempo (speed) for notes, drums, and rests played"
+    },
+    "music.instrumentBass": {
+        "message": "(6) 贝斯",
+        "description": "Sound of an accoustic upright bass"
+    },
+    "music.instrumentBassoon": {
+        "message": "(14) 巴松管",
+        "description": "Sound of a bassoon being played"
+    },
+    "music.instrumentCello": {
+        "message": "(8) 大提琴",
+        "description": "Sound of a cello being played with a bow"
+    },
+    "music.instrumentChoir": {
+        "message": "(15) 唱诗班",
+        "description": "Sound of a choir singing"
+    },
+    "music.instrumentClarinet": {
+        "message": "(10) 单簧管",
+        "description": "Sound of a clarinet being played"
+    },
+    "music.instrumentElectricGuitar": {
+        "message": "(5) 电吉他",
+        "description": "Sound of an electric guitar"
+    },
+    "music.instrumentElectricPiano": {
+        "message": "(2) 电钢琴",
+        "description": "Sound of an electric piano"
+    },
+    "music.instrumentFlute": {
+        "message": "(12) 长笛",
+        "description": "Sound of a flute being played"
+    },
+    "music.instrumentGuitar": {
+        "message": "(4) 吉他",
+        "description": "Sound of an accoustic guitar"
+    },
+    "music.instrumentMarimba": {
+        "message": "(19) 马林巴琴",
+        "description": "Sound of a marimba being struck"
+    },
+    "music.instrumentMusicBox": {
+        "message": "(17) 八音盒",
+        "description": "Sound of a music box playing"
+    },
+    "music.instrumentOrgan": {
+        "message": "(3) 风琴",
+        "description": "Sound of an organ"
+    },
+    "music.instrumentPiano": {
+        "message": "(1) 钢琴",
+        "description": "Sound of a piano"
+    },
+    "music.instrumentPizzicato": {
+        "message": "(7) 拨弦",
+        "description": "Sound of a string instrument (e.g. violin) being plucked"
+    },
+    "music.instrumentSaxophone": {
+        "message": "(11) 萨克斯管",
+        "description": "Sound of a saxophone being played"
+    },
+    "music.instrumentSteelDrum": {
+        "message": "(18) 钢鼓",
+        "description": "Sound of a steel drum being struck"
+    },
+    "music.instrumentSynthLead": {
+        "message": "(20) 合成主音",
+        "description": "Sound of a \"lead\" synthesizer being played"
+    },
+    "music.instrumentSynthPad": {
+        "message": "(21) 合成柔音",
+        "description": "Sound of a \"pad\" synthesizer being played"
+    },
+    "music.instrumentTrombone": {
+        "message": "(9) 长号",
+        "description": "Sound of a trombone being played"
+    },
+    "music.instrumentVibraphone": {
+        "message": "(16) 颤音琴",
+        "description": "Sound of a vibraphone being struck"
+    },
+    "music.instrumentWoodenFlute": {
+        "message": "(13) 木长笛",
+        "description": "Sound of a wooden flute being played"
+    },
+    "music.midiSetInstrument": {
+        "message": "将乐器设为 [INSTRUMENT]",
+        "description": "set the instrument for notes played according to a mapping of MIDI codes"
+    },
+    "music.playDrumForBeats": {
+        "message": "击鼓 [DRUM] [BEATS] 拍",
+        "description": "play drum sample for a number of beats"
+    },
+    "music.playNoteForBeats": {
+        "message": "演奏音符[NOTE][BEATS]拍",
+        "description": "play a note for a number of beats"
+    },
+    "music.restForBeats": {
+        "message": "休止[BEATS]拍",
+        "description": "rest (play no sound) for a number of beats"
+    },
+    "music.setInstrument": {
+        "message": "将乐器设为 [INSTRUMENT]",
+        "description": "set the instrument (e.g. piano, guitar, trombone) for notes played"
+    },
+    "music.setTempo": {
+        "message": "将演奏速度设定为[TEMPO]",
+        "description": "set tempo (speed) for notes, drums, and rests played"
+    },
+    "pen.categoryName": {
+        "message": "画笔",
+        "description": "Label for the pen extension category"
+    },
+    "pen.changeColorParam": {
+        "message": "将笔的 [COLOR_PARAM] 增加[VALUE]",
+        "description": "change the state of a pen color parameter"
+    },
+    "pen.changeHue": {
+        "message": "将笔的颜色增加[HUE]",
+        "description": "legacy pen blocks - change pen color"
+    },
+    "pen.changeShade": {
+        "message": "将笔的亮度增加[SHADE]",
+        "description": "legacy pen blocks - change pen shade"
+    },
+    "pen.changeSize": {
+        "message": "将笔的粗细增加[SIZE]",
+        "description": "change the diameter of the trail left by a sprite"
+    },
+    "pen.clear": {
+        "message": "全部擦除",
+        "description": "erase all pen trails and stamps"
+    },
+    "pen.colorMenu.brightness": {
+        "message": "亮度",
+        "description": "label for brightness element in color picker for pen extension"
+    },
+    "pen.colorMenu.color": {
+        "message": "颜色",
+        "description": "label for color element in color picker for pen extension"
+    },
+    "pen.colorMenu.saturation": {
+        "message": "饱和度",
+        "description": "label for saturation element in color picker for pen extension"
+    },
+    "pen.colorMenu.transparency": {
+        "message": "透明度",
+        "description": "label for transparency element in color picker for pen extension"
+    },
+    "pen.penDown": {
+        "message": "落笔",
+        "description": "start leaving a trail when the sprite moves"
+    },
+    "pen.penUp": {
+        "message": "抬笔",
+        "description": "stop leaving a trail behind the sprite"
+    },
+    "pen.setColor": {
+        "message": "将笔的颜色设为[COLOR]",
+        "description": "set the pen color to a particular (RGB) value"
+    },
+    "pen.setColorParam": {
+        "message": "将笔的 [COLOR_PARAM] 设为[VALUE]",
+        "description": "set the state for a pen color parameter e.g. saturation"
+    },
+    "pen.setHue": {
+        "message": "将笔的颜色设为[HUE]",
+        "description": "legacy pen blocks - set pen color to number"
+    },
+    "pen.setShade": {
+        "message": "将笔的亮度设为[SHADE]",
+        "description": "legacy pen blocks - set pen shade"
+    },
+    "pen.setSize": {
+        "message": "将笔的粗细设为[SIZE]",
+        "description": "set the diameter of a trail left by a sprite"
+    },
+    "pen.stamp": {
+        "message": "图章",
+        "description": "render current costume on the background"
+    },
+    "speech.defaultWhenIHearValue": {
+        "message": "开始",
+        "description": "The default phrase/word that, when heard, triggers the event."
+    },
+    "speech.extensionName": {
+        "message": "语音识别",
+        "description": "Name of extension that adds speech recognition blocks. Do Not translate Google."
+    },
+    "speech.listenAndWait": {
+        "message": "听候语音输入",
+        "description": "Start listening to the microphone and wait for a result from the speech recognition system."
+    },
+    "speech.speechReporter": {
+        "message": "语音输入",
+        "description": "Get the text of spoken words transcribed by the speech recognition system."
+    },
+    "speech.whenIHear": {
+        "message": "当听到[PHRASE]",
+        "description": "Event that triggers when the text entered on the block is recognized by the speech recognition system."
+    },
+    "text2speech.defaultTextToSpeak": {
+        "message": "你好",
+        "description": "hello: the default text to speak"
+    },
+    "text2speech.giant": {
+        "message": "巨人",
+        "description": "Name for a funny voice with a low pitch."
+    },
+    "text2speech.kitten": {
+        "message": "小猫",
+        "description": "A baby cat."
+    },
+    "text2speech.max": {
+        "message": "麦克斯",
+        "description": "Name for a voice with ambiguous gender."
+    },
+    "text2speech.quinn": {
+        "message": "奎因",
+        "description": "Name for a voice with ambiguous gender."
+    },
+    "text2speech.setLanguageBlock": {
+        "message": "将朗读语言设置为[LANGUAGE]",
+        "description": "Set the language for speech synthesis."
+    },
+    "text2speech.setVoiceBlock": {
+        "message": "使用 [VOICE] 嗓音",
+        "description": "Set the voice for speech synthesis."
+    },
+    "text2speech.speakAndWaitBlock": {
+        "message": "朗读 [WORDS]",
+        "description": "Speak some words."
+    },
+    "text2speech.squeak": {
+        "message": "尖细",
+        "description": "Name for a funny voice with a high pitch."
+    },
+    "translate.categoryName": {
+        "message": "翻译",
+        "description": "Name of extension that adds translate blocks"
+    },
+    "translate.defaultTextToTranslate": {
+        "message": "你好",
+        "description": "hello: the default text to translate"
+    },
+    "translate.translateBlock": {
+        "message": "将 [WORDS] 译为 [LANGUAGE]",
+        "description": "translate some text to a different language"
+    },
+    "translate.viewerLanguage": {
+        "message": "访客语言",
+        "description": "the languge of the project viewer"
+    },
+    "videoSensing.categoryName": {
+        "message": "视频侦测",
+        "description": "Label for the video sensing extension category"
+    },
+    "videoSensing.direction": {
+        "message": "方向",
+        "description": "Attribute for the \"video [ATTRIBUTE] on [SUBJECT]\" block"
+    },
+    "videoSensing.motion": {
+        "message": "运动",
+        "description": "Attribute for the \"video [ATTRIBUTE] on [SUBJECT]\" block"
+    },
+    "videoSensing.off": {
+        "message": "关闭",
+        "description": "Option for the \"turn video [STATE]\" block"
+    },
+    "videoSensing.on": {
+        "message": "开启",
+        "description": "Option for the \"turn video [STATE]\" block"
+    },
+    "videoSensing.onFlipped": {
+        "message": "镜像开启",
+        "description": "Option for the \"turn video [STATE]\" block that causes the video to be flipped horizontally (reversed as in a mirror)"
+    },
+    "videoSensing.setVideoTransparency": {
+        "message": "将视频透明度设为[TRANSPARENCY]",
+        "description": "Controls transparency of the video preview layer"
+    },
+    "videoSensing.sprite": {
+        "message": "角色",
+        "description": "Subject for the \"video [ATTRIBUTE] on [SUBJECT]\" block"
+    },
+    "videoSensing.stage": {
+        "message": "舞台",
+        "description": "Subject for the \"video [ATTRIBUTE] on [SUBJECT]\" block"
+    },
+    "videoSensing.videoOn": {
+        "message": "相对于[SUBJECT]的视频[ATTRIBUTE]",
+        "description": "Reporter that returns the amount of [ATTRIBUTE] for the selected [SUBJECT]"
+    },
+    "videoSensing.videoToggle": {
+        "message": "[VIDEO_STATE]摄像头",
+        "description": "Controls display of the video preview layer"
+    },
+    "videoSensing.whenMotionGreaterThan": {
+        "message": "当视频运动 > [REFERENCE]",
+        "description": "Event that triggers when the amount of motion is greater than [REFERENCE]"
+    },
+    "wedo2.getDistance": {
+        "message": "距离",
+        "description": "the value returned by the distance sensor"
+    },
+    "wedo2.getTiltAngle": {
+        "message": "[TILT_DIRECTION]倾角",
+        "description": "the angle returned by the tilt sensor"
+    },
+    "wedo2.isTilted": {
+        "message": "[TILT_DIRECTION_ANY]倾？",
+        "description": "whether the tilt sensor is tilted"
+    },
+    "wedo2.motorDirection.backward": {
+        "message": "向左转",
+        "description": "label for backward element in motor direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorDirection.forward": {
+        "message": "向右转",
+        "description": "label for forward element in motor direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorDirection.reverse": {
+        "message": "反转",
+        "description": "label for reverse element in motor direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorId.a": {
+        "message": "motor A",
+        "description": "label for motor A element in motor menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorId.all": {
+        "message": "all motors",
+        "description": "label for all motors element in motor menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorId.b": {
+        "message": "motor B",
+        "description": "label for motor B element in motor menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorId.default": {
+        "message": "motor",
+        "description": "label for motor element in motor menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorOff": {
+        "message": "关闭[MOTOR_ID]",
+        "description": "turn a motor off"
+    },
+    "wedo2.motorOn": {
+        "message": "开启[MOTOR_ID]",
+        "description": "turn a motor on indefinitely"
+    },
+    "wedo2.motorOnFor": {
+        "message": "开启[MOTOR_ID][DURATION]秒",
+        "description": "turn a motor on for some time"
+    },
+    "wedo2.playNoteFor": {
+        "message": "演奏音符[NOTE][DURATION]秒",
+        "description": "play a certain note for some time"
+    },
+    "wedo2.setLightHue": {
+        "message": "将灯光颜色设为[HUE]",
+        "description": "set the LED color"
+    },
+    "wedo2.setMotorDirection": {
+        "message": "将[MOTOR_ID]转向设为[MOTOR_DIRECTION]",
+        "description": "set the motor's turn direction"
+    },
+    "wedo2.startMotorPower": {
+        "message": "将[MOTOR_ID]功率设为[POWER]",
+        "description": "set the motor's power and turn it on"
+    },
+    "wedo2.tiltDirection.any": {
+        "message": "任意",
+        "description": "label for any element in tilt direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.tiltDirection.down": {
+        "message": "下",
+        "description": "label for down element in tilt direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.tiltDirection.left": {
+        "message": "左",
+        "description": "label for left element in tilt direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.tiltDirection.right": {
+        "message": "右",
+        "description": "label for right element in tilt direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.tiltDirection.up": {
+        "message": "向上",
+        "description": "label for up element in tilt direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.whenDistance": {
+        "message": "当距离[OP][REFERENCE]",
+        "description": "check for when distance is < or > than reference"
+    },
+    "wedo2.whenTilted": {
+        "message": "当倾向[TILT_DIRECTION_ANY]",
+        "description": "check when tilted in a certain direction"
+    },
+    "teachableMachine.categoryName": {
+        "message": "机器学习",
+        "description": "机器学习"
+    },
+    "teachableMachine.trainMode": {
+        "message": "训练模型",
+        "description": "训练模型"
+    },
+    "teachableMachine.openRecognizeModal": {
+        "message": "打开识别窗口",
+        "description": "打开识别窗口"
+    },
+    "teachableMachine.getRecognitionResult": {
+        "message": "识别结果",
+        "description": "识别结果"
+    },
+    "teachableMachine.getConfidenceValue": {
+        "message": "[CATEGORY_PARAM] 信心",
+        "description": "获取信心值"
+    },
+    "teachableMachine.whichLabel": {
+        "message": "识别结果为 [CATEGORY_PARAM] ?",
+        "description": "识别结果为"
+    },
+    "cognitiveServices.categoryName": {
+        "message": "认知服务",
+        "description": "认知服务"
+    },
+    "cognitiveServices.openRecognizeModal": {
+        "message": "打开识别窗口",
+        "description": "打开识别窗口"
+    },
+    "cognitiveServices.getSpeechRecognitionResult": {
+        "message": "语音识别结果",
+        "description": "语音识别结果"
+    },
+    "cognitiveServices.getFaceFeaturesPosition": {
+        "message": "[FaceFeatures] 的 [Position] 坐标",
+        "description": "获取脸部特征的坐标"
+    },
+    "cognitiveServices.getAgeRecognitionResult": {
+        "message": "年龄识别结果",
+        "description": "年龄识别结果"
+    },
+    "cognitiveServices.getEmotionRecognitionResult": {
+        "message": "表情识别结果是 [Emotion] ?",
+        "description": "表情识别结果"
+    },
+    "cognitiveServices.nose": {
+        "message": "鼻子",
+        "description": "鼻子"
+    },
+    "cognitiveServices.leftEye": {
+        "message": "左眼",
+        "description": "左眼"
+    },
+    "cognitiveServices.rightEye": {
+        "message": "右眼",
+        "description": "右眼"
+    },
+    "cognitiveServices.happy": {
+        "message": "高兴",
+        "description": "高兴"
+    },
+    "cognitiveServices.neutral": {
+        "message": "平静",
+        "description": "平静"
+    },
+    "cognitiveServices.surprised": {
+        "message": "惊讶",
+        "description": "惊讶"
+    },
+    "cognitiveServices.sad": {
+        "message": "悲伤",
+        "description": "悲伤"
+    },
+    "cognitiveServices.angry": {
+        "message": "生气",
+        "description": "生气"
+    },
+    "cognitiveServices.disgusted": {
+        "message": "厌恶",
+        "description": "厌恶"
+    },
+    "cognitiveServices.fearful": {
+        "message": "恐惧",
+        "description": "恐惧"
+    },
+    "threeAxisAccelerometer.categoryName": {
+        "message": "三轴加速度计可视化",
+        "description": "三轴加速度计可视化"
+    },
+    "threeAxisAccelerometer.openAxisModal": {
+        "message": "打开三轴显示窗口",
+        "description": "打开三轴显示窗口"
+    },
+    "threeAxisAccelerometer.showThreeAxisAccelerometer": {
+        "message": "显示三轴加速感应 X [X] Y [Y] Z [Z]",
+        "description": "显示三轴加速感应"
+    },
+    "meteostation.categoryName": {
+        "message": "气象站",
+        "description": "气象站"
+    },
+    "meteostation.openMeteostationModal": {
+        "message": "打开气象站窗口",
+        "description": "打开气象站窗口"
+    },
+    "meteostation.showMeteostation": {
+        "message": "气象站 温度 [TEMP] 湿度 [HUM] 气压 [PRE]",
+        "description": "气象站"
+    },
+    "modelExtension.categoryName": {
+        "message": "扩展模型",
+        "description": ""
+    },
+    "modelExtension.imgModelButton": {
+        "message": "图像分类模型",
+        "description": ""
+    },
+    "modelExtension.objModelButton": {
+        "message": "物体检测模型",
+        "description": ""
+    },
+    "modelExtension.deviceTrainButton": {
+        "message": "本地训练",
+        "description": ""
+    },
+    "createSkill.categoryName": {
+        "message": "创建技能",
+        "description": "创建技能"
+    },
+    "createSkill.showCreateSkillName": {
+        "message": "技能 ",
+        "description": "技能 "
+    },
+    "createSkill.showCreateSkillTimes": {
+        "message": "[TIMES] 次",
+        "description": "[TIMES] 次"
+    },
+    "calibrateServos.categoryName": {
+        "message": "校准舵机",
+        "description": "校准舵机"
+    },
+    "calibrateServos.RestoreFactorySettings": {
+        "message": "恢复默认程序",
+        "description": "恢复默认程序"
+    },
+    "calibrateServos.updatePreloadedSkills": {
+        "message": "更新预设动作",
+        "description": "更新预设动作"
+    },
+    "modelExtension.block.imageReporter":{
+        "message": "# 识别结果 概率 > [PROBABILITY] %",
+        "description": ""
+    },
+    "modelExtension.block.imageBoolean":{
+        "message": "# 识别结果为 [RESULT] 概率 > [PROBABILITY] %",
+        "description": ""
+    },
+    "modelExtension.block.objectReporter":{
+        "message": "检测到的 # 结果 概率 > [PROBABILITY] %",
+        "description": ""
+    },
+    "modelExtension.block.objectReporterWithCoordinate":{
+        "message": "检测到的 #  [RESULT] 的 [XY] 坐标 概率 > [PROBABILITY] %",
+        "description": ""
+    },
+    "modelExtension.block.objectBoolean":{
+        "message": "# 检测结果为 [RESULT] 概率 > [PROBABILITY] %",
+        "description": ""
+    },
+    "modelExtension.block.trainRecordSeedSample":{
+        "message": "记录 # [RESULT] 的种子样本",
+        "description": ""
+    },
+    "modelExtension.block.trainRecordSample":{
+        "message": "记录 # 样本",
+        "description": ""
+    },
+    "modelExtension.block.trainRecognized":{
+        "message": "#识别结果为 [RESULT] 的概率 > [PROBABILITY] %",
+        "description": ""
+    },
+    "modelExtension.block.trainRecognizedResult":{
+        "message": "#识别结果 概率 > [PROBABILITY] %",
+        "description": ""
+    },
+    "modelExtension.block.trainModelSave":{
+        "message": "模型 # 另存为 [NAME]",
+        "description": ""
+    },
+    "modelExtension.block.trainModelLoad":{
+        "message": "从 [NAME] 加载模型 #",
+        "description": ""
+    },
+
+    "shieldBot.categoryName": {
+        "message": "Shield Bot",
+        "description": "Shield Bot"
+    },
+    "shieldBot.bot1": {
+        "message": "Shield Bot 小车 [DIRECT] [SPEED]",
+        "description": "bot1"
+    },
+    "shieldBot.bot2": {
+        "message": "Shield Bot 小车 循迹传感器线的位置为 [POSITION]",
+        "description": "bot2"
+    },
+    "shieldBot.bot1.opt1": {
+        "message": "前进",
+        "description": ""
+    },
+    "shieldBot.bot1.opt2": {
+        "message": "后退",
+        "description": ""
+    },
+    "shieldBot.bot1.opt3": {
+        "message": "往左",
+        "description": ""
+    },
+    "shieldBot.bot1.opt4": {
+        "message": "往右",
+        "description": ""
+    },
+    "shieldBot.bot1.opt5": {
+        "message": "停止",
+        "description": ""
+    },
+    "shieldBot.bot1.opt6": {
+        "message": "低速",
+        "description": ""
+    },
+    "shieldBot.bot1.opt7": {
+        "message": "中速",
+        "description": ""
+    },
+    "shieldBot.bot1.opt8": {
+        "message": "高速",
+        "description": ""
+    },
+    "shieldBot.bot2.opt1": {
+        "message": "中",
+        "description": ""
+    },
+    "shieldBot.bot2.opt2": {
+        "message": "左",
+        "description": ""
+    },
+    "shieldBot.bot2.opt3": {
+        "message": "最左",
+        "description": ""
+    },
+    "shieldBot.bot2.opt4": {
+        "message": "右",
+        "description": ""
+    },
+    "shieldBot.bot2.opt5": {
+        "message": "最右",
+        "description": ""
+    },
+    "shieldBot.bot2.opt6": {
+        "message": "丢失",
+        "description": ""
+    },
+    "ottoDiyRobot.categoryName": {
+        "message": "双足机器人",
+        "description": "双足机器人"
+    },
+    "ottoDiyRobot.robot1": {
+        "message": "Otto DIY机器人 [DIRECT] 步数:[STEPS] 时间:[TIMES]",
+        "description": "robot1"
+    },
+    "ottoDiyRobot.robot2": {
+        "message": "Otto DIY机器人 [ACTION] 步数:[STEPS] 时间:[TIMES] 方向:[DIRECTS]",
+        "description": "robot2"
+    },
+    "ottoDiyRobot.robot1.opt0": {
+        "message": "前进",
+        "description": ""
+    },
+    "ottoDiyRobot.robot1.opt1": {
+        "message": "后退",
+        "description": ""
+    },
+    "ottoDiyRobot.robot1.opt2": {
+        "message": "往左",
+        "description": ""
+    },
+    "ottoDiyRobot.robot1.opt3": {
+        "message": "往右",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt0": {
+        "message": "停止",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt1": {
+        "message": "跳动",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt2": {
+        "message": "侧踢",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt3": {
+        "message": "摇摇腿",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt4": {
+        "message": "上下摇摆",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt5": {
+        "message": "左右摇摆",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt6": {
+        "message": "舞动脚尖",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt7": {
+        "message": "抖动",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt8": {
+        "message": "上下抖动",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt9": {
+        "message": "太空步",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt10": {
+        "message": "月球漫步",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt11": {
+        "message": "摇摆",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt12": {
+        "message": "向右/向前",
+        "description": ""
+    },
+    "ottoDiyRobot.robot2.opt13": {
+        "message": "向左/向后",
+        "description": ""
+    },
+    "mark.categoryName": {
+        "message": "M.A.R.K",
+        "description": "M.A.R.K"
+    },
+    "mark.run": {
+        "message": "M.A.R.K 小车 [DIRECT] [SPEED]",
+        "description": "run"
+    },
+    "mark.motorrun": {
+        "message": "M.A.R.K 设置电机 [MOTOR] 转速为 [SPEED]",
+        "description": "motorrun"
+    },
+    "mark.servorun": {
+        "message": "M.A.R.K 舵机 [MOTOR] 转到 [SPEED]",
+        "description": "servorun"
+    },
+    "wireless.categoryName": {
+        "message": "智慧城市",
+        "description": "智慧城市"
+    },
+    "wireless.webserverInit": {
+        "message": "web服务器 初始化智慧城市 网络名称 [SSID] 密码 [PWD]",
+        "description": "webserverInit"
+    },
+    "wireless.webserverShow": {
+        "message": "web服务器 [NUMBER] [SENSOR] 显示 名称：[NAME] 数值：[VALUE]",
+        "description": "webserverShow"
+    },
+    "wireless.lotusvsetble": {
+        "message": "CSR-BC417蓝牙模块 管脚 [PIN1] 设备名 [ID] 密码 [PWD]",
+        "description": "lotusvsetble"
+    },
+    "wireless.lotusvgetblevalue": {
+        "message": "CSR-BC417蓝牙模块 管脚 [PIN1] 获取值",
+        "description": "lotusvgetblevalue"
+    },
+    "wireless.infraredSend": {
+        "message": "红外发射模块 管脚（D3）发送 [MESSAGE]",
+        "description": "infraredSend"
+    },
+    "wireless.infraredReceive": {
+        "message": "红外接收模块 管脚 [PIN2] 获取值",
+        "description": "infraredReceive"
+    },
+    "wireless.webserverShow.opt1": {
+        "message": "水分子检测传感器",
+        "description": ""
+    },
+    "wireless.webserverShow.opt2": {
+        "message": "超声波测距传感器",
+        "description": ""
+    },
+    "wireless.webserverShow.opt3": {
+        "message": "人体红外传感器",
+        "description": ""
+    },
+    "wireless.webserverShow.opt4": {
+        "message": "温湿度传感器",
+        "description": ""
+    },
+    "wireless.webserverShow.opt5": {
+        "message": "LED灯",
+        "description": ""
+    },
+    "wireless.webserverShow.opt6": {
+        "message": "振动传感器",
+        "description": ""
+    },
+    "wireless.webserverShow.opt7": {
+        "message": "电压分压器",
+        "description": ""
+    },
+    "wireless.webserverShow.opt8": {
+        "message": "空气质量传感器",
+        "description": ""
+    },
+    "wireless.webserverShow.opt9": {
+        "message": "火焰传感器",
+        "description": ""
+    },
+    "wireless.webserverShow.opt10": {
+        "message": "图像识别传感器",
+        "description": ""
+    }
+    
+}

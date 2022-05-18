@@ -1,0 +1,84 @@
+@import "../../css/units.css";
+@import "../../css/colors.css";
+
+.wrapper {
+    display: flex;
+    flex-grow: 1;
+    /* border: 1px solid $ui-black-transparent; */
+    background: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+}
+
+/* [dir="ltr"] .wrapper {
+    border-top-right-radius: $space;
+    border-bottom-right-radius: $space;
+}
+
+[dir="rtl"] .wrapper {
+    border-top-left-radius: $space;
+    border-bottom-left-radius: $space;
+} */
+
+.detail-area {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow-y: auto;
+}
+
+/* [dir="ltr"] .detail-area {
+    border-left: 1px solid $ui-black-transparent;
+}
+
+[dir="rtl"] .detail-area {
+    border-right: 1px solid $ui-black-transparent;
+} */
+
+.icon-choseshape{
+    width: 1.75rem;
+    height: 1.75rem;
+    background-image: url(./icon-choseshape-n.png); 
+    background-repeat:no-repeat; 
+    background-size: 1.75rem 1.75rem;
+    -moz-background-size:1.75rem 1.75rem;
+}
+.icon-choseshape:hover{
+    /* background-image: url(./icon-choseshape-s.png);  */
+}
+
+.icon-drawshape{
+    width: 1.75rem;
+    height: 1.75rem;
+    background-image: url(./icon-drawshape-n.png); 
+    background-repeat:no-repeat; 
+    background-size:1.75rem 1.75rem;
+    -moz-background-size:1.75rem 1.75rem;
+}
+.icon-drawshape:hover{
+    /* background-image: url(./icon-drawshape-s.png);  */
+}
+
+.icon-chosesound{
+    width: 1.75rem;
+    height: 1.75rem;
+    background-image: url(./icon-chosesound-n.png); 
+    background-repeat:no-repeat; 
+    background-size: 1.75rem 1.75rem;
+    -moz-background-size:1.75rem 1.75rem;
+}
+.icon-chosesound:hover{
+    /* background-image: url(./icon-chosesound-s.png);  */
+}
+
+.icon-record{
+    width: 1.75rem;
+    height: 1.75rem;
+    background-image: url(./icon-record-n.png); 
+    background-repeat:no-repeat; 
+    background-size:1.75rem 1.75rem;
+    -moz-background-size:1.75rem 1.75rem;
+}
+.icon-record:hover{
+    /* background-image: url(./icon-record-s.png);  */
+}

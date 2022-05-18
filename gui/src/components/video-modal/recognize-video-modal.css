@@ -1,0 +1,124 @@
+.modal {
+    position: absolute;
+    z-index: 209;
+    width: 280px;
+    height: 350px;
+    right: 320px;
+    top: 80px;
+    background: rgba(255,255,255,1);
+    box-shadow:0px 6px 10px 0px rgba(0,48,104,0.1);
+    border-radius:10px;
+
+    user-select: none;
+}
+
+.top {
+    width: 100%;
+    height: 56px;
+    /* background:rgba(242,247,251,1); */
+    background: rgba(255,255,255,1);
+}
+
+.title {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    line-height: 56px;
+    height: 100%;
+    font-size:16px;
+    font-weight:500;
+    color:rgba(113,117,130,1);
+}
+
+.topRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 58px;
+    height: 34px;
+    display: flex;
+}
+
+.itemBtn {
+    width: 29px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.closeIcon {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.minimizeIcon {
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.body {
+    width: 280px;
+    height: 294px;
+}
+
+.center {
+    width: 100%;
+    height: calc(100vh - 167px);
+    position: relative;
+    background: rgba(242,247,251,1);
+    display: flex;
+}
+
+
+.cameraContainer {
+    width: 100%;
+    height: 236px;
+    position: relative;
+}
+
+.camera {
+    margin: 0 10px 10px 10px;
+    width: 260px;
+    height: 226px;
+    border-radius:5px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 226px;
+}
+
+.audioContainer {
+    width:260px;
+    height:48px;
+    background:rgba(45,61,85,1);
+    border-radius:5px;
+    margin: 0 10px 10px 10px;
+}
+
+.loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.tip {
+    font-size:14px;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+}
+
+

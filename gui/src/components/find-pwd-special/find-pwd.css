@@ -1,0 +1,259 @@
+/* 找回密码 */
+
+.find-pwd-modal {
+  width: 30rem;
+  /* height: 17rem; */
+  color: #717582;
+  padding-bottom: 1.5rem;
+}
+
+
+
+
+.find-pwd-container {
+  margin: 0 auto;
+}
+
+
+.registerContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.tabSelect {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.tab {
+  width: 50%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 0.85rem;
+  color: #ABB9C6;
+  text-align: center;
+  display: inline-block;
+  border-bottom: 2px solid #E8EFF7;
+}
+
+
+.tab:hover {
+  cursor: pointer;
+}
+
+.tab-selected {
+  border-bottom: 2px solid #4A9CF0;
+  color: #4A9CF0;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #717582;
+  height: 30px;
+  line-height: 30px;
+}
+
+.findPwdRemind {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #B0BDCA;
+}
+
+.validateNumContainer {
+  margin-top: 1rem;
+}
+
+.validatePic {
+  width: 8.375rem;
+  height: 2.215rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  float: right;
+}
+
+.getValidatePic {
+  width: 8.375rem;
+  height: 2.215rem;
+  line-height: 2.215rem;
+  font-size: 0.875rem;
+  float: right;
+  background: rgba(74, 156, 240, 1);
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.btnContainer {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.nextStepBtn {
+  width: 50%;
+}
+
+
+.input-phone-num {
+  position: relative;
+}
+
+.input-phone-num-check {
+  position: absolute;
+  bottom: -1.2rem;
+  right: 0;
+  font-size: 12px;
+  color: #FF7686;
+}
+
+.check-num {
+  position: relative;
+}
+
+.input-num-check {
+  position: absolute;
+  bottom: -1.2rem;
+  right: 0;
+  font-size: 12px;
+  color: #FF7686;
+}
+
+.get-check-num {
+  position: absolute;
+  top: 2.6rem;
+  right: 0.6rem;
+  font-size: 0.88rem;
+  color: #4A9CF0;
+}
+
+.get-check-num:hover {
+  cursor: pointer;
+}
+
+.get-check-num-disbled {
+  position: absolute;
+  top: 2.6rem;
+  right: 0.6rem;
+  font-size: 0.88rem;
+  color: #ccc;
+}
+
+.get-check-num-disbled:hover {
+  cursor: not-allowed;
+}
+
+.next-step {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.nextBtn {
+  width: 50%;
+}
+
+/* 修改密码 */
+
+.modify-pwd-modal {
+  width: 23rem;
+  height: 17rem;
+}
+
+.modify-pwd-container {
+  width: 90%;
+  margin: 3.5rem auto 0;
+}
+
+.set-new-pwd {
+  position: relative;
+}
+
+.set-new-pwd-text {
+  position: absolute;
+  left: 0;
+  top: -30px;
+  font-size: 0.88rem;
+  color: #717582;
+  font-weight: 400;
+}
+
+.finish {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.finish-btn {
+  width: 50%;
+}
+
+.country-code-input {
+  width: 20% !important;
+  padding-left: 22px !important;
+}
+
+.countryCodeInputAdd {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  color: #aaa;
+}
+
+.phoneNumInput {
+  width: 75% !important;
+}
+
+.emailInput {
+  width: 100% !important;
+}
+
+.line {
+  width: 5%;
+  text-align: center;
+  display: inline-block;
+  color: #aaa;
+}
+
+.showPwd {
+  width: 1.5rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.showPwd:hover {
+  cursor: pointer;
+}
+
+.redBorder {
+  border: 1px solid rgba(255, 118, 134, 1);
+  box-shadow: 0px 2px 6px 0px rgba(255, 118, 134, 0.5);
+}
+
+.errMsg {
+  font-size: 0.75rem;
+  color: #FF7686;
+  text-align: left;
+  min-height: 1.3rem;
+  padding-top: 0.2rem;
+}
+
+.emailCheckNum {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.6rem;
+  color: #4A9CF0;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+
+.findpwd-neterr {
+  padding: 0.44rem 0.44rem;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 0.5rem;
+  font-size: 0.88rem;
+  color: #717582;
+}

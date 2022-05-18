@@ -1,0 +1,15 @@
+.progressBg {
+  width: 100%;
+  height: 10px;
+  background: rgba(213, 222, 233, 1);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  position: absolute;
+  height: 10px;
+  background: linear-gradient(90deg, rgba(84, 162, 240, 1) 0%, rgba(80, 214, 215, 1) 100%);
+  border-radius: 5px;
+}

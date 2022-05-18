@@ -1,0 +1,39 @@
+.upgrade-succ-page {
+  width: 420px;
+  border-radius: 6px;
+}
+
+.upgrade-succ-content-wrap {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(242, 247, 251, 1);
+  margin: 0px 0px 30px 0px;
+}
+
+.upgrade-succ-label {
+  padding-top: 20px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: rgba(51, 51, 51, 1);
+}
+
+.upgrade-succ-button {
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  display: inline-block;
+  background: rgba(42, 140, 255, 1);
+  border: 0.5px solid rgba(32, 106, 210, 1);
+  border-radius: 4px;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.upgrade-succ-button:hover {
+  color: rgba(255, 255, 255, 1);
+  background: rgba(22, 119, 233, 1);
+  border: 1px solid rgba(32, 106, 210, 1);
+}

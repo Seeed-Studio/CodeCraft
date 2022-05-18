@@ -1,0 +1,413 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+menu.role=Role
+menu.cache=Cache
+menu.speed=CPU Speed
+menu.opt=Optimize
+menu.maxqspi=Max QSPI
+menu.usbstack=USB Stack
+menu.debug=Debug
+menu.txrxled=TX/RX LED
+
+# Seeed Wio Terminal (SAMD51)
+# ------------------------------
+seeed_wio_terminal.name=Seeeduino Wio Terminal
+seeed_wio_terminal.vid.0=0x2886
+seeed_wio_terminal.pid.0=0x802D
+seeed_wio_terminal.vid.1=0x2886
+seeed_wio_terminal.pid.1=0x002D
+seeed_wio_terminal.upload.tool=bossac18
+seeed_wio_terminal.upload.protocol=sam-ba
+seeed_wio_terminal.upload.maximum_size=507904
+seeed_wio_terminal.upload.offset=0x4000
+seeed_wio_terminal.upload.use_1200bps_touch=true
+seeed_wio_terminal.upload.wait_for_upload_port=true
+seeed_wio_terminal.upload.native_usb=true
+seeed_wio_terminal.build.mcu=cortex-m4
+#seeed_wio_terminal.build.f_cpu=120000000L
+seeed_wio_terminal.build.usb_product="Seeed Wio Terminal"
+seeed_wio_terminal.build.usb_manufacturer="Seeed Studio"
+seeed_wio_terminal.build.board=WIO_TERMINAL
+seeed_wio_terminal.build.core=arduino
+seeed_wio_terminal.build.extra_flags=-D__SAMD51P19A__ -DWIO_TERMINAL -DSEEED_WIO_TERMINAL -DSEEED_GROVE_UI_WIRELESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+seeed_wio_terminal.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+seeed_wio_terminal.build.openocdscript=openocd_scripts/arduino_zero.cfg
+seeed_wio_terminal.build.variant=wio_terminal
+seeed_wio_terminal.build.variant_system_lib=
+seeed_wio_terminal.build.vid=0x2886
+seeed_wio_terminal.build.pid=0x802D
+seeed_wio_terminal.bootloader.tool=openocd
+seeed_wio_terminal.bootloader.file=wio_terminal/bootloader-wio-terminal.bin
+seeed_wio_terminal.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.7.0.path}/CMSIS/DSP/Lib/GCC/" -larm_cortexM4lf_math -lm -mfloat-abi=hard -mfpu=fpv4-sp-d16
+seeed_wio_terminal.menu.role.master=Master
+seeed_wio_terminal.menu.role.master.build.flags.role=-DROLE=0
+seeed_wio_terminal.menu.role.slave=Slave
+seeed_wio_terminal.menu.role.slave.build.flags.role=-DROLE=1
+seeed_wio_terminal.menu.cache.on=Enabled
+seeed_wio_terminal.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+seeed_wio_terminal.menu.cache.off=Disabled
+seeed_wio_terminal.menu.cache.off.build.cache_flags=
+seeed_wio_terminal.menu.speed.120=120 MHz (standard)
+seeed_wio_terminal.menu.speed.120.build.f_cpu=120000000L
+seeed_wio_terminal.menu.speed.150=150 MHz (overclock)
+seeed_wio_terminal.menu.speed.150.build.f_cpu=150000000L
+seeed_wio_terminal.menu.speed.180=180 MHz (overclock)
+seeed_wio_terminal.menu.speed.180.build.f_cpu=180000000L
+seeed_wio_terminal.menu.speed.200=200 MHz (overclock)
+seeed_wio_terminal.menu.speed.200.build.f_cpu=200000000L
+seeed_wio_terminal.menu.opt.small=Small (-Os) (standard)
+seeed_wio_terminal.menu.opt.small.build.flags.optimize=-Os
+seeed_wio_terminal.menu.opt.fast=Fast (-O2)
+seeed_wio_terminal.menu.opt.fast.build.flags.optimize=-O2
+seeed_wio_terminal.menu.opt.faster=Faster (-O3)
+seeed_wio_terminal.menu.opt.faster.build.flags.optimize=-O3
+seeed_wio_terminal.menu.opt.fastest=Fastest (-Ofast)
+seeed_wio_terminal.menu.opt.fastest.build.flags.optimize=-Ofast
+seeed_wio_terminal.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+seeed_wio_terminal.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+seeed_wio_terminal.menu.maxqspi.50=50 MHz (standard)
+seeed_wio_terminal.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+seeed_wio_terminal.menu.maxqspi.fcpu=CPU Speed / 2
+seeed_wio_terminal.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+seeed_wio_terminal.menu.usbstack.arduino=Arduino
+seeed_wio_terminal.menu.usbstack.tinyusb=TinyUSB
+seeed_wio_terminal.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+seeed_wio_terminal.menu.debug.off=Off
+seeed_wio_terminal.menu.debug.on=On
+seeed_wio_terminal.menu.debug.on.build.flags.debug=-g -DDEBUG=1
+seeed_wio_terminal.menu.txrxled.on=On
+seeed_wio_terminal.menu.txrxled.off=Off
+seeed_wio_terminal.menu.txrxled.on.build.flags.txrxled=-DTXRXLED_ENABLE
+
+# Seeed Femto M0 (SAMD21)
+# ------------------------------
+Seeed_femto_m0.name=Seeeduino Femto
+Seeed_femto_m0.vid.0=0x2886
+Seeed_femto_m0.pid.0=0x802C
+Seeed_femto_m0.vid.1=0x2886
+Seeed_femto_m0.pid.1=0x002C
+Seeed_femto_m0.upload.tool=bossac
+Seeed_femto_m0.upload.protocol=sam-ba
+Seeed_femto_m0.upload.maximum_size=262144
+Seeed_femto_m0.upload.offset=0x2000
+Seeed_femto_m0.upload.use_1200bps_touch=true
+Seeed_femto_m0.upload.wait_for_upload_port=true
+Seeed_femto_m0.upload.native_usb=true
+Seeed_femto_m0.build.mcu=cortex-m0plus
+Seeed_femto_m0.build.f_cpu=48000000L
+Seeed_femto_m0.build.usb_product="Seeed femto M0"
+Seeed_femto_m0.build.usb_manufacturer="Seeed"
+Seeed_femto_m0.build.board=SEEED_FEMTO_M0
+Seeed_femto_m0.build.core=arduino
+Seeed_femto_m0.build.extra_flags=-DCRYSTALLESS -D__SAMD21__ -DARDUINO_SAMD_ZERO -D__SAMD21G18A__ -DARM_MATH_CM0PLUS -DSEEED_FEMTO_M0 {build.usb_flags}
+Seeed_femto_m0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+Seeed_femto_m0.build.openocdscript=openocd_scripts/femto_m0.cfg
+Seeed_femto_m0.build.variant=femto_m0
+Seeed_femto_m0.build.variant_system_lib=
+Seeed_femto_m0.build.vid=0x2886
+Seeed_femto_m0.build.pid=0x802C
+Seeed_femto_m0.bootloader.tool=openocd
+Seeed_femto_m0.bootloader.file=femtoM0/bootloader-femto_m0-v3.7.0-31-seeeduino.bin
+Seeed_femto_m0.menu.usbstack.arduino=Arduino
+Seeed_femto_m0.menu.usbstack.tinyusb=TinyUSB
+Seeed_femto_m0.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+Seeed_femto_m0.menu.debug.off=Off
+Seeed_femto_m0.menu.debug.on=On
+Seeed_femto_m0.menu.debug.on.build.flags.debug=-g -DDEBUG=1
+
+# Seeed XIAO M0 (SAMD21)
+# ------------------------------
+seeed_XIAO_m0.name=Seeeduino XIAO
+seeed_XIAO_m0.vid.0=0x2886
+seeed_XIAO_m0.pid.0=0x802F
+seeed_XIAO_m0.vid.1=0x2886
+seeed_XIAO_m0.pid.1=0x002F
+seeed_XIAO_m0.upload.tool=bossac
+seeed_XIAO_m0.upload.protocol=sam-ba
+seeed_XIAO_m0.upload.maximum_size=262144
+seeed_XIAO_m0.upload.offset=0x2000
+seeed_XIAO_m0.upload.use_1200bps_touch=true
+seeed_XIAO_m0.upload.wait_for_upload_port=true
+seeed_XIAO_m0.upload.native_usb=true
+seeed_XIAO_m0.build.mcu=cortex-m0plus
+seeed_XIAO_m0.build.f_cpu=48000000L
+seeed_XIAO_m0.build.usb_product="Seeed XIAO M0"
+seeed_XIAO_m0.build.usb_manufacturer="Seeed"
+seeed_XIAO_m0.build.board=SEEED_XIAO_M0
+seeed_XIAO_m0.build.core=arduino
+seeed_XIAO_m0.build.extra_flags= -DARDUINO_SAMD_ZERO -D__SAMD21__ -D__SAMD21G18A__ -DARM_MATH_CM0PLUS -DSEEED_XIAO_M0 {build.usb_flags}
+seeed_XIAO_m0.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+seeed_XIAO_m0.build.openocdscript=openocd_scripts/XIAO_m0.cfg
+seeed_XIAO_m0.build.variant=XIAO_m0
+seeed_XIAO_m0.build.variant_system_lib=
+seeed_XIAO_m0.build.vid=0x2886
+seeed_XIAO_m0.build.pid=0x802F
+seeed_XIAO_m0.bootloader.tool=openocd
+seeed_XIAO_m0.bootloader.file=XIAOM0/bootloader-XIAO_m0-v3.7.0-33-g90ff611-dirty.bin
+seeed_XIAO_m0.menu.usbstack.arduino=Arduino
+seeed_XIAO_m0.menu.usbstack.tinyusb=TinyUSB
+seeed_XIAO_m0.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+seeed_XIAO_m0.menu.debug.off=Off
+seeed_XIAO_m0.menu.debug.on=On
+seeed_XIAO_m0.menu.debug.on.build.flags.debug=-g -DDEBUG=1
+
+
+# Seeed XIAO M0 (SAMD21)
+# ------------------------------
+Wio_Lite_MG126.name=Seeeduino Wio lite MG126
+Wio_Lite_MG126.vid.0=0x2886
+Wio_Lite_MG126.pid.0=0x802A
+Wio_Lite_MG126.vid.1=0x2886
+Wio_Lite_MG126.pid.1=0x002A
+Wio_Lite_MG126.upload.tool=bossac
+Wio_Lite_MG126.upload.protocol=sam-ba
+Wio_Lite_MG126.upload.maximum_size=262144
+Wio_Lite_MG126.upload.offset=0x2000
+Wio_Lite_MG126.upload.use_1200bps_touch=true
+Wio_Lite_MG126.upload.wait_for_upload_port=true
+Wio_Lite_MG126.upload.native_usb=true
+Wio_Lite_MG126.build.mcu=cortex-m0plus
+Wio_Lite_MG126.build.f_cpu=48000000L
+Wio_Lite_MG126.build.usb_product="Seeeduino_Wio_Lite_MG126"
+Wio_Lite_MG126.build.usb_manufacturer="Seeed"
+Wio_Lite_MG126.build.board=Wio_Lite_MG126
+Wio_Lite_MG126.build.core=arduino
+Wio_Lite_MG126.build.extra_flags= -DARDUINO_SAMD_ZERO -D__SAMD21__ -D__SAMD21G18A__ -DARM_MATH_CM0PLUS -DWio_Lite_MG126 {build.usb_flags}
+Wio_Lite_MG126.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+Wio_Lite_MG126.build.openocdscript=openocd_scripts/Wio_Lite_MG126.cfg
+Wio_Lite_MG126.build.variant=Wio_Lite_MG126
+Wio_Lite_MG126.build.variant_system_lib=
+Wio_Lite_MG126.build.vid=0x2886
+Wio_Lite_MG126.build.pid=0x802A
+Wio_Lite_MG126.bootloader.tool=openocd
+Wio_Lite_MG126.bootloader.file=Wio_Lite_MG126/Bootloader_D21.hex
+Wio_Lite_MG126.menu.usbstack.arduino=Arduino
+Wio_Lite_MG126.menu.usbstack.tinyusb=TinyUSB
+Wio_Lite_MG126.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+Wio_Lite_MG126.menu.debug.off=Off
+Wio_Lite_MG126.menu.debug.on=On
+Wio_Lite_MG126.menu.debug.on.build.flags.debug=-g -DDEBUG=1
+
+
+# Wio GPS Board
+# ---------------------------------------
+WioGPS.name=Seeeduino Wio GPS Board
+WioGPS.vid.0=0x2886
+WioGPS.pid.0=0x800E
+WioGPS.vid.1=0x2886
+WioGPS.pid.1=0x000E
+
+WioGPS.upload.tool=bossac
+WioGPS.upload.protocol=sam-ba
+WioGPS.upload.maximum_size=262144
+WioGPS.upload.use_1200bps_touch=true
+WioGPS.upload.wait_for_upload_port=true
+WioGPS.upload.native_usb=true
+WioGPS.build.mcu=cortex-m0plus
+WioGPS.build.f_cpu=48000000L
+WioGPS.build.usb_product="Wio GPS Board"
+WioGPS.build.usb_manufacturer="Seeed Studio"
+WioGPS.build.board=WIO_GPS_BOARD
+WioGPS.build.core=arduino
+WioGPS.build.extra_flags=-D__SAMD21G18A__ {build.usb_flags} -DWIO_GPS_BOARD -DARM_MATH_CM0PLUS -D__SAMD21__
+WioGPS.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+WioGPS.build.openocdscript=openocd_scripts/arduino_zero.cfg
+WioGPS.build.variant=arduino_zero
+WioGPS.build.variant_system_lib=
+WioGPS.build.vid=0x2886
+WioGPS.build.pid=0x800E
+WioGPS.bootloader.tool=openocd
+WioGPS.bootloader.file=wioGPS/samd21_sam_ba.bin
+WioGPS.menu.usbstack.arduino=Arduino
+WioGPS.menu.usbstack.tinyusb=TinyUSB
+WioGPS.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+WioGPS.menu.debug.off=Off
+WioGPS.menu.debug.on=On
+WioGPS.menu.debug.on.build.flags.debug=-g -DDEBUG=1
+
+# Seeeduino Zero
+# ---------------------------------------
+zero.name=Seeeduino Zero
+zero.vid.0=0x2886
+zero.pid.0=0x800B
+zero.vid.1=0x2886
+zero.pid.1=0x000B
+
+zero.upload.tool=bossac
+zero.upload.protocol=sam-ba
+zero.upload.maximum_size=262144
+zero.upload.use_1200bps_touch=true
+zero.upload.wait_for_upload_port=true
+zero.upload.native_usb=true
+zero.build.mcu=cortex-m0plus
+zero.build.f_cpu=48000000L
+zero.build.usb_product="Seeeduino Zero"
+zero.build.usb_manufacturer="Seeed Studio"
+zero.build.board=SEEED_ZERO
+zero.build.core=arduino
+zero.build.extra_flags=-D__SAMD21G18A__ {build.usb_flags} -DARM_MATH_CM0PLUS -DSEEEDUINO_ZERO -D__SAMD21__
+zero.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+zero.build.openocdscript=openocd_scripts/arduino_zero.cfg
+zero.build.variant=arduino_zero
+zero.build.variant_system_lib=
+zero.build.vid=0x2886
+zero.build.pid=0x800B
+zero.bootloader.tool=openocd
+zero.bootloader.file=seeed_zero/samd21_sam_ba.bin
+zero.menu.usbstack.arduino=Arduino
+zero.menu.usbstack.tinyusb=TinyUSB
+zero.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+zero.menu.debug.off=Off
+zero.menu.debug.on=On
+zero.menu.debug.on.build.flags.debug=-g -DDEBUG=1
+
+# Seeeduino LoRaWAN
+# ---------------------------------------
+rolawan.name=Seeeduino LoRaWAN
+rolawan.vid.0=0x2886
+rolawan.pid.0=0x800C
+rolawan.vid.1=0x2886
+rolawan.pid.1=0x000C
+
+rolawan.upload.tool=bossac
+rolawan.upload.protocol=sam-ba
+rolawan.upload.maximum_size=262144
+rolawan.upload.use_1200bps_touch=true
+rolawan.upload.wait_for_upload_port=true
+rolawan.upload.native_usb=true
+rolawan.build.mcu=cortex-m0plus
+rolawan.build.f_cpu=48000000L
+rolawan.build.usb_product="Seeeduino LoRaWAN"
+rolawan.build.usb_manufacturer="Seeed Studio"
+rolawan.build.board=SEEED_LORAWAN
+rolawan.build.core=arduino
+rolawan.build.extra_flags=-D__SAMD21G18A__ {build.usb_flags} -DARM_MATH_CM0PLUS -DSEEEDUINO_LORAWAN -D__SAMD21__
+rolawan.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+rolawan.build.openocdscript=openocd_scripts/arduino_zero.cfg
+rolawan.build.variant=arduino_zero
+rolawan.build.variant_system_lib=
+rolawan.build.vid=0x2886
+rolawan.build.pid=0x800C
+rolawan.bootloader.tool=openocd
+rolawan.bootloader.file=lorawan/samd21_sam_ba.bin
+rolawan.menu.usbstack.arduino=Arduino
+rolawan.menu.usbstack.tinyusb=TinyUSB
+rolawan.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+rolawan.menu.debug.off=Off
+rolawan.menu.debug.on=On
+rolawan.menu.debug.on.build.flags.debug=-g -DDEBUG=1
+
+# Wio LTE CAT.1 M0 (SAMD21)
+# ------------------------------
+Wio_LTE_CAT.name=Wio LTE Cat.1
+Wio_LTE_CAT.vid.0=0x2886
+Wio_LTE_CAT.pid.0=0x8031
+Wio_LTE_CAT.vid.1=0x2886
+Wio_LTE_CAT.pid.1=0x0031
+Wio_LTE_CAT.upload.tool=bossac
+Wio_LTE_CAT.upload.protocol=sam-ba
+Wio_LTE_CAT.upload.maximum_size=262144
+Wio_LTE_CAT.upload.offset=0x2000
+Wio_LTE_CAT.upload.use_1200bps_touch=true
+Wio_LTE_CAT.upload.wait_for_upload_port=true
+Wio_LTE_CAT.upload.native_usb=true
+Wio_LTE_CAT.build.mcu=cortex-m0plus
+Wio_LTE_CAT.build.f_cpu=48000000L
+Wio_LTE_CAT.build.usb_product="Wio LTE Cat.1"
+Wio_LTE_CAT.build.usb_manufacturer="Seeed"
+Wio_LTE_CAT.build.board=WIO_LTE_CAT
+Wio_LTE_CAT.build.core=arduino
+Wio_LTE_CAT.build.extra_flags= -DARDUINO_SAMD_ZERO -D__SAMD21__ -D__SAMD21G18A__ -DARM_MATH_CM0PLUS -DWIO_LTE_CAT {build.usb_flags}
+Wio_LTE_CAT.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+Wio_LTE_CAT.build.openocdscript=openocd_scripts/Wio_LTE_Cat.cfg
+Wio_LTE_CAT.build.variant=Wio_LTE_Cat.1
+Wio_LTE_CAT.build.variant_system_lib=
+Wio_LTE_CAT.build.vid=0x2886
+Wio_LTE_CAT.build.pid=0x8031
+Wio_LTE_CAT.bootloader.tool=openocd
+Wio_LTE_CAT.bootloader.file=wio_lte_cat.1/bootloader-wio_lte_cat.1.bin
+Wio_LTE_CAT.menu.usbstack.arduino=Arduino
+Wio_LTE_CAT.menu.usbstack.tinyusb=TinyUSB
+Wio_LTE_CAT.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+Wio_LTE_CAT.menu.debug.off=Off
+Wio_LTE_CAT.menu.debug.on=On
+Wio_LTE_CAT.menu.debug.on.build.flags.debug=-g -DDEBUG=1
+
+# Seeed Grove UI Wireless (SAMD51)
+# ------------------------------
+seeed_grove_ui_wireless.name=Seeeduino Grove UI Wireles (SAMD51)
+seeed_grove_ui_wireless.vid.0=0x2886
+seeed_grove_ui_wireless.pid.0=0x0000
+seeed_grove_ui_wireless.vid.1=0x2886
+seeed_grove_ui_wireless.pid.1=0x0000
+seeed_grove_ui_wireless.upload.tool=bossac18
+seeed_grove_ui_wireless.upload.protocol=sam-ba
+seeed_grove_ui_wireless.upload.maximum_size=507904
+seeed_grove_ui_wireless.upload.offset=0x4000
+seeed_grove_ui_wireless.upload.use_1200bps_touch=true
+seeed_grove_ui_wireless.upload.wait_for_upload_port=true
+seeed_grove_ui_wireless.upload.native_usb=true
+seeed_grove_ui_wireless.build.mcu=cortex-m4
+#seeed_grove_ui_wireless.build.f_cpu=120000000L
+seeed_grove_ui_wireless.build.usb_product="Seeed Grove UI Wireles"
+seeed_grove_ui_wireless.build.usb_manufacturer="Seeed Studio"
+seeed_grove_ui_wireless.build.board=GROVE_UI_WIRELESS
+seeed_grove_ui_wireless.build.core=arduino
+seeed_grove_ui_wireless.build.extra_flags=-DVREFLESS -D__SAMD51P19A__ -DSEEED_GROVE_UI_WIRELESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+seeed_grove_ui_wireless.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+seeed_grove_ui_wireless.build.openocdscript=openocd_scripts/arduino_zero.cfg
+seeed_grove_ui_wireless.build.variant=grove_ui_wireless
+seeed_grove_ui_wireless.build.variant_system_lib=
+seeed_grove_ui_wireless.build.vid=0x2886
+seeed_grove_ui_wireless.build.pid=0x0000
+seeed_grove_ui_wireless.bootloader.tool=openocd
+seeed_grove_ui_wireless.bootloader.file=groveUIWireless/bootloader-groveUIWireless_m4-v3.7.0-Seeed.bin
+seeed_grove_ui_wireless.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.7.0.path}/CMSIS/DSP/Lib/GCC/" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+seeed_grove_ui_wireless.menu.cache.on=Enabled
+seeed_grove_ui_wireless.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+seeed_grove_ui_wireless.menu.cache.off=Disabled
+seeed_grove_ui_wireless.menu.cache.off.build.cache_flags=
+seeed_grove_ui_wireless.menu.speed.120=120 MHz (standard)
+seeed_grove_ui_wireless.menu.speed.120.build.f_cpu=120000000L
+seeed_grove_ui_wireless.menu.speed.150=150 MHz (overclock)
+seeed_grove_ui_wireless.menu.speed.150.build.f_cpu=150000000L
+seeed_grove_ui_wireless.menu.speed.180=180 MHz (overclock)
+seeed_grove_ui_wireless.menu.speed.180.build.f_cpu=180000000L
+seeed_grove_ui_wireless.menu.speed.200=200 MHz (overclock)
+seeed_grove_ui_wireless.menu.speed.200.build.f_cpu=200000000L
+seeed_grove_ui_wireless.menu.opt.small=Small (-Os) (standard)
+seeed_grove_ui_wireless.menu.opt.small.build.flags.optimize=-Os
+seeed_grove_ui_wireless.menu.opt.fast=Fast (-O2)
+seeed_grove_ui_wireless.menu.opt.fast.build.flags.optimize=-O2
+seeed_grove_ui_wireless.menu.opt.faster=Faster (-O3)
+seeed_grove_ui_wireless.menu.opt.faster.build.flags.optimize=-O3
+seeed_grove_ui_wireless.menu.opt.fastest=Fastest (-Ofast)
+seeed_grove_ui_wireless.menu.opt.fastest.build.flags.optimize=-Ofast
+seeed_grove_ui_wireless.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+seeed_grove_ui_wireless.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+seeed_grove_ui_wireless.menu.maxqspi.50=50 MHz (standard)
+seeed_grove_ui_wireless.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+seeed_grove_ui_wireless.menu.maxqspi.fcpu=CPU Speed / 2
+seeed_grove_ui_wireless.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+seeed_grove_ui_wireless.menu.usbstack.arduino=Arduino
+seeed_grove_ui_wireless.menu.usbstack.tinyusb=TinyUSB
+seeed_grove_ui_wireless.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+seeed_grove_ui_wireless.menu.debug.off=Off
+seeed_grove_ui_wireless.menu.debug.on=On
+seeed_grove_ui_wireless.menu.debug.on.build.flags.debug=-g -DDEBUG=1
+
+

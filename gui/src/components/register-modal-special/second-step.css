@@ -1,0 +1,224 @@
+.second-step-container {
+  margin: 1rem auto 1.2rem;
+  color: #717582;
+  font-size: 0.88rem;
+}
+
+.upload-pic {
+  text-align: center;
+  height: 2.5rem;
+}
+
+.pic-container {
+  position: relative;
+}
+
+.pic-container:hover {
+  cursor: pointer;
+}
+
+.pic-container:hover .pic-camera {
+  display: block;
+  cursor: pointer;
+}
+
+.pic-camera {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .4);
+  border-radius: 50%;
+  text-align: center;
+  display: none;
+}
+
+.pic-camera>img {
+  width: 45px;
+  margin-top: 18px;
+}
+
+.library-local-upload {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.upload-pic-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+}
+
+.upload-pic-img:hover {
+  cursor: pointer;
+}
+
+.upload-pic-btn {
+  display: block;
+  width: 80px;
+  height: 80px;
+  line-height: 64px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #E7F3FE;
+  border: 2px solid #fff;
+  color: #4A9CF0;
+  font-size: 30px;
+}
+
+.upload-pic-text {
+  text-align: center;
+  font-size: 14px;
+  color: #4A9CF0;
+  margin-top: 3rem;
+}
+
+.nickNameContainer {
+  position: relative;
+  height: 6rem;
+}
+
+.nickname {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.nickname-input {
+  padding-left: 8.5rem;
+  height: 40px !important;
+}
+
+.nickname-is-focus {
+  border: 1px solid rgba(81, 221, 212, 1);
+  box-shadow: 0px 4px 10px 0px rgba(81, 221, 212, 0.5);
+}
+
+.nickname-label {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  display: block;
+  width: 7.5rem;
+  height: calc(2.5rem - 2px);
+  line-height: calc(2.5rem - 2px);
+  text-align: left;
+  border-radius: 10px 0 0 10px;
+  background: rgba(242, 247, 251, 1);
+  border-right: 1px solid rgba(232, 239, 247, 1);
+  color: rgba(171, 185, 198, 1);
+  font-size: 0.88rem;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.nicknamErr {
+  position: absolute;
+  right: 0;
+  bottom: -1.2rem;
+  font-size: 0.75rem;
+  color: #FF7686;
+}
+
+.gender-chose {
+  width: 85%;
+  margin: 1.5rem auto;
+}
+
+.girl {
+  float: left;
+}
+
+.boy {
+  float: right;
+}
+
+.finish-reigster-container {
+  margin-top: -0.5rem;
+  text-align: center;
+}
+
+.finish-reigster-btn {
+  width: 50%;
+}
+
+.datapick {
+  width: 100%;
+  position: absolute;
+  top: 3.9rem;
+  left: 0;
+}
+
+.datepicker {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  width: 300px;
+  height: 140px;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 10px; */
+  background: rgba(242, 247, 251, 1);
+  overflow: hidden;
+}
+
+.to-login {
+  font-size: 0.75rem;
+  color: #4A9CF0;
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+.to-login-text:hover {
+  cursor: pointer;
+}
+
+.years-container {
+  float: left;
+  width: 100px;
+}
+
+.years {
+  width: 100%;
+  height: 100px;
+}
+
+.redBorder {
+  border: 1px solid rgba(255, 118, 134, 1);
+  box-shadow: 0px 2px 6px 0px rgba(255, 118, 134, 0.5);
+}
+
+.errMsg {
+  font-size: 0.75rem;
+  color: #FF7686;
+  text-align: left;
+  min-height: 1.3rem;
+  padding-top: 0.2rem;
+}
+
+.radio-container {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #717582;
+  width: 50%;
+  text-align: center;
+}
+
+.radio-item {
+  cursor: pointer;
+}
+
+.radio-icon {
+  width: 1rem;
+  vertical-align: sub;
+}
+
+.radio-text {
+  padding-left: 8px;
+}

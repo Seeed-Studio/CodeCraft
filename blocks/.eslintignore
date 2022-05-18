@@ -1,0 +1,16 @@
+*_compressed*.js
+*_uncompressed*.js
+/msg/*
+/core/css.js
+/i18n/*
+/tests/jsunit/*
+/tests/workspace_svg/*
+/tests/blocks/*
+/demos/*
+/accessible/*
+/appengine/*
+/shim/*
+/dist/*
+/gh-pages/*
+/webpack.config.js
+/build/*

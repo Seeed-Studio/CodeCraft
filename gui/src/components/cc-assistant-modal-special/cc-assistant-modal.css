@@ -1,0 +1,141 @@
+.cc-assistant-modal {
+  width: 17.5rem;
+  min-height:10.94rem;
+  color: #717582;
+}
+
+.has-disconnected-modal {
+  width: 17.5rem;
+  min-height:10.94rem;
+  color: #717582;
+}
+
+.is-used-modal {
+  width: 17.5rem;
+  min-height: 12.36rem;
+  color: #717582;
+}
+
+.not-open-assistant-modal {
+  width: 19.63rem;
+  /* min-height: 21.94rem; */
+  color: #717582;
+}
+
+
+.cc-assistant-constainer {
+  width: 13.5rem;
+  margin: 10px auto;
+}
+
+/* 被占用 */
+
+.is-used-container {
+  text-align: center;
+  padding-bottom: 1.7rem;
+}
+
+.is-used {
+  /* line-height: 24px; */
+  padding: 0 1.87rem;
+  margin-top: 1.12rem;
+  margin-bottom: 1.44rem;
+  font-size:0.88rem;
+  font-weight:400;
+  color:rgba(113,117,130,1);
+  text-align: left;
+  word-break: break-all;
+}
+
+.assistant-ok-btn {
+  
+}
+
+/* 助手下载 */
+
+.cc-assistant-modal-down {
+  width: 20rem;
+  color: #717582;
+  padding: 0.3rem 1rem;
+}
+
+.cc-assistant-constainer-down {
+  width: 390px;
+  margin: 10px auto;
+}
+
+.not-open-container {
+  margin: 1.12rem 1.25rem 1.87rem 1.25rem;
+}
+
+.not-open-title {
+  font-size: 0.96rem;
+  color: #717582;
+}
+
+.not-open-text {
+  color: #ABB9C6;
+  font-size:0.88rem;
+  font-weight:400;
+  margin-top: 0.56rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.pic-container {
+  margin-top: 25px;
+}
+
+.pic-container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.icon-assistant {
+  float: left;
+  /* padding:0.5rem; */
+  width: 6.88rem;
+  height: 6.88rem;
+  padding:0.1rem;
+  /* background: #fff; */
+  /* border: 0.096rem dotted rgba(113,117,130,1); */
+  border-radius: 0px;
+}
+
+.icon-assistant>img {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-toolbar {
+  float: right;
+  width: 9.63rem;
+  height: 6.88rem;
+  padding:0.1rem;
+  /* background: #fff; */
+  /* border: 0.096rem dotted rgba(113,117,130,1); */
+  border-radius: 0px;
+}
+
+.icon-toolbar>img {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-container {
+  display: flex;
+  text-align: center;
+  /* margin: 30px auto 0; */
+  flex-direction: row;
+  margin-top: 1.87rem;
+}
+
+.assistantOkBtn {
+  margin: 0 0.5rem;
+}
+
+.ok-btn-padding{
+  padding-left: 1.0rem;
+  padding-right: 1.0rem;
+}

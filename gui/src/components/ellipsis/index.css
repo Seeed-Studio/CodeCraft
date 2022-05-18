@@ -1,0 +1,38 @@
+.ellipsis {
+  overflow: hidden;
+  display: inline-block;
+  word-break: break-word;
+  width: 100%;
+}
+
+.lines {
+  position: relative;
+}
+
+.shadow {
+  display: block;
+  position: absolute;
+  color: transparent;
+  opacity: 0;
+  z-index: -999;
+}
+
+.lineClamp {
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+
+.tooltipClassName>div>div:last-child {
+  background: rgba(21, 7, 12, 0.8) !important;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 24px;
+  border-radius: 5px;
+}
+
+
+:global(.ant-tooltip) {
+  z-index: 999999 !important;
+}

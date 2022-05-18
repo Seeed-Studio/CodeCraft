@@ -1,0 +1,2815 @@
+{
+    "gui.soundEditor.echo": {
+        "message": "Echo",
+        "description": "Title of the button to apply the echo effect"
+    },
+    "gui.previewInfo.notnow": {
+        "message": "Not Now",
+        "description": "Label for button to back out of trying Scratch 3.0 preview"
+    },
+    "gui.howtos.animate-a-name.step_AnimateChangeColor": {
+        "message": "Change color",
+        "description": "Step name for 'Change color' step"
+    },
+    "gui.costumeLibrary.chooseACostume": {
+        "message": "Choose a Costume",
+        "description": "Heading for the costume library"
+    },
+    "gui.library.filterPlaceholder": {
+        "message": "Search",
+        "description": "Placeholder text for library search field"
+    },
+    "gui.unsupportedBrowser.back": {
+        "message": "Back",
+        "description": "Button to go back in unsupported browser modal"
+    },
+    "gui.stageSelector.addBackdropFromSurprise": {
+        "message": "Surprise",
+        "description": "Button to add a random stage in the target pane"
+    },
+    "gui.comingSoon.message3": {
+        "message": "We're working on it {emoji}",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.unsupportedBrowser.previewfaqlink": {
+        "message": "Preview FAQ",
+        "description": "link to Scratch 3.0 preview FAQ page"
+    },
+    "gui.monitor.contextMenu.slider": {
+        "message": "slider",
+        "description": "Menu item to switch to the slider monitor"
+    },
+    "gui.cards.remove": {
+        "message": "Remove",
+        "description": "Title for button to close how-to card"
+    },
+    "gui.unsupportedBrowser.description": {
+        "message": "We're very sorry, but Scratch 3.0 does not support Internet Explorer, Vivaldi, Opera or Silk. We recommend trying a newer browser such as Google Chrome, Mozilla Firefox, or Microsoft Edge.",
+        "description": "Unsupported browser description"
+    },
+    "gui.costumeTab.addSurpriseCostume": {
+        "message": "Surprise",
+        "description": "Button to add a surprise costume in the editor tab"
+    },
+    "gui.costumeTab.drawShape": {
+        "message": "Draw costumes",
+        "description": ""
+    },
+    "gui.costumeTab.drawDackdrop": {
+        "message": "Draw backdrops",
+        "description": ""
+    },
+    "gui.howtos.add-a-move-block.step_stepMoveSayHello": {
+        "message": "Add Green Flag Block, then click the flag",
+        "description": "Step name for 'Add A Say Block' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimateSpin": {
+        "message": "Choose a Letter & Make it Spin",
+        "description": "Step name for 'Choose a Letter & Make it Spin' step"
+    },
+    "gui.soundEditor.save": {
+        "message": "Save",
+        "description": "Title of the button to save trimmed sound"
+    },
+    "gui.howtos.say-hello.name": {
+        "message": "Say hello",
+        "description": "Name for the 'Say hello' how-to"
+    },
+    "gui.stageHeader.stageSizeUnFull": {
+        "message": "Exit full screen mode",
+        "description": "Button to get out of full screen mode"
+    },
+    "gui.menuBar.file": {
+        "message": "Files",
+        "description": "Text for file dropdown menu"
+    },
+    "gui.stageHeader.stageSizeLarge": {
+        "message": "Switch to large stage",
+        "description": "Button to change stage size to large"
+    },
+    "gui.howtos.switch-costume.name": {
+        "message": "Switch costume",
+        "description": "Name for the 'Switch costume' how-to"
+    },
+    "gui.howtos.say-hello.step_addSprite": {
+        "message": "Say Hello",
+        "description": "Step name for 'Add a new sprite' step"
+    },
+    "gui.costumeTab.addFileBackdrop": {
+        "message": "Upload Backdrop",
+        "description": "Button to add a backdrop by uploading a file in the editor tab"
+    },
+    "gui.soundTab.fileUploadSound": {
+        "message": "Upload Sound",
+        "description": "Button to upload sound from file in the editor tab"
+    },
+    "gui.soundEditor.stop": {
+        "message": "Stop",
+        "description": "Title of the button to stop the sound"
+    },
+    "gui.loader.message2": {
+        "message": "Loading sprites …",
+        "description": "One of the loading messages"
+    },
+    "gui.stageHeader.fullscreenControl": {
+        "message": "Full Screen Control",
+        "description": "Button to enter/exit full screen mode"
+    },
+    "gui.soundEditor.redo": {
+        "message": "Redo",
+        "description": "Title of the button to redo"
+    },
+    "gui.importInfo.title": {
+        "message": "View a Scratch 2.0 Project",
+        "description": "Scratch 2.0 import modal label - for accessibility"
+    },
+    "gui.extensionLibrary.chooseAnExtension": {
+        "message": "Extension Library",
+        "description": "Heading for the extension library"
+    },
+
+    "gui.extensionLibrary.delete": {
+        "message": "Delete"
+    },
+    "gui.extensionLibrary.add": {
+        "message": "Add"
+    },
+
+    "gui.extensionLibrary.delPromptLabel": {
+        "message": "Promt"
+    },
+    "gui.extensionLibrary.delPromptMessage": {
+        "message": "Are you sure you want to delete it? After deleting, you will not be able to use the building blocks of the extension."
+    },
+    "gui.extensionLibrary.inUsedPromptMessage": {
+        "message": "The extension is being used and cannot be removed for the time being."
+    },
+    "gui.extensionLibrary.delCancel": {
+        "message": "Cancel"
+    },
+    "gui.extensionLibrary.delOk": {
+        "message": "Ok"
+    },
+
+    "gui.extension.cognitiveservices.name": {
+        "message": "Cognitive Services"
+    },
+    "gui.extension.cognitiveservices.description": {
+        "message": "The cognitive services API allows users to add other features, for instance, Video, Speech."
+    },
+    "gui.extension.teachablemachine.name": {
+        "message": "Teachable Machine"
+    },
+    "gui.extension.teachablemachine.description": {
+        "message": "With Machine Learning, you don't have to program but still can train computers to learn things and establish artificial neural networks that resemble human's brains."
+    },
+    "gui.extension.teachablemachine.Meteostation": {
+        "message": "Feel the difference data change caused by temperature and humidity in weather station"
+    },
+    "gui.extension.3AxisAccelerometer.name": {
+        "message": "3-axis Accelorometer Visualization"
+    },
+    "gui.extension.3AxisAccelerometer.description": {
+        "message": "Visualize the position of accelerometer on a virtual cube in 3D space"
+    },
+    "gui.extension.meteostation.name": {
+        "message": "Meteostation"
+    },
+    "gui.extension.meteostation.description": {
+        "message": "Display environmental data, such as temperature. humidity and air pressure on a sci-fi web interface"
+    },
+    "gui.extension.ottoDiyRobot.name": {
+        "message": "Biped Robot"
+    },
+    "gui.extension.ottoDiyRobot.description": {
+        "message": "Blocks for controlling Biped Robot, from Biped Robot Middle School Course."
+    },
+    "gui.extension.shieldBot.name": {
+        "message": "Shield Bot"
+    },
+    "gui.extension.shieldBot.description": {
+        "message": "Blocks for controlling Shield Bot."
+    },
+    "gui.extension.mark.name": {
+        "message": "M.A.R.K"
+    },
+    "gui.extension.mark.description": {
+        "message": "Blocks for controlling M.A.R.K. Chassis."
+    },
+    "gui.extension.wireless.name": {
+        "message": "Wireless Communication"
+    },
+    "gui.extension.wireless.description": {
+        "message": "Blocks for Wireless Communication, including WIFi, Bluetooth and Infrared."
+    },
+    "gui.extension.createSkill.name": {
+        "message": "Create Skill"
+    },
+    "gui.extension.createSkill.description": {
+        "message": "Create new movement sequences for Bittle, so new dog can learn new tricks."
+    },
+    "gui.extension.calibrateServos.name": {
+        "message": "Calibrate Servos"
+    },
+    "gui.extension.calibrateServos.description": {
+        "message": "A user interface for convenient servo initial position calibration"
+    },
+
+    "gui.webglModal.description": {
+        "message": "Unfortunately it looks like your browser or computer {webGlLink}. This technology is needed for Scratch 3.0 to run.",
+        "description": "WebGL missing message"
+    },
+    "gui.previewModal.viewproject": {
+        "message": "View 2.0 Project",
+        "description": "Label for button to import a 2.0 project"
+    },
+    "gui.previewInfo.previewfaqlink": {
+        "message": "Preview FAQ",
+        "description": "link to Scratch 3.0 preview FAQ page"
+    },
+    "gui.soundEditor.softer": {
+        "message": "Softer",
+        "description": "Title of the button to apply thr.softer effect"
+    },
+    "gui.soundEditor.robot": {
+        "message": "Robot",
+        "description": "Title of the button to apply the robot effect"
+    },
+    "gui.menuBar.undo": {
+        "message": "Undo",
+        "description": "Menu bar item for undoing"
+    },
+    "gui.stageSelector.stage": {
+        "message": "Sprite",
+        "description": "Label for the stage in the stage selector"
+    },
+    "gui.webglModal.back": {
+        "message": "Back",
+        "description": "Label for button go back when browser is unsupported"
+    },
+    "gui.comingSoon.message1": {
+        "message": "Don't worry, we're on it {emoji}",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.howtos.make-a-game.step_ChangeColor": {
+        "message": "Change Color",
+        "description": "Step name for 'Change Color' step"
+    },
+    "gui.cards.all-how-tos": {
+        "message": "All How-Tos",
+        "description": "Title for button to return to how-to library"
+    },
+    "gui.soundLibrary.chooseASound": {
+        "message": "Choose a Sound",
+        "description": "Heading for the sound library"
+    },
+    "gui.importInfo.invalidFormatError": {
+        "message": "Uh oh, that project link or id doesn't look quite right.",
+        "description": "Invalid project link or id message"
+    },
+    "gui.customProcedures.addAnInputNumberText": {
+        "message": "Add an input",
+        "description": "Label for button to add a number/text input"
+    },
+    "gui.menuBar.saveAsCopy": {
+        "message": "Save as a copy",
+        "description": "Menu bar item for saving as a copy"
+    },
+    "gui.importModal.viewproject": {
+        "message": "View",
+        "description": "Label for button to load a scratch 2.0 project"
+    },
+    "gui.menuBar.new": {
+        "message": "New",
+        "description": "Menu bar item for creating a new project"
+    },
+    "gui.customProcedures.addALabel": {
+        "message": "Add a label",
+        "description": "Label for button to add a label"
+    },
+    "gui.soundEditor.trim": {
+        "message": "Trim",
+        "description": "Title of the button to start trimminging the sound"
+    },
+    "gui.cards.see-more": {
+        "message": "See more",
+        "description": "Title for button to see more in how-to library"
+    },
+    "gui.customProcedures.addAnInputBoolean": {
+        "message": "Add an input",
+        "description": "Label for button to add a boolean input"
+    },
+    "gui.stageHeader.stageSizeSmall": {
+        "message": "Switch to small stage",
+        "description": "Button to change stage size to small"
+    },
+    "gui.menuBar.saveNow": {
+        "message": "Save",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.saving": {
+        "message": "Saving",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.myProduction": {
+        "message": "My projects",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.accountSetting": {
+        "message": "Settings",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.loginOut": {
+        "message": "Log out",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.nologin": {
+        "message": "Login",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.mainTab.deviceLabel": {
+        "message": "Device",
+        "description": ""
+    },
+    "gui.mainTab.stageLabel": {
+        "message": "Stage",
+        "description": ""
+    },
+    "gui.device.selector.adddevice": {
+        "message": "Switch Device",
+        "description": ""
+    },
+    "gui.device.selector.linkdevice": {
+        "message": "Connect",
+        "description": ""
+    },
+    "gui.device.delete.promptLabel": {
+        "message": "Promt",
+        "description": ""
+    },
+    "gui.device.delete.prompt": {
+        "message": "Would you like to delete this device?",
+        "description": ""
+    },
+    "gui.device.delete.cancel": {
+        "message": "Cancel",
+        "description": ""
+    },
+    "gui.device.delete.ok": {
+        "message": "OK",
+        "description": ""
+    },
+    "gui.device.featuredText": {
+        "message": "Added",
+        "description": ""
+    },
+    "gui.deviceConnect.modalLabel": {
+        "message": "Connect device",
+        "description": ""
+    },
+    "gui.deviceConnect.connectBtn": {
+        "message": "Connect",
+        "description": ""
+    },
+    "gui.deviceConnect.disconnectBtn": {
+        "message": "Disconnect",
+        "description": ""
+    },
+    "gui.deviceConnect.promptLabel": {
+        "message": "Prompt",
+        "description": ""
+    },
+    "gui.deviceConnect.promptTextPrefix": {
+        "message": "Would you like to disconnect from ",
+        "description": ""
+    },
+    "gui.deviceConnect.promptTextSuffix": {
+        "message": "?",
+        "description": ""
+    },
+    "gui.deviceConnect.cancel": {
+        "message": "No",
+        "description": ""
+    },
+    "gui.deviceConnect.ok": {
+        "message": "Yes",
+        "description": ""
+    },
+    "gui.deviceConnect.upgradePromptForNormal": {
+        "message": "Firmware update available. ",
+        "description": ""
+    },
+    "gui.deviceConnect.upgradePromptForDavinci": {
+        "message": "If the device is not working, please update the firmware.",
+        "description": ""
+    },
+    "gui.deviceConnect.upgradeBtn": {
+        "message": "Update now",
+        "description": ""
+    },
+    "gui.deviceConnect.moreInformationBtn": {
+        "message": "More information",
+        "description": ""
+    },
+    "gui.deviceConnect.showVerison": {
+        "message": "Check my firmware version"
+    },
+    "gui.deviceConnect.connectionProblems": {
+        "message": "Having trouble in connecting?",
+        "description": ""
+    },
+    "gui.deviceConnect.selectDevices": {
+        "message": "Select device",
+        "description": ""
+    },
+    "gui.deviceConnect.noDevices": {
+        "message": "No devices found",
+        "description": ""
+    },
+    "gui.deviceConnect.noFoundDevices": {
+        "message": "Are you trying to connect for the first time and connection failed?",
+        "description": ""
+    },
+    "gui.deviceConnect.noFoundDevicesPrompt": {
+        "message": "On the first connection, please download the USB driver and let the computer detect your device.",
+        "description": ""
+    },
+    "gui.deviceConnect.driversInfo": {
+        "message": "Install driver",
+        "description": ""
+    },
+    "gui.deviceConnect.driversFT232Info": {
+        "message": "Install the FT232 driver",
+        "description": ""
+    },
+    "gui.settingPage.title": {
+        "message": "Device Information",
+        "description": ""
+    },
+    "gui.settingPage.deviceName": {
+        "message": "Name：",
+        "description": ""
+    },
+    "gui.settingPage.firmwareVersion": {
+        "message": "Firmware Version：",
+        "description": ""
+    },
+    "gui.settingPage.deviceReturn": {
+        "message": "Confirm",
+        "description": ""
+    },
+    "gui.upgradeConfirm.txupgrade": {
+        "message": "Upgrade",
+        "description": ""
+    },
+    "gui.upgradeConfirm.txcancel": {
+        "message": "Cancel",
+        "description": ""
+    },
+    "gui.upgradeConfirm.title": {
+        "message": "Upgrade firmware",
+        "description": ""
+    },
+    "gui.uploadCode.uploadBtn": {
+        "message": "Upload",
+        "description": ""
+    },
+    "gui.uploadCode.downloadBtn": {
+        "message": "Download",
+        "description": ""
+    },
+    "gui.uploadCode.openMonitorBtn": {
+        "message": "Serial monitor",
+        "description": ""
+    },
+    "gui.uploadCode.disPromptForArdunio": {
+        "message": "Forgot sth.? Please connect the device before uploading",
+        "description": ""
+    },
+    "gui.uploadCode.disPromptForNormal": {
+        "message": "Please connect the device before uploading",
+        "description": ""
+    },
+    "gui.device.debugModeLabel": {
+        "message": "Online debug",
+        "description": ""
+    },
+    "gui.device.onlyOnlinePrompt": {
+        "message": "only supports online mode",
+        "description": ""
+    },
+    "gui.device.onlyDownloadPrompt": {
+        "message": "only supports download mode",
+        "description": ""
+    },
+    "gui.device.onlyOfflinePrompt": {
+        "message": "only supports upload mode",
+        "description": ""
+    },
+    "gui.device.unableConnectPrompt": {
+        "message": "Failed connection?",
+        "description": ""
+    },
+    "gui.device.upgradeText": {
+        "message": "Update the firmware immediately",
+        "description": ""
+    },
+    "gui.device.g0hold.tipTitleLabel": {
+        "message": "Note: ",
+        "description": ""
+    },
+    "gui.device.g0hold.tipTitle": {
+        "message": "The right way to hold the Main Board. ",
+        "description": ""
+    },
+    "gui.device.g0hold.tipMessage": {
+        "message": "Using an incorrect handling method may cause the Main Board to be damaged by static electricity. ",
+        "description": ""
+    },
+    "gui.devices.stage.name": {
+        "message": "Stage mode",
+        "description": ""
+    },
+    "gui.devices.grovezero.name":{
+        "message": "Grove Zero",
+        "description": ""
+    },
+    "gui.devices.arduino.name":{
+        "message": "Arduino (Uno/Mega/BeginnerKit)",
+        "description": ""
+    },
+    "gui.devices.microbit.name":{
+        "message": "micro:bit",
+        "description": ""
+    },
+    "gui.devices.elfbot.name": {
+        "message": "Elfbot",
+        "description": ""
+    },
+    "gui.devices.mpython.name": {
+        "message": "mPython",
+        "description": ""
+    },
+    "gui.devices.maixduino.name": {
+        "message": "M.A.R.K(cyberEye)",
+        "description": ""
+    },
+    "gui.devices.spec.microbit.name": {
+        "message": "micro:bit",
+        "description": ""
+    },
+    "gui.devices.spec.cyberEye.name": {
+        "message": "M.A.R.K (CyberEye)",
+        "description": ""
+    },
+    "gui.devices.spec.mpython.name": {
+        "message": "mPython",
+        "description": ""
+    },
+    "gui.devices.spec.glint.name": {
+        "message": "GLINT",
+        "description": ""
+    },
+    "gui.sprite.saveAndClose": {
+        "message": "Save",
+        "description": ""
+    },
+    "gui.upgradeModal.updateCancel": {
+        "message": "Cancel",
+        "description": ""
+    },
+    "gui.upgradeModal.updateRetry": {
+        "message": "Retry",
+        "description": ""
+    },
+    "gui.upgradeModal.updateFailOk": {
+        "message": "OK",
+        "description": ""
+    },
+    "gui.connectModal.updateFailTitle": {
+        "message": "Upgrade failed",
+        "description": ""
+    },
+    "gui.upgradeModal.stageFailTitle": {
+        "message": "Upload failed",
+        "description": ""
+    },
+    "gui.upgradeModal.restoreFailTitle": {
+        "message": "Restore failed",
+        "description": ""
+    },
+    "gui.upgradeModal.updateFail": {
+        "message": "Firmware upgrade failed, please try again",
+        "description": ""
+    },
+    "gui.upgradeModal.stageFail": {
+        "message": "Firmware upgrade failed, please try again",
+        "description": ""
+    },
+    "gui.upgradeModal.restoreFail": {
+        "message": "Failed to restore firmware, please try again",
+        "description": ""
+    },
+    "gui.updateDownload.updateDownloading": {
+        "message": "Updating firmware",
+        "description": ""
+    },
+    "gui.updateDownload.dontClose": {
+        "message": "Updating…, do not close the program.",
+        "description": ""
+    },
+    "gui.updateDownload.updatingStageFirmware": {
+        "message": "Updating firmware for stage mode",
+        "description": ""
+    },
+    "gui.updateDownload.restoringFirmware": {
+        "message": "Restoring firmware",
+        "description": ""
+    },
+    "gui.connectModal.upgradingTitle": {
+        "message": "Firmware upgrade",
+        "description": ""
+    },
+    "gui.updateDownload.restoringTitle": {
+        "message": "Update",
+        "description": ""
+    },
+    "gui.upgradeModal.successContent": {
+        "message": "Firmware has been upgraded to the latest version!",
+        "description": ""
+    },
+    "gui.upgradeModal.know": {
+        "message": "OK",
+        "description": ""
+    },
+    "gui.socketIsUsed.title": {
+        "message": "Prompt"
+    },
+    "gui.socketIsUsed.message": {
+        "message": "The Codecraft device assistant is occupied. Please shut down its connected software and try again."
+    },
+    "gui.socketIsUsed.comfirm": {
+        "message": "OK"
+    },
+    "gui.notOpenAssi.title": {
+        "message": "Prompt"
+    },
+    "gui.notOpenAssi.message": {
+        "message": "The device assistant is not running~"
+    },
+    "gui.notOpenAssi.descrition": {
+        "message": "To connect the device, you need to launch the Device Assistant."
+    },
+    "gui.notOpenAssi.linuxmessage": {
+        "message": "The device assistant is not running，please do the following steps"
+    },
+    "gui.notOpenAssi.linuxdescrition": {
+        "message": "1、install deb package.\n2、open terminal，cd /opt/CodecraftAssistant\n3、sudo ./cc-assistant"
+    },
+    "gui.notOpenAssi.goDownload": {
+        "message": "Download Device Assistant"
+    },
+    "gui.notOpenAssi.getIt": {
+        "message": "OK"
+    },
+    "gui.disConnected.title": {
+        "message": "Prompt"
+    },
+    "gui.disConnected.suffix": {
+        "message": " is disconnected"
+    },
+    "gui.sprite.delete.prefix": {
+        "message": "Are you sure to delete "
+    },
+    "gui.sprite.delete.suffix": {
+        "message": "?"
+    },
+    "gui.sprite.promptLabel": {
+        "message": "Prompt"
+    },
+    "gui.target.sprite.promptLabel": {
+        "message": "Prompt"
+    },
+    "gui.sprite.prompt": {
+        "message": "Would you like to delete this sprite?"
+    },
+    "gui.sprite.cancel": {
+        "message": "Cancel"
+    },
+    "gui.sprite.ok": {
+        "message": "OK"
+    },
+    "gui.upgradeModal.successContentStage": {
+        "message": "Firmware updated",
+        "description": ""
+    },
+    "gui.upgradeModal.successContentRestore": {
+        "message": "Firmware restored",
+        "description": ""
+    },
+    "gui.connectModal.updateSuc": {
+        "message": "Update Success",
+        "description": ""
+    },
+    "gui.upgradeModal.stageSucTitle": {
+        "message": "Update Success",
+        "description": ""
+    },
+    "gui.upgradeModal.restoreSucTitle": {
+        "message": "Restore success",
+        "description": ""
+    },
+    "gui.uploadCode.uploadingMessage": {
+        "message": "Just chill while it's uploading",
+        "description": ""
+    },
+    "gui.uploadCode.uploadSuccMessage": {
+        "message": "Upload successfully",
+        "description": ""
+    },
+    "gui.uploadCode.uploadSuccComfirm": {
+        "message": "Roger",
+        "description": ""
+    },
+    "gui.uploadCode.uploadSuccResetPrompt": {
+        "message": "Wanna run your program? Press the reset button on the Main board.",
+        "description": ""
+    },
+    "gui.uploadCode.uploadFailMessage": {
+        "message": "Upload failure",
+        "description": ""
+    },
+    "gui.uploadCode.uploadFailConfirm": {
+        "message": "OK",
+        "description": ""
+    },
+    "gui.uploadCode.uploadTimeoutMessage": {
+        "message": "Ooops, Timeout…"
+    },
+    "gui.uploadCode.uploadTimeoutConfirm": {
+        "message": "OK"
+    },
+    "gui.uploadCode.uploadTimeoutPrompt": {
+        "message": "Upload timed out, please try again, If the error remains, try the followings:"
+    },
+    "gui.uploadCode.timeoutHandleMethodSubLabel1": {
+        "message": "Step 1. Enter boot mode"
+    },
+    "gui.uploadCode.timeoutHandleMethodSub1Info1": {
+        "message": "1. If the main board is not connected to power supply, please press and hold the reset button on the main board."
+    },
+    "gui.uploadCode.timeoutHandleMethodSub1Info2": {
+        "message": "2. Connect the main board to the USB port of the computer."
+    },
+    "gui.uploadCode.timeoutHandleMethodSub1Info3": {
+        "message": "3. Wait for 8 seconds, the status light will flash slowly, indicating that it has entered the boot mode."
+    },
+    "gui.uploadCode.timeoutHandleMethodSubLabel2": {
+        "message": "Step 2. Update firmware"
+    },
+    "gui.uploadCode.timeoutHandleMethodSub2Info1": {
+        "message": "1. Enter boot mode as step 1."
+    },
+    "gui.uploadCode.timeoutHandleMethodSub2Info2": {
+        "message": "2. Connect the main board to Codecraft."
+    },
+    "gui.uploadCode.timeoutHandleMethodSub2Info3": {
+        "message": "3. After it's connected successfully, you will be prompted to upgrade the firmware."
+    },
+    "gui.uploadCode.arduinoSelect.title": {
+        "message": "Upload"
+    },
+    "gui.uploadCode.arduinoSelect.select": {
+        "message": "Select a serial port"
+    },
+    "gui.uploadCode.arduinoSelect.confirm": {
+        "message": "OK"
+    },
+    "gui.uploadCode.arduinoSelect.noSerialsPrompt": {
+        "message": "No connected devices"
+    },
+    "gui.uploadCode.arduinoSelect.noSelectSerialsPrompt": {
+        "message": "Please select a serial port"
+    },
+    "gui.loginModal.SMSLogin": {
+        "message": "Log in with verification code",
+        "description": ""
+    },
+    "gui.loginModal.pwdLogin": {
+        "message": "Password login",
+        "description": ""
+    },
+    "gui.loginModal.getSMS": {
+        "message": "Get a verification code",
+        "description": ""
+    },
+    "gui.loginModal.forgetPwd": {
+        "message": "Forgot your password?",
+        "description": ""
+    },
+    "gui.loginModal.login": {
+        "message": "Login",
+        "description": ""
+    },
+    "gui.loginModal.toLogin": {
+        "message": "Sign up",
+        "description": ""
+    },
+    "gui.loginModal.inputVerifiCodePrompt": {
+        "message": "Please enter your verification code.",
+        "description": ""
+    },
+    "gui.loginModal.inputPwdPrompt": {
+        "message": "Password (6-20 digits of letters and numbers)",
+        "description": ""
+    },
+    "gui.loginModal.inputPwdPrompt2": {
+        "message": "Please enter your password.",
+        "description": ""
+    },
+    "gui.loginModal.inputPhonePrompt": {
+        "message": "Please enter your phone number.",
+        "description": ""
+    },
+    "gui.loginModal.inputAcountPrompt": {
+        "message": "Input account",
+        "description": ""
+    },
+    "gui.loginModal.inputLoginPwdPrompt": {
+        "message": "Input your password",
+        "description": ""
+    },
+    "gui.loginModal.next": {
+        "message": "Next",
+        "description": ""
+    },
+    "gui.loginModal.inputPwdPlaceholder": {
+        "message": " 6-20 digits (letters and numbers)",
+        "description": ""
+    },
+    "gui.loginModal.inputNewPwd": {
+        "message": "Please enter your new password.",
+        "description": ""
+    },
+    "gui.loginModal.findPwdCompleted": {
+        "message": "Complete",
+        "description": ""
+    },
+    "gui.loginModal.modifyPwdCompleted": {
+        "message": "Complete",
+        "description": ""
+    },
+    "gui.loginModal.findPwdTitle": {
+        "message": "RETRIEVE PASSWORD",
+        "description": ""
+    },
+    "gui.loginModal.setting.phone": {
+        "message": "Mobile",
+        "description": ""
+    },
+    "gui.loginModal.setting.password": {
+        "message": "Password",
+        "description": ""
+    },
+    "gui.loginModal.setting.pwdModify": {
+        "message": "Change password",
+        "description": ""
+    },
+    "gui.loginModal.setting.nickname": {
+        "message": "Name",
+        "description": ""
+    },
+    "gui.loginModal.setting.title": {
+        "message": "Settings",
+        "description": ""
+    },
+    "gui.loginModal.setting.sex": {
+        "message": "Gender",
+        "description": ""
+    },
+    "gui.loginModal.sexs.male": {
+        "message": "Male",
+        "description": ""
+    },
+    "gui.loginModal.sexs.female": {
+        "message": "Female",
+        "description": ""
+    },
+    "gui.loginModal.setting.birthday": {
+        "message": "Date of Birth"
+    },
+    "gui.loginModal.setting.year": {
+        "message": "Y"
+    },
+    "gui.loginModal.setting.month": {
+        "message": "M"
+    },
+    "gui.loginModal.setting.day": {
+        "message": "D"
+    },
+    "gui.loginModal.modifyPwdTitle": {
+        "message": "Change password"
+    },
+    "gui.loginModal.sendedVerificateCodePrompt": {
+        "message": "Already sent verification code to mobile phone: "
+    },
+    "gui.loginModal.sendedVerificateCodeEmail": {
+        "message": "A verification code is sent to your email: "
+    },
+    "gui.loginModal.willSendPhone": {
+        "message": "We will send verification code to your registered phone."
+    },
+    "gui.loginModal.willSendEmail": {
+        "message": "We will send verification code to your registered Email."
+    },
+    "gui.loginModal.alreadySentPhone": {
+        "message": "Already sent verification code to phone:"
+    },
+    "gui.loginModal.alreadySentEmail": {
+        "message": "Already sent verification code to Email:"
+    },
+    "gui.loginModal.registerTemp1": {
+        "message": "SIGN UP"
+    },
+    "gui.loginModal.registerTemp2": {
+        "message": "Profile"
+    },
+    "gui.loginModal.registerStatus": {
+        "message": "Status"
+    },
+    "gui.loginModal.registerIsTeacher": {
+        "message": "I'm a teacher"
+    },
+    "gui.loginModal.registerIsStudent": {
+        "message": "I'm a student"
+    },
+    "gui.loginModal.registerEmailAgreement": {
+        "message": "Yes, I want to receive a newsletter with educational ideas."
+    },
+    "gui.loginModal.registerUnSelIndentity": {
+        "message": "Please choose your status"
+    },
+    "gui.loginModal.invitationCode": {
+        "message": "Invitation Code"
+    },
+    "gui.loginModal.invitationCodeOptional": {
+        "message": "Optional"
+    },
+    "gui.loginModal.myInvitationCode": {
+        "message": "My Invitation Code"
+    },
+    "gui.loginModal.invitationText": {
+        "message": "After copying the invitation code, send it to your friends, and ask your friend to fill in your invitation code when registering, to help you get more rights and interests of the creators, and the right of interpretation belongs to the creators platform."
+    },
+    "gui.loginModal.successInvited": {
+        "message": "Successfully invited friends"
+    },
+    "gui.loginModal.registerTime": {
+        "message": "Registration Time"
+    },
+    "gui.loginModal.userAccount": {
+        "message": "User Account"
+    },
+    "gui.loginModal.goLoin": {
+        "message": "Login"
+    },
+    "gui.loginModal.registerCompleted": {
+        "message": "Hooray! You're all set!"
+    },
+    "gui.loginModal.isMale": {
+        "message": "male"
+    },
+    "gui.loginModal.isFemale": {
+        "message": "female"
+    },
+    "gui.loginModal.inputNickName": {
+        "message": "Please enter your name."
+    },
+    "gui.loginModal.logoutTitle": {
+        "message": "Log out"
+    },
+    "gui.loginModal.logoutPrompt": {
+        "message": "Confirm log out?"
+    },
+    "gui.loginModal.logoutOk": {
+        "message": "Confirm"
+    },
+    "gui.loginModal.logoutCancel": {
+        "message": "Cancel"
+    },
+    "gui.loginModal.uploadAvatar": {
+        "message": "Upload/Change your avatar"
+    },
+    "gui.library.importProject": {
+        "message": "Import project"
+    },
+    "gui.library.viewAll": {
+        "message": "View all"
+    },
+    "gui.library.viewAlllogin": {
+        "message": "View all (login required)"
+    },
+    "gui.library.sprite.mine": {
+        "message": "My Sprite"
+    },
+    "gui.library.sprite.common": {
+        "message": "Sprite Library"
+    },
+    "gui.library.custom.mine": {
+        "message": "My costume"
+    },
+    "gui.library.custom.common": {
+        "message": "Costume Library"
+    },
+    "gui.library.backdrop.mine": {
+        "message": "My backdrop"
+    },
+    "gui.library.backdrop.common": {
+        "message": "Backdrop Library"
+    },
+    "gui.library.sound.mine": {
+        "message": "My sound"
+    },
+    "gui.library.sound.common": {
+        "message": "Sound Library"
+    },
+    "gui.library.localUpload": {
+        "message": "Upload"
+    },
+    "gui.library.uploadLimitTwo": {
+        "message": "(Less than 512kb)"
+    },
+    "gui.library.loadingMessage": {
+        "message": "Loading in progress, please wait"
+    },
+    "gui.library.loadMore": {
+        "message": "Load More"
+    },
+    "gui.library.noLoginPrompt": {
+        "message": "Log in to upload your local materials"
+    },
+    "gui.library.login": {
+        "message": "Login"
+    },
+    "gui.library.uploadFailTextTwo": {
+        "message": "Upload failed. The file is too large. File size limit is 512kb"
+    },
+    "gui.howtos.Make-Music.step_CreateASong": {
+        "message": "Create a Song",
+        "description": "Step name for 'Create a Song' step"
+    },
+    "gui.SpriteInfo.sprite": {
+        "message": "Sprite",
+        "description": "Sprite info label"
+    },
+    "gui.menuBar.downloadToComputer": {
+        "message": "Download to your computer",
+        "description": "Menu bar item for downloading a project"
+    },
+    "gui.menuBar.tutorialsLibrary": {
+        "message": "Examples",
+        "description": ""
+    },
+    "gui.tipsLibrary.tutorials": {
+        "message": "Examples",
+        "description": ""
+    },
+    "gui.menuBar.projects": {
+        "message": "Projects",
+        "description": ""
+    },
+    "gui.menuBar.ccprojects": {
+        "message": "Projects for Codecraft",
+        "description": ""
+    },
+    "gui.menuBar.moreprojects": {
+        "message": "More projects",
+        "description": ""
+    },
+    "gui.menuBar.courses": {
+        "message": "Courses",
+        "description": ""
+    },
+    "gui.menuBar.cccourse": {
+        "message": "Codecraft coding course",
+        "description": ""
+    },
+    "gui.menuBar.morecourses": {
+        "message": "More courses",
+        "description": ""
+    },
+    "gui.menuBar.help": {
+        "message": "Help",
+        "description": ""
+    },
+    "gui.menuBar.seeHelp": {
+        "message": "Online Help",
+        "description": ""
+    },
+    "gui.menuBar.feedback": {
+        "message": "Feedback",
+        "description": ""
+    },
+    "gui.menuBar.checkUpdate": {
+        "message": "Check for Updates",
+        "description": ""
+    },
+    "gui.menuBar.downloadcc": {
+        "message": "Download for PC",
+        "description": ""
+    },
+    "gui.menuBar.about": {
+        "message": "About Codecraft",
+        "description": ""
+    },
+    "gui.menuBar.rescueDevice": {
+        "message": "Rescue device"
+    },
+    "gui.feedback.label": {
+        "message": "Feedback",
+        "description": ""
+    },
+    "gui.feedback.cancel": {
+        "message": "Cancel",
+        "description": ""
+    },
+    "gui.feedback.ok": {
+        "message": "Submit",
+        "description": ""
+    },
+    "gui.feedback.placeholder": {
+        "message": "Please write down your feedback here.",
+        "description": ""
+    },
+    "gui.feedback.currentVersion": {
+        "message": "Codecraft：v"
+    },
+    "gui.feedback.suggestedExamples": {
+        "message": "How to describe the problem"
+    },
+    "gui.feedback.uploadTips": {
+        "message": "Submit attachments (pictures, videos, ZIP, RAR, CDC...not more than 20M)"
+    },
+    "gui.feedback.buttonUploadFiles": {
+        "message": "Upload"
+    },
+    "gui.feedback.deleteUploadFiles": {
+        "message": "Delete"
+    },
+    "gui.feedback.buttonUploadFilesed": {
+        "message": "Upload"
+    },
+    "gui.feedback.submitCurrentProgram": {
+        "message": "Submit the current program at the same time"
+    },
+    "gui.feedback.suggestedExamplesContentTitle": {
+        "message": "Describe the Issue"
+    },
+    "gui.feedback.suggestedExamplesContentExpect": {
+        "message": " a) What did you expect to happen? or What did you want to happen?"
+    },
+    "gui.feedback.suggestedExamplesContentResult": {
+        "message": " b) What happened instead?"
+    },
+    "gui.feedback.suggestedExamplesContentStep": {
+        "message": "Describe steps to reproduce the issue "
+    },
+    "gui.feedback.suggestedExamplesContentSpecific": {
+        "message": "You can be written in text, preferably supported with screenshots/photos/videos."
+    },
+    "gui.feedback.suggestedExamplesContentUpload": {
+        "message": "You can put multiple files to .zip archive and attach them with your inquiry.        "
+    },
+    "gui.feedback.suggestedExamplesContentFirst": {
+        "message": "1. Go to ..."
+    },
+    "gui.feedback.suggestedExamplesContentSecond": {
+        "message": "2. Click on ..."
+    },
+    "gui.feedback.suggestedExamplesContentThird": {
+        "message": "3. Connect ..."
+    },
+    "gui.feedback.fileLarge": {
+        "message": "The file is too large"
+    },
+    "gui.feedback.fileUploading": {
+        "message": "Uploading..."
+    },
+    "gui.about.label": {
+        "message": "About",
+        "description": ""
+    },
+    "gui.about.verprefix": {
+        "message": "Version：v",
+        "description": ""
+    },
+    "gui.about.description": {
+        "message": "©2020 TinkerGen.com",
+        "description": ""
+    },
+    "gui.menuBar.howToLibrary": {
+        "message": "How-to Library",
+        "description": "accessibility text for the how-to library button"
+    },
+    "gui.costumeTab.addCostumeFromLibrary": {
+        "message": "Costume Library",
+        "description": "Button to add a costume in the editor tab"
+    },
+    "gui.epcs.label": {
+        "message": "My projects",
+        "description": ""
+    },
+    "gui.prompt.projectSaveLabel": {
+        "message": "Prompt",
+        "description": ""
+    },
+    "gui.prompt.projectNoSave": {
+        "message": "Do not save",
+        "description": ""
+    },
+    "gui.prompt.projectSave": {
+        "message": "Save",
+        "description": ""
+    },
+    "gui.prompt.projectSaveMessage": {
+        "message": "Would you like to save the current project?",
+        "description": ""
+    },
+    "gui.library.openLocalProject": {
+        "message": "Open local projects",
+        "description": ""
+    },
+    "gui.soundTab.addSoundFromLibrary": {
+        "message": "Sound Library",
+        "description": "Button to add a sound in the editor tab"
+    },
+    "gui.cameraModal.enableCameraCaption": {
+        "message": "Enable Camera",
+        "description": "A caption for a disabled button prompting the user to enable camera access"
+    },
+    "gui.loader.message5": {
+        "message": "Herding cats …",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message7": {
+        "message": "Inflating gobos …",
+        "description": "One of the loading messages"
+    },
+    "gui.howtos.glide-around.name": {
+        "message": "Glide around",
+        "description": "Name for the 'Glide around' how-to"
+    },
+    "gui.howtos.Chase-Game.step_Score": {
+        "message": "In Octopus Sprite, When Touching Add Score",
+        "description": "Step name for 'In Octopus Sprite, When Touching Add Score step"
+    },
+    "gui.menuBar.uploadFromComputer": {
+        "message": "Open",
+        "description": "Menu bar item for uploading a project from your computer"
+    },
+    "gui.menuBar.openLocalProject": {
+        "message": "Open local projects",
+        "description": ""
+    },
+    "gui.howtos.make-music.step_MakeBeat": {
+        "message": "Choose a Drum & Make a Beat",
+        "description": "Step name for 'Choose a Drum & Make a Beat' step"
+    },
+    "gui.customProcedures.ok": {
+        "message": "OK",
+        "description": "Label for button to save new custom procedure"
+    },
+    "gui.menuBar.LanguageSelector": {
+        "message": "language selector",
+        "description": "accessibility text for the language selection menu"
+    },
+    "gui.spriteSelector.addBackdropFromLibrary": {
+        "message": "Choose a Backdrop",
+        "description": "Button to add a stage in the target pane from library"
+    },
+    "gui.soundEditor.slower": {
+        "message": "Slower",
+        "description": "Title of the button to apply the slower effect"
+    },
+    "gui.turboMode.active": {
+        "message": "Turbo Mode",
+        "description": "Label indicating turbo mode is active"
+    },
+    "gui.loader.message4": {
+        "message": "Loading extensions …",
+        "description": "One of the loading messages"
+    },
+    "gui.recordingStep.alertMsg": {
+        "message": "Could not start recording",
+        "description": "Alert for recording error"
+    },
+    "gui.extensionLibrary.extensionUrl": {
+        "message": "Enter the URL of the extension",
+        "description": "Prompt for unoffical extension url"
+    },
+    "gui.customProcedures.cancel": {
+        "message": "Cancel",
+        "description": "Label for button to cancel custom procedure edits"
+    },
+    "gui.howtos.intro-move.step_stepMove": {
+        "message": "Add a Move Block and a Say Block",
+        "description": "Step name for 'Add a Move Block' step"
+    },
+    "gui.howtos.animate-a-name.name": {
+        "message": "Animate a Name",
+        "description": "Name for the 'Animate a Name' how-to"
+    },
+    "gui.modal.back": {
+        "message": "Back",
+        "description": "Back button in modal"
+    },
+    "gui.howtos.animate-a-name.step_AnimateGrow": {
+        "message": "Choose a Letter & Make It Grow",
+        "description": "Step name for 'Choose a Letter & Make it Grow' step"
+    },
+    "gui.recordModal.title": {
+        "message": "Record Sound",
+        "description": "Recording modal title"
+    },
+    "gui.gui.backdropsTab": {
+        "message": "Backdrops",
+        "description": "Button to get to the backdrops panel"
+    },
+    "gui.prompt.ok": {
+        "message": "OK",
+        "description": "Button in prompt for confirming the dialog"
+    },
+    "gui.cameraModal.permissionRequest": {
+        "message": "We need to get your microphone access",
+        "description": "Notification to the user that the app needs camera access"
+    },
+    "gui.recordingStep.permission": {
+        "message": "{arrow}We need to get your microphone access",
+        "description": "Notification to the user that the app needs camera access"
+    },
+    "gui.customProcedures.numberTextType": {
+        "message": "number or text",
+        "description": "Description of the number/text input type"
+    },
+    "gui.unsupportedBrowser.previewfaq": {
+        "message": "To learn more, go to the {previewFaqLink}.",
+        "description": "Invitation to try 3.0 preview"
+    },
+    "gui.soundEditor.play": {
+        "message": "Play",
+        "description": "Title of the button to start playing the sound"
+    },
+    "gui.cameraModal.retakePhoto": {
+        "message": "Retake Photo",
+        "description": "A button that allows the user to take the picture again, replacing the old one"
+    },
+    "gui.howtos.Chase-Game.step_AddStar": {
+        "message": "Add Another Sprite",
+        "description": "Step name for 'Add Another Sprite' step"
+    },
+    "gui.menuBar.share": {
+        "message": "Share",
+        "description": "Label for project share button"
+    },
+    "gui.crashMessage.description": {
+        "message": "We are so sorry, but it looks like Scratch has crashed. This bug has been automatically reported to the Scratch Team. Please refresh your page to try again.",
+        "description": "Unhandled error description"
+    },
+    "gui.webglModal.label": {
+        "message": "Your Browser Does Not Support WebGL",
+        "description": "WebGL missing title"
+    },
+    "gui.importInfo.goback": {
+        "message": "Go Back",
+        "description": "Label for button to back out of importing a project"
+    },
+    "gui.monitor.contextMenu.large": {
+        "message": "large readout",
+        "description": "Menu item to switch to the large monitor"
+    },
+    "gui.cards.more-things-to-try": {
+        "message": "More things to try!",
+        "description": "Title card with more things to try"
+    },
+    "gui.costumeTab.addCameraCostume": {
+        "message": "Camera",
+        "description": "Button to use the camera to create a costume costume in the editor tab"
+    },
+    "gui.howtos.Chase-Game.step_UpDown": {
+        "message": "Move Up & Down With Arrow Keys",
+        "description": "Step name for 'Move Up & Down With Arrow Keys' step"
+    },
+    "gui.spriteLibrary.chooseASprite": {
+        "message": "Choose a Sprite",
+        "description": "Heading for the sprite library"
+    },
+    "gui.loader.headline": {
+        "message": "Loading",
+        "description": "Main loading message"
+    },
+    "gui.playbackStep.playMsg": {
+        "message": "Play",
+        "description": "Stop/Play button in recording playback"
+    },
+    "gui.customProcedures.booleanType": {
+        "message": "boolean",
+        "description": "Description of the boolean input type"
+    },
+    "gui.importInfo.previewfaqlink": {
+        "message": "Preview FAQ",
+        "description": "link to Scratch 3.0 preview FAQ page"
+    },
+    "gui.costumeTab.addBackdropFromLibrary": {
+        "message": "Backdrop Library",
+        "description": "Button to add a backdrop in the editor tab"
+    },
+    "gui.menuBar.redo": {
+        "message": "Redo",
+        "description": "Menu bar item for redoing"
+    },
+    "gui.spriteSelector.addSpriteFromPaint": {
+        "message": "Paint",
+        "description": "Button to add a sprite in the target pane from paint"
+    },
+    "gui.previewInfo.invitation": {
+        "message": "We're working on the next generation of Scratch. We're excited for you to try it!",
+        "description": "Invitation to try 3.0 preview"
+    },
+    "gui.backpack.errorBackpack": {
+        "message": "Error loading backpack",
+        "description": "Error backpack message"
+    },
+    "gui.crashMessage.title": {
+        "message": "Oops! Something went wrong! Possible reason: weak network.",
+        "description": "Unhandled error title"
+    },
+    "gui.spriteSelectorItem.contextMenuDuplicate": {
+        "message": "duplicate",
+        "description": "Menu item to duplicate in the right click menu"
+    },
+    "gui.importInfo.previewfaq": {
+        "message": "To learn more, go to the {previewFaqLink}.",
+        "description": "Invitation to try 3.0 preview"
+    },
+    "gui.previewInfo.previewfaq": {
+        "message": "To learn more, go to the {previewFaqLink}.",
+        "description": "Invitation to try 3.0 preview"
+    },
+    "gui.howtos.make-music.step_ResetScore": {
+        "message": "Reset Score",
+        "description": "Step name for 'Reset Score' step"
+    },
+    "gui.howtos.Make-A-Game.step_RandomPosition": {
+        "message": "Go to a random position",
+        "description": "Step name for 'Go to a random position' step"
+    },
+    "gui.controls.go": {
+        "message": "Go",
+        "description": "Green flag button title"
+    },
+    "gui.spriteSelectorItem.contextMenuDelete": {
+        "message": "delete",
+        "description": "Menu item to delete in the right click menu"
+    },
+    "gui.howtos.make-music.name": {
+        "message": "Make Music",
+        "description": "Name for the 'Make Music' how-to"
+    },
+    "gui.soundTab.surpriseSound": {
+        "message": "Surprise",
+        "description": "Button to get a random sound in the editor tab"
+    },
+    "gui.howtos.Chase-Game.step_BG": {
+        "message": "Add a Backdrop",
+        "description": "Step name for 'Add a Backdrop' step"
+    },
+    "gui.stageHeader.stageSizeFull": {
+        "message": "Enter full screen mode",
+        "description": "Button to change stage size to full screen"
+    },
+    "gui.stageSelector.backdrops": {
+        "message": "Backdrops",
+        "description": "Label for the backdrops in the stage selector"
+    },
+    "gui.howtos.hide-and-show.name": {
+        "message": "Hide & Show",
+        "description": "Name for the 'Hide & Show' how-to"
+    },
+    "gui.SpriteInfo.size": {
+        "message": "Size",
+        "description": "Sprite info size label"
+    },
+    "gui.SpriteInfo.x": {
+        "message": "x",
+        "description": "x"
+    },
+    "gui.SpriteInfo.y": {
+        "message": "y",
+        "description": "y"
+    },
+    "gui.webglModal.previewfaqlink": {
+        "message": "preview FAQ",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.soundEditor.louder": {
+        "message": "Louder",
+        "description": "Title of the button to apply the louder effect"
+    },
+    "gui.previewInfo.welcome": {
+        "message": "Welcome to the Scratch 3.0 Preview",
+        "description": "Header for Preview Info Modal"
+    },
+    "gui.spriteSelector.addSpriteFromSurprise": {
+        "message": "Surprise",
+        "description": "Button to add a random sprite in the target pane"
+    },
+    "gui.howtos.change-size.name": {
+        "message": "Change size",
+        "description": "Name for the 'Change size' how-to"
+    },
+    "gui.extensionLibrary.comingSoon": {
+        "message": "Coming Soon",
+        "description": "Label for extensions that are not yet implemented"
+    },
+    "gui.SpriteInfo.show": {
+        "message": "Show",
+        "description": "Sprite info show label"
+    },
+    "gui.loader.message8": {
+        "message": "Preparing emojis …",
+        "description": "One of the loading messages"
+    },
+    "gui.soundEditor.faster": {
+        "message": "Faster",
+        "description": "Title of the button to apply the faster effect"
+    },
+    "gui.gui.soundsTab": {
+        "message": "Sounds",
+        "description": "Button to get to the sounds panel"
+    },
+    "gui.soundTab.recordSound": {
+        "message": "Record",
+        "description": "Button to record a sound in the editor tab"
+    },
+    "gui.SpriteInfo.direction": {
+        "message": "Direction",
+        "description": "Sprite info direction label"
+    },
+    "gui.costumeLibrary.chooseABackdrop": {
+        "message": "Choose a Backdrop",
+        "description": "Heading for the backdrop library"
+    },
+    "gui.cameraModal.loadingCaption": {
+        "message": "Loading...",
+        "description": "A caption for a disabled button while the video from the camera is still loading"
+    },
+    "gui.gui.variablePrompt": {
+        "message": "More Options",
+        "description": "Dropdown message for variable/list options"
+    },
+    "gui.gui.costumesTab": {
+        "message": "Costumes",
+        "description": "Button to get to the costumes panel"
+    },
+    "gui.gui.addExtension": {
+        "message": "Add Extension",
+        "description": "Button to add an extension in the target pane"
+    },
+    "gui.howtos.add-effects.name": {
+        "message": "Add effects",
+        "description": "Name for the 'Add effects' how-to"
+    },
+    "gui.menuBar.giveFeedback": {
+        "message": "Give Feedback",
+        "description": "Label for feedback form modal button"
+    },
+    "gui.cameraModal.cameraModalTitle": {
+        "message": "Take a Photo",
+        "description": "Title for prompt to take a picture (to add as a new costume)."
+    },
+    "gui.soundEditor.reverse": {
+        "message": "Reverse",
+        "description": "Title of the button to apply the reverse effect"
+    },
+    "gui.webglModal.webgllink": {
+        "message": "does not support WebGL",
+        "description": "link part of your browser does not support WebGL message"
+    },
+    "gui.menuBar.seeCommunity": {
+        "message": "See Community",
+        "description": "Label for see community button"
+    },
+    "gui.howtos.chase-game.step_AddOcto": {
+        "message": "Add a Sprite",
+        "description": "Step name for 'Add a Sprite' step"
+    },
+    "gui.howtos.Chase-Game.step_WhenTouch": {
+        "message": "In Octopus Sprite, When Touching Play Sound",
+        "description": "Step name for 'In Octopus Sprite, When Touching Play Sound' step"
+    },
+    "gui.cameraModal.loadingCameraMessage": {
+        "message": "Loading Camera...",
+        "description": "Notification to the user that the camera is loading"
+    },
+    "gui.costumeTab.addFileCostume": {
+        "message": "Upload Costume",
+        "description": "Button to add a costume by uploading a file in the editor tab"
+    },
+    "gui.playbackStep.stopMsg": {
+        "message": "Stop",
+        "description": "Stop/Play button in recording playback"
+    },
+    "gui.soundEditor.undo": {
+        "message": "Undo",
+        "description": "Title of the button to undo"
+    },
+    "gui.gui.codeTab": {
+        "message": "Code",
+        "description": "Button to get to the code panel"
+    },
+    "gui.spriteSelector.addSpriteFromFile": {
+        "message": "Upload",
+        "description": "Button to add a sprite in the target pane from file"
+    },
+    "gui.howtos.add-sprite.step_addSprite": {
+        "message": "Add a Sprite",
+        "description": "Step name for 'Add a new sprite' step"
+    },
+    "gui.loader.message1": {
+        "message": "Creating blocks …",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message6": {
+        "message": "Transmitting nanos …",
+        "description": "One of the loading messages"
+    },
+    "gui.howtos.make-music.step_LeftRight": {
+        "message": "Move Right & Left With Arrow Keys",
+        "description": "Step name for 'Move Right & Left With Arrow Keys' step"
+    },
+    "gui.loader.message3": {
+        "message": "Loading sounds …",
+        "description": "One of the loading messages"
+    },
+    "gui.backpack.header": {
+        "message": "Backpack",
+        "description": "Button to open the backpack"
+    },
+    "gui.SpriteInfo.spritePlaceholder": {
+        "message": "Name",
+        "description": "Placeholder text for sprite name"
+    },
+    "gui.backpack.emptyBackpack": {
+        "message": "Backpack is empty",
+        "description": "Empty backpack message"
+    },
+    "gui.previewModal.tryit": {
+        "message": "Try It! {caticon}",
+        "description": "Label for button to try Scratch 3.0 preview"
+    },
+    "gui.backpack.loadingBackpack": {
+        "message": "Loading...",
+        "description": "Loading backpack message"
+    },
+    "gui.monitor.contextMenu.default": {
+        "message": "normal readout",
+        "description": "Menu item to switch to the default monitor"
+    },
+    "gui.controls.stop": {
+        "message": "Pause",
+        "description": "Stop button title"
+    },
+    "gui.howtos.make-a-game.name": {
+        "message": "Make a Clicker Game",
+        "description": "Name for the 'Make a Clicker Game' how-to"
+    },
+    "gui.costumeTab.addBlankCostume": {
+        "message": "Paint",
+        "description": "Button to add a blank costume in the editor tab"
+    },
+    "gui.howtos.Chase-Game.step_MoveRandom": {
+        "message": "Move Randomly",
+        "description": "Step name for 'Move Randomly' step"
+    },
+    "gui.customProcedures.runWithoutScreenRefresh": {
+        "message": "Run without screen refresh",
+        "description": "Label for checkbox to run without screen refresh"
+    },
+    "gui.stageSelector.addBackdropFromFile": {
+        "message": "Upload Backdrop",
+        "description": "Button to add a stage in the target pane from file"
+    },
+    "gui.howtos.add-sprite.name": {
+        "message": "Add a Sprite",
+        "description": "Name for the 'Add a Sprite' how-to"
+    },
+    "gui.spriteSelector.addSpriteFromLibrary": {
+        "message": "Choose a Sprite",
+        "description": "Button to add a sprite in the target pane from library"
+    },
+    "gui.soundEditor.sound": {
+        "message": "Sound",
+        "description": "Label for the name of the sound"
+    },
+    "gui.unsupportedBrowser.label": {
+        "message": "Browser is not supported",
+        "description": ""
+    },
+    "gui.playbackStep.loadingMsg": {
+        "message": "Loading...",
+        "description": "Loading/Save button in recording playback"
+    },
+    "gui.howtos.add-a-backdrop.name": {
+        "message": "Add a backdrop",
+        "description": "Name for the 'Add a backdrop' how-to"
+    },
+    "gui.comingSoon.message2": {
+        "message": "Coming Soon...",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.stageSelector.addBackdropFromPaint": {
+        "message": "Paint",
+        "description": "Button to add a stage in the target pane from paint"
+    },
+    "gui.cameraModal.takePhoto": {
+        "message": "Take Photo",
+        "description": "A button to take a photo"
+    },
+    "gui.playbackStep.saveMsg": {
+        "message": "Save",
+        "description": "Loading/Save button in recording playback"
+    },
+    "gui.howtos.make-a-chase-game.name": {
+        "message": "Make a Chase Game",
+        "description": "Name for the 'Make a Chase Game' how-to"
+    },
+    "gui.playbackStep.reRecordMsg": {
+        "message": "Re-record",
+        "description": "Button to re-record sound in recording playback"
+    },
+    "gui.importInfo.message": {
+        "message": "Enter a link to one of your shared Scratch projects. Changes made in this 3.0 Preview will not be saved.",
+        "description": "Import project message"
+    },
+    "gui.menuBar.edit": {
+        "message": "Edit",
+        "description": "Text for edit dropdown menu"
+    },
+    "gui.howtos.intro-move-sayhello-hat.name": {
+        "message": "Getting Started",
+        "description": "Name for the 'Getting Started' how-to"
+    },
+    "gui.cameraModal.save": {
+        "message": "Save",
+        "description": "A button that allows the user to save the photo they took as a costume"
+    },
+    "gui.howtos.make-music.step_MakeBeatBox": {
+        "message": "Choose the Microphone Sprite & Surprise Beatbox",
+        "description": "Step name for 'Choose the Microphone Sprite & Surprise Beatbox' step"
+    },
+    "gui.previewInfo.label": {
+        "message": "Try Scratch 3.0",
+        "description": "Scratch 3.0 modal label - for accessibility"
+    },
+    "gui.webglModal.previewfaq": {
+        "message": "To learn more, go to the {previewFaqLink}.",
+        "description": "Scratch 3.0 FAQ description"
+    },
+    "gui.menuBar.turboMode": {
+        "message": "Turbo mode",
+        "description": "Menu bar item for toggling turbo mode"
+    },
+    "gui.prompt.cancel": {
+        "message": "Cancel",
+        "description": "Button in prompt for cancelling the dialog"
+    },
+    "gui.arduinoMonitor.baudRate": {
+        "message": "Baud rate",
+        "description": ""
+    },
+    "gui.arduinoMonitor.baudRateText": {
+        "message": "Baud rate",
+        "description": ""
+    },
+    "gui.arduinoMonitor.autoScroll": {
+        "message": "Automatic scrolling",
+        "description": ""
+    },
+    "gui.arduinoMonitor.showTime": {
+        "message": "Display timestamp",
+        "description": ""
+    },
+    "gui.arduinoMonitor.clean": {
+        "message": "Clear the output",
+        "description": ""
+    },
+    "gui.arduinoMonitor.send": {
+        "message": "Send",
+        "description": ""
+    },
+    "gui.arduinoMonitor.title": {
+        "message": "Serial Monitor"
+    },
+    "gui.menuBar.saveSucc": {
+        "message": "Saved",
+        "description": ""
+    },
+    "gui.menuBar.saveFail": {
+        "message": "Save failed",
+        "description": ""
+    },
+    "gui.menuBar.commitSucc": {
+        "message": "Submitted",
+        "description": ""
+    },
+    "gui.menuBar.commitFail": {
+        "message": "Submit failed",
+        "description": ""
+    },
+    "gui.menuBar.openProjectFail": {
+        "message": "Failed to open project",
+        "description": ""
+    },
+    "gui.connectModal.connectSucc": {
+        "message": "Connected Successfully",
+        "description": ""
+    },
+    "gui.connectModal.connectFail": {
+        "message": "Connect failed, Make sure the device you are actually connecting to is the same device you are switching to.",
+        "description": ""
+    },
+    "gui.connectModal.operateSucc": {
+        "message": "Succeeded",
+        "description": ""
+    },
+    "gui.connectModal.operateFail": {
+        "message": "Failed",
+        "description": ""
+    },
+    "gui.loginModal.uploadAvatarHeadFail": {
+        "message": "Upload failed",
+        "description": ""
+    },
+    "gui.findPasswordModal.messageSendFail": {
+        "message": "Verification code failed to send",
+        "description": ""
+    },
+    "gui.findPasswordModal.pwdModifyFail": {
+        "message": "Password changed failed",
+        "description": ""
+    },
+    "gui.findPasswordModal.pwdModifySucc": {
+        "message": "Password changed successfully",
+        "description": ""
+    },
+    "gui.findPasswordModal.phoneUnregistered": {
+        "message": "This phone number is not registered.",
+        "description": ""
+    },
+    "gui.findPasswordModal.emailUnregistered": {
+        "message": "This Email didn't exist, pls check it again.",
+        "description": ""
+    },
+    "gui.findPasswordModal.unableChange": {
+        "message": "Before you change your password, you must be verified by SMS.",
+        "description": ""
+    },
+    "gui.findPasswordModal.sendMessageFail": {
+        "message": "Suceed to set the password, but the notification message failed to send",
+        "description": ""
+    },
+    "gui.toasts.deleteSucc": {
+        "message": "Delete successful",
+        "description": ""
+    },
+    "gui.toasts.deleteFail": {
+        "message": "Delete failed",
+        "description": ""
+    },
+    "gui.media.imageSupportPrompt": {
+        "message": "Uploads of.svg,.png,.jpg,.jpeg files are only supported.",
+        "description": ""
+    },
+    "gui.media.audioSupportPrompt": {
+        "message": "Only supports uploading files as .wav and .mp3",
+        "description": ""
+    },
+    "gui.media.uploadSucc": {
+        "message": "Upload successful",
+        "description": ""
+    },
+    "gui.media.uploadFail": {
+        "message": "Upload failed. Please try again",
+        "description": ""
+    },
+    "gui.loginModal.loginSucc": {
+        "message": "Login successful",
+        "description": ""
+    },
+    "gui.loginModal.loginFail": {
+        "message": "Login failed",
+        "description": ""
+    },
+    "gui.loginModal.registedToLogin": {
+        "message": "The mobile phone number has been registered, please login directly",
+        "description": ""
+    },
+    "gui.loginModal.registedToLoginEmail": {
+        "message": "The Email has been registered, please login directly",
+        "description": ""
+    },
+    "gui.loginModal.unauthorized": {
+        "message": "Failed to be verified by SMS.",
+        "description": ""
+    },
+    "gui.loginModal.registerFail": {
+        "message": "Registration failed",
+        "description": ""
+    },
+    "gui.loginModal.registerSucc": {
+        "message": "Registration success",
+        "description": ""
+    },
+    "gui.loginModal.getUserInfoFail": {
+        "message": "Failed to query user information",
+        "description": ""
+    },
+    "gui.loginModal.logouted": {
+        "message": "Logged out",
+        "description": ""
+    },
+    "gui.loginModal.logoutFail": {
+        "message": "Logout failure",
+        "description": ""
+    },
+    "gui.loginModal.unregistered": {
+        "message": "Account unregistered",
+        "description": ""
+    },
+    "gui.toasts.projectFileSupport": {
+        "message": "Can only open .cdc, sb3 files",
+        "description": ""
+    },
+    "gui.loginModal.accountPwdError": {
+        "message": "Incorrect account or password, please try again.",
+        "description": ""
+    },
+    "gui.loginModal.emailPwdError": {
+        "message": "The username and password you entered did not match. Please double-check and try again.",
+        "description": ""
+    },
+    "gui.loginModal.verificationCodeError": {
+        "message": "Please input a correct verification code",
+        "description": ""
+    },
+    "gui.loginModal.phone": {
+        "message": "Phone",
+        "description": ""
+    },
+    "gui.loginModal.enterValidateEmail": {
+        "message": "Please enter a valid email address",
+        "description": ""
+    },
+    "gui.loginModal.loginAttention": {
+        "message": "Note: Only support for phone number of mainland China.",
+        "description": ""
+    },
+    "gui.loginModal.loginAttentionTips": {
+        "message": "If you have an account, sign in with your email address.",
+        "description": ""
+    },
+    "gui.loginModal.password": {
+        "message": "Password",
+        "description": ""
+    },
+    "gui.loginModal.checkNum": {
+        "message": "Verification Code",
+        "description": ""
+    },
+    "gui.loginModal.loginTitle": {
+        "message": "SIGN IN",
+        "description": ""
+    },
+    "gui.findPasswordModal.enterEmail": {
+        "message": "Please enter your email address.",
+        "description": ""
+    },
+    "gui.findPasswordModal.enterYourEmail": {
+        "message": "Please enter your email address.",
+        "description": ""
+    },
+    "gui.findPasswordModal.getVC": {
+        "message": "Send a verification code to the Email",
+        "description": ""
+    },
+    "gui.findPasswordModal.VC": {
+        "message": "Verification Code",
+        "description": ""
+    },
+    "gui.findPasswordModal.receiveSMC": {
+        "message": "Please enter your phone number below to receive a new password message.",
+        "description": ""
+    },
+    "gui.findPasswordModal.remind": {
+        "message": "Note: Only support for phone number of mainland China.",
+        "description": ""
+    },
+    "gui.findPasswordModal.receiveEmail": {
+        "message": "Please enter your account email address below to receive a new password email.",
+        "description": ""
+    },
+    "gui.findPasswordModal.findWithEmail": {
+        "message": "Retrieve password by email",
+        "description": ""
+    },
+    "gui.findPasswordModal.findWithPhone": {
+        "message": "Retrieve password by phone",
+        "description": ""
+    },
+    "gui.registerModal.email": {
+        "message": "Sign up with Email",
+        "description": ""
+    },
+    "gui.registerModal.phone": {
+        "message": "Sign up with Phone Number",
+        "description": ""
+    },
+    "gui.registerModal.registered": {
+        "message": "Already have an account? ",
+        "description": ""
+    },
+    "gui.registerModal.toLogin": {
+        "message": "Login",
+        "description": ""
+    },
+    "gui.errComponent.isOffLine": {
+        "message": "No Internet connection. Please connect to the Internet and try again.",
+        "description": ""
+    },
+    "gui.loginModal.abusiveRegister": {
+        "message": "User account maliciously apply for registration SMS verification code",
+        "description": ""
+    },
+    "gui.loginModal.pwdLimit": {
+        "message": "6-20 digits of letters and numbers",
+        "description": ""
+    },
+    "gui.connectModal.connectingMessage": {
+        "message": "Connecting......",
+        "description": ""
+    },
+    "gui.menuBar.relogin": {
+        "message": "Please login again."
+    },
+    "gui.menuBar.loginTimeout": {
+        "message": "Timeout. Please login again. "
+    },
+    "gui.upload.timeoutHandleMethod2Label": {
+        "message": "Please check whether the device is connected to the right serial port. Make sure it's the correct serial port before uploading again. "
+    },
+    "gui.library.roleText": {
+        "message": "this sprite",
+        "description": ""
+    },
+    "gui.library.customeText": {
+        "message": "this costume",
+        "description": ""
+    },
+    "gui.library.bgText": {
+        "message": "this backdrop",
+        "description": ""
+    },
+    "gui.library.audioText": {
+        "message": "this sound",
+        "description": ""
+    },
+    "gui.library.deleteRemind": {
+        "message": "Prompt",
+        "description": ""
+    },
+    "gui.library.deleteText": {
+        "message": "Are you sure to delete this project?",
+        "description": ""
+    },
+    "gui.library.notDeleteText": {
+        "message": "Cancel",
+        "description": ""
+    },
+    "gui.library.sureDeleteText": {
+        "message": "OK",
+        "description": ""
+    },
+    "gui.microCourse.microCourse": {
+        "message": "Micro-Course"
+    },
+    "gui.deviceConnect.arduinoDriver": {
+        "message": "In Windows OS, you need to install the Arduino driver before connection."
+    },
+    "gui.deviceConnect.cannotConnectCyberEye": {
+        "message": "Can't connect the M.A.R.K(cyberEye)?"
+    },
+    "gui.deviceConnect.cannotConnectBittle": {
+        "message": "Can't connect the Bittle?"
+    },
+    "gui.deviceConnect.downloadArduinoDriver": {
+        "message": "Download Driver"
+    },
+    "gui.deviceConnect.downloadUSBDriver": {
+        "message": "Download the USB driver now"
+    },
+    "gui.deviceConnect.arduinoDriverDownload": {
+        "message": "Download the Arduino driver now"
+    }, 
+    "gui.deviceConnect.arduinoFT232DriverDownload": {
+        "message": "Download the FT232 driver now"
+    }, 
+    "gui.deviceConnect.downloadCyberEyeDriver": {
+        "message": "Download the M.A.R.K(cyberEye) driver now"
+    },
+    "gui.deviceConnect.downloadGlintDriver": {
+        "message": "Download USB driver on MAC."
+    },
+    "gui.deviceConnect.readDocument": {
+        "message": "Documentation: "
+    },
+    "gui.deviceConnect.notFindDevice": {
+        "message": "Device not found?"
+    },
+    "gui.deviceConnect.notFindDeviceText1": {
+        "message": "Please check if the device is connected using USB cable and the USB driver is installed."
+    },
+    "gui.deviceConnect.notFindDeviceDownload": {
+        "message": "Download the USB driver now"
+    },
+    "gui.deviceConnect.cannotConnectGroveZero": {
+        "message": "Can't connect the Grove Zero?"
+    },
+    "gui.deviceConnect.cannotConnectArduino": {
+        "message": "Can't connect the Arduino?"
+    },
+    "gui.deviceConnect.cannotConnectGlint": {
+        "message": "Can't connect the Glint?"
+    },
+    "gui.microbit.microbitDownloadTipsTitle":{
+        "message": "Some tips"
+    },
+    "gui.microbit.microbitModalLabel": {
+        "message": "After downloading, follow these steps to run your programs!"
+    },
+    "gui.microbit.microbitModalStep1": {
+        "message": "Connect micro:bit to your laptop with a USB cable"
+    },
+    "gui.microbit.microbitModalStep2": {
+        "message": "Move the .hex file to your micro:bit driver"
+    },
+    "gui.microbit.microbitDownloadConfirm": {
+        "message": "Roger"
+    },
+    "gui.elfbotDownBinStep.title": {
+        "message": "Update firmware"
+    },
+    "gui.elfbotDownBinStep.step1Text": {
+        "message": "The latest firmware："
+    },
+    "gui.elfbotDownBinStep.step2Text1": {
+        "message": "Downloading..."
+    },
+    "gui.elfbotDownBinStep.step2Text2": {
+        "message": "Do not close Codecraft, or make any other operations."
+    },
+    "gui.elfbotDownBinStep.step3Text1": {
+        "message": "Download successfully"
+    },
+    "gui.elfbotDownBinStep.step3Text2": {
+        "message": "Do not close Codecraft, or make any other operations."
+    },
+    "gui.elfbotDownBinStep.btText1": {
+        "message": "Download now"
+    },
+    "gui.elfbotDownBinStep.btText2": {
+        "message": "Next"
+    },
+    "gui.elfbotUpgradeSucc.title": {
+        "message": "Update firmware"
+    },
+    "gui.elfbotUpgradeSucc.succ": {
+        "message": "Upload successfully!"
+    },
+    "gui.elfbotUpgradeSucc.notice1": {
+        "message": "Notes："
+    },
+    "gui.elfbotUpgradeSucc.notice2": {
+        "message": "• Congratulation! Please reboot your Elfbot. Have fun!"
+    },
+    "gui.elfbotUpgradeSucc.btText": {
+        "message": "Roger"
+    },
+    "gui.elfbotUpgrade.failText": {
+        "message": "Upload failed！"
+    },
+    "gui.elfbotUpgrade.failMessage": {
+        "message": "Make sure you choose the same device as the one you are actually connected to."
+    },
+    "gui.elfbotUpgrade.text": {
+        "message": "Please update your firmware as follows"
+    },
+    "gui.elfbotUpgrade.step1Text": {
+        "message": "Please shut down your Elfbot"
+    },
+    "gui.elfbotUpgrade.step2Text": {
+        "message": "Hold S button on Elfbot, meanwhile power on Elfbot, then your Elfbot will enter BOOT mode."
+    },
+    "gui.elfbotUpgrade.btText": {
+        "message": "Upload Now"
+    },
+    "gui.elfbotUpgrade.notice1": {
+        "message": "Notes："
+    },
+    "gui.elfbotUpgrade.notice2": {
+        "message": "• Make sure Elfbot is connected to Codecraft in this process."
+    },
+    "gui.elfbotUpgrade.notice3": {
+        "message": "• Make sure device is connected to Codecraft in this process."
+    },
+    "gui.elfbotUpgrade.title": {
+        "message": "Update firmware"
+    },
+    "gui.elfbotUpgrade.text1": {
+        "message": "Uploading..."
+    },
+    "gui.elfbotUpgrade.text2": {
+        "message": "Do not close Codecraft, or make any other operations."
+    },
+    "gui.elfbotUpgrade.text3": {
+        "message": "Notes："
+    },
+    "gui.elfbotUpgrade.text4": {
+        "message": "• Make sure Elfbot is connected to Codecraft in this process."
+    },
+    "gui.menuBar.uploadPortfolios": {
+        "message": "Upload portfolios"
+    },
+    "gui.checkUpdate.checkVerTitle": {
+        "message": "Checking for Updates",
+        "description": ""
+    },
+    "gui.checkUpdate.latestVersion": {
+        "message": "Yayyy! You have the latest version: "
+    },
+    "gui.checkUpdate.iKnow": {
+        "message": "OK"
+    },
+    "gui.checkUpdate.newVersion": {
+        "message": "Software update available "
+    },
+    "gui.checkUpdate.updateNow": {
+        "message": "Update now"
+    },
+    "gui.checkUpdate.downloadPkg": {
+        "message": "Download"
+    },
+    "gui.checkUpdate.downloading": {
+        "message": "The Codecraft installation package is downloading, please wait."
+    },
+    "gui.checkUpdate.downloadCancel": {
+        "message": "Cancel"
+    },
+    "gui.checkUpdate.downloadCancelConfirm": {
+        "message": "Would you like to cancel the download?"
+    },
+    "gui.checkUpdate.cancelDownload": {
+        "message": "Cancel"
+    },
+    "gui.checkUpdate.downloadContinue": {
+        "message": "Continue"
+    },
+    "gui.checkUpdate.retry": {
+        "message": "Retry"
+    },
+    "gui.checkUpdate.cancel": {
+        "message": "Cancel"
+    },
+    "gui.checkUpdate.downloadFail": {
+        "message": "Download failed"
+    },
+    "gui.menuBar.offlineRemind": {
+        "message": "No Internet connection. The account is logged out."
+    },
+    "gui.library.connectNet": {
+        "message": "No visible content, please connect to the Internet."
+    },
+    "gui.library.remindText1": {
+        "message": "Sorry, the Internet is not connected, you can't watch the demo program. "
+    },
+    "gui.library.remindText2": {
+        "message": "When the internet is connected, you can watch the demo program and the video guide."
+    },
+    "gui.library.noProject": {
+        "message": "There is no example yet."
+    },
+    "gui.rescueDevice.confirm": {
+        "message": "Force uploading"
+    },
+    "gui.rescueDevice.title": {
+        "message": "Rescue device"
+    },
+    "gui.rescueDevice.noSerialsPrompt": {
+        "message": "No connected devices"
+    },
+    "gui.rescueDevice.noSelectSerialsPrompt": {
+        "message": "Please select a serial port"
+    },
+    "gui.rescueDevice.selectSerialport": {
+        "message": "Select serial port"
+    },
+    "gui.rescueDevice.selectDevice": {
+        "message": "Select a device"
+    },
+    "gui.rescueDevice.notice": {
+        "message": "Note: The following operation will restore the selected device to the latest version of this firmwire, in this way device will be in available status."
+    },
+    "gui.loginModal.requiredFiled": {
+        "message": "This is a required field"
+    },
+    "gui.net.errorMessage": {
+        "message": "Network error, please check your network."
+    },
+    "gui.menuBar.saveErrorWithNoNet": {
+        "message": "Save failed, You can download the project to your computer."
+    },
+    "gui.library.tips.crateBtnText":{
+        "message": "Start Coding"
+    },
+    "gui.library.tips.mainPage":{
+        "message": "Main page"
+    },
+    "gui.library.fourYearsOld": {
+        "message": "4-8"
+    },
+    "gui.library.eightYearsOld": {
+        "message": "8-12"
+    },
+    "gui.library.twelveYearsOld": {
+        "message": "12-15"
+    },
+    "gui.library.fifteenYearsOld": {
+        "message": "15-18"
+    },
+    "gui.library.beginner": {
+        "message": "Beginner"
+    },
+    "gui.library.intermediate": {
+        "message": "Intermediate"
+    },
+    "gui.library.advanced": {
+        "message": "Advanced"
+    },
+    "gui.library.ai":{
+        "message": "AI"
+    },
+    "gui.library.iot":{
+        "message": "IOT"
+    },
+    "gui.library.robotics":{
+        "message": "Robotics"
+    },
+    "gui.library.graphicalProgram":{
+        "message": "Graphical programming"
+    },
+    "gui.library.pythonProgram":{
+        "message": "Python programming"
+    },
+    "gui.library.glint":{
+        "message": "GLINT"
+    },
+    "gui.library.course": {
+        "message": "Courses"
+    },
+    "gui.library.project": {
+        "message": "Projects"
+    },
+    "gui.library.codecraftCourse": {
+        "message": "Codecraft courses"
+    },
+    "gui.library.projectSample": {
+        "message": "Projects"
+    },
+    "gui.library.zwb": {
+        "message": "Make To Learn"
+    },
+    "gui.library.mywork": {
+        "message": "My projects"
+    },
+    "gui.library.hardwareProducts": {
+        "message": "Supported hardware"
+    },
+    "gui.library.selectHardwareforProgramming": {
+        "message": "Select hardware for programming"
+    },
+    "gui.library.moreCourses": {
+        "message": "More Courses"
+    },
+    "gui.library.moreProject": {
+        "message": "More Projects"
+    },
+    "gui.library.author": {
+        "message": "By"
+    },
+    "gui.library.product": {
+        "message": "Product"
+    },
+    "gui.library.age": {
+        "message": "Age"
+    },
+    "gui.library.level": {
+        "message": "Level"
+    },
+    "gui.library.popular": {
+        "message": "Popular"
+    },
+    "gui.library.searchCourses": {
+        "message": "Search Courses"
+    },
+    "gui.library.searchProjects": {
+        "message": "Search Projects"
+    },
+    "gui.homeTips.vd":{
+        "message": "View Details"
+    },
+    "gui.remindSave.title": {
+        "message": "Prompt"
+    },
+    "gui.remindSave.remindText": {
+        "message": "The current file has been modified. Do you want to save it?"
+    },
+    "gui.remindSave.save": {
+        "message": "Save"
+    },
+    "gui.remindSave.dontSave": {
+        "message": "Do not save"
+    },
+    "gui.remindSave.cancelSave": {
+        "message": "Cancel"
+    },
+    "gui.trainModal.title":{
+        "message": "Model Training"
+    },
+    "gui.trainModal.modelLoading":{
+        "message": "Model loading......"
+    },
+    "gui.trainModal.modelResourceLoading":{
+        "message": "Model resource loading......"
+    },
+    "gui.trainModal.result":{
+        "message": "result"
+    },
+    "gui.trainModal.newModel":{
+        "message": "New model"
+    },
+    "gui.trainModal.usingModel":{
+        "message": "Using the model"
+    },
+    "gui.trainModal.learn":{
+        "message": "Learn"
+    },
+    "gui.trainModal.category":{
+        "message": "category"
+    },
+    "gui.trainModal.sample":{
+        "message": "sample"
+    },
+    "gui.trainModal.reset":{
+        "message": "Reset"
+    },
+    "gui.trainModal.confirm": {
+        "message": "Confirm"
+    },
+    "gui.trainModal.cancel": {
+        "message": "Cancel"
+    },
+    "gui.trainModal.clearPrompt": {
+        "message": "Are you sure you want to clear the current classification of samples?"
+    },
+    "gui.trainModal.newModelPrompt": {
+        "message": "New model will clear the current training data, determine new?"
+    },
+    "gui.trainModal.modelCategoryNumber": {
+        "message": "Number of model classifications"
+    },
+    "gui.trainModal.recognitionWindow": {
+        "message": "Recognition Window"
+    },
+    "gui.trainModal.notSupportMediaDevices": {
+        "message": "Your browser does not support access to your media devices"
+    },
+    "gui.workspace.codeDownloadBtn":{
+        "message": "Download"
+    },
+    "gui.library.noMaterial": {
+        "message": "No material is available"
+    },
+    "gui.device.switching.promptMessage": {
+        "message": "Switching device will create a new project,  whether  to save current project?"
+    },
+    "gui.device.switching.notSave":{
+        "message": "Do not save"
+    },
+    "gui.device.switching.save": {
+        "message": "Save"
+    },
+    "gui.deviceSelector.itemviewMore": {
+        "message": "View More"
+    },
+    "gui.deviceInfo.helpDoc":{
+        "message":"See Documentation"
+    },
+    "gui.deviceInfo.buy":{
+        "message":"SHOP NOW"
+    },
+    "gui.serialChart.serialChart":{
+        "message":"Serial Plotter"
+    },
+    "gui.serialChart.download":{
+        "message":"Download"
+    },
+    "gui.deviceInfo.groveZero.description":{
+        "message":"Grove Zero is a line of programmable electronic building blocks that combine easy magnetic connections with graphical programming software to implement functional and basic designs. Grove Zero is a great tool both for developing a child's creativity and for teaching STEM concepts."
+    },
+    "gui.deviceInfo.microbit.description":{
+        "message":"BBC micro:bit is a programmable micro-computer that can fit in the palm of your hand. It offers endless possibilities for implementing a wide range of creative ideas, ranging from robots to musical instruments.To learn more about the micro:bit,visit the official website: https://microbit.org"
+    },
+    "gui.deviceInfo.cyberEye.description":{
+        "message":"Make A Robot Kit, also known as “M.A.R.K.” is a versatile intelligent car designed for learning about Artificial Intelligence. Using the AI controller which comes with MARK, a child can implement track identification, traffic sign identification, and other AI features to put together a self-driving car."
+    },
+    "gui.deviceInfo.glint.description":{
+        "message":"GLINT is a beginner’s wearable versatile product for kids to do programming with an elegant appearance. Its lightweight interactive interface consists of 12 programmable RGB LEDs, a Push Button and build-in accelerometer,  extremely reduces kids’ psychological threshold to accept programming teaching aids. Since the product is easy to use, both the product experience and diversified interaction methods allow kids to learn and play simultaneously, so as to enable them to fully display their programming creativity."
+    },
+    "gui.deviceInfo.groveJoint.description":{
+        "message":"Grove-Joint has many similarities with Seeeduino Lotus. This is a miniature ATMEGA328 microcontroller development board. It uses Atmel ATMEGA328P-MU and CH340 chips. You can use it to match the Grove module to make interesting applications conveniently and quickly."
+    },
+    "gui.deviceInfo.arduino.description":{
+        "message":"Codecraft currently supports classic Arduino development boards, such as Arduino Uno, as well as improved compatible versions based on Arduino, such as: Seeeduino V4.2, Seeeduino Mega, Seeeduino Lotus V1.1, Grove Beginner Kit for Arduino etc. At the same time, it has also widely supported the well-known Grove series sensor modules in the Arduino ecosystem."
+    },
+    "gui.deviceInfo.noDescriptionText":{
+        "message":"No introduction"
+    },
+    "gui.saveAs.saveAs": {
+        "message": "Save as"
+    },
+    "gui.saveAs.documentName": {
+        "message": "Project"
+    },
+    "gui.courseItem.classHourUnit":{
+        "message": " lessons"
+    },
+    "gui.coursePage.examples":{
+        "message": "Examples"
+    },
+    "gui.coursePage.teacherSupport":{
+        "message": "Teacher Support"
+    },
+    "gui.coursePage.studentSupport":{
+        "message": "Student Material"
+    },
+    "gui.coursePage.relatedGoods":{
+        "message": "Related Products"
+    },
+    "gui.coursePage.download":{
+        "message": "Download"
+    },
+    "gui.coursePage.buy":{
+        "message": "Shop Now"
+    },
+    "gui.coursePage.preLesson":{
+        "message": "Previous"
+    },
+    "gui.coursePage.courseNotExist":{
+        "message": "This course does not exist"
+    },
+    "gui.coursePage.nextLesson":{
+        "message": "Next"
+    },
+    "gui.coursePage.moreLesson":{
+        "message": "More"
+    },
+    "gui.coursePage.prePage":{
+        "message": "Previous"
+    },
+    "gui.coursePage.nextPage":{
+        "message": "Next"
+    },
+    "gui.coursePage.classUnit":{
+        "message": "#"
+    },
+    "gui.coursePage.lessonOutline":{
+        "message": "Lesson Outline"
+    },
+    "gui.coursePage.zoomInLook":{
+        "message": "Zoom in to see exercises"
+    },
+    "gui.coursePage.singleChoice": {
+        "message": "Single choice"
+    },
+    "gui.coursePage.multipleChoice": {
+        "message": "Multiple choice"
+    },
+    "gui.coursePage.commitAnswer": {
+        "message": "Submit answer"
+    },
+    "gui.coursePage.correct": {
+        "message": "Correct"
+    },
+    "gui.coursePage.congratulation": {
+        "message": "Congratulations！You've chosen the correct answer."
+    },
+    "gui.coursePage.doMore": {
+        "message": "Try again"
+    },
+    "gui.coursePage.continueStudy": {
+        "message": "Continue"
+    },
+    "gui.coursePage.error": {
+        "message": "Wrong answer"
+    },
+    "gui.coursePage.considerMore": {
+        "message": "Let's think about it again, you're almost there!"
+    },
+    "gui.coursePage.continueAnswer": {
+        "message": "Continue answering questions"
+    },
+    "gui.coursePage.connotPreview": {
+        "message": "Temproarily unable to preview"
+    },
+    "gui.courseHome.btnBack": {
+        "message": "Back"
+    },
+    "gui.lessonOutline.btnView":{
+        "message": "View"
+    },
+    "gui.Setting.Indentity.label":{
+        "message": "Status"
+    },
+    "gui.Setting.Indentity.Student":{
+        "message": "Student"
+    },
+    "gui.Setting.Indentity.Teacher":{
+        "message": "Teacher"
+    },
+    "gui.Setting.ImageUpload":{
+        "message": "Upload"
+    },
+    "gui.extension.modelExtension.name": {
+        "message": "Custom Models"
+    },
+    "gui.extension.modelExtension.description": {
+        "message": "Create custom image classification and object detection models blocks for using in Codecraft with MARK"
+    },
+    "gui.modelExtension.categoryName": {
+        "message": "Custom Models",
+        "description": ""
+    },
+    "gui.modelExtension.imgModelButton": {
+        "message": "Image Classification Model",
+        "description": ""
+    },
+    "gui.modelExtension.objModelButton": {
+        "message": "Object Detection Model",
+        "description": ""
+    },
+    "gui.modelExtension.deviceTrainButton": {
+        "message": "On-device training",
+        "description": ""
+    },
+    "gui.modelExtension.addModelButton":{
+        "message": "Model",
+        "description": ""
+    },
+    "gui.modelExtension.modelFilePath":{
+        "message": "File",
+        "description": ""
+    },
+    "gui.modelExtension.modelFilePath.placeholder":{
+        "message": "Path to model file on SD card or model address",
+        "description": ""
+    },
+    "gui.modelExtension.modelFilePath.placeholder2":{
+        "message": "Path to model file on SD card",
+        "description": ""
+    },
+    "gui.modelExtension.modelName":{
+        "message": "Model Name",
+        "description": ""
+    },
+    "gui.modelExtension.modelAnchor":{
+        "message": "Anchors",
+        "description": ""
+    },
+    "gui.modelExtension.modelAnchor.placeholder":{
+        "message": "Enter the string with anchors. by default is ,,,",
+        "description": ""
+    },
+    "gui.modelExtension.modelSamplesNum":{
+        "message": "Number of samples",
+        "description": ""
+    },
+    "gui.modelExtension.model.categoryName":{
+        "message": "Category Name",
+        "description": ""
+    },
+    "gui.modelExtension.saveText":{
+        "message": "Save",
+        "description": ""
+    },
+    "gui.modelExtension.cancelText":{
+        "message": "Cancel",
+        "description": ""
+    },
+    "gui.modelExtension.preview":{
+        "message": "Preview",
+        "description": ""
+    },
+    "gui.modelExtension.signout":{
+        "message": "Exit",
+        "description": ""
+    },
+    "gui.modelExtension.modelsSave.prompt":{
+        "message": "There is an input box that is not filled in, please enter the content in the input box, or delete unnecessary models and input boxes",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.prompt":{
+        "message": "The Model is being used and cannot be removed for the time being.",
+        "description": ""
+    },
+    "gui.modelExtension.modelCategoryDelete.prompt":{
+        "message": "The Category Name is being used and cannot be removed for the time being.",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.tipLabel":{
+        "message": "Prompt",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.message":{
+        "message": "Would you like to delete this model?",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.okText":{
+        "message": "Delete",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.cancelText":{
+        "message": "Cancel",
+        "description": ""
+    },
+    "gui.modelExtension.modelsSave.succPrompt": {
+        "message": "Saved",
+        "description": ""
+    },
+    "gui.modelExtension.modelsSave.isConnect": {
+        "message": "Device not connected",
+        "description": ""
+    },
+    "gui.modelExtension.saveFail": {
+        "message": "Please fill in the skill name",
+        "description": ""
+    },
+    "gui.modelExtension.cailbrateServos": {
+        "message": "Cailbrate Servos",
+        "description": ""
+    },
+    "gui.modelExtension.createSkill": {
+        "message": "Create Skill",
+        "description": ""
+    },
+    "gui.modelExtension.skillName": {
+        "message": "Skill Name:",
+        "description": ""
+    },
+    "gui.modelExtension.setMachineAngle": {
+        "message": "Joint angle:",
+        "description": ""
+    },
+    "gui.projectPage.sampleCdc": {
+        "message": "Examples"
+    },
+    "gui.projectPage.none": {
+        "message": "None"
+    },
+    "gui.projectPage.shareLink": {
+        "message": "Share"
+    },
+    "gui.projectPage.url": {
+        "message": "URL"
+    },
+    "gui.projectPage.cancel": {
+        "message": "Cancel"
+    },
+    "gui.projectPage.copyUrl": {
+        "message": "Copy URL"
+    },
+    "gui.projectPage.copyUrlSuccessfully": {
+        "message": "Copied successfully"
+    },
+    "gui.projectPage.projectNotExist": {
+        "message": "This project does not exist"
+    }
+}

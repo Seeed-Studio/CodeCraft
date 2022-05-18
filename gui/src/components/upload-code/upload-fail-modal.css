@@ -1,0 +1,33 @@
+.upload-fail-box {
+  width: 19.25rem;
+  height: 11.75rem;
+  top: 0px;
+}
+
+.center-box {
+  text-align: center;
+}
+
+.icon {
+  display: inline-block;
+  margin-top: 1.94rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.icon-fail {
+  background: #FF7686;
+  background-image: url(./icon-fail.png);
+}
+
+.text {
+  margin-top: 0.6rem;
+  font-size: 14px;
+  color: rgba(113, 117, 130, 1);
+}
+
+.bt {
+  margin-top: 1.5rem;
+  font-size: 14px;
+}

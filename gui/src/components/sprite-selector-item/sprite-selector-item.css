@@ -1,0 +1,112 @@
+@import "../../css/units.css";
+@import "../../css/colors.css";
+/* @todo: refactor this class name, and component: `sprite-selector` to `sprite` */
+
+.sprite-selector-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  color: $text-primary;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+  user-select: none;
+  touch-action: none;
+  border: 2px solid transparent;
+}
+
+.sprite-selector-item.is-selected {
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(81, 221, 212, 1);
+  box-shadow: 0px 4px 10px 0px rgba(81, 221, 212, 0.5);
+  border-radius: 10px;
+}
+
+.sprite-selector-item:hover {
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(81, 221, 212, 1);
+  box-shadow: 0px 4px 10px 0px rgba(81, 221, 212, 0.5);
+  border-radius: 10px;
+}
+
+/* .sprite-selector-item:hover .sprite-image,
+.is-selected .sprite-image {
+  filter: drop-shadow(0px 0px 2px $ui-black-transparent);
+} */
+
+.sprite-image {
+  margin: auto;
+  user-select: none;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.sprite-info {
+  /* padding: 0.25rem; */
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  font-size: 0.625rem;
+  color: $text-primary;
+  user-select: none;
+}
+
+.sprite-info-selected {
+  background-color: rgba(81, 221, 212, 1);
+  color: #fff;
+}
+
+.sprite-name,
+.sprite-details {
+  /*
+        For truncating overflowing text gracefully
+        Min-width is for a bug: https://css-tricks.com/flexbox-truncated-text
+    */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.sprite-details {
+  /* margin-top: 0.125rem; */
+  font-size: 0.5rem;
+}
+
+.is-selected .sprite-info {
+  /* background: $motion-primary;
+    color: $ui-white; */
+}
+
+.delete-button {
+  position: absolute;
+  top: 0.125rem;
+  z-index: 1;
+}
+
+[dir="ltr"] .delete-button {
+  right: 0.125rem;
+}
+
+[dir="rtl"] .delete-button {
+  left: 0.125rem;
+}
+
+.number {
+  position: absolute;
+  top: 0.3rem;
+  font-size: 0.625rem;
+  z-index: 2;
+}
+
+[dir="ltr"] .number {
+  left: 0.3rem;
+}
+
+[dir="rtl"] .number {
+  right: 0.3rem;
+}

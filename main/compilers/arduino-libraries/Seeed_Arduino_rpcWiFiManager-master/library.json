@@ -1,0 +1,13 @@
+{
+  "name": "Seeed Arduino rpcWiFiManager",
+  "keywords": "wifi, wi-fi",
+  "description": "Seeed rtl8720dn module WiFi Connection manager with fallback web configuration portal",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/Seeed-Studio/Seeed_Arduino_rpcWiFiManager"
+  },
+  "frameworks": "arduino",
+  "platforms": "samd",
+  "version": "1.0.0"
+}

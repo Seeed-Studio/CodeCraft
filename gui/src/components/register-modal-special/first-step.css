@@ -1,0 +1,192 @@
+.first-step-container {
+  color: #717582;
+}
+
+.input-phone-num {
+  position: relative;
+}
+
+.input-phone-num-check {
+  position: absolute;
+  bottom: -1.2rem;
+  right: 0;
+  font-size: 12px;
+  color: #FF7686;
+}
+
+.check-num {
+  position: relative;
+}
+
+.check-num-err {
+  position: absolute;
+  bottom: -1.2rem;
+  right: 0;
+  font-size: 12px;
+  color: #FF7686;
+}
+
+.get-check-num {
+  position: absolute;
+  top: 2.6rem;
+  right: 0.6rem;
+  font-size: 0.88rem;
+  color: #4A9CF0;
+}
+
+.get-check-num:hover {
+  cursor: pointer;
+}
+
+.get-check-num-disbled {
+  position: absolute;
+  top: 2.6rem;
+  right: 0.6rem;
+  font-size: 0.88rem;
+  color: #ccc;
+}
+
+.get-check-num-disbled:hover {
+  cursor: not-allowed;
+}
+
+.set-pwd {
+  position: relative;
+}
+
+.set-indentity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.inviteCode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: .8rem auto 1.2rem;
+}
+
+.inviteText {
+  white-space: nowrap;
+  padding-right: 1.5rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.mail-protocol {
+  text-align: center;
+}
+
+.mail-protocol span {
+  font-size: 0.875rem;
+  color: #717582;
+  margin-left: 3px;
+}
+
+.check-pwd {
+  position: absolute;
+  bottom: -1.2rem;
+  right: 0;
+  font-size: 12px;
+  color: #FF7686;
+}
+
+.next-step {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.next-btn {
+  min-width: 50%;
+}
+
+.to-login {
+  font-size: 0.75rem;
+  color: #4A9CF0;
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+.to-login-text:hover {
+  cursor: pointer;
+}
+
+.country-code-input {
+  width: 20% !important;
+  padding-left: 22px !important;
+}
+
+.countryCodeInputAdd {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  color: #aaa;
+}
+
+.phone-num-input {
+  width: 75% !important;
+}
+
+.emailInput {
+  width: 100% !important;
+}
+
+.line {
+  width: 5%;
+  text-align: center;
+  display: inline-block;
+  color: #aaa;
+}
+
+.showPwd {
+  width: 1.5rem;
+  position: absolute;
+  top: 2.5rem;
+  right: 0.5rem;
+}
+
+.showPwd:hover {
+  cursor: pointer;
+}
+
+.redBorder {
+  border: 1px solid rgba(255, 118, 134, 1);
+  box-shadow: 0px 2px 6px 0px rgba(255, 118, 134, 0.5);
+  /* border: 1px solid rgba(81, 221, 212, 1);
+  box-shadow: 0px 2px 6px 0px rgba(81, 221, 212, 0.5); */
+}
+
+.errMsg {
+  font-size: 0.75rem;
+  color: #FF7686;
+  text-align: left;
+  min-height: 1.3rem;
+  padding-top: 0.2rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #717582;
+  height: 30px;
+  line-height: 30px;
+}
+
+.emailCheckNum {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.6rem;
+  color: #4A9CF0;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.first-step-neterr {
+  padding: 0.44rem 0.44rem;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 0.5rem;
+  font-size: 0.88rem;
+  color: #717582;
+}

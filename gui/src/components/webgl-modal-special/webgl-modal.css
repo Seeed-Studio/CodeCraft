@@ -1,0 +1,109 @@
+@import "../../css/colors.css";
+@import "../../css/units.css";
+@import "../../css/typography.css";
+@import "../../css/z-index.css";
+.modal-overlay {
+  position: fixed;
+  top: -2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $z-index-modal;
+  background-color: $ui-modal-overlay;
+}
+
+.modal-content {
+  margin: auto;
+  outline: none;
+  border: .25rem solid $ui-white-transparent;
+  padding: 0;
+  border-radius: $space;
+  user-select: none;
+  width: 500px;
+  color: $text-primary;
+  overflow: hidden;
+}
+
+.illustration {
+  width: 100%;
+  height: 208px;
+  background-color: $motion-primary;
+  background-image: url('../browser-modal/unsupported.png');
+  background-size: cover;
+}
+
+[dir="rtl"] .illustration {
+  transform: scaleX(-1);
+}
+
+.body {
+  background: $ui-white;
+  padding: 1.5rem 2.25rem 0.8rem;
+  text-align: center;
+}
+
+/* Confirmation buttons at the bottom of the modal */
+
+.button-row {
+  margin: 1.5rem 0;
+  font-weight: bolder;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+}
+
+.button-row button {
+  border: 1px solid $motion-primary;
+  border-radius: 0.25rem;
+  padding: 0.5rem 2rem;
+  background: $motion-primary;
+  color: white;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.faq-link-text {
+  margin: 1rem 0 .5rem 0;
+  font-size: .875rem;
+  color: $text-primary;
+}
+
+.faq-link {
+  color: $motion-primary;
+  text-decoration: none;
+}
+
+.webGlModal {
+  width: 25.63rem;
+  background: #F2F7FB;
+  box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.wrongPic {
+  width: 11.5rem;
+  height: 7.5rem;
+}
+
+.wrongPicContainer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: rgba(232, 239, 247, 1);
+}
+
+.label {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: rgba(113, 117, 130, 1);
+}
+
+.message {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: rgba(113, 117, 130, 1);
+  text-align: left;
+}
+
+.backButton {
+  width: 100%;
+}

@@ -1,0 +1,76 @@
+@import "../../css/colors.css";
+.menu {
+  position: absolute;
+  /* border: 1px solid $ui-black-transparent; */
+  /* border-radius: 0 0 8px 8px; */
+  /* background-color: $motion-primary; */
+  padding: 0;
+  /* margin: 8px 0px 0px 0px; */
+  min-width: 150px;
+  max-width: 260px;
+  /* overflow: visible; */
+  overflow: hidden;
+  color: $ui-white;
+  /* box-shadow: 0 8px 8px 0 $ui-black-transparent; */
+  background: rgba(255, 255, 255, 1);
+  /* border: 1px solid rgba(232, 239, 247, 1); */
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(113, 117, 130, 1);
+  top: 1.5rem;
+}
+
+.menu:hover {
+  cursor: pointer;
+}
+
+.menu.left {
+  right: 0;
+}
+
+.menu.right {
+  left: 0;
+}
+
+.menu-item {
+  display: block;
+  /* line-height: 34px; */
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  padding: 0 0.5rem;
+  font-weight: 400;
+  color: #717582;
+  outline: none;
+}
+
+.menu-item.active,
+.menu-item:hover {
+  /* background-color: $ui-black-transparent; */
+  background-color: $ui-black-transparent;
+  color: #1798FF;
+}
+
+.menu-section {
+  border-top: 1px solid $ui-black-transparent;
+}
+
+.menuContainer {
+  /* position: relative; */
+}
+
+.menuTriangle {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 0 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff;
+  /*透明 透明  黄*/
+  position: absolute;
+  left: 1rem;
+  top: 2.2rem
+}

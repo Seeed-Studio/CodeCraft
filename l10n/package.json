@@ -1,0 +1,53 @@
+{
+  "name": "scratch-l10n",
+  "version": "3.0.0",
+  "description": "Localization for the Scratch 3.0 components",
+  "main": "./dist/l10n.js",
+  "browser": "./src/index.js",
+  "bin": {
+    "build-i18n-src": "./scripts/build-i18n-src.js"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build:data && webpack --progress --colors --bail && cd ../gui/ && npm update scratch-l10n",
+    "build:data": "babel-node scripts/build-data",
+    "clean": "rimraf ./dist ./locales && mkdirp dist locales",
+    "lint:js": "eslint . --ext .js",
+    "lint:json": "jshint -e .json www editor/blocks editor/extensions editor/interface editor/paint-editor",
+    "lint": "npm run lint:js && npm run lint:json",
+    "test": "npm run lint && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LLK/scratch-l10n.git"
+  },
+  "author": "Massachusetts Institute of Technology",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/LLK/scratch-l10n/issues"
+  },
+  "homepage": "https://github.com/LLK/scratch-l10n#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-intl": "^0.1.1",
+    "babel-plugin-react-intl": "^2.3.1",
+    "react-intl": "2.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.6.1",
+    "eslint-config-scratch": "^4.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "jshint": "2.9.5",
+    "json": "^9.0.6",
+    "jsonlint": "1.6.3",
+    "lodash.defaultsdeep": "4.6.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^3.1.2"
+  }
+}

@@ -1,0 +1,17 @@
+***************
+*** 65,71 ****
+      nothing,
+  #endif
+  };
+- static volatile void* intFuncParam[EXTERNAL_NUM_INTERRUPTS];
+  // volatile static voidFuncPtr twiIntFunc;
+  
+  void attachInterrupt(uint8_t interruptNum, voidFuncPtr userFunc, int mode) {
+--- 65,71 ----
+      nothing,
+  #endif
+  };
++ static void* intFuncParam[EXTERNAL_NUM_INTERRUPTS];
+  // volatile static voidFuncPtr twiIntFunc;
+  
+  void attachInterrupt(uint8_t interruptNum, voidFuncPtr userFunc, int mode) {

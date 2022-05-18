@@ -1,0 +1,13 @@
+{
+  "name": "NTP",
+  "keywords": "ntp, client, time, timezone",
+  "description": "a NTP client with timezone support",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/sstaub/NTP.git"
+  },
+  "version": "1.4",
+  "frameworks": "arduino",
+  "platforms": "*"
+}

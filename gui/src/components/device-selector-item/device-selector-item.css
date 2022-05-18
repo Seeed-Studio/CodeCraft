@@ -1,0 +1,117 @@
+@import "../../css/units.css";
+@import "../../css/colors.css";
+
+/* @todo: refactor this class name, and component: `sprite-selector` to `sprite` */
+.device-selector-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    color: $text-primary;
+
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s ease-out;
+
+    user-select: none;
+    touch-action: none;
+
+    border:2px solid rgba(232,239,247,1);
+    border-radius:0.714rem;
+}
+
+.device-selector-item.is-selected {
+    background:rgba(232,250,250,1);
+    border:2px solid rgba(81,221,212,1);
+    box-shadow:0px 4px 10px 0px rgba(81,221,212,0.5);
+}
+
+/* .device-selector-item:hover {
+    border: 2px solid $motion-primary;
+    background: $ui-white;
+}
+
+.device-selector-item:hover .device-image, .is-selected .device-image {
+    filter: drop-shadow(0px 0px 2px  $ui-black-transparent);
+} */
+
+.device-image {
+    margin: 0.675rem;
+    user-select: none;
+    width: 64px;
+    height: 43px;
+}
+
+.device-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0.25rem;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.625rem; 
+    color:rgba(171,185,198,1);
+}
+
+.device-name, .device-details {
+    /*
+        For truncating overflowing text gracefully
+        Min-width is for a bug: https://css-tricks.com/flexbox-truncated-text
+    */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    min-width: 0;
+}
+
+.device-details {
+    margin-top: 0.125rem;
+    font-size: 0.5rem;
+}
+
+.is-selected .device-info {
+    color:rgba(81,221,212,1);
+}
+
+.delete-button {
+    position: absolute;
+    right: -0.5rem;
+    top: -0.5rem;
+    z-index: 1;
+}
+
+.icon-connected{
+    position: absolute;
+    right: 0.25rem;
+    bottom: 0.125rem;
+}
+
+.hovered-wrapper{
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    background:rgba(0, 0, 0, 0.1);
+    border-radius:0.714rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-more-button{
+    min-width:9.25rem;
+    height:1.69rem;
+    line-height:1.69rem;
+    opacity:1;
+    background:rgba(75, 159, 240, 1);
+    border-radius:1rem;
+    text-align: center;
+
+    font-size:0.75rem;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+}

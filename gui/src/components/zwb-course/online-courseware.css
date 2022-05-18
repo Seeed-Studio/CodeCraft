@@ -1,0 +1,115 @@
+@import "../../css/units.css";
+.course-ware-box {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    height: 1.6rem;
+    flex-direction: row;
+    align-items: center;
+    height: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.page-btn {
+    font-size: calc($font-size-rem-rate * 22rem);
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 1.6rem;
+    border: 1px solid rgba(221,228,235,1);
+    border-radius: 13px;
+    /* width: 4rem; */
+    padding: 0 0.5rem;
+    height: 1.6rem;
+    cursor: pointer;
+    text-align: center;
+    color: rgba(75,159,240,1);
+    white-space: nowrap;
+}
+
+.page-btn-disable {
+    color: rgba(171,185,198,1);
+    cursor: not-allowed;
+}
+
+.last-page {
+    /* position: absolute; */
+    margin-left: 1.25rem;
+}
+
+.next-page {
+    /* position: absolute; */
+    margin-right: 1.25rem;
+}
+
+.num-group {
+    display: flex;
+    width: 11rem;
+    height: 1.6rem;
+    justify-content: space-around;
+}
+
+.num {
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 1px solid rgba(221,228,235,1);
+    border-radius: 12px;
+    font-size: calc($font-size-rem-rate * 22rem);
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 1.6rem;
+    cursor: pointer;
+    text-align: center;    
+}
+
+.blue {
+    color: rgba(75,159,240,1);
+}
+
+.grey {
+    color: rgba(171,185,198,1);
+}
+
+.basic-info {
+    height: 5.5rem;
+    overflow-y: auto;
+}
+
+@media screen and (min-width: 1921px) {
+    .basic-info {
+        height: 11rem;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .basic-info {
+        height: 5.5rem;
+    }
+}
+
+.courseMaterialInfo {
+    user-select: text;
+}
+
+.name {
+    font-size: calc($font-size-rem-rate * 24rem);
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(44,57,70,1);
+    line-height: 1.5rem;
+    margin: 0 0.6rem 0.5rem 1rem;
+}
+
+.description {
+    font-size: calc($font-size-rem-rate * 24rem);
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(113,117,130,1);
+    line-height: 1.5rem;
+    margin: 0 0.6rem 0 1rem;
+}
+ 

@@ -1,0 +1,24 @@
+
+language: generic
+dist: bionic
+sudo: false
+cache:
+  directories:
+    - ~/arduino_ide
+    - ~/.arduino15/packages/
+
+before_install:
+   - wget -c https://github.com/Seeed-Studio/Seeed_Arduino_atUnified/raw/master/seeed-arduino-ci.sh
+
+script:
+   - chmod +x seeed-arduino-ci.sh
+   - cat $PWD/seeed-arduino-ci.sh
+   - $PWD/seeed-arduino-ci.sh -b "Seeeduino:samd:seeed_wio_terminal" -s
+     320x240@Free_Font_Demo/320x240@TFT_graphicstest_one_lib/Generic@TFT_Screen_Capture/Sprite@Rotated_Sprite_2
+     Seeed-Studio/Seeed_Arduino_FS.git
+     Seeed-Studio/Seeed_Arduino_SFUD.git
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change

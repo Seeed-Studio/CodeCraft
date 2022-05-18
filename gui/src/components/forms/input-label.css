@@ -1,0 +1,84 @@
+@import "../../css/units.css";
+@import "../../css/colors.css";
+
+.input-pane{
+  width: 6rem;
+  height: 1.25rem;
+  position: relative;
+}
+
+.input-label{
+  left: 0.0625rem;;
+  top: 0.0625rem;
+  bottom: 0.0625rem;
+  position: absolute; 
+  display: inline-block;
+  padding: 0.44rem 0.63rem;
+  height: 100% - 0.125rem;
+  /* margin: 1px 0; */
+  line-height: 100% - 0.125rem;
+  /* margin: 0.125rem 0.125rem 0rem 0.125rem; */
+  font-size:0.75rem;
+  font-weight:400;
+  display: flex;
+  align-items: center;
+  padding: 0 0.25rem;
+  justify-content: center;
+  color:rgba(171,185,198,1);
+  text-align: center;
+  background:rgba(242,247,251,1);
+  border-radius: 2rem 0  0  2rem;
+  border-right: 0.0625rem solid rgba(232,239,247,1);
+}
+
+
+
+
+.input-form {
+  top: 0px;
+  bottom: 0px;
+  position: absolute; 
+  width: 6rem;
+  height: 1.25rem;
+  padding-left: 2.575rem;
+  padding-right: 0.075rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.625rem;
+  font-weight: bold;
+  color: $text-primary;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: $ui-black-transparent;
+  border-radius: 2rem;
+  outline: none;
+  cursor: text;
+  transition: 0.25s ease-out;
+  /* @todo: standardize with var */
+  box-shadow: none;
+  /*
+        For truncating overflowing text gracefully
+        Min-width is for a bug: https://css-tricks.com/flexbox-truncated-text
+        @todo: move this out into a mixin or a helper component
+    */
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.input-form:hover {
+  /* border-color: $motion-primary; */
+  border-color: rgba(81, 221, 212, 1);
+}
+
+.input-form:focus {
+  /* border-color: $motion-primary;
+  box-shadow: 0 0 0 0.25rem $motion-transparent; */
+  border-color: rgba(81, 221, 212, 1);
+  box-shadow: 0 0 0 0.1rem rgba(81, 221, 212, 0.5);
+}
+
+.input-small {
+  text-overflow: clip;
+  text-align: center;
+}

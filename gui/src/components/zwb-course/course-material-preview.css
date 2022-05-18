@@ -1,0 +1,42 @@
+@import "../../css/units.css";
+.course-material-preview {
+    /* width: 100%;
+    height: auto; */
+    position: relative;
+}
+
+.basic-info {
+    height: 5.5rem;
+    overflow-y: auto;
+}
+
+@media screen and (min-width: 1921px) {
+    .basic-info {
+        height: 11rem;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .basic-info {
+        height: 5.5rem;
+    }
+}
+
+.name {
+    font-size: calc($font-size-rem-rate * 24rem);
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(44,57,70,1);
+    line-height: 1.5rem;
+    margin: 1rem 0.5rem 0.5rem 1rem;
+}
+
+.description {
+    font-size: calc($font-size-rem-rate * 24rem);
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(113,117,130,1);
+    line-height: 1.5rem;
+    margin: 0 0.5rem 0 1rem;
+}
+ 

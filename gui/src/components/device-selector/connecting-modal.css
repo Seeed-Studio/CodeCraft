@@ -1,0 +1,33 @@
+.uploading-box{
+    width:308px;
+    height:226px;
+    top:0px;
+}
+
+.center-box{
+    text-align: center;
+}
+
+.icon{
+    display: inline-block;
+    margin-top:30px;
+    width:128px;
+    height:140px;
+    background-image: url(./uploading.gif);
+    background-size:128px 140px;
+}
+
+
+.text{
+    margin-top:10px;
+    font-size:14px;
+    color:rgba(113,117,130,1);
+}
+
+.bt{
+    margin-top:30px;
+    width:100px;
+    height:30px;
+    line-height:30px;
+    font-size:14px;
+}
