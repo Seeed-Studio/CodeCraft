@@ -4,6 +4,8 @@
 yarn.lock
 yarn-error.log
 
+package-lock.json
+
 # NPM
 /node_modules
 npm-*
