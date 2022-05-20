@@ -73,7 +73,7 @@ class CppCompiler {
      */
     _saveCode(code) {
         // 生成文件目录
-        const filepath = path.join(CODE_SCRIPT_DIR, CODE_FILE_NAME);
+        const filepath = path.join(CODE_BUILD_DIR, CODE_FILE_NAME);
         const buffer = Buffer.from(code);
         // 写入文件
         return new Promise(resolve => {

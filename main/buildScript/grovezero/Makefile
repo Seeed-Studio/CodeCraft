@@ -1,7 +1,8 @@
 
 TARGET = ../../buildCache/grovezero/code
 
-PROJ_DIR := .
+PROJ_DIR := ../../buildCache/grovezero
+PROJ_DIR += .
 
 OBJS   = ../../buildCache/grovezero/startup.o
 ## Bit15-8,Software version, Bit7-0,Hardware version
