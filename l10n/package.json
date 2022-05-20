@@ -8,7 +8,7 @@
     "build-i18n-src": "./scripts/build-i18n-src.js"
   },
   "scripts": {
-    "build": "npm run clean && npm run build:data && webpack --progress --colors --bail && cd ../gui/ && npm update scratch-l10n",
+    "build": "npm run clean && npm run build:data && webpack --progress --colors --bail",
     "build:data": "babel-node scripts/build-data",
     "clean": "rimraf ./dist ./locales && mkdirp dist locales",
     "lint:js": "eslint . --ext .js",

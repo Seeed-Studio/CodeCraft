@@ -13,8 +13,8 @@
   "browser": "./shim/vertical.js",
   "scripts": {
     "deploy": "rimraf gh-pages/closure-library/scripts/ci/CloseAdobeDialog.exe && gh-pages -t -d gh-pages -m \"Build for $(git log --pretty=format:%H -n1)\"",
-    "build-mac": "python build.py && webpack && cd ../gui && npm update scratch-blocks",
-    "build-win": "python build-win.py && webpack && cd ../gui && npm update scratch-blocks",
+    "build-mac": "python build.py && webpack",
+    "build-win": "python build-win.py && webpack",
     "test:setup": "tests/scripts/test_setup.sh",
     "test:unit": "node tests/jsunit/test_runner.js",
     "test:lint": "eslint .",
@@ -42,7 +42,7 @@
     "json": "9.0.4",
     "rimraf": "2.6.2",
     "travis-after-all": "1.4.4",
-    "uglifyjs-webpack-plugin": "^1.2.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webdriverio": "4.8.0",
     "webpack-cli": "^2.0.15"
   }

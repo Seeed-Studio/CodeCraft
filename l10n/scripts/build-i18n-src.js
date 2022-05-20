@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --max-old-space-size=10240
 
 const fs = require('fs');
 const glob = require('glob');
@@ -43,3 +43,4 @@ let defaultMessages = glob.sync(MESSAGES_PATTERN)
 
 mkdirp.sync(LANG_DIR);
 fs.writeFileSync(path.join(LANG_DIR, 'en.json'), JSON.stringify(defaultMessages, null, 2));
+

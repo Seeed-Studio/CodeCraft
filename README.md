@@ -1,11 +1,14 @@
 #简介
 TODO: 简要介绍你的项目。通过此节说明此项目的目标或动机。
 
-#入门
+# 入门
 1. compile dependencies	
 cd blocks
 npm install
-npm run build-mac or npm run build-win
+```for mac or linux
+npm run build-mac
+```for win
+npm run build-win
 
 cd l10n
 npm install && npm run build
@@ -15,7 +18,10 @@ npm install && npm run build
 
 cd gui
 npm install
-npm run build-mac or npm run build-win
+```for mac or linux
+npm run build-mac
+```for win
+npm run build-win
 rm -rf ../main/app/gui && cp -r ./build ../main/app/gui
 
 cd app

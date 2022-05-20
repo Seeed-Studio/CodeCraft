@@ -96,10 +96,10 @@ const base = {
                 include: /\.min\.js$/,
                 uglifyOptions: {
                     compress: {
-                        warnings: false,
                         drop_console: true,
                         drop_debugger: true
-                    }
+                    },
+                    warnings: false,
                 }
             })
         ]

@@ -12,7 +12,7 @@
   "main": "./dist/node/scratch-vm.js",
   "browser": "./src/index.js",
   "scripts": {
-    "build": "npm run docs && webpack --progress --colors --bail && cd ../gui && npm update scratch-vm",
+    "build": "npm run docs && webpack --progress --colors --bail",
     "coverage": "tap ./test/{unit,integration}/*.js --coverage --coverage-report=lcov",
     "deploy": "touch playground/.nojekyll && gh-pages -t -d playground -m \"Build for $(git log --pretty=format:%H -n1)\"",
     "docs": "jsdoc -c .jsdoc.json",
@@ -79,6 +79,7 @@
     "stats.js": "^0.17.0",
     "tap": "^12.0.1",
     "tiny-worker": "^2.1.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
