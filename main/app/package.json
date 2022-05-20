@@ -14,6 +14,7 @@
     "directories": {
       "output": "../build"
     },
+    "npmRebuild": "false",
     "publish": [
       {
         "provider": "generic",
