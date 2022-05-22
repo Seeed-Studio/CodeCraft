@@ -18,7 +18,7 @@ const Scratch3Speech2TextBlocks = require('../extensions/scratch3_speech2text');
 const Scratch3Ev3Blocks = require('../extensions/scratch3_ev3');
 const Scratch3ModelExtensionBlocks = require('../extensions/scratch3_modelExtension');
 
-const Scratch3TeachableMachineBlocks = require('../extensions/scratch3_teachablemachine');
+const Scratch3TeachableMachineBlocks = require('../extensions/scratch3_teachableMachine');
 const Scratch3CognitiveServicesBlocks = require('../extensions/scratch3_cognitiveServices');
 const Scratch3OttoDiyRobotBlocks = require('../extensions/scratch3_ottoDiyRobot');
 const Scratch3ShieldBotBlocks = require('../extensions/scratch3_shieldBot');
