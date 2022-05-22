@@ -237,7 +237,8 @@ class SocketService extends EventEmitter {
     handleScan(data) {
         let devices = data.filter(item => { return usable(item) }).map(item => {
             return Object.assign(item, {
-                deviceType: getDeviceType(item)
+                deviceType: getDeviceType(item),
+                comName: item.comName || item.path
             });
         }).sort(({ comName: comNameA }, { comName: comNameB }) => {
             return comNameA.localeCompare(comNameB);

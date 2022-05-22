@@ -77,7 +77,7 @@
     ]
   },
   "devDependencies": {
-    "electron": "^1.8.4",
+    "electron": "^3.0.0",
     "electron-rebuild": "^1.7.3"
   },
   "dependencies": {
@@ -89,7 +89,7 @@
     "express": "^4.16.4",
     "lodash.bindall": "^4.4.0",
     "node-fetch": "^2.6.0",
-    "serialport": "^6.0.5",
+    "serialport": "^8.0.8",
     "socket.io": "^2.1.1"
   }
 }
