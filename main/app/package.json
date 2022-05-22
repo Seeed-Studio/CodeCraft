@@ -14,7 +14,6 @@
     "directories": {
       "output": "../build"
     },
-    "npmRebuild": "false",
     "publish": [
       {
         "provider": "generic",
@@ -23,6 +22,7 @@
     ],
     "mac": {
       "icon": "../../static/mac.png",
+      "target": "zip",
       "artifactName": "${productName}_V${version}_setup_mac_${arch}.${ext}",
       "extraResources": {
         "from": "../compilers/mac",
