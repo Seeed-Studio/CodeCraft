@@ -51,15 +51,13 @@ CLOSURE_COMPILER = REMOTE_COMPILER
 CLOSURE_DIR_NPM = "node_modules"
 CLOSURE_ROOT_NPM = os.path.join("node_modules")
 CLOSURE_LIBRARY_NPM = "google-closure-library"
-CLOSURE_COMPILER_NPM = "google-closure-compiler"
+CLOSURE_COMPILER_NPM = ("google-closure-compiler.cmd" if os.name == "nt" else "google-closure-compiler")
 
 def import_path(fullpath):
   """Import a file with full path specification.
   Allows one to import from any directory, something __import__ does not do.
-
   Args:
       fullpath:  Path and filename of import.
-
   Returns:
       An imported module.
   """
@@ -101,12 +99,10 @@ class Gen_uncompressed(threading.Thread):
     f.write(self.format_js("""
 var isNodeJS = !!(typeof module !== 'undefined' && module.exports &&
                   typeof window === 'undefined');
-
 if (isNodeJS) {
   var window = {};
   require('{closure_library}');
 }
-
 window.BLOCKLY_DIR = (function() {
   if (!isNodeJS) {
     // Find name of current directory.
@@ -122,7 +118,6 @@ window.BLOCKLY_DIR = (function() {
   }
   return '';
 })();
-
 window.BLOCKLY_BOOT = function() {
   var dir = '';
   if (isNodeJS) {
@@ -170,7 +165,6 @@ window.BLOCKLY_BOOT = function() {
 delete this.BLOCKLY_DIR;
 delete this.BLOCKLY_BOOT;
 };
-
 if (isNodeJS) {
   window.BLOCKLY_BOOT();
   module.exports = Blockly;
@@ -273,6 +267,10 @@ class Gen_compressed(threading.Thread):
     elif block_type == "common":
       target_filename = "blocks_compressed.js"
       filenames = glob.glob(os.path.join("blocks_common", "*.js"))
+
+    # glob.glob ordering is platform-dependent and not necessary deterministic
+    filenames.sort()  # Deterministic build.
+
     # Define the parameters for the POST request.
     params = [
       ("compilation_level", "SIMPLE"),
@@ -284,6 +282,7 @@ class Gen_compressed(threading.Thread):
     # Add Blockly.Colours for use of centralized colour bank
     filenames.append(os.path.join("core", "colours.js"))
     filenames.append(os.path.join("core", "constants.js"))
+
     for filename in filenames:
       # Append filenames as false arguments the step before compiling will
       # either transform them into arguments for local or remote compilation
@@ -318,10 +317,10 @@ class Gen_compressed(threading.Thread):
         if pair[0][2:] not in filter_keys:
           dash_args.extend(pair)
 
-      # Build the final args array by prepending google-closure-compiler to
+      # Build the final args array by prepending CLOSURE_COMPILER_NPM to
       # dash_args and dropping any falsy members
       args = []
-      for group in [["google-closure-compiler"], dash_args]:
+      for group in [[CLOSURE_COMPILER_NPM], dash_args]:
         args.extend(filter(lambda item: item, group))
 
       proc = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
@@ -428,18 +427,13 @@ class Gen_compressed(threading.Thread):
       # Trim down Google's (and only Google's) Apache licences.
       # The Closure Compiler preserves these.
       LICENSE = re.compile("""/\\*
-
  [\w ]+
-
  Copyright \\d+ Google Inc.
  https://developers.google.com/blockly/
-
  Licensed under the Apache License, Version 2.0 \(the "License"\);
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
-
    http://www.apache.org/licenses/LICENSE-2.0
-
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -473,7 +467,6 @@ class Gen_compressed(threading.Thread):
 
 class Gen_langfiles(threading.Thread):
   """Generate JavaScript file for each natural language supported.
-
   Runs in a separate thread.
   """
 
@@ -571,7 +564,7 @@ if __name__ == "__main__":
     (stdout, _) = test_proc.communicate()
     assert stdout == read(os.path.join("build", "test_expect.js"))
 
-    print("Using local compiler: google-closure-compiler ...\n")
+    print("Using local compiler: %s ...\n" % CLOSURE_COMPILER_NPM)
   except (ImportError, AssertionError):
     print("Using remote compiler: closure-compiler.appspot.com ...\n")
 
