@@ -45,10 +45,10 @@ const inject = () => {
         ]
     });
     ccPC.install();
-
+    const lock = app.requestSingleInstanceLock()
     //... the rest of your application code
     //防止创建多个对象
-    if (app.makeSingleInstance(() => { })) {
+    if (!lock) {
         //二次启动，执行onResume
         app.exit();
     } else {
