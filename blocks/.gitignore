@@ -42,6 +42,8 @@ common.pyc
 /php_compressed.js
 /python_compressed.js
 
+# /gh-pages
+# /gh-pages/main.js
 /gh-pages/playgrounds
 /gh-pages/Gemfile.lock
 /gh-pages/closure-library

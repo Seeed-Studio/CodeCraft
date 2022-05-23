@@ -1,8 +1,8 @@
 #简介
 TODO: 简要介绍你的项目。通过此节说明此项目的目标或动机。
 
-# 入门
-1. compile dependencies	
+# compile dependencies	
+
 cd blocks
 npm install
 ```for mac or linux
@@ -26,7 +26,9 @@ rm -rf ../main/app/gui && cp -r ./build ../main/app/gui
 
 cd app
 npm install
-cd main/app/node_modules/serialport/  ../.bin/electron-rebuild
+./node_modules/.bin/electron-rebuild serialport
+
+If the error message “script is prohibited on this system” appears on the Windows system, you need to open powershell as an administrator, and then execute Set-ExecutionPolicy RemoteSigned
 
 cd main
 npm install
@@ -36,13 +38,3 @@ rm -rf build && npm run publish-mac or win or linux
 3.	最新发布
 4.	API 参考
 
-#生成与测试
-TODO: 说明并展示如何生成代码和运行测试。
-
-#投稿
-TODO: 说明其他用户和开发人员可如何帮助改善代码。
-
-如果想要深入了解如何创建优秀的自述文件，请参阅以下[指南] (https://www.visualstudio.com/zh-cn/docs/git/create-a-readme)。还可从以下自述文件中寻求灵感:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
