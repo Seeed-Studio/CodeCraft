@@ -213,8 +213,8 @@ const onAppReady = (launchInfo) => {
   window.maximize();
 
   //window监听
-  window.on('show', () => appTray.setHighlightMode('selection'))
-  window.on('hide', () => appTray.setHighlightMode('never'));
+  // window.on('show', () => appTray.setHighlightMode('selection'))
+  // window.on('hide', () => appTray.setHighlightMode('never'));
   window.once('ready-to-show', () => window.show());
 
   /**-------------页面加载------------**/
