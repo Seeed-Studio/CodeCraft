@@ -5,7 +5,6 @@ import bindAll from 'lodash.bindall';
 import React from 'react';
 import styles from './connect-meet-trouble.css';
 
-import { queryCCToolPkgVersion } from '../../lib/busi-proxy/busi-proxy.js';
 import { getOsType } from '../../lib/os-type.js';
 
 import { post } from '../../lib/fetch-utils.js';
@@ -51,9 +50,6 @@ class MeetTrouble extends React.Component {
   constructor(props) {
     super(props);
     bindAll(this, [
-      'onDown',
-      '_downDrive',
-      'downloadDriver',
       'handleToDocument'
     ]);
     this.state = {
@@ -70,109 +66,9 @@ class MeetTrouble extends React.Component {
     })
   }
 
-  onDown(driveType) {
-    // let driveType = e.target.dataset.type;
-    // let driveType = e.target.getAttribute('data-type');
-    // console.log(driveType);
-    switch (driveType) {
-      case DRIVE_TYPE_CH:
-        post(DRIVE_TYPE_CH_URL);
-        // this._downDrive('G0Driver');
-        break;
-      case DRIVE_TYPE_DAVINCE_AI:
-        this._downDrive('davinciai');
-        break;
-    }
-
-
-  }
-
-  _downDrive(toolType) {
-    let os = getOsType();
-    let osType = '';
-    if (os.name === 'Windows') {
-      switch (os.version) {
-
-        case 'WIN10_32':
-          osType = 'WIN10_32';
-          break;
-
-        case 'WIN10_64':
-          osType = 'WIN10_64';
-          break;
-
-        case 'WIN7_32':
-        case 'WIN8_32':
-          osType = 'WIN7/8_32';
-          break;
-
-        case 'WIN7_64':
-        case 'WIN8_64':
-          osType = 'WIN7/8_64';
-          break;
-
-        case 'WINXP':
-        case 'WINXP_32':
-        case 'WINXP_64':
-          osType = 'WINXP';
-          break;
-
-      }
-    }
-    else if (os.name === 'Mac') {
-      osType = 'MAC';
-    }
-    else if (os.name === 'Linux') {
-      osType = 'LINUX';
-    }
-
-    queryCCToolPkgVersion({
-      toolType: toolType,
-      osType: osType,
-      version: '0.0.0.0'
-    }).then((res) => {
-
-      const { errorCode, ccToolPkgInfo } = res;
-
-      if (errorCode !== 0) return;
-
-      if (!ccToolPkgInfo) return;
-
-      let pkgUrl = ccToolPkgInfo.cosFile.cosUrl;
-
-      if (!pkgUrl) return;
-
-      this.props.updateWindowDownloadFlag(true);
-      // window.open(`http://${pkgUrl}`, '_self');
-      setTimeout(() => {
-        const downloadLink = document.createElement('a');
-        document.body.appendChild(downloadLink);
-        downloadLink.href = `http://${pkgUrl}`;
-        downloadLink.download = '';
-        downloadLink.click();
-        window.URL.revokeObjectURL(`http://${pkgUrl}`);
-        document.body.removeChild(downloadLink);
-      }, 100);
-    });
-  }
-
-  downloadDriver() {
-    this.props.updateWindowDownloadFlag(true);
-    setTimeout(() => {
-      const downloadLink = document.createElement('a');
-      document.body.appendChild(downloadLink);
-      downloadLink.href = DRIVE_TYPE_ARDUINO_URL;
-      downloadLink.download = '';
-      downloadLink.click();
-      window.URL.revokeObjectURL(DRIVE_TYPE_ARDUINO_URL);
-      document.body.removeChild(downloadLink);
-    }, 100);
-  }
-
   handleToDocument(url) {
     this.props.onToDocument(url);
   }
-
 
   render() {
 

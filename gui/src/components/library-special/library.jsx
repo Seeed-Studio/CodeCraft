@@ -27,7 +27,21 @@ import luzhiIcon from './icon_luzhi.png';
 import styles from './library.css';
 import ButtonComponent from '../button-special/button.jsx';
 import { toasts } from '../toast-special/toast.jsx';
-import { searchCCSampleMaterialInfoList, searchCCMaterialClassList, searchCCMaterialInfoList, applyXCosSecurityToken, saveCCMaterialInfo, deleteCCMaterial, saveLocalPlatformMaterial, getLocalPlatformMaterial, saveLocalMaterial, saveUserLocalMaterial, getUserLocalMaterial, deleteUserLocalMaterial, clearCacheQueue } from '../../lib/busi-proxy/busi-proxy.js';
+import { 
+    searchCCSampleMaterialInfoList, 
+    searchCCMaterialClassList, 
+    searchCCMaterialInfoList, 
+    applyXCosSecurityToken, 
+    saveCCMaterialInfo, 
+    deleteCCMaterial, 
+    saveLocalPlatformMaterial, 
+    getLocalPlatformMaterial, 
+    saveLocalMaterial, 
+    saveUserLocalMaterial, 
+    getUserLocalMaterial, 
+    deleteUserLocalMaterial, 
+    clearCacheQueue 
+} from '../../lib/busi-proxy/busi-proxy.js';
 import COS from 'cos-js-sdk-v5';
 import { cosConfig } from '../../lib/cos-config.js';
 
@@ -35,7 +49,18 @@ import sharedMessages from '../../lib/shared-messages';
 
 import { setUserTab, LOGIN_TAB_INDEX, USER_TIME_OUT_TAB_INDEX } from '../../reducers/login-register-special.js';
 
-import { handleFileUpload, costumeUpload, costumeEmUpload, spriteUpload, spriteEmUpload, soundUpload, handleInputStreamUpload, handleInputStreamsUpload2, handleFileUploadSpecial, costumeUploadAsync } from '../../lib/file-uploader.js';
+import { 
+    handleFileUpload, 
+    costumeUpload, 
+    costumeEmUpload, 
+    spriteUpload, 
+    spriteEmUpload, 
+    soundUpload, 
+    handleInputStreamUpload, 
+    handleInputStreamsUpload2, 
+    handleFileUploadSpecial, 
+    costumeUploadAsync 
+} from '../../lib/file-uploader.js';
 
 import {
     activateTab,
@@ -467,7 +492,6 @@ class LibraryComponent extends React.Component {
             }
         }
         searchCCSampleMaterialInfoList(params).then((data) => {
-            console.log('handleSearchCCSampleMaterialInfoList ...')
             let {
                 materialClassList,
                 tagIndex

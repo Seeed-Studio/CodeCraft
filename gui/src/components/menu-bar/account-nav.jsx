@@ -5,12 +5,12 @@ eventually be consolidated.
 */
 
 import classNames from 'classnames';
-import { FormattedMessage } from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import MenuBarMenu from './menu-bar-menu.jsx';
-import { MenuSection } from '../menu/menu.jsx';
+import {MenuSection} from '../menu/menu.jsx';
 import MenuItemContainer from '../../containers/menu-item.jsx';
 import dropdownCaret from './dropdown-caret.svg';
 
@@ -29,57 +29,47 @@ const AccountNavComponent = ({
     onLogOut,
     profileUrl,
     thumbnailUrl,
-    username,
-    toLoginOut,
-    toUserSetting
+    username
 }) => (
-        <React.Fragment>
-            <div
-                className={classNames(
-                    styles.userInfo,
-                    className
-                )}
-                onMouseUp={onClick}
-            >
-                {thumbnailUrl ? (
-                    <img
-                        className={styles.avatar}
-                        src={thumbnailUrl}
-                    />
-                ) : null}
-                <span className={styles.profileName}>
-                    {username}
-                </span>
-                <div className={styles.dropdownCaretPosition}>
-                    <img
-                        className={styles.dropdownCaretIcon}
-                        src={dropdownCaret}
-                    />
-                </div>
+    <React.Fragment>
+        <div
+            className={classNames(
+                styles.userInfo,
+                className
+            )}
+            onMouseUp={onClick}
+        >
+            {thumbnailUrl ? (
+                <img
+                    className={styles.avatar}
+                    src={thumbnailUrl}
+                />
+            ) : null}
+            <span className={styles.profileName}>
+                {username}
+            </span>
+            <div className={styles.dropdownCaretPosition}>
+                <img
+                    className={styles.dropdownCaretIcon}
+                    src={dropdownCaret}
+                />
             </div>
-            <MenuBarMenu
-                className={menuBarMenuClassName}
-                open={isOpen}
-                // note: the Rtl styles are switched here, because this menu is justified
-                // opposite all the others
-                place={isRtl ? 'right' : 'left'}
-                onRequestClose={onClose}
-            >
-                <MenuItemContainer onClick={toUserSetting}>
-                    <FormattedMessage
-                        defaultMessage="Settings"
-                        description="Title for button to return to tutorials library"
-                        id="gui.cards.accountSetting"
-                    />
-                </MenuItemContainer>
-                <MenuItemContainer onClick={toLoginOut}>
-                    <FormattedMessage
-                        defaultMessage="Log out"
-                        description="Title for button to return to tutorials library"
-                        id="gui.cards.loginOut"
-                    />
-                </MenuItemContainer>
-                {/* {isEducator ? (
+        </div>
+        <MenuBarMenu
+            className={menuBarMenuClassName}
+            open={isOpen}
+            // note: the Rtl styles are switched here, because this menu is justified
+            // opposite all the others
+            place={isRtl ? 'right' : 'left'}
+            onRequestClose={onClose}
+        >
+            <MenuItemContainer href={profileUrl}>
+                <FormattedMessage id="general.profile" />
+            </MenuItemContainer>
+            <MenuItemContainer href="/mystuff/">
+                <FormattedMessage id="general.myStuff" />
+            </MenuItemContainer>
+            {isEducator ? (
                 <MenuItemContainer href="/educators/classes/">
                     <FormattedMessage id="general.myClasses" />
                 </MenuItemContainer>
@@ -96,10 +86,10 @@ const AccountNavComponent = ({
                 <MenuItemContainer onClick={onLogOut}>
                     <FormattedMessage id="navigation.signOut" />
                 </MenuItemContainer>
-            </MenuSection> */}
-            </MenuBarMenu>
-        </React.Fragment>
-    );
+            </MenuSection>
+        </MenuBarMenu>
+    </React.Fragment>
+);
 
 AccountNavComponent.propTypes = {
     className: PropTypes.string,

@@ -2603,9 +2603,6 @@
         "message": "删除",
         "description": ""
     },
-    "gui.microCourse.microCourse": {
-        "message": "微课程"
-    },
     "gui.deviceConnect.arduinoDriver": {
         "message": "Windows下需要先安装Arduino驱动，才能连接Arduino。"
     },

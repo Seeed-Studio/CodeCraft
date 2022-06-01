@@ -15,7 +15,6 @@ import { connect } from 'react-redux';
 import { toasts } from '../../components/toast-special/toast.jsx';
 import Prompt from '../prompt-special/prompt.jsx';
 import { getOsType } from '../../lib/os-type.js';
-import { queryCCToolPkgVersion } from '../../lib/busi-proxy/busi-proxy.js';
 
 import {
   MODE_OFFLINE,
@@ -471,77 +470,8 @@ class ConnectModalComponent extends React.Component {
         post(DRIVE_TYPE_CH_URL);
         break;
       case DRIVE_TYPE_DAVINCE_AI:
-        // this._downDrive('davinciai');
         break;
     }
-  }
-
-  _downDrive(toolType) {
-    let os = getOsType();
-    let osType = '';
-    if (os.name === 'Windows') {
-      switch (os.version) {
-
-        case 'WIN10_32':
-          osType = 'WIN10_32';
-          break;
-
-        case 'WIN10_64':
-          osType = 'WIN10_64';
-          break;
-
-        case 'WIN7_32':
-        case 'WIN8_32':
-          osType = 'WIN7/8_32';
-          break;
-
-        case 'WIN7_64':
-        case 'WIN8_64':
-          osType = 'WIN7/8_64';
-          break;
-
-        case 'WINXP':
-        case 'WINXP_32':
-        case 'WINXP_64':
-          osType = 'WINXP';
-          break;
-
-      }
-    }
-    else if (os.name === 'Mac') {
-      osType = 'MAC';
-    }
-    else if (os.name === 'Linux') {
-      osType = 'LINUX';
-    }
-
-    queryCCToolPkgVersion({
-      toolType: toolType,
-      osType: osType,
-      version: '0.0.0.0'
-    }).then((res) => {
-
-      const { errorCode, ccToolPkgInfo } = res;
-
-      if (errorCode !== 0) return;
-
-      if (!ccToolPkgInfo) return;
-
-      let pkgUrl = ccToolPkgInfo.cosFile.cosUrl;
-
-      if (!pkgUrl) return;
-
-      this.props.updateWindowDownloadFlag(true);
-      setTimeout(() => {
-        const downloadLink = document.createElement('a');
-        document.body.appendChild(downloadLink);
-        downloadLink.href = `http://${pkgUrl}`;
-        downloadLink.download = '';
-        downloadLink.click();
-        window.URL.revokeObjectURL(`http://${pkgUrl}`);
-        document.body.removeChild(downloadLink);
-      }, 100);
-    });
   }
 
   render() {

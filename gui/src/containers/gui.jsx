@@ -32,7 +32,7 @@ import vmListenerHOC from '../lib/vm-listener-hoc.jsx';
 import vmManagerHOC from '../lib/vm-manager-hoc.jsx';
 import NetStatusHOC from '../lib/net-status-hoc.jsx';
 
-import GUIComponent from '../components/gui-special/gui.jsx';
+import GUIComponent from '../components/gui/gui.jsx';
 
 class GUI extends React.Component {
 
@@ -96,13 +96,9 @@ class GUI extends React.Component {
             fetchingProject,
             isLoading,
             loadingStateVisible,
-            isLoadingCourse,
-            isLoadingProject,
             isAiModelLoading,
-            isLoadingClassHourInfo,
             updateDownloadFlag,
             windowDownloadFlag,
-            tipsLibraryVisible,
             epcsLibraryVisible,
             ...componentProps
         } = this.props;
@@ -113,10 +109,7 @@ class GUI extends React.Component {
                     fetchingProject || 
                     isLoading || 
                     loadingStateVisible || 
-                    isLoadingCourse ||
-                    isLoadingProject|| 
-                    isAiModelLoading||
-                    isLoadingClassHourInfo
+                    isAiModelLoading
                 }
                 {...componentProps}
             >
@@ -160,16 +153,12 @@ const mapStateToProps = (state, ownProps) => ({
     isPlayerOnly: state.scratchGui.mode.isPlayerOnly,
     isRtl: state.locales.isRtl,
     loadingStateVisible: state.scratchGui.modals.loadingProject,
-    isLoadingCourse: state.scratchGui.zwbCourse.isLoadingCourse,
-    isLoadingProject: state.scratchGui.zwbProject.isLoadingProject,
-    isLoadingClassHourInfo: state.scratchGui.zwbCourse.isLoadingClassHourInfo,
     previewInfoVisible: state.scratchGui.modals.previewInfo && !ownProps.hideIntro,
     targetIsStage: (
         state.scratchGui.targets.stage &&
         state.scratchGui.targets.stage.id === state.scratchGui.targets.editingTarget
     ),
     soundsTabVisible: state.scratchGui.editorTab.activeTabIndex === SOUNDS_TAB_INDEX,
-    tipsLibraryVisible: state.scratchGui.modals.tipsLibrary,
     epcsLibraryVisible: state.scratchGui.modals.epcsLibrary,
     vm: state.scratchGui.vm,
     windowDownloadFlag: state.scratchGui.window.downloadFlag,

@@ -2595,9 +2595,6 @@
         "message": "OK",
         "description": ""
     },
-    "gui.microCourse.microCourse": {
-        "message": "Micro-Course"
-    },
     "gui.deviceConnect.arduinoDriver": {
         "message": "V OS Windows budete potřebovat nainstalovat USB ovladač před pokusem se připojit"
     },

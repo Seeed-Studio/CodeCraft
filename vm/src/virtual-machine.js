@@ -490,14 +490,6 @@ class VirtualMachine extends EventEmitter {
     }
 
     /**
-     * load project microLesso info
-     * @param {*} microLesson 
-     */
-    loadProjectMicroLesson(microLesson) {
-        this.microLesson = microLesson;
-    }
-
-    /**
      * Load a project from the Scratch web site, by ID.
      * @param {string} id - the ID of the project to download, as a string.
      */
@@ -1958,14 +1950,6 @@ class VirtualMachine extends EventEmitter {
      */
     emitDevicesUpdate(ids) {
         this.emit('deviceIdsUpdate', ids);
-    }
-
-    /**
-     * MicroLesson loaded
-     * @param {*} microlesson 
-     */
-    emitLoadedMicroLesson(microlesson) {
-        this.emit('micro-lesson-loaded', microlesson);
     }
 
     /**

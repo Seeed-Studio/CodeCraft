@@ -51,7 +51,6 @@ import {
     updateWindowDownloadFlag
 } from '../reducers/window-event.js';
 
-import { setFileInfo } from '../reducers/micro-course.js';
 import { setVisible as setCodeViewVisible } from '../reducers/code-view';
 
 // import devices from '../lib/libraries/devices/index.jsx'
@@ -300,8 +299,6 @@ class DeviceTab extends React.Component {
                 this.props.onCloseSerialChartModal();
                 //更新设备选择状态
                 this.props.onUpdatePhysicalDeviceState(device.id, true);
-                //重置微课信息
-                this.props.onSetFileInfo({ fileId: null, fileName: null, description: null, coverUrl: null });   // 清空微课
                 //重置code view
                 this.props.setCodeViewVisible(false);
                 //断开串口设备
@@ -499,7 +496,6 @@ class DeviceTab extends React.Component {
             onRequestCloseConnectView,
             activateDebugMode,
             assignRescueDeviceTo,
-            onSetFileInfo,
             onCloseSerialChartModal,
             ...componentProps
         } = this.props;
@@ -606,7 +602,6 @@ const mapDispatchToProps = dispatch => ({
     // onReceivedBlocks: receivedBlocks => {
     //     dispatch(setReceivedBlocks(receivedBlocks));
     // },
-    onSetFileInfo: file => dispatch(setFileInfo(file)),
     setCodeViewVisible: v => dispatch(setCodeViewVisible(v)),
     dispatchUpdateRestore: restoreState => {
         dispatch(setRestore(restoreState));

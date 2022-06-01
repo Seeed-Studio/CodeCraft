@@ -8,10 +8,7 @@ import blockDragReducer, { blockDragInitialState } from './block-drag';
 import editorTabReducer, { editorTabInitialState } from './editor-tab';
 import mainTabReducer, { mainTabInitialState } from './main-tab';
 import stageTabReducer, { stageTabInitialState } from './stage-tab';
-
-
 import homePageReducer, { homePageInitialState } from './home-page';
-
 import hoveredTargetReducer, { hoveredTargetInitialState } from './hovered-target';
 import menuReducer, { menuInitialState } from './menus';
 import micIndicatorReducer, { micIndicatorInitialState } from './mic-indicator';
@@ -33,20 +30,14 @@ import throttle from 'redux-throttle';
 import loginRegisterReducer, { loginRegisterInitialState } from './login-register-special';
 import deviceConnectReducer, { deviceConnectInitialState } from './device-connect-special';
 import materialReducer, { materialInitialState } from './material-special';
-import microCourseReducer from './micro-course';
 import codeViewReducer from './code-view';
 import uploadStateReducer, { uploadInitialState } from './upload-state';
 import debugModeStateReducer, { debugModeInitialState } from './debug-mode';
 import windowReducer, { windowInitialState } from './window-event';
 import netStatusReducer, { netStatusInitialState } from './net-status';
-
 import arduinoMonitorReducer, { arduinoMonitorInitialState } from './arduino-monitor';
 import rescueReducer, { rescueInitialState } from './rescue'
-import zwbCourseReducer, { zwbCourseInitialState } from './zwb-course';
-import zwbProjectReducer, { zwbProjectInitialState } from './zwb-project';
-
 import modelsCtrlReducer, { modelsCtrlInitialState } from './models-ctl';
-
 import decks from '../lib/libraries/decks/index.jsx';
 
 const guiMiddleware = compose(applyMiddleware(throttle(300, { leading: true, trailing: true })));
@@ -88,8 +79,6 @@ const guiInitialState = {
     arduinoMonitor: arduinoMonitorInitialState,
     rescue: rescueInitialState,
     netStatus: netStatusInitialState,
-    zwbCourse: zwbCourseInitialState,
-    zwbProject: zwbProjectInitialState,
     modelsCtrl: modelsCtrlInitialState
 };
 
@@ -170,7 +159,6 @@ const guiReducer = combineReducers({
     loginRegister: loginRegisterReducer,
     deviceConnect: deviceConnectReducer,
     material: materialReducer,
-    microCourse: microCourseReducer,
     codeView: codeViewReducer,
     uploadState: uploadStateReducer,
     debugMode: debugModeStateReducer,
@@ -178,8 +166,6 @@ const guiReducer = combineReducers({
     arduinoMonitor: arduinoMonitorReducer,
     rescue: rescueReducer,
     netStatus: netStatusReducer,
-    zwbCourse: zwbCourseReducer,
-    zwbProject: zwbProjectReducer,
     modelsCtr: modelsCtrlReducer
 });
 

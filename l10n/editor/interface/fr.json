@@ -2105,9 +2105,6 @@
         "message": "OK",
         "description": ""
     },
-    "gui.microCourse.microCourse": {
-        "message": "Micro-Cours"
-    },
     "gui.deviceConnect.arduinoDriver": {
         "message": "Sous Windows OS, vous devez installer le pilote Arduino avant la connexion. "
     },

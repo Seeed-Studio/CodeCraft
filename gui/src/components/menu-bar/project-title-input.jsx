@@ -29,6 +29,10 @@ class ProjectTitleInput extends React.Component {
     // call onUpdateProjectTitle if it is defined (only defined when gui
     // is used within scratch-www)
     handleUpdateProjectTitle (newTitle) {
+        // 如果工程名为空，则使用它之前的工程名
+        if (!newTitle) {
+            newTitle = this.props.projectTitle
+        }
         if (this.props.onUpdateProjectTitle) {
             this.props.onUpdateProjectTitle(newTitle);
         }
@@ -37,7 +41,7 @@ class ProjectTitleInput extends React.Component {
         return (
             <BufferedInput
                 className={classNames(styles.titleField, this.props.className)}
-                maxLength="100"
+                maxLength="50"
                 placeholder={this.props.intl.formatMessage(messages.projectTitlePlaceholder)}
                 tabIndex="0"
                 type="text"

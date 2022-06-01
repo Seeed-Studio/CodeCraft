@@ -4,7 +4,6 @@ import { defineMessages, FormattedMessage, injectIntl, intlShape } from 'react-i
 import ModalComponent from '../../containers/modal.jsx';
 import ButtonComponent from '../button-special/button.jsx';
 
-import { queryCCToolPkgVersion } from '../../lib/busi-proxy/busi-proxy.js';
 import { getOsType } from '../../lib/os-type.js';
 
 import classNames from 'classnames';
@@ -59,37 +58,6 @@ const NotOpenAssistantModal = (props) => {
     else if (name.indexOf("Linux") > -1) {
       osType = 'LINUX';
     }
-
-    queryCCToolPkgVersion({
-
-      toolType: 'CCDAssistant',
-      osType: osType,
-      version: '0.0.0.0'
-
-    }).then((res) => {
-      const { errorCode, ccToolPkgInfo } = res;
-
-      if (errorCode !== 0) return;
-
-      if (!ccToolPkgInfo) return;
-
-      let pkgUrl = ccToolPkgInfo.cosFile.cosUrl;
-
-      if (!pkgUrl) return;
-
-      updateWindowDownloadFlag(true);
-      // window.open(`http://${pkgUrl}`, '_self');
-      setTimeout(() => {
-        const downloadLink = document.createElement('a');
-        document.body.appendChild(downloadLink);
-        downloadLink.href = `http://${pkgUrl}`;
-        downloadLink.download = '';
-        downloadLink.click();
-        window.URL.revokeObjectURL(`http://${pkgUrl}`);
-        document.body.removeChild(downloadLink);
-      }, 100);
-    });
-
   }
 
   return (
