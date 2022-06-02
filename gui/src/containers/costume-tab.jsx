@@ -3,7 +3,6 @@ import React from 'react';
 import bindAll from 'lodash.bindall';
 import { defineMessages, intlShape, injectIntl } from 'react-intl';
 import VM from '../../../vm/';
-
 import AssetPanel from '../components/asset-panel-special/asset-panel.jsx';
 import PaintEditorWrapper from './paint-editor-wrapper.jsx';
 import CameraModal from './camera-modal.jsx';
@@ -17,8 +16,6 @@ import sharedMessages from '../lib/shared-messages';
 import {
     closeCameraCapture,
     openCameraCapture,
-    openCostumeLibrary,
-    openBackdropLibrary
 } from '../reducers/modals';
 
 import {
@@ -27,13 +24,8 @@ import {
 } from '../reducers/editor-tab';
 
 import { setRestore } from '../reducers/restore-deletion';
-
-import addLibraryBackdropIcon from '../components/asset-panel/icon--add-backdrop-lib.svg';
-import addLibraryCostumeIcon from '../components/asset-panel/icon--add-costume-lib.svg';
-
 import costumeLibraryContent from '../lib/libraries/costumes.json';
 import backdropLibraryContent from '../lib/libraries/backdrops.json';
-
 import styles from '../components/asset-panel-special/asset-panel.css'
 
 let messages = defineMessages({
@@ -247,8 +239,6 @@ class CostumeTab extends React.Component {
             dispatchUpdateRestore, // eslint-disable-line no-unused-vars
             intl,
             onNewCostumeFromCameraClick,
-            onNewLibraryBackdropClick,
-            onNewLibraryCostumeClick,
             cameraModalVisible,
             onRequestCloseCameraModal,
             vm
@@ -260,14 +250,6 @@ class CostumeTab extends React.Component {
 
         const isStage = vm.editingTarget.isStage;
         const target = vm.editingTarget.sprite;
-
-        // const addLibraryMessage = isStage ? messages.addLibraryBackdropMsg : messages.addLibraryCostumeMsg;
-        const addFileMessage = isStage ? messages.addFileBackdropMsg : messages.addFileCostumeMsg;
-        const addSurpriseFunc = isStage ? this.handleSurpriseBackdrop : this.handleSurpriseCostume;
-        const addLibraryFunc = isStage ? onNewLibraryBackdropClick : onNewLibraryCostumeClick;
-        const addLibraryIcon = isStage ? addLibraryBackdropIcon : addLibraryCostumeIcon;
-
-        const addLibraryMessage =  isStage ? messages.addLibraryBackdropMsg : messages.addLibraryCostumeMsg;
 
         const paintText =  isStage ? messages.addBackdropFromPaint : messages.addBlankCostume;
 
@@ -293,49 +275,9 @@ class CostumeTab extends React.Component {
                         title: intl.formatMessage(paintText),
                         img: drawshapeIcon,
                         onClick: this.handleNewBlankCostume
-                    },
-                    {
-                        title: intl.formatMessage(addLibraryMessage),
-                        img: choseshapeIcon,
-                        onClick: addLibraryFunc
                     }
                 ]}
 
-                // buttons={[
-                //     {
-                //         title: intl.formatMessage(addLibraryMessage),
-                //         img: addLibraryIcon,
-                //         onClick: addLibraryFunc
-                //     },
-                //     {
-                //         title: intl.formatMessage(messages.addCameraCostumeMsg),
-                //         img: cameraIcon,
-                //         onClick: onNewCostumeFromCameraClick
-                //     },
-                //     {
-                //         title: intl.formatMessage(addFileMessage),
-                //         img: fileUploadIcon,
-                //         onClick: this.handleFileUploadClick,
-                //         fileAccept: '.svg, .png, .jpg, .jpeg',
-                //         fileChange: this.handleCostumeUpload,
-                //         fileInput: this.setFileInput
-                //     },
-                //     {
-                //         title: intl.formatMessage(messages.addSurpriseCostumeMsg),
-                //         img: surpriseIcon,
-                //         onClick: addSurpriseFunc
-                //     },
-                //     {
-                //         title: intl.formatMessage(messages.addBlankCostumeMsg),
-                //         img: paintIcon,
-                //         onClick: this.handleNewBlankCostume
-                //     },
-                //     {
-                //         title: intl.formatMessage(addLibraryMessage),
-                //         img: searchIcon,
-                //         onClick: addLibraryFunc
-                //     }
-                // ]}
                 dragType={DragConstants.COSTUME}
                 items={costumeData}
                 selectedItemIndex={this.state.selectedCostumeIndex}
@@ -369,8 +311,6 @@ CostumeTab.propTypes = {
     intl: intlShape,
     onActivateSoundsTab: PropTypes.func.isRequired,
     onNewCostumeFromCameraClick: PropTypes.func.isRequired,
-    onNewLibraryBackdropClick: PropTypes.func.isRequired,
-    onNewLibraryCostumeClick: PropTypes.func.isRequired,
     onRequestCloseCameraModal: PropTypes.func.isRequired,
     sprites: PropTypes.shape({
         id: PropTypes.shape({
@@ -399,14 +339,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     onActivateSoundsTab: () => dispatch(activateTab(SOUNDS_TAB_INDEX)),
-    onNewLibraryBackdropClick: e => {
-        e.preventDefault();
-        dispatch(openBackdropLibrary());
-    },
-    onNewLibraryCostumeClick: e => {
-        e.preventDefault();
-        dispatch(openCostumeLibrary());
-    },
     onNewCostumeFromCameraClick: () => {
         dispatch(openCameraCapture());
     },

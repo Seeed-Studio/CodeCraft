@@ -3,15 +3,11 @@ import analytics from '../lib/analytics';
 const OPEN_MODAL = 'scratch-gui/modals/OPEN_MODAL';
 const CLOSE_MODAL = 'scratch-gui/modals/CLOSE_MODAL';
 
-const MODAL_BACKDROP_LIBRARY = 'backdropLibrary';
 const MODAL_CAMERA_CAPTURE = 'cameraCapture';
-const MODAL_COSTUME_LIBRARY = 'costumeLibrary';
 const MODAL_EXTENSION_LIBRARY = 'extensionLibrary';
 const MODAL_IMPORT_INFO = 'importInfo';
 const MODAL_LOADING_PROJECT = 'loadingProject';
 const MODAL_PREVIEW_INFO = 'previewInfo';
-const MODAL_SOUND_LIBRARY = 'soundLibrary';
-const MODAL_SPRITE_LIBRARY = 'spriteLibrary';
 const MODAL_SOUND_RECORDER = 'soundRecorder';
 
 const MODAL_PHYSICALDEVICE_LIBRARY = 'devicesLibrary';
@@ -57,15 +53,11 @@ const MODAL_FEEDBACK = 'feedback';
 
 
 const initialState = {
-    [MODAL_BACKDROP_LIBRARY]: false,
     [MODAL_CAMERA_CAPTURE]: false,
-    [MODAL_COSTUME_LIBRARY]: false,
     [MODAL_EXTENSION_LIBRARY]: false,
     [MODAL_IMPORT_INFO]: false,
     [MODAL_LOADING_PROJECT]: false,
     [MODAL_PREVIEW_INFO]: true,
-    [MODAL_SOUND_LIBRARY]: false,
-    [MODAL_SPRITE_LIBRARY]: false,
     [MODAL_SOUND_RECORDER]: false,
     [MODAL_TIPS_LIBRARY]: true,
     [MODAL_PHYSICALDEVICE_LIBRARY]: false,
@@ -111,17 +103,9 @@ const closeModal = function (modal) {
         modal: modal
     };
 };
-const openBackdropLibrary = function () {
-    analytics.pageview('/libraries/backdrops');
-    return openModal(MODAL_BACKDROP_LIBRARY);
-};
 const openCameraCapture = function () {
     analytics.pageview('/modals/camera');
     return openModal(MODAL_CAMERA_CAPTURE);
-};
-const openCostumeLibrary = function () {
-    analytics.pageview('/libraries/costumes');
-    return openModal(MODAL_COSTUME_LIBRARY);
 };
 const openExtensionLibrary = function () {
     analytics.pageview('/libraries/extensions');
@@ -138,14 +122,6 @@ const openLoadingProject = function () {
 const openPreviewInfo = function () {
     analytics.pageview('/modals/preview');
     return openModal(MODAL_PREVIEW_INFO);
-};
-const openSoundLibrary = function () {
-    analytics.pageview('/libraries/sounds');
-    return openModal(MODAL_SOUND_LIBRARY);
-};
-const openSpriteLibrary = function () {
-    analytics.pageview('/libraries/sprites');
-    return openModal(MODAL_SPRITE_LIBRARY);
 };
 const openSoundRecorder = function () {
     analytics.pageview('/modals/microphone');
@@ -211,14 +187,8 @@ const openFeedbackModal = function () {
     analytics.pageview('/modals/feedback');
     return openModal(MODAL_FEEDBACK);
 };
-const closeBackdropLibrary = function () {
-    return closeModal(MODAL_BACKDROP_LIBRARY);
-};
 const closeCameraCapture = function () {
     return closeModal(MODAL_CAMERA_CAPTURE);
-};
-const closeCostumeLibrary = function () {
-    return closeModal(MODAL_COSTUME_LIBRARY);
 };
 const closeExtensionLibrary = function () {
     return closeModal(MODAL_EXTENSION_LIBRARY);
@@ -231,12 +201,6 @@ const closeLoadingProject = function () {
 };
 const closePreviewInfo = function () {
     return closeModal(MODAL_PREVIEW_INFO);
-};
-const closeSpriteLibrary = function () {
-    return closeModal(MODAL_SPRITE_LIBRARY);
-};
-const closeSoundLibrary = function () {
-    return closeModal(MODAL_SOUND_LIBRARY);
 };
 const closeSoundRecorder = function () {
     return closeModal(MODAL_SOUND_RECORDER);
@@ -290,15 +254,11 @@ const closeFeedbackModal = function () {
 export {
     reducer as default,
     initialState as modalsInitialState,
-    openBackdropLibrary,
     openCameraCapture,
-    openCostumeLibrary,
     openExtensionLibrary,
     openImportInfo,
     openLoadingProject,
     openPreviewInfo,
-    openSoundLibrary,
-    openSpriteLibrary,
     openSoundRecorder,
     openTipsLibrary,
     openEpcsLibrary,
@@ -315,15 +275,11 @@ export {
     openCailbrateModal,
     openDeviceViewMoreModal,
     openFeedbackModal,
-    closeBackdropLibrary,
     closeCameraCapture,
-    closeCostumeLibrary,
     closeExtensionLibrary,
     closeImportInfo,
     closeLoadingProject,
     closePreviewInfo,
-    closeSpriteLibrary,
-    closeSoundLibrary,
     closeSoundRecorder,
     closeTipsLibrary,
     closeEpcsLibrary,

@@ -3,12 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VM from '../../../vm/';
 import {connect} from 'react-redux';
-import {intlShape, injectIntl} from 'react-intl';
-
-import {
-    openSpriteLibrary,
-    closeSpriteLibrary
-} from '../reducers/modals';
+import { injectIntl, intlShape } from 'react-intl';
+import { 
+    spriteEmUpload, 
+} from '../lib/file-uploader.js';
 
 import {
     activateStageTab
@@ -23,12 +21,12 @@ import {
 import {setReceivedBlocks} from '../reducers/hovered-target';
 import {setRestore} from '../reducers/restore-deletion';
 import DragConstants from '../lib/drag-constants';
-import TargetPaneComponent from '../components/target-pane-special/target-pane.jsx';
+import TargetPaneComponent from '../components/target-pane/target-pane.jsx';
 import spriteLibraryContent from '../lib/libraries/sprites.json';
-import {handleFileUpload, spriteUpload} from '../lib/file-uploader.js';
 import sharedMessages from '../lib/shared-messages';
 import {emptySprite} from '../lib/empty-assets';
 import { STAGE_DISPLAY_SIZES } from '../lib/layout-constants';
+
 
 class TargetPane extends React.Component {
     constructor (props) {
@@ -52,7 +50,6 @@ class TargetPane extends React.Component {
             'handleSurpriseSpriteClick',
             'handlePaintSpriteClick',
             'handleFileUploadClick',
-            'handleSpriteUpload',
             'handClickCustom',
             'handClickSound',
             'handlePromptCanel',
@@ -92,9 +89,17 @@ class TargetPane extends React.Component {
         this.props.vm.postSpriteInfo({y});
     }
     handAddSprite(){
-        this.props.onNewSpriteClick();
+        this.props.onActivateTab(COSTUMES_TAB_INDEX);
+        const storage = this.props.vm.runtime.storage;
+        const spriteName = this.props.intl.formatMessage(sharedMessages.sprite, { index: 1 });
+        spriteEmUpload(spriteName, storage, this.handleNewSprite);
     }
-
+    handleNewSprite (spriteJSONString) {
+        this.props.vm.addSprite(spriteJSONString).then(() => {
+            const editingTarget = this.props.vm.editingTarget;
+            this.props.vm.setEditingTargetForStage(editingTarget.id);
+        });
+    }
     handleDeleteSprite (id) {
         this.setState({
             deletedInfo: id,
@@ -102,11 +107,10 @@ class TargetPane extends React.Component {
         })
     }
     handleDuplicateSprite(id) {
-        this.props.vm.duplicateSprite(id)
-            .then(() => {
-                const editingTarget = this.props.vm.editingTarget;
-                this.props.vm.setEditingTargetForStage(editingTarget.id);
-            });
+        this.props.vm.duplicateSprite(id).then(() => {
+            const editingTarget = this.props.vm.editingTarget;
+            this.props.vm.setEditingTargetForStage(editingTarget.id);
+        });
     }
     handleExportSprite (id) {
         const spriteName = this.props.vm.runtime.getTargetById(id).getName();
@@ -151,20 +155,9 @@ class TargetPane extends React.Component {
             });
         });
     }
-    handleNewSprite (spriteJSONString) {
-        this.props.vm.addSprite(spriteJSONString);
-    }
     handleFileUploadClick () {
         this.fileInput.value = null;
         this.fileInput.click(); 
-    }
-    handleSpriteUpload (e) {
-        const storage = this.props.vm.runtime.storage;
-        const costumeSuffix = this.props.intl.formatMessage(sharedMessages.costume, {index: 1});
-        handleFileUpload(e.target, (buffer, fileType, fileName) => {
-            spriteUpload(buffer, fileType, fileName, storage, this.handleNewSprite, costumeSuffix);
-        });
-        this.props.onRequestCloseSpriteLibrary();
     }
     setFileInput (input) {
         this.fileInput = input;
@@ -243,7 +236,6 @@ class TargetPane extends React.Component {
         const {
             deletedInfo: id
         } = this.state;
-        console.log('id : ' + id);
         const restoreFun = this.props.vm.deleteSprite(id);
         this.props.dispatchUpdateRestore({
             restoreFun: restoreFun,
@@ -288,7 +280,6 @@ class TargetPane extends React.Component {
                 onFileUploadClick={this.handleFileUploadClick}
                 onPaintSpriteClick={this.handlePaintSpriteClick}
                 onSelectSprite={this.handleSelectSprite}
-                onSpriteUpload={this.handleSpriteUpload}
                 onSurpriseSpriteClick={this.handleSurpriseSpriteClick}
                 onClickCustom={this.handClickCustom}
                 onClickSound={this.handClickSound}
@@ -331,9 +322,7 @@ TargetPane.propTypes = {
         receivedBlocks: PropTypes.bool
     }),
     onRequestCloseExtensionLibrary: PropTypes.func,
-    onRequestCloseSpriteLibrary: PropTypes.func,
     raiseSprites: PropTypes.bool,
-    spriteLibraryVisible: PropTypes.bool,
     sprites: PropTypes.objectOf(spriteShape),
     stage: spriteShape,
     stageSize: PropTypes.oneOf(Object.keys(STAGE_DISPLAY_SIZES)).isRequired,
@@ -354,18 +343,11 @@ const mapStateToProps = state => ({
     }, {}),
     stage: state.scratchGui.targets.stage,
     raiseSprites: state.scratchGui.blockDrag,
-    spriteLibraryVisible: state.scratchGui.modals.spriteLibrary,
     costumesTabVisible: state.scratchGui.editorTab.activeTabIndex === COSTUMES_TAB_INDEX,
     soundsTabVisible: state.scratchGui.editorTab.activeTabIndex === SOUNDS_TAB_INDEX,
     activeStageTab: state.scratchGui.stageTab.activeStageTab
 });
 const mapDispatchToProps = dispatch => ({
-    onNewSpriteClick: () => {
-        dispatch(openSpriteLibrary());
-    },
-    onRequestCloseSpriteLibrary: () => {
-        dispatch(closeSpriteLibrary());
-    },
     onActivateTab: tabIndex => {
         dispatch(activateTab(tabIndex));
     },

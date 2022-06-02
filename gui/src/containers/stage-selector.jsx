@@ -2,10 +2,8 @@ import bindAll from 'lodash.bindall';
 import omit from 'lodash.omit';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {intlShape, injectIntl} from 'react-intl';
-
+import { injectIntl, intlShape } from 'react-intl';
 import {connect} from 'react-redux';
-import {openBackdropLibrary} from '../reducers/modals';
 import {activateTab, COSTUMES_TAB_INDEX} from '../reducers/editor-tab';
 import {setHoveredSprite} from '../reducers/hovered-target';
 import DragConstants from '../lib/drag-constants';
@@ -16,7 +14,11 @@ import sharedMessages from '../lib/shared-messages';
 import StageSelectorComponent from '../components/stage-selector-special/stage-selector.jsx';
 
 import backdropLibraryContent from '../lib/libraries/backdrops.json';
-import {handleFileUpload, costumeUpload} from '../lib/file-uploader.js';
+import { 
+    handleFileUpload, 
+    costumeUpload, 
+    costumeEmUpload, 
+} from '../lib/file-uploader.js';
 
 const dragTypes = [
     DragConstants.COSTUME,
@@ -42,7 +44,8 @@ class StageSelector extends React.Component {
             'handleMouseLeave',
             'handleDrop',
             'setFileInput',
-            'handleClickBackdrop'
+            'handleClickBackdrop',
+            'handleNewCostume',
         ]);
     }
     addBackdropFromLibraryItem (item) {
@@ -60,9 +63,16 @@ class StageSelector extends React.Component {
         this.props.onSelect(this.props.id);
     }
     handleClickBackdrop() {
-        this.props.onNewBackdropClick();
+        this.props.onActivateTab(COSTUMES_TAB_INDEX);
+        const storage = this.props.vm.runtime.storage;
+        const name = this.props.vm.editingTarget.isStage ?
+            this.props.intl.formatMessage(sharedMessages.backdrop, { index: 1 }) :
+            this.props.intl.formatMessage(sharedMessages.costume, { index: 1 });
+        costumeEmUpload(name, storage, this.handleNewCostume);
     }
-
+    handleNewCostume(costume) {
+        this.props.vm.addCostume(costume.md5, costume);
+    }
     handleNewBackdrop (backdrop) {
         this.props.vm.addBackdrop(backdrop.md5, backdrop).then(() =>
             this.props.onActivateTab(COSTUMES_TAB_INDEX));
@@ -146,10 +156,6 @@ const mapStateToProps = (state, {asset, id}) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    onNewBackdropClick: () => {
-        // e.stopPropagation();
-        dispatch(openBackdropLibrary());
-    },
     onActivateTab: tabIndex => {
         dispatch(activateTab(tabIndex));
     },

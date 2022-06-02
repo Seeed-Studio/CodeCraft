@@ -19,8 +19,6 @@ import StageWrapper from '../../containers/stage-wrapper.jsx';
 import Loader from '../loader/loader.jsx';
 import Box from '../box/box.jsx';
 import MenuBar from '../menu-bar/menu-bar.jsx';
-import CostumeLibrary from '../../containers/costume-library.jsx';
-import BackdropLibrary from '../../containers/backdrop-library.jsx';
 import DeviceTab from '../../containers/device-tab.jsx';
 
 // import Backpack from '../../containers/backpack.jsx';
@@ -101,12 +99,10 @@ const GUIComponent = props => {
         activeMainTabIndex,
         alertsVisible,
         basePath,
-        backdropLibraryVisible,
         backpackOptions,
         blocksTabVisible,
         cardsVisible,
         children,
-        costumeLibraryVisible,
         costumesTabVisible,
         enableCommunity,
         importInfoVisible,
@@ -126,8 +122,6 @@ const GUIComponent = props => {
         onActivateTab,
         onTabIndexUpdate,
         onExtensionButtonClick,
-        onRequestCloseBackdropLibrary,
-        onRequestCloseCostumeLibrary,
         onSeeCommunity,
         onShare,
         previewInfoVisible,
@@ -206,18 +200,6 @@ const GUIComponent = props => {
                     ) : null}
                     {alertsVisible ? (
                         <Alerts className={styles.alertsContainer} />
-                    ) : null}
-                    {costumeLibraryVisible ? (
-                        <CostumeLibrary
-                            vm={vm}
-                            onRequestClose={onRequestCloseCostumeLibrary}
-                        />
-                    ) : null}
-                    {backdropLibraryVisible ? (
-                        <BackdropLibrary
-                            vm={vm}
-                            onRequestClose={onRequestCloseBackdropLibrary}
-                        />
                     ) : null}
                     {
                         arduinoMonitorVisible &&
@@ -393,7 +375,6 @@ GUIComponent.propTypes = {
     accountNavOpen: PropTypes.bool,
     activeTabIndex: PropTypes.number,
     activeMainTabIndex: PropTypes.number,
-    backdropLibraryVisible: PropTypes.bool,
     backpackOptions: PropTypes.shape({
         host: PropTypes.string,
         visible: PropTypes.bool
@@ -402,7 +383,6 @@ GUIComponent.propTypes = {
     blocksTabVisible: PropTypes.bool,
     cardsVisible: PropTypes.bool,
     children: PropTypes.node,
-    costumeLibraryVisible: PropTypes.bool,
     costumesTabVisible: PropTypes.bool,
     enableCommunity: PropTypes.bool,
     importInfoVisible: PropTypes.bool,
@@ -418,8 +398,6 @@ GUIComponent.propTypes = {
     onExtensionButtonClick: PropTypes.func,
     onLogOut: PropTypes.func,
     onOpenRegistration: PropTypes.func,
-    onRequestCloseBackdropLibrary: PropTypes.func,
-    onRequestCloseCostumeLibrary: PropTypes.func,
     onSeeCommunity: PropTypes.func,
     onShare: PropTypes.func,
     onTabSelect: PropTypes.func,

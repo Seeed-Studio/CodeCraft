@@ -21,11 +21,6 @@ import {
     updateWindowDownloadFlag
 } from '../reducers/window-event';
 
-import {
-    closeCostumeLibrary,
-    closeBackdropLibrary
-} from '../reducers/modals';
-
 import ProjectFetcherHOC from '../lib/project-fetcher-hoc.jsx';
 import ProjectSaverHOC from '../lib/project-saver-hoc.jsx';
 import vmListenerHOC from '../lib/vm-listener-hoc.jsx';
@@ -144,10 +139,8 @@ const mapStateToProps = (state, ownProps) => ({
     activeTabIndex: state.scratchGui.editorTab.activeTabIndex,
     activeMainTabIndex: state.scratchGui.mainTab.activeMainTabIndex,
     alertsVisible: state.scratchGui.alerts.visible,
-    backdropLibraryVisible: state.scratchGui.modals.backdropLibrary,
     blocksTabVisible: state.scratchGui.editorTab.activeTabIndex === BLOCKS_TAB_INDEX,
     cardsVisible: state.scratchGui.cards.visible,
-    costumeLibraryVisible: state.scratchGui.modals.costumeLibrary,
     costumesTabVisible: state.scratchGui.editorTab.activeTabIndex === COSTUMES_TAB_INDEX,
     importInfoVisible: state.scratchGui.modals.importInfo,
     isPlayerOnly: state.scratchGui.mode.isPlayerOnly,
@@ -170,8 +163,6 @@ const mapDispatchToProps = dispatch => ({
     onActivateTab: tab => dispatch(activateTab(tab)),
     onActivateCostumesTab: () => dispatch(activateTab(COSTUMES_TAB_INDEX)),
     onActivateSoundsTab: () => dispatch(activateTab(SOUNDS_TAB_INDEX)),
-    onRequestCloseBackdropLibrary: () => dispatch(closeBackdropLibrary()),
-    onRequestCloseCostumeLibrary: () => dispatch(closeCostumeLibrary()),
     onUpdateReduxProjectTitle: title => dispatch(setProjectTitle(title)),
     updateDownloadFlag: flag => dispatch(updateWindowDownloadFlag(flag))
 

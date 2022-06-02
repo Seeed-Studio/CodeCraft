@@ -3,37 +3,24 @@ import React from 'react';
 import bindAll from 'lodash.bindall';
 import { defineMessages, intlShape, injectIntl } from 'react-intl';
 import VM from '../../../vm/';
-
 import AssetPanel from '../components/asset-panel-special/asset-panel.jsx';
 import soundIcon from '../components/asset-panel/icon--sound.svg';
 import soundIconRtl from '../components/asset-panel/icon--sound-rtl.svg';
-import addSoundFromLibraryIcon from '../components/asset-panel/icon--add-sound-lib.svg';
-import addSoundFromRecordingIcon from '../components/asset-panel/icon--add-sound-record.svg';
-
 import styles from '../components/asset-panel-special/asset-panel.css'
-
 import RecordModal from './record-modal.jsx';
 import SoundEditor from './sound-editor.jsx';
-import SoundLibrary from './sound-library.jsx';
-
 import soundLibraryContent from '../lib/libraries/sounds.json';
 import { handleFileUpload, soundUpload } from '../lib/file-uploader.js';
 import errorBoundaryHOC from '../lib/error-boundary-hoc.jsx';
 import DragConstants from '../lib/drag-constants';
-
 import { connect } from 'react-redux';
-
 import {
-    closeSoundLibrary,
-    openSoundLibrary,
     openSoundRecorder
 } from '../reducers/modals';
-
 import {
     activateTab,
     COSTUMES_TAB_INDEX
 } from '../reducers/editor-tab';
-
 import { setRestore } from '../reducers/restore-deletion';
 
 class SoundTab extends React.Component {
@@ -127,8 +114,6 @@ class SoundTab extends React.Component {
         handleFileUpload(e.target, (buffer, fileType, fileName) => {
             soundUpload(buffer, fileType, fileName, storage, handleSound);
         });
-
-        this.props.onRequestCloseSoundLibrary();
     }
 
     handleDrop(dropInfo) {
@@ -163,7 +148,6 @@ class SoundTab extends React.Component {
             intl,
             isRtl,
             vm,
-            onNewSoundFromLibraryClick,
             onNewSoundFromRecordingClick
         } = this.props;
 
@@ -181,7 +165,6 @@ class SoundTab extends React.Component {
                 dragPayload: sound
             }
         )) : [];
-
 
 
         const messages = defineMessages({
@@ -217,40 +200,14 @@ class SoundTab extends React.Component {
         return (
             <AssetPanel
 
-                buttons={[{
-                    title: intl.formatMessage(messages.recordSound),
-                    img: recordIcon,
-                    onClick: onNewSoundFromRecordingClick
-                }, {
-                    title: intl.formatMessage(messages.addSound),
-                    img: choseSoundIcon,
-                    onClick: onNewSoundFromLibraryClick
-                }]}
+                buttons={[
+                    {
+                        title: intl.formatMessage(messages.recordSound),
+                        img: recordIcon,
+                        onClick: onNewSoundFromRecordingClick
+                    }
+                ]}
                 
-                // buttons={[{
-                //     title: intl.formatMessage(messages.addSound),
-                //     img: addSoundFromLibraryIcon,
-                //     onClick: onNewSoundFromLibraryClick
-                // }, {
-                //     title: intl.formatMessage(messages.fileUploadSound),
-                //     img: fileUploadIcon,
-                //     onClick: this.handleFileUploadClick,
-                //     fileAccept: '.wav, .mp3',
-                //     fileChange: this.handleSoundUpload,
-                //     fileInput: this.setFileInput
-                // }, {
-                //     title: intl.formatMessage(messages.surpriseSound),
-                //     img: surpriseIcon,
-                //     onClick: this.handleSurpriseSound
-                // }, {
-                //     title: intl.formatMessage(messages.recordSound),
-                //     img: addSoundFromRecordingIcon,
-                //     onClick: onNewSoundFromRecordingClick
-                // }, {
-                //     title: intl.formatMessage(messages.addSound),
-                //     img: searchIcon,
-                //     onClick: onNewSoundFromLibraryClick
-                // }]}
                 dragType={DragConstants.SOUND}
                 items={sounds}
                 selectedItemIndex={this.state.selectedSoundIndex}
@@ -267,16 +224,6 @@ class SoundTab extends React.Component {
                         onNewSound={this.handleNewSound}
                     />
                 ) : null}
-                {this.props.soundLibraryVisible ? (
-                    <SoundLibrary
-                        vm={this.props.vm}
-                        onNewSound={this.handleNewSound}
-                        onRequestClose={this.props.onRequestCloseSoundLibrary}
-                        soundFileInput ={this.setFileInput}
-                        onSoundUpload={this.handleSoundUpload}
-                        onFileUploadClick={this.handleFileUploadClick}
-                    />
-                ) : null}
             </AssetPanel>
         );
     }
@@ -288,10 +235,7 @@ SoundTab.propTypes = {
     intl: intlShape,
     isRtl: PropTypes.bool,
     onActivateCostumesTab: PropTypes.func.isRequired,
-    onNewSoundFromLibraryClick: PropTypes.func.isRequired,
     onNewSoundFromRecordingClick: PropTypes.func.isRequired,
-    onRequestCloseSoundLibrary: PropTypes.func.isRequired,
-    soundLibraryVisible: PropTypes.bool,
     soundRecorderVisible: PropTypes.bool,
     sprites: PropTypes.shape({
         id: PropTypes.shape({
@@ -313,21 +257,13 @@ const mapStateToProps = state => ({
     isRtl: state.locales.isRtl,
     sprites: state.scratchGui.targets.sprites,
     stage: state.scratchGui.targets.stage,
-    soundLibraryVisible: state.scratchGui.modals.soundLibrary,
     soundRecorderVisible: state.scratchGui.modals.soundRecorder
 });
 
 const mapDispatchToProps = dispatch => ({
     onActivateCostumesTab: () => dispatch(activateTab(COSTUMES_TAB_INDEX)),
-    onNewSoundFromLibraryClick: e => {
-        e.preventDefault();
-        dispatch(openSoundLibrary());
-    },
     onNewSoundFromRecordingClick: () => {
         dispatch(openSoundRecorder());
-    },
-    onRequestCloseSoundLibrary: () => {
-        dispatch(closeSoundLibrary());
     },
     dispatchUpdateRestore: restoreState => {
         dispatch(setRestore(restoreState));
