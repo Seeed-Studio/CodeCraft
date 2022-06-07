@@ -435,17 +435,7 @@ class DeviceTab extends React.Component {
                     />
                 )
             })
-        } else {
-            this.props.assignRescueDeviceTo({
-                type: 'elfbot', label: (
-                    <FormattedMessage
-                        defaultMessage="Elfbot"
-                        description=""
-                        id="gui.devices.elfbot.name"
-                    />
-                )
-            })
-        }
+        } 
         //关闭串口图表界面
         this.props.onCloseSerialChartModal();
         this.props.vm.deviceEngine.open().then(

@@ -7,7 +7,6 @@ const { get } = require('../common/local-storage')
 const FIRMWARE_DIR = path.join($dirname, '../../static/firmware');
 // 固件类型 --- 目录
 const firmwareTypes = {
-    'elfbot': path.join(FIRMWARE_DIR, './elfbot'),
     'microbit': path.join(FIRMWARE_DIR, './microbit'),
     'maixduino': path.join(FIRMWARE_DIR, './maixduino'),
     'mpython': path.join(FIRMWARE_DIR, './mpython'),

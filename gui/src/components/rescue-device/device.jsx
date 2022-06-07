@@ -3,15 +3,6 @@ import React from 'react';
 
 export default [
     {
-        type: 'elfbot', label: (
-            <FormattedMessage
-                defaultMessage="Elfbot"
-                description=""
-                id="gui.devices.elfbot.name"
-            />
-        )
-    },
-    {
         type: 'mpython', label: (
             <FormattedMessage
                 defaultMessage="mPython"

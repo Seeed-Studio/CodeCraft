@@ -168,10 +168,6 @@ const getSpecialDevicecomName = (socketIo, comName) => {
                     dName = 'mpython-grove';
                     clearTimeout(timer);
                     socketIo.disconnect();
-                } else if (resMsg.indexOf('elfbot') != -1) {
-                    dName = 'elfbot';
-                    clearTimeout(timer);
-                    socketIo.disconnect();
                 } else if (resMsg.indexOf('cyberEye') != -1) {
                     dName = 'cyberEye';
                     clearTimeout(timer);

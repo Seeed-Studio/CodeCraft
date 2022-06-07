@@ -2,68 +2,66 @@ import React from 'react';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import Modal from '../../containers/modal.jsx';
 import Button from '../button-special/button.jsx';
-import styles from './elfbot-down-bin.css'
+import styles from './python-down-bin.css'
 import { connect } from 'react-redux';
 import {
     setModalIndex,
-    RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP1,
-    RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP2,
-    RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP3,
-    RESCUE_MODAL_ELFBOT_UPGRADE_INIT,
-    RESCUE_MODAL_ELFBOT_UPGRADING,
-    RESCUE_MODAL_ELFBOT_UPGRADE_SUCC,
-    RESCUE_MODAL_ELFBOT_UPGRADE_FAIL
+    RESCUE_MODAL_PYTHON_DOWN_BIN_SETP1,
+    RESCUE_MODAL_PYTHON_DOWN_BIN_SETP2,
+    RESCUE_MODAL_PYTHON_DOWN_BIN_SETP3,
+    RESCUE_MODAL_PYTHON_UPGRADE_INIT,
+    RESCUE_MODAL_PYTHON_UPGRADING,
+    RESCUE_MODAL_PYTHON_UPGRADE_SUCC,
+    RESCUE_MODAL_PYTHON_UPGRADE_FAIL
 
 } from '../../reducers/rescue'
 const localeMessages = defineMessages({
     title: {
-        id: 'gui.elfbotDownBinStep.title',
+        id: 'gui.pythonDownBinStep.title',
         defaultMessage: 'Update firmware'
     },
     step1Text: {
-        id: 'gui.elfbotDownBinStep.step1Text',
+        id: 'gui.pythonDownBinStep.step1Text',
         defaultMessage: 'The latest firmware：'
     },
 
     step2Text1: {
-        id: 'gui.elfbotDownBinStep.step2Text1',
+        id: 'gui.pythonDownBinStep.step2Text1',
         defaultMessage: 'Downloading...'
     },
     step2Text2: {
-        id: 'gui.elfbotDownBinStep.step2Text2',
+        id: 'gui.pythonDownBinStep.step2Text2',
         defaultMessage: 'Do not close Codecraft, or make any other operations.'
     },
 
     step3Text1: {
-        id: 'gui.elfbotDownBinStep.step3Text1',
+        id: 'gui.pythonDownBinStep.step3Text1',
         defaultMessage: 'Download successfully'
     },
     step3Text2: {
-        id: 'gui.elfbotDownBinStep.step3Text2',
+        id: 'gui.pythonDownBinStep.step3Text2',
         defaultMessage: 'Do not close Codecraft, or make any other operations.'
     },
     btText1: {
-        id: 'gui.elfbotDownBinStep.btText1',
+        id: 'gui.pythonDownBinStep.btText1',
         defaultMessage: 'Download now'
     },
     btText2: {
-        id: 'gui.elfbotDownBinStep.btText2',
+        id: 'gui.pythonDownBinStep.btText2',
         defaultMessage: 'Next'
     },
 
 })
 
-const ElfbotDownBin = (props) => {
+const PythonDownBin = (props) => {
     const { intl, onCancel, versionInfo, onClick, step } = props;
 
     const downBin = () => {
-        props.setModalIndex(RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP2);
+        props.setModalIndex(RESCUE_MODAL_PYTHON_DOWN_BIN_SETP2);
         props.rescuer.downBin().then(() => {
-            console.log('aaaa');
-            props.setModalIndex(RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP3);
+            props.setModalIndex(RESCUE_MODAL_PYTHON_DOWN_BIN_SETP3);
         }).catch(() => {
-            console.log('bbbb');
-            props.setModalIndex(RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP1);
+            props.setModalIndex(RESCUE_MODAL_PYTHON_DOWN_BIN_SETP1);
         })
     }
 
@@ -73,30 +71,27 @@ const ElfbotDownBin = (props) => {
             rescuer,
             setModalIndex
         } = props;
-        if (rescuer.type == 'elfbot') {
-            setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADE_INIT);
-        }
-        else if (rescuer.type == 'mpython' ||
+        if (rescuer.type == 'mpython' ||
                  rescuer.type == 'maixduino' ||
                  rescuer.type == 'powering') {
             const upgrade = () => {
-                setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADING);
-                const upgradeSucc = () => setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADE_SUCC);
-                const upgradeFail = () => setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADE_FAIL);
+                setModalIndex(RESCUE_MODAL_PYTHON_UPGRADING);
+                const upgradeSucc = () => setModalIndex(RESCUE_MODAL_PYTHON_UPGRADE_SUCC);
+                const upgradeFail = () => setModalIndex(RESCUE_MODAL_PYTHON_UPGRADE_FAIL);
                 vm.deviceEngine.disconnect().then(() => {
                     rescuer.upgrade().then(upgradeSucc).catch(upgradeFail)
                 });
             }
             upgrade();
         } else {
-            setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADE_INIT);
+            setModalIndex(RESCUE_MODAL_PYTHON_UPGRADE_INIT);
         }
     }
 
     const step1Componenet = () => (
         <Modal
-            id='elfbot-down-bin-step1'
-            contentLabel='elfbot-down-bin-step1'
+            id='python-down-bin-step1'
+            contentLabel='python-down-bin-step1'
             title={intl.formatMessage(localeMessages.title)}
             visiableTitle={true}
             cancelable={true}
@@ -124,8 +119,8 @@ const ElfbotDownBin = (props) => {
 
     const step2Componenet = () => (
         <Modal
-            id='elfbot-down-bin-step2'
-            contentLabel='elfbot-down-bin-step2'
+            id='python-down-bin-step2'
+            contentLabel='python-down-bin-step2'
             title={intl.formatMessage(localeMessages.title)}
             visiableTitle={true}
             cancelable={true}
@@ -144,8 +139,8 @@ const ElfbotDownBin = (props) => {
 
     const step3Componenet = () => (
         <Modal
-            id='elfbot-down-bin-step3'
-            contentLabel='elfbot-down-bin-step3'
+            id='python-down-bin-step3'
+            contentLabel='python-down-bin-step3'
             title={intl.formatMessage(localeMessages.title)}
             visiableTitle={true}
             cancelable={true}
@@ -192,4 +187,4 @@ const mapDispatchToProps = dispatch => ({
 export default injectIntl(connect(
     mapStateToProps,
     mapDispatchToProps
-)(ElfbotDownBin));
+)(PythonDownBin));

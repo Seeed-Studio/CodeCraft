@@ -10,10 +10,10 @@ import UpgradeConfirm from '../components/firmware-upgrade/upgrade-confirm-page.
 import UpgradingPage from '../components/firmware-upgrade/upgrading-page.jsx';
 import UpgradeSuccess from '../components/firmware-upgrade/upgrade-success.jsx';
 import UpgradeFail from '../components/firmware-upgrade/upgrade-fail.jsx';
-import ElfbotDownBin from '../components/firmware-upgrade/elfbot-down-bin.jsx'
-import ElfbotUpgrade from '../components/firmware-upgrade/elfbot-upgrade.jsx'
-import ElfbotUpgrading from '../components/firmware-upgrade/elfbot-upgrading.jsx'
-import ElfbotUpgradeSucc from '../components/firmware-upgrade/elfbot-upgrade-succ.jsx'
+import PythonDownBin from '../components/firmware-upgrade/python-down-bin.jsx'
+import PythonUpgrade from '../components/firmware-upgrade/python-upgrade.jsx'
+import PythonUpgrading from '../components/firmware-upgrade/python-upgrading.jsx'
+import PythonUpgradeSucc from '../components/firmware-upgrade/python-upgrade-succ.jsx'
 import {
   openConnectView,
   closeConnectView,
@@ -44,16 +44,15 @@ const STATUS_CONNECT_MODAL_UPGRADING = 3; // 升级中
 const STATUS_CONNECT_MODAL_UPGRADE_SUCC = 4; // 升级成功
 const STATUS_CONNECT_MODAL_UPGRADE_FAIL = 5; // 升级失败
 
-const STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP1 = 6;
-const STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP2 = 7;
-const STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP3 = 8;
-const STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_INIT = 9;
-const STATUS_CONNECT_MODAL_ELFBOT_UPGRADING = 10;
-const STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_SUCC = 11;
-const STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_FAIL = 12;
+const STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP1 = 6;
+const STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP2 = 7;
+const STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP3 = 8;
+const STATUS_CONNECT_MODAL_PYTHON_UPGRADE_INIT = 9;
+const STATUS_CONNECT_MODAL_PYTHON_UPGRADING = 10;
+const STATUS_CONNECT_MODAL_PYTHON_UPGRADE_SUCC = 11;
+const STATUS_CONNECT_MODAL_PYTHON_UPGRADE_FAIL = 12;
 
 const deviceTypes = (deviceId) => {
-  if (deviceId == 1003) return 'elfbot';
   if (deviceId == 1005) return 'maixduino';
   if (deviceId == 1007) return 'mpython';
   if (deviceId == 1008) return 'powering';
@@ -74,10 +73,9 @@ class ConnectModal extends React.Component {
       'handleDeviceRecognize',
       'handleResponse',
       'handleDownBin',
-      'elfbotUpgrade',
       'g0Upgrade',
-      'handleElfbotUpgradeInit',
-      'handleElfbotUpgrade',
+      'handlePythonUpgradeInit',
+      'handlePythonUpgrade',
       'handleToDocument'
     ]);
 
@@ -148,9 +146,6 @@ class ConnectModal extends React.Component {
       case 1001:
         this.g0Upgrade();
         break;
-      case 1003:
-        this.elfbotUpgrade();
-        break;
       case 1005:
         this.maixduinoUpgrade();
         break;
@@ -169,27 +164,6 @@ class ConnectModal extends React.Component {
     });
   }
 
-  elfbotUpgrade() {
-    let upgradeMode = !navigator.onLine ? 0 : 1;
-    let deviceEg = this.props.vm.deviceEngine;
-    if (deviceEg) {
-        deviceEg.setUpgradeMode(upgradeMode)
-    }
-
-    if (upgradeMode == 0) {
-      this.handleElfbotUpgradeInit();
-    }else{
-      deviceEg.isDownFirmwareFile().then(() => {
-        this.handleElfbotUpgradeInit();
-      }).catch(() => {
-        this.setState({
-          firmwareVersion: this.props.getFirmwareVersion(),
-          activeIndex: STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP1
-        });
-      })
-    }
-  }
-
   mpythonUpgrade() {
     let upgradeMode = !navigator.onLine ? 0 : 1;
     let deviceEg = this.props.vm.deviceEngine;
@@ -197,28 +171,28 @@ class ConnectModal extends React.Component {
         deviceEg.setUpgradeMode(upgradeMode)
     }
     if (upgradeMode == 0) {
-      this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADING })
+      this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADING })
       this.props.disconnect().then(() => {
         deviceEg.upgrade(true).then(() => {
-          this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_SUCC });
+          this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADE_SUCC });
         }, () => {
-          this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_FAIL });
+          this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADE_FAIL });
         })
       })
     }else{
       deviceEg.isDownFirmwareFile().then(() => {
-        this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADING })
+        this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADING })
         this.props.disconnect().then(() => {
           deviceEg.upgrade(true).then(() => {
-            this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_SUCC });
+            this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADE_SUCC });
           }, () => {
-            this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_FAIL });
+            this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADE_FAIL });
           })
         })
       }).catch(() => {
         this.setState({
           firmwareVersion: this.props.getFirmwareVersion(),
-          activeIndex: STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP1
+          activeIndex: STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP1
         });
       })
     }
@@ -231,28 +205,28 @@ class ConnectModal extends React.Component {
       deviceEg.setUpgradeMode(upgradeMode)
     }
     if (upgradeMode == 0) {
-      this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADING })
+      this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADING })
       this.props.disconnect().then(() => {
         deviceEg.upgrade(true).then(() => {
-          this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_SUCC });
+          this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADE_SUCC });
         }, () => {
-          this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_FAIL });
+          this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADE_FAIL });
         })
       })
     }else{
       deviceEg.isDownFirmwareFile().then(() => {
-        this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADING })
+        this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADING })
         this.props.disconnect().then(() => {
           deviceEg.upgrade(true).then(() => {
-            this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_SUCC });
+            this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADE_SUCC });
           }, () => {
-            this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_FAIL });
+            this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADE_FAIL });
           })
         })
       }).catch(() => {
         this.setState({
           firmwareVersion: this.props.getFirmwareVersion(),
-          activeIndex: STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP1
+          activeIndex: STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP1
         });
       })
     }
@@ -260,40 +234,40 @@ class ConnectModal extends React.Component {
 
   handleDownBin() {
     this.setState({
-      activeIndex: STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP2
+      activeIndex: STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP2
     })
     this.props.vm.deviceEngine.downFirmwareFile().then(() => {
       this.props.disconnect();
       this.setState({
-        activeIndex: STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP3
+        activeIndex: STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP3
       })
     }).catch(() => {
       this.setState({
-        activeIndex: STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP1
+        activeIndex: STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP1
       })
     })
 
   }
 
 
-  handleElfbotUpgradeInit() {
+  handlePythonUpgradeInit() {
     this.props.disconnect();
     this.setState({
-      activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_INIT
+      activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADE_INIT
     })
   }
 
-  handleElfbotUpgrade() {
-    this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADING })
+  handlePythonUpgrade() {
+    this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADING })
     // this.props.disconnect().then(() => {
     // })
     // console.log('disconnect--succ');
     this.props.vm.deviceEngine.upgrade(true).then(() => {
       console.log('upgrade--succ');
-      this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_SUCC });
+      this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADE_SUCC });
     }, () => {
       console.log('upgrade--fail');
-      this.setState({ activeIndex: STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_FAIL });
+      this.setState({ activeIndex: STATUS_CONNECT_MODAL_PYTHON_UPGRADE_FAIL });
     })
   }
 
@@ -333,13 +307,13 @@ class ConnectModal extends React.Component {
       case STATUS_CONNECT_MODAL_UPGRADE_CONFIRM:
       case STATUS_CONNECT_MODAL_UPGRADE_SUCC:
       case STATUS_CONNECT_MODAL_UPGRADE_FAIL:
-      case STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP1:
-      case STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP2:
-      case STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP3:
-      case STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_INIT:
-      case STATUS_CONNECT_MODAL_ELFBOT_UPGRADING:
-      case STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_SUCC:
-      case STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_FAIL:
+      case STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP1:
+      case STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP2:
+      case STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP3:
+      case STATUS_CONNECT_MODAL_PYTHON_UPGRADE_INIT:
+      case STATUS_CONNECT_MODAL_PYTHON_UPGRADING:
+      case STATUS_CONNECT_MODAL_PYTHON_UPGRADE_SUCC:
+      case STATUS_CONNECT_MODAL_PYTHON_UPGRADE_FAIL:
         this.setState({ activeIndex: STATUS_CONNECT_MODAL_IDLE });
         break;
       default:
@@ -411,9 +385,9 @@ class ConnectModal extends React.Component {
         }
 
         {
-          this.state.activeIndex === STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP1
+          this.state.activeIndex === STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP1
           &&
-          <ElfbotDownBin
+          <PythonDownBin
             onCancel={this.handleUpgradeStateModalCancel}
             versionInfo={this.state.firmwareVersion}
             onClick={this.handleDownBin}
@@ -421,62 +395,62 @@ class ConnectModal extends React.Component {
           />
         }
         {
-          this.state.activeIndex === STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP2
+          this.state.activeIndex === STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP2
           &&
-          <ElfbotDownBin
+          <PythonDownBin
             step={2}
           />
         }
         {
-          this.state.activeIndex === STATUS_CONNECT_MODAL_ELFBOT_DOWN_BIN_SETP3
+          this.state.activeIndex === STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP3
           &&
-          <ElfbotDownBin
+          <PythonDownBin
             onCancel={this.handleUpgradeStateModalCancel}
             step={3}
             onClick={() => {
               if (this.state.deviceId == 1003) {
-                this.handleElfbotUpgradeInit();
+                this.handlePythonUpgradeInit();
               } else if (this.state.deviceId == 1007) {
-                this.handleElfbotUpgrade();
+                this.handlePythonUpgrade();
               } else if (this.state.deviceId == 1005) {
-                this.handleElfbotUpgrade();
+                this.handlePythonUpgrade();
               } else if (this.state.deviceId == 1008) {
-                this.handleElfbotUpgrade();
+                this.handlePythonUpgrade();
               }
             }}
           />
         }
         
         {
-          this.state.activeIndex === STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_INIT
+          this.state.activeIndex === STATUS_CONNECT_MODAL_PYTHON_UPGRADE_INIT
           &&
-          <ElfbotUpgrade
+          <PythonUpgrade
             dtype={deviceTypes(this.state.deviceId)}
-            onClick={this.handleElfbotUpgrade}
+            onClick={this.handlePythonUpgrade}
             onCancel={this.handleUpgradeStateModalCancel}
           />
         }
         {
-          this.state.activeIndex === STATUS_CONNECT_MODAL_ELFBOT_UPGRADING
+          this.state.activeIndex === STATUS_CONNECT_MODAL_PYTHON_UPGRADING
           &&
-          <ElfbotUpgrading
+          <PythonUpgrading
             type={deviceTypes(this.state.deviceId)}
           />
         }
         {
-          this.state.activeIndex === STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_SUCC
+          this.state.activeIndex === STATUS_CONNECT_MODAL_PYTHON_UPGRADE_SUCC
           &&
-          <ElfbotUpgradeSucc
+          <PythonUpgradeSucc
             type={deviceTypes(this.state.deviceId)}
             onCancel={this.handleUpgradeStateModalCancel}
           />
         }
         {
-          this.state.activeIndex === STATUS_CONNECT_MODAL_ELFBOT_UPGRADE_FAIL
+          this.state.activeIndex === STATUS_CONNECT_MODAL_PYTHON_UPGRADE_FAIL
           &&
-          <ElfbotUpgrade
+          <PythonUpgrade
             dtype={deviceTypes(this.state.deviceId)}
-            onClick={this.handleElfbotUpgrade}
+            onClick={this.handlePythonUpgrade}
             onCancel={this.handleUpgradeStateModalCancel}
             type='fail'
           />

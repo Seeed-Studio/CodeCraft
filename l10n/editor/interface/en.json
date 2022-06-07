@@ -542,10 +542,6 @@
         "message": "micro:bit",
         "description": ""
     },
-    "gui.devices.elfbot.name": {
-        "message": "Elfbot",
-        "description": ""
-    },
     "gui.devices.mpython.name": {
         "message": "mPython",
         "description": ""
@@ -2162,86 +2158,65 @@
     "gui.microbit.microbitDownloadConfirm": {
         "message": "Roger"
     },
-    "gui.elfbotDownBinStep.title": {
+    "gui.pythonDownBinStep.title": {
         "message": "Update firmware"
     },
-    "gui.elfbotDownBinStep.step1Text": {
+    "gui.pythonDownBinStep.step1Text": {
         "message": "The latest firmware："
     },
-    "gui.elfbotDownBinStep.step2Text1": {
+    "gui.pythonDownBinStep.step2Text1": {
         "message": "Downloading..."
     },
-    "gui.elfbotDownBinStep.step2Text2": {
+    "gui.pythonDownBinStep.step2Text2": {
         "message": "Do not close Codecraft, or make any other operations."
     },
-    "gui.elfbotDownBinStep.step3Text1": {
+    "gui.pythonDownBinStep.step3Text1": {
         "message": "Download successfully"
     },
-    "gui.elfbotDownBinStep.step3Text2": {
+    "gui.pythonDownBinStep.step3Text2": {
         "message": "Do not close Codecraft, or make any other operations."
     },
-    "gui.elfbotDownBinStep.btText1": {
+    "gui.pythonDownBinStep.btText1": {
         "message": "Download now"
     },
-    "gui.elfbotDownBinStep.btText2": {
+    "gui.pythonDownBinStep.btText2": {
         "message": "Next"
     },
-    "gui.elfbotUpgradeSucc.title": {
+    "gui.pythonUpgradeSucc.title": {
         "message": "Update firmware"
     },
-    "gui.elfbotUpgradeSucc.succ": {
+    "gui.pythonUpgradeSucc.succ": {
         "message": "Upload successfully!"
     },
-    "gui.elfbotUpgradeSucc.notice1": {
-        "message": "Notes："
-    },
-    "gui.elfbotUpgradeSucc.notice2": {
-        "message": "• Congratulation! Please reboot your Elfbot. Have fun!"
-    },
-    "gui.elfbotUpgradeSucc.btText": {
+    "gui.pythonUpgradeSucc.btText": {
         "message": "Roger"
     },
-    "gui.elfbotUpgrade.failText": {
+    "gui.pythonUpgrade.failText": {
         "message": "Upload failed！"
     },
-    "gui.elfbotUpgrade.failMessage": {
+    "gui.pythonUpgrade.failMessage": {
         "message": "Make sure you choose the same device as the one you are actually connected to."
     },
-    "gui.elfbotUpgrade.text": {
+    "gui.pythonUpgrade.text": {
         "message": "Please update your firmware as follows"
     },
-    "gui.elfbotUpgrade.step1Text": {
-        "message": "Please shut down your Elfbot"
-    },
-    "gui.elfbotUpgrade.step2Text": {
-        "message": "Hold S button on Elfbot, meanwhile power on Elfbot, then your Elfbot will enter BOOT mode."
-    },
-    "gui.elfbotUpgrade.btText": {
+    "gui.pythonUpgrade.btText": {
         "message": "Upload Now"
     },
-    "gui.elfbotUpgrade.notice1": {
+    "gui.pythonUpgrade.notice1": {
         "message": "Notes："
     },
-    "gui.elfbotUpgrade.notice2": {
-        "message": "• Make sure Elfbot is connected to Codecraft in this process."
-    },
-    "gui.elfbotUpgrade.notice3": {
+    "gui.pythonUpgrade.notice3": {
         "message": "• Make sure device is connected to Codecraft in this process."
     },
-    "gui.elfbotUpgrade.title": {
+    "gui.pythonUpgrade.title": {
         "message": "Update firmware"
     },
-    "gui.elfbotUpgrade.text1": {
+    "gui.pythonUpgrade.text1": {
         "message": "Uploading..."
     },
-    "gui.elfbotUpgrade.text2": {
+    "gui.pythonUpgrade.text2": {
         "message": "Do not close Codecraft, or make any other operations."
-    },
-    "gui.elfbotUpgrade.text3": {
-        "message": "Notes："
-    },
-    "gui.elfbotUpgrade.text4": {
-        "message": "• Make sure Elfbot is connected to Codecraft in this process."
     },
     "gui.menuBar.uploadPortfolios": {
         "message": "Upload portfolios"

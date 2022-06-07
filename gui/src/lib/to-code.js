@@ -1,5 +1,3 @@
-import { DEVICE_TAB_INDEX, STAGE_TAB_INDEX } from '../reducers/main-tab.js';
-
 export default (ScratchBlocks, workspace, deviceId) => {
 
     switch (deviceId) {
@@ -13,8 +11,6 @@ export default (ScratchBlocks, workspace, deviceId) => {
             return ScratchBlocks.Arduino.workspaceToCode(workspace);
         case 1009:
             return ScratchBlocks.ArduinoOpenCat.workspaceToCode(workspace);
-        case 1003:
-            return ScratchBlocks.Elfbot.workspaceToCode(workspace);
         case 1004:
             return ScratchBlocks.Microbit.workspaceToCode(workspace);
         case 1005:

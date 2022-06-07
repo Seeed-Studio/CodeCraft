@@ -7,7 +7,6 @@ const {
     CMC_DEVICE_ARDUINO,
     CMC_DEVICE_DAVINCI_AI,
     CMC_DEVICE_DONGLE,
-    CMC_DEVICE_ELFBOT,
     getDeviceType
 } = require('../device-filter')
 
@@ -79,11 +78,9 @@ let msg = [];
  * 解析指令数据
  * @param {*} data 
  */
-const parseCommandData = (data, handleConsole, handleSpecial, handleMessage) => {
+const parseCommandData = (data, handleSpecial, handleMessage) => {
     // 拼接buffer字符
     buffer = Buffer.concat([buffer, data]);
-    // 检测字符，获取重启标记
-    handleConsole(buffer.toString());
     // 解析buffer
     while (buffer.length > 0) {
         let byte = buffer.readUInt8(0);
@@ -450,9 +447,6 @@ class Dongle extends Device {
             case 0xB1:// G0
                 controlTypeTemp = CMC_DEVICE_GROVEZERO;
                 break;
-            case 0xEB:// Elfbot
-                controlTypeTemp = CMC_DEVICE_ELFBOT;
-                break;
         }
         // 获取状态字节
 
@@ -800,50 +794,11 @@ class Dongle extends Device {
     }
 
     /**
-     * 处理主控重启
-     */
-    async _handleConsole(log) {
-        // 判断是否已经识别设备
-        if (!this.mainControl) return;
-        if (this.mainControl.name !== 'elfbot') return;
-        // 获取主控重启标记
-        let resetFlag = this.mainControl.resetFlag;
-        // 判断主控是否重启
-        if (log.indexOf(resetFlag) != -1) {
-            console.log('control reset -------------- ');
-            // 状态重置
-            if (this.resetStatus) {
-                console.log('_handleCommandAtoZ 0x42 .... reboot');
-                this.resetStatus = false;
-                return;
-            }
-            // 延时1秒
-            await sleep(1000);
-            // 如果当前正在烧录 dongle 
-            if (this.upgradeStatus === UPGRADE_STATUS_DONGLE) {
-                // 获取主控版本,重新设置版本号
-                this.write(COMMAND_GET_VERSION);
-                //获取dongle版本号
-                this.write(COMMAND_GET_DONGLE_VERSION);
-                //获取dongle信息
-                this.write(COMMAND_GET_DONGLE_INFO);
-            }
-            // 获取主控信息
-            this.write(COMMAND_GET_INFO);
-        }
-    }
-
-    /**
      * // 0x42
      * 处理0x41-0x5A 指令
      * @param {*} byte 
      */
     async _handleCommandAtoZ(byte) {
-        // 如果主控是 elfbot ;不处理
-        if (this.mainControl
-            && this.mainControl.name === 'elfbot') {
-            return;
-        }
         switch (byte) {
             case 0x41:
                 console.log('................. 0x41');
@@ -915,7 +870,6 @@ class Dongle extends Device {
      */
     onResponse(data) {
         parseCommandData(data,
-            (console) => this._handleConsole(console),
             (command) => this._handleCommandAtoZ(command),
             (message) => this._handleMessage(message)
         );

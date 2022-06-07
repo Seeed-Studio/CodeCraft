@@ -19,13 +19,6 @@ export default{
             id="gui.devices.spec.arduino.name"
         />)
     },
-    1003: {
-        name :( <FormattedMessage
-            defaultMessage="Elfbot"
-            description=""
-            id="gui.devices.spec.elfbot.name"
-        />)
-    },
     1004: {
         name :( <FormattedMessage
             defaultMessage="micro:bit"

@@ -107,8 +107,6 @@ const UploadCodePane = (props) => {
     const isShowMonitorBtns = editingTarget && editingTarget.getDeviceId() === 1002;
     // deviceid === 1004 mocrobit 设备
     const isShowMocribitBtns = editingTarget && editingTarget.getDeviceId() === 1004;
-    // 
-    const isShowElfbotBtns = editingTarget && editingTarget.getDeviceId() === 1003;
 
     const isShowMaixduino = editingTarget && editingTarget.getDeviceId() === 1005;
 
@@ -247,28 +245,6 @@ const UploadCodePane = (props) => {
         </div>
     )
 
-    const elfbotView = (
-        <div className={styles.buttonsView}>
-            <Button
-                size={'small'}
-                iconClassName={styles.iconClassName}
-                disabled={!isEquipmentRealConnected}
-                className={styles.uploadBtn}
-                onClick={onCodeUpload}>
-                {uploadBtn}
-            </Button>
-            <div className={styles.btnTgWrapper2}>
-                <div className={styles.burnWrap2}>
-                    {props.intl.formatMessage(localMessages.unableConnectPrompt)}
-                    &nbsp;
-                    <a className={styles.burnWrap2Text} onClick={()=>{onRapidUpgrade()}}>
-                        {props.intl.formatMessage(localMessages.upgradeText)}
-                    </a>
-                </div>
-            </div>
-        </div>
-    );
-
     const mPythonView = (
         <div className={styles.buttonsView}>
             <Button
@@ -386,7 +362,6 @@ const UploadCodePane = (props) => {
             {isShowGroveJoint && groveJointView}
             {isShowWioTerminal && wioTerminalView}
             {isShowMocribitBtns && microbitBtns}
-            {isShowElfbotBtns && elfbotView}
             {isShowMaixduino && cyberEyeView}
             {isShowMPython && mPythonView}
             {isShowOpenCat && openCatView} {/* 机器狗 */}

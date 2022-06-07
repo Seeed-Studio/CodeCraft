@@ -13,7 +13,6 @@ import names from '../../lib/libraries/devices/control-special-names.jsx';
 
 import grovezeroIcon from '../../lib/libraries/devices/grove-zero.svg';
 import grovearduinoIcon from '../../lib/libraries/devices/grove-arduino.svg';
-import elfbotIcon from '../../lib/libraries/devices/elfbot.svg';
 import microbitIcon from '../../lib/libraries/devices/microbit.svg';
 import maixduino from '../../lib/libraries/devices/maixduino.svg'
 import grovejointIcon from '../../lib/libraries/devices/grove-joint.svg';
@@ -32,8 +31,6 @@ const deviceIcon = (deviceType) => {
       return grovezeroIcon;
     case 1002:
       return grovearduinoIcon;
-    case 1003:
-      return elfbotIcon;
     case 1004:
       return microbitIcon;
     case 1005:

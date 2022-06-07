@@ -51,7 +51,6 @@ const defaultBlockPackages = {
     scratch3_procedures: require('../blocks/scratch3_procedures'),
     powering: require('../blocks/powering'),
     grovezero: require('../blocks/grovezero'),
-    elfbot: require('../blocks/elfbot'),
     arduino: require('../blocks/arduino'),
 };
 

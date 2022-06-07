@@ -934,10 +934,6 @@
         "message": "micro:bit",
         "description": ""
     },
-    "gui.devices.elfbot.name": {
-        "message": "Elfbot",
-        "description": ""
-    },
     "gui.devices.mpython.name": {
         "message": "掌控板",
         "description": ""
@@ -2666,86 +2662,65 @@
     "gui.microbit.microbitDownloadConfirm": {
         "message": "知道了"
     },
-    "gui.elfbotDownBinStep.title": {
+    "gui.pythonDownBinStep.title": {
         "message": "升级固件"
     },
-    "gui.elfbotDownBinStep.step1Text": {
+    "gui.pythonDownBinStep.step1Text": {
         "message": "发现新固件："
     },
-    "gui.elfbotDownBinStep.step2Text1": {
+    "gui.pythonDownBinStep.step2Text1": {
         "message": "下载中..."
     },
-    "gui.elfbotDownBinStep.step2Text2": {
+    "gui.pythonDownBinStep.step2Text2": {
         "message": "请勿关闭Codecraft,或进行其他操作"
     },
-    "gui.elfbotDownBinStep.step3Text1": {
+    "gui.pythonDownBinStep.step3Text1": {
         "message": "下载完成"
     },
-    "gui.elfbotDownBinStep.step3Text2": {
+    "gui.pythonDownBinStep.step3Text2": {
         "message": "请勿关闭Codecraft,或进行其他操作"
     },
-    "gui.elfbotDownBinStep.btText1": {
+    "gui.pythonDownBinStep.btText1": {
         "message": "下载最新固件"
     },
-    "gui.elfbotDownBinStep.btText2": {
+    "gui.pythonDownBinStep.btText2": {
         "message": "下一步"
     },
-    "gui.elfbotUpgradeSucc.title": {
+    "gui.pythonUpgradeSucc.title": {
         "message": "升级固件"
     },
-    "gui.elfbotUpgradeSucc.succ": {
+    "gui.pythonUpgradeSucc.succ": {
         "message": "烧录完成"
     },
-    "gui.elfbotUpgradeSucc.notice1": {
-        "message": "请注意："
-    },
-    "gui.elfbotUpgradeSucc.notice2": {
-        "message": "• 固件烧录完成后，请将精灵机器人关闭并重启，才可完成固件更新"
-    },
-    "gui.elfbotUpgradeSucc.btText": {
+    "gui.pythonUpgradeSucc.btText": {
         "message": "我知道了"
     },
-    "gui.elfbotUpgrade.failText": {
+    "gui.pythonUpgrade.failText": {
         "message": "烧录失败！"
     },
-    "gui.elfbotUpgrade.failMessage": {
+    "gui.pythonUpgrade.failMessage": {
         "message": "请确保你选择的设备与实际连接的设备一致"
     },
-    "gui.elfbotUpgrade.text": {
+    "gui.pythonUpgrade.text": {
         "message": "请确保按照以下步骤进行固件升级操作"
     },
-    "gui.elfbotUpgrade.step1Text": {
-        "message": "请关闭精灵机器人的电源开关"
-    },
-    "gui.elfbotUpgrade.step2Text": {
-        "message": "请长按精灵机器人的S按钮，同时打开精灵机器人的电源，进入BOOT阶段"
-    },
-    "gui.elfbotUpgrade.btText": {
+    "gui.pythonUpgrade.btText": {
         "message": "点击这里立即烧录"
     },
-    "gui.elfbotUpgrade.notice1": {
+    "gui.pythonUpgrade.notice1": {
         "message": "请注意："
     },
-    "gui.elfbotUpgrade.notice2": {
-        "message": "• 在此过程中，请确保精灵机器人与Codecraft保持连接状态"
-    },
-    "gui.elfbotUpgrade.notice3": {
+    "gui.pythonUpgrade.notice3": {
         "message": "• 在此过程中，请确保设备与Codecraft保持连接状态"
     },
-    "gui.elfbotUpgrade.title": {
+    "gui.pythonUpgrade.title": {
         "message": "升级固件"
     },
-    "gui.elfbotUpgrade.text1": {
+    "gui.pythonUpgrade.text1": {
         "message": "烧录中..."
     },
-    "gui.elfbotUpgrade.text2": {
+    "gui.pythonUpgrade.text2": {
         "message": "请勿关闭codecraft，或进行其他操作"
-    },
-    "gui.elfbotUpgrade.text3": {
-        "message": "请注意："
-    },
-    "gui.elfbotUpgrade.text4": {
-        "message": "• 在此过程中，请确保精灵机器人与Codecraft保持连接状态"
     },
     "gui.menuBar.uploadPortfolios": {
         "message": "上传作品"

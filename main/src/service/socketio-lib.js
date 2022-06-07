@@ -106,7 +106,7 @@ class SocketCore extends EventEmitter {
         // 检测端口，杀掉进程
         checkAndKillTask().then(() => {
             // 尝试连接次数
-            let typCount = 0;
+            let tryCount = 0;
             // 创建socket服务
             let httpsServer = http.createServer();
             // 设置端口
@@ -114,11 +114,11 @@ class SocketCore extends EventEmitter {
             // 设置http服务 request 处理函数
             httpsServer.on('request', this.onRequest);
             httpsServer.on('error', error => {
-                if (typCount > 3) {
-                    console.log("Unable to create service, port occupied ... typCount : ", typCount)
+                if (tryCount > 3) {
+                    console.log("Unable to create service, port occupied ... tryCount : ", tryCount)
                 } else {
                     setTimeout(() => {
-                        httpsServer.listen(HTTP_PORT); typCount++;
+                        httpsServer.listen(HTTP_PORT); tryCount++;
                     }, 200);
                 }
             });
@@ -137,7 +137,7 @@ class SocketCore extends EventEmitter {
      * @param {*} socket 
      */
     onConnect(_socket) {
-        console.log('onConnect  socketid : ' + _socket.id);
+        console.log('onConnect socketid : ' + _socket.id);
         //如果当前socket已连接
         if (this.isConnected()) {
             _socket.emit('server-connect', { errCode: -1 });
@@ -181,10 +181,12 @@ class SocketCore extends EventEmitter {
             req.on('end', () => {
                 //对url进行解码（url会对中文进行编码）
                 let params = {};
-                try {
-                    params = JSON.parse(data);
-                } catch (error) {
-                    console.log('parse error ... ')
+                if (data && data != '') {
+                    try {
+                        params = JSON.parse(data);
+                    } catch (error) {
+                        console.log('parse error ... ')
+                    }
                 }
                 this.emit('request', {
                     url,

@@ -225,7 +225,7 @@ const onAppReady = (launchInfo) => {
     protocol: 'file:'
   })
   // window.loadURL('http://localhost:8601');
-  // window.webContents.openDevTools();
+  window.webContents.openDevTools();
   window.loadURL(loadURL);
   /**-------------页面加载------------**/
   //初始化图片缓存

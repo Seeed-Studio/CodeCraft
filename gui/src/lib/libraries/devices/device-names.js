@@ -15,10 +15,6 @@ export default {
         name: 'arduino',
         types: ['arduino', 'arduino-mega', 'arduino-lotusv'],
     },
-    1003: {
-        name: 'elfbot',
-        types: []
-    },
     1004: {
         name: 'microbit',
         types: []

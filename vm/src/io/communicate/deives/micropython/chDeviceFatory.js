@@ -1,10 +1,7 @@
-
-const Elfbot = require('./elfbot')
 const Maixduino = require('./maixduino');
 const MPython = require('./mpython');
 const Powering = require('./powering');
 
-const CMC_DEVICE_ELFBOT = "elfbot";
 const CMC_DEVICE_MPYTHON = "mpython-grove";
 const CMC_DEVICE_MAIXDUINO = "cyberEye";
 const CMC_DEVICE_POWERING = "PoweRing";
@@ -15,9 +12,6 @@ const CMC_DEVICE_POWERING = "PoweRing";
  * @param {*} type 
  */
 const createChDevice = (micropython, type) => {
-    if (type.indexOf(CMC_DEVICE_ELFBOT) > -1) {
-        return new Elfbot(micropython);
-    }
     if (type.indexOf(CMC_DEVICE_MAIXDUINO) > -1) {
         return new Maixduino(micropython);
     }
@@ -36,10 +30,6 @@ const createChDevice = (micropython, type) => {
  * @param {*} deviceType 
  */
 const recognize = (deviceType) => {
-    if (deviceType.indexOf(CMC_DEVICE_ELFBOT) > -1) {
-        return 1003;
-    }
-
     if (deviceType.indexOf(CMC_DEVICE_MAIXDUINO) > -1) {
         return 1005;
     }

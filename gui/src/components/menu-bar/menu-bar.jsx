@@ -13,10 +13,10 @@ import MenuBarMenu from './menu-bar-menu.jsx';
 import { MenuItem, MenuSection } from '../menu/menu.jsx';
 import ProjectTitleInput from './project-title-input.jsx';
 import RescueDevice from '../rescue-device/rescue-device.jsx'
-import ElfbotDownBin from '../firmware-upgrade/elfbot-down-bin.jsx'
-import ElfbotUpgrade from '../firmware-upgrade/elfbot-upgrade.jsx'
-import ElfbotUpgrading from '../firmware-upgrade/elfbot-upgrading.jsx'
-import ElfbotUpgradeSucc from '../firmware-upgrade/elfbot-upgrade-succ.jsx'
+import PythonDownBin from '../firmware-upgrade/python-down-bin.jsx'
+import PythonUpgrade from '../firmware-upgrade/python-upgrade.jsx'
+import PythonUpgrading from '../firmware-upgrade/python-upgrading.jsx'
+import PythonUpgradeSucc from '../firmware-upgrade/python-upgrade-succ.jsx'
 
 import RemindSaveModal from '../remind-save-special/remind-save.jsx';
 
@@ -36,13 +36,13 @@ import {
     defaultRescueDeviceTo,
     RESCUE_MODAL_HIDE,
     RESCUE_MODAL_DEVICE_SELECT,
-    RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP1,
-    RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP2,
-    RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP3,
-    RESCUE_MODAL_ELFBOT_UPGRADE_INIT,
-    RESCUE_MODAL_ELFBOT_UPGRADING,
-    RESCUE_MODAL_ELFBOT_UPGRADE_SUCC,
-    RESCUE_MODAL_ELFBOT_UPGRADE_FAIL
+    RESCUE_MODAL_PYTHON_DOWN_BIN_SETP1,
+    RESCUE_MODAL_PYTHON_DOWN_BIN_SETP2,
+    RESCUE_MODAL_PYTHON_DOWN_BIN_SETP3,
+    RESCUE_MODAL_PYTHON_UPGRADE_INIT,
+    RESCUE_MODAL_PYTHON_UPGRADING,
+    RESCUE_MODAL_PYTHON_UPGRADE_SUCC,
+    RESCUE_MODAL_PYTHON_UPGRADE_FAIL
 } from '../../reducers/rescue'
 
 import CodeView from '../../containers/code-view.jsx';
@@ -1067,56 +1067,56 @@ class MenuBar extends React.Component {
                 }
 
                 {
-                    this.props.rescueModalIndex === RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP1
+                    this.props.rescueModalIndex === RESCUE_MODAL_PYTHON_DOWN_BIN_SETP1
                     &&
-                    <ElfbotDownBin
+                    <PythonDownBin
                         onCancel={this.handleCloseRescueDevice}
                         versionInfo={this.props.firmwareVersion}
                         step={1}
                     />
                 }
                 {
-                    this.props.rescueModalIndex === RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP2
+                    this.props.rescueModalIndex === RESCUE_MODAL_PYTHON_DOWN_BIN_SETP2
                     &&
-                    <ElfbotDownBin
+                    <PythonDownBin
                         step={2}
                     />
                 }
                 {
-                    this.props.rescueModalIndex === RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP3
+                    this.props.rescueModalIndex === RESCUE_MODAL_PYTHON_DOWN_BIN_SETP3
                     &&
-                    <ElfbotDownBin
+                    <PythonDownBin
                         onCancel={this.handleCloseRescueDevice}
                         step={3}
                     />
                 }
                 {
-                    this.props.rescueModalIndex === RESCUE_MODAL_ELFBOT_UPGRADE_INIT
+                    this.props.rescueModalIndex === RESCUE_MODAL_PYTHON_UPGRADE_INIT
                     &&
-                    <ElfbotUpgrade
+                    <PythonUpgrade
                         dtype={rescuer ? rescuer.type : ""}
                         onCancel={this.handleCloseRescueDevice}
                     />
                 }
                 {
-                    this.props.rescueModalIndex === RESCUE_MODAL_ELFBOT_UPGRADING
+                    this.props.rescueModalIndex === RESCUE_MODAL_PYTHON_UPGRADING
                     &&
-                    <ElfbotUpgrading
+                    <PythonUpgrading
                         type={rescuer ? rescuer.type : ""}
                     />
                 }
                 {
-                    this.props.rescueModalIndex === RESCUE_MODAL_ELFBOT_UPGRADE_SUCC
+                    this.props.rescueModalIndex === RESCUE_MODAL_PYTHON_UPGRADE_SUCC
                     &&
-                    <ElfbotUpgradeSucc
+                    <PythonUpgradeSucc
                         type={rescuer ? rescuer.type : ""}
                         onCancel={this.handleCloseRescueDevice}
                     />
                 }
                 {
-                    this.props.rescueModalIndex === RESCUE_MODAL_ELFBOT_UPGRADE_FAIL
+                    this.props.rescueModalIndex === RESCUE_MODAL_PYTHON_UPGRADE_FAIL
                     &&
-                    <ElfbotUpgrade
+                    <PythonUpgrade
                         dtype={rescuer ? rescuer.type : ""}
                         onCancel={this.handleCloseRescueDevice}
                         type='fail'

@@ -34,7 +34,6 @@ import iconExtend from './icon-extend.svg';
 import iconLink from './icon-link.svg';
 
 import modes from '../../lib/libraries/devices/program-modes';
-// import names from '../../lib/libraries/devices/control-special-names.jsx';
 
 const promptid = "789348734673";
 const contentLabel = "Device deletion confirmation"

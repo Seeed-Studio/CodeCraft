@@ -77,7 +77,6 @@ class UploadCode extends React.Component {
         let deviceId = this.props.vm.editingTarget.getDeviceId();
         switch (deviceId) {
             case 1001:
-            case 1003:
             case 1005:
             case 1007:
             case 1008:

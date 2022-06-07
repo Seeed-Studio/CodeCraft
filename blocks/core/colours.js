@@ -73,11 +73,6 @@ Blockly.Colours = {
     "secondary": "#576292",
     "tertiary": "#525E95"
   },
-  "elfbot_light": {
-    "primary": "#8F5D5A",
-    "secondary": "#724A48",
-    "tertiary": "#804F4C"
-  },
   "arduino_grove_i2c": {
     "primary": "#8F5D5A",
     "secondary": "#724A48",

@@ -1,6 +1,5 @@
 import grovezeroIcon from './grove-zero.svg';
 import grovearduinoIcon from './grove-arduino.svg';
-import elfbotIcon from './elfbot.svg';
 import microbitIcon from './microbit.svg';
 import maixduino from './maixduino.svg'
 import grovejointIcon from './grove-joint.svg';
@@ -77,35 +76,6 @@ export default [
         visible: true,
         spriteInfo: {},   
         enabled: true
-    },
-    {
-        id: 1003,
-        name: (
-            <FormattedMessage
-                defaultMessage="Elfbot"
-                description=""
-                id="gui.devices.elfbot.name"
-            />
-        ),
-        objName: 'Elfbot',
-        iconURL: elfbotIcon,
-        featured: false,
-        connectState: 0,
-        type: 'device',
-        tags: [],
-        info: [],
-        sounds: [],
-        costumes: [],
-        currentCostumeIndex: 0,
-        scratchX: 0,
-        scratchY: 0,
-        scale: 1,
-        direction: 0,
-        rotationStyle: 'normal',
-        isDraggable: false,
-        visible: true,
-        spriteInfo: {},
-        enabled: false
     },
     {
         id: 1004,

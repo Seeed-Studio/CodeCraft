@@ -11,7 +11,6 @@ const CMC_DEVICE_MICROBIT = 'microbit';
 const CMC_DEVICE_GROVE_JOINS = 'grove-joint';
 const CMC_DEVICE_OPENCAT = 'opencat';
 
-const CMC_DEVICE_ELFBOT = "elfbot";
 const CMC_DEVICE_MPYTHON = "mpython-grove";
 const CMC_DEVICE_MAIXDUINO = "cyberEye";
 const CMC_DEVICE_POWERING = "PoweRing";
@@ -48,7 +47,7 @@ const getDeviceType = (device) => {
 
     if (!vendorId || !productId) return null;
 
-    if (vendorId === '10c4') return CMC_DEVICE_UNKNOWN;// grovezero elfbot dongle
+    if (vendorId === '10c4') return CMC_DEVICE_UNKNOWN;// grovezero dongle
 
     if (vendorId === '0403' && productId === '6010') return CMC_DEVICE_MAIXDUINO; 
 
@@ -90,8 +89,6 @@ const recognize = (deviceType) => {
         case CMC_DEVICE_ARDUINO:
         case CMC_DEVICE_ARDUINO_MEGA:
             return 1002;
-        case CMC_DEVICE_ELFBOT:
-            return 1003;
         case CMC_DEVICE_DAVINCI_AI:
             return 1004;
         case CMC_DEVICE_GROVE_JOINS:
@@ -112,7 +109,6 @@ export {
     CMC_DEVICE_ARDUINO_LOTUSV,
     CMC_DEVICE_DAVINCI_AI,
     CMC_DEVICE_DONGLE,
-    CMC_DEVICE_ELFBOT,
     CMC_DEVICE_MICROBIT,
     CMC_DEVICE_GROVE_JOINS,
     CMC_DEVICE_WIO_TERMINAL,

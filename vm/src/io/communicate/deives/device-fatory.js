@@ -1,4 +1,3 @@
-
 /*------------Arduino 系列设备-------------*/
 const ArdunioUno = require('./arduino/arduino-uno');
 const ArdunioLotusv = require('./arduino/arduino-lotusv');
@@ -15,19 +14,6 @@ const Dongle = require('./dongles/dongle');
 /*------------普通设备-------------*/
 const Device = require('./device');
 
-// const GroveZero = require('./grovezero')
-// const Davinci = require('./davinci');
-// const Elfbot = require('./elfbot');
-// const Microbit = require('./microbit');
-// case CMC_DEVICE_GROVEZERO:
-//     return new GroveZero(context);
-// case CMC_DEVICE_DAVINCI_AI:
-//     return new Davinci(context);
-// case CMC_DEVICE_ELFBOT:
-//     return new Elfbot(context);
-// case CMC_DEVICE_MICROBIT:
-//     return new Microbit(context);
-
 const {
     CMC_DEVICE_UNKNOWN,
     CMC_DEVICE_ARDUINO,
@@ -38,7 +24,6 @@ const {
     CMC_DEVICE_WIO_TERMINAL,
     CMC_DEVICE_DONGLE,
     CMC_DEVICE_GROVEZERO,
-    CMC_DEVICE_ELFBOT,
     CMC_DEVICE_MPYTHON,
     CMC_DEVICE_MAIXDUINO,
     CMC_DEVICE_POWERING
@@ -69,7 +54,6 @@ const createDevice = (context, type = CMC_DEVICE_UNKNOWN) => {
         case CMC_DEVICE_GROVEZERO:
         case CMC_DEVICE_DONGLE:
             return new Dongle(context);
-        case CMC_DEVICE_ELFBOT:
         case CMC_DEVICE_MPYTHON:
         case CMC_DEVICE_MAIXDUINO:
         case CMC_DEVICE_POWERING:

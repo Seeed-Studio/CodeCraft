@@ -938,10 +938,6 @@
         "message": "micro:bit",
         "description": ""
     },
-    "gui.devices.elfbot.name": {
-        "message": "Elfbot",
-        "description": ""
-    },
     "gui.devices.mpython.name": {
         "message": "mPython",
         "description": ""
@@ -2761,86 +2757,65 @@
     "gui.deviceConnect.showVerison": {
         "message": "Zkontroluj verzi firmware"
     },
-    "gui.elfbotDownBinStep.title": {
+    "gui.pythonDownBinStep.title": {
         "message": "Aktualizuj firmware"
     },
-    "gui.elfbotDownBinStep.step1Text": {
+    "gui.pythonDownBinStep.step1Text": {
         "message": "Poslední firmware："
     },
-    "gui.elfbotDownBinStep.step2Text1": {
+    "gui.pythonDownBinStep.step2Text1": {
         "message": "Stahuji..."
     },
-    "gui.elfbotDownBinStep.step2Text2": {
+    "gui.pythonDownBinStep.step2Text2": {
         "message": "Nezavírej program a neprováděj žádné operace."
     },
-    "gui.elfbotDownBinStep.step3Text1": {
+    "gui.pythonDownBinStep.step3Text1": {
         "message": "Stáhnuto úspěšně"
     },
-    "gui.elfbotDownBinStep.step3Text2": {
+    "gui.pythonDownBinStep.step3Text2": {
         "message": "Nezavírej program a neprováděj žádné operace."
     },
-    "gui.elfbotDownBinStep.btText1": {
+    "gui.pythonDownBinStep.btText1": {
         "message": "Stahni nyní"
     },
-    "gui.elfbotDownBinStep.btText2": {
+    "gui.pythonDownBinStep.btText2": {
         "message": "Dále"
     },
-    "gui.elfbotUpgradeSucc.title": {
+    "gui.pythonUpgradeSucc.title": {
         "message": "Aktualizuj firmware"
     },
-    "gui.elfbotUpgradeSucc.succ": {
+    "gui.pythonUpgradeSucc.succ": {
         "message": "Nahráno úspěšně"
     },
-    "gui.elfbotUpgradeSucc.notice1": {
-        "message": "Poznámka: "
-    },
-    "gui.elfbotUpgradeSucc.notice2": {
-        "message": "• Gratulujeme. Restartujte Elfbota a zábava začne"
-    },
-    "gui.elfbotUpgradeSucc.btText": {
+    "gui.pythonUpgradeSucc.btText": {
         "message": "Souhlas"
     },
-    "gui.elfbotUpgrade.failText": {
+    "gui.pythonUpgrade.failText": {
         "message": "Nahrávání selhalo"
     },
-    "gui.elfbotUpgrade.failMessage": {
+    "gui.pythonUpgrade.failMessage": {
         "message": "请确保你选择的设备与实际连接的设备一致"
     },
-    "gui.elfbotUpgrade.text": {
+    "gui.pythonUpgrade.text": {
         "message": "Prosím aktualizuj firmware podle návodu"
     },
-    "gui.elfbotUpgrade.step1Text": {
-        "message": "Prosím vypni Elfbot"
-    },
-    "gui.elfbotUpgrade.step2Text": {
-        "message": "Podrž tlačítko S na Elfbotu zatímco jej zapneš. Poté Elfbot přejde do režimu BOOT"
-    },
-    "gui.elfbotUpgrade.btText": {
+    "gui.pythonUpgrade.btText": {
         "message": "Nahraj nyní"
     },
-    "gui.elfbotUpgrade.notice1": {
+    "gui.pythonUpgrade.notice1": {
         "message": "Poznámka: "
     },
-    "gui.elfbotUpgrade.notice2": {
-        "message": "• Přesvědčte se, že Elfbot je připojen k CodeCraft"
-    },
-    "gui.elfbotUpgrade.notice3": {
+    "gui.pythonUpgrade.notice3": {
         "message": "• Make sure device is connected to Codecraft in this process."
     },
-    "gui.elfbotUpgrade.title": {
+    "gui.pythonUpgrade.title": {
         "message": "Aktualizuj firmware"
     },
-    "gui.elfbotUpgrade.text1": {
+    "gui.pythonUpgrade.text1": {
         "message": "Nahrávám..."
     },
-    "gui.elfbotUpgrade.text2": {
+    "gui.pythonUpgrade.text2": {
         "message": "Nezavírej program a neprováděj žádné operace."
-    },
-    "gui.elfbotUpgrade.text3": {
-        "message": "Poznámka: "
-    },
-    "gui.elfbotUpgrade.text4": {
-        "message": "• Poznámka: Přesvědčte se, že Elfbot je připojen k CodeCraft"
     },
     "gui.crashMessage.title": {
         "message": "Něco není v pořádku! Pravděpodobně je problém se slabým internetovým připojením.",

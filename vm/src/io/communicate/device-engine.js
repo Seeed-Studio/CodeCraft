@@ -203,68 +203,6 @@ class DeviceEngine extends EventEmitter {
                 reject();
             }, DEVICE_CONNECT_TIMEOUT);
         });
-        // return new Promise(async (resolve, reject) => {
-        //     const {
-        //         deviceType,
-        //         comName,
-        //         needOpenDevice = true,
-        //     } = device;
-        //     // 释放设备资源
-        //     if (this.device) {
-        //         this.device.release();
-        //         this.device = null;
-        //     }
-
-        //     if (deviceType === 'unknown' && needOpenDevice) {
-        //         /* ----------------设备检测中----------------- */
-        //         this.deviceChecking = true;
-        //         let type = await getDeviceType(this._io, comName);
-        //         /* ----------------设备检测中----------------- */
-        //         if (type === 'micropython') {
-        //             let dName = await getSpecialDevicecomName(this._io, comName);
-        //             if (dName == 'mpython-grove') {
-        //                 // navigator.platform == 'Win32'
-        //                 this.deviceChecking = false;
-        //                 this.device = buildMicroPython(this._io, type);
-        //                 this.device.setOptions = {}
-        //                 // this.device.isSpecial = true;
-        //             } else {
-        //                 this.deviceChecking = false;
-        //                 this.device = buildMicroPython(this._io, type);
-        //             }
-        //         } else {
-        //             this.deviceChecking = false;
-        //             this.device = createDevice(this._io, deviceType);
-        //         }
-        //     } else if (deviceType === 'maixduino') {
-        //         this.device = buildMicroPython(this._io, deviceType);
-        //         this.device.setOptions = {}
-        //         //this.device.isSpecial = true;
-        //     } else {
-        //         this.device = createDevice(this._io, deviceType);
-        //     }
-
-        //     console.log('创建设备', this.device);
-
-        //     // 获取当前设备、连接设备
-        //     this.device.isNeedOpenDevice = needOpenDevice;
-        //     this.device.on('response', (data) => { this.emit('response', data) });
-        //     this.device.on('rawdata-event', (data) => { this.emit('rawdata-event', data) });
-        //     this.device.on('isUpgrade', (result) => { this.emit('isUpgrade', result) });
-        //     this.device.on('device-recognize', (id) => { this.emit('device-recognize', id) });
-        //     this.device.connect(comName, () => {
-        //         this.clearTimeout();
-        //         console.log('连接成功');
-        //         resolve();
-        //     }, () => {
-        //         this.clearTimeout();
-        //         reject();
-        //     });
-        //     // 设置设备连接超时计时
-        //     this.timeout = setTimeout(() => {
-        //         reject();
-        //     }, DEVICE_CONNECT_TIMEOUT);
-        // });
     }
 
     /**
@@ -374,7 +312,6 @@ class DeviceEngine extends EventEmitter {
      */
     upgrade(isForceUpgrade = false) {
         // isForceUpgrade 是否强制调用upgrade
-        // elfbot 需要断开后升级固件 
         if (!this.isEquipmentConnected() && !isForceUpgrade) {
             return Promise.reject();
         }

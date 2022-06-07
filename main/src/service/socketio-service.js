@@ -31,13 +31,6 @@ const URL_GET_CACHEIMAGE = '/cc/getCacheImage';
 
 const URL_CLEAR_CACHEQUEUE = '/cc/clearCacheQueue';
 
-const URL_QUERY_PALTFORM_MATERIALS = '/cc/queryPlatformMaterial';
-const URL_STORE_PALTFORM_MATERIALS = '/cc/storePlatformMaterial';
-
-const URL_QUERY_CRYPTONYMUSER_MATERIALS = '/cc/queryCryptonymUserMaterial';
-const URL_STORE_CRYPTONYMUSER_MATERIALS = '/cc/storeCryptonymUserMaterial';
-const URL_DELETE_CRYPTONYMUSER_MATERIAL = '/cc/deleteCryptonymUserMaterial';
-
 const URL_GET_FIRMWARE_INFO = '/cc/getFirmwareInfo';
 const URL_GET_FIRMWARE_FILE = '/cc/getFirmwareFile';
 
@@ -338,61 +331,6 @@ class SocketIOService {
             clearCacheDownloadQueue();
             res.writeHead(200, HTTP_RESP_HEADERS);
             res.end(JSON.stringify({ errorCode: 0 }));
-        }
-        // 平台素材保存
-        else if (URL_STORE_PALTFORM_MATERIALS == url) {
-            savePlatformMaterials(params, error => {
-                res.writeHead(200, HTTP_RESP_HEADERS);
-                res.end(JSON.stringify({ errorCode: (!!error ? -1 : 0), errorMessage: error }));
-            });
-        }
-        // 平台素材获取
-        else if (URL_QUERY_PALTFORM_MATERIALS == url) {
-            getPlatformMaterials(params, (error, data = []) => {
-                if (!!!error) {
-                    res.writeHead(200, HTTP_RESP_HEADERS);
-                    res.end(JSON.stringify({ errorCode: 0, data }));
-                } else {
-                    res.writeHead(200, HTTP_RESP_HEADERS);
-                    res.end(JSON.stringify({ errorCode: -1, errorMessage: error }));
-                }
-            })
-        }
-        // 用户素材保存
-        else if (URL_STORE_CRYPTONYMUSER_MATERIALS == url) {
-            saveUserMaterials(params, (error, data = []) => {
-                if (!!!error) {
-                    res.writeHead(200, HTTP_RESP_HEADERS);
-                    res.end(JSON.stringify({ errorCode: 0, data }));
-                } else {
-                    res.writeHead(200, HTTP_RESP_HEADERS);
-                    res.end(JSON.stringify({ errorCode: -1, errorMessage: error }));
-                }
-            });
-        }
-        // 用户素材获取
-        else if (URL_QUERY_CRYPTONYMUSER_MATERIALS == url) {
-            getUserMaterials(params, (error, data = []) => {
-                if (!!!error) {
-                    res.writeHead(200, HTTP_RESP_HEADERS);
-                    res.end(JSON.stringify({ errorCode: 0, data }));
-                } else {
-                    res.writeHead(200, HTTP_RESP_HEADERS);
-                    res.end(JSON.stringify({ errorCode: -1, errorMessage: error }));
-                }
-            })
-        }
-        // 用户素材删除
-        else if (URL_DELETE_CRYPTONYMUSER_MATERIAL == url) {
-            deleteUserMaterial(params, (error, data = []) => {
-                if (!!!error) {
-                    res.writeHead(200, HTTP_RESP_HEADERS);
-                    res.end(JSON.stringify({ errorCode: 0, data }));
-                } else {
-                    res.writeHead(200, HTTP_RESP_HEADERS);
-                    res.end(JSON.stringify({ errorCode: -1, errorMessage: error }));
-                }
-            })
         }
         //获取固件信息
         else if (URL_GET_FIRMWARE_INFO == url) {

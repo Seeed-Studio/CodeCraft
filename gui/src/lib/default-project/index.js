@@ -1,7 +1,6 @@
 import {TextEncoder} from 'text-encoding';
 import projectData from './project-data';
 import project1002Data from './project1002-data';
-import project1003Data from './project1003-data';
 import project1004Data from './project1004-data';
 import project1005Data from './project1005-data';
 import project1006Data from './project1006-data';
@@ -22,7 +21,6 @@ const encoder = new TextEncoder();
 const defaultProject = translator => {
     const projectJson = projectData(translator);
     const project1002Json = project1002Data(translator);
-    const project1003Json = project1003Data(translator);
     const project1004Json = project1004Data(translator);
     const project1005Json = project1005Data(translator);
     const project1006Json = project1006Data(translator);
@@ -41,11 +39,6 @@ const defaultProject = translator => {
         assetType: 'Project',
         dataFormat: 'JSON',
         data: JSON.stringify(project1002Json)
-    },{
-        id: 1003,
-        assetType: 'Project',
-        dataFormat: 'JSON',
-        data: JSON.stringify(project1003Json)
     },{
         id: 1004,
         assetType: 'Project',

@@ -1,7 +1,6 @@
 const Ability = require('./ability');
 const dispatcher = require('./ability-message-dispatch');
 const grovezero = require('./devices/grovezero/grovezero');
-const elfbot = require('./devices/elfbot/elfbot');
 const powering = require('./devices/powering/powering');
 
 const davinci = {}
@@ -26,7 +25,6 @@ class AbilityEngine {
          */
         this.abilities = {
             ardunio: ardunio,
-            elfbot: elfbot,
             powering: powering,
             davinci: davinci,
             grovezero: grovezero

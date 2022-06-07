@@ -230,7 +230,6 @@ Blockly.ScratchBlocks.VerticalExtensions.registerAll = function() {
         'arduino_grove_igure', 'arduino_grove_analog', 'arduino_grove_i2c',
         'arduino_robot_kit',
 
-        'elfbot_light',
         //microbit
         "microbit_show",
         "microbit_music",

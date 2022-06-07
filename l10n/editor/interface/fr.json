@@ -540,10 +540,6 @@
         "message": "micro:bit",
         "description": ""
     },
-    "gui.devices.elfbot.name": {
-        "message": "Elfbot",
-        "description": ""
-    },
     "gui.devices.mpython.name": {
         "message": "mPython",
         "description": ""
@@ -2168,86 +2164,65 @@
     "gui.microbit.microbitDownloadConfirm": {
         "message": "Bien reçu"
     },
-    "gui.elfbotDownBinStep.title": {
+    "gui.pythonDownBinStep.title": {
         "message": "Mise à jour du micrologiciel"
     },
-    "gui.elfbotDownBinStep.step1Text": {
+    "gui.pythonDownBinStep.step1Text": {
         "message": "Dernier micrologiciel："
     },
-    "gui.elfbotDownBinStep.step2Text1": {
+    "gui.pythonDownBinStep.step2Text1": {
         "message": "Téléchargement..."
     },
-    "gui.elfbotDownBinStep.step2Text2": {
+    "gui.pythonDownBinStep.step2Text2": {
         "message": "Ne fermez pas Codecraft et n'effectuez aucune autre opération."
     },
-    "gui.elfbotDownBinStep.step3Text1": {
+    "gui.pythonDownBinStep.step3Text1": {
         "message": "Téléchargement réussi."
     },
-    "gui.elfbotDownBinStep.step3Text2": {
+    "gui.pythonDownBinStep.step3Text2": {
         "message": "Ne fermez pas Codecraft et n'effectuez aucune autre opération."
     },
-    "gui.elfbotDownBinStep.btText1": {
+    "gui.pythonDownBinStep.btText1": {
         "message": "Télécharger maintenant"
     },
-    "gui.elfbotDownBinStep.btText2": {
+    "gui.pythonDownBinStep.btText2": {
         "message": "Suivant"
     },
-    "gui.elfbotUpgradeSucc.title": {
+    "gui.pythonUpgradeSucc.title": {
         "message": "Mise à jour du micrologiciel"
     },
-    "gui.elfbotUpgradeSucc.succ": {
+    "gui.pythonUpgradeSucc.succ": {
         "message": "Téléversé avec succès!"
     },
-    "gui.elfbotUpgradeSucc.notice1": {
-        "message": "Notes："
-    },
-    "gui.elfbotUpgradeSucc.notice2": {
-        "message": "• Félicitations! Veuillez redémarrer votre Elfbot. Bon amusement!"
-    },
-    "gui.elfbotUpgradeSucc.btText": {
+    "gui.pythonUpgradeSucc.btText": {
         "message": "Bien reçu"
     },
-    "gui.elfbotUpgrade.failText": {
+    "gui.pythonUpgrade.failText": {
         "message": "Échec du téléversement！"
     },
-    "gui.elfbotUpgrade.failMessage": {
+    "gui.pythonUpgrade.failMessage": {
         "message": "Assurez-vous de choisir le même appareil que celui auquel vous êtes réellement connecté."
     },
-    "gui.elfbotUpgrade.text": {
+    "gui.pythonUpgrade.text": {
         "message": "Veuillez mettre à jour le micrologiciel comme suit"
     },
-    "gui.elfbotUpgrade.step1Text": {
-        "message": "Veuillez éteindre votre Elfbot"
-    },
-    "gui.elfbotUpgrade.step2Text": {
-        "message": "Maintenez le bouton S d'Elfbot appuyé, allumez Elfbot, puis votre Elfbot entrera en mode BOOT."
-    },
-    "gui.elfbotUpgrade.btText": {
+    "gui.pythonUpgrade.btText": {
         "message": "Téléverser maintenant"
     },
-    "gui.elfbotUpgrade.notice1": {
+    "gui.pythonUpgrade.notice1": {
         "message": "Notes："
     },
-    "gui.elfbotUpgrade.notice2": {
-        "message": "• Assurez-vous qu'Elfbot reste connecté à Codecraft durant ce processus. "
+    "gui.pythonUpgrade.notice3": {
+        "message": "• Assurez-vous que l'appareil est connecté à Codecraft dans ce processus. "
     },
-    "gui.elfbotUpgrade.notice3": {
-        "message": "• Assurez-vous qu'Elfbot reste connecté à Codecraft durant ce processus. "
-    },
-    "gui.elfbotUpgrade.title": {
+    "gui.pythonUpgrade.title": {
         "message": "Mise à jour du micrologiciel"
     },
-    "gui.elfbotUpgrade.text1": {
+    "gui.pythonUpgrade.text1": {
         "message": "Téléversement..."
     },
-    "gui.elfbotUpgrade.text2": {
+    "gui.pythonUpgrade.text2": {
         "message": "Ne fermez pas Codecraft et n'effectuez aucune autre opération."
-    },
-    "gui.elfbotUpgrade.text3": {
-        "message": "Notes："
-    },
-    "gui.elfbotUpgrade.text4": {
-        "message": "• Assurez-vous qu'Elfbot reste connecté à Codecraft durant ce processus."
     },
     "gui.menuBar.uploadPortfolios": {
         "message": "Téléversement de dossiers"

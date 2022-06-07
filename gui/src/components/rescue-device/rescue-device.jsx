@@ -2,9 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import bindAll from 'lodash.bindall'
 import { connect } from 'react-redux';
-
 import styles from './rescue-device.css'
-
 import Modal from '../../containers/modal.jsx'
 import Button from '../button-special/button.jsx'
 import Select from '../select/select.jsx';
@@ -15,11 +13,11 @@ import {
     setModalIndex,
     setFirmwareVersion,
     setRescuer,
-    RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP1,
-    RESCUE_MODAL_ELFBOT_UPGRADE_INIT,
-    RESCUE_MODAL_ELFBOT_UPGRADING,
-    RESCUE_MODAL_ELFBOT_UPGRADE_SUCC,
-    RESCUE_MODAL_ELFBOT_UPGRADE_FAIL
+    RESCUE_MODAL_PYTHON_DOWN_BIN_SETP1,
+    RESCUE_MODAL_PYTHON_UPGRADE_INIT,
+    RESCUE_MODAL_PYTHON_UPGRADING,
+    RESCUE_MODAL_PYTHON_UPGRADE_SUCC,
+    RESCUE_MODAL_PYTHON_UPGRADE_FAIL
 } from '../../reducers/rescue'
 
 const localeMessages = defineMessages({
@@ -65,9 +63,7 @@ class RescueDevice extends React.Component {
             'handleScanSucc',
             'isSelected',
             'onRescue',
-            // 'filtration',
             'onDeviceChange',
-            'elfbotRescue',
         ])
 
         this.state = {
@@ -103,26 +99,8 @@ class RescueDevice extends React.Component {
         return false;
     }
 
-    // 过滤
-    // filtration(serialportList) {
-    //     let newList = [];
-    //     for (let x = 0, item; item = serialportList[x]; x++) {
-    //         switch (item.deviceType) {
-    //             case 'unknown':
-    //                 newList.push(item);
-    //                 break;
-    //             case 'maixduino':
-    //                 newList.push(item);
-    //                 break;
-    //             default: break;
-    //         }
-    //     }
-    //     return newList;
-    // }
-
     // 处理扫描成功结果
     handleScanSucc(serialportList) {
-        // serialportList = this.filtration(serialportList);
         // 判断是否扫描出来设备
         const hasDevices = serialportList && serialportList.length > 0;
         if (!hasDevices) {
@@ -179,9 +157,6 @@ class RescueDevice extends React.Component {
 
     onRescue() {
         switch (this.state.selectDevice.type) {
-            case 'elfbot':
-                this.elfbotRescue();
-                break;
             case 'mpython':
             case 'powering':
                 this.mpythonRescue();
@@ -190,29 +165,6 @@ class RescueDevice extends React.Component {
                 this.maixduinoRescue();
                 break;
         }
-    }
-
-    elfbotRescue() {
-        const { selectDevice, selectSerialport } = this.state;
-
-        let upgradeMode = !navigator.onLine ? 0 : 1;
-        let rescuer = this.props.vm.deviceEngine.createRescuer(selectDevice.type, selectSerialport.comName);
-        if (rescuer) {
-            rescuer.setUpgradeMode(upgradeMode)
-        }
-        this.props.setRescuer(rescuer);
-        // 如果为离线模式
-        if (upgradeMode == 0) {
-            this.props.setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADE_INIT)
-        } else {
-            rescuer.isDownFirmwareFile().then(() => {
-                this.props.setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADE_INIT)
-            }).catch((version) => {
-                this.props.setFirmwareVersion(version)
-                this.props.setModalIndex(RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP1)
-            })
-        }
-
     }
 
     mpythonRescue() {
@@ -226,9 +178,9 @@ class RescueDevice extends React.Component {
         this.props.setRescuer(rescuer);
 
         const upgrade = () => {
-            this.props.setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADING);
-            const upgradeSucc = () => this.props.setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADE_SUCC);
-            const upgradeFail = () => this.props.setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADE_FAIL);
+            this.props.setModalIndex(RESCUE_MODAL_PYTHON_UPGRADING);
+            const upgradeSucc = () => this.props.setModalIndex(RESCUE_MODAL_PYTHON_UPGRADE_SUCC);
+            const upgradeFail = () => this.props.setModalIndex(RESCUE_MODAL_PYTHON_UPGRADE_FAIL);
             this.props.vm.deviceEngine.disconnect().then(() => {
                 rescuer.upgrade().then(upgradeSucc).catch(upgradeFail)
             });
@@ -241,7 +193,7 @@ class RescueDevice extends React.Component {
                 upgrade();
             }).catch((version) => {
                 this.props.setFirmwareVersion(version)
-                this.props.setModalIndex(RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP1)
+                this.props.setModalIndex(RESCUE_MODAL_PYTHON_DOWN_BIN_SETP1)
             }) 
         }
         
@@ -257,9 +209,9 @@ class RescueDevice extends React.Component {
         this.props.setRescuer(rescuer);
 
         const upgrade = () => {
-            this.props.setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADING);
-            const upgradeSucc = () => this.props.setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADE_SUCC);
-            const upgradeFail = () => this.props.setModalIndex(RESCUE_MODAL_ELFBOT_UPGRADE_FAIL);
+            this.props.setModalIndex(RESCUE_MODAL_PYTHON_UPGRADING);
+            const upgradeSucc = () => this.props.setModalIndex(RESCUE_MODAL_PYTHON_UPGRADE_SUCC);
+            const upgradeFail = () => this.props.setModalIndex(RESCUE_MODAL_PYTHON_UPGRADE_FAIL);
             this.props.vm.deviceEngine.disconnect().then(() => {
                 rescuer.upgrade().then(upgradeSucc).catch(upgradeFail)
             });
@@ -272,7 +224,7 @@ class RescueDevice extends React.Component {
                 upgrade();
             }).catch((version) => {
                 this.props.setFirmwareVersion(version)
-                this.props.setModalIndex(RESCUE_MODAL_ELFBOT_DOWN_BIN_SETP1)
+                this.props.setModalIndex(RESCUE_MODAL_PYTHON_DOWN_BIN_SETP1)
             }) 
         }
     }
@@ -316,7 +268,6 @@ class RescueDevice extends React.Component {
                         <Select
                             onChange={this.onDeviceChange}
                             label={selectDeviceLabel}
-                            notListLabel={''}
                             list={deviceList}
                             notListLabel={notListLabel}
                             disabled={deviceSelectorDisable}

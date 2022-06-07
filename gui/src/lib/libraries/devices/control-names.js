@@ -11,10 +11,6 @@ export default {
         name: "Arduino (Uno/Mega/BeginnerKit)",
         codelanguage: "C"
     },
-    1003: {
-        name: "Elfbot",
-        codelanguage: "Python"
-    },
     1004: {
         name: "micro:bit",
         codelanguage: "Python"

@@ -1,14 +1,8 @@
-
 import ArduinoCompiler from './arduino';
 import CppCompiler from './c';
-
-import ElfbotCompiler from './elfbot';
 import MaixduinoCompiler from './maixduino';
-
 import MPythonCompiler from './mpython';
-
 import PoweRingCompiler from './powering';
-
 
 /**
  * 创建编译器对象
@@ -20,8 +14,6 @@ const createCompiler = (type) => {
             return new CppCompiler();
         case 'arduino':
             return new ArduinoCompiler();
-        case 'elfbot':
-            return new ElfbotCompiler();
         case 'maixduino':
             return new MaixduinoCompiler();
         case 'mpython':

@@ -106,7 +106,7 @@ Blockly.Blocks['motion_mpython_sysresoures_volume'] = {
       "args0": [
         {
           "type": "field_image",
-          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/elfbot/rgb-led.svg",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/mpython/rgb-led.svg",
           "width": 40,
           "height": 30
         },
@@ -126,7 +126,7 @@ Blockly.Blocks['motion_mpython_sysresoures_light'] = {
       "args0": [
         {
           "type": "field_image",
-          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/elfbot/rgb-led.svg",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/mpython/rgb-led.svg",
           "width": 40,
           "height": 30
         },
@@ -250,7 +250,7 @@ Blockly.Blocks['motion_mpython_sysresoures_set_single_color'] = {
       "args0": [
         {
           "type": "field_image",
-          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/elfbot/rgb-led.svg",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/mpython/rgb-led.svg",
           "width": 40,
           "height": 30
         },
@@ -279,7 +279,7 @@ Blockly.Blocks['motion_mpython_sysresoures_set_single_rgb'] = {
       "args0": [
         {
           "type": "field_image",
-          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/elfbot/rgb-led.svg",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/mpython/rgb-led.svg",
           "width": 40,
           "height": 30
         },
@@ -315,7 +315,7 @@ Blockly.Blocks['motion_mpython_sysresoures_set_all_color'] = {
       "args0": [
         {
           "type": "field_image",
-          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/elfbot/rgb-led.svg",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/mpython/rgb-led.svg",
           "width": 40,
           "height": 30
         },
@@ -340,7 +340,7 @@ Blockly.Blocks['motion_mpython_sysresoures_set_all_rgb'] = {
       "args0": [
         {
           "type": "field_image",
-          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/elfbot/rgb-led.svg",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/mpython/rgb-led.svg",
           "width": 40,
           "height": 30
         },
@@ -372,7 +372,7 @@ Blockly.Blocks['motion_mpython_sysresoures_close_rgb'] = {
       "args0": [
         {
           "type": "field_image",
-          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/elfbot/rgb-led.svg",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/mpython/rgb-led.svg",
           "width": 40,
           "height": 30
         },
