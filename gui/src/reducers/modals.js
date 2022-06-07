@@ -9,13 +9,9 @@ const MODAL_IMPORT_INFO = 'importInfo';
 const MODAL_LOADING_PROJECT = 'loadingProject';
 const MODAL_PREVIEW_INFO = 'previewInfo';
 const MODAL_SOUND_RECORDER = 'soundRecorder';
-
 const MODAL_PHYSICALDEVICE_LIBRARY = 'devicesLibrary';
-
 const MODAL_EPCS_LIBRARY = 'epcsLibrary';
-
 const MODAL_TIPS_LIBRARY = 'tipsLibrary';
-
 const MODAL_CONNECT = 'connect';
 
 //训练模型界面
@@ -29,9 +25,6 @@ const MODAL_RECOGNIZE_VIDEO = 'recognizeVideoModal';
 
 //串口图表界面
 const MODAL_SERIAL_CHART = 'serialChartModal';
-
-//edgeImpulse界面
-const MODAL_EDGEIMPULSE = 'edgeImpulseModal';
 
 //三轴加速界面
 const MODAL_THREEAXIS_ACCELEROMETER = 'threeAxisAccelerometerModal';
@@ -47,9 +40,6 @@ const MODAL_CAILBRATE_SERVOS = 'cailbrateModal';
 
 //设备详情页
 const MODAL_DEVICE_VIEW_MORE = 'deviceViewMore';
-
-//意见反馈
-const MODAL_FEEDBACK = 'feedback';
 
 
 const initialState = {
@@ -67,13 +57,11 @@ const initialState = {
     [MODAL_TRAIN_VIDEO]: false,
     [MODAL_RECOGNIZE_VIDEO]: false,
     [MODAL_SERIAL_CHART]: false,
-    [MODAL_EDGEIMPULSE]: false,
     [MODAL_THREEAXIS_ACCELEROMETER]: false,
     [MODAL_METEOSTATION]: false,
     [MODAL_CREATE_SKILL]: false,
     [MODAL_CAILBRATE_SERVOS]: false,
     [MODAL_DEVICE_VIEW_MORE]: false,
-    [MODAL_FEEDBACK]: false
 };
 
 const reducer = function (state, action) {
@@ -159,10 +147,6 @@ const openSerialChartModal = function () {
     analytics.pageview('/modals/serialChartModal');
     return openModal(MODAL_SERIAL_CHART);
 };
-const openEdgeImpulseModal = function () {
-    analytics.pageview('/modals/edgeImpulseModal');
-    return openModal(MODAL_EDGEIMPULSE);
-};
 const openThreeAxisAccelerometerModal = function () {
     analytics.pageview('/modals/threeAxisAccelerometerModal');
     return openModal(MODAL_THREEAXIS_ACCELEROMETER);
@@ -182,10 +166,6 @@ const openCailbrateModal = function () {
 const openDeviceViewMoreModal = function () {
     analytics.pageview('/modals/deviceViewMore');
     return openModal(MODAL_DEVICE_VIEW_MORE);
-};
-const openFeedbackModal = function () {
-    analytics.pageview('/modals/feedback');
-    return openModal(MODAL_FEEDBACK);
 };
 const closeCameraCapture = function () {
     return closeModal(MODAL_CAMERA_CAPTURE);
@@ -229,9 +209,6 @@ const closeRecognizeVideoModal = function () {
 const closeSerialChartModal = function () {
     return closeModal(MODAL_SERIAL_CHART);
 };
-const closeEdgeImpulseModal = function () {
-    return closeModal(MODAL_EDGEIMPULSE);
-};
 const closeThreeAxisAccelerometerModal = function () {
     return closeModal(MODAL_THREEAXIS_ACCELEROMETER);
 };
@@ -246,9 +223,6 @@ const closeCailbrateModal = function () {
 };
 const closeDeviceViewMoreModal = function () {
     return closeModal(MODAL_DEVICE_VIEW_MORE);
-};
-const closeFeedbackModal = function () {
-    return closeModal(MODAL_FEEDBACK);
 };
 
 export {
@@ -268,13 +242,11 @@ export {
     openTrainVideoModal,
     openRecognizeVideoModal,
     openSerialChartModal,
-    openEdgeImpulseModal,
     openThreeAxisAccelerometerModal,
     openMeteostationModal,
     openCreateSkillModal,
     openCailbrateModal,
     openDeviceViewMoreModal,
-    openFeedbackModal,
     closeCameraCapture,
     closeExtensionLibrary,
     closeImportInfo,
@@ -289,11 +261,9 @@ export {
     closeTrainVideoModal,
     closeRecognizeVideoModal,
     closeSerialChartModal,
-    closeEdgeImpulseModal,
     closeThreeAxisAccelerometerModal,
     closeMeteostationModal,
     closeCreateSkillModal,
     closeCailbrateModal,
     closeDeviceViewMoreModal,
-    closeFeedbackModal
 };

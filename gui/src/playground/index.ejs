@@ -111,40 +111,7 @@
             text-align: left;
             margin: 1rem 0;
         }
-
-        .webGlButton {
-            width: 100%;
-            height: 2.5rem;
-            line-height: 2.5rem;
-            margin: 0 auto;
-            color: rgba(255, 255, 255, 1);
-            opacity: 1;
-            box-shadow: 0px 4px 10px 0px rgba(81, 221, 212, 0.5);
-            background: linear-gradient(90deg, rgba(74, 156, 240, 1) 0%, rgba(81, 221, 212, 1) 100%);
-            cursor: pointer;
-            display: inline-block;
-            text-align: center;
-            border-radius: 1rem;
-            font-weight: 500;
-            font-size: 0.88rem;
-            margin: 1rem 0;
-        }
-
-        .webGlButton:hover {
-            color: rgba(255, 255, 255, 1);
-            opacity: 1;
-            box-shadow: 0px 4px 10px 0px rgba(81, 221, 212, 0.5);
-            background: linear-gradient(90deg, rgba(65, 136, 209, 1) 0%, rgba(71, 192, 184, 1) 100%);
-        }
-
-        .webGlButton:active {
-            color: rgba(255, 255, 255, 1);
-            opacity: 0.7;
-            box-shadow: none;
-            background: linear-gradient(90deg, rgba(56, 117, 179, 1) 0%, rgba(60, 162, 155, 1) 100%);
-        }
-
-
+  
         .faqLinkText {
             margin: 0.5rem 0;
             font-size: .875rem;
@@ -178,13 +145,8 @@
         <div class="initImgCantainer">
             <img src="static/logo_pc.png" alt="" class="initPic">
             <div class="initText">
-                <span>Codecraft</span><span style="font-weight: 500; margin-left: 10px;">v2.6.4.25</span>
+                <span>Codecraft</span><span style="font-weight: 500; margin-left: 10px;">v1.0.0.0</span>
             </div>
-            <!-- <img src="static/loading.gif" alt="" class="initPic">
-            <div class="initText">
-                <span><span id="initText">进入程序中</span><img src="static/icon_wait.gif" alt="" class="loadingGif"></span>
-            </div> -->
-
         </div>
     </div>
     <!-- 浏览器兼容 -->
@@ -201,9 +163,6 @@
                 </div>
                 <div class="message" id="message">
                     我们很抱歉，当前浏览器无法正常运行Codecraft2.0。我们推荐使用Chrome谷歌浏览器，或下载客户端，获得完整功能体验。
-                </div>
-                <div class="webGlButton" id="webGlButton" onclick="toDownload()">
-                    前往下载
                 </div>
                 <div class="faqLinkText">
                     <span id="visit">访问</span><a href="#" onclick="toDocument()" class="faqLink"
@@ -235,10 +194,6 @@
         }
 
 
-
-
-
-
         /**
          * 判断是否是可支持的浏览器
          * gecko/20100101 firefox/64.0  火狐
@@ -266,15 +221,6 @@
             document.getElementById("initImg").style.display = "none";
         }
 
-        function toDownload() {
-            var browserLocale = window.navigator.userLanguage || window.navigator.language;
-            if (browserLocale && browserLocale.indexOf('zh') > -1) {
-                window.open("https://ide.tinkergen.com/download/cn/", "_blank");
-            } else {
-                window.open("https://ide.tinkergen.com/download/en/", "_blank");
-            }
-        }
-
         function toDocument() {
             var browserLocale = window.navigator.userLanguage || window.navigator.language;
             if (browserLocale && browserLocale.indexOf('zh') > -1) {
@@ -297,7 +243,6 @@
             document.getElementById("initText").innerHTML = 'Waiting';
             document.getElementById("label").innerHTML = 'Current browser is not supported';
             document.getElementById("message").innerHTML = 'We are sorry that Codecraft2.0 is not working properly in the current browser. We recommend using Chrome Google browser, or downloading the client for better experience.';
-            document.getElementById("webGlButton").innerHTML = 'Download';
             document.getElementById("visit").innerHTML = 'Visit ';
             document.getElementById("faqLink").innerHTML = 'FAQ ';
             document.getElementById("more").innerHTML = 'for more information';

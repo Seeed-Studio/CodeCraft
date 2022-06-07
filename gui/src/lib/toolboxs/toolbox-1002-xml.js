@@ -278,29 +278,6 @@ const groveIgure = function (isStage, targetId, name) {
     </category>
     `;
 }
-// ${blockSeparator}
-// <block type="motion_arduino_lotusv_setble"> 
-//     <value name="ID">
-//         <shadow type="text">
-//             <field name="TEXT">SeeedBTSlave</field>
-//         </shadow>   
-//     </value>
-//     <value name="PWD">
-//         <shadow type="text">
-//             <field name="TEXT">1234</field>
-//         </shadow>   
-//     </value>      
-// </block>       
-// <block type="motion_arduino_lotusv_getblevalue"/>  
-// ${blockSeparator}
-// <block type="motion_arduino_infrared_send">
-//     <value name="MESSAGE">
-//         <shadow type="math_number">
-//             <field name="NUM">1</field>
-//         </shadow>   
-//     </value>
-// </block>  
-// <block type="motion_arduino_infrared_receive"/>
 
 const groveAnalog = function (isStage, targetId, name) {
     return `
@@ -569,165 +546,6 @@ const groveI2C = function (isStage, targetId, name) {
     </category>
     `;
 }
-
-//  <block type="motion_arduino_webserver_init">
-// <value name="SSID">
-//    <shadow type="text">
-//        <field name="TEXT">ArduinoWebServer</field>
-//    </shadow>
-// </value>
-// <value name="PWD">
-//    <shadow type="text">
-//        <field name="TEXT">12345678</field>
-//    </shadow>
-// </value>
-// </block>
-
-// <block type="motion_arduino_webserver_show">
-// <value name="VALUE">
-//    <shadow type="math_number">
-//        <field name="NUM">0</field>
-//    </shadow>
-// </value>
-// <value name="NAME">
-//    <shadow type="text">
-//        <field name="TEXT">name</field>
-//    </shadow>
-// </value>
-// </block>
-
-
-//<block type="motion_arduino_vision_sensor6">
-//</block>
-//<block type="motion_arduino_vision_sensor7">
-//</block>
-
-// ${blockSeparator}
-// <block type="motion_arduino_network_setwifi">
-//     <value name="SSID">
-//         <shadow type="text">
-//             <field name="TEXT">ssid</field>
-//         </shadow>
-//     </value>
-//     <value name="PASSWORD">
-//         <shadow type="text">
-//             <field name="TEXT">password</field>
-//         </shadow>
-//     </value>
-// </block>
-// <block type="motion_arduino_network_state"/>
-// ${blockSeparator}
-// <block type="motion_arduino_speechr_rec">
-//     <value name="SECS">
-//         <shadow type="math_number">
-//             <field name="NUM">2</field>
-//         </shadow>
-//     </value>
-// </block>
-// <block type="motion_arduino_speechr_rectext"/>
-// <block type="motion_arduino_speechr_tts">
-//     <value name="TEXT">
-//         <shadow type="text">
-//             <field name="TEXT">hello</field>
-//         </shadow>
-//     </value>
-// </block>
-// ${blockSeparator}
-// <block type="motion_arduino_audio_record">
-//     <value name="NAME">
-//         <shadow type="text">
-//             <field name="TEXT">record0</field>
-//         </shadow>
-//     </value>
-// </block>
-// <block type="motion_arduino_audio_stop_record"/>
-// ${blockSeparator}
-// <block type="motion_arduino_audio_play">
-//     <value name="NAME">
-//         <shadow type="text">
-//             <field name="TEXT">record0</field>
-//         </shadow>
-//     </value>
-// </block>
-// <block type="motion_arduino_audio_play_someone">
-//     <value name="INDEX">
-//         <shadow type="math_number">
-//             <field name="NUM">1</field>
-//         </shadow>
-//     </value>
-// </block>
-// <block type="motion_arduino_audio_play_preornext"/>
-// <block type="motion_arduino_audio_play_atmode"/>
-// <block type="motion_arduino_audio_setvol">
-//     <value name="VOL">
-//         <shadow type="math_number">
-//             <field name="NUM">100</field>
-//         </shadow>
-//     </value>
-// </block>
-
-// const robotKit = function () {
-//     return `
-//     <category name="%{BKY_CATEGORY_ARDUINO_ROBOT_KIT}" colour="#FD7D82" secondaryColour="#EE6368" id="robotKit">
-//         <block type="motion_arduino_mark_run"/>
-//         <block type="motion_arduino_mark_motorrun">
-//             <value name="SPEED">
-//                 <shadow type="math_number">
-//                     <field name="NUM">50</field>
-//                 </shadow>
-//             </value>
-//         </block>
-//         <block type="motion_arduino_mark_servorun">
-//             <value name="ANGLE">
-//                 <shadow type="math_number">
-//                     <field name="NUM">50</field>
-//                 </shadow>
-//             </value>
-//         </block>
-//     </category>
-//     `;
-// }
-
-// const ottodiy = function () {
-//     return `
-//     <category name="%{BKY_CATEGORY_ARDUINO_OTTO_DIY}" colour="#FD7D82" secondaryColour="#EE6368" id="ottodiy">
-//         <block type="motion_arduino_grove_otto_diy_robot1">
-//             <value name="STEPS">
-//                 <shadow type="math_number">
-//                     <field name="NUM">1</field>
-//                 </shadow>
-//             </value> 
-//             <value name="T">
-//                 <shadow type="math_number">
-//                     <field name="NUM">800</field>
-//                 </shadow>
-//             </value>
-//         </block>
-
-//         <block type="motion_arduino_grove_otto_diy_robot2">
-//             <value name="STEPS">
-//                 <shadow type="math_number">
-//                     <field name="NUM">1</field>
-//                 </shadow>
-//             </value>
-//             <value name="T">
-//                 <shadow type="math_number">
-//                     <field name="NUM">800</field>
-//                 </shadow>
-//             </value>
-//         </block>
-//     </category>
-//     `;
-// }
-
-// const shieldbot = function () {
-//     return `
-//     <category name="%{BKY_CATEGORY_ARDUINO_SHIELD_BOT}" colour="#FD7D82" secondaryColour="#EE6368" id="shieldbot">
-//         <block type="motion_arduino_shield_bot1"/>
-//         <block type="motion_arduino_shield_bot2"/>
-//     </category>
-//     `;
-// }
 
 const control = function () {
     return `
@@ -1031,74 +849,6 @@ const myBlocks = function () {
     `;
 };
 
-const test = function () {
-    return `
-    <category name="test" colour="#FD7D82" secondaryColour="#EE6368" id="test">
-        <block type="motion_arduino_network_setwifi">
-            <value name="SSID">
-                <shadow type="text">
-                    <field name="TEXT">ssid</field>
-                </shadow>
-            </value>
-            <value name="PASSWORD">
-                <shadow type="text">
-                    <field name="TEXT">password</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="motion_arduino_network_state"/>
-        ${blockSeparator}
-        <block type="motion_arduino_speechr_rec">
-            <value name="SECS">
-                <shadow type="math_number">
-                    <field name="NUM">2</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="motion_arduino_speechr_rectext"/>
-        <block type="motion_arduino_speechr_tts">
-            <value name="TEXT">
-                <shadow type="text">
-                    <field name="TEXT">ssid</field>
-                </shadow>
-            </value>
-        </block>
-        ${blockSeparator}
-        <block type="motion_arduino_audio_record">
-            <value name="NAME">
-                <shadow type="text">
-                    <field name="TEXT">record0</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="motion_arduino_audio_stop_record"/>
-        ${blockSeparator}
-        <block type="motion_arduino_audio_play">
-            <value name="NAME">
-                <shadow type="text">
-                    <field name="TEXT">record0</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="motion_arduino_audio_play_someone">
-            <value name="INDEX">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="motion_arduino_audio_play_preornext"/>
-        <block type="motion_arduino_audio_play_atmode"/>
-        <block type="motion_arduino_audio_setvol">
-            <value name="VOL">
-                <shadow type="math_number">
-                    <field name="NUM">100</field>
-                </shadow>
-            </value>
-        </block>
-    </category>
-    `;
-}
 
 const xmlOpen = '<xml style="display: none">';
 const xmlClose = '</xml>';
@@ -1124,7 +874,6 @@ const makeToolboxXML = function (extension) {
         serial(), gap,
 
         control(), gap,
-        // sensing(), gap,
         operators(), gap,
         variables(), gap,
 
@@ -1133,14 +882,6 @@ const makeToolboxXML = function (extension) {
         groveIgure(), gap,
         groveAnalog(), gap,
         groveI2C(), gap,
-        // robotKit(), gap,
-        // ottodiy(), gap,
-        // shieldbot(), gap,
-
-        // test(), gap,
-
-
-        // myBlocks()
     ];
 
     if (xml) {

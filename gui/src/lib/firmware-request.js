@@ -1,12 +1,9 @@
 import { post } from './fetch-utils';
 
-
-import { FIRMWARE_SERVER_HOST } from './busi-proxy/busi-proxy';
-
 const URL_GET_FIRMWARE_FILE = "http://localhost:62377/cc/getFirmwareFile"
 const URL_GET_FIRMWARE_INFO = "http://localhost:62377/cc/getFirmwareInfo"
 
-const URL_GET_FIRMWARE_ONLINE_ROOT_DIR = `${FIRMWARE_SERVER_HOST}/static/firmware/`
+const URL_GET_FIRMWARE_ONLINE_ROOT_DIR = "https://ide.tinkergen.com/static/firmware/"
 
 const request = (url, args) => {
     return new Promise((resolve, reject) => {

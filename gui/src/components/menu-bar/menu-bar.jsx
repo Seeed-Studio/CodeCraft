@@ -4,21 +4,14 @@ import { defineMessages, FormattedMessage, injectIntl, intlShape } from 'react-i
 import PropTypes from 'prop-types';
 import bindAll from 'lodash.bindall';
 import React from 'react';
-
 import Box from '../box/box.jsx';
 import Button from '../button/button.jsx';
 import { ComingSoonTooltip } from '../coming-soon/coming-soon.jsx';
 import Divider from '../divider/divider.jsx';
-import LanguageSelector from '../../containers/language-selector.jsx';
 import SBFileUploader from '../../containers/sb-file-uploader.jsx';
 import MenuBarMenu from './menu-bar-menu.jsx';
 import { MenuItem, MenuSection } from '../menu/menu.jsx';
 import ProjectTitleInput from './project-title-input.jsx';
-import LoginDropdown from './login-dropdown.jsx';
-import SB3Downloader from '../../containers/sb3-downloader.jsx';
-import DeletionRestorer from '../../containers/deletion-restorer.jsx';
-import TurboMode from '../../containers/turbo-mode.jsx';
-
 import RescueDevice from '../rescue-device/rescue-device.jsx'
 import ElfbotDownBin from '../firmware-upgrade/elfbot-down-bin.jsx'
 import ElfbotUpgrade from '../firmware-upgrade/elfbot-upgrade.jsx'
@@ -31,8 +24,6 @@ import {
     closeSerialChartModal,
 } from '../../reducers/modals';
 
-import { getPackageConfig } from '../../lib/package-config.js';
-import { productUUID } from '../../lib/utils';
 
 import LoaderSave from '../loader-save/loader.jsx';
 
@@ -57,7 +48,6 @@ import {
 import CodeView from '../../containers/code-view.jsx';
 import PromptComponent from '../prompt-special/prompt-2.jsx';
 import Error from '../prompt-special/error.jsx';
-import Feedback from '../prompt-special/feedback.jsx';
 import About from '../prompt-special/about.jsx';
 
 import { projectTitleInitialState, setProjectTitle } from '../../reducers/project-title';
@@ -65,10 +55,7 @@ import spinner from './spinner.gif';
 import { LoadingStates, onLoadedProject, onProjectUploadStarted, setLocalProjectPath } from '../../reducers/project-state';
 import {
     openLoadingProject,
-    openFeedbackModal,
-    closeLoadingProject,
     closeEpcsLibrary,
-    closeFeedbackModal
 } from '../../reducers/modals';
 import analytics from '../../lib/analytics';
 import Loader from '../loader/loader.jsx';
@@ -76,23 +63,13 @@ import locales from '../../../../l10n/dist/l10n';
 import { selectLocale } from '../../reducers/locales';
 
 import { setVisible as setCodeViewVisible } from '../../reducers/code-view';
-import {
-    setUserTab,
-    LOGIN_TAB_INDEX,
-    LOGIN_OUT_TAB_INDEX,
-    USER_SETTING_TAB_INDEX,
-    USER_TIME_OUT_TAB_INDEX,
-    USER_INVITATION_TAB_INDEX
-} from '../../reducers/login-register-special';
+
 
 import {
     activateTab,
     BLOCKS_TAB_INDEX,
 } from '../../reducers/editor-tab';
 
-import {
-    openEpcsLibrary
-} from '../../reducers/modals';
 
 import { setPlayer } from '../../reducers/mode';
 import {
@@ -138,24 +115,10 @@ import iconFile from './icon-file.svg';
 import scratchLogo from './codecraft-logo.svg';
 import iconSave from './icon-save.svg';
 import iconHelp from './icon-help.svg';
-import iconLesson from './icon_lesson.svg';
 import iconSwitchJm from './switch_jm.svg';
 import iconSwitchDm from './switch_dm.svg';
 import { toasts } from '../toast-special/toast.jsx';
-import { 
-    cosConfig,
-    grovezeroicon,
-    arduinoicon,
-    microbiticon,
-    markicon,
-    grovejointicon,
-    poweringicon,
-    opencaticon,
-    elfboticon,
-    mpythonicon
-} from '../../lib/cos-config.js';
 import { getOsType,getBrowser,getBrowserLanguage } from '../../lib/os-type.js';
-
 
 const ignore = [];
 const ariaMessages = defineMessages({
@@ -895,7 +858,6 @@ class MenuBar extends React.Component {
                                 draggable={false}
                                 src={scratchLogo}
                             />
-                            {/* &nbsp;&nbsp;Codecraft */}
                         </div>
                         <Divider className={classNames(styles.divider)} />
                         <div
@@ -910,7 +872,6 @@ class MenuBar extends React.Component {
                                     src={languageIcon}
                                 />
                             </div>
-                            {/* <LanguageSelector label={this.props.intl.formatMessage(ariaMessages.language)} /> */}
                             {
                                 <MenuBarMenu
                                     className={classNames(styles.menuBarMenu)}

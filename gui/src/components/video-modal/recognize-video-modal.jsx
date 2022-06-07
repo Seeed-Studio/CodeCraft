@@ -1,6 +1,5 @@
 import React from 'react';
 import bindAll from 'lodash.bindall';
-
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import styles from './recognize-video-modal.css';
@@ -10,7 +9,6 @@ import iconMaximize from './image/icon_maximize.png'
 import AudioCanvas from './audio-canvas'
 import { getUserMedia } from './media'
 import { defineMessages,injectIntl } from 'react-intl';
-
 import {
     closeRecognizeVideoModal,
 } from '../../reducers/modals';
@@ -28,35 +26,17 @@ const detection_options = {
     AgeAndGenderModel: 'https://ide.tinkergen.com/ai_library/face-api/age_gender_model-weights_manifest.json',
 
 
-
     // Mobilenetv1Model: 'https://raw.githubusercontent.com/ml5js/ml5-data-and-models/face-api/models/faceapi/ssd_mobilenetv1_model-weights_manifest.json',
     // FaceLandmarkModel: 'https://raw.githubusercontent.com/ml5js/ml5-data-and-models/face-api/models/faceapi/face_landmark_68_model-weights_manifest.json',
     // FaceLandmark68TinyNet: 'https://raw.githubusercontent.com/ml5js/ml5-data-and-models/face-api/models/faceapi/face_landmark_68_tiny_model-weights_manifest.json',
     // FaceRecognitionModel: 'https://raw.githubusercontent.com/ml5js/ml5-data-and-models/face-api/models/faceapi/face_recognition_model-weights_manifest.json',
     // FaceExpressionModel: 'https://raw.githubusercontent.com/ml5js/ml5-data-and-models/face-api/models/faceapi/face_expression_model-weights_manifest.json',
     // AgeAndGenderModel: 'https://raw.githubusercontent.com/ml5js/ml5-data-and-models/face-api/models/faceapi/age_gender_model-weights_manifest.json',
-    
-    // MODEL_URLS: {
-    //     // Mobilenetv1Model: 'https://cctest2.chmakered.com/gd-ai/weights/ssd_mobilenetv1_model-weights_manifest.json',
-    //     // FaceLandmarkModel: 'https://cctest2.chmakered.com/gd-ai/weights/face_landmark_68_model-weights_manifest.json',
-    //     // FaceLandmark68TinyNet: 'https://cctest2.chmakered.com/gd-ai/weights/face_landmark_68_tiny_model-weights_manifest.json',
-    //     // FaceRecognitionModel: 'https://cctest2.chmakered.com/gd-ai/weights/face_recognition_model-weights_manifest.json',
-    //     // FaceExpressionModel: 'https://cctest2.chmakered.com/gd-ai/weights/face_expression_model-weights_manifest.json'
-    //     // AgeAndGenderModel: 'https://cctest2.chmakered.com/gd-ai/weights/age_gender_model-weights_manifest.json',
-
-    //     //本地文件这么写
-    //     Mobilenetv1Model: 'models',
-    //     FaceLandmarkModel: 'models',
-    //     FaceLandmark68TinyNet: 'models',
-    //     FaceRecognitionModel: 'models',
-    //     FaceExpressionModel: 'models',
-    //     AgeAndGenderModel: 'models',
-    // }
+      
 }
 
 const options = { probabilityThreshold: 0 };
 
-// const modelJson = 'https://cctest2.chmakered.com/gd-ai/speech-commands/model.json';
 const modelJson = 'https://ide.tinkergen.com/ai_library/speech-commands/model.json';
 
 const localMessages = defineMessages({

@@ -1,15 +1,6 @@
 import { BitmapAdapter } from 'scratch-svg-renderer';
 import log from './log.js';
 import randomizeSpritePosition from './randomize-sprite-position.js';
-import { getLocalMaterial } from './busi-proxy/busi-proxy';
-
-/**
- * 数组转arraybuffer
- * @param {*} data 
- */
-const toArrayBuffer = (data = []) => {
-    return new Uint8Array(data).buffer;
-}
 
 /**
  * empty svg image
@@ -54,183 +45,6 @@ const handleFileUpload = function (fileInput, onload) {
         reader.readAsArrayBuffer(thisFile);
     }
 };
-
-const handleFileUploadSpecial = function (obj, onload) {
-    const {
-        file,
-        fileType,
-        fileName,
-    } = obj;
-    let thisFile = null;
-    const reader = new FileReader();
-    reader.onload = () => {
-        onload(reader.result, fileType, fileName);
-    }
-    thisFile = file;
-    reader.readAsArrayBuffer(thisFile);
-}
-
-// 生成4位随机数
-const fourDigitRandomNum = (n) => {
-    let t = '';
-    for (var i = 0; i < n; i++) {
-        t += Math.floor(Math.random() * 10);
-    }
-    return t;
-}
-
-
-const handleContentType = (type) => {
-    let contentType = '';
-    switch (type.toLowerCase()) {
-        case 'svg':
-            contentType = 'image/svg+xml';
-            break;
-        case 'jpeg':
-        case 'jpg':
-            contentType = 'image/jpeg';
-            break;
-        case 'png':
-            contentType = 'image/png';
-            break;
-        case 'mp3':
-            contentType = 'audio/mp3';
-            break;
-        case 'mpeg':
-            contentType = 'audio/mpeg';
-            break;
-        case 'wav':
-            contentType = 'audio/wav';
-            break;
-        case 'wave':
-            contentType = 'audio/wave';
-            break;
-        case 'x-wav':
-            contentType = 'audio/x-wav';
-            break;
-        case 'x-pn-wav':
-            contentType = 'audio/x-pn-wav';
-            break;
-        case 'zip':
-            contentType = 'application/zip';
-            break;
-        default:
-            break;
-    }
-    return contentType;
-}
-
-/**
- * handleInputStreamUpload
- * @param {*} object 
- * @param {*} onload 
- */
-const handleInputStreamUpload = function (obj, onload, onError) {
-    const { url, fileName, isOnLine } = obj;
-    if (isOnLine) {
-        const requestUrl = url + '&n=' + fourDigitRandomNum(4);
-        fetch(requestUrl).then(response => {
-            if (!response) return;
-            response.arrayBuffer()
-                .then(buffer => {
-                    onload(buffer, response.headers.get('Content-Type'), fileName);
-                });
-        }).catch(e => {
-            onError && onError();
-        });
-    } else {
-        const suffix = url.substring(url.lastIndexOf('.') + 1);
-        const contentType = handleContentType(suffix);
-        console.log('contentType--', contentType)
-        console.log('fileName--', fileName)
-        getLocalMaterial({ localPath: url }).then((res) => {
-            console.log('res---', res)
-            if (res.errorCode === 0) {
-                onload(toArrayBuffer(res.data.data), contentType, fileName);
-            }
-        })
-
-        // const requestUrl = 'file://' + url
-        // const xhr = new XMLHttpRequest();
-        // xhr.open('GET', requestUrl, true);
-        // xhr.send();
-        // xhr.onreadystatechange = function () {
-        //     // 这步为判断服务器是否正确响应
-        //     if (xhr.readyState == 4 && xhr.status == 200) {
-        //         console.log('xhr--', xhr)
-
-        //         // const contentType = xhr.responseXML.contentType;
-        //         const content = xhr.response;
-        //         const blob = new Blob([content]);
-        //         const reader = new FileReader();
-        //         reader.readAsArrayBuffer(blob)
-        //         reader.onload = function () {
-        //             onload(this.result, contentType, fileName);
-        //         }
-        //     }
-        // };
-    }
-};
-
-const fetchInputStream = function (obj, isOnLine) {
-    if (!obj) return Promise.reject();
-    const {
-        url,
-        fileName
-    } = obj;
-    if (isOnLine) {
-        const requestUrl = url + '&n=' + fourDigitRandomNum(4);
-        return new Promise((resolve, reject) => {
-            fetch(requestUrl).then(response => {
-                if (!response) {
-                    reject();
-                }
-                response.arrayBuffer()
-                    .then(buffer => {
-                        resolve({
-                            buffer: buffer,
-                            assetType: response.headers.get('Content-Type'),
-                            fileName: fileName
-                        });
-                    }).catch(e => {
-                        reject();
-                    });
-            }).catch(e => {
-                reject();
-            });
-        });
-    } else {
-        return new Promise((resolve, reject) => {
-            const suffix = url.substring(url.lastIndexOf('.') + 1);
-            const contentType = handleContentType(suffix);
-            console.log('contentType--', contentType)
-            console.log('fileName--', fileName)
-            getLocalMaterial({ localPath: url }).then((res) => {
-                console.log('res---', res)
-                if (res.errorCode === 0) {
-                    resolve({
-                        buffer: toArrayBuffer(res.data.data),
-                        assetType: contentType,
-                        fileName: fileName
-                    });
-                } else {
-                    reject();
-                }
-            })
-        })
-    }
-};
-
-const handleInputStreamsUpload2 = async function (datas, isOnLine) {
-    if (!datas || datas.length === 0) throw ('datas is empty!');
-    let jsonObjs = [];
-    for (let index = 0; index < datas.length; index++) {
-        const item = datas[index];
-        const httpResponse = await fetchInputStream(item, isOnLine);
-        jsonObjs.push(httpResponse);
-    }
-    return jsonObjs;
-}
 
 /**
  * @typedef VMAsset
@@ -522,9 +336,6 @@ const spriteUpload = function (fileData, fileType, spriteName, storage, handleSp
 
 export {
     handleFileUpload,
-    handleInputStreamUpload,
-    handleFileUploadSpecial,
-    handleInputStreamsUpload2,
     costumeUpload,
     costumeEmUpload,
     soundUpload,

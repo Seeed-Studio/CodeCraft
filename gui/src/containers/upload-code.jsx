@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import UploadCodePane from '../components/upload-code/upload-code-pane.jsx'
-import codeEditor from '../lib/code-editor/code-editor';
 import ScratchBlocks from '../../../blocks';
 import toCode from '../lib/to-code.js';
 import { produceHex } from '../lib/microbit-util.js';
-
 import { setVisible as setArduinoMonitorVisible } from '../reducers/arduino-monitor'
 
 import {
@@ -16,7 +14,6 @@ import {
     STATE_UPLOADING_TAB,
     STATE_UPLOAD_SUCC_TAB,
     STATE_UPLOAD_FAIL_TAB,
-    STATE_UPLOAD_TIMEOUT_TAB,
     STATE_UPLOAD_ARDUINO_SELECT,
     STATE_UNINSTALLED_ASSISTANT,
     STATE_ASSISTANT_OCCUPIED
@@ -35,7 +32,6 @@ import {
 import {
     openSerialChartModal,
     closeSerialChartModal,
-    openEdgeImpulseModal
 } from '../reducers/modals';
 
 
@@ -54,7 +50,6 @@ class UploadCode extends React.Component {
             'handleChangeWindowDownloadFlag',
             'handleCloseMicrobitPrompt',
             'handleOpenSerialChatView',
-            'handleOpenEdgeImpulseView'
         ]);
 
         this.state = {
@@ -112,7 +107,6 @@ class UploadCode extends React.Component {
             this.props.vm.setDebugMode(0);
             this.props.activateState(STATE_UPLOADING_TAB);
             this.props.activateDebugMode(MODE_OFFLINE);
-            // let code = codeEditor.getValue();
             let deviceId = this.props.vm.editingTarget.getDeviceId();
             let workspace = ScratchBlocks.getMainWorkspace();
             let code = toCode(ScratchBlocks, workspace, deviceId);
@@ -180,10 +174,6 @@ class UploadCode extends React.Component {
         this.props.openSerialChartModalState();
     }
 
-    handleOpenEdgeImpulseView() {
-        this.props.openEdgeImpulseModalState();
-    }
-
     render() {
         const {
             vm,
@@ -203,8 +193,6 @@ class UploadCode extends React.Component {
                 onChangeWindowDownloadFlag={this.handleChangeWindowDownloadFlag}
                 onOpenMonitor={this.onOpenMonitor}
                 onOpenSerialChatView={this.handleOpenSerialChatView}
-                onOpenEdgeImpulseView={this.handleOpenEdgeImpulseView}
-
                 isShowMicrobitPrompt={this.state.isShowMicrobitPrompt}
                 onCloseMicrobitPrompt={this.handleCloseMicrobitPrompt}
                 {...componentProps}
@@ -237,9 +225,6 @@ const mapDispatchToProps = dispatch => ({
     },
     openSerialChartModalState: () => {
         dispatch(openSerialChartModal());
-    },
-    openEdgeImpulseModalState: () => {
-        dispatch(openEdgeImpulseModal());
     },
     closeSerialChartModalState: () => {
         dispatch(closeSerialChartModal());

@@ -3,7 +3,7 @@
   "productName": "Codecraft-PC2.0",
   "description": "Codecraft software.",
   "homepage": "https://ide.tinkergen.com/",
-  "version": "2.6.4",
+  "version": "1.0.0",
   "main": "shell/index.js",
   "author": {
     "name": "TinkerGen",

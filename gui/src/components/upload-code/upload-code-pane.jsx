@@ -1,24 +1,18 @@
 import classNames from 'classnames';
-import bindAll from 'lodash.bindall';
 import React from 'react';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
 import Box from '../box/box.jsx'
 import styles from './upload-code-pane.css'
 import Button from '../button-special/button.jsx'
-
 import UploadingModal from './uploading-modal.jsx'
 import UploadSuccModal from './upload-succ-modal.jsx'
 import UploadFailModal from './upload-fail-modal.jsx'
 import UploadTimeoutModal from './upload-timeout-modal.jsx'
 import UploadArduinoSelect from './upload-arduino-select.jsx'
 import MicrobitDownloadModal from './microbit-download-modal.jsx'
-
-
 import NotOpenAssistantModal from '../cc-assistant-modal-special/not-open-assistant.jsx';
 import IsUsedModal from '../cc-assistant-modal-special/is-used.jsx';
-
 import icon_tishi from './icon-tishi.png';
-
 import {
     STATE_UPLOADING_TAB,
     STATE_UPLOAD_SUCC_TAB,
@@ -104,7 +98,6 @@ const UploadCodePane = (props) => {
         connectedDevice,
         onChangeWindowDownloadFlag,
         onOpenSerialChatView,
-        onOpenEdgeImpulseView,
         onRapidUpgrade
     } = props;
 
@@ -242,15 +235,6 @@ const UploadCodePane = (props) => {
                 {openMonitorBtn}
 
             </Button>
-            {/* <div style={{ height: "0.63rem" }} />
-            <Button
-                size={'small'}
-                // disabled={!isEquipmentRealConnected}
-                iconClassName={styles.iconClassName}
-                className={styles.uploadBtn}
-                onClick={onOpenEdgeImpulseView}>
-                训练机器学习模型
-            </Button> */}
             <div style={{ height: "0.63rem" }} />
             <Button
                 size={'small'}

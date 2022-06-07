@@ -29,7 +29,6 @@ const Scratch3MeteostationBlocks = require('../extensions/scratch3_meteostation'
 
 const scratch3CreateSkill = require('../extensions/scratch3_createSkill');
 const Scratch3CalibrateServos = require('../extensions/scratch3_calibrateServos');
-const Scratch3EdgeimpulseBlocks = require('../extensions/scratch3_edgeimpulse');
 
 
 const builtinExtensions = {
@@ -52,9 +51,7 @@ const builtinExtensions = {
     threeAxisAccelerometer: Scratch3ThreeAxisAccelerometerBlocks,
     meteostation: Scratch3MeteostationBlocks,
     createSkill:scratch3CreateSkill,
-    calibrateServos:Scratch3CalibrateServos,
-    edgeimpulse:Scratch3EdgeimpulseBlocks,
-    
+    calibrateServos:Scratch3CalibrateServos,    
 };
 
 /**

@@ -27,7 +27,6 @@ import toolboxReducer, { toolboxInitialState } from './toolbox';
 import vmReducer, { vmInitialState } from './vm';
 import vmStatusReducer, { vmStatusInitialState } from './vm-status';
 import throttle from 'redux-throttle';
-import loginRegisterReducer, { loginRegisterInitialState } from './login-register-special';
 import deviceConnectReducer, { deviceConnectInitialState } from './device-connect-special';
 import materialReducer, { materialInitialState } from './material-special';
 import codeViewReducer from './code-view';
@@ -70,7 +69,6 @@ const guiInitialState = {
     toolbox: toolboxInitialState,
     vm: vmInitialState,
     vmStatus: vmStatusInitialState,
-    loginRegister: loginRegisterInitialState,
     deviceConnect: deviceConnectInitialState,
     material: materialInitialState,
     uploadState: uploadInitialState,
@@ -156,7 +154,6 @@ const guiReducer = combineReducers({
     toolbox: toolboxReducer,
     vm: vmReducer,
     vmStatus: vmStatusReducer,
-    loginRegister: loginRegisterReducer,
     deviceConnect: deviceConnectReducer,
     material: materialReducer,
     codeView: codeViewReducer,

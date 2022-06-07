@@ -94,7 +94,6 @@ const localMessages = defineMessages({
 });
 
 
-// const modelJson = 'https://cctest2.chmakered.com/gd-ai/mobilenet_feature/model.json';
 const modelJson = 'https://ide.tinkergen.com/ai_library/mobilenet_feature/model.json';
 
 class GraphTrainingModal extends React.Component {

@@ -1,25 +1,4 @@
-import {
-    URL_GET_TOKEN,
-    URL_USER_LOGIN_WITH_PWD
-} from '../../busi-proxy/busi-proxy';
-
 export default (Blockly) => {
-
-    Blockly.Arduino['motion_arduino_network_setwifi'] = function (block) {
-        Blockly.Arduino.definitions_['include_cyberEar'] = '#include <CyberEar_Pro.h>';
-        Blockly.Arduino.definitions_['var_cyberEarPro'] = "CyberEarPro cep;";
-        Blockly.Arduino.setups_['setup_wireBegin'] = 'Wire.begin();';
-        var ssid = Blockly.Arduino.valueToCode(block, 'SSID', Blockly.Arduino.ORDER_ATOMIC) || "ssid";
-        var password = Blockly.Arduino.valueToCode(block, 'PASSWORD', Blockly.Arduino.ORDER_ATOMIC) || "password";
-        var code = [
-            `cep.setParaLogin_url("${URL_USER_LOGIN_WITH_PWD}");`,
-            `cep.setParaToken_url("${URL_GET_TOKEN}");`,
-            `//==name`,
-            `//==password`,
-            `cep.Connect(${ssid}, ${password});\n`
-        ];
-        return code.join('\n');
-    };
 
     Blockly.Arduino['motion_arduino_network_state'] = function (block) {
         Blockly.Arduino.definitions_['include_cyberEar'] = '#include <CyberEar_Pro.h>';

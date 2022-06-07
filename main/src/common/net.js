@@ -19,17 +19,11 @@ const TYPE_GET = 'GET';
 const TYPE_POST = 'POST';
 const PROTOCOL = 'https:';
 
-import env from '../../../env.js'
 
 /**
  * 服务器地址
  */
-let SERVER_HOST = '';
-if (env == 'prod') {
-    SERVER_HOST = 'ide.tinkergen.com';
-} else {
-    SERVER_HOST = 'cctest2.chmakered.com';
-}
+let SERVER_HOST = 'ide.tinkergen.com';
 
 
 class NetProxyMgr {

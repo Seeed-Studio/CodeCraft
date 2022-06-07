@@ -16,9 +16,7 @@ export default{
             'teachableMachine',
             'cognitiveServices',
             'threeAxisAccelerometer',
-            'meteostation',
-            'edgeimpulse'
-
+            'meteostation'
         ]
     },
     1001: {
@@ -79,8 +77,6 @@ export default{
     1010: {
         id: 1010,
         type: 'device',
-        tags: [
-            'edgeimpulse'
-        ]
+        tags: []
     }
 }

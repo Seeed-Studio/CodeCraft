@@ -6,33 +6,6 @@ goog.require('Blockly.Blocks');
 goog.require('Blockly.Colours');
 goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
-Blockly.Blocks['motion_arduino_network_setwifi'] = {
-    init: function () {
-        this.jsonInit({
-            "message0": Blockly.Msg.ARDUINO_NETWORK_SETWIFI,
-            "args0": [
-                {
-                    "type": "field_image",
-                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/speech_recognizer.svg",
-                    "width": 65,
-                    "height": 30
-                },
-                {
-                    "type": "field_vertical_separator"
-                },
-                {
-                    "type": "input_value",
-                    "name": "SSID"
-                },
-                {
-                    "type": "input_value",
-                    "name": "PASSWORD"
-                }
-            ],
-            "extensions": ["colours_arduino_grove_i2c", "shape_statement"]
-        });
-    }
-};
 
 Blockly.Blocks['motion_arduino_network_state'] = {
     init: function () {
