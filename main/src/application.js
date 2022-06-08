@@ -2,7 +2,6 @@
 import net from './common/net';
 import netDownload from './common/net-download';
 import appConfig from './common/store';
-
 import { injectImageCache } from './common/image-cache';
 import { initCCLibrariesDir } from './common/utils';
 import { exec } from 'child_process';
@@ -12,9 +11,7 @@ import { Menu, Tray, BrowserWindow, ipcMain, app, nativeImage } from 'electron';
 import os from 'os';
 import fs from 'fs';
 import AutoLaunch from 'auto-launch';
-
 import SocketIOService from './service/socketio-service';
-
 import UpgradeModule from './modules/upgarde-module'
 import ProjectSaveModule from './modules/projectSave-module'
 import WindowModule from './modules/window-module'
@@ -34,7 +31,7 @@ const DRIVERS_DIR = path.join($dirname, '../../drivers/');
 
 // 自启动对象 兼容Mac Win Linux 
 let autoLaunch = new AutoLaunch({
-  name: 'Codecraft'
+  name: packageJson.productName
 });
 
 // 窗口对象
@@ -110,7 +107,6 @@ const onAppReady = (launchInfo) => {
   const messages = localMenuMessages[local];
 
   console.log('app language : ' + local);
-  console.log('onAppReady --------- launchInfo :' + launchInfo);
 
   // 判断是否开机启动
   const isStartUp = appConfig.getValue('isStartUp',false);
@@ -207,7 +203,7 @@ const onAppReady = (launchInfo) => {
   window = new BrowserWindow({
     show: false,
     autoHideMenuBar: true,
-    title: "Codecraft-PC2.0",
+    title: packageJson.productName,
     webPreferences: { webSecurity: false },
   });
   window.maximize();
@@ -225,7 +221,7 @@ const onAppReady = (launchInfo) => {
     protocol: 'file:'
   })
   // window.loadURL('http://localhost:8601');
-  window.webContents.openDevTools();
+  // window.webContents.openDevTools();
   window.loadURL(loadURL);
   /**-------------页面加载------------**/
   //初始化图片缓存
