@@ -417,10 +417,6 @@
         "message": "保存失败",
         "description": ""
     },
-    "gui.menuBar.commitSucc": {
-        "message": "提交成功",
-        "description": ""
-    },
     "gui.connectModal.connectingMessage": {
         "message": "正在连接，请稍候...",
         "description": ""
@@ -439,10 +435,6 @@
     },
     "gui.connectModal.operateFail": {
         "message": "操作失败",
-        "description": ""
-    },
-    "gui.menuBar.commitFail": {
-        "message": "提交失败",
         "description": ""
     },
     "gui.menuBar.openProjectFail": {
@@ -1390,10 +1382,6 @@
     },
     "gui.prompt.projectSave": {
         "message": "保存",
-        "description": ""
-    },
-    "gui.prompt.projectSaveMessage": {
-        "message": "是否保存当前文件至我的作品？",
         "description": ""
     },
     "gui.menuBar.share": {
@@ -2768,9 +2756,6 @@
     "gui.checkUpdate.downloadFail": {
         "message": "下载失败"
     },
-    "gui.menuBar.offlineRemind": {
-        "message": "网络未连接，已为你退出登录"
-    },
     "gui.library.connectNet": {
         "message": "暂无可见内容，请连接网络"
     },
@@ -2809,9 +2794,6 @@
     },
     "gui.net.errorMessage": {
         "message": "网络异常，请检查您的网络"
-    },
-    "gui.menuBar.saveErrorWithNoNet": {
-        "message": "保存失败，你可以将文件保存到本地"
     },
     "gui.library.tips.crateBtnText":{
         "message": "开始创作"
@@ -2857,9 +2839,6 @@
     },
     "gui.library.glint":{
         "message": "超能环"
-    },
-    "gui.library.course": {
-        "message": "教程"
     },
     "gui.library.project": {
         "message": "项目"

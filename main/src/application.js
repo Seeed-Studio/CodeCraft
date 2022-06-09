@@ -220,9 +220,10 @@ const onAppReady = (launchInfo) => {
     slashes: true,
     protocol: 'file:'
   })
+  window.loadURL(loadURL);
+  //dev test
   // window.loadURL('http://localhost:8601');
   // window.webContents.openDevTools();
-  window.loadURL(loadURL);
   /**-------------页面加载------------**/
   //初始化图片缓存
   injectImageCache();

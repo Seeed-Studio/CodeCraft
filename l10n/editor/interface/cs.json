@@ -417,10 +417,6 @@
         "message": "Uložení se nepodařilo",
         "description": ""
     },
-    "gui.menuBar.commitSucc": {
-        "message": "Odesláno",
-        "description": ""
-    },
     "gui.connectModal.connectingMessage": {
         "message": "Připojuje se ......",
         "description": ""
@@ -439,10 +435,6 @@
     },
     "gui.connectModal.operateFail": {
         "message": "Nezdařilo se",
-        "description": ""
-    },
-    "gui.menuBar.commitFail": {
-        "message": "Odeslání se nepodařilo",
         "description": ""
     },
     "gui.menuBar.openProjectFail": {
@@ -1403,10 +1395,6 @@
     },
     "gui.prompt.projectSave": {
         "message": "Uložit",
-        "description": ""
-    },
-    "gui.prompt.projectSaveMessage": {
-        "message": "Chcete zůstat v otevřeném projektu?",
         "description": ""
     },
     "gui.menuBar.share": {
@@ -2700,9 +2688,6 @@
     "gui.checkUpdate.downloadFail": {
         "message": "Stahování se nezdařilo"
     },
-    "gui.menuBar.offlineRemind": {
-        "message": "No Internet connection. The account is logged out."
-    },
     "gui.library.noMaterial": {
         "message": "Zatím není žádný materiál."
     },
@@ -2826,9 +2811,6 @@
     },
     "gui.net.errorMessage": {
         "message": "Network error, please check your network."
-    },
-    "gui.menuBar.saveErrorWithNoNet": {
-        "message": "Save failed, You can download the project to your computer."
     },
     "gui.library.tips.crateBtnText":{
         "message": "Začněte vytvářet"

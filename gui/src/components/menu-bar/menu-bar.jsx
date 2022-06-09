@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import bindAll from 'lodash.bindall';
 import React from 'react';
 import Box from '../box/box.jsx';
-import Button from '../button/button.jsx';
 import { ComingSoonTooltip } from '../coming-soon/coming-soon.jsx';
 import Divider from '../divider/divider.jsx';
 import SBFileUploader from '../../containers/sb-file-uploader.jsx';
@@ -17,20 +16,15 @@ import PythonDownBin from '../firmware-upgrade/python-down-bin.jsx'
 import PythonUpgrade from '../firmware-upgrade/python-upgrade.jsx'
 import PythonUpgrading from '../firmware-upgrade/python-upgrading.jsx'
 import PythonUpgradeSucc from '../firmware-upgrade/python-upgrade-succ.jsx'
-
 import RemindSaveModal from '../remind-save-special/remind-save.jsx';
-
 import {
     closeSerialChartModal,
+    closeLoadingProject,
 } from '../../reducers/modals';
-
-
 import LoaderSave from '../loader-save/loader.jsx';
-
 import {
     closeRecognizeVideoModal,
 } from '../../reducers/modals';
-
 import {
     setModalIndex as setRescueModalIndex,
     defaultRescueDeviceTo,
@@ -44,33 +38,23 @@ import {
     RESCUE_MODAL_PYTHON_UPGRADE_SUCC,
     RESCUE_MODAL_PYTHON_UPGRADE_FAIL
 } from '../../reducers/rescue'
-
 import CodeView from '../../containers/code-view.jsx';
 import PromptComponent from '../prompt-special/prompt-2.jsx';
-import Error from '../prompt-special/error.jsx';
 import About from '../prompt-special/about.jsx';
-
 import { projectTitleInitialState, setProjectTitle } from '../../reducers/project-title';
 import spinner from './spinner.gif';
 import { LoadingStates, onLoadedProject, onProjectUploadStarted, setLocalProjectPath } from '../../reducers/project-state';
 import {
     openLoadingProject,
-    closeEpcsLibrary,
 } from '../../reducers/modals';
 import analytics from '../../lib/analytics';
-import Loader from '../loader/loader.jsx';
 import locales from '../../../../l10n/dist/l10n';
 import { selectLocale } from '../../reducers/locales';
-
 import { setVisible as setCodeViewVisible } from '../../reducers/code-view';
-
-
 import {
     activateTab,
     BLOCKS_TAB_INDEX,
 } from '../../reducers/editor-tab';
-
-
 import { setPlayer } from '../../reducers/mode';
 import {
     getIsUpdating,
@@ -79,11 +63,9 @@ import {
     saveProject,
     updateProjectSaveState
 } from '../../reducers/project-state';
-
 import {
     dispatch01
 } from '../../lib/event-dispatch.js';
-
 import {
     openFileMenu,
     closeFileMenu,
@@ -101,15 +83,16 @@ import {
     closeLoginMenu,
     loginMenuOpen,
 } from '../../reducers/menus';
-import { setRemindSave, setRemindSaveType, setShowLoadingProject, setProjectSaved } from '../../reducers/material-special';
+import { 
+    setProjectItem,
+    setRemindSave, 
+    setRemindSaveType, 
+} from '../../reducers/material-special';
 import {
     activateState,
-    STATE_UNINSTALLED_ASSISTANT,
-    STATE_ASSISTANT_OCCUPIED
 } from '../../reducers/upload-state';
 
 import styles from './menu-bar.css';
-
 import languageIcon from '../language-selector/language-icon.svg';
 import iconFile from './icon-file.svg';
 import scratchLogo from './codecraft-logo.svg';
@@ -132,67 +115,39 @@ const ariaMessages = defineMessages({
         defaultMessage: 'Sample program',
         description: 'accessibility text for the tutorials button'
     },
-    course: {
-        id: 'gui.library.course',
-        defaultMessage: 'Courses'
-    },
     saveSucc: {
         id: 'gui.menuBar.saveSucc',
-        defaultMessage: 'Save success',
+        defaultMessage: 'Save success'
     },
     saveFail: {
         id: 'gui.menuBar.saveFail',
-        defaultMessage: 'Save failed',
-    },
-    commitSucc: {
-        id: 'gui.menuBar.commitSucc',
-        defaultMessage: 'Submit success',
-    },
-    commitFail: {
-        id: 'gui.menuBar.commitFail',
-        defaultMessage: 'Submit failed',
+        defaultMessage: 'Save failed'
     },
     openProjectFail: {
         id: 'gui.menuBar.openProjectFail',
-        defaultMessage: 'Failed to open project',
-        description: '打开工程失败'
+        defaultMessage: 'Failed to open project'
     },
     netErrorMessage: {
         id: 'gui.net.errorMessage',
-        defaultMessage: 'Network error, please check your network.',
-        description: '网络异常，请检查您的网络'
-    },
-    saveErrorWithNoNet: {
-        id: 'gui.menuBar.saveErrorWithNoNet',
-        defaultMessage: 'Save failed, You can download the project to your computer.',
-        description: '保存失败，你可以将文件保存到本地'
-    },
-
-    offlineRemind: {
-        id: 'gui.menuBar.offlineRemind',
-        defaultMessage: '网络未连接，已为你退出登录',
+        defaultMessage: 'Network error, please check your network.'
     },
     savePromptLabel: {
-        defaultMessage: 'Prompt',
-        description: '提示',
-        id: 'gui.prompt.projectSaveLabel'
+        id: 'gui.prompt.projectSaveLabel',
+        defaultMessage: 'Prompt'
     },
     projectSave: {
-        defaultMessage: 'Save',
-        description: '保存',
-        id: 'gui.prompt.projectSave'
+        id: 'gui.prompt.projectSave',
+        defaultMessage: 'Save'
     },
     projectNoSave: {
-        defaultMessage: 'Do not save',
-        description: '不保存',
-        id: 'gui.prompt.projectNoSave'
+        id: 'gui.prompt.projectNoSave',
+        defaultMessage: 'Do not save'
+        
     },
     projectSaveMessage: {
-        defaultMessage: 'Would you like to save the current project?',
-        description: '是否保存当前文件至我的作品？',
-        id: 'gui.prompt.projectSaveMessage'
+        id: 'gui.menuBar.downloadToComputer',
+        defaultMessage: 'Download to your computer'
     }
-
 });
 
 const NetErrorToast = (text) => {
@@ -260,7 +215,6 @@ MenuItemTooltip.propTypes = {
 
 class MenuBar extends React.Component {
 
-
     constructor(props) {
         super(props);
         bindAll(this, [
@@ -275,7 +229,6 @@ class MenuBar extends React.Component {
             'handleOpenLocalSelectedProject',
             'handleLanguageChange',
             'handleToDocument',
-            'handleClickRescueDevice',
             'handleCloseRescueDevice',
             'handleProjectSave',
             'saveLocalProject',
@@ -283,7 +236,6 @@ class MenuBar extends React.Component {
             'handleQuitApp',
             'handleQuitWithSave',
             'handleQuitCancel',
-            'getUserAgent',
             'onMessage01',
         ]);
 
@@ -298,12 +250,6 @@ class MenuBar extends React.Component {
 
             isRemidSaveBeforeClose: false,      // 是否提示保存
             isQuitApp: false,
-            cdc:{},
-            userAgentlVersion:'',
-            attachment:{},
-            iwidth:0,
-            fileList:[],
-            accept : '.cdc,.zip,.rar,.jpeg,.jpg,.png,.pdf,.doc,.docx,.CDC,.ZIP,.RAR,.JPEG,.JPG,.PNG,.PDF,.DOC,.DOCX.avi,.wmv,.mpg,.mpeg,.mov,.rm,.ram,.swf,.flv,.mp4,.mp3,.wma,.avi,.rm,.rmvb,.flv,.mpg,.mkv',
         }
 
         let { name } = getOsType();
@@ -317,7 +263,6 @@ class MenuBar extends React.Component {
 
     componentWillMount() {
         localStorage.setItem('locale', this.props.intl.locale);
-        this.getUserAgent()
     }
 
     componentDidMount() {
@@ -370,6 +315,7 @@ class MenuBar extends React.Component {
     }
     
     handleClickSave(projectType, saveType) {
+        console.log(projectType, saveType)
         // 保存文件到本地
         this.saveLocalProject(saveType)
     }
@@ -469,21 +415,6 @@ class MenuBar extends React.Component {
         this.props.vm.deviceEngine.sendProjectSaveMessage({ action: 'save-project', args });
     }
 
-    handleClickRescueDevice() {
-        this.props.vm.deviceEngine.open().then(
-            () => {
-                this.props.defaultRescueDeviceTo();
-                this.props.setRescueModalIndex(RESCUE_MODAL_DEVICE_SELECT);
-            },
-            errorCode => {
-                if (-1 === errorCode) {
-                    this.props.activateState(STATE_ASSISTANT_OCCUPIED);
-                } else {
-                    this.props.activateState(STATE_UNINSTALLED_ASSISTANT);
-                }
-            }
-        );
-    }
     handleCloseRescueDevice() {
         this.props.setRescueModalIndex(RESCUE_MODAL_HIDE);
     }
@@ -499,30 +430,6 @@ class MenuBar extends React.Component {
         })
     }    
 
-    getUserAgent(){
-        const userAgent = navigator.userAgent
-
-        let userAgentlVersion = ''
-        if (userAgent.indexOf("Win64") >= 0 || userAgent.indexOf("wow64") >= 0 || userAgent.indexOf("WOW64") >= 0 || userAgent.indexOf("Wow64") >= 0) {
-            userAgentlVersion = ' windows64'
-        }else{
-            userAgentlVersion = ' windows32'
-        }
-        if (userAgent.indexOf("Win32") >= 0 || userAgent.indexOf("wow32") >= 0 || userAgent.indexOf("WOW32") >= 0 || userAgent.indexOf("Wow32") >= 0) {
-            userAgentlVersion = ' windows32'
-        }
-        if (userAgent.indexOf("MAC") >= 0 || userAgent.indexOf("Mac") >= 0) {
-            userAgentlVersion = ' Mac' + userAgent.split("Mac")[2].substring(0,13)
-        }
-        if (userAgent.indexOf("X11") >= 0 || userAgent.indexOf("Linux") >= 0 || userAgent.indexOf("LINUX") >= 0) {
-            userAgentlVersion = ' Linux'
-        }
-        console.log(userAgentlVersion)
-        this.setState({
-            userAgentlVersion:userAgentlVersion
-        })
-    }
-
     onCodeViewShow() {
         this.props.setCodeViewVisible(!this.props.codeViewVisible);
         this.setState({
@@ -537,7 +444,6 @@ class MenuBar extends React.Component {
     }
     // 提示保存弹框，不保存，直接打开新项目
     handleCancelSaveProject() {
-        this.props.onCloseEpcsLibrary();  // 关闭素材弹框
         this.props.onSetRemindSave(false);
         this.props.vm.stopAll();
 
@@ -557,7 +463,6 @@ class MenuBar extends React.Component {
     }
     // 提示保存弹框，保存后，打开新项目
     handleSaveProject() {
-        this.props.onCloseEpcsLibrary();  // 关闭素材弹框
         this.props.onSetRemindSave(false);
         this.props.vm.stopAll();
 
@@ -570,8 +475,6 @@ class MenuBar extends React.Component {
 
         if (remindSaveType === 'newProject') {
             this.projectType = 'newProject';
-        } else if (remindSaveType === 'openSelectedCDC') {
-            this.projectType = 'openSelectedCDC';
         } else if(remindSaveType === 'openLocalProject') {
             this.projectType = 'openLocalProject';
         }
@@ -620,6 +523,7 @@ class MenuBar extends React.Component {
         this.props.onClickNew(canSave,currentDeviceID);
         this.props.closeRecognizeVideoModal();
         this.props.onSetProjectTitle('SuperMaker');
+        this.props.onSetProjectItem({});
         this.props.onSetLocalProjectPath('');
 
         this.resetForNewOrOpen();
@@ -627,6 +531,7 @@ class MenuBar extends React.Component {
 
     // 打开选择的本地项目
     openSelectedLocalProject(data) {
+        console.log('openSelectedLocalProject',data)
         this.setState({ isOpenLocal: true });
         this.props.closeRecognizeVideoModal();
 
@@ -637,7 +542,11 @@ class MenuBar extends React.Component {
         let thisFileInput;
         if (data) {
             thisFileInput = data;
+        } else {
+            thisFileInput = this.props.projectItem;
         }
+        console.log(this.props.projectItem)
+        console.log(data)
 
         const reader = new FileReader();
         // const thisFileInput = e.target;
@@ -665,12 +574,11 @@ class MenuBar extends React.Component {
                 this.props.onSetLocalProjectPath(thisFileInput.files[0].path);  // 保存项目路径
 
                 this.props.onActivateTab(BLOCKS_TAB_INDEX);
-                // console.log('this.props.loadingState : ' + this.props.loadingState);
                 this.props.onLoadingFinished(this.props.loadingState);
                 // Reset the file input after project is loaded
                 // This is necessary in case the user wants to reload a project
                 thisFileInput.value = null;
-
+                this.props.onSetProjectItem({});
                 this.resetForNewOrOpen();
             })
             .catch(error => {
@@ -738,6 +646,7 @@ class MenuBar extends React.Component {
 
         if ('newProject' == action) {
             this.props.onSetProjectTitle('SuperMaker');
+            this.props.onSetProjectItem({});
             this.props.onSetLocalProjectPath('');
         }
 
@@ -757,29 +666,16 @@ class MenuBar extends React.Component {
     }
 
     render() {
-        // 获取本地存储的用户名，判断用户是否已经登录
         const { 
             isRemindSave,
-            loading,
-            isProjectSaved, 
-            onActivateTab, 
             rescuer, 
-            isNeedNewProject, 
-            disconnect, 
-            onCloseSerialChartModal, 
-            resetDebugMode, 
-            onSetSavingState,
 	        codeViewVisible,
 	        intl,
-            isOnLine
         } = this.props;
 	
         const { 
-            iwidth,
             isSaving, 
-            isShowSaveAs, 
             isOpenAbout,
-            accept
         } = this.state;
         const { isRemidSaveBeforeClose } = this.state;
         const saveNowMessage = (
@@ -797,49 +693,6 @@ class MenuBar extends React.Component {
                 id="gui.menuBar.saving"
             />
         );
-
-        const newProjectMessage = (
-            <FormattedMessage
-                defaultMessage="New"
-                description="Menu bar item for creating a new project"
-                id="gui.menuBar.new"
-            />
-        );
-        const shareButton = (
-            <Button
-                className={classNames(styles.shareButton)}
-                onClick={this.props.onShare}
-            >
-                <FormattedMessage
-                    defaultMessage="Share"
-                    description="Label for project share button"
-                    id="gui.menuBar.share"
-                />
-            </Button>
-        );
-
-        const messages = defineMessages({
-            savePromptLabel: {
-                defaultMessage: 'Prompt',
-                description: '提示',
-                id: 'gui.prompt.projectSaveLabel'
-            },
-            projectSave: {
-                defaultMessage: 'Save',
-                description: '保存',
-                id: 'gui.prompt.projectSave'
-            },
-            projectNoSave: {
-                defaultMessage: 'Do not save',
-                description: '不保存',
-                id: 'gui.prompt.projectNoSave'
-            },
-            projectSaveMessage: {
-                defaultMessage: 'Would you like to save the current project?',
-                description: '是否保存当前文件至我的作品？',
-                id: 'gui.prompt.projectSaveMessage'
-            }
-        });
 
         return (
             <Box
@@ -949,7 +802,6 @@ class MenuBar extends React.Component {
                                     onClick={() => { this.saveLocalProject('saveAs'); this.props.onRequestCloseFile(); }}>
                                     <FormattedMessage
                                         defaultMessage="Download to your computer"
-                                        description="Menu bar item for downloading a project to your computer"
                                         id="gui.menuBar.downloadToComputer"
                                     />
                                 </MenuItem>
@@ -1203,6 +1055,7 @@ const mapStateToProps = state => {
         projectTitle: state.scratchGui.projectTitle,
         vm: state.scratchGui.vm,
         codeViewVisible: state.scratchGui.codeView.visible,
+        projectItem: state.scratchGui.material.projectItem,
         isRemindSave: state.scratchGui.material.isRemindSave,
         isRemindSaveType: state.scratchGui.material.isRemindSaveType,
         isProjectSaved: state.scratchGui.material.isProjectSaved,
@@ -1239,9 +1092,10 @@ const mapDispatchToProps = dispatch => ({
     onSetRemindSaveType: type => dispatch(setRemindSaveType(type)),
     onLoadingFinished: loadingState => {
         dispatch(onLoadedProject(loadingState));
+        dispatch(closeLoadingProject());
     },
-    onCloseEpcsLibrary: () => dispatch(closeEpcsLibrary()),
     onSetProjectTitle: title => dispatch(setProjectTitle(title)),
+    onSetProjectItem: item => dispatch(setProjectItem(item)),
     onLoadingStarted: () => {
         dispatch(openLoadingProject());
         dispatch(onProjectUploadStarted());

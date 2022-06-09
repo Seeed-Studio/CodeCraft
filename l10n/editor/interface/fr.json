@@ -1225,10 +1225,6 @@
         "message": "Sauver",
         "description": ""
     },
-    "gui.prompt.projectSaveMessage": {
-        "message": "Souhaitez-vous enregistrer le projet actuel?",
-        "description": ""
-    },
     "gui.library.openLocalProject": {
         "message": "Ouvrir des projets locaux",
         "description": ""
@@ -1820,14 +1816,6 @@
         "message": "Échec de la sauvegarde",
         "description": ""
     },
-    "gui.menuBar.commitSucc": {
-        "message": "Envoyé",
-        "description": ""
-    },
-    "gui.menuBar.commitFail": {
-        "message": "Échec de l'envoi",
-        "description": ""
-    },
     "gui.menuBar.openProjectFail": {
         "message": "Échec de l'ouverture du projet",
         "description": ""
@@ -2270,9 +2258,6 @@
     "gui.checkUpdate.downloadFail": {
         "message": "Échec du téléchargement"
     },
-    "gui.menuBar.offlineRemind": {
-        "message": "Pas de connexion Internet. Le compte est déconnecté."
-    },
     "gui.library.connectNet": {
         "message": "Aucun contenu visible, veuillez vous connecter à Internet."
     },
@@ -2311,9 +2296,6 @@
     },
     "gui.net.errorMessage": {
         "message": "Erreur réseau, veuillez vérifier votre réseau."
-    },
-    "gui.menuBar.saveErrorWithNoNet": {
-        "message": "L'enregistrement a échoué, vous pouvez télécharger le projet sur votre ordinateur."
     },
     "gui.library.tips.crateBtnText":{
         "message": "Commencer le codage"
@@ -2359,9 +2341,6 @@
     },
     "gui.library.glint":{
         "message": "GLINT"
-    },
-    "gui.library.course": {
-        "message": "Cours"
     },
     "gui.library.project": {
         "message": "Projets"
