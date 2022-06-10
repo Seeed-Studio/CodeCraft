@@ -219,6 +219,8 @@ class MenuBar extends React.Component {
         super(props);
         bindAll(this, [
             'handleClickNew',
+            'handleClickOpenLocalProject',
+            'handleClickDownloadProject',
             'handleClickSave',
             'handClickAbout',
             'handleCloseAbout',
@@ -226,7 +228,6 @@ class MenuBar extends React.Component {
             'handleCancelSaveProject',
             'handleSaveProject',
             'handleCloseSave',
-            'handleOpenLocalSelectedProject',
             'handleLanguageChange',
             'handleToDocument',
             'handleCloseRescueDevice',
@@ -314,15 +315,74 @@ class MenuBar extends React.Component {
         }
     }
     
-    handleClickSave(projectType, saveType) {
-        console.log(projectType, saveType)
-        // 保存文件到本地
-        this.saveLocalProject(saveType)
+    handleClickSave() {
+        this.saveLocalProject()
     }
 
-    // 处理文件断网保存
+    // 打开选择的本地项目
+    handleClickOpenLocalProject(data) {
+        this.setState({ isOpenLocal: true });
+        this.props.closeRecognizeVideoModal();
+
+        // 如果代码编辑器打开，则关闭
+        if (this.props.codeViewVisible) {
+            this.props.setCodeViewVisible(false);
+        }
+        let thisFileInput;
+        if (data) {
+            thisFileInput = data;
+        } else {
+            thisFileInput = this.props.projectItem;
+        }
+        const reader = new FileReader();
+        reader.onload = () => this.props.vm.loadProject(reader.result)
+            .then(() => {
+                if (thisFileInput.files[0].name) {
+                    const matches1 = thisFileInput.files[0].name.match(/^(.*)\.cdc$/);
+                    if (matches1) {
+                        const truncatedProjectTitle = matches1[1].substring(0, 100);
+                        this.props.onSetProjectTitle(truncatedProjectTitle);
+                    }
+                    const matches2 = thisFileInput.files[0].name.match(/^(.*)\.sb3$/);
+                    if (matches2) {
+                        const truncatedProjectTitle = matches2[1].substring(0, 100);
+                        this.props.onSetProjectTitle(truncatedProjectTitle);
+                    }
+                }
+                this.props.onSetLocalProjectPath(thisFileInput.files[0].path);  // 保存项目路径
+
+                this.props.onActivateTab(BLOCKS_TAB_INDEX);
+                this.props.onLoadingFinished(this.props.loadingState);
+                // Reset the file input after project is loaded
+                // This is necessary in case the user wants to reload a project
+                thisFileInput.value = null;
+                this.props.onSetProjectItem({});
+                this.resetForNewOrOpen();
+            })
+            .catch(error => {
+                // console.log(error);
+                // alert(this.props.intl.formatMessage(messages.loadError)); // eslint-disable-line no-alert
+                this.props.onLoadingFinished(this.props.loadingState);
+                // Reset the file input after project is loaded
+                // This is necessary in case the user wants to reload a project
+                thisFileInput.value = null;
+                toasts.error(this.props.intl.formatMessage(ariaMessages.openProjectFail));
+            });
+        if (thisFileInput.files) { // Don't attempt to load if no file was selected
+            this.props.onLoadingStarted();
+            reader.readAsArrayBuffer(thisFileInput.files[0]);
+            // extract the title from the file and set it as current project title
+        }
+    }
+
+    //download project to computer
+    handleClickDownloadProject() {
+        this.saveLocalProject('saveAs');
+        this.props.onRequestCloseFile();
+    }
+
+    // after project saved
     handleProjectSave(data) {
-        console.log('handleProjectSave-=-', data)
         if (data.action === 'project-path') {
             this.setState({ isSaving: false });
             this.props.onSetSavingState(false);
@@ -332,10 +392,6 @@ class MenuBar extends React.Component {
                     this.handleSaveQuit();
                 } else {
                     toasts.success(this.props.intl.formatMessage(ariaMessages.saveSucc));
-                    // 保存成功后，打开新项目
-                    if (this.projectType === 'openLocalProject') {
-                        this.openSelectedLocalProject();
-                    }
                     if (this.projectType === 'newProject') {
                         this.newProject();
                     }
@@ -363,7 +419,7 @@ class MenuBar extends React.Component {
             isQuitApp: true,
             isRemidSaveBeforeClose: false
         }, () => {
-            this.handleClickSave();
+            this.saveLocalProject();
         })
     }
     // 退出App
@@ -458,7 +514,7 @@ class MenuBar extends React.Component {
         if (remindSaveType === 'newProject') {
             this.newProject();
         } else if (remindSaveType === 'openLocalProject') {
-            this.openSelectedLocalProject();
+            this.handleClickOpenLocalProject();
         }
     }
     // 提示保存弹框，保存后，打开新项目
@@ -478,7 +534,7 @@ class MenuBar extends React.Component {
         } else if(remindSaveType === 'openLocalProject') {
             this.projectType = 'openLocalProject';
         }
-        this.handleClickSave(this.projectType);
+        this.saveLocalProject();
     }
 
     resetCodeViewAndProject() {
@@ -529,77 +585,8 @@ class MenuBar extends React.Component {
         this.resetForNewOrOpen();
     }
 
-    // 打开选择的本地项目
-    openSelectedLocalProject(data) {
-        console.log('openSelectedLocalProject',data)
-        this.setState({ isOpenLocal: true });
-        this.props.closeRecognizeVideoModal();
+    
 
-        // 如果代码编辑器打开，则关闭
-        if (this.props.codeViewVisible) {
-            this.props.setCodeViewVisible(false);
-        }
-        let thisFileInput;
-        if (data) {
-            thisFileInput = data;
-        } else {
-            thisFileInput = this.props.projectItem;
-        }
-        console.log(this.props.projectItem)
-        console.log(data)
-
-        const reader = new FileReader();
-        // const thisFileInput = e.target;
-
-        reader.onload = () => this.props.vm.loadProject(reader.result)
-            .then(() => {
-                analytics.event({
-                    category: 'project',
-                    action: 'Import Project File',
-                    nonInteraction: true
-                });
-
-                if (thisFileInput.files[0].name) {
-                    const matches1 = thisFileInput.files[0].name.match(/^(.*)\.cdc$/);
-                    if (matches1) {
-                        const truncatedProjectTitle = matches1[1].substring(0, 100);
-                        this.props.onSetProjectTitle(truncatedProjectTitle);
-                    }
-                    const matches2 = thisFileInput.files[0].name.match(/^(.*)\.sb3$/);
-                    if (matches2) {
-                        const truncatedProjectTitle = matches2[1].substring(0, 100);
-                        this.props.onSetProjectTitle(truncatedProjectTitle);
-                    }
-                }
-                this.props.onSetLocalProjectPath(thisFileInput.files[0].path);  // 保存项目路径
-
-                this.props.onActivateTab(BLOCKS_TAB_INDEX);
-                this.props.onLoadingFinished(this.props.loadingState);
-                // Reset the file input after project is loaded
-                // This is necessary in case the user wants to reload a project
-                thisFileInput.value = null;
-                this.props.onSetProjectItem({});
-                this.resetForNewOrOpen();
-            })
-            .catch(error => {
-                // console.log(error);
-                // alert(this.props.intl.formatMessage(messages.loadError)); // eslint-disable-line no-alert
-                this.props.onLoadingFinished(this.props.loadingState);
-                // Reset the file input after project is loaded
-                // This is necessary in case the user wants to reload a project
-                thisFileInput.value = null;
-                toasts.error(this.props.intl.formatMessage(ariaMessages.openProjectFail));
-            });
-        if (thisFileInput.files) { // Don't attempt to load if no file was selected
-            this.props.onLoadingStarted();
-            reader.readAsArrayBuffer(thisFileInput.files[0]);
-            // extract the title from the file and set it as current project title
-        }
-    }
-
-    handleOpenLocalSelectedProject(data) {
-        this.openSelectedLocalProject(data);
-    }
 
     handleLanguageChange(value) {
         const newLocale = value;
@@ -644,7 +631,11 @@ class MenuBar extends React.Component {
 
         this.projectType = projectType;
 
-        if ('newProject' == action) {
+        if ('saveProject' == action) {
+            this.props.onSetRemindSave(false);
+            this.saveLocalProject();
+        }
+        else if ('newProject' == action) {
             this.props.onSetProjectTitle('SuperMaker');
             this.props.onSetProjectItem({});
             this.props.onSetLocalProjectPath('');
@@ -784,7 +775,7 @@ class MenuBar extends React.Component {
                                 </MenuItem>
 
                                 <SBFileUploader
-                                    onOpenLocalSelectedProject={this.handleOpenLocalSelectedProject}
+                                    onOpenLocalSelectedProject={this.handleClickOpenLocalProject}
                                 >
                                     {(renderFileInput, loadProject) => (
                                         <MenuItem
@@ -799,7 +790,7 @@ class MenuBar extends React.Component {
                                     )}
                                 </SBFileUploader>                                
                                 <MenuItem
-                                    onClick={() => { this.saveLocalProject('saveAs'); this.props.onRequestCloseFile(); }}>
+                                    onClick={this.handleClickDownloadProject}>
                                     <FormattedMessage
                                         defaultMessage="Download to your computer"
                                         id="gui.menuBar.downloadToComputer"
