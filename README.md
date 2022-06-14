@@ -21,11 +21,7 @@ Windows:
 You can also build the project manually:
 
     cd blocks
-    npm install
-    // for mac or linux
-    npm run build-mac
-    // for win
-    npm run build-win
+    npm install && npm run build
 
     cd ../l10n
     npm install && npm run build
@@ -52,8 +48,10 @@ You can also build the project manually:
     cd ..
     npm install
     rm -r build 
-    // Mac/Linux
+    // Mac
     npm run publish-mac
+    // Linux
+    npm run publish-linux
     // Windows
     npm run publish-win64
 
