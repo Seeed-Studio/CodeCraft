@@ -1,40 +1,64 @@
-#简介
-TODO: 简要介绍你的项目。通过此节说明此项目的目标或动机。
+# Codecraft
+**Codecraft is a graphical programming software which is based on Scratch 3.0. It targets teenagers of age 7-16, compatible with WIN/MAC.**  
 
-# compile dependencies	
+[Codecraft help online](https://www.yuque.com/tinkergen-help-en/codecraft?language=en-us)
 
-cd blocks
-npm install
-```for mac or linux
-npm run build-mac
-```for win
-npm run build-win
+### Support Devices
+Grove Zero，Arduino Uno/Mega，micro:bit，M.A.R.K(CyberEye)，Grove Joint，GLINT，Bittle
 
-cd l10n
-npm install && npm run build
+## Download
 
-cd vm
-npm install && npm run build
+You can download the latest version from [the download page from our website](https://ide.tinkergen.com/download/en/)
 
-cd gui
-npm install
-```for mac or linux
-npm run build-mac
-```for win
-npm run build-win
-rm -rf ../main/app/gui && cp -r ./build ../main/app/gui
+## Getting started
+Linux/Mac:
 
-cd app
-npm install
-./node_modules/.bin/electron-rebuild serialport
+    bash run-mac.sh
+Windows:
 
-If the error message “script is prohibited on this system” appears on the Windows system, you need to open powershell as an administrator, and then execute Set-ExecutionPolicy RemoteSigned
+    bash run-win64.sh
 
-cd main
-npm install
-rm -rf build && npm run publish-mac or win or linux  
+You can also build the project manually:
 
-2.	软件依赖项
-3.	最新发布
-4.	API 参考
+    cd blocks
+    npm install
+    // for mac or linux
+    npm run build-mac
+    // for win
+    npm run build-win
+
+    cd ../l10n
+    npm install && npm run build
+
+    cd ../vm
+    npm install && npm run build
+
+    cd ../gui
+    npm install
+    // for mac or linux
+    npm run build-mac
+    // for win
+    npm run build-win
+    rm -r ../main/app/gui && cp -r ./build ../main/app/gui
+
+    cd ../main/app
+    npm install
+    ./node_modules/.bin/electron-rebuild serialport
+
+    // If the error message “script is prohibited on this system” appears on the Windows   
+    // system, you need to open powershell as an administrator, and then execute 
+    // Set-ExecutionPolicy RemoteSigned
+
+    cd ..
+    npm install
+    rm -r build 
+    // Mac/Linux
+    npm run publish-mac
+    // Windows
+    npm run publish-win64
+
+Once you finish building, you can find the installer under main/build/
+
+## Contribution
+
 
