@@ -108,10 +108,6 @@ class VirtualMachine extends EventEmitter {
         this._dragTarget = null;
 
         this.debugMode = DEBUG_MODE_OFFLINE;
-        /**
-         * Micro-lesson
-         */
-        this.microLesson = null;
 
         // Runtime emits are passed along as VM emits.
         this.runtime.on(Runtime.SCRIPT_GLOW_ON, glowData => {
@@ -309,8 +305,6 @@ class VirtualMachine extends EventEmitter {
      * Clear out current running project data.
      */
     clear() {
-        this.microLesson = null;
-
         this.setDebugMode(0);
         this.runtime.dispose();
         this.editingTarget = null;
@@ -638,8 +632,6 @@ class VirtualMachine extends EventEmitter {
                 activeDeviceIndex: activeDeviceIndex,
                 activeTabIndex: this.activeTabIndex
             }
-            // Set micro lesson info
-            object.microLesson = this.microLesson;
             // ai data
             object.aiTrainDatas = this.runtime.trainMode || {};
         }
@@ -948,9 +940,6 @@ class VirtualMachine extends EventEmitter {
                 }
             }
 
-            if (projectJSON.hasOwnProperty('microLesson')) {
-                this.emitLoadedMicroLesson(projectJSON.microLesson);
-            }
             // Gets the device id list
             const deviceids = this.runtime.targets
                 .filter(target => target.getType() === 'device' && !target.isStage)

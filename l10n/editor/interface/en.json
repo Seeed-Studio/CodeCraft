@@ -1227,10 +1227,6 @@
         "message": "Save",
         "description": ""
     },
-    "gui.prompt.projectSaveMessage": {
-        "message": "Would you like to save the current project?",
-        "description": ""
-    },
     "gui.library.openLocalProject": {
         "message": "Open local projects",
         "description": ""
@@ -1814,14 +1810,6 @@
         "message": "Save failed",
         "description": ""
     },
-    "gui.menuBar.commitSucc": {
-        "message": "Submitted",
-        "description": ""
-    },
-    "gui.menuBar.commitFail": {
-        "message": "Submit failed",
-        "description": ""
-    },
     "gui.menuBar.openProjectFail": {
         "message": "Failed to open project",
         "description": ""
@@ -2264,9 +2252,6 @@
     "gui.checkUpdate.downloadFail": {
         "message": "Download failed"
     },
-    "gui.menuBar.offlineRemind": {
-        "message": "No Internet connection. The account is logged out."
-    },
     "gui.library.connectNet": {
         "message": "No visible content, please connect to the Internet."
     },
@@ -2305,9 +2290,6 @@
     },
     "gui.net.errorMessage": {
         "message": "Network error, please check your network."
-    },
-    "gui.menuBar.saveErrorWithNoNet": {
-        "message": "Save failed, You can download the project to your computer."
     },
     "gui.library.tips.crateBtnText":{
         "message": "Start Coding"
@@ -2354,9 +2336,7 @@
     "gui.library.glint":{
         "message": "GLINT"
     },
-    "gui.library.course": {
-        "message": "Courses"
-    },
+
     "gui.library.project": {
         "message": "Projects"
     },
