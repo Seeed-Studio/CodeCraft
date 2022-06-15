@@ -250,11 +250,6 @@ class Gen_compressed(threading.Thread):
       [os.path.join("core", "blockly.js")])
     filenames.sort()  # Deterministic build.
 
-    # for filename in filenames:
-    #   # Append filenames as false arguments the step before compiling will
-    #   # either transform them into arguments for local or remote compilation
-    #   params.append(("js_file", filename))
-
     f = open("gen_reqfiles.txt", "w")
     for filename in filenames:
       # Append filenames as false arguments the step before compiling will
@@ -292,12 +287,7 @@ class Gen_compressed(threading.Thread):
     # Add Blockly.Colours for use of centralized colour bank
     filenames.append(os.path.join("core", "colours.js"))
     filenames.append(os.path.join("core", "constants.js"))
-
-    # for filename in filenames:
-    #   # Append filenames as false arguments the step before compiling will
-    #   # either transform them into arguments for local or remote compilation
-    #   params.append(("js_file", filename))
-    
+  
     f = open("gen_reqfiles.txt", "w")
     for filename in filenames:
       # Append filenames as false arguments the step before compiling will
