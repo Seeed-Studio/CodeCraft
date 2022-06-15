@@ -249,10 +249,20 @@ class Gen_compressed(threading.Thread):
     filenames = calcdeps.CalculateDependencies(search_paths,
       [os.path.join("core", "blockly.js")])
     filenames.sort()  # Deterministic build.
+
+    # for filename in filenames:
+    #   # Append filenames as false arguments the step before compiling will
+    #   # either transform them into arguments for local or remote compilation
+    #   params.append(("js_file", filename))
+
+    f = open("gen_reqfiles.txt", "w")
     for filename in filenames:
       # Append filenames as false arguments the step before compiling will
       # either transform them into arguments for local or remote compilation
-      params.append(("js_file", filename))
+      # params.append(("js_file", filename))
+      f.write(filename + " ")
+    f.close()
+    params.append(("flagfile", "gen_reqfiles.txt"))
 
     self.do_compile(params, target_filename, filenames, "")
 
@@ -283,10 +293,19 @@ class Gen_compressed(threading.Thread):
     filenames.append(os.path.join("core", "colours.js"))
     filenames.append(os.path.join("core", "constants.js"))
 
+    # for filename in filenames:
+    #   # Append filenames as false arguments the step before compiling will
+    #   # either transform them into arguments for local or remote compilation
+    #   params.append(("js_file", filename))
+    
+    f = open("gen_reqfiles.txt", "w")
     for filename in filenames:
       # Append filenames as false arguments the step before compiling will
       # either transform them into arguments for local or remote compilation
-      params.append(("js_file", filename))
+      # params.append(("js_file", filename))
+      f.write(filename + " ")
+    f.close()
+    params.append(("flagfile", "gen_reqfiles.txt"))
 
     # Remove Blockly.Blocks to be compatible with Blockly.
     remove = "var Blockly={Blocks:{}};"
@@ -445,10 +464,10 @@ class Gen_compressed(threading.Thread):
       stats = json_data["statistics"]
       original_b = stats["originalSize"]
       compressed_b = stats["compressedSize"]
-      if original_b > 0 and compressed_b > 0:
-        f = open(target_filename, "w")
-        f.write(code)
-        f.close()
+      # if original_b > 0 and compressed_b > 0:
+      f = open(target_filename, "w")
+      f.write(code)
+      f.close()
 
   def report_stats(self, target_filename, json_data):
       stats = json_data["statistics"]
