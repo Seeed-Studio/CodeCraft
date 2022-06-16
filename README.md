@@ -11,6 +11,12 @@ Grove Zero，Arduino Uno/Mega，micro:bit，M.A.R.K(CyberEye)，Grove Joint，GL
 You can download the latest version from [the download page from our website](https://ide.tinkergen.com/download/en/)
 
 ## Getting started
+This project requires:
+- [Node.js](https://nodejs.org/)
+- [Python 2.x](https://www.python.org/downloads/release/python-272/), and make it as the default version
+
+### Building
+
 Linux/Mac:
 
     bash run-mac.sh
