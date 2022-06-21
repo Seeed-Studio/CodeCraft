@@ -15,7 +15,7 @@ class Calendar extends React.Component {
       day: props.day,
       dayList: 31,
       yearList: props.yearList,
-      daysMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31], //每月对应的天数
+      daysMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31], // 每月对应的天数 length of each month
 
       showYear: false,
       showMonth: false,

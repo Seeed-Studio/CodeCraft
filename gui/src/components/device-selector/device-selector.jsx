@@ -273,9 +273,9 @@ const DeviceSelectorComponent = (props) => {
                             <Box>{linkDevice}</Box>
                         </Box>
                     </Box>
-                    {/* 横向分割线 */}
+                    {/* 横向分割线 Horizontal Divider */}
                     <Box className={styles.dividerHorizontal} />
-                    {/* 支持在线、离线模式 */}
+                    {/* 支持在线、离线模式  Support online/offline mode */}
                     {alltSupport &&
                         (<Box className={styles.btnTrggleWrapper}>
                             <div className={styles.btnTrggleFlow}>
@@ -286,9 +286,9 @@ const DeviceSelectorComponent = (props) => {
                             </div>
                         </Box>)
                     }
-                    {/* 横向分割线 */}
+                    {/* 横向分割线 Horizontal Divider */}
                     {alltSupport && <Box className={styles.dividerHorizontal} />}
-                    {/* 上传按钮区域 */}
+                    {/* 上传按钮区域  Update button area */}
                     <div style={{ marginTop: "0.63rem" }}>
                         <UploadCode onRapidUpgrade={() => { onRescueProcess(editingDevice) }} />
                     </div>
@@ -331,7 +331,7 @@ const DeviceSelectorComponent = (props) => {
                 } */}
                 </Box>
             </div>
-            {/* 显示G0正确手持方法 */}
+            {/* 显示G0正确手持方法  Show how to hold G0 correctly */}
             <div style={{ flexGrow: 1, flexBasis: 0, overflow: 'auto' }}>
                 {
                     isGroveZero &&
@@ -339,7 +339,7 @@ const DeviceSelectorComponent = (props) => {
                 }
             </div>
 
-            {/* 物理设备列表 */}
+            {/* 物理设备列表  List for physical devices */}
             {devicesLibraryVisible &&
                 <Modal
                     id={`43143242424e`}
@@ -374,7 +374,7 @@ const DeviceSelectorComponent = (props) => {
                     onCancel={onPromptCanel}
                 />
             } */}
-            {/* 设备详情布局 */}
+            {/* 设备详情布局  Detail view for a device */}
             {viewMoreModalVisible &&
                 <DeviceViewMoreModal
                     deviceType={deviceType}
@@ -382,7 +382,7 @@ const DeviceSelectorComponent = (props) => {
                     onRequestClose={onCloseViewMoreModal}
                 />}
 
-            {/* 未下载或者已下载但未打开设备助手软件 */}
+            {/* 未下载或者已下载但未打开设备助手软件  Assistant not open*/}
             {
                 activeConnectModalTab === 2 &&
                 <NotOpenAssistantModal
@@ -390,7 +390,7 @@ const DeviceSelectorComponent = (props) => {
                     onRequestClose={() => { onConnectModalClose() }}
                 />
             }
-            {/* 在不同浏览器内、或者同一浏览器的不同窗口内，已连接了设备，弹出提示框： */}
+            {/* 在不同浏览器内、或者同一浏览器的不同窗口内，已连接了设备，弹出提示框： Already connected the device on other browser tab/window */}
             {
                 activeConnectModalTab === 0 &&
                 <IsUsedModal
@@ -398,6 +398,7 @@ const DeviceSelectorComponent = (props) => {
                 />
             }
             {/* 设备连接成功后，使用期间发生异常而自动断开连接时（如设备助手被关闭或卸载、驱动被卸载等）弹出提示框： */}
+            {/* Disconnect to the device due to exception (device assistant closed, driver uninstalled, etc.) occur during connection */}
             {
                 activeConnectModalTab === 1 &&
                 <HasDisconnectedModal
@@ -405,18 +406,18 @@ const DeviceSelectorComponent = (props) => {
                     onRequestClose={() => { onConnectModalClose() }}
                 />
             }
-            {/* 设备连接相关弹框 */}
+            {/* 设备连接相关弹框  Modal for connection */}
             {
                 connectModalVisible &&
                 <ConnectModal />
             }
 
-            {/* 连接中状态  */}
+            {/* 连接中状态 Modal during connection */}
             {
                 connectingVisible && <ConnectingModal />
             }
 
-            {/* 切换设备二次确认 */}
+            {/* 切换设备二次确认 Double confirmation for switching device */}
 
             {
                 switchingConfirm &&

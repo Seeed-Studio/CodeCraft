@@ -62,78 +62,77 @@ class CreateSkillItem extends React.Component {
             index:1,
             createSkillName:'',
             isStateLeftForeleg:true,
-            // --- 分界线 ---   --- 分界线 --- \\
-            // --- 分界线 ---   --- 分界线 --- \\
+            // ------- 分界线 Divider ------- \\
             newCreateAngleList:[{
-                // --- 新建分界线 ---    --- 分界线 --- \\
+                // ------- 分界线 Divider ------- \\
                 newHeaderNum:0,
 
-                newLeftForelegUpperNum:0,// 右前腿上关节
-                newLeftForelegLowerNum:0,// 右前腿下关节
+                newLeftForelegUpperNum:0,       // 右前腿上关节
+                newLeftForelegLowerNum:0,       // 右前腿下关节
 
-                newRightForelegUpperNum:0, // 左前腿上关节
-                newRightForelegLowerNum:0,// 左前腿下关节
+                newRightForelegUpperNum:0,      // 左前腿上关节
+                newRightForelegLowerNum:0,      // 左前腿下关节
 
-                newLeftHindlegUpperNum:0,// 右后腿上关节
-                newLeftHindlegLowerNum:0,// 右后腿下关节
+                newLeftHindlegUpperNum:0,       // 右后腿上关节
+                newLeftHindlegLowerNum:0,       // 右后腿下关节
 
-                newRightHindlegUpperNum:0, // 左后腿上关节
-                newRightHindlegLowerNum:0,// 左后腿下关节
-                // --- 分界线 ---   --- 分界线 --- \\
+                newRightHindlegUpperNum:0,      // 左后腿上关节
+                newRightHindlegLowerNum:0,      // 左后腿下关节
+                // ------- 分界线 Divider ------- \\
                 newHeaderInput:0,
 
-                newLeftForelegLowerInput:0,// 右前腿上关节
-                newLeftForelegUpperInput:0,// 右前腿下关节
+                newLeftForelegLowerInput:0,     // 右前腿上关节
+                newLeftForelegUpperInput:0,     // 右前腿下关节
 
-                newRightForelegUpperInput:0, // 左前腿上关节
-                newRightForelegLowerInput:0,// 左前腿下关节
+                newRightForelegUpperInput:0,    // 左前腿上关节
+                newRightForelegLowerInput:0,    // 左前腿下关节
 
-                newLeftHindlegUpperInput:0,// 右后腿上关节
-                newLeftHindlegLowerInput:0,// 右后腿下关节
+                newLeftHindlegUpperInput:0,     // 右后腿上关节
+                newLeftHindlegLowerInput:0,     // 右后腿下关节
 
-                newRightHindlegUpperInput:0, // 左后腿上关节
-                newRightHindlegLowerInput:0,// 左后腿下关节
+                newRightHindlegUpperInput:0,    // 左后腿上关节
+                newRightHindlegLowerInput:0,    // 左后腿下关节
             }],
             recordCreateAngleList:[{
                 newHeaderNum:0,
-                newLeftForelegUpperNum:0,// 右前腿上关节
-                newLeftForelegLowerNum:0,// 右前腿下关节
+                newLeftForelegUpperNum:0,       // 右前腿上关节
+                newLeftForelegLowerNum:0,       // 右前腿下关节
 
-                newRightForelegUpperNum:0, // 左前腿上关节
-                newRightForelegLowerNum:0,// 左前腿下关节
+                newRightForelegUpperNum:0,      // 左前腿上关节
+                newRightForelegLowerNum:0,      // 左前腿下关节
 
-                newLeftHindlegUpperNum:0,// 右后腿上关节
-                newLeftHindlegLowerNum:0,// 右后腿下关节
+                newLeftHindlegUpperNum:0,       // 右后腿上关节
+                newLeftHindlegLowerNum:0,       // 右后腿下关节
 
-                newRightHindlegUpperNum:0, // 左后腿上关节
-                newRightHindlegLowerNum:0,// 左后腿下关节
+                newRightHindlegUpperNum:0,      // 左后腿上关节
+                newRightHindlegLowerNum:0,      // 左后腿下关节
             }],
             angleItem:{
                 newHeaderInput:0,
-                // --- 新建分界线 ---    --- 分界线 --- \\
-                newLeftForelegUpperNum:0,// 右前腿上关节
-                newLeftForelegLowerNum:0,// 右前腿下关节
+                // ------- 分界线 Divider ------- \\
+                newLeftForelegUpperNum:0,       // 右前腿上关节
+                newLeftForelegLowerNum:0,       // 右前腿下关节
 
-                newRightForelegUpperNum:0, // 左前腿上关节
-                newRightForelegLowerNum:0,// 左前腿下关节
+                newRightForelegUpperNum:0,      // 左前腿上关节
+                newRightForelegLowerNum:0,      // 左前腿下关节
 
-                newLeftHindlegUpperNum:0,// 右后腿上关节
-                newLeftHindlegLowerNum:0,// 右后腿下关节
+                newLeftHindlegUpperNum:0,       // 右后腿上关节
+                newLeftHindlegLowerNum:0,       // 右后腿下关节
 
-                newRightHindlegUpperNum:0, // 左后腿上关节
-                newRightHindlegLowerNum:0,// 左后腿下关节
-                // --- 分界线 ---   --- 分界线 --- \\
-                newLeftForelegLowerInput:0,// 右前腿上关节
-                newLeftForelegUpperInput:0,// 右前腿下关节
+                newRightHindlegUpperNum:0,      // 左后腿上关节
+                newRightHindlegLowerNum:0,      // 左后腿下关节
+                // ------- 分界线 Divider ------- \\
+                newLeftForelegLowerInput:0,     // 右前腿上关节
+                newLeftForelegUpperInput:0,     // 右前腿下关节
 
-                newRightForelegUpperInput:0, // 左前腿上关节
-                newRightForelegLowerInput:0,// 左前腿下关节
+                newRightForelegUpperInput:0,    // 左前腿上关节
+                newRightForelegLowerInput:0,    // 左前腿下关节
 
-                newLeftHindlegUpperInput:0,// 右后腿上关节
-                newLeftHindlegLowerInput:0,// 右后腿下关节
+                newLeftHindlegUpperInput:0,     // 右后腿上关节
+                newLeftHindlegLowerInput:0,     // 右后腿下关节
 
-                newRightHindlegUpperInput:0, // 左后腿上关节
-                newRightHindlegLowerInput:0,// 左后腿下关节
+                newRightHindlegUpperInput:0,    // 左后腿上关节
+                newRightHindlegLowerInput:0,    // 左后腿下关节
             }
         };
     }
@@ -144,7 +143,7 @@ class CreateSkillItem extends React.Component {
 
        console.log('4',this)
     }
-    //回显
+    // 回显 Echo
     handleEchoCreateSkillValue(){
         if(this.props.vm.runtime.modelsControl.createSkillModels.createSkillValue){
             
@@ -183,7 +182,7 @@ class CreateSkillItem extends React.Component {
             
         }
     }
-    //旋转
+    // 旋转 Rotation
     handleChangeAnimation(elementById,angle,originX,originY){
         let elementByIdStyle = document.getElementById(elementById).style
         let styleSheets = document.styleSheets[0]
@@ -201,23 +200,27 @@ class CreateSkillItem extends React.Component {
             }`)
         setTimeout(() => {
             // 清除旋转动画效果
+            // Clear rotation animation
             // document.getElementById(elementById).style.transform = `rotate(${angle}deg)`
             document.getElementById(elementById).style.animation = "";
             styleSheets.deleteRule(0)
         }, 500);
         setTimeout(() => {
             // 记录旋转最后位置
+            // Record last position after rotation
             document.getElementById(elementById).style.transform = `rotate(${angle}deg)`
             // document.getElementById(elementById).style.animation = "";
         }, 501);
     }
-    //获取input的角度值
+    // 获取input的角度值
+    // Get angle value from input
     handleChangeInputs(type,event){
-            this.handleChangeInput(type,event)
+        this.handleChangeInput(type,event)
     }
 
 
-    //判断关节前后角度是否变化，从而使关节转动
+    // 判断关节前后角度是否变化，从而使关节转动
+    // Check if angle changed, rotate joint if so
     handleCompareAngle(newLowerVal,oldLowerVal,newUpperVal,oldUpperVal,newId,lowerId,upperId,rVal,nVal){
         let upperVal = -Number(newLowerVal)
         let newLowerValue = newLowerVal
@@ -230,26 +233,27 @@ class CreateSkillItem extends React.Component {
         oldUpperValue = -Number(oldUpperValue) + Number(nVal)
         console.log('新输入值',newLowerVal,'旧输入值',oldLowerVal)
         // console.log('新输入值',newLowerValue,oldLowerValue,newUpperValue,oldUpperValue)
-        if(this.handleCompareValue(newLowerValue,oldLowerValue)){ //判断上关节不动
-            if(!this.handleCompareValue(newUpperValue,oldUpperValue)){  //判断下关节动
+        if(this.handleCompareValue(newLowerValue,oldLowerValue)){       // 判断上关节不动 Upper joint not moving
+            if(!this.handleCompareValue(newUpperValue,oldUpperValue)){  // 判断下关节动 Lower joint moving
                 this.handleChangeAnimation(upperId,newUpperValue,'center','10%')
             }
-        }else{ //判断上关节动
-            if(this.handleCompareValue(newUpperValue,oldUpperValue)){ //判断下关节不动
+        }else{ // 判断上关节动 Upper joint moving
+            if(this.handleCompareValue(newUpperValue,oldUpperValue)){ // 判断下关节不动 Lower joint not moving
                 this.handleChangeAnimation(newId,upperVal,'52%','0')
-            }else{ //判断下关节动
+            }else{ // 判断下关节动 Lower joint moving
                 this.handleChangeAnimation(newId,upperVal,'52%','0')
                 // this.handleChangeAnimation(lowerId,newLowerValue,'center','10%')
                 this.handleChangeAnimation(upperId,newUpperValue,'center','10%')
             }
         }
     }
-    //对比关节前后角度是否变化
-    handleCompareValue(newValue,oldValue){ //true为不动，false为动
+    // 对比关节前后角度是否变化
+    // Check if angle changed
+    handleCompareValue(newValue,oldValue){ // true为不动，false为动  true means unmoved, false means moved
         return Number(newValue)==Number(oldValue) ? true : false
     }
 
-    //动态更新--右前腿
+    // 动态更新--左前腿  Update left fore leg
     handleUpdateLeftForeleg(eventValue,type){
         const {
             newCreateAngleList,
@@ -286,7 +290,7 @@ class CreateSkillItem extends React.Component {
         }, 500);
     }
 
-    //动态更新--左前腿
+    // 动态更新--右前腿  Update right fore leg
     handleUpdateRightForeleg(eventValue,type){
         const {
             newCreateAngleList,
@@ -324,7 +328,7 @@ class CreateSkillItem extends React.Component {
         }, 500);
     }
 
-    //动态更新--右后腿
+    // 动态更新--左后腿  Update left hind leg
     handleUpdateLeftHindleg(eventValue,type){
         const {
             newCreateAngleList,
@@ -361,7 +365,7 @@ class CreateSkillItem extends React.Component {
         }, 500);
     }
 
-    //动态更新--左后腿
+    // 动态更新--右后腿  Update right hind leg
     handleUpdateRightHindleg(eventValue,type){
         const {
             newCreateAngleList,
@@ -569,7 +573,7 @@ class CreateSkillItem extends React.Component {
         })
         return createSkillValueList
     }
-    //点击确认
+    // 点击确认 Click handler
     handleClickAngle(){
         const { createSkillName,newCreateAngleList,recordCreateAngleList } = this.state
         if(!createSkillName){
@@ -606,7 +610,8 @@ class CreateSkillItem extends React.Component {
         this.props.updateCreateSkillModels(createSkillInfo);
         this.props.vm.runtime.modelsControl.updateCreateSkillModels(createSkillInfo);
         this.props.vm.runtime.createSkillMode.setCreateSkillInfo(createSkillInfo)
-        //添加保存成功提示
+        // 添加保存成功提示
+        // Notify saved succeed
         toasts.success(this.props.intl.formatMessage({
             id: "gui.modelExtension.modelsSave.succPrompt",
             defaultMessage: "Saved"
@@ -623,7 +628,7 @@ class CreateSkillItem extends React.Component {
         this.forceUpdate();
         this.props.closeCreateSkillModalState();
     }
-    //预览
+    // 预览 Preview
     handlePreview(){
         let createSkillValue =  this.handleCreateSkillValue()
         let val = createSkillValue[0]
@@ -666,7 +671,7 @@ class CreateSkillItem extends React.Component {
                         jointIdFrom={jointIdFrom}
                     ></BittleEstablish>
                 </div>
-                {/* -----------------------------分割线------------------------- */}
+                {/* -----------------------------分割线 Divider ------------------------- */}
                 <div style={{display:'flex'}}>
                     <div className={styles.createSkillInfoInput}>
 
@@ -724,7 +729,7 @@ class CreateSkillItem extends React.Component {
                                                     />
                                                 </div>
                                             }
-                                            {/* 分割线 */}
+                                            {/* 分割线 Divider */}
                                             <div className={styles.createSkillItemInput}>
                                                 <div className={styles.itemTitle}>8</div>
                                                 <input

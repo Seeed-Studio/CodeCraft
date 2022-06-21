@@ -9,6 +9,7 @@ import Box from '../box/box.jsx';
 
 /**
  * 定义多语言句柄
+ * Define multilingual handles
  */
 const localeMessages = defineMessages({
 
@@ -52,6 +53,7 @@ const localeMessages = defineMessages({
 
 /**
  * 定义更新确认组件
+ * Define upgrade confirm component
  */
 const UpgradeConfirm = props => {
 

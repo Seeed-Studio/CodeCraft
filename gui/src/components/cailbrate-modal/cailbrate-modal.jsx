@@ -21,17 +21,17 @@ class CailbrateModal extends React.Component {
 
         this.state = {
             checkFromData:{
-                LeftForelegUpperNum:75,// 右前腿上关节
-                LeftForelegLowerNum:-20,// 右前腿下关节
+                LeftForelegUpperNum:75,     // 右前腿上关节
+                LeftForelegLowerNum:-20,    // 右前腿下关节
     
-                RightForelegUpperNum:60, // 左前腿上关节
-                RightForelegLowerNum:-30,// 左前腿下关节
+                RightForelegUpperNum:60,    // 左前腿上关节
+                RightForelegLowerNum:-30,   // 左前腿下关节
                 
-                LeftHindlegUpperNum:75,// 右后腿上关节
-                LeftHindlegLowerNum:-15,// 右后腿下关节
+                LeftHindlegUpperNum:75,     // 右后腿上关节
+                LeftHindlegLowerNum:-15,    // 右后腿下关节
     
-                RightHindlegUpperNum:60, // 左后腿上关节
-                RightHindlegLowerNum:-30,// 左后腿下关节
+                RightHindlegUpperNum:60,    // 左后腿上关节
+                RightHindlegLowerNum:-30,   // 左后腿下关节
             },
         }
 

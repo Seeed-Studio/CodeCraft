@@ -58,7 +58,7 @@ class MeetTrouble extends React.Component {
   }
 
   componentDidMount() {
-    //获取平台数据
+    // 获取平台数据 Get data from the platform
     post(URL_GET_PLATFORM).then(response => {
       this.setState({ platform: response.data })
     }).catch(err => {

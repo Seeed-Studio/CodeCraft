@@ -185,8 +185,9 @@ const DEFAULT_DEVICE_TYPE = 'unknown';
 /**
  * 匹配对应的串口设备
  * 设备类型
- * @param {*} serial 串口
- * @param {*} id 当前选中设备id
+ * Match the type of the device
+ * @param {*} serial 串口 Serial
+ * @param {*} id 当前选中设备id The id of current device
  */
 const matchDeviceType = (typeSerial, id) => {
   let {
@@ -194,17 +195,20 @@ const matchDeviceType = (typeSerial, id) => {
     types = []
   } = devicenames[id];
   // types 未配置数据
+  // No available type
   if (types.length == 0) {
     return name;
   }
   
   // arduino-lotusv 特殊处理
+  // arduino-lotusv special handling
   if (typeSerial == 'unknown' &&
       id == 1002) {
     return types[2];
   }
 
   // types 配置了数据
+  // Type available
   if (types.indexOf(typeSerial) != -1) {
     return typeSerial;
   } else {
@@ -245,23 +249,27 @@ class ConnectModalComponent extends React.Component {
 
   componentDidMount() {
     // 如果设备连接已连接
+    // If the device/equipment is connected
     if (this.props.isEquipmentConnected
       && this.props.connectedDevice) {
       this.setState({
         selectedDevice: this.props.connectedDevice
       });
     }
-    //组件加载时，搜索设备列表
+    // 组件加载时，搜索设备列表
+    // While component is loading, scan for devices
     this.handleScan();
   }
 
   // 设备选择
+  // Device selection
   handleChange(item) {
     this.setState({
       selectedDevice: item
     })
   }
   // 打开遇到问题
+  // Open ShowTrouble component
   handleShowTrouble() {
     this.setState({
       isMeetTrouble: !this.state.isMeetTrouble,
@@ -269,6 +277,7 @@ class ConnectModalComponent extends React.Component {
   }
 
   // 设备连接
+  // Device connection
   handleConnect() {
 
     const {
@@ -290,17 +299,22 @@ class ConnectModalComponent extends React.Component {
       }
     );
     // 设备连接
+    // Connecting
     this.setState({ isConnectting: true });
     this.props.connect(needConnDevice).then(() => {
       // 提示连接成功
+      // Notify connection success
       toasts.success(this.props.intl.formatMessage(messages.connectSucc));
       this.handleSelectMenuClose();
 
       // 特殊设备临时变量
+      // Variables for certain devices
       let extraObj = {};
       let selDeviceObj = this.state.selectedDevice;
       // 如果是grovezero
+      // If grovezero
       // 如果是microPython
+      // If microPython
       if (1003 == deviceId ||
           1005 == deviceId ||
           1007 == deviceId || 
@@ -309,33 +323,39 @@ class ConnectModalComponent extends React.Component {
         extraObj.control = controlnames[deviceId].name;
       }
       // 连接成功后的设备
+      // The object for the connected device
       let connectedObj = Object.assign(
         {},
         selDeviceObj,
         extraObj
       )
 
-      // 设备连接成功
+      // 设备连接成功 Device connected
       // console.log('device  connect succ');
       // 连接成功更新当前连接的设备
+      // Update current device after connection succeed
       this.props.updateConnectedDevice(connectedObj);
       // 连接成功后默认重置调试模式
+      // Reset debug mode after connection succeed
       this.props.resetDebugMode();
       this.props.activateDebugMode(MODE_OFFLINE)
 
-      //arduino连接成功后，更新波特率
+      // arduino连接成功后，更新波特率
+      // Update baud rate after arduino connected
       if (1002 == deviceId) {
         this.props.vm.deviceEngine.updateBaudRate(this.props.baudRate);
       }
       // 关闭连接问题弹窗
+      // Close the MeetTrouble window
       this.setState({
         isMeetTrouble: false,
         isConnectting: false
       });
     }, (error) => {
       // 提示连接失败
+      // Notify connection failed
       toasts.error(this.props.intl.formatMessage(messages.connectFail));
-      // 设备连接失败
+      // 设备连接失败 Connection failed
       // console.error('errordevice  connect fail:',error);
       // console.warn('warndevice  connect fail:',error);
 
@@ -346,6 +366,7 @@ class ConnectModalComponent extends React.Component {
   }
 
   // 断开设备连接
+  // Disconnect the device
   handleDisConnect() {
     this.setState({
       isOpenDisconnectConfirm: true
@@ -354,12 +375,15 @@ class ConnectModalComponent extends React.Component {
 
   /**
    * 扫描设备
+   * Scan for device
    */
   handleScan() {
     this.props.scan().then((data) => {
       // 判断是否扫描出来设备
+      // Determine if detect device
       const hasDevices = data && data.length > 0;
       // 未扫描到设备
+      // No device detected
       if (!hasDevices) {
         this.setState({ devices: [] });
         this.setState({
@@ -370,23 +394,29 @@ class ConnectModalComponent extends React.Component {
         });
       } else {
         // 判断当前是否有选中设备
+        // Determine if there is a selected device
         const hasCurr = this.state.selectedDevice.hasOwnProperty('comName');
         // 判断当前选中的设备，是否断开了；
+        // Determine if the selected device disconnected
         const hasCurrDis = () => {
           return !!data.find((item) => { return item.comName === this.state.selectedDevice.comName });
         }
         // 判断设备是否选择过
+        // Determine if the device has been selected before
         if (!hasCurr || !hasCurrDis()) {
           // 设备未选择过
+          // No selected before
           this.setState({
             selectedDevice: data[0]
           });
         }
         // 保存扫描结果
+        // Save the scan result
         this.setState({ devices: data });
       }
     }, () => {
       // 扫描失败，设备默认值
+      // Scan failed, set default values
       this.setState({ devices: [] });
       this.setState({
         selectedDevice: {
@@ -399,7 +429,7 @@ class ConnectModalComponent extends React.Component {
 
   handleSelectMenuOpen() {
     // console.log('handleSelectMenuOpen ---- ')
-    this.handleScan(); // 扫描设备
+    this.handleScan(); // 扫描设备 Scan for device
   }
 
   handleSelectMenuClose() {
@@ -411,7 +441,8 @@ class ConnectModalComponent extends React.Component {
       .then(
         () => {
           toasts.success(this.props.intl.formatMessage(messages.operateSucc));
-          //重置被选中的串口的id 、control
+          // 重置被选中的串口的id 、control
+          // Reset id and control of the selected device
           this.setState({
             selectedDevice: Object.assign(
               {}, this.state.selectedDevice,
@@ -421,7 +452,8 @@ class ConnectModalComponent extends React.Component {
               }
             )
           });
-          //重置 DebugMode
+          // 重置 DebugMode
+          // Reset debug mode
           this.props.resetDebugMode();
         },
         () => toasts.error(this.props.intl.formatMessage(messages.operateFail))
@@ -440,15 +472,18 @@ class ConnectModalComponent extends React.Component {
   handleUpgrade() {
     console.log('handleUpgrade ---- ');
     this.props.upgrade().then(() => {
-      //  升级成功 
+      // 升级成功 
+      // Upgrade success
       console.log('handleUpgrade ---- 升级成功 ');
     }, () => {
-      //  升级失败 
+      // 升级失败 
+      // Upgrade failed
       console.log('handleUpgrade ---- 升级失败 ');
     })
   }
 
-  //更多升级日志信息
+  // 更多升级日志信息
+  // More log information
   handleMoreInformation(loglink) {
     if (loglink) {
       // window.open(loglink, '_blank')
@@ -522,10 +557,13 @@ class ConnectModalComponent extends React.Component {
         })
     }
     // 获取selector选中的设备
+    // Get the device from selector
     let selecterValue = connectedOption ? connectedOption : this.state.selectedDevice;
     // 固件版本号
+    // Version of firmware
     let versionAble = false;
     // 升级字符提示
+    // Message for upgrade
     let upgradePrompt = upgradePromptForNormal;
     let loginfo = null;
     let loglink = null;
@@ -538,6 +576,7 @@ class ConnectModalComponent extends React.Component {
         upgradePrompt = upgradePromptForNormal;
       }
       // 暂时不处理升级
+      // Don't handle upgrade for now
       else if (1002 === id) {
         versionAble = false;
         upgradePrompt = '';
@@ -576,6 +615,7 @@ class ConnectModalComponent extends React.Component {
 
     /**
      * prompt提示语
+     * prompt text
      */
     const promptText = (
       <span>
@@ -585,6 +625,7 @@ class ConnectModalComponent extends React.Component {
 
     /**
      * 更新界面视图
+     * View for upgrading
      */
     const upgradeView = (
       <div className={loginfo?'upgradeLogWrapper':'upgradeWrapper'}>
@@ -607,6 +648,7 @@ class ConnectModalComponent extends React.Component {
 
     const notListLabel = this.props.intl.formatMessage(messages.noDevices);
     // 构建select组件需要的列表数组
+    // The list used to create <Select /> component
     const list = this.state.devices.map((item, index) => {
       return Object.assign(
         item, {
@@ -664,10 +706,10 @@ class ConnectModalComponent extends React.Component {
             <div className={'noFindContainer'}/>
           </div>
         </div>
-        {/* 固件升级，固件版本信息查询入口 */}
+        {/* 固件升级，固件版本信息查询入口  Entry for firmware upgrade/information */}
         {(versionAble || isUpgrade) &&
           <div className={"bottomWrapper"}>
-            {/* 固件升级视图 、 遇到问题*/}
+            {/* 固件升级视图 、遇到问题  View for firmware upgrade*/}
             {isUpgrade && upgradeView}
             {/* {versionAble && <img
               className={"verisonIcon"}
@@ -678,7 +720,7 @@ class ConnectModalComponent extends React.Component {
               src={iconVersion}
               onClick={onOpenVersionModal} >{showVerison}</span>}
           </div>}
-        {/* 遇到问题*/}
+        {/* 遇到问题  Encounter problems */}
         {!isEquipmentConnected &&
           <div
             className={'meetTrouble'}
@@ -697,7 +739,7 @@ class ConnectModalComponent extends React.Component {
           </div>
         }
         <div className={classNames('connectBtnContaienr', { ['isUpgrade']: isUpgrade })}>
-          {/* 根据设备状态显示不同按钮 */}
+          {/* 根据设备状态显示不同按钮  Show different button according to the device status */}
           {
             isDeviceConnected ?
               (

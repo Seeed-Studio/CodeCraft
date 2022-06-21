@@ -46,17 +46,17 @@ class CailbrateItem extends React.Component {
                 rightHindlegLowerNum:'rightHindlegLowerNum',
             },
             checkHeaderInput:0,
-            checkLeftForelegLowerInput:0,// 右前腿上关节
-            checkLeftForelegUpperInput:0,// 右前腿下关节
+            checkLeftForelegLowerInput:0,   // 右前腿上关节
+            checkLeftForelegUpperInput:0,   // 右前腿下关节
 
-            checkRightForelegUpperInput:0, // 左前腿上关节
-            checkRightForelegLowerInput:0,// 左前腿下关节
+            checkRightForelegUpperInput:0,  // 左前腿上关节
+            checkRightForelegLowerInput:0,  // 左前腿下关节
 
-            checkLeftHindlegUpperInput:0,// 右后腿上关节
-            checkLeftHindlegLowerInput:0,// 右后腿下关节
+            checkLeftHindlegUpperInput:0,   // 右后腿上关节
+            checkLeftHindlegLowerInput:0,   // 右后腿下关节
 
-            checkRightHindlegUpperInput:0, // 左后腿上关节
-            checkRightHindlegLowerInput:0,// 左后腿下关节
+            checkRightHindlegUpperInput:0,  // 左后腿上关节
+            checkRightHindlegLowerInput:0,  // 左后腿下关节
             stateVisable:false,
             recordValue:{}
         };
@@ -90,7 +90,7 @@ class CailbrateItem extends React.Component {
             a.unshift(item.replace(isR, ' ').split(' '))
         })
         // console.log('list',list)
-        const findIndex = a.findIndex(item => item.length > 15) // 返回子项的下标
+        const findIndex = a.findIndex(item => item.length > 15) // 返回子项的下标 return the index of the item that satisfy the predicate
         let index = findIndex
         // console.log(index)
         // let len = 7
@@ -157,11 +157,13 @@ class CailbrateItem extends React.Component {
             }
         }
     }
-    //获取input的角度值
+    // 获取input的角度值
+    // Get the angle value from input
     handleChangeInputs(type,event){
         this.handleChangeInput(type,event)
     }
-    //点击确认
+    // 点击确认
+    // Verify click
     handleClickAngle(){
         if(!this.props.isConnected || !this.props.isEquipmentConnected){
             toasts.error(this.props.intl.formatMessage({
@@ -172,7 +174,9 @@ class CailbrateItem extends React.Component {
         }
         this.props.vm.deviceEngine.write('s');
         // sessionStorage.setItem('cailbrateLocal',JSON.stringify(cailbrateLocal))
-        //保存成功提示
+
+        // 保存成功提示
+        // Notification when saved successfully
         toasts.success(this.props.intl.formatMessage({
             id: "gui.modelExtension.modelsSave.succPrompt",
             defaultMessage: "Saved"
@@ -180,6 +184,7 @@ class CailbrateItem extends React.Component {
     }
     handleSignout(){
         //保存成功提示
+        // Notification when saved successfully
         this.props.closeCailbrateModalState();
     }
     handleChangeInput(type,event,mold){
@@ -463,29 +468,29 @@ class CailbrateItem extends React.Component {
                 </div>
 
 
-            {/* -----------------------------分割线------------------------- */}
+            {/* -----------------------------分割线 divider ------------------------- */}
                 <div className={styles.createSkillBottom}>
-                        <button className={styles.cancel} onClick={this.handleClose}>
+                    <button className={styles.cancel} onClick={this.handleClose}>
+                    <FormattedMessage
+                            defaultMessage="Exit"
+                            description="Exit"
+                            id="gui.modelExtension.signout"
+                        />
+                    </button>
+                    <button className={styles.sumbit} onClick={this.handleClickAngle.bind()}>
                         <FormattedMessage
-                                defaultMessage="Exit"
-                                description="Exit"
-                                id="gui.modelExtension.signout"
-                            />
-                        </button>
-                        <button className={styles.sumbit} onClick={this.handleClickAngle.bind()}>
-                            <FormattedMessage
-                                defaultMessage="Save"
-                                description="cancel"
-                                id="gui.modelExtension.saveText"
-                            />
-                        </button>
-                        {/* <button className={styles.preview} onClick={this.handleSignout.bind()}>
-                            <FormattedMessage
-                                defaultMessage="Sign out"
-                                description="Sign out"
-                                id="gui.modelExtension.signout"
-                            />
-                        </button> */}
+                            defaultMessage="Save"
+                            description="cancel"
+                            id="gui.modelExtension.saveText"
+                        />
+                    </button>
+                    {/* <button className={styles.preview} onClick={this.handleSignout.bind()}>
+                        <FormattedMessage
+                            defaultMessage="Sign out"
+                            description="Sign out"
+                            id="gui.modelExtension.signout"
+                        />
+                    </button> */}
 
                 </div>
             </div>
@@ -493,9 +498,9 @@ class CailbrateItem extends React.Component {
     }
 }
 const mapStateToProps = state => ({
-    isConnected: state.scratchGui.deviceConnect.isConnected, // socket 是否连接
+    isConnected: state.scratchGui.deviceConnect.isConnected, // socket是否连接 if socket is connected
     createSkillModels: state.scratchGui.modelsCtr.createSkillModels,
-    isEquipmentConnected: state.scratchGui.deviceConnect.isEquipmentConnected, // 设备是否连接
+    isEquipmentConnected: state.scratchGui.deviceConnect.isEquipmentConnected, // 设备是否连接 if equipment/device is connected
 });
 const mapDispatchToProps = dispatch => ({
     updateCreateSkillModels: data => dispatch(updateCreateSkillModels(data)),

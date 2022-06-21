@@ -48,7 +48,7 @@ class CreateSkillModal extends React.Component {
             zAxis:z
         })
     }
-    //点击确认
+    // 点击确认 Click handler
     handleClickAngle(){
         let createSkillInfo = {
             createSkillName:'测试',
