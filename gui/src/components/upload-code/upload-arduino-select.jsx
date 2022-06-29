@@ -62,6 +62,7 @@ const DEFAULT_DEVICE_TYPE = 'unknown';
 /**
  * 匹配对应的串口设备
  * 设备类型
+ * Match the device type of current serial device
  * @param {*} serial 串口
  * @param {*} id 当前选中设备id
  */
@@ -72,18 +73,18 @@ const matchDeviceType = (typeSerial, id) => {
         types = []
     } = devicenames[id];
 
-    // types 未配置数据
+    // types 未配置数据  No types available
     if (types.length == 0) {
         return name;
     }
 
-    // arduino-lotusv 特殊处理
+    // arduino-lotusv 特殊处理  Special handling for arduino-lotusv
     if (typeSerial == 'unknown' &&
         id == 1002) {
         return types[2];
     }
 
-    // types 配置了数据
+    // types 配置了数据  Types available
     if (types.indexOf(typeSerial) != -1) {
         return typeSerial;
     } else {
@@ -119,7 +120,7 @@ class UploadArduinoSelect extends React.Component {
         this.scan();
     }
 
-    // 判断是否已选择
+    // 判断是否已选择  Determine if selected
     isSelected(deviceList) {
         if (!this.state.selectDevice) return false;
         for (let x = 0, item; item = deviceList[x]; x++) {
@@ -131,6 +132,7 @@ class UploadArduinoSelect extends React.Component {
     }
 
     // 过滤除Arduino、grove joint以外的设备
+    // Filter out device other than Arduinon, grove joint
     filtration(deviceList) {
         let newList = [];
         for (let x = 0, item; item = deviceList[x]; x++) {
@@ -150,11 +152,13 @@ class UploadArduinoSelect extends React.Component {
     }
 
     // 处理扫描成功结果
+    // Handle scan success result
     handleScanSucc(deviceList) {
 
         deviceList = this.filtration(deviceList);
 
         // 判断是否扫描出来设备
+        // Determine if there is any device been scanned
         const hasDevices = deviceList && deviceList.length > 0;
         if (!hasDevices) {
 
@@ -176,7 +180,7 @@ class UploadArduinoSelect extends React.Component {
         }
     }
 
-    //扫描
+    //扫描  Scan
     scan() {
         this.props.vm.deviceEngine.scan().then(
             deviceList => this.handleScanSucc(deviceList),
@@ -235,16 +239,17 @@ class UploadArduinoSelect extends React.Component {
         );
 
         // arg2 = false 假连接 ，必须调用连接 才能拿到设备对象
+        // Have to call connect to get the device object
         this.props.vm.deviceEngine.connect(device).then(
-            // 连接成功回调
+            // 连接成功回调  Callback for connect succeed
             () => {
                 this.props.vm.deviceEngine.upload(code).then(
-                    // 烧录成功回调
+                    // 烧录成功回调  Callback for upload succeed
                     () => {
                         this.props.vm.deviceEngine.updateBaudRate(this.props.baudRate);
                         this.props.activateState(STATE_UPLOAD_SUCC_TAB);
                     },
-                    // 烧录失败回调
+                    // 烧录失败回调  Callback for upload failed
                     () => {
                         this.props.activateState(STATE_UPLOAD_FAIL_TAB);
                     }
@@ -274,6 +279,7 @@ class UploadArduinoSelect extends React.Component {
         let notListLabel = intl.formatMessage(localeMessages.noSerialsPrompt);
 
         // 构建select组件需要的列表数组
+        // List used for create Select component
         let list = [];
         for (let x = 0, item; item = this.state.deviceList[x]; x++) {
             list.push({

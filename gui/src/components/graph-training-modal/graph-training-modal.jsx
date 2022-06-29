@@ -121,7 +121,8 @@ class GraphTrainingModal extends React.Component {
             'restoreWorkspaceRetrainCallback',
         ]);
 
-        //语言国际化变量
+        // 语言国际化变量
+        // variables for internationalization
         this.category = props.intl.formatMessage(localMessages.category);
         this.cancel = props.intl.formatMessage(localMessages.cancel);
         this.confirm = props.intl.formatMessage(localMessages.confirm);
@@ -135,41 +136,43 @@ class GraphTrainingModal extends React.Component {
         this.modelCategoryNumber = props.intl.formatMessage(localMessages.modelCategoryNumber);
         this.notSupportMediaDevices = props.intl.formatMessage(localMessages.notSupportMediaDevices);
 
-        //视频dom
+        // 视频dom  Video Dom
         this.video;
-        //媒体流
+        // 媒体流  media stream
         this.mediaStreamTrack;
-        //摄像头画布
+        // 摄像头画布  camera canvas
         this.canvas;
-        //重置状态
+        // 重置状态  reset
         this.resetting = false;
 
-        //分类模型对象
+        // 分类模型对象  object of classifier
         this.featureExtractor = props.featureExtractor;
         this.classifier = props.classifier;
 
-        //模型参数
+        // 模型参数 options for classifier
         this.options = props.options;
 
-        //退出去保存的状态，切换语言会清空状态，从reduce里面取
-        this.isPredicting = props.isPredicting;//是否正在预测
-        //如果还没保存过模型，则不需要开始预测
+        // 退出去保存的状态，切换语言会清空状态，从reduce里面取
+        this.isPredicting = props.isPredicting;//是否正在预测  if currently predicting
+        // 如果还没保存过模型，则不需要开始预测
+        // If the classifier has not been set, will not start predicting
         if(this.classifier == null || this.featureExtractor == null){
             this.isPredicting = false;
         }
-        //redux数据
+        // redux数据  redux data
         let propsClassificationList = props.classificationList;
 
         let classificationList = [];
-        //训练过的类别数量
+        // 训练过的类别数量  trained classification count
         this.trainedClassificationCount = 0;
-        //总共的图片数量
+        // 总共的图片数量  total image count
         let imageCount = 0;
-        //类别被训练过标记
+        // 类别被训练过标记  mark traind classification
         let trainedClassification = {}
 
-        //深拷贝一份，以免state操作的数据引用会影响redux
-        for(let i=0;i<propsClassificationList.length;i++) {
+        // 深拷贝一份，以免state操作的数据引用会影响redux
+        // Deep copy to prevent interference to redux state
+        for (let i = 0; i < propsClassificationList.length; i++) {
             let classification = {};
             let propsclassification = propsClassificationList[i];
             if(propsclassification.name==null){
@@ -189,34 +192,36 @@ class GraphTrainingModal extends React.Component {
             classificationList.push(classification);
         }
 
-        this.addedImageCount = imageCount;//已经被添加的图片数量
-        this.showImageCount = imageCount;//显示的图片数量
-        this.resetIndex =  -1;//重置的类别ID
-        this.trainedClassification = trainedClassification;//训练过的类别标记
+        this.addedImageCount = imageCount;      //已经被添加的图片数量  count of images been added
+        this.showImageCount = imageCount;       //显示的图片数量  count of images been showed
+        this.resetIndex =  -1;                  //重置的类别ID  the index of classification being reset
+        this.trainedClassification = trainedClassification; //训练过的类别标记  trained classification
 
         this.restoreOnFinish;
 
         this.state = {
             classificationList,
             predictionID: 0,
-            trainedClassificationCount:this.trainedClassificationCount,//训练过的类别数量
-            clearVisible:false,//重置分类弹框
-            confirmVisible:false,//新建模型确认弹框
-            createVisible:false,//新建模型弹框
-            startPointList:[],//起始坐标
-            endPoint:{},//结束坐标
-            modelLoading:true,//模型加载中。初始化默认加载
-            restore:false,//是否从文件还原数据
-            hasWebcam:false//是否有媒体流默认没有
+            trainedClassificationCount:this.trainedClassificationCount, //训练过的类别数量 trained classification count
+            clearVisible:false,     //重置分类弹框  clear prompt
+            confirmVisible:false,   //新建模型确认弹框  confirm prompt 
+            createVisible:false,    //新建模型弹框  create prompt
+            startPointList:[],      //起始坐标  starting position
+            endPoint:{},            //结束坐标  ending position
+            modelLoading:true,      //模型加载中。初始化默认加载  if model is loading
+            restore:false,          //是否从文件还原数据  if restore data from file
+            hasWebcam:false         //是否有媒体流默认没有  if there is media stream
         }
         let bakclassificationList = classificationList.map(obj => Object.assign({}, obj,{imageList:[].concat(obj.imageList)}));
         props.vm.runtime.trainMode.setClassificationList(bakclassificationList);
         //作品打开的时候，可能会有保存的模型数据，需要重新训练
+        // Retrain if there are saved modal data while opening the workspace
         props.vm.runtime.trainMode.setRestoreWorkspaceRetrainCallback(this.restoreWorkspaceRetrainCallback)
     }
 
     componentDidMount() {
         //有些电脑没有GPU，禁掉GPU
+        // Ban GPU if the current machine has not one
         this.canvas = document.createElement("canvas");
         this.canvas.width = 220;
         this.canvas.height = 220;
@@ -225,9 +230,10 @@ class GraphTrainingModal extends React.Component {
 
     componentDidUpdate(prevProps) {
         //状态变了说明页面关闭状态变化了
+        // State change means the hidden status of the page changed
         if(this.props.hidden!=prevProps.hidden){
             if(!this.props.hidden) {
-                //判断是否支持多媒体
+                //判断是否支持多媒体  check if support media
                 if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
                     // alert(this.notSupportMediaDevices);
                     this.setState({
@@ -236,12 +242,12 @@ class GraphTrainingModal extends React.Component {
                     })
                     return;
                 }
-                //摄像头数量
+                //摄像头数量  amount of camera
                 let videoNum = 0;
-                //麦克风数量
+                //麦克风数量  amount of microphone
                 let microphoneNum = 0;
                 navigator.mediaDevices.enumerateDevices().then(devices => {
-                    //遍历设备列表
+                    //遍历设备列表  iterate through each device
                     devices.forEach(device => {
                         // deviceList.push(device.kind);
                         if (device.kind === "videoinput") videoNum++;
@@ -276,7 +282,7 @@ class GraphTrainingModal extends React.Component {
         let constraints = {
             video: { width: size, height: size },
         };
-        //更新画布大小
+        //更新画布大小  Update the canvas size
         this.canvas.width = size * 1;
         this.canvas.height = size * 1;
 
@@ -295,16 +301,16 @@ class GraphTrainingModal extends React.Component {
         })
     }
 
-    //同步初始化classifier
+    //同步初始化classifier  Initialize classifier
     async initClassifier(video) {
         this.featureExtractor = await ml5.featureExtractor(modelJson);
         if(this.featureExtractor){
             this.classifier = await this.featureExtractor.classification(video, this.options);
         }
     }
-    //加载模型
+    //加载模型  Load classifier
     async loadClassifier(video) {
-        //为空需要初始化
+        //为空需要初始化  If classifier is null, initialize it
         if (this.classifier == null || this.featureExtractor == null) {
             await this.initClassifier(video);
         }
@@ -319,12 +325,14 @@ class GraphTrainingModal extends React.Component {
     }
 
     //添加一张图片，并且判断是最后一张添加完就开始重新训练
+    // Add an image. Start training if the last image be added
     async addImageForTrain(image,numberID){
         try {
             await this.classifier.addImage(image, numberID);
             //添加的是最后一张图片则开始训练
+            // If the last image has been added, start training
             if (this.addedImageCount + 1 == this.showImageCount) {
-                //训练模型
+                //训练模型  Training
                 this.classifier.train(this.trainResult);
                 this.resetting = false;
             }
@@ -338,6 +346,7 @@ class GraphTrainingModal extends React.Component {
     }
 
     //重新加载所有的图片
+    // Reload all images
     async addImageList(classificationList){
         let keys = Object.keys(classificationList);
         for(let i=0;i<keys.length;i++){
@@ -355,6 +364,7 @@ class GraphTrainingModal extends React.Component {
     }
 
     //重置某个类别，并重新加载其他所有的图片
+    // Reload other images after reseting a classification
     async reloadImage(id) {
         const {
             classificationList,
@@ -365,7 +375,7 @@ class GraphTrainingModal extends React.Component {
         classification.imageList = [];
         classification.confidence = 0;
 
-        //重新遍历加载图片
+        //重新遍历加载图片  load images
         let keys = Object.keys(classificationList);
         let imageCount=0;
         keys.map((id, i) => {
@@ -385,7 +395,7 @@ class GraphTrainingModal extends React.Component {
         this.addedImageCount = 0;
 
         await this.addImageList(classificationList);
-        //更新界面
+        //更新界面  Update GUI
         this.setState({
             classificationList,
             trainedClassificationCount:this.trainedClassificationCount,
@@ -393,22 +403,24 @@ class GraphTrainingModal extends React.Component {
     }
 
     //从作品中取出训练数据，重新加载
+    // Get training data from workspace then retrain
     async restoreWorkspaceRetrainCallback(params,onLine,onFinish){
         let options = params.options;
         let classificationList = params.classificationList;
-        //空判断
+        //空判断  Check for null
         if(options!=null&&classificationList!=null){
             this.restoreOnFinish = onFinish;
             this.resetting = true;
             this.isPredicting = false;
             this.options = options;
 
-            //更新界面
+            //更新界面  Update GUI
             this.setState({
                 restore:true,
             })
 
             //先更新到vm。以免训练失败
+            // Update classifications and options to vm
             let bakclassificationList = classificationList.map(obj => Object.assign({}, obj, { imageList: [].concat(obj.imageList) }));
             this.props.vm.runtime.trainMode.setClassificationList(bakclassificationList);
             this.props.vm.runtime.trainMode.setOptions(options);
@@ -420,6 +432,7 @@ class GraphTrainingModal extends React.Component {
             this.trainedClassificationCount = 0;
             let imageCount=0;
             //重新遍历加载图片
+            // Load images
             let keys = Object.keys(classificationList);
             
             keys.map((id, i) => {
@@ -442,6 +455,7 @@ class GraphTrainingModal extends React.Component {
                 await this.addImageList(classificationList);
             }else{
                 //没有图片直接回调结果
+                // Restore result if no image
                 if(this.restoreOnFinish){
                     this.restoreOnFinish()
                 }
@@ -449,28 +463,28 @@ class GraphTrainingModal extends React.Component {
 
             this.resetIndex = -1;
     
-            //更新界面
+            //更新界面  Update GUI
             this.setState({
                 classificationList,
                 predictionID: 0,
                 trainedClassificationCount:this.trainedClassificationCount,
-                clearVisible:false,//重置分类弹框
-                confirmVisible:false,//新建模型确认弹框
-                createVisible:false,//新建模型弹框
-                startPointList:[],//起始坐标
-                endPoint:{},//结束坐标
+                clearVisible:false,     //重置分类弹框  Clear prompt
+                confirmVisible:false,   //新建模型确认弹框  Confirm prompt
+                createVisible:false,    //新建模型弹框  Create prompt
+                startPointList:[],      //起始坐标  Starting position
+                endPoint:{},            //结束坐标  Ending position
             }, () => {
                 this.refreshLine();
             })
         }
     }
 
-    //滚动事件
+    //滚动事件  Scroll event
     handleScroll(e) {
         this.refreshLine();
     }
 
-    //刷新连线
+    //刷新连线  Refresh line
     refreshLine() {
         var leftBessel=document.getElementById('leftBessel');
         var leftBesselRect = leftBessel.getBoundingClientRect();
@@ -523,13 +537,13 @@ class GraphTrainingModal extends React.Component {
         })
     }
 
-    //关闭按钮事件
+    //关闭按钮事件  Close button event
     handleClose() {
         this.mediaStreamTrack && this.mediaStreamTrack.stop();
         this.props.closeTrainModalState();
     }
 
-    //新建模型
+    //新建模型  Create modal
     handleCreateModel() {
         if (!this.state.hasWebcam) {
             return;
@@ -539,7 +553,7 @@ class GraphTrainingModal extends React.Component {
         })
     }
 
-    //使用模型
+    //使用模型  Use modal
     handleUseModel() {
         if (!this.state.hasWebcam) {
             return;
@@ -551,14 +565,14 @@ class GraphTrainingModal extends React.Component {
         if(trainedClassificationCount!=classificationList.length)
             return;
 
-        //更新到redux
+        //更新到redux   Update redux
         this.props.setOptions(this.options);
         this.props.setFeatureExtractor(this.featureExtractor);
         this.props.setClassifier(this.classifier);
         this.props.setClassificationList(classificationList);
         this.props.setIsPredicting(this.isPredicting);
 
-        //更新到vm
+        //更新到vm  Update vm
         let bakclassificationList = classificationList.map(obj => Object.assign({}, obj,{imageList:[].concat(obj.imageList)}));
         this.props.vm.runtime.trainMode.setClassificationList(bakclassificationList);
         this.props.vm.runtime.trainMode.setOptions(this.options);
@@ -567,18 +581,18 @@ class GraphTrainingModal extends React.Component {
             this.props.vm.refreshWorkspace();
         });
 
-        //关闭窗口
+        //关闭窗口  Close the window
         this.handleClose()
     }
 
-    //新建取消弹窗
+    //新建取消弹窗  Cancel the confirm prompt
     handleConfirmCancel() {
         this.setState({
             confirmVisible: false
         })
     }
 
-    //新建确认弹窗
+    //新建确认弹窗  Show create prompt after confirm
     handleConfirmOK() {
         this.setState({
             confirmVisible: false,
@@ -586,14 +600,14 @@ class GraphTrainingModal extends React.Component {
         })
     }
 
-    //创建弹窗取消
+    //创建弹窗取消  Cancel the create prompt
     handleCreateCancel() {
         this.setState({
             createVisible: false
         })
     }
 
-    //创建弹窗确认
+    //创建弹窗确认  Confirm on create prompt
     handleCreateOK(item) {
         this.setState({
             createVisible: false
@@ -601,7 +615,7 @@ class GraphTrainingModal extends React.Component {
         this.resetModel(item.value);
     }
 
-    //新建模型，重置所有类别
+    //新建模型，重置所有类别    Reset all classification after creating a new modal
     async resetModel(number) {
         this.resetting = true;
         this.isPredicting = false;
@@ -640,7 +654,7 @@ class GraphTrainingModal extends React.Component {
         })
     }
 
-    //重置某个类别
+    //重置某个类别  Reset classification
     async handleClearOK() {
         if (!this.state.hasWebcam) {
             return;
@@ -661,7 +675,7 @@ class GraphTrainingModal extends React.Component {
         })
     }
 
-    //修改类别名称
+    //修改类别名称  Modify classification's name
     handleNameChange(index,name) {
         const {
             classificationList,
@@ -670,13 +684,13 @@ class GraphTrainingModal extends React.Component {
         let classification = classificationList[index];
         classification.name = name;
         classification.isNameEdited = true;
-        //更新界面
+        //更新界面  Update GUI
         this.setState({
             classificationList,
         })
     }
 
-    //训练某个类别
+    //训练某个类别  Train classification
     async handleTrain(index) {
         if (!this.state.hasWebcam) {
             return;
@@ -687,13 +701,13 @@ class GraphTrainingModal extends React.Component {
 
         let classification = classificationList[index];
         let imageList = classification.imageList;
-        //截取视频
+        //截取视频  Screenshot/capture
         this.canvas.getContext('2d').drawImage(this.video, 0, 0, this.canvas.width, this.canvas.height);
         let src = this.canvas.toDataURL("image/png");
         imageList.push(src);
-        //显示数量+1
+        //显示数量+1  Image count + 1
         this.showImageCount++;
-        //更新界面
+        //更新界面  Update GUI
         this.setState({
             classificationList
         })
@@ -723,11 +737,11 @@ class GraphTrainingModal extends React.Component {
         this.resetIndex = index;
     }
 
-    //训练结果
+    //训练结果  Training result
     trainResult(lossValue) {
         if (!lossValue) {
             console.log('训练完成!')
-            //预测
+            //预测  Predicting
             if(!this.isPredicting) {
                 this.classifyVideo();
                 this.isPredicting = true;
@@ -739,20 +753,20 @@ class GraphTrainingModal extends React.Component {
             } = this.state;
 
             if (restore) {
-                //更新到redux
+                //更新到redux   Update redux
                 this.props.setOptions(this.options);
                 this.props.setFeatureExtractor(this.featureExtractor);
                 this.props.setClassifier(this.classifier);
                 this.props.setClassificationList(classificationList);
                 this.props.setIsPredicting(this.isPredicting);
 
-                //更新到vm
+                //更新到vm  Update vm
 
                 let bakclassificationList = classificationList.map(obj => Object.assign({}, obj,{imageList:[].concat(obj.imageList)}));
                 this.props.vm.runtime.trainMode.setClassificationList(bakclassificationList);
                 this.props.vm.runtime.trainMode.setOptions(this.options);
                 this.props.vm.runtime.trainMode.setIsTrain(true);
-                //通知识别窗口重新预测
+                //通知识别窗口重新预测  Repredict
                 this.props.vm.runtime.trainMode.repredict();
                 this.props.vm.refreshExtensionBlocks().then(() => {
                     this.props.vm.refreshWorkspace();
@@ -781,7 +795,7 @@ class GraphTrainingModal extends React.Component {
         }
     }
 
-    // 预测结果回调
+    // 预测结果回调  Predict result callback
     predictResult(err, results) {
         // The results are in an array ordered by confidence.
         console.log('predictResult:',results)
@@ -797,6 +811,7 @@ class GraphTrainingModal extends React.Component {
                 let classification = classificationList[label];
                 classification.confidence = Number(confidence.toFixed(4));
                 //如果没有图片则为可信度设为0
+                // If no image the the confidence is 0
                 if(classification.imageList.length==0){
                     classification.confidence=0;
                 }

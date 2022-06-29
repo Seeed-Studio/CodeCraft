@@ -29,7 +29,7 @@ class ProjectTitleInput extends React.Component {
     // call onUpdateProjectTitle if it is defined (only defined when gui
     // is used within scratch-www)
     handleUpdateProjectTitle (newTitle) {
-        // 如果工程名为空，则使用它之前的工程名
+        // 如果工程名为空，则使用它之前的工程名  Use former title if title is empty
         if (!newTitle) {
             newTitle = this.props.projectTitle
         }

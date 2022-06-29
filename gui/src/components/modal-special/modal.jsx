@@ -92,15 +92,15 @@ ModalComponent.propTypes = {
     onHelp: PropTypes.func,
     onRequestClose: PropTypes.func,
 
-    cancelable: PropTypes.bool,      // 是否可以取消
-    topTitle: PropTypes.string,      // 顶部弹窗标题
+    cancelable: PropTypes.bool,      // 是否可以取消  If can be cancel
+    topTitle: PropTypes.string,      // 顶部弹窗标题  Top title
     // title: PropTypes.string,         // 弹窗标题
-    showReturn: PropTypes.bool,      // 显示返回按钮
-    showMin: PropTypes.bool,         // 显示最小化按钮
-    showClose: PropTypes.bool,       // 显示关闭弹窗按钮
-    onClose: PropTypes.func,         // 点击 x 关闭弹窗
-    toBack: PropTypes.func,          // 返回按钮
-    visiableTitle: PropTypes.bool,   // 是否显示标题
+    showReturn: PropTypes.bool,      // 显示返回按钮  If show return button
+    showMin: PropTypes.bool,         // 显示最小化按钮  If show minimize button
+    showClose: PropTypes.bool,       // 显示关闭弹窗按钮  If show close button
+    onClose: PropTypes.func,         // 点击 x 关闭弹窗  Callback on close
+    toBack: PropTypes.func,          // 返回按钮  Callback on back button
+    visiableTitle: PropTypes.bool,   // 是否显示标题  If show title
 };
 
 export default ModalComponent;

@@ -89,6 +89,7 @@ class RescueDevice extends React.Component {
     }
 
     // 判断是否已选择
+    // Determine if selected
     isSelected(serialportList) {
         if (!this.state.selectSerialport) return false;
         for (let x = 0, item; item = serialportList[x]; x++) {
@@ -100,8 +101,10 @@ class RescueDevice extends React.Component {
     }
 
     // 处理扫描成功结果
+    // Handle scan succeed
     handleScanSucc(serialportList) {
         // 判断是否扫描出来设备
+        // Determine if any device been scanned
         const hasDevices = serialportList && serialportList.length > 0;
         if (!hasDevices) {
 
@@ -242,6 +245,7 @@ class RescueDevice extends React.Component {
         let selectDeviceLabel = this.state.selectDevice ? this.state.selectDevice.label : '';
 
         // 构建select组件需要的列表数组
+        // List used to create Select component
         let serialportList = [];
         for (let x = 0, item; item = this.state.serialportList[x]; x++) {
             serialportList.push({

@@ -249,7 +249,7 @@ class MenuBar extends React.Component {
             isRequest: false,
             isOpenLocal: false,
 
-            isRemidSaveBeforeClose: false,      // 是否提示保存
+            isRemidSaveBeforeClose: false,      // 是否提示保存  If remind save before close
             isQuitApp: false,
         }
 
@@ -267,7 +267,7 @@ class MenuBar extends React.Component {
     }
 
     componentDidMount() {
-        //注册message01事件
+        //注册message01事件 Dispatch message01 event
         dispatch01.on("message01", this.onMessage01);
 
         const os = getOsType();
@@ -291,10 +291,10 @@ class MenuBar extends React.Component {
         // before quit
         const { isProjectSaved } = this.props;
         if (isProjectSaved) {
-            // 文件已保存，直接退出
+            // 文件已保存，直接退出  File saved, exit
             this.handleQuitApp();
         } else {
-            // 文件未保存
+            // 文件未保存  File not saved
             this.setState({ isRemidSaveBeforeClose: true });
         }
     }
@@ -319,12 +319,12 @@ class MenuBar extends React.Component {
         this.saveLocalProject()
     }
 
-    // 打开选择的本地项目
+    // 打开选择的本地项目  Open the local project
     handleClickOpenLocalProject(data) {
         this.setState({ isOpenLocal: true });
         this.props.closeRecognizeVideoModal();
 
-        // 如果代码编辑器打开，则关闭
+        // 如果代码编辑器打开，则关闭  Close if the code editor is on
         if (this.props.codeViewVisible) {
             this.props.setCodeViewVisible(false);
         }
@@ -349,7 +349,7 @@ class MenuBar extends React.Component {
                         this.props.onSetProjectTitle(truncatedProjectTitle);
                     }
                 }
-                this.props.onSetLocalProjectPath(thisFileInput.files[0].path);  // 保存项目路径
+                this.props.onSetLocalProjectPath(thisFileInput.files[0].path);  // 保存项目路径  Save the project path
 
                 this.props.onActivateTab(BLOCKS_TAB_INDEX);
                 this.props.onLoadingFinished(this.props.loadingState);
@@ -398,7 +398,7 @@ class MenuBar extends React.Component {
                     if (this.projectType == 'switchEquipment') {
                         this.switchEquipment();
                     }
-                    // 设为已保存状态
+                    // 设为已保存状态  Mark as saved
                     this.projectType = '';
                 }
             }
@@ -407,13 +407,13 @@ class MenuBar extends React.Component {
 
     handleSaveQuit() {
         toasts.success(this.props.intl.formatMessage(ariaMessages.saveSucc));
-        // 保存成功后退出APP
+        // 保存成功后退出APP  Exit app after saved succeed
         setTimeout(() => {
             this.handleQuitApp();
         }, 1800);
     }
 
-    // 保存，退出App
+    // 保存，退出App  Save and exit
     handleQuitWithSave() {
         this.setState({
             isQuitApp: true,
@@ -422,15 +422,15 @@ class MenuBar extends React.Component {
             this.saveLocalProject();
         })
     }
-    // 退出App
+    // 退出App  Exit app
     handleQuitApp() {
         this.props.vm.deviceEngine.sendWindowMessage({ action: 'close' });
     }
-    // 取消
+    // 取消  Cancel quit
     handleQuitCancel() {
         this.setState({ isRemidSaveBeforeClose: false });
     }
-    // 保存文件到本地，处理覆盖操作 
+    // 保存文件到本地，处理覆盖操作   Save file to local, handle file replacing
     async saveLocalProject(saveType) {
         this.setState({ isSaving: true });
         this.props.onSetSavingState(true);
@@ -459,7 +459,7 @@ class MenuBar extends React.Component {
                 realPath = '';
             }
         }
-        // 保存到本地时，不做覆盖操作
+        // 保存到本地时，不做覆盖操作  No file replacing while saving
         if (saveType === 'saveAs') {
             realPath = '';
         }
@@ -474,7 +474,7 @@ class MenuBar extends React.Component {
     handleCloseRescueDevice() {
         this.props.setRescueModalIndex(RESCUE_MODAL_HIDE);
     }
-    //关于弹窗
+    //关于弹窗  Show <About /> component
     handClickAbout() {
         this.setState({
             isOpenAbout: true
@@ -494,11 +494,13 @@ class MenuBar extends React.Component {
     }
 
     // 提示保存弹框，直接x掉，不做任何操作
+    // Close save window
     handleCloseSave() {
         this.props.onSetRemindSave(false);
 
     }
     // 提示保存弹框，不保存，直接打开新项目
+    // Open new project without saving
     handleCancelSaveProject() {
         this.props.onSetRemindSave(false);
         this.props.vm.stopAll();
@@ -518,6 +520,7 @@ class MenuBar extends React.Component {
         }
     }
     // 提示保存弹框，保存后，打开新项目
+    // Open new project with saving
     handleSaveProject() {
         this.props.onSetRemindSave(false);
         this.props.vm.stopAll();
@@ -539,11 +542,11 @@ class MenuBar extends React.Component {
 
     resetCodeViewAndProject() {
         this.resetCodeView();
-        //新建工程，清空积木
+        //新建工程，清空积木  Reset code view then create a new project
         this.newProject();
     }
 
-    //重置编程文件状态
+    //重置编程文件状态  Reset code view
     resetCodeView() {
         this.props.setCodeViewVisible(false);
         this.props.closeRecognizeVideoModal();
@@ -560,10 +563,10 @@ class MenuBar extends React.Component {
         return currentDeviceID;
     }
 
-    // 新建一个项目
+    // 新建一个项目  Create a new project
     newProject() {
         this.setState({ isOpenLocal: false });
-        // 如果代码编辑器打开，则关闭
+        // 如果代码编辑器打开，则关闭  Close code view if it is open
         if (this.props.codeViewVisible) {
             this.props.setCodeViewVisible(false);
         }
@@ -650,9 +653,9 @@ class MenuBar extends React.Component {
     }
 
     resetForNewOrOpen() {
-        //关闭串口图表界面
+        //关闭串口图表界面  Close serial chart modal
         this.props.onCloseSerialChartModal();
-        //断开串口设备
+        //断开串口设备  Disconnect serial device
         this.props.disconnect().then(() => { this.props.resetDebugMode() });
     }
 
@@ -822,7 +825,7 @@ class MenuBar extends React.Component {
                 <div className={styles.accountInfoGroup}>
                     <Box style={{ width: "auto", flexGrow: 1 }} />
 
-                    {/* 查看源码 */}
+                    {/* 查看源码  Inspect source code  */}
                     <div className={classNames(styles.menuBarItem, styles.hoverable, styles.accountItemSpace)} onClick={this.onCodeViewShow}>
                         <img src={codeViewVisible?iconSwitchDm:iconSwitchJm} style={{ width: '5.125rem', height: '1.875rem' }} />
                     </div>
@@ -880,7 +883,7 @@ class MenuBar extends React.Component {
                     
                 </div>
 
-                {/* 提示保存 */}
+                {/* 提示保存  Remind save */}
                 {isRemindSave && <PromptComponent
                     id={'remindPrompt'}
                     contentLabel={intl.formatMessage(ariaMessages.savePromptLabel)}
@@ -892,7 +895,7 @@ class MenuBar extends React.Component {
                     onOk={this.handleSaveProject}
                 />}
                 
-                {/* 关于界面 */}
+                {/* 关于界面  About component */}
                 {
                     isOpenAbout &&
                     <About onCancel={this.handleCloseAbout} />
@@ -904,7 +907,7 @@ class MenuBar extends React.Component {
                 }
 
                 {
-                    /* 设备救援 */
+                    /* 设备救援  RescueDevice compoment */
                     this.props.rescueModalIndex === RESCUE_MODAL_DEVICE_SELECT &&
                     <RescueDevice onCancel={this.handleCloseRescueDevice} />
                 }
@@ -969,9 +972,9 @@ class MenuBar extends React.Component {
                     isSaving && <LoaderSave />
                 }
 
-                {/* 检查更新 */}
+                {/* 检查更新  Check updates */}
 
-                {/* 提示保存 */}
+                {/* 提示保存  Remind save */}
                 {isRemidSaveBeforeClose && <RemindSaveModal onQuitWithSave={this.handleQuitWithSave} onQuitWithoutSave={this.handleQuitApp} onQuitCancel={this.handleQuitCancel} />}
             </Box>
         );

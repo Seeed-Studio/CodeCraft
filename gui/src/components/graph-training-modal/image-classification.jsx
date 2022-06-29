@@ -76,7 +76,7 @@ class ImageClassification extends React.Component {
                 })
             }
         }
-        //还原数据
+        //还原数据  Restore data
         if(nextProps.restore){
             let showValue='';
             if(nextProps.item.isNameEdited){
@@ -100,7 +100,7 @@ class ImageClassification extends React.Component {
                 subindex,
             } = this.state;
             let value = e.target.value;
-            //如果有超过的就截掉
+            //如果有超过的就截掉    Truncate string
             if(subindex>0){
                 value = value.substr(0,subindex);
             }
@@ -117,8 +117,8 @@ class ImageClassification extends React.Component {
     checkLength(e) {
         let value = e.target.value;
         var l = 0;
-        var hanzicount =0;//汉字数量
-        var subindex=0;//超过的字符下标
+        var hanzicount =0;  //汉字数量  Amount of chinese character
+        var subindex=0;     //超过的字符下标  The index of the character that exceed the max length
         for(var i=0; i<value.length; i++) {
             if (/[\u4e00-\u9fa5]/.test(value[i])) {
                 hanzicount++

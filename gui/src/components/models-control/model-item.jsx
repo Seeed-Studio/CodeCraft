@@ -81,6 +81,7 @@ const messages = defineMessages({
 
 /**
  * 判断当前模型是否被使用
+ * Determine if the current model is being used
  * @param {*} target 
  * @param {*} id 
  */
@@ -104,6 +105,7 @@ class ModelItemView extends React.Component {
 
     /**
      * 处理确认
+     * Handle confirm
      */
     handlePromptOk() {
         const {
@@ -118,6 +120,7 @@ class ModelItemView extends React.Component {
 
     /**
      * 处理取消
+     * Handle cancel
      */
     handlePromptClosed() {
         this.setState({ isShowComfirm: false });
@@ -125,6 +128,7 @@ class ModelItemView extends React.Component {
 
     /**
      * 处理模型名称变化
+     * Handle model name change
      * @param {*} e 
      * @param {*} model 
      */
@@ -137,6 +141,7 @@ class ModelItemView extends React.Component {
 
     /**
      * 处理模型文件路径变化
+     * Handle model file path change
      * @param {*} e 
      * @param {*} model 
      */
@@ -149,6 +154,7 @@ class ModelItemView extends React.Component {
 
     /**
      * 处理模型锚点设置变化
+     * Handle model anchor change
      * @param {*} e 
      * @param {*} model 
      */
@@ -161,6 +167,7 @@ class ModelItemView extends React.Component {
 
     /**
      * 处理样本数量设置变化
+     * Handle model sample number change
      * @param {*} e 
      * @param {*} model 
      * @param {*} id 
@@ -174,6 +181,7 @@ class ModelItemView extends React.Component {
 
     /**
      * 新增CategoryItem
+     * Add category item
      * @param {*} index 
      */
     handleAddCategoryItem(index, arrs, model, id) {
@@ -194,6 +202,7 @@ class ModelItemView extends React.Component {
 
     /**
      * 判断当前模型积木是否被使用
+     * Determin if the current model block is in being used
      * @param {*} target 
      * @param {*} id 
      */
@@ -220,6 +229,7 @@ class ModelItemView extends React.Component {
 
     /**
      * 判断当前菜单是否被使用
+     * Determine if the current menu is being used
      * @param {*} menu 
      */
     isCurrModelMenuUsed(menu) {
@@ -241,6 +251,7 @@ class ModelItemView extends React.Component {
 
     /**
      * 删除CategoryItem
+     * Delete category item
      * @param {*} index 
      */
     handleDeleteCategoryItem(index, arrs, model, id) {
@@ -281,6 +292,7 @@ class ModelItemView extends React.Component {
 
     /**
      * 处理分类名称变化
+     * Handle category name change
      * @param {*} e 
      * @param {*} index 
      * @param {*} arrs 
@@ -308,10 +320,10 @@ class ModelItemView extends React.Component {
             index,
             model: {
                 id,
-                modelName, //模型名称
-                modelFilePath, //模型文件路径
+                modelName,      //模型名称
+                modelFilePath,  //模型文件路径
                 modelData = [], //模型数据
-                modelAnchors, //模型anchors
+                modelAnchors,   //模型anchors
                 modelSamplesNum //样本数量
             },
             modelType = 0

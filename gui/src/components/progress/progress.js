@@ -8,15 +8,14 @@ export default class Progress extends Component {
   render() {
     let percentageNum = (this.props.percentageNum*100);
     //这个支持css样式响应式的
+    // Support css responsive style
     let leftPercentage = (1-this.props.percentageNum)*(-100);
     let content = {
       display:"flex",
       fontSize:"0.72rem",
     }
     let progress = {
-      //不支持样式响应式,可以写死
-      // width:"450px"
-      //这个支持css样式响应式的
+        //这个支持css样式响应式的  Support css responsive style
         width:"70%",
         height:"1rem",
         background:"#dedede",
@@ -29,7 +28,7 @@ export default class Progress extends Component {
         height:"1rem",
         background:"#027EF0",
         position: "absolute",
-      //这个支持css样式响应式的
+        //这个支持css样式响应式的  Support css responsive style
         left:`${leftPercentage}%`,
       };
     let progressItem ={

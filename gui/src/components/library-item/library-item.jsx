@@ -47,7 +47,7 @@ class LibraryItem extends React.PureComponent {
     handleMouseLeave() {
         this.props.onMouseLeave(this.props.id);
     }
-    // 删除
+    // 删除 Delete
     handleDelete(e) {
         e.preventDefault();
         e.stopPropagation();

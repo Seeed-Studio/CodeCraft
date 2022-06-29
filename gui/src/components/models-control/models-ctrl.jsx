@@ -55,7 +55,7 @@ const ModelsCustomView = props => {
         ...otherProps
     } = props;
 
-    // 标题
+    // 标题  Title
     let title;
     if (type == 0){
         title = intl.formatMessage(messages.imgModelButton);

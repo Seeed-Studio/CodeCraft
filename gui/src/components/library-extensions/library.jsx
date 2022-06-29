@@ -81,12 +81,12 @@ class LibraryComponent extends React.Component {
     }
 
     isCurrExtensionUsed(extensionId) {
-        //当前为设备角色
+        //当前为设备角色  Current target is device
         let target = this.props.vm.runtime._editingTarget;
         if( target.getType() == 'device'){
             return this.isCurrExtensionUsedWithInTarget(target, extensionId);
         }
-        //当前为非设备角色
+        //当前为非设备角色  Current target is not device
         let targets = this.props.vm.runtime.targets || [];
         if (targets.length > 0) {
             targets = targets.filter(t => t.getType() == 'sprite')

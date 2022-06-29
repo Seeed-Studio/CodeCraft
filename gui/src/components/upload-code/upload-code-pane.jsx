@@ -122,11 +122,11 @@ const UploadCodePane = (props) => {
 
     // 未连接提示
     // const disPromptStr = isShowMonitorBtns ? disPromptForArdunio : disPromptForNormal;
-    // 设备真正连接
+    // 设备真正连接  Device is connected
     const precondition = connectedDevice && editingTarget;
     const isEquipmentRealConnected = isEquipmentConnected && (precondition && connectedDevice.id === editingTarget.getDeviceId());
 
-    // microbit固件生成按钮
+    // microbit固件生成按钮  Microbit firmware generate button
     const microbitBtns = (
         <div className={styles.buttonsView}>
             <Button
@@ -142,6 +142,7 @@ const UploadCodePane = (props) => {
 
     /**
      * G0 上传按钮view
+     * GroveZero upload button
      */
     const groveZeroView = (
         <div className={styles.buttonsView}>
@@ -364,39 +365,39 @@ const UploadCodePane = (props) => {
             {isShowMocribitBtns && microbitBtns}
             {isShowMaixduino && cyberEyeView}
             {isShowMPython && mPythonView}
-            {isShowOpenCat && openCatView} {/* 机器狗 */}
-            {isShowHaloboad && haloboadView} {/* 超能环 */}
+            {isShowOpenCat && openCatView} {/* 机器狗  Cat */}
+            {isShowHaloboad && haloboadView} {/* 超能环  Haloboad */}
 
-            {/* 上传中 */}
+            {/* 上传中  Uploading */}
             {
                 activeState === STATE_UPLOADING_TAB
                 && <UploadingModal />
             }
-            {/* 上传成功 */}
+            {/* 上传成功  Upload succeed */}
             {
                 activeState === STATE_UPLOAD_SUCC_TAB
                 && <UploadSuccModal
                     isShowGroveZero={isShowGroveZero}
                     onStateModalClose={onStateModalClose} />
             }
-            {/* 上传失败 */}
+            {/* 上传失败  Upload failed */}
             {
                 activeState === STATE_UPLOAD_FAIL_TAB
                 && <UploadFailModal onStateModalClose={onStateModalClose} />
             }
-            {/* 上传超时 */}
+            {/* 上传超时  Upload time exceed */}
             {
                 activeState === STATE_UPLOAD_TIMEOUT_TAB
                 && <UploadTimeoutModal
                     isShowGroveZero={isShowGroveZero}
                     onStateModalClose={onStateModalClose} />
             }
-            {/* arduino 设备选择 */}
+            {/* arduino 设备选择  Arduino selection */}
             {
                 activeState === STATE_UPLOAD_ARDUINO_SELECT &&
                 <UploadArduinoSelect />
             }
-            {/* 设备助手没打开提示 */}
+            {/* 设备助手没打开提示 Assistant not open modal*/}
             {
                 activeState === STATE_UNINSTALLED_ASSISTANT &&
                 <NotOpenAssistantModal
@@ -404,14 +405,16 @@ const UploadCodePane = (props) => {
                     onRequestClose={onStateModalClose}
                 />
             }
-            {/* 在不同浏览器内、或者同一浏览器的不同窗口内，已连接了设备，弹出提示框： */}
+            {/* 在不同浏览器内、或者同一浏览器的不同窗口内，已连接了设备，弹出提示框： 
+                Modal for device being used in different browser/window
+            */}
             {
                 activeState === STATE_ASSISTANT_OCCUPIED &&
                 <IsUsedModal
                     onRequestClose={onStateModalClose}
                 />
             }
-            {/* microbit 下载提示 */}
+            {/* microbit 下载提示  Download modal */}
             {
                 isShowMicrobitPrompt &&
                 <MicrobitDownloadModal
