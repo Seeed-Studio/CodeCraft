@@ -45,10 +45,10 @@ const UploadComponent = function (props) {
 
 UploadComponent.propTypes = {
     className: PropTypes.string,
-    onClick: PropTypes.func, // Optional, "coming soon" if no callback provided
-    fileAccept: PropTypes.string, // Optional, only for file upload
-    fileChange: PropTypes.func, // Optional, only for file upload
-    fileInput: PropTypes.func // Optional, only for file upload
+    onClick: PropTypes.func,        // Optional, "coming soon" if no callback provided
+    fileAccept: PropTypes.string,   // Optional, only for file upload
+    fileChange: PropTypes.func,     // Optional, only for file upload
+    fileInput: PropTypes.func       // Optional, only for file upload
 };
 
 export default UploadComponent;

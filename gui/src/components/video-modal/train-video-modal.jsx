@@ -57,25 +57,26 @@ class TrainVideoModal extends React.Component {
         this.state = {
             classificationList,
             predictionID: 0,
-            minimizeState:false,//最小化
+            minimizeState:false,    //最小化  Minimize
         }
 
         this.modelDiv;
-        this.moving = false;//拖动状态
-        this.isDestroy = false;//页面是否被销毁
-        //x最大left
+        this.moving = false;    //拖动状态  If moving
+        this.isDestroy = false; //页面是否被销毁  If the page is destroied
+        //x最大left  Max left for x
         this.maxLeft;
-        //x最小left
+        //x最小left  Min left for x
         this.minLeft=0;
-        //y最大top
+        //y最大top  Max top for y
         this.maxTop;
-        //y最小top
+        //y最小top  Min top for y
         this.minTop=45.5;
 
         this.recognitionWindow = props.intl.formatMessage(localMessages.recognitionWindow);
         this.notSupportMediaDevices = props.intl.formatMessage(localMessages.notSupportMediaDevices);
 
         //作品打开的时候，可能会有保存的模型数据，需要重新训练
+        // Retrain if there is saved model data while opening the workspace
         props.vm.runtime.trainMode.setRestoreWorkspaceRepredictCallback(this.restoreWorkspaceRepredictCallback)
 
     }
@@ -106,20 +107,20 @@ class TrainVideoModal extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        // //状态变了说明页面关闭状态变化了
+        //状态变了说明页面关闭状态变化了  State changed means the hidden state will change
         if(this.props.hidden!=prevProps.hidden){
             if(!this.props.hidden) {
-                //判断是否支持多媒体
+                //判断是否支持多媒体  Check if media is supported
                 if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
                     // alert(this.notSupportMediaDevices);
                     return;
                 }
-                //摄像头数量
+                //摄像头数量  Number of camera
                 let videoNum = 0;
-                //麦克风数量
+                //麦克风数量  Number of microphone
                 let microphoneNum = 0;
                 navigator.mediaDevices.enumerateDevices().then(devices => {
-                    //遍历设备列表
+                    //遍历设备列表  Iterate device list
                     devices.forEach(device => {
                         if (device.kind === "videoinput") videoNum++;
                         if (device.kind === "audioinput") microphoneNum++;
@@ -143,10 +144,10 @@ class TrainVideoModal extends React.Component {
 
         this.video = document.getElementById('trainVideo');
         let constraints = { };
-        //有视频
+        //有视频  Has webcam
         if(hasWebcam){
             if (hasMicrophone) {
-                //如果有麦克风，那就加上音频
+                //如果有麦克风，那就加上音频  Add audio if there is a microphone
                 constraints = {
                     audio: true,
                     video: { width: 260, height: 226 },
@@ -156,7 +157,7 @@ class TrainVideoModal extends React.Component {
                     video: { width: 260, height: 226 },
                 };
             }
-        }else {//没有视频，那肯定有音频
+        }else {//没有视频，那肯定有音频  No webcam means there will be audio
             constraints = {
                 audio: true,
             };
@@ -170,7 +171,7 @@ class TrainVideoModal extends React.Component {
                 this.video.play();
                 this.classifyVideo();
             }
-            //有麦克风
+            //有麦克风  Has microphone
             if(hasMicrophone){
                 let index = 1;
                 if(!hasWebcam){
@@ -192,7 +193,7 @@ class TrainVideoModal extends React.Component {
         const {
             classificationList
         } = this.state;
-        //预测结果更新到redux
+        //预测结果更新到redux  Update the classified result to redux
         this.props.setClassificationList(classificationList);
     }
 
@@ -208,10 +209,10 @@ class TrainVideoModal extends React.Component {
     handleMouseDown(e) {
         // e.stopPropagation();
         this.moving = true;
-        //浏览器尺寸
+        //浏览器尺寸  Size of the browser
         let clientWidth = document.documentElement.clientWidth;
         let clientHeight = document.documentElement.clientHeight;
-        // //本model尺寸与初始位置
+        //本model尺寸与初始位置  The size and offset of model
         let width = this.modelDiv.offsetWidth;
         let height = this.modelDiv.offsetHeight;
 
@@ -285,7 +286,7 @@ class TrainVideoModal extends React.Component {
                 let confidence = item.confidence;
                 let classification = classificationList[label];
                 classification.confidence = Number(confidence.toFixed(4));
-                //如果没有图片则为可信度设为0
+                //如果没有图片则为可信度设为0  Confidence is 0 if no image
                 if(classification.imageList.length==0){
                     classification.confidence=0;
                 }
@@ -295,7 +296,7 @@ class TrainVideoModal extends React.Component {
                 predictionID: v,
                 classificationList
             })
-            //预测结果更新到vm
+            //预测结果更新到vm  Update the classified result to vm
             this.props.vm.runtime.trainMode.setClassificationList(classificationList);
             this.props.vm.runtime.trainMode.setPredictionID(v);
 
@@ -320,6 +321,7 @@ class TrainVideoModal extends React.Component {
 
         let classification = classificationList[predictionID];
         //如果在预测的过程中，重新训练模型，可能predictionID越界，那就默认第一个，预测正常后会刷回来
+        // PredictionID may go out of bound if retrain model during predicting, set it to 0 and restore after predict succeed.
         if(classification==null){
             classification = classificationList[0];
         }

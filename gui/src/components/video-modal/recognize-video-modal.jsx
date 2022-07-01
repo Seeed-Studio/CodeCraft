@@ -75,26 +75,26 @@ class RecognizeVideoModal extends React.Component {
         this.videoStreamTrack;
         this.audioStreamTrack;
         this.state = {
-            minimizeState:false,//最小化
+            minimizeState:false,    //最小化  Minimize
             modelLoading: true,
             soundModelLoading: false
         }
 
-        this.faceapi;//人脸模型
-        this.classifier;//声音模型
-        this.ctx;//画布上下文
+        this.faceapi;       //人脸模型  Face model
+        this.classifier;    //声音模型  Voice model
+        this.ctx;           //画布上下文  Canvas context
 
         this.modelDiv;
-        this.moving = false;//拖动状态
-        this.isDestroy = false;//页面是否被销毁
+        this.moving = false;        //拖动状态  If moving
+        this.isDestroy = false;     //页面是否被销毁  If the page been destroied
 
-        //x最大left
+        //x最大left  Max left for x
         this.maxLeft;
-        //x最小left
+        //x最小left  Min left for x
         this.minLeft=0;
-        //y最大top
+        //y最大top  Max top for y
         this.maxTop;
-        //y最小top
+        //y最小top  Min top for y
         this.minTop=45.5;
 
         this.recognitionWindow = props.intl.formatMessage(localMessages.recognitionWindow);
@@ -103,7 +103,7 @@ class RecognizeVideoModal extends React.Component {
     }
 
     componentDidMount() {
-        //有些电脑没有GPU，禁掉GPU
+        //有些电脑没有GPU，禁掉GPU  Ban GPU if the current machine does not have one
         ml5.tf.ENV.set('WEBGL_PACK', false);
         this.modelDiv = document.getElementById('recognize-modal');
     }
@@ -114,10 +114,10 @@ class RecognizeVideoModal extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        // //状态变了说明页面关闭状态变化了
+        //状态变了说明页面关闭状态变化了  State changed means the hidden state will change
         if (this.props.hidden != prevProps.hidden) {
             if (!this.props.hidden) {
-                //判断是否支持多媒体
+                //判断是否支持多媒体  Check if media is supported
                 if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
                     this.setState({
                         modelLoading: false,
@@ -126,12 +126,12 @@ class RecognizeVideoModal extends React.Component {
                     // alert(this.notSupportMediaDevices);
                     return;
                 }
-                //摄像头数量
+                //摄像头数量  Number of camera
                 let videoNum = 0;
-                //麦克风数量
+                //麦克风数量  Number of microphone
                 let microphoneNum = 0;
                 navigator.mediaDevices.enumerateDevices().then(devices => {
-                    //遍历设备列表
+                    //遍历设备列表  Iterate device list
                     devices.forEach(device => {
                         if (device.kind === "videoinput") videoNum++;
                         if (device.kind === "audioinput") microphoneNum++;
@@ -163,10 +163,10 @@ class RecognizeVideoModal extends React.Component {
 
         this.video = document.getElementById('recognizeVideo');
         let constraints = { };
-        //有视频
+        //有视频  Has webcam
         if(hasWebcam){
             if (hasMicrophone) {
-                //如果有麦克风，那就加上音频
+                //如果有麦克风，那就加上音频  Add audio if there is a microphone
                 constraints = {
                     audio: true,
                     video: { width: 260, height: 226 },
@@ -176,7 +176,7 @@ class RecognizeVideoModal extends React.Component {
                     video: { width: 260, height: 226 },
                 };
             }
-        }else {//没有视频，那肯定有音频
+        }else {//没有视频，那肯定有音频  No webcam means there will be audio
             constraints = {
                 audio: true,
             };
@@ -190,7 +190,7 @@ class RecognizeVideoModal extends React.Component {
                 this.video.play();
                 await this.loadFaceModel();
             }
-            //有麦克风
+            //有麦克风  Has microphone
             if(hasMicrophone){
                 let index = 1;
                 if(!hasWebcam){
@@ -212,7 +212,7 @@ class RecognizeVideoModal extends React.Component {
     }
 
     async loadFaceModel(){
-        //初始化faceapi
+        //初始化faceapi  Initialize faceapi
         if (this.faceapi == null) {
             try {
                 this.faceapi = await ml5.faceApi(this.video, detection_options)
@@ -383,10 +383,10 @@ class RecognizeVideoModal extends React.Component {
     handleMouseDown(e) {
         // e.stopPropagation();
         this.moving = true;
-        //浏览器尺寸
+        //浏览器尺寸  Size of the browser
         let clientWidth = document.documentElement.clientWidth;
         let clientHeight = document.documentElement.clientHeight;
-        // //本model尺寸与初始位置
+        //本model尺寸与初始位置  The size and offset of model
         let width = this.modelDiv.offsetWidth;
         let height = this.modelDiv.offsetHeight;
 
