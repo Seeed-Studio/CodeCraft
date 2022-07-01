@@ -38,11 +38,11 @@ import {
 } from '../reducers/debug-mode';
 
 const STATUS_CONNECT_MODAL_IDLE = 0;
-const STATUS_CONNECT_MODAL_SETTING = 1; // 设置
-const STATUS_CONNECT_MODAL_UPGRADE_CONFIRM = 2; // 升级确认
-const STATUS_CONNECT_MODAL_UPGRADING = 3; // 升级中
-const STATUS_CONNECT_MODAL_UPGRADE_SUCC = 4; // 升级成功
-const STATUS_CONNECT_MODAL_UPGRADE_FAIL = 5; // 升级失败
+const STATUS_CONNECT_MODAL_SETTING = 1;         // 设置  Settings
+const STATUS_CONNECT_MODAL_UPGRADE_CONFIRM = 2; // 升级确认  Confirm upgrade
+const STATUS_CONNECT_MODAL_UPGRADING = 3;       // 升级中  Upgrading
+const STATUS_CONNECT_MODAL_UPGRADE_SUCC = 4;    // 升级成功  Upgrade succeed
+const STATUS_CONNECT_MODAL_UPGRADE_FAIL = 5;    // 升级失败  Upgrade failed
 
 const STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP1 = 6;
 const STATUS_CONNECT_MODAL_PYTHON_DOWN_BIN_SETP2 = 7;
@@ -80,7 +80,7 @@ class ConnectModal extends React.Component {
     ]);
 
     this.state = {
-      // isUpgrade: false,// 是否需要更新
+      // isUpgrade: false,// 是否需要更新  If upgrade is needed
       activeIndex: STATUS_CONNECT_MODAL_IDLE,
       version: null,
       firmwareVersion: null,
@@ -103,7 +103,7 @@ class ConnectModal extends React.Component {
   }
 
 
-  // 打开帮助文档
+  // 打开帮助文档  Open help document
   handleToDocument(url) {
     const args = {
       url
@@ -117,6 +117,7 @@ class ConnectModal extends React.Component {
 
   /**
    * 关闭设备连接弹框
+   * Close device connect window
    */
   handleConnectClose() {
     this.props.onRequestCloseConnectView();
@@ -124,6 +125,7 @@ class ConnectModal extends React.Component {
 
   /**
    * 设备中控识别回调
+   * Device recognize callback
    * @param {*} id 
    */
   handleDeviceRecognize(id) {
@@ -132,6 +134,7 @@ class ConnectModal extends React.Component {
 
   /**
    * 处理固件更新事件
+   * Handle firmware upgrade event
    */
   handleUpgradePrompt(isUpgrade) {
     this.props.updateIsUpgradeState(isUpgrade);
@@ -139,6 +142,7 @@ class ConnectModal extends React.Component {
 
   /**
    * 固件升级
+   * Firmware upgrade
    */
   handleFirmwareUpgrade() {
     let deviceId = this.props.connectedDevice.id;
@@ -273,6 +277,7 @@ class ConnectModal extends React.Component {
 
   /**
    * 打开设置界面
+   * Open settings modal
    */
   handleOpenVersionModal() {
     this.setState({
@@ -284,11 +289,11 @@ class ConnectModal extends React.Component {
   handleUpgrade() {
     this.setState({ activeIndex: STATUS_CONNECT_MODAL_UPGRADING });
     this.props.upgrade().then(() => {
-      //  升级成功 
+      //  升级成功  Upgrade succeed
       console.log('handleUpgrade ---- 升级成功 ');
       this.setState({ activeIndex: STATUS_CONNECT_MODAL_UPGRADE_SUCC });
     }, () => {
-      //  升级失败 
+      //  升级失败  Upgrade failed
       console.log('handleUpgrade ---- 升级失败 ');
       this.setState({ activeIndex: STATUS_CONNECT_MODAL_UPGRADE_FAIL });
     })
@@ -300,6 +305,7 @@ class ConnectModal extends React.Component {
   }
   /**
    * 处理返回事件
+   * Handle upgrade modal cancel event
    */
   handleUpgradeStateModalCancel() {
     switch (this.state.activeIndex) {
@@ -332,7 +338,7 @@ class ConnectModal extends React.Component {
 
     return (
       <Box>
-        {/* 设备连接主界面 */}
+        {/* 设备连接主界面  Device connecting window */}
         {this.state.activeIndex === STATUS_CONNECT_MODAL_IDLE
           && <ConnectModalComponent
             isUpgrade={this.props.isUpgrade}
@@ -341,7 +347,7 @@ class ConnectModal extends React.Component {
             onOpenVersionModal={this.handleOpenVersionModal}
             onToDocument={this.handleToDocument}
             {...components} />}
-        {/* 设置 */}
+        {/* 设置  Settings */}
         {
           this.state.activeIndex === STATUS_CONNECT_MODAL_SETTING
           &&
@@ -352,7 +358,7 @@ class ConnectModal extends React.Component {
             onSettingConfrim={this.handleUpgradeStateModalCancel} />
         }
 
-        {/* 升级确认 */}
+        {/* 升级确认  Upgrade confirm */}
         {this.state.activeIndex === STATUS_CONNECT_MODAL_UPGRADE_CONFIRM
           &&
           <UpgradeConfirm
@@ -362,12 +368,12 @@ class ConnectModal extends React.Component {
             onUpgradeCancel={this.handleUpgradeStateModalCancel}
             onUpgrade={this.handleUpgrade} />
         }
-        {/* 升级中 */}
+        {/* 升级中  Upgrading */}
         {
           this.state.activeIndex === STATUS_CONNECT_MODAL_UPGRADING
           && <UpgradingPage />
         }
-        {/* 升级成功 */}
+        {/* 升级成功  Upgrade succeed */}
         {
           this.state.activeIndex === STATUS_CONNECT_MODAL_UPGRADE_SUCC
           &&
@@ -375,7 +381,7 @@ class ConnectModal extends React.Component {
             onCancel={this.handleUpgradeStateModalCancel}
             onUpgradeSuccComfirm={this.handleUpgradeStateModalCancel} />
         }
-        {/* 升级失败 */}
+        {/* 升级失败  Upgrade failed*/}
         {
           this.state.activeIndex === STATUS_CONNECT_MODAL_UPGRADE_FAIL
           &&
@@ -466,11 +472,11 @@ const mapStateToProps = state => ({
   isUpgrade: state.scratchGui.deviceConnect.isUpgrade,
   connectedDevice: state.scratchGui.deviceConnect.connectedDevice,
   connTabIndex: state.scratchGui.deviceConnect.tab,
-  isConnected: state.scratchGui.deviceConnect.isConnected, // socket 是否连接
-  isEquipmentConnected: state.scratchGui.deviceConnect.isEquipmentConnected, // 设备是否连接
-  scan: () => { return state.scratchGui.vm.deviceEngine.scan() },// 扫描设备列表
-  connect: (device) => { return state.scratchGui.vm.deviceEngine.connect(device) },  // 连接设备 
-  disconnect: () => { return state.scratchGui.vm.deviceEngine.disconnect() }, // 断开连接
+  isConnected: state.scratchGui.deviceConnect.isConnected,                            // socket 是否连接  If socket is connected
+  isEquipmentConnected: state.scratchGui.deviceConnect.isEquipmentConnected,          // 设备是否连接  If device is connected
+  scan: () => { return state.scratchGui.vm.deviceEngine.scan() },                     // 扫描设备列表  Scan device list
+  connect: (device) => { return state.scratchGui.vm.deviceEngine.connect(device) },   // 连接设备  Connect device
+  disconnect: () => { return state.scratchGui.vm.deviceEngine.disconnect() },         // 断开连接  Disconnect
   upgrade: () => { return state.scratchGui.vm.deviceEngine.upgrade() },
   getVersion: () => { return state.scratchGui.vm.deviceEngine.getVersion() },
   getFirmwareVersion: () => { return state.scratchGui.vm.deviceEngine.getFirmwareVersion() },

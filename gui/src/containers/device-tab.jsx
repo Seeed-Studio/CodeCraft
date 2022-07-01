@@ -136,6 +136,7 @@ class DeviceTab extends React.Component {
 
     /**
      * 删除设备角色
+     * Delete device
      * @param {*} id 
      */
     handleDeleteDevice(object) {
@@ -283,31 +284,31 @@ class DeviceTab extends React.Component {
     // console.log("handlePromptOk ------------- ")
 
     handleSelectPhysicalDevice(device, index) {
-        //如果已选择不处理
-        //关闭物理设备列表窗口
+        //如果已选择不处理  If selected, return
+        //关闭物理设备列表窗口  Close devices list window
         if (device.featured) {
             this.props.onRequestCloseDevicesLibrary();
             return;
         }
-        //切换设备
+        //切换设备  Switch device
         const switchDevice = () => {
-            //添加设备角色
+            //添加设备角色  Add a device
             this.props.vm.loadDeviceProject(device,device.id).then(() => {
-                //更新物理设备列表显示状态
+                //更新物理设备列表显示状态  Update device list display state
                 this.props.onRequestCloseDevicesLibrary();
-                //关闭串口图表界面
+                //关闭串口图表界面  Close serial chart modal
                 this.props.onCloseSerialChartModal();
-                //更新设备选择状态
+                //更新设备选择状态  Update device selection state
                 this.props.onUpdatePhysicalDeviceState(device.id, true);
-                //重置code view
+                //重置code view  Reset code view
                 this.props.setCodeViewVisible(false);
-                //断开串口设备
+                //断开串口设备  Disconnect serial device
                 this.props.disconnect().then(() => { this.props.resetDebugMode() });
             }).catch((err) => {
                 console.log("handleSelectPhysicalDevice loadDeviceProject ... ", err);
             });
         }
-        //获取工程是否提示保存
+        //获取工程是否提示保存  Get if project is saved
         let isProjectSaved = this.props.isProjectSaved;
         if (isProjectSaved) {
             switchDevice();
@@ -330,9 +331,9 @@ class DeviceTab extends React.Component {
             this.props.openConnectView();
             this.setState({ isShowConnecting: false });
         }, (errorCode) => {
-            //关闭加载view弹窗
+            //关闭加载view弹窗  Close connecting modal
             this.setState({ isShowConnecting: false });
-            //错误判断 (超时、被占)
+            //错误判断 (超时、被占)  Error handler
             if (-1 === errorCode) {
                 this.setState({
                     activeConnectModalTab: CONNECT_MODAL_IS_BEOCCUPIED

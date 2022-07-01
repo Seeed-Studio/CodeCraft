@@ -74,6 +74,7 @@ const addFunctionListener = (object, property, callback) => {
 
 /**
  * 解析translate数据
+ * Parse the traslate data
  * @param {*} translate 
  */
 const parseTransalte = (translate = "") => {
@@ -100,6 +101,7 @@ const getSvgHeight = (el) => {
 
 /**
  * 获取当前日期
+ * Get current date
  * @param {*} inputTime 
  */
 const snapshootName = () => {
@@ -111,7 +113,7 @@ const snapshootName = () => {
     return `codecraft_${currdate}_${randomNum}.png`;
 };
 
-//获取积木定义
+//获取积木定义  Get the definition of the block
 const getBlocks = (models = []) => {
     const blocks = [];
     for (let index = 0; index < models.length; index++) {
@@ -127,7 +129,7 @@ const getBlocks = (models = []) => {
     return blocks;
 }
 
-//获取积木菜单
+//获取积木菜单  Get the menu of the blocks
 const getMenus = (models = []) => {
     return models.map(m => {
         return {
@@ -139,6 +141,7 @@ const getMenus = (models = []) => {
 
 /**
  * 获取坐标菜单
+ * Get the coordinate menu
  */
 const getCoordinateMenu = () => {
     return {
@@ -269,7 +272,7 @@ class Blocks extends React.Component {
 
         analytics.pageview('/editors/blocks');
 
-        // 把垃圾桶放在积木块上层
+        // 把垃圾桶放在积木块上层  Place the trash can above the blocks
         const transhcan = document.getElementsByClassName('blocklyTrash')[0];
         const workspace = document.getElementsByClassName('blocklyWorkspace')[0];
         transhcan.remove();
@@ -314,6 +317,7 @@ class Blocks extends React.Component {
 
     /**
      * 处理cdc模型加载回调
+     * Load cdc model callback
      * @param {*} imageModels 
      * @param {*} objectModels 
      */
@@ -332,13 +336,14 @@ class Blocks extends React.Component {
             createSkillModels: createSkillModels
         });
         
-        //更新扩展积木
+        //更新扩展积木  Update extension blocks
         this.props.vm.refreshExtensionBlocks().then(() => {
             this.props.vm.refreshWorkspace();
         });
     }
     /**
      * 处理bittle模型加载回调
+     * Handle loading bittle model
      * @param {*} createSkillModels 
      */
     handleLoadBittleCdcModels(createSkillModels){
@@ -346,7 +351,7 @@ class Blocks extends React.Component {
         this.handleDefineCreateSkillBlocks({
             createSkillModels: createSkillModels
         });
-        //更新扩展积木
+        //更新扩展积木  Update extension blocks
         this.props.vm.refreshExtensionBlocks().then(() => {
             this.props.vm.refreshWorkspace();
         });
@@ -465,7 +470,7 @@ class Blocks extends React.Component {
     }
     componentWillUnmount() {
         this.detachVM();
-        //移除workspace button事件监听
+        //移除workspace button事件监听  Remove workspace button listeners
         this.workspace.removeButtonCallback('trainOnclick');
         this.workspace.removeButtonCallback('trainVideoOnclick');
         this.workspace.removeButtonCallback('recognizeVideoOnclick');
@@ -478,7 +483,7 @@ class Blocks extends React.Component {
 
         this.workspace.removeButtonCallback('imgModelButton');
         this.workspace.removeButtonCallback('objModelButton');
-        //释放workspace资源对象
+        //释放workspace资源对象  Dispose workspace
         this.workspace.dispose();
         clearTimeout(this.toolboxUpdateTimeout);
     }
@@ -529,6 +534,7 @@ class Blocks extends React.Component {
 
     /**
      * 设置语言代码生成
+     * Set code generating
      */
     setCode(args) {
         if (!args) return;
@@ -564,12 +570,12 @@ class Blocks extends React.Component {
                 codeEditor.setLanguage('cpp');
                 break;
         }
-        //device变化时 生成code代码
+        //device变化时 生成code代码  When device changed, generate code
         codeEditor.setValue(toCode(this.ScratchBlocks, this.workspace, deviceId));
     }
 
     attachVM() {
-        // 代码生成相关
+        // 代码生成相关  Code generating
         this.workspace.addChangeListener(this.setCode);
         this.workspace.addChangeListener(this.props.vm.blockListener);
         this.flyoutWorkspace = this.workspace
@@ -787,6 +793,7 @@ class Blocks extends React.Component {
 
     /**
      * 处理定义扩展积木
+     * Handle define extension blocks
      */
     handleDefineExtensionBlocks(data) {
         const {
@@ -810,31 +817,31 @@ class Blocks extends React.Component {
 
         const menus = [].concat(blocksMenus).concat(coordinatMenu);
 
-        //定义积木
+        //定义积木  Define blocks
         for (let index = 0; index < blocks.length; index++) {
 
             let {
                 value: {
                     id,
-                    modelName, //模型名称
-                    modelFilePath: fpath, //模型文件路径
-                    modelData: mlable, //模型数据
+                    modelName,              //模型名称
+                    modelFilePath: fpath,   //模型文件路径
+                    modelData: mlable,      //模型数据
                     modelAnchors: manchors, //模型anchors
-                    modelType = '', //模型类型
+                    modelType = '',         //模型类型
                     modelSamplesNum: samplesNum = 15
                 },
                 oneBlock,
                 twoBlock,
                 threeBlock
             } = blocks[index];
-            //生成模型文件名称
+            //生成模型文件名称  Generate filename for the model
             let fname = fpath.indexOf('0x') != -1 ? fpath : `"${fpath}"`;
-            //生成模型lable数据
+            //生成模型lable数据  Generate a label for the model
             let lable = `[${mlable.map(i => `'${i.value}'`).join(",")}]`;
-            //生成模型anchors数据
+            //生成模型anchors数据  Generate anchors for the model
             let anchors = `(${manchors || '0.57273, 0.677385, 1.87446, 2.06253, 3.33843, 5.47434, 7.88282, 3.52778, 9.77052, 9.16828'})`;
 
-            //图像模型积木代码定义
+            //图像模型积木代码定义  Define image model block
             if (modelType == 'image') {
                 Blockly.Maixduino[`${oneBlock}`] = function (block) {
                     Blockly.Maixduino.definitions_['import_imageModel'] = 'from image_classification import *';
@@ -860,7 +867,7 @@ class Blocks extends React.Component {
                     return [`image${id}.get_classification_result(${probability})`, Blockly.Maixduino.ORDER_ATOMIC];
                 }
             }
-            //物体模型积木代码定义
+            //物体模型积木代码定义  Define object model block
             else if (modelType == 'object') {
                 Blockly.Maixduino[`${oneBlock}`] = function (block) {
                     Blockly.Maixduino.definitions_['import_objectModel'] = 'from object_detection import *';
@@ -902,7 +909,7 @@ class Blocks extends React.Component {
                     return [`object${id}.get_object_property('${result}', ${probability}, ${xy})`, Blockly.Maixduino.ORDER_ATOMIC];
                 }
             }
-            //物体模型积木代码定义
+            //物体模型积木代码定义  Define train model block
             else if (modelType == 'train') {
                 Blockly.Maixduino[`modelExtension_recordSeedSample${id}`] = function (block) {
                     Blockly.Maixduino.definitions_['import_localtrain'] = 'from local_training import *';
@@ -978,7 +985,7 @@ class Blocks extends React.Component {
             }
         }
 
-        //定义菜单
+        //定义菜单  Definition menu
         for (let index = 0; index < menus.length; index++) {
             let { ipcode, menu } = menus[index];
             Blockly.Maixduino[`${ipcode}`] = function (block) {
@@ -989,7 +996,7 @@ class Blocks extends React.Component {
 
     }
 
-    //bittle创建技能
+    //bittle创建技能  Create skill in bittle
     handleDefineCreateSkillBlocks(data){
         const {
             createSkillModels
@@ -1005,7 +1012,7 @@ class Blocks extends React.Component {
             return  `bitty_set_diy(createSkillValueList,${fir});`;    
         }
     }
-    //恢复出厂设置
+    //恢复出厂设置  Restore factory settings
     handleRestoreFactorySettings(){
         let code = _getSettingCode()
     }
@@ -1102,7 +1109,7 @@ class Blocks extends React.Component {
         let blocklyWorkspaceChildren = workspaceNode.childNodes;
         let blockCanvas = blocklyWorkspaceChildren[1];
         let blocks = blockCanvas.childNodes || [];
-        //定义blocks元素的属性列表
+        //定义blocks元素的属性列表  The attribute list for defining blocks
         let nodesAttrs = [];
         let transformXs = [];
         let transformYs = [];
@@ -1134,7 +1141,7 @@ class Blocks extends React.Component {
         let minXNode, maxXNode, minYNode, maxYNode;
         for (let index = 0; index < nodesAttrs.length; index++) {
             let node = nodesAttrs[index];
-            // 获取X最小值
+            // 获取X最小值  Get min x value
             if (minXNode) {
                 if (node.x < minXNode.x) {
                     minXNode = node;
@@ -1142,7 +1149,7 @@ class Blocks extends React.Component {
             } else {
                 minXNode = node;
             }
-            // 获取X最大值
+            // 获取X最大值  Get max x value
             if (maxXNode) {
                 let aV = maxXNode.x + maxXNode.width;
                 let bV = node.x + node.width;
@@ -1152,7 +1159,7 @@ class Blocks extends React.Component {
             } else {
                 maxXNode = node;
             }
-            // 获取Y最小值
+            // 获取Y最小值  Get min y value
             if (minYNode) {
                 if (node.y < minYNode.y) {
                     minYNode = node;
@@ -1160,7 +1167,7 @@ class Blocks extends React.Component {
             } else {
                 minYNode = node;
             }
-            // 获取Y最大值
+            // 获取Y最大值  Get max y value
             if (maxYNode) {
                 let aV = maxYNode.y + maxYNode.height;
                 let bV = node.y + node.height;
@@ -1462,7 +1469,7 @@ const mapStateToProps = state => ({
     toolboxXML: state.scratchGui.toolbox.toolboxXML,
     customProceduresVisible: state.scratchGui.customProcedures.active,
     activeMainTabIndex: state.scratchGui.mainTab.activeMainTabIndex,
-    //模型数据（图片模型、物体模型）
+    //模型数据（图片模型、物体模型）  Model data (image model, object model)
     imageModels: state.scratchGui.modelsCtr.imageModels,
     objectModels: state.scratchGui.modelsCtr.objectModels,
     trainModels: state.scratchGui.modelsCtr.trainModels,

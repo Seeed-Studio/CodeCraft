@@ -15,6 +15,7 @@ const TOOLBOX_R_GAP = 136;
 
 /**
  * 获取microbit积木代码
+ * Get microbit block code
  */
 const getmicrobitCode = (code) => {
     return producePythonCode(code);
@@ -22,6 +23,7 @@ const getmicrobitCode = (code) => {
 
 /**
  * 获取当前日期
+ * Get current date
  * @param {*} inputTime 
  */
 const currentDate = () => {
