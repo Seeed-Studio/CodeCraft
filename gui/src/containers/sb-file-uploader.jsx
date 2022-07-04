@@ -72,6 +72,7 @@ class SBFileUploader extends React.Component {
             }
         }
         // 判断当前项目是否保存，true--已保存，直接打开选择的文件
+        // Determine if the current project has been saved. If saved, open the selected file directly
         if (this.props.isProjectSaved) {
             this.props.onSetProjectItem(e.target);
             this.props.onOpenLocalSelectedProject(e.target);
@@ -79,7 +80,7 @@ class SBFileUploader extends React.Component {
                 this.props.onRequestClose();
             }
         } else {
-            // false--未保存，打开保存提示弹框
+            // false--未保存，打开保存提示弹框  Not saved, open save reminder modal
             this.props.onSetProjectItem(e.target);
             this.props.onSetRemindSave(true);
             this.props.onSetRemindSaveType('openLocalProject');

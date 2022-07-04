@@ -92,17 +92,17 @@ class UploadCode extends React.Component {
                 this.microbitUpload();
                 break;
         }
-        // 关闭在线运行的程序
+        // 关闭在线运行的程序  Close the programs that running online
         this.props.vm.stopAll();
-        // 关闭串口图表窗口
+        // 关闭串口图表窗口  Close the serial chart modal
         this.props.closeSerialChartModalState();
     }
 
     chCodeUpload() {
-        // 条件满足进行烧录
+        // 条件满足进行烧录  If condition met, start code uploading
         if (this.props.isConnected
             && this.props.isEquipmentConnected) {
-            // 更新烧录状态
+            // 更新烧录状态  Update the uploading state
             this.props.vm.setDebugMode(0);
             this.props.activateState(STATE_UPLOADING_TAB);
             this.props.activateDebugMode(MODE_OFFLINE);
@@ -167,9 +167,9 @@ class UploadCode extends React.Component {
     }
 
     handleOpenSerialChatView() {
-        //重置设备
+        //重置设备  Reset the device
         this.props.vm.deviceEngine.resetAtOpenSerial();
-        //打开串口图表
+        //打开串口图表  Open the serial chart modal
         this.props.openSerialChartModalState();
     }
 

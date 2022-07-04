@@ -29,7 +29,7 @@ class PaintEditorWrapper extends React.Component {
     }
     handleUpdateImage (isVector, image, rotationCenterX, rotationCenterY) {
         if (isVector) {
-            // 为空的svg时，图片不展示，用空白的svg占位
+            // 为空的svg时，图片不展示，用空白的svg占位  Display blank sng when it is empty
             if(image.indexOf(`width="0"`) > 0) {
                 image = '<svg width="1" height="1" version="1.1" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="1" height="1" style="fill:white;fill-opacity:0;"/></svg>';
             }

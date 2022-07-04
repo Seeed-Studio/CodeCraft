@@ -355,21 +355,31 @@ class DeviceTab extends React.Component {
      *  在线调试开启时，点击编辑区积木块，可对设备进行在线运行；
      *  b 不支持在线调试的设备：
      *  默认关闭，且不可开启
-     *
+     * 
+     * Online debugging:
+     * Set different state according to the selected device.
+     * 
+     * Devices that support online debugging:
+     * Default off. Click to switch between on and off.
+     * While online debugging is off, will not run the device online while clicking the block in the edit area. (While the device is running online, it will be closed once the online debugging mode is switched off)
+     * While online debugging is on, the device can be run online by clicking the block in the edit area.
+     * 
+     * Devices not support the online debugging mode:
+     * Default off, cannot be turned on.
      */
     handleClickDebugMode() {
-        // 切离线
+        // 切离线  Switch to offline mode
         if (this.props.debugMode === MODE_ONLINE) {
             this.props.vm.setDebugMode(0);
             this.props.vm.stopAll();
             this.props.activateDebugMode(MODE_OFFLINE);
         }
-        // 切在线
+        // 切在线  Switch online mode
         else {
             this.props.vm.setDebugMode(1);
             this.props.activateDebugMode(MODE_ONLINE);
         }
-        // 切换调试模式
+        // 切换调试模式  Switch debugging mode
     }
 
     handleConnectModalClose() {
@@ -387,6 +397,7 @@ class DeviceTab extends React.Component {
     /**
      * 根据设备id
      * 获取对应icon
+     * Get corresponding icon according to the id.
      * @param {*} id 
      */
     getIconUrl(id) {
@@ -400,6 +411,7 @@ class DeviceTab extends React.Component {
 
     /**
      * 打开设备连接界面
+     * Open the device connection view
      */
     handleOpenLinkView() {
         this.props.openConnectView();
@@ -437,7 +449,7 @@ class DeviceTab extends React.Component {
                 )
             })
         } 
-        //关闭串口图表界面
+        //关闭串口图表界面  Close the serial chart modal
         this.props.onCloseSerialChartModal();
         this.props.vm.deviceEngine.open().then(
             () => {

@@ -19,6 +19,7 @@ import { toasts } from '../components/toast-special/toast.jsx';
 
 /**
  * 创建模型id
+ * Create model id
  */
 const createModelId = () => {
     var timestamp = new Date().getTime();
@@ -27,6 +28,7 @@ const createModelId = () => {
 
 /**
  * 空判断
+ * Check empty
  * @param {*} v 
  */
 const isEmpty = (v) => {
@@ -35,6 +37,7 @@ const isEmpty = (v) => {
 
 /**
  * 判断当前模型是否被使用
+ * Check if the current model has been used
  * @param {*} target 
  * @param {*} id 
  */
@@ -65,13 +68,14 @@ class ModelControl extends React.Component {
         ]);
 
         this.state = {
-            models: [], //模型数据
-            modelType: props.type || 0, // 模型类型 0 图像模型 1物体模型
+            models: [],                 // 模型数据  Models data
+            modelType: props.type || 0, // 模型类型 0 图像模型 1物体模型  Model type: 0 for image model, 1 for object model
         }
     }
 
     /**
      * 初始化
+     * Initialization
      */
     componentDidMount() {
         const {
@@ -84,12 +88,12 @@ class ModelControl extends React.Component {
             modelType
         } = this.state;
 
-        //初始化默认model
+        //初始化默认model  Initialize default model
         const model = {
             id: createModelId(),
             modelData: [{ value: null }],
         }
-        //初始化图像模型数据
+        //初始化图像模型数据  Initialize image model data
         if (modelType == 0) {
             if (imageModels.length > 0) {
                 this.setState({
@@ -101,7 +105,7 @@ class ModelControl extends React.Component {
                 });
             }
         }
-        //初始化物体模型数据
+        //初始化物体模型数据  Initialize object model data
         if (modelType == 1) {
             if (objectModels.length > 0) {
                 this.setState({
@@ -113,7 +117,7 @@ class ModelControl extends React.Component {
                 });
             }
         }
-        //初始化物体模型数据
+        //初始化物体模型数据  Initialize trainning model data
         if (modelType == 2) {
             if (trainModels.length > 0) {
                 this.setState({
@@ -129,19 +133,20 @@ class ModelControl extends React.Component {
 
     /**
      * 处理新增模型
+     * Handle adding model
      */
     handleAddModel() {
         const id = createModelId();
         const model = {
             id,
-            modelName: null, //模型名称
-            modelFilePath: null, //模型文件路径
-            modelData: [{ id: id, value: null }], //模型数据
-            modelAnchors: null, //模型anchors
+            modelName: null,                        //模型名称  Model name
+            modelFilePath: null,                    //模型文件路径  Model file path
+            modelData: [{ id: id, value: null }],   //模型数据  Model data
+            modelAnchors: null,                     //模型anchors  Model anchors
         }
-        //新增模型
+        //新增模型  Adding new models
         const modelsTemp = [].concat(this.state.models).concat(model);
-        //更新模型列表
+        //更新模型列表  Update models list
         this.setState({
             models: modelsTemp
         })
@@ -149,6 +154,7 @@ class ModelControl extends React.Component {
 
     /**
      * 处理删除模型
+     * Handle model deletion
      */
     handleDeleteModel(id) {
         let target = this.props.vm.runtime._editingTarget;
@@ -160,9 +166,9 @@ class ModelControl extends React.Component {
             }));
             return;
         }
-        //过滤模型
+        //过滤模型  Filter model
         const modelsTemp = [].concat(this.state.models).filter(i => i.id != id);
-        //更新模型列表
+        //更新模型列表  Update model list
         this.setState({
             models: modelsTemp
         });
@@ -170,9 +176,10 @@ class ModelControl extends React.Component {
 
     /**
       * 处理修改模型
+      * Handle model editing
       */
     handleEditModel(modelInfo, id) {
-        //遍历赋值模型
+        //遍历赋值模型  Assign value by iterating
         const modelsTemp = [].concat(this.state.models).map(i => {
             if (i.id == id) {
                 return Object.assign({}, i, modelInfo);
@@ -180,7 +187,7 @@ class ModelControl extends React.Component {
                 return i;
             }
         });
-        //更新模型列表
+        //更新模型列表  Update model list
         this.setState({
             models: modelsTemp
         })
@@ -188,6 +195,7 @@ class ModelControl extends React.Component {
 
     /**
      * 处理模型保存逻辑
+     * Handle saving model
      */
     handleSaveModel() {
 
@@ -202,9 +210,9 @@ class ModelControl extends React.Component {
 
         let isCorrect = models.reduce((initValue, curr) => {
             let {
-                modelName, //模型名称
-                modelFilePath, //模型文件路径
-                modelData, //模型数据
+                modelName,      //模型名称
+                modelFilePath,  //模型文件路径
+                modelData,      //模型数据
                 // modelAnchors//模型anchors
             } = curr;
             let checkOne = !isEmpty(modelName) && !isEmpty(modelFilePath);
@@ -224,31 +232,31 @@ class ModelControl extends React.Component {
             return;
         }
 
-        //更新图像模型数据
+        //更新图像模型数据  Update image model data
         if (modelType == 0) {
             this.props.updateImageModels(models);
             this.props.vm.runtime.modelsControl.updateImageModels(models);
         }
-        //更新物体模型数据
+        //更新物体模型数据  Update object model data
         else if (modelType == 1) {
             this.props.updateObjectModels(models);
             this.props.vm.runtime.modelsControl.updateObjectModels(models);
         }
 
-        //更新物体模型数据
+        //更新物体模型数据  Update train model data
         else if (modelType == 2) {
             this.props.updateTrainModels(models);
             this.props.vm.runtime.modelsControl.updateTrainModels(models);
         }
 
-        //关闭模型视图
+        //关闭模型视图  Close models view
         this.props.hideModelsView();
-        //更新扩展积木
+        //更新扩展积木  Update extension blocks
         this.props.vm.refreshExtensionBlocks().then(() => {
             this.props.vm.refreshWorkspace();
         });
 
-        //添加保存成功提示
+        //添加保存成功提示  Notify saving completed
         toasts.success(intl.formatMessage({
             id: "gui.modelExtension.modelsSave.succPrompt",
             defaultMessage: "Saved"
@@ -257,6 +265,7 @@ class ModelControl extends React.Component {
 
     /**
      * 处理取消保存逻辑
+     * Handle cancel save model
      */
     handleCancelSaveModel() {
         this.props.hideModelsView();

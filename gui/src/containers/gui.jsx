@@ -54,6 +54,7 @@ class GUI extends React.Component {
 
     /**
      * 监听窗口关闭时事件
+     * Before event unload
      * @param {*} event 
      */
     onBeforeunload(event) {
@@ -62,7 +63,7 @@ class GUI extends React.Component {
             event.preventDefault();
             event.returnValue = '';
         } else {
-            // 无弹框提示
+            // 无弹框提示  No modal notification
             this.props.updateDownloadFlag(false);
         }
     }
