@@ -1,5 +1,5 @@
 export default (Blockly) => {
-  // 温度值
+  // 温度值  Tempreture
   Blockly.C['sensing_g0_temhum_sensor_get_tem_value'] = function (block) {
     Blockly.C.definitions_['define_temperaturehumidity'] = '#define USE_TEMPERATUREHUMIDITY 1';
     let unit = block.getFieldValue('UNIT');
@@ -15,7 +15,7 @@ export default (Blockly) => {
     return [code, Blockly.C.ORDER_FUNCTION_CALL];
   }
 
-  // 湿度值
+  // 湿度值  Humidy
   Blockly.C['sensing_g0_temhum_sensor_get_hum_value'] = function (block) {
     Blockly.C.definitions_['define_temperaturehumidity'] = '#define USE_TEMPERATUREHUMIDITY 1';
     var code = `grovezero->temperaturehumidity->gethumidvalue()`;

@@ -309,7 +309,7 @@ const init = (Blockly) => {
             '\n}';
         // Convert the definitions dictionary into a list.
         var imports = [];
-        var definitions_var = []; //变量定义
+        var definitions_var = []; //变量定义  Definitions of variables
 
         for (var name in Blockly.Arduino.definitions_) {
             var def = Blockly.Arduino.definitions_[name];
@@ -321,7 +321,7 @@ const init = (Blockly) => {
             }
         }
 
-        var defineFun = []; //函数定义
+        var defineFun = []; //函数定义  Definitions of functions
         for (var name in Blockly.Arduino.define_fun) {
             var def = Blockly.Arduino.define_fun[name];
             defineFun.push(def);

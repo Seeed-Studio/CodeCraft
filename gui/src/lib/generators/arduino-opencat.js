@@ -216,7 +216,7 @@ const init = (Blockly) => {
                 continue;
             }
 
-            // 处理opencat启动事件
+            // 处理opencat启动事件  Handle opencat startup event
             if (block.type == 'event_opencat_whenstartup') {
                 if (line) {
                     line = '\n  ' + line.replace(/\n/g, '\n  ');
@@ -227,7 +227,7 @@ const init = (Blockly) => {
                 continue;
             }
 
-            // 兼容自定义积木
+            // 兼容自定义积木 Compatible self defined block
             if (block.callbackCodeHead) {
                 line = '\n  ' + line.replace(/\n/g, '\n  ') +'\n';
                 line = block.callbackCodeHead + line + block.callbackCodeTail;
@@ -321,7 +321,7 @@ const init = (Blockly) => {
 
         // Convert the definitions dictionary into a list.
         var imports = [];
-        var definitions_var = []; //变量定义
+        var definitions_var = []; //变量定义  Definitions of variables
 
         for (var name in Blockly.ArduinoOpenCat.definitions_) {
             var def = Blockly.ArduinoOpenCat.definitions_[name];
@@ -333,7 +333,7 @@ const init = (Blockly) => {
             }
         }
 
-        var defineFun = []; //函数定义
+        var defineFun = []; //函数定义  Definitions of functions
         for (var name in Blockly.ArduinoOpenCat.define_fun) {
             var def = Blockly.ArduinoOpenCat.define_fun[name];
             defineFun.push(def);

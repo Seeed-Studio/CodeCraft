@@ -152,7 +152,7 @@ export default Blockly => {
 
         var light = block.getFieldValue('LIGHT') || '0';
 
-        // 全部熄灭
+        // 全部熄灭  Turn off all lights
         if (light == 'all') {
             var code =
                 `ws2812_13.set_led(1, (0, 0, 0))\n` +
@@ -172,7 +172,7 @@ export default Blockly => {
             //     `    ws2812_13.display()\n`
             return code;
         }
-        // 局部熄灭
+        // 局部熄灭  Turn off a part of lights
         else {
             // // 数据转化
             // light = parseInt(light);

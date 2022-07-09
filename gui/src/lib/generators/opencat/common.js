@@ -7,7 +7,7 @@ export default (Blockly) => {
   // text
   Blockly.ArduinoOpenCat['text'] = Blockly.C['text'];
 
-  //一直等待
+  //一直等待  Keep waiting
   Blockly.ArduinoOpenCat['motion_arduino_keep_wait'] = function (block) {
     var code = `while(1){}\n`;
     return code;
@@ -18,7 +18,7 @@ export default (Blockly) => {
     return code;
   }
 
-  /* 延时 -------------------------------------------------- */
+  /* 延时  Delay -------------------------------------------------- */
   Blockly.ArduinoOpenCat['motion_arduino_delay_ms'] = function (block) {
     var time = Blockly.ArduinoOpenCat.valueToCode(block, 'TIME', Blockly.ArduinoOpenCat.ORDER_ATOMIC);
     var code = `delay(${time});\n`;
@@ -30,7 +30,7 @@ export default (Blockly) => {
     return code;
   }
 
-  /* 系统运行时间 -------------------------------------------------- */
+  /* 系统运行时间  System running time -------------------------------------------------- */
   Blockly.ArduinoOpenCat['motion_arduino_sys_time'] = function (block) {
     var type = block.getFieldValue('TYPE');
     var code = '';
@@ -42,7 +42,7 @@ export default (Blockly) => {
     return [code, Blockly.ArduinoOpenCat.ORDER_ATOMIC];
   }
 
-  // 变量
+  // 变量  Variable
   Blockly.ArduinoOpenCat['data_variable'] = function (block) {
     var variable = block.getFieldValue('VARIABLE') || '';
     var code = Blockly.ArduinoOpenCat.variableDB_.getName(variable, Blockly.Variables.NAME_TYPE);
@@ -59,7 +59,7 @@ export default (Blockly) => {
     }
     // var num = Number(argument0.substring(1, argument0.length - 1));
     // argument0 = isNaN(num) ? argument0 : num;
-    //为变量定义类型
+    //为变量定义类型  Assign types to variables
     {
       var type = 'float';
       var workspace = Blockly.getMainWorkspace();
@@ -107,7 +107,7 @@ export default (Blockly) => {
 
   // math
   Blockly.ArduinoOpenCat['math_number'] = function (block) {
-    // 数值类型，允许包含符号及小数。
+    // 数值类型，允许包含符号及小数。Signed number with decimals
     var code = parseFloat(block.getFieldValue('NUM'));
     if (isNaN(code)) {
       code = 'NULL';
@@ -117,7 +117,7 @@ export default (Blockly) => {
   Blockly.ArduinoOpenCat['math_cc_min_0_max_200_number'] = Blockly.ArduinoOpenCat['math_number'];
 
   Blockly.ArduinoOpenCat['math_whole_number'] = function (block) {
-    // 数值类型，不允许包含符号及小数。
+    // 数值类型，不允许包含符号及小数。Unsigned number without decimals
     var code = parseFloat(block.getFieldValue('NUM'));
     if (isNaN(code) || code < 0 || String(code).indexOf('.') > -1) {
       code = 'NULL';
@@ -126,7 +126,7 @@ export default (Blockly) => {
   };
 
   Blockly.ArduinoOpenCat['math_positive_number'] = function (block) {
-    // 数值类型，不允许包含符号，但可以包含小数.
+    // 数值类型，不允许包含符号，但可以包含小数.  Unsigned number with decimals
     var code = parseFloat(block.getFieldValue('NUM'));
     if (isNaN(code) || code < 0) {
       code = 'NULL';
@@ -503,7 +503,7 @@ export default (Blockly) => {
     return [code, Blockly.ArduinoOpenCat.ORDER_FUNCTION_CALL];
   }
 
-  //自定义积木
+  //自定义积木  Self defined block
   Blockly.ArduinoOpenCat['procedures_call'] = function (block) {
     let defineBlock = Blockly.Procedures.getDefineBlock(block.getProcCode(), block.workspace);
     if (!defineBlock) return '';

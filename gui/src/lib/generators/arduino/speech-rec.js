@@ -35,7 +35,7 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['var_cyberEarPro'] = "CyberEarPro cep;";
         Blockly.Arduino.setups_['setup_wireBegin'] = 'Wire.begin();';
         var storage = block.getFieldValue('STORAGE');
-        // 目前只支持sd卡录音
+        // 目前只支持sd卡录音  Currently only support SD card record
         var name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC) || "record0";
         return `cep.SD_RecordStart(${name});\n`;
     };

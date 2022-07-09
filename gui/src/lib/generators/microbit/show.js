@@ -1,5 +1,6 @@
 /**
  * 矩阵转 image
+ * Matrix to image
  * @param {*} shape 
  */
 const toImage = (shape) => {

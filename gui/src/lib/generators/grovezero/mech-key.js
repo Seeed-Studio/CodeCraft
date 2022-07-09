@@ -10,6 +10,7 @@
 
 /**
  * 事件宏定义
+ * Event define
  * @param {*} motion 
  */
 const evtDefine = (motion) => {

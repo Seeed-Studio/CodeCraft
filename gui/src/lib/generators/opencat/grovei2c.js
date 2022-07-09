@@ -444,11 +444,11 @@ export default Blockly => {
         let shape = block.getFieldValue('SHAPE');
         let matrix = JSON.parse(shape);
         let _color_matrix = matrix.colors_matrix;
-        // 声明矩阵行列
+        // 声明矩阵行列  Define rows and columns
         let _rows = 8, _cols = 8;
-        // 声明结果字符串
+        // 声明结果字符串  Define result array
         let result = [];
-        // 遍历颜色矩阵
+        // 遍历颜色矩阵  Iterate color matrix
         for (let i = 0; i < _rows; i++) {
             for (let j = 0; j < _cols; j++) {
                 let _color = _color_matrix[i][j];
@@ -642,7 +642,7 @@ uint8_t isCard(uint8_t visionId)
         return [code, Blockly.ArduinoOpenCat.ORDER_ATOMIC];
     };
 
-    //图像图形卡片手势检测
+    //图像图形卡片手势检测  Pattern gesture detection
     Blockly.ArduinoOpenCat['motion_opencat_symbol_read_sensor'] = function (block) {
         Blockly.ArduinoOpenCat.setups_['setup_Adafruit_WIRE34725'] = 'Wire.begin();';
         visionDefine();
@@ -669,7 +669,7 @@ uint8_t isCard(uint8_t visionId)
         return [code, Blockly.ArduinoOpenCat.ORDER_ATOMIC];
     };
 
-    //图像运动手势开启
+    //图像运动手势开启  Pattern motion gesture
     Blockly.ArduinoOpenCat['motion_opencat_gesture_read_sensor'] = function (block) {
         Blockly.ArduinoOpenCat.setups_['setup_Adafruit_WIRE34725'] = 'Wire.begin();';
         visionDefine();
@@ -844,7 +844,7 @@ uint8_t isCard(uint8_t visionId)
         var code = `getBallValue(${opt})`;
         return [code, Blockly.ArduinoOpenCat.ORDER_ATOMIC];
     };
-    // 识别手势
+    // 识别手势  Read gesture
     Blockly.ArduinoOpenCat['motion_opencat_vision_sensor10'] = function (block) {
         // visionDefine();
         // Blockly.ArduinoOpenCat.define_fun['vision_sensor_isGesture'] =
@@ -874,7 +874,7 @@ uint8_t isCard(uint8_t visionId)
         var code = `gesture == ${opt}`;
         return [code, Blockly.ArduinoOpenCat.ORDER_ATOMIC];
     }
-    // 读取环境光检测
+    // 读取环境光检测  Read from evironmental light sensor
     Blockly.ArduinoOpenCat['motion_opencat_vision_sensor11'] = function (block) {
         visionDefine();
         Blockly.ArduinoOpenCat.define_fun['vision_sensor_isInghtSensor'] =
@@ -900,7 +900,7 @@ uint8_t isCard(uint8_t visionId)
     }
 
 
-    // 读取接近检测
+    // 读取接近检测  Read from proximity sensor
     Blockly.ArduinoOpenCat['motion_opencat_vision_sensor12'] = function (block) {
         visionDefine();
         Blockly.ArduinoOpenCat.define_fun['vision_sensor_isProximity'] =

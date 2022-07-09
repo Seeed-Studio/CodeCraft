@@ -271,17 +271,17 @@ export default (Blockly) => {
 
         let shape = block.getFieldValue('SHAPE');
         let matrix = JSON.parse(shape);
-        // 获取默认图案编号
+        // 获取默认图案编号  Get the default emoji number
         let emoji_number = matrix.emoji_number;
-        // 自定义图案
+        // 自定义图案  Self defined emoji
         if (emoji_number === undefined) {
-            // 获取颜色矩阵
+            // 获取颜色矩阵  Get the color matrix
             let _color_matrix = matrix.colors_matrix;
-            // 声明矩阵行列
+            // 声明矩阵行列  Define rows and columns
             let _rows = 8, _cols = 8;
-            // 声明结果字符串
+            // 声明结果字符串  Define the result array
             let result = [];
-            // 遍历颜色矩阵
+            // 遍历颜色矩阵  Iterate the color matrix
             for (let i = 0; i < _rows; i++) {
                 for (let j = 0; j < _cols; j++) {
                     let _color = _color_matrix[i][j];
@@ -301,7 +301,7 @@ export default (Blockly) => {
             Blockly.C.definitions_[variable] = `const char ${variable}[64]={${result}};`;
             return `grovezero->rgbledmatrix->displayCustom(${i2c}, 0, 1, 1, 0, ${variable});\n`;
         }
-        // 默认图案
+        // 默认图案  Default emoji
         else {
             return `grovezero->rgbledmatrix->displayEmoji(${i2c}, ${emoji_number}, 0, 1);\n`;
         }

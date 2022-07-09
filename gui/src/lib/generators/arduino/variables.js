@@ -15,7 +15,7 @@ export default (Blockly) => {
     }
     // var num = Number(argument0.substring(1, argument0.length - 1));
     // argument0 = isNaN(num) ? argument0 : num;
-    //为变量定义类型
+    //为变量定义类型  Define types for variables
     {
       var type = 'float';
       var workspace = Blockly.getMainWorkspace();
