@@ -242,6 +242,6 @@ export default [
         isDraggable: false,
         visible: true,
         spriteInfo: {},
-        enabled: false
+        enabled: true
     }
 ];

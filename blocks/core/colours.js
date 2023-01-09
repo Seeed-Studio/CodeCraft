@@ -38,15 +38,20 @@ Blockly.Colours = {
     "secondary": "#D74D4B",
     "tertiary": "#D74D4B"
   },
-  "wioterminal_init": {
+  "wioterminal_system": {
     "primary": "#5B96FF",
     "secondary": "#4B7DD7",
     "tertiary": "#4B7DD7"
   },
-  "wioterminal_input":{
+  "wioterminal_display":{
     "primary": "#D85BFF",
     "secondary": "#B44CD4",
     "tertiary": "#B44CD4"
+  },
+  "wioterminal_azure_iot":{
+    "primary": "#0E65A5",
+    "secondary": "#0A558C",
+    "tertiary": "#0A558C"
   },
   "arduino_input": {
     "primary": "#5B6BC8",

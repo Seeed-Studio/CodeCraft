@@ -1,4 +1,3 @@
-import ScratchBlocks from '../../../../blocks';
 
 const categorySeparator = '<sep gap="36"/>';
 
@@ -8,18 +7,261 @@ const search = function() {
     return `<category name="%{BKY_CATEGORY_SEARCH}" id="search"></category>`;
 }
 
-const init = function () {
+const system = function () {
     return `
-    <category name="%{BKY_CATEGORY_START}" colour="#5B96FF" secondaryColour="#4B7DD7" id="init">
-        <block type="motion_wioterminal_setup_loop"></block>
+    <category name="%{BKY_CATEGORY_WIO_TERMINAL_SYSTEM}" colour="#5B96FF" secondaryColour="#4B7DD7" id="system">
+        <block type="system_wioterminal_setup_loop"/>
+        <block type="system_wioterminal_speaker_playnote"/>
+        <block type="system_wioterminal_3_axis_accelerometer"/>    
+        <block type="system_wioterminal_light_sensor"/>   
+        <block type="system_wioterminal_button_pressed"/>
+        <block type="system_wioterminal_5way_switch_pressed"/>
+        <block type="system_wioterminal_infrared_send">
+            <value name="ADDRESS">
+                <shadow type="text">
+                    <field name="TEXT">0x89ABCDEF</field>
+                </shadow>
+            </value>
+            <value name="BIT">
+                <shadow type="math_cc_number">
+                    <field name="NUM">32</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="system_wioterminal_sound_sensor"/>
     </category>
     `;
 }
 
-const input = function () {
+const display = function () {
     return `
-    <category name="%{BKY_CATEGORY_GROVE_INPUT}" colour="#D85BFF" secondaryColour="#B44CD4" id="input">
-        <block type="motion_wioterminal_light_sensor" />
+    <category name="%{BKY_CATEGORY_WIO_TERMINAL_DISPLAY}" colour="#D85BFF" secondaryColour="#B44CD4" id="display">
+        <block type="display_wioterminal_screen_towards"/>
+        <block type="display_wioterminal_set_screen_background_color">  
+            <value name="COLOR">
+                <shadow type="colour_picker" >
+                    <field name="COLOUR">#FF0000</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="display_wioterminal_set_text_size"/>
+        <block type="display_wioterminal_set_text_color">  
+            <value name="COLOR">
+                <shadow type="colour_picker" >
+                    <field name="COLOUR">#000000</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="display_wioterminal_println_string">
+            <value name="MESSAGE">
+                <shadow type="text">
+                    <field name="TEXT">hello</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="display_wioterminal_print_string_at_point">
+            <value name="MESSAGE">
+                <shadow type="text">
+                    <field name="TEXT">hello</field>
+                </shadow>
+            </value>
+            <value name="X">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="Y">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>       
+        <block type="display_wioterminal_screen_clear_reset">  
+            <value name="COLOR">
+                <shadow type="colour_picker" >
+                    <field name="COLOUR">#000000</field>
+                </shadow>
+            </value>
+        </block>        
+        <block type="display_wioterminal_show_image">
+            <value name="IMG_PATH">
+                <shadow type="text">
+                    <field name="TEXT">image.bmp</field>
+                </shadow>
+            </value>
+            <value name="X">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="Y">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>            
+        </block>
+        <block type="display_wioterminal_draw_pixel">
+            <value name="X">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="Y">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="COLOR">
+                <shadow type="colour_picker" >
+                    <field name="COLOUR">#FF0000</field>
+                </shadow>
+            </value>                      
+        </block>
+        <block type="display_wioterminal_draw_line">
+            <value name="P1X">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="P1Y">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="P2X">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="P2Y">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>            
+            <value name="COLOR">
+                <shadow type="colour_picker" >
+                    <field name="COLOUR">#FF0000</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="display_wioterminal_draw_rect">
+            <value name="X">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="Y">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="WIDTH">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">10</field>
+                </shadow>
+            </value>
+            <value name="HEIGHT">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">5</field>
+                </shadow>
+            </value>            
+            <value name="COLOR">
+                <shadow type="colour_picker" >
+                    <field name="COLOUR">#FF0000</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="display_wioterminal_draw_circle">
+            <value name="X">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="Y">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="R">
+                <shadow type="math_cc_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>           
+            <value name="COLOR">
+                <shadow type="colour_picker" >
+                    <field name="COLOUR">#FF0000</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="display_wioterminal_draw_triangles">
+            <value name="P1X">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="P1Y">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="P2X">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="P2Y">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="P3X">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="P3Y">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>                          
+            <value name="COLOR">
+                <shadow type="colour_picker" >
+                    <field name="COLOUR">#FF0000</field>
+                </shadow>
+            </value>
+        </block>   
+        <block type="display_wioterminal_draw_round_rect">
+            <value name="X">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="Y">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="WIDTH">
+                <shadow type="math_cc_min_0_max_320_number">
+                    <field name="NUM">10</field>
+                </shadow>
+            </value>
+            <value name="HEIGHT">
+                <shadow type="math_cc_min_0_max_240_number">
+                    <field name="NUM">5</field>
+                </shadow>
+            </value>
+            <value name="R">
+                <shadow type="math_cc_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>                    
+            <value name="COLOR">
+                <shadow type="colour_picker" >
+                    <field name="COLOUR">#FF0000</field>
+                </shadow>
+            </value>
+        </block>                                   
     </category>
     `;
 }
@@ -269,6 +511,13 @@ const operators = function () {
             </value>
         </block>
         ${categorySeparator}
+        <block type="operator_arduino_itoa">
+            <value name="VALUE">
+                <shadow type="math_number">
+                    <field name="NUM"/>
+                </shadow>
+            </value>
+        </block>        
     </category>
     `;
 };
@@ -285,14 +534,128 @@ const variables = function () {
     `;
 };
 
-const myBlocks = function () {
+const grove = function () {
     return `
-    <category
-        name="%{BKY_CATEGORY_MYBLOCKS}"
-        id="myBlocks"
-        colour="#FB8F46"
-        secondaryColour="#FF4D6A"
-        custom="PROCEDURE">
+    <category name="%{BKY_CATEGORY_WIO_TERMINAL_GROVE}" colour="#6D7AB6" secondaryColour="#6D7AB6" id="grove">
+        <block type="grove_wioterminal_seeed_servo_move">
+            <value name="DEGREES">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="DELAY_TIME">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>            
+        </block>
+        <block type="grove_wioterminal_seeed_rgb_led">
+            <value name="COLOR">
+                <shadow type="colour_picker">
+                    <field name="COLOUR">#ff0000</field>
+                </shadow>
+            </value>
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="grove_wioterminal_seeed_mini_fan">
+        </block>
+        <block type="grove_wioterminal_seeed_line_finder">        
+        </block>
+        <block type="grove_wioterminal_seeed_ult">        
+        </block>
+        <block type="grove_wioterminal_seeed_pir_motion">        
+        </block>
+        <block type="grove_wioterminal_seeed_temperature_humidity">        
+        </block>
+
+        ${blockSeparator}
+        <block type="grove_wioterminal_seeed_water_analog">        
+        </block>
+
+        ${blockSeparator}
+        <block type="grove_wioterminal_seeed_temperature_humidity_dht20">        
+        </block>
+        <block type="grove_wioterminal_rtc_setdatetime">
+            <value name="YEAR">
+                <shadow type="math_number">
+                    <field name="NUM">2020</field>
+                </shadow>
+            </value>
+            <value name="MONTH">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="DAY">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="HOUR">
+                <shadow type="math_number">
+                    <field name="NUM">12</field>
+                </shadow>
+            </value>
+            <value name="MINUTE">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="SECOND">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="grove_wioterminal_rtc_getdate"/>
+        <block type="grove_wioterminal_rtc_gettime"/>
+    </category>
+    `;
+};
+
+const azureIoT = function () {
+    return `
+    <category name="%{BKY_CATEGORY_WIO_TERMINAL_AZURE_IOT}" colour="#0E65A5" secondaryColour="#0E65A5" id="azureIoT">
+        <block type="azure_iot_wioterminal_set_wifi">
+            <value name="SSID">
+                <shadow type="text">
+                    <field name="TEXT">ssid</field>
+                </shadow>
+            </value>
+            <value name="PWD">
+                <shadow type="text">
+                    <field name="TEXT">password</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="azure_iot_wioterminal_connect_wifi"></block>
+        ${blockSeparator}
+        <block type="azure_iot_wioterminal_azure_init">
+            <value name="SCOPEID">
+                <shadow type="text">
+                    <field name="TEXT">scope id</field>
+                </shadow>
+            </value>
+            <value name="KEY">
+                <shadow type="text">
+                    <field name="TEXT">primary key</field>
+                </shadow>
+            </value>
+            <value name="DEVICE">
+                <shadow type="text">
+                    <field name="TEXT">device id</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="azure_iot_wioterminal_azure_start"></block>
+        <block type="azure_iot_wioterminal_azure_connected"></block>
+        ${blockSeparator}
+        <block type="azure_iot_wioterminal_runClassifier_artificial_nose"></block>
+        <block type="azure_iot_wioterminal_azure_publish"></block>
     </category>
     `;
 };
@@ -315,16 +678,16 @@ const makeToolboxXML = function (extension) {
     const everything = [
         xmlOpen,
         search(), gap,
-        init(), gap,
-        input(), gap,
+        system(), gap,
+        display(), gap,
         serial(), gap,
 
         control(), gap,
-        // sensing(), gap,
+        
         operators(), gap,
         variables(), gap,
-
-        // myBlocks()
+        grove(), gap,
+        azureIoT()
     ];
 
     if (xml) {

@@ -247,8 +247,9 @@ Blockly.ScratchBlocks.VerticalExtensions.registerAll = function() {
         "grovejoint_input",
         "grovejoint_output",
 
-        "wioterminal_init",
-        "wioterminal_input",
+        "wioterminal_system",
+        "wioterminal_display",
+        "wioterminal_azure_iot",
 
         "maixdunio_looks",
         "maixdunio_camera",

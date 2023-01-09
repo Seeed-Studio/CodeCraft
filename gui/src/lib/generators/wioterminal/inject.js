@@ -1,9 +1,11 @@
-import init from './init';
-import input from './input';
-import output from './output';
+import init from './system';
+import display from './display';
+import azureIoT from './azureIoT';
+import grove from './grove';
 
 export default Blockly => {
     init(Blockly);
-    input(Blockly);
-    output(Blockly);
+    display(Blockly);
+    azureIoT(Blockly);
+    grove(Blockly);
 }
