@@ -26,6 +26,7 @@ const {deserializeCostume, deserializeSound} = require('./deserialize-assets.js'
 // Constants used during deserialization of an SB2 file
 const CORE_EXTENSIONS = [
     'argument',
+    'colour',
     'control',
     'data',
     'event',
@@ -35,7 +36,10 @@ const CORE_EXTENSIONS = [
     'operator',
     'procedures',
     'sensing',
-    'sound'
+    'sound',
+    'system',
+    'display',
+    'azure'
 ];
 
 // Adjust script coordinates to account for
