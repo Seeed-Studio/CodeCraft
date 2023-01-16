@@ -1,0 +1,102 @@
+@import "../../css/colors.css";
+@import "../../css/units.css";
+
+.modal-content {
+    width: 27.5rem;
+    min-height: 12.75rem;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.label {
+    font-weight: 500;
+    margin: 0 0 0.75rem;
+}
+
+input.variable-name-text-input {
+    width:25rem;
+    height:2.5rem;
+    border-radius:1rem;
+    margin-bottom: 0.81rem;
+}
+
+.info-message {
+    font-weight: normal;
+    font-size: .875rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.options-row {
+    display: flex;
+    font-weight: normal;
+    justify-content: space-between;
+}
+
+.button-row {
+    font-weight: bolder;
+    text-align: right;
+    margin-top: 2rem;
+    margin-bottom: 1.87rem;
+}
+
+span.button-row-button {
+    width:6.25rem;
+}
+
+.button-space{
+    margin-left: 1.25rem;
+}
+
+/* .button-row button.ok-button {
+    background: $motion-primary;
+    border: $motion-primary;
+    color: white;
+} */
+
+/* [dir="ltr"] .button-row button + button {
+    margin-left: 0.5rem;
+}
+
+[dir="rtl"] .button-row button + button {
+    margin-right: 0.5rem;
+} */
+
+.more-options {
+    border-top: 1px dashed hsla(0, 0%, 0%, .25);
+    overflow: visible;
+    padding: 1rem;
+    text-align: center;
+    margin: 0 0 1rem;
+}
+
+.more-options-accordion {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.more-options-text {
+    opacity: .5;
+}
+
+.more-options-icon {
+    width: .75rem;
+    height: .75rem;
+    vertical-align: middle;
+    padding-bottom: .2rem;
+    opacity: .5;
+}
+
+/* [dir="ltr"] .more-options-icon {
+    margin-left: .5rem;
+}
+
+[dir="rtl"] .more-options-icon {
+    margin-right: .5rem;
+} */

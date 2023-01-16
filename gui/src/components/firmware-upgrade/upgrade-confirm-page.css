@@ -1,0 +1,60 @@
+.upgrade-comfirm-page {
+  width: 20rem;
+  min-height: 13rem;
+  background: rgba(249, 249, 249, 1);
+}
+
+.upgrade-comfirm-wrapper {
+  margin: 1rem 1.5rem 1.5rem;
+}
+
+.upgrade-comfirm-row {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.upgrade-comfirm-row-label {
+  /* width: 100px; */
+  /* margin-right: 0.75rem;  */
+  white-space: nowrap;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: rgba(113, 117, 130, 1);
+  align-items: center;
+  display: flex;
+  /* justify-content: flex-end; */
+}
+
+.upgrade-comfirm-row-space {
+  margin-top: 10px;
+}
+
+.upgrade-comfirm-row-value {
+  /* width: calc(100% - 100px); */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: rgba(113, 117, 130, 1);
+}
+
+.upgrade-comfirm-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.upgrade-comfirm-bottom {
+  margin-top: 1.81rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.upgrade-comfirm-bottom-space {
+  width: 25px;
+}

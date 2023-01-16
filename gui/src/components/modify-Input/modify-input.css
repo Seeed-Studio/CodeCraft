@@ -1,0 +1,34 @@
+.modify-input-item{
+    position: absolute;
+    z-index: 9999999;
+    display: flex;
+    width: 3.98rem;
+    height: 1.33rem;
+    background: #FFFFFF;
+    border: 0px solid #D5DEE9;
+    border-radius: 0.2rem;
+    line-height: 1.33rem;
+    text-align: center;
+
+}
+.red{
+    color: rgba(171, 185, 198, 1);
+    width: 1rem;
+    border-right: 0.06rem solid rgba(113, 117, 130, 0.7);
+    text-align: center;
+    cursor: pointer;
+}
+.val{
+    border: none;
+    width: 2.2rem;
+    color: rgba(113, 117, 130, 1);
+    text-align: center;
+}
+.add{
+    width: 1rem;
+    color: rgba(171, 185, 198, 1);
+    border-left: 0.06rem solid rgba(113, 117, 130, 0.7);
+    text-align: center;
+    cursor: pointer;
+
+}

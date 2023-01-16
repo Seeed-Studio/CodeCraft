@@ -1,0 +1,19 @@
+{
+    "version": "9999.9999.9999.9999",
+    "fileNames": [
+        "bitcar_move.py",
+        "bitcar_linesensor.py",
+        "bitcar_find_follow.py",
+        "BitMaker.py",
+        "BitPlayer.py",
+        "BitWear.py",
+        "GroveOne.py",
+        "detect_ball.py",
+        "detect_body.py",
+        "detect_card.py",
+        "detect_color.py",
+        "get_ball_xy.py",
+        "get_color_value.py",
+        "i2c.py"
+    ]
+}

@@ -1,0 +1,133 @@
+@import "../../css/units.css";
+@import "../../css/colors.css";
+@import "../../css/z-index.css";
+
+.models-ctrl-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: $z-index-modal;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(242,247,251,1);    
+    user-select: none;
+
+    overflow-x: auto;
+}
+
+.models-header {
+    width: 100%;
+    height: 4.38rem;
+    background: linear-gradient(90deg,rgba(81,221,212,1) 0%,rgba(74,156,240,1) 100%);
+
+    text-align: center;
+    line-height: 4.38rem;
+}
+
+.models-header-title{
+    font-size:1.24rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+}
+
+.model-add-btn{
+    position: absolute;
+
+    min-width:6rem;
+    height:1.88rem;
+  
+    background:rgba(255,255,255,1);
+    border-radius:1rem;
+
+    font-size:0.88rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(75,159,240,1);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    top: 1.25rem;
+    left: 4.06rem;
+
+    cursor: pointer;
+}
+
+.model-add-btn img{
+    margin-right: 0.28rem;
+    width:0.8rem;
+    height:0.8rem;
+}
+
+.models-ctrl-content{
+    position: absolute;
+    top: 4.38rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100% - 4.38rem);
+    overflow-y: auto;
+    padding-bottom: 5.13rem;
+}
+
+.models-list{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 4.06rem;
+    padding: 0.625rem 0;
+}
+
+.models-bottom{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height:5.13rem;
+    background:rgba(0,0,0,0.3);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.models-bottom .button{
+    height:2.63rem;
+    min-width:10.13rem;
+
+    font-size:1.125rem;
+    font-family:PingFang SC;
+    font-weight:500;
+
+    border-radius:2rem;
+
+    padding: 0 0.75rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.models-bottom .cancel{
+    color:rgba(171,185,198,1);
+    background:rgba(232,239,247,1);
+    box-shadow:0px 3px 6px 0px rgba(232,239,247,0.6);
+
+    margin-right: 3.75rem;
+
+    cursor: pointer;
+}
+
+.models-bottom .save{
+    color:rgba(255,255,255,1);
+    background:rgba(81,221,212,1);
+    box-shadow:0px 3px 6px 0px rgba(81,221,212,0.6);
+
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+# Mac OS
+.DS_Store
+
+yarn.lock
+yarn-error.log
+
+package-lock.json
+
+# NPM
+/node_modules
+npm-*
+
+# Testing
+/.nyc_output
+/coverage
+
+# Editor
+/.idea
+/.vscode
+
+# Build
+/dist
+/playground
+/benchmark
+
+# Localization
+/translations

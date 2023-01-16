@@ -1,0 +1,94 @@
+{
+  "name": "codecraft-lite",
+  "productName": "Codecraft-Lite",
+  "description": "Codecraft software.",
+  "homepage": "https://ide.tinkergen.com/",
+  "version": "1.0.0",
+  "main": "shell/index.js",
+  "author": {
+    "name": "TinkerGen",
+    "email": "wenhao.chen@chaihuo.org"
+  },
+  "build": {
+    "appId": "xExtOuxIAYRB",
+    "directories": {
+      "output": "../build"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": ""
+      }
+    ],
+    "mac": {
+      "icon": "../../static/mac.png",
+      "artifactName": "${productName}_V${version}_setup_mac_${arch}.${ext}",
+      "extraResources": {
+        "from": "../compilers/mac",
+        "to": "compilers/mac"
+      }
+    },
+    "win": {
+      "icon": "../../static/logo.ico",
+      "artifactName": "${productName}_V${version}_setup_win_${arch}.${ext}",
+      "extraResources": {
+        "from": "../compilers/win",
+        "to": "compilers/win"
+      }
+    },
+    "linux": {
+      "icon": "../../static/mac.png",
+      "artifactName": "${productName}_V${version}_setup_linux_${arch}.${ext}",
+      "category": "Development",
+      "extraResources": {
+        "from": "../compilers/linux",
+        "to": "compilers/linux"
+      }
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowElevation": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "extraResources": [
+      {
+        "from": "../compilers/arduino-libraries",
+        "to": "compilers/arduino-libraries"
+      },
+      {
+        "from": "../buildCacheTemplate",
+        "to": "buildCacheTemplate"
+      },
+      {
+        "from": "../buildScript",
+        "to": "buildScript"
+      },
+      {
+        "from": "../static",
+        "to": "static"
+      },
+      {
+        "from": "../drivers",
+        "to": "drivers"
+      }
+    ]
+  },
+  "devDependencies": {
+    "electron": "^11.5.0",
+    "electron-rebuild": "^1.7.3"
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "electron-json-storage": "^4.1.6",
+    "electron-regedit": "^1.0.6",
+    "electron-store": "^2.0.0",
+    "electron-updater": "^4.0.0",
+    "express": "^4.16.4",
+    "lodash.bindall": "^4.4.0",
+    "node-fetch": "^2.6.0",
+    "serialport": "^8.0.8",
+    "socket.io": "^2.1.1"
+  }
+}

@@ -1,0 +1,614 @@
+{
+    "ev3.beepNote": {
+        "message": "ملاحظة تنبيه [NOTE] لمدة ثانية [TIME]",
+        "description": "play some note on EV3 for some time"
+    },
+    "ev3.buttonPressed": {
+        "message": "زر [PORT] مضغوط ؟",
+        "description": "is a button on some port pressed?"
+    },
+    "ev3.getBrightness": {
+        "message": "شدة الإضاءة",
+        "description": "gets measured brightness"
+    },
+    "ev3.getDistance": {
+        "message": "المسافة",
+        "description": "gets measured distance"
+    },
+    "ev3.getMotorPosition": {
+        "message": "المحرك [PORT] مكان",
+        "description": "get the measured degrees a motor has turned"
+    },
+    "ev3.motorSetPower": {
+        "message": "المحرك [PORT] ضبط الطاقة [POWER] ٪",
+        "description": "set a motor's power to some value"
+    },
+    "ev3.motorTurnClockwise": {
+        "message": "محرك [PORT] بدوره بهذه الطريقة لمدة [TIME] ثانية",
+        "description": "turn a motor clockwise for some time"
+    },
+    "ev3.motorTurnCounterClockwise": {
+        "message": "محرك [PORT] بدوره بهذه الطريقة لمدة [TIME] ثانية",
+        "description": "turn a motor counter-clockwise for some time"
+    },
+    "ev3.whenBrightnessLessThan": {
+        "message": "عندما السطوع <[DISTANCE]",
+        "description": "when value measured by brightness sensor is less than some value"
+    },
+    "ev3.whenButtonPressed": {
+        "message": "عند الضغط على زر [PORT]",
+        "description": "when a button connected to a port is pressed"
+    },
+    "ev3.whenDistanceLessThan": {
+        "message": "عند المسافة <[DISTANCE]",
+        "description": "when the value measured by the distance sensor is less than some value"
+    },
+    "microbit.buttonsMenu.any": {
+        "message": "(موقع ما)",
+        "description": "label for \"any\" element in button picker for micro:bit extension"
+    },
+    "microbit.clearDisplay": {
+        "message": "مسح الشاشة",
+        "description": "display nothing on the micro:bit display"
+    },
+    "microbit.defaultTextToDisplay": {
+        "message": "مرحباً",
+        "description": "default text to display.\n                                IMPORTANT - the micro:bit only supports letters a-z, A-Z.\n                                Please substitute a default word in your language\n                                that can be written with those characters,\n                                substitute non-accented characters or leave it as \"Hello!\".\n                                Check the micro:bit site documentation for details"
+    },
+    "microbit.displaySymbol": {
+        "message": "عرض [MATRIX]",
+        "description": "display a pattern on the micro:bit display"
+    },
+    "microbit.displayText": {
+        "message": "نص العرض [TEXT]",
+        "description": "display text on the micro:bit display"
+    },
+    "microbit.gesturesMenu.jumped": {
+        "message": "قفز",
+        "description": "label for jumped gesture in gesture picker for micro:bit extension"
+    },
+    "microbit.gesturesMenu.moved": {
+        "message": "انتقل",
+        "description": "label for moved gesture in gesture picker for micro:bit extension"
+    },
+    "microbit.gesturesMenu.shaken": {
+        "message": "هز",
+        "description": "label for shaken gesture in gesture picker for micro:bit extension"
+    },
+    "microbit.isButtonPressed": {
+        "message": "[BTN] الزر مضغوط؟",
+        "description": "is the selected button on the micro:bit pressed?"
+    },
+    "microbit.isTilted": {
+        "message": "مائلة [DIRECTION]؟",
+        "description": "is the micro:bit is tilted in a direction?"
+    },
+    "microbit.pinStateMenu.off": {
+        "message": "يتوقف",
+        "description": "label for off element in pin state picker for micro:bit extension"
+    },
+    "microbit.pinStateMenu.on": {
+        "message": "يعمل",
+        "description": "label for on element in pin state picker for micro:bit extension"
+    },
+    "microbit.tiltAngle": {
+        "message": "زاوية الميل [DIRECTION]",
+        "description": "how much the micro:bit is tilted in a direction"
+    },
+    "microbit.tiltDirectionMenu.any": {
+        "message": "(موقع ما)",
+        "description": "label for any direction element in tilt direction picker for micro:bit extension"
+    },
+    "microbit.tiltDirectionMenu.back": {
+        "message": "العودة",
+        "description": "label for back element in tilt direction picker for micro:bit extension"
+    },
+    "microbit.tiltDirectionMenu.front": {
+        "message": "امام",
+        "description": "label for front element in tilt direction picker for micro:bit extension"
+    },
+    "microbit.tiltDirectionMenu.left": {
+        "message": "اليسار",
+        "description": "label for left element in tilt direction picker for micro:bit extension"
+    },
+    "microbit.tiltDirectionMenu.right": {
+        "message": "اليمين",
+        "description": "label for right element in tilt direction picker for micro:bit extension"
+    },
+    "microbit.whenButtonPressed": {
+        "message": "عند الضغط على زر [BTN]",
+        "description": "when the selected button on the micro:bit is pressed"
+    },
+    "microbit.whenGesture": {
+        "message": "عندما [GESTURE]",
+        "description": "when the selected gesture is detected by the micro:bit"
+    },
+    "microbit.whenPinConnected": {
+        "message": "عند توصيل دبوس [PIN]",
+        "description": "when the pin detects a connection to Earth/Ground"
+    },
+    "microbit.whenTilted": {
+        "message": "عند إمالة [DIRECTION]",
+        "description": "when the micro:bit is tilted in a direction"
+    },
+    "music.categoryName": {
+        "message": "الموسيقى",
+        "description": "Label for the Music extension category"
+    },
+    "music.changeTempo": {
+        "message": "تغيير وتيرة بواسطة [TEMPO]",
+        "description": "change tempo (speed) for notes, drums, and rests played"
+    },
+    "music.drumBass": {
+        "message": "(2) باس طبل",
+        "description": "Sound of bass drum as used in a standard drum kit"
+    },
+    "music.drumBongo": {
+        "message": "(13) بونغو",
+        "description": "Sound of a bongo being struck"
+    },
+    "music.drumCabasa": {
+        "message": "(15) كاباسا",
+        "description": "Sound of a cabasa being shaken"
+    },
+    "music.drumClaves": {
+        "message": "(9) كلاف",
+        "description": "Sound of claves being struck together"
+    },
+    "music.drumClosedHiHat": {
+        "message": "(6) مغلقة مرحبا قبعة",
+        "description": "Sound of a drum stick hitting a hi-hat while closed"
+    },
+    "music.drumConga": {
+        "message": "(14) كونغا",
+        "description": "Sound of a conga being struck"
+    },
+    "music.drumCowbell": {
+        "message": "(11) Cowbell",
+        "description": "Sound of a cowbell being struck"
+    },
+    "music.drumCrashCymbal": {
+        "message": "(4) Crash Cymbal",
+        "description": "Sound of a drum stick hitting a crash cymbal"
+    },
+    "music.drumCuica": {
+        "message": "(18) كويسا",
+        "description": "Sound of a cuica being played"
+    },
+    "music.drumGuiro": {
+        "message": "(16) جويرو",
+        "description": "Sound of a guiro being played"
+    },
+    "music.drumHandClap": {
+        "message": "(8) تصفيق",
+        "description": "Sound of two hands clapping together"
+    },
+    "music.drumOpenHiHat": {
+        "message": "(5) افتح Hi-Hat",
+        "description": "Sound of a drum stick hitting a hi-hat while open"
+    },
+    "music.drumSideStick": {
+        "message": "(3) عصا جانبية",
+        "description": "Sound of a drum stick hitting the side of a drum (usually the snare)"
+    },
+    "music.drumSnare": {
+        "message": "(1) سنارة طبل",
+        "description": "Sound of snare drum as used in a standard drum kit"
+    },
+    "music.drumTambourine": {
+        "message": "(7) الدف",
+        "description": "Sound of a tambourine being struck"
+    },
+    "music.drumTriangle": {
+        "message": "(12) مثلث",
+        "description": "Sound of a triangle (instrument) being struck"
+    },
+    "music.drumVibraslap": {
+        "message": "فيبراسلاب",
+        "description": "Sound of a Vibraslap being played"
+    },
+    "music.drumWoodBlock": {
+        "message": "(10) كتلة الخشب",
+        "description": "Sound of a wood block being struck"
+    },
+    "music.getTempo": {
+        "message": "سرعة الأداء",
+        "description": "get the current tempo (speed) for notes, drums, and rests played"
+    },
+    "music.instrumentBass": {
+        "message": "(6) باس",
+        "description": "Sound of an accoustic upright bass"
+    },
+    "music.instrumentBassoon": {
+        "message": "(14) الباسون",
+        "description": "Sound of a bassoon being played"
+    },
+    "music.instrumentCello": {
+        "message": "(8) التشيلو",
+        "description": "Sound of a cello being played with a bow"
+    },
+    "music.instrumentChoir": {
+        "message": "(15) جوقة",
+        "description": "Sound of a choir singing"
+    },
+    "music.instrumentClarinet": {
+        "message": "(10) كلارينيت",
+        "description": "Sound of a clarinet being played"
+    },
+    "music.instrumentElectricGuitar": {
+        "message": "(5) غيتار كهربائي",
+        "description": "Sound of an electric guitar"
+    },
+    "music.instrumentElectricPiano": {
+        "message": "(2) بيانو كهربائي",
+        "description": "Sound of an electric piano"
+    },
+    "music.instrumentFlute": {
+        "message": "(12) ناي",
+        "description": "Sound of a flute being played"
+    },
+    "music.instrumentGuitar": {
+        "message": "(4) غيتار",
+        "description": "Sound of an accoustic guitar"
+    },
+    "music.instrumentMarimba": {
+        "message": "(19) ماريمبا",
+        "description": "Sound of a marimba being struck"
+    },
+    "music.instrumentMusicBox": {
+        "message": "(17) صندوق الموسيقى",
+        "description": "Sound of a music box playing"
+    },
+    "music.instrumentOrgan": {
+        "message": "(3) الجهاز",
+        "description": "Sound of an organ"
+    },
+    "music.instrumentPiano": {
+        "message": "(1) بيانو",
+        "description": "Sound of a piano"
+    },
+    "music.instrumentPizzicato": {
+        "message": "(7)كمان",
+        "description": "Sound of a string instrument (e.g. violin) being plucked"
+    },
+    "music.instrumentSaxophone": {
+        "message": "(11) ساكسفون",
+        "description": "Sound of a saxophone being played"
+    },
+    "music.instrumentSteelDrum": {
+        "message": "(18) طبل ",
+        "description": "Sound of a steel drum being struck"
+    },
+    "music.instrumentSynthLead": {
+        "message": "(20) الرصاص المركب",
+        "description": "Sound of a \"lead\" synthesizer being played"
+    },
+    "music.instrumentSynthPad": {
+        "message": "(21) سينث باد",
+        "description": "Sound of a \"pad\" synthesizer being played"
+    },
+    "music.instrumentTrombone": {
+        "message": "(9)المترددة آلة موسيقية",
+        "description": "Sound of a trombone being played"
+    },
+    "music.instrumentVibraphone": {
+        "message": "(16)الفيبرافون آلة موسيقية",
+        "description": "Sound of a vibraphone being struck"
+    },
+    "music.instrumentWoodenFlute": {
+        "message": "(13)ناي خشبية",
+        "description": "Sound of a wooden flute being played"
+    },
+    "music.midiSetInstrument": {
+        "message": "ضبط الجهاز على [INSTRUMENT]",
+        "description": "set the instrument for notes played according to a mapping of MIDI codes"
+    },
+    "music.playDrumForBeats": {
+        "message": "عزف طبل [DRUM] لدقات [BEATS]",
+        "description": "play drum sample for a number of beats"
+    },
+    "music.playNoteForBeats": {
+        "message": "عزف نغمة [NOTE] لدقات [BEATS]",
+        "description": "play a note for a number of beats"
+    },
+    "music.restForBeats": {
+        "message": "بقية ل [BEATS] يدق",
+        "description": "rest (play no sound) for a number of beats"
+    },
+    "music.setInstrument": {
+        "message": "ضبط الجهاز على [INSTRUMENT]",
+        "description": "set the instrument (e.g. piano, guitar, trombone) for notes played"
+    },
+    "music.setTempo": {
+        "message": "ضبط الإيقاع على [TEMPO]",
+        "description": "set tempo (speed) for notes, drums, and rests played"
+    },
+    "pen.categoryName": {
+        "message": "القلم",
+        "description": "Label for the pen extension category"
+    },
+    "pen.changeColorParam": {
+        "message": "تغيير القلم [COLOR_PARAM] بواسطة [VALUE]",
+        "description": "change the state of a pen color parameter"
+    },
+    "pen.changeHue": {
+        "message": "تغيير لون القلم بواسطة [HUE]",
+        "description": "legacy pen blocks - change pen color"
+    },
+    "pen.changeShade": {
+        "message": "تغيير ظلال القلم بواسطة [SHADE]",
+        "description": "legacy pen blocks - change pen shade"
+    },
+    "pen.changeSize": {
+        "message": "تغيير حجم القلم بمقدار [SIZE]",
+        "description": "change the diameter of the trail left by a sprite"
+    },
+    "pen.clear": {
+        "message": "مسح الكل",
+        "description": "erase all pen trails and stamps"
+    },
+    "pen.colorMenu.brightness": {
+        "message": "شدة الإضاءة",
+        "description": "label for brightness element in color picker for pen extension"
+    },
+    "pen.colorMenu.color": {
+        "message": "اللون",
+        "description": "label for color element in color picker for pen extension"
+    },
+    "pen.colorMenu.saturation": {
+        "message": "التشبع",
+        "description": "label for saturation element in color picker for pen extension"
+    },
+    "pen.colorMenu.transparency": {
+        "message": "شفافية",
+        "description": "label for transparency element in color picker for pen extension"
+    },
+    "pen.penDown": {
+        "message": "أنزل القلم",
+        "description": "start leaving a trail when the sprite moves"
+    },
+    "pen.penUp": {
+        "message": "ارفع القلم",
+        "description": "stop leaving a trail behind the sprite"
+    },
+    "pen.setColor": {
+        "message": "تعيين لون القلم على [COLOR]",
+        "description": "set the pen color to a particular (RGB) value"
+    },
+    "pen.setColorParam": {
+        "message": "تعيين القلم [COLOR_PARAM] على [VALUE]",
+        "description": "set the state for a pen color parameter e.g. saturation"
+    },
+    "pen.setHue": {
+        "message": "ضبط لون القلم على [HUE]",
+        "description": "legacy pen blocks - set pen color to number"
+    },
+    "pen.setShade": {
+        "message": "ضبط ظل القلم على [SHADE]",
+        "description": "legacy pen blocks - set pen shade"
+    },
+    "pen.setSize": {
+        "message": "ضبط حجم القلم على [SIZE]",
+        "description": "set the diameter of a trail left by a sprite"
+    },
+    "pen.stamp": {
+        "message": "اطبع",
+        "description": "render current costume on the background"
+    },
+    "speech.defaultWhenIHearValue": {
+        "message": "هيا بنا",
+        "description": "The default phrase/word that, when heard, triggers the event."
+    },
+    "speech.extensionName": {
+        "message": "خطاب إلى نص",
+        "description": "Name of extension that adds speech recognition blocks. Do Not translate Google."
+    },
+    "speech.listenAndWait": {
+        "message": "استمع وانتظر",
+        "description": "Start listening to the microphone and wait for a result from the speech recognition system."
+    },
+    "speech.speechReporter": {
+        "message": "خطاب",
+        "description": "Get the text of spoken words transcribed by the speech recognition system."
+    },
+    "speech.whenIHear": {
+        "message": "عندما أسمع [PHRASE]",
+        "description": "Event that triggers when the text entered on the block is recognized by the speech recognition system."
+    },
+    "text2speech.defaultTextToSpeak": {
+        "message": "مرحبا ",
+        "description": "hello: the default text to speak"
+    },
+    "text2speech.giant": {
+        "message": "عملاق ",
+        "description": "Name for a funny voice with a low pitch."
+    },
+    "text2speech.kitten": {
+        "message": "هريرة ",
+        "description": "A baby cat."
+    },
+    "text2speech.max": {
+        "message": "قمة عظمى",
+        "description": "Name for a voice with ambiguous gender."
+    },
+    "text2speech.quinn": {
+        "message": "كوين",
+        "description": "Name for a voice with ambiguous gender."
+    },
+    "text2speech.setLanguageBlock": {
+        "message": "ضبط اللغة على [LANGUAGE]",
+        "description": "Set the language for speech synthesis."
+    },
+    "text2speech.setVoiceBlock": {
+        "message": "ضبط الصوت على [VOICE]",
+        "description": "Set the voice for speech synthesis."
+    },
+    "text2speech.speakAndWaitBlock": {
+        "message": "تحدث [WORDS]",
+        "description": "Speak some words."
+    },
+    "text2speech.squeak": {
+        "message": "صرير",
+        "description": "Name for a funny voice with a high pitch."
+    },
+    "translate.categoryName": {
+        "message": "ترجم",
+        "description": "Name of extension that adds translate blocks"
+    },
+    "translate.defaultTextToTranslate": {
+        "message": "مرحبا ",
+        "description": "hello: the default text to translate"
+    },
+    "translate.translateBlock": {
+        "message": "ترجم [WORDS] إلى [LANGUAGE]",
+        "description": "translate some text to a different language"
+    },
+    "translate.viewerLanguage": {
+        "message": "لغة",
+        "description": "the languge of the project viewer"
+    },
+    "videoSensing.categoryName": {
+        "message": "استشعار الفيديو",
+        "description": "Label for the video sensing extension category"
+    },
+    "videoSensing.direction": {
+        "message": "الاتجاه",
+        "description": "Attribute for the \"video [ATTRIBUTE] on [SUBJECT]\" block"
+    },
+    "videoSensing.motion": {
+        "message": "حركة",
+        "description": "Attribute for the \"video [ATTRIBUTE] on [SUBJECT]\" block"
+    },
+    "videoSensing.off": {
+        "message": "يتوقف",
+        "description": "Option for the \"turn video [STATE]\" block"
+    },
+    "videoSensing.on": {
+        "message": "يعمل",
+        "description": "Option for the \"turn video [STATE]\" block"
+    },
+    "videoSensing.onFlipped": {
+        "message": "على انقلب",
+        "description": "Option for the \"turn video [STATE]\" block that causes the video to be flipped horizontally (reversed as in a mirror)"
+    },
+    "videoSensing.setVideoTransparency": {
+        "message": "ضبط شفافية الفيديو على [TRANSPARENCY]",
+        "description": "Controls transparency of the video preview layer"
+    },
+    "videoSensing.sprite": {
+        "message": "شبح",
+        "description": "Subject for the \"video [ATTRIBUTE] on [SUBJECT]\" block"
+    },
+    "videoSensing.stage": {
+        "message": "مرحلة",
+        "description": "Subject for the \"video [ATTRIBUTE] on [SUBJECT]\" block"
+    },
+    "videoSensing.videoOn": {
+        "message": "فيديو [ATTRIBUTE] على [SUBJECT]",
+        "description": "Reporter that returns the amount of [ATTRIBUTE] for the selected [SUBJECT]"
+    },
+    "videoSensing.videoToggle": {
+        "message": "تحويل الفيديو [VIDEO_STATE]",
+        "description": "Controls display of the video preview layer"
+    },
+    "videoSensing.whenMotionGreaterThan": {
+        "message": "عندما تكون حركة الفيديو> [REFERENCE]",
+        "description": "Event that triggers when the amount of motion is greater than [REFERENCE]"
+    },
+    "wedo2.getDistance": {
+        "message": "المسافة",
+        "description": "the value returned by the distance sensor"
+    },
+    "wedo2.getTiltAngle": {
+        "message": "زاوية الميل [TILT_DIRECTION]",
+        "description": "the angle returned by the tilt sensor"
+    },
+    "wedo2.isTilted": {
+        "message": "مائلة [TILT_DIRECTION_ANY]؟",
+        "description": "whether the tilt sensor is tilted"
+    },
+    "wedo2.motorDirection.backward": {
+        "message": "ذاك الاتجاه",
+        "description": "label for backward element in motor direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorDirection.forward": {
+        "message": "هذا الاتجاه",
+        "description": "label for forward element in motor direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorDirection.reverse": {
+        "message": "المعاكس",
+        "description": "label for reverse element in motor direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorId.a": {
+        "message": "motor A",
+        "description": "label for motor A element in motor menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorId.all": {
+        "message": "all motors",
+        "description": "label for all motors element in motor menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorId.b": {
+        "message": "motor B",
+        "description": "label for motor B element in motor menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorId.default": {
+        "message": "motor",
+        "description": "label for motor element in motor menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.motorOff": {
+        "message": "توقف [MOTOR_ID]",
+        "description": "turn a motor off"
+    },
+    "wedo2.motorOn": {
+        "message": "أدر [MOTOR_ID]",
+        "description": "turn a motor on indefinitely"
+    },
+    "wedo2.motorOnFor": {
+        "message": "تشغيل [MOTOR_ID] لمدة ثانية [DURATION]",
+        "description": "turn a motor on for some time"
+    },
+    "wedo2.playNoteFor": {
+        "message": "ملاحظة التشغيل [NOTE] لمدة [DURATION] من الثواني",
+        "description": "play a certain note for some time"
+    },
+    "wedo2.setLightHue": {
+        "message": "ضبط لون فاتح على [HUE]",
+        "description": "set the LED color"
+    },
+    "wedo2.setMotorDirection": {
+        "message": "ضبط [MOTOR_ID] باتجاه [MOTOR_DIRECTION]",
+        "description": "set the motor's turn direction"
+    },
+    "wedo2.startMotorPower": {
+        "message": "ضبط [MOTOR_ID] على الطاقة إلى [POWER]",
+        "description": "set the motor's power and turn it on"
+    },
+    "wedo2.tiltDirection.any": {
+        "message": "(موقع ما)",
+        "description": "label for any element in tilt direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.tiltDirection.down": {
+        "message": "الأسفل",
+        "description": "label for down element in tilt direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.tiltDirection.left": {
+        "message": "اليسار",
+        "description": "label for left element in tilt direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.tiltDirection.right": {
+        "message": "اليمين",
+        "description": "label for right element in tilt direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.tiltDirection.up": {
+        "message": "الأعلى",
+        "description": "label for up element in tilt direction menu for LEGO WeDo 2 extension"
+    },
+    "wedo2.whenDistance": {
+        "message": "عندما تكون المسافة [OP] [REFERENCE]",
+        "description": "check for when distance is < or > than reference"
+    },
+    "wedo2.whenTilted": {
+        "message": "عند إمالة [TILT_DIRECTION_ANY]",
+        "description": "check when tilted in a certain direction"
+    }
+}

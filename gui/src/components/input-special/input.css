@@ -1,0 +1,42 @@
+.input {
+  width: 100%;
+  height: 2.5rem;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(232, 239, 247, 1);
+  border-radius: 10px;
+  color: #717582;
+  font-size: 0.88rem;
+  outline: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  caret-color: #51DDD4;
+}
+
+input.is-focus {
+  border: 1px solid rgba(81, 221, 212, 1);
+  box-shadow: 0px 2px 6px 0px rgba(81, 221, 212, 0.5);
+}
+
+::-webkit-input-placeholder {
+  color: #D5DEE9;
+}
+
+/* 使用webkit内核的浏览器 */
+
+:-moz-placeholder {
+  color: #D5DEE9;
+}
+
+/* Firefox版本4-18 */
+
+::-moz-placeholder {
+  color: #D5DEE9;
+}
+
+/* Firefox版本19+ */
+
+:-ms-input-placeholder {
+  color: #D5DEE9;
+}
+
+/* IE浏览器 */

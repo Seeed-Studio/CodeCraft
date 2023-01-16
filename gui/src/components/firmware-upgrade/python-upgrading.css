@@ -1,0 +1,48 @@
+.modal {
+    width: 30rem;
+    padding-bottom: 1.2rem;
+}
+
+.contentBox {
+    width: 28em;
+    height: 8rem;
+    margin: 1rem auto;
+    background: #fff;
+    border: 1px solid #e8eff7;
+
+    border-radius: 1rem;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.content {
+    /* line-height: 1rem; */
+    /* position: fixed;
+    left: 50%;
+    top: calc(50% - 1rem);
+    transform: translate(-50%, -50%); */
+    color: #717582;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.buttonBox {
+    text-align: center;
+}
+
+.button {
+    font-size: 1rem;
+    padding: 0 2rem;
+}
+
+.notice {
+    margin: 0rem 2rem;
+    font-size: 0.88rem;
+    color: #717582;
+}

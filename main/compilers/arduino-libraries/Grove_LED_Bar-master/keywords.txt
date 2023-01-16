@@ -1,0 +1,8 @@
+Grove_LED_Bar	KEYWORD1
+
+setGreenToRed	KEYWORD2
+setLevel	KEYWORD2
+setLed	KEYWORD2
+toggleLed	KEYWORD2
+setBits	KEYWORD2
+getBits	KEYWORD2

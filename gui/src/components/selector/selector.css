@@ -1,0 +1,108 @@
+@import "../../css/units.css";
+
+.select {
+  position: relative;
+  width: 17.1875rem;
+  height: 2.5rem;
+  background:rgba(255,255,255,1);
+  border: 1px solid rgba(229,229,237,1);
+  border-radius: 0.625rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.select:hover {
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 2rem 0 1rem;
+  text-align: left;
+  font-size: 0.81rem;
+  font-weight:500;
+  font-family:PingFang SC;
+  color: #717582;
+}
+
+.arrow {
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  width: 1rem;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.list {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  width: 100%;
+  max-height: 9.375rem;
+  overflow: auto;
+  border: 1px solid rgba(229, 229, 237, 1);
+  box-shadow:0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius:5px;
+  background-color: #fff;
+  text-align: left;
+}
+
+.list-show {
+  visibility: visible;
+}
+
+.list-hide {
+  visibility: hidden;
+}
+
+.list-item {
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* line-height: 2.5rem; */
+  color: rgba(113, 117, 130, 1);
+  font-size: 0.81rem;
+  font-family: PingFang SC;
+  font-weight: 500;
+  padding: 0 0.5rem 0 1rem;
+}
+
+.list-item:hover {
+  cursor: pointer;
+  background:rgba(75,159,240,0.2);
+  border-radius:4px 4px 0px 0px;
+  color:rgba(75,159,240,1);
+}
+
+/* .value {
+  font-size: 0.81rem;
+  font-family: PingFang SC;
+  font-weight: 500;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding-left: 1rem;
+} */
+
+.disabled {
+  background: rgba(242, 247, 251, 1);
+  cursor: not-allowed !important;
+}
+
+.disabled:hover {
+  cursor: not-allowed !important;
+}
+

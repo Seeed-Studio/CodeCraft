@@ -1,0 +1,202 @@
+@import "../../css/z-index.css";
+
+.modal {
+    position: absolute;
+    height: 100%;
+    z-index: $z-index-modal;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255,255,255,1);
+}
+
+.top {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    background:rgba(242,247,251,1);
+}
+
+.topItem {
+    width:33.3%;
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    width:100%;
+    line-height: 85px;
+    height: 100%;
+    font-size:24px;
+    font-weight:500;
+    color:rgba(113,117,130,1);
+}
+
+.topRight {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closeBtn {
+    width: 94px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeIcon {
+    width: 18px;
+    height: 18px;
+}
+
+
+.center {
+    width: 100%;
+    height: calc(100vh - 167px);
+    position: relative;
+    background: rgba(242,247,251,1);
+    display: flex;
+}
+
+.centerLeft {
+    width: 22%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.cameraContainer {
+    width: calc(100% - 40px);
+    padding: 10px 0;
+    /* height: 0;
+    padding-bottom: calc(100% - 40px);  */
+    margin-left: 40px;
+    background: rgba(255,255,255,1);
+    box-shadow: 0px 6px 10px 0px rgba(0,48,104,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.camera {
+    margin: auto;
+    width: calc(100% - 20px);
+    border-radius:5px;
+}
+
+.centerBody {
+    width: 56%;
+    height: 100%;
+    display: flex;
+    overflow: auto;
+}
+
+.leftBessel {
+    width: 20%;
+    /* height: 100%; */
+    position: relative;
+}
+
+.rightBessel {
+    width: 20%;
+    /* height: 100%; */
+    position: relative;
+}
+
+.classificationGroup {
+    width: 60%;
+    height: 100%;
+}
+
+.centerRight {
+    width: 22%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.resultContainer {
+    width: calc(100% - 40px);
+    height:89px;
+    margin-right: 40px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 6px 10px 0px rgba(0,48,104,0.1);
+    border-radius:10px;
+}
+
+.resultLabel {
+    width:100%;
+    height:18px;
+    margin: 20px auto auto 20px;
+    font-size:18px;
+    font-weight:500;
+    color:rgba(113,117,130,1);
+}
+
+.resultValue {
+    width:100%;
+    height:14px;
+    margin: 18px auto 20px 20px;
+    font-size:14px;
+    font-weight:500;
+    color:rgba(113,117,130,1);
+}
+
+.bottom {
+    width:100%;
+    height:82px;
+    background:rgba(255,255,255,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.previous{
+    margin-right: 60px;
+}
+
+.button {
+    width:162px;
+    height:42px;
+    border-radius:21px;
+    font-size:18px;
+    font-weight:500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonEnable {
+    background:rgba(81,221,212,1);
+    box-shadow:0px 3px 6px 0px rgba(81,221,212,0.5);
+    color:rgba(255,255,255,1);
+    cursor: pointer;
+}
+
+.buttonDisable {
+    background:rgba(232,239,247,1);
+    box-shadow:none;
+    color:rgba(171,185,198,1);
+    cursor: default;
+}
+
+.loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.tip {
+    font-size:16px;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+}

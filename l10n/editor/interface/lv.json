@@ -1,0 +1,1266 @@
+{
+    "gui.backpack.errorBackpack": {
+        "message": "Kļūda ielādējot mugursomuu",
+        "description": "Error backpack message"
+    },
+    "gui.backpack.loadingBackpack": {
+        "message": "Ielādē ...",
+        "description": "Loading backpack message"
+    },
+    "gui.backpack.emptyBackpack": {
+        "message": "Mugursoma tukša",
+        "description": "Empty backpack message"
+    },
+    "gui.unsupportedBrowser.label": {
+        "message": "Pārlūks netiek atbalstīts",
+        "description": ""
+    },
+    "gui.unsupportedBrowser.description": {
+        "message": "Mums ļoti žēl, taču Scratch 3.0 neatbalsta Internet Explorer, Vivaldi, Opera vai Silk. Iesakām izmēģināt jaunāku pārlūku, piemēram, Google Chrome, Mozilla Firefox vai Microsoft Edge.",
+        "description": "Unsupported browser description"
+    },
+    "gui.unsupportedBrowser.back": {
+        "message": "Atpakaļ",
+        "description": "Button to go back in unsupported browser modal"
+    },
+    "gui.unsupportedBrowser.previewfaq": {
+        "message": "Lai uzzinātu vairāk, dodies uz {previewFaqLink}.",
+        "description": "Invitation to try 3.0 preview"
+    },
+    "gui.unsupportedBrowser.previewfaqlinktext": {
+        "message": "BUJ",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.cameraModal.cameraModalTitle": {
+        "message": "Uzņemt foto",
+        "description": "Title for prompt to take a picture (to add as a new costume)."
+    },
+    "gui.cameraModal.loadingCameraMessage": {
+        "message": "Ielādē kameru ...",
+        "description": "Notification to the user that the camera is loading"
+    },
+    "gui.cameraModal.permissionRequest": {
+        "message": "Lai izmantotu kameru, nepieciešama tava atļauja ",
+        "description": "Notification to the user that the app needs camera access"
+    },
+    "gui.cameraModal.retakePhoto": {
+        "message": "Izveidot uzņēmumu vēlreiz",
+        "description": "A button that allows the user to take the picture again, replacing the old one"
+    },
+    "gui.cameraModal.save": {
+        "message": "Saglabāt",
+        "description": "A button that allows the user to save the photo they took as a costume"
+    },
+    "gui.cameraModal.takePhoto": {
+        "message": "Uzņemt foto",
+        "description": "A button to take a photo"
+    },
+    "gui.cameraModal.loadingCaption": {
+        "message": "Ielādē ...",
+        "description": "A caption for a disabled button while the video from the camera is still loading"
+    },
+    "gui.cameraModal.enableCameraCaption": {
+        "message": "Iespējot kameru",
+        "description": "A caption for a disabled button prompting the user to enable camera access"
+    },
+    "gui.cards.all-tutorials": {
+        "message": "Apmācības",
+        "description": "Title for button to return to tutorials library"
+    },
+    "gui.cards.close": {
+        "message": "Aizvērt",
+        "description": "Title for button to close how-to card"
+    },
+    "gui.cards.more-things-to-try": {
+        "message": "Izmēģināt citas lietas!",
+        "description": "Title card with more things to try"
+    },
+    "gui.cards.see-more": {
+        "message": "Skatīt vairāk",
+        "description": "Title for button to see more in how-to library"
+    },
+    "gui.comingSoon.message1": {
+        "message": "Neuztraucies, mēs strādājam {emoji}",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.comingSoon.message2": {
+        "message": "Turpinājumā...",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.comingSoon.message3": {
+        "message": "Mēs vēl strādājam {emoji}",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.connection.auto-scanning.noPeripheralsFound": {
+        "message": "Nav atrasta neviena ierīce",
+        "description": "Text shown when no devices could be found"
+    },
+    "gui.connection.auto-scanning.prescan": {
+        "message": "Pārliecinies, ka ierīce ir tuvumā, tad sāc meklēšanu.",
+        "description": "Prompt for beginning the search"
+    },
+    "gui.connection.auto-scanning.pressbutton": {
+        "message": "Spied pogu uz savas ierīces.",
+        "description": "Prompt for pushing the button on the device"
+    },
+    "gui.connection.auto-scanning.start-search": {
+        "message": "Sākt meklēšanu",
+        "description": "Button in prompt for starting a search"
+    },
+    "gui.connection.connecting-searchbutton": {
+        "message": "Meklē...",
+        "description": "Label indicating that search is in progress"
+    },
+    "gui.connection.auto-scanning.try-again": {
+        "message": "Mēģināt vēlreiz",
+        "description": "Button in prompt for trying a device search again"
+    },
+    "gui.connection.connected": {
+        "message": "Savienots",
+        "description": "Message indicating that a device was connected"
+    },
+    "gui.connection.disconnect": {
+        "message": "Atvienot",
+        "description": "Button to disconnect the device"
+    },
+    "gui.connection.go-to-editor": {
+        "message": "Doties uz redaktoru",
+        "description": "Button to return to the editor"
+    },
+    "gui.connection.connecting-cancelbutton": {
+        "message": "Savienojas...",
+        "description": "Label indicating that connection is in progress"
+    },
+    "gui.connection.error.errorMessage": {
+        "message": "Kaut kas nogāja greizi...",
+        "description": "The device connection process has encountered an error."
+    },
+    "gui.connection.error.tryagainbutton": {
+        "message": "Mēģināt vēlreiz",
+        "description": "Button to initiate trying the device connection again after an error"
+    },
+    "gui.connection.error.helpbutton": {
+        "message": "Palīdzība",
+        "description": "Button to view help content"
+    },
+    "gui.connection.peripheral-name-label": {
+        "message": "Ierīces nosaukums",
+        "description": "Label for field showing the device name"
+    },
+    "gui.connection.connect": {
+        "message": "Savienot",
+        "description": "Button to start connecting to a specific device"
+    },
+    "gui.connection.scanning.lookingforperipherals": {
+        "message": "Meklē ierīces",
+        "description": "Text shown while scanning for devices"
+    },
+    "gui.connection.scanning.noPeripheralsFound": {
+        "message": "Nav atrasta neviena ierīce",
+        "description": "Text shown when no devices could be found"
+    },
+    "gui.connection.scanning.instructions": {
+        "message": "Izvēlies ierīci augšējā sarakstā.",
+        "description": "Prompt for choosing a device to connect to"
+    },
+    "gui.connection.search": {
+        "message": "Atsvaidzināt",
+        "description": "Button in prompt for starting a search"
+    },
+    "gui.connection.unavailable.installscratchlink": {
+        "message": "Pārliecinies, vai Scratch Link ir instalēts un darbojas",
+        "description": "Message for getting Scratch Link installed"
+    },
+    "gui.connection.unavailable.enablebluetooth": {
+        "message": "Pārliecinies vai Bluetooth ir iespējots",
+        "description": "Message for making sure Bluetooth is enabled"
+    },
+    "gui.connection.unavailable.tryagainbutton": {
+        "message": "Mēģināt vēlreiz",
+        "description": "Button to initiate trying the device connection again after an error"
+    },
+    "gui.connection.unavailable.helpbutton": {
+        "message": "Palīdzība",
+        "description": "Button to view help content"
+    },
+    "gui.controls.go": {
+        "message": "Palaist",
+        "description": "Green flag button title"
+    },
+    "gui.controls.stop": {
+        "message": "Apturēt",
+        "description": "Stop button title"
+    },
+    "gui.crashMessage.label": {
+        "message": "Kaut kas nogāja greizi...",
+        "description": "Crash Message title"
+    },
+    "gui.crashMessage.description": {
+        "message": "Diemžēl, izskatās, ka Scratch nobruka. Par kļūmi tika automātiski ziņots Scratch Komandai. Atsvaidzini lapu, lai mēģinātu vēlreiz.",
+        "description": "Message to inform the user that page has crashed."
+    },
+    "gui.crashMessage.reload": {
+        "message": "Pārlādēt",
+        "description": "Button to reload the page when page crashes"
+    },
+    "gui.customProcedures.myblockModalTitle": {
+        "message": "Izveidot bloku",
+        "description": "Title for the modal where you create a custom block."
+    },
+    "gui.customProcedures.addAnInputNumberText": {
+        "message": "Pievienot ievadi",
+        "description": "Label for button to add a number/text input"
+    },
+    "gui.customProcedures.numberTextType": {
+        "message": "cipars vai teksts",
+        "description": "Description of the number/text input type"
+    },
+    "gui.customProcedures.addAnInputBoolean": {
+        "message": "Pievienot ievadi",
+        "description": "Label for button to add a boolean input"
+    },
+    "gui.customProcedures.booleanType": {
+        "message": "boolean",
+        "description": "Description of the boolean input type"
+    },
+    "gui.customProcedures.addALabel": {
+        "message": "Pievienot etiķeti",
+        "description": "Label for button to add a label"
+    },
+    "gui.customProcedures.runWithoutScreenRefresh": {
+        "message": "Palaist bez ekrāna atsvaidzināšanas",
+        "description": "Label for checkbox to run without screen refresh"
+    },
+    "gui.customProcedures.cancel": {
+        "message": "Atcelt",
+        "description": "Label for button to cancel custom procedure edits"
+    },
+    "gui.customProcedures.ok": {
+        "message": "Labi",
+        "description": "Label for button to save new custom procedure"
+    },
+    "gui.SpriteInfo.direction": {
+        "message": "Virziens",
+        "description": "Sprite info direction label"
+    },
+    "gui.directionPicker.rotationStyles.allAround": {
+        "message": "Visur apkārt",
+        "description": "Button to change to the all around rotation style"
+    },
+    "gui.directionPicker.rotationStyles.leftRight": {
+        "message": "Pa labi/Pa kreisi",
+        "description": "Button to change to the left-right rotation style"
+    },
+    "gui.directionPicker.rotationStyles.dontRotate": {
+        "message": "Nerotēt",
+        "description": "Button to change to the dont rotate rotation style"
+    },
+    "gui.gui.addExtension": {
+        "message": "Pievienot paplašinājumu",
+        "description": "Button to add an extension in the target pane"
+    },
+    "gui.gui.codeTab": {
+        "message": "Kods",
+        "description": "Button to get to the code panel"
+    },
+    "gui.gui.backdropsTab": {
+        "message": "Foni",
+        "description": "Button to get to the backdrops panel"
+    },
+    "gui.gui.costumesTab": {
+        "message": "Tērpi",
+        "description": "Button to get to the costumes panel"
+    },
+    "gui.gui.soundsTab": {
+        "message": "Skaņas",
+        "description": "Button to get to the sounds panel"
+    },
+    "gui.importInfo.title": {
+        "message": "Rādīt Scratch 2.0 projektu",
+        "description": "Scratch 2.0 import modal label - for accessibility"
+    },
+    "gui.importInfo.betamessage": {
+        "message": "Ievadi saiti, kas pieder vienam no taviem kopīgotajiem projektiem. Veiktās izmaiņas šajā 3.0 Beta netiks saglabātas.",
+        "description": "Import project message"
+    },
+    "gui.importInfo.message": {
+        "message": "Ievadi saiti, kas pieder vienam no taviem kopīgotajiem projektiem. Veiktās izmaiņas šajā 3.0 ieskatā netiks saglabātas.",
+        "description": "Import project message"
+    },
+    "gui.importInfo.invalidFormatError": {
+        "message": "Ak nē, projekta saite vai id neizskatās pietiekami pareizs.",
+        "description": "Invalid project link or id message"
+    },
+    "gui.importModal.viewproject": {
+        "message": "Skatīt",
+        "description": "Label for button to load a scratch 2.0 project"
+    },
+    "gui.importInfo.goback": {
+        "message": "Doties atpakaļ",
+        "description": "Label for button to back out of importing a project"
+    },
+    "gui.importInfo.previewfaq": {
+        "message": "Lai uzzinātu vairāk, dodies uz {previewFaqLink}.",
+        "description": "Invitation to try 3.0 preview"
+    },
+    "gui.importInfo.previewfaqlinktext": {
+        "message": "BUJ",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.extensionLibrary.comingSoon": {
+        "message": "Turpinājumā",
+        "description": "Label for extensions that are not yet implemented"
+    },
+    "gui.library.filterPlaceholder": {
+        "message": "Meklēt",
+        "description": "Placeholder text for library search field"
+    },
+    "gui.library.allTag": {
+        "message": "Visi",
+        "description": "Label for library tag to revert to all items after filtering by tag."
+    },
+    "gui.loader.message1": {
+        "message": "Veido blokus...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message2": {
+        "message": "Ielādē gariņus ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message3": {
+        "message": "Ielādē skaņas ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message4": {
+        "message": "Ielādē paplašinājumus ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message5": {
+        "message": "Sauc palīgā kaķus, lai ielādētu šo projektu ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message6": {
+        "message": "Pārsūta nano ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message7": {
+        "message": "Iefliltrē gobo ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message8": {
+        "message": "Sagatavo emocijzīmes ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.headline": {
+        "message": "Ielādē projektu",
+        "description": "Main loading message"
+    },
+    "gui.menuBar.LanguageSelector": {
+        "message": "valodas izvēlētājs",
+        "description": "accessibility text for the language selection menu"
+    },
+    "gui.menuBar.tutorialsLibrary": {
+        "message": "Apmācības",
+        "description": "accessibility text for the tutorials button"
+    },
+    "gui.menuBar.restoreSprite": {
+        "message": "Atjaunot gariņu",
+        "description": "Menu bar item for restoring the last deleted sprite."
+    },
+    "gui.menuBar.restoreSound": {
+        "message": "Atjaunināt skaņu",
+        "description": "Menu bar item for restoring the last deleted sound."
+    },
+    "gui.menuBar.restoreCostume": {
+        "message": "Atjaunināt tērpu",
+        "description": "Menu bar item for restoring the last deleted costume."
+    },
+    "gui.menuBar.restore": {
+        "message": "Atjaunot",
+        "description": "Menu bar item for restoring the last deleted item in its disabled state."
+    },
+    "gui.menuBar.saveNow": {
+        "message": "Saglabāt tagad",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.share": {
+        "message": "Kopīgot",
+        "description": "Label for project share button"
+    },
+    "gui.menuBar.file": {
+        "message": "Fails",
+        "description": "Text for file dropdown menu"
+    },
+    "gui.menuBar.new": {
+        "message": "Jauns",
+        "description": "Menu bar item for creating a new project"
+    },
+    "gui.menuBar.saveAsCopy": {
+        "message": "Saglabāt kā kopiju",
+        "description": "Menu bar item for saving as a copy"
+    },
+    "gui.menuBar.uploadFromComputer": {
+        "message": "Ielādēt no šī datora",
+        "description": "Menu bar item for uploading a project from your computer"
+    },
+    "gui.menuBar.downloadToComputer": {
+        "message": "Saglabāt šajā datorā",
+        "description": "Menu bar item for downloading a project to your computer"
+    },
+    "gui.menuBar.edit": {
+        "message": "Rediģēt",
+        "description": "Text for edit dropdown menu"
+    },
+    "gui.menuBar.turboModeOff": {
+        "message": "Izslēgt turbo režīmu",
+        "description": "Menu bar item for turning off turbo mode"
+    },
+    "gui.menuBar.turboModeOn": {
+        "message": "Ieslēgt turbo režīmu",
+        "description": "Menu bar item for turning on turbo mode"
+    },
+    "gui.menuBar.seeCommunity": {
+        "message": "Skatīt kopienu",
+        "description": "Label for see community button"
+    },
+    "gui.menuBar.joinScratch": {
+        "message": "Pievienojies Scratch",
+        "description": "Link for creating a Scratch account"
+    },
+    "gui.menuBar.signIn": {
+        "message": "Ienākt",
+        "description": "Link for signing in to your Scratch account"
+    },
+    "gui.menuBar.giveFeedback": {
+        "message": "Dot atsauksmi",
+        "description": "Label for feedback form modal button"
+    },
+    "gui.gui.projectTitlePlaceholder": {
+        "message": "Projekta virsraksts",
+        "description": "Placeholder for project title when blank"
+    },
+    "gui.modal.help": {
+        "message": "Palīdzība",
+        "description": "Help button in modal"
+    },
+    "gui.modal.back": {
+        "message": "Atpakaļ",
+        "description": "Back button in modal"
+    },
+    "gui.monitor.listMonitor.empty": {
+        "message": "(empty)",
+        "description": "Text shown on a list monitor when a list is empty"
+    },
+    "gui.monitor.listMonitor.listLength": {
+        "message": "length {length}",
+        "description": "Length label on list monitors. DO NOT translate {length} (with brackets)."
+    },
+    "gui.monitor.contextMenu.default": {
+        "message": "normāls lasījums",
+        "description": "Menu item to switch to the default monitor"
+    },
+    "gui.monitor.contextMenu.large": {
+        "message": "liels lasījums",
+        "description": "Menu item to switch to the large monitor"
+    },
+    "gui.monitor.contextMenu.slider": {
+        "message": "slīdnis",
+        "description": "Menu item to switch to the slider monitor"
+    },
+    "gui.previewInfo.label": {
+        "message": "Izmēģināt Scratch 3.0",
+        "description": "Scratch 3.0 modal label - for accessibility"
+    },
+    "gui.previewInfo.welcome": {
+        "message": "Sveicināts Scratch 3.0 Beta",
+        "description": "Header for Preview Info Modal"
+    },
+    "gui.previewModal.notnowtooltip": {
+        "message": "Tagad nē",
+        "description": "Tooltip for Not Now button"
+    },
+    "gui.previewModal.tryittooltip": {
+        "message": "Izmēģini",
+        "description": "Tooltip for Try It button"
+    },
+    "gui.previewModal.viewprojecttooltip": {
+        "message": "Rādīt 2.0 projektu",
+        "description": "Tooltip for View 2.0 Project button"
+    },
+    "gui.previewInfo.betawelcome": {
+        "message": "Sveicināts Scratch 3.0 Beta",
+        "description": "Header for Beta Info Modal"
+    },
+    "gui.previewInfo.invitation": {
+        "message": "Pašreiz mēs izstrādājam jaunu Scratch versiju. Un ļoti vēlamies, lai tu to izmēģini!",
+        "description": "Invitation to try 3.0 Beta"
+    },
+    "gui.previewInfo.notnow": {
+        "message": "Tagad nē",
+        "description": "Label for button to back out of trying Scratch 3.0 Beta"
+    },
+    "gui.previewModal.tryit": {
+        "message": "Izmēģini! {caticon}",
+        "description": "Label for button to try Scratch 3.0 Beta"
+    },
+    "gui.previewModal.viewproject": {
+        "message": "Rādīt 2.0 projektu",
+        "description": "Label for button to import a 2.0 project"
+    },
+    "gui.previewInfo.previewfaq": {
+        "message": "Lai uzzinātu vairāk, dodies uz {previewFaqLink}.",
+        "description": "Invitation to try 3.0 Beta"
+    },
+    "gui.previewInfo.previewfaqlinktext": {
+        "message": "BUJ",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.gui.variableScopeOptionAllSprites": {
+        "message": "Visiem gariņiem",
+        "description": "Option message when creating a variable for making it available to all sprites"
+    },
+    "gui.gui.variableScopeOptionSpriteOnly": {
+        "message": "Tikai šim gariņam",
+        "description": "Option message when creating a varaible for making it only available to the current sprite"
+    },
+    "gui.gui.variablePrompt": {
+        "message": "Vairāk iespējas",
+        "description": "Dropdown message for variable/list options"
+    },
+    "gui.gui.variablePromptAllSpritesMessage": {
+        "message": "Šis mainīgais būs pieejams visiem gariņiem.",
+        "description": "A message that displays in a variable modal when the stage is selected indicating that the variable being created will available to all sprites."
+    },
+    "gui.prompt.cancel": {
+        "message": "Atcelt",
+        "description": "Button in prompt for cancelling the dialog"
+    },
+    "gui.prompt.ok": {
+        "message": "Labi",
+        "description": "Button in prompt for confirming the dialog"
+    },
+    "gui.playbackStep.stopMsg": {
+        "message": "Apturēt",
+        "description": "Stop/Play button in recording playback"
+    },
+    "gui.playbackStep.playMsg": {
+        "message": "Atskaņot",
+        "description": "Stop/Play button in recording playback"
+    },
+    "gui.playbackStep.loadingMsg": {
+        "message": "Ielādē ...",
+        "description": "Loading/Save button in recording playback"
+    },
+    "gui.playbackStep.saveMsg": {
+        "message": "Saglabāt",
+        "description": "Loading/Save button in recording playback"
+    },
+    "gui.playbackStep.reRecordMsg": {
+        "message": "Atkārtoti ierakstīt",
+        "description": "Button to re-record sound in recording playback"
+    },
+    "gui.recordModal.title": {
+        "message": "Ierakstīt skaņu",
+        "description": "Recording modal title"
+    },
+    "gui.recordingStep.beginRecord": {
+        "message": "Begin recording by clicking the button below",
+        "description": "Message for recording sound modal"
+    },
+    "gui.recordingStep.permission": {
+        "message": "{arrow}We need your permission to use your microphone",
+        "description": "Permission required notice in recording sound modal. Do not translate {arrow}"
+    },
+    "gui.recordingStep.stop": {
+        "message": "Stop recording",
+        "description": "Stop recording button label"
+    },
+    "gui.recordingStep.record": {
+        "message": "Ierakstīt",
+        "description": "Record button label"
+    },
+    "gui.soundEditor.sound": {
+        "message": "Skaņa",
+        "description": "Label for the name of the sound"
+    },
+    "gui.soundEditor.play": {
+        "message": "Atskaņot",
+        "description": "Title of the button to start playing the sound"
+    },
+    "gui.soundEditor.stop": {
+        "message": "Apturēt",
+        "description": "Title of the button to stop the sound"
+    },
+    "gui.soundEditor.trim": {
+        "message": "Apgriezt",
+        "description": "Title of the button to start trimminging the sound"
+    },
+    "gui.soundEditor.save": {
+        "message": "Saglabāt",
+        "description": "Title of the button to save trimmed sound"
+    },
+    "gui.soundEditor.undo": {
+        "message": "Atsaukt",
+        "description": "Title of the button to undo"
+    },
+    "gui.soundEditor.redo": {
+        "message": "Pārtaisīt",
+        "description": "Title of the button to redo"
+    },
+    "gui.soundEditor.faster": {
+        "message": "Ātrāk",
+        "description": "Title of the button to apply the faster effect"
+    },
+    "gui.soundEditor.slower": {
+        "message": "Lēnāk",
+        "description": "Title of the button to apply the slower effect"
+    },
+    "gui.soundEditor.echo": {
+        "message": "Atbalss",
+        "description": "Title of the button to apply the echo effect"
+    },
+    "gui.soundEditor.robot": {
+        "message": "Robots",
+        "description": "Title of the button to apply the robot effect"
+    },
+    "gui.soundEditor.louder": {
+        "message": "Skaļāk",
+        "description": "Title of the button to apply the louder effect"
+    },
+    "gui.soundEditor.softer": {
+        "message": "Klusāk",
+        "description": "Title of the button to apply thr.softer effect"
+    },
+    "gui.soundEditor.reverse": {
+        "message": "Atpakaļgaitā",
+        "description": "Title of the button to apply the reverse effect"
+    },
+    "gui.SpriteInfo.spritePlaceholder": {
+        "message": "Nosaukums",
+        "description": "Placeholder text for sprite name"
+    },
+    "gui.SpriteInfo.sprite": {
+        "message": "Gariņš",
+        "description": "Sprite info label"
+    },
+    "gui.SpriteInfo.show": {
+        "message": "Rādīt",
+        "description": "Sprite info show label"
+    },
+    "gui.SpriteInfo.size": {
+        "message": "Izmērs",
+        "description": "Sprite info size label"
+    },
+    "gui.spriteSelectorItem.contextMenuDuplicate": {
+        "message": "dublēt",
+        "description": "Menu item to duplicate in the right click menu"
+    },
+    "gui.spriteSelectorItem.contextMenuDelete": {
+        "message": "dzēst",
+        "description": "Menu item to delete in the right click menu"
+    },
+    "gui.spriteSelectorItem.contextMenuExport": {
+        "message": "eksportēt",
+        "description": "Menu item to export the selected item"
+    },
+    "gui.spriteSelector.addSpriteFromLibrary": {
+        "message": "Izvēlēties gariņu",
+        "description": "Button to add a sprite in the target pane from library"
+    },
+    "gui.spriteSelector.addSpriteFromPaint": {
+        "message": "Zīmēt",
+        "description": "Button to add a sprite in the target pane from paint"
+    },
+    "gui.spriteSelector.addSpriteFromSurprise": {
+        "message": "Pārsteigums",
+        "description": "Button to add a random sprite in the target pane"
+    },
+    "gui.spriteSelector.addSpriteFromFile": {
+        "message": "Augšupielādēt gariņu",
+        "description": "Button to add a sprite in the target pane from file"
+    },
+    "gui.stageHeader.stageSizeLarge": {
+        "message": "Pārslēgties uz lielu skatuvi",
+        "description": "Button to change stage size to large"
+    },
+    "gui.stageHeader.stageSizeSmall": {
+        "message": "Pārslēgties uz mazu skatuvi",
+        "description": "Button to change stage size to small"
+    },
+    "gui.stageHeader.stageSizeFull": {
+        "message": "Ieiet pilnekrāna režīmā",
+        "description": "Button to change stage size to full screen"
+    },
+    "gui.stageHeader.stageSizeUnFull": {
+        "message": "Iziet no pilnekrāna režīma",
+        "description": "Button to get out of full screen mode"
+    },
+    "gui.stageHeader.fullscreenControl": {
+        "message": "Pilnekrāna kontrole",
+        "description": "Button to enter/exit full screen mode"
+    },
+    "gui.spriteSelector.addBackdropFromLibrary": {
+        "message": "Izvēlēties Fonu",
+        "description": "Button to add a stage in the target pane from library"
+    },
+    "gui.stageSelector.addBackdropFromPaint": {
+        "message": "Zīmēt",
+        "description": "Button to add a stage in the target pane from paint"
+    },
+    "gui.stageSelector.addBackdropFromSurprise": {
+        "message": "Pārsteigums",
+        "description": "Button to add a random stage in the target pane"
+    },
+    "gui.stageSelector.addBackdropFromFile": {
+        "message": "Augšupielādēt fonu",
+        "description": "Button to add a stage in the target pane from file"
+    },
+    "gui.stageSelector.stage": {
+        "message": "Skatuve",
+        "description": "Label for the stage in the stage selector"
+    },
+    "gui.stageSelector.backdrops": {
+        "message": "Foni",
+        "description": "Label for the backdrops in the stage selector"
+    },
+    "gui.turboMode.active": {
+        "message": "Turbo režīms",
+        "description": "Label indicating turbo mode is active"
+    },
+    "gui.webglModal.label": {
+        "message": "Tavs Pārlūks Neatbalsta WebGL",
+        "description": "WebGL missing title"
+    },
+    "gui.webglModal.description": {
+        "message": "Diemžēl izskatās, ka tavs pārlūks vai dators  {webGlLink}. Tehnoloģijai nepieciešams Scratch 3.0, lai darbotos.",
+        "description": "WebGL missing message"
+    },
+    "gui.webglModal.webgllink": {
+        "message": "neatbalsta WebGL",
+        "description": "link part of your browser does not support WebGL message"
+    },
+    "gui.webglModal.back": {
+        "message": "Atpakaļ",
+        "description": "Label for button go back when browser is unsupported"
+    },
+    "gui.webglModal.previewfaq": {
+        "message": "Lai uzzinātu vairāk, dodies uz {previewFaqLink}.",
+        "description": "Scratch 3.0 FAQ description"
+    },
+    "gui.webglModal.previewfaqlinktext": {
+        "message": "BUJ",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.costumeLibrary.chooseABackdrop": {
+        "message": "Izvēlēties Fonu",
+        "description": "Heading for the backdrop library"
+    },
+    "gui.costumeLibrary.chooseACostume": {
+        "message": "Izvēlēties tērpu",
+        "description": "Heading for the costume library"
+    },
+    "gui.costumeTab.addBackdropFromLibrary": {
+        "message": "Izvēlēties Fonu",
+        "description": "Button to add a backdrop in the editor tab"
+    },
+    "gui.costumeTab.addCostumeFromLibrary": {
+        "message": "Izvēlēties tērpu",
+        "description": "Button to add a costume in the editor tab"
+    },
+    "gui.costumeTab.addBlankCostume": {
+        "message": "Zīmēt",
+        "description": "Button to add a blank costume in the editor tab"
+    },
+    "gui.costumeTab.addSurpriseCostume": {
+        "message": "Pārsteigums",
+        "description": "Button to add a surprise costume in the editor tab"
+    },
+    "gui.costumeTab.addFileBackdrop": {
+        "message": "Augšupielādēt fonu",
+        "description": "Button to add a backdrop by uploading a file in the editor tab"
+    },
+    "gui.costumeTab.addFileCostume": {
+        "message": "Augšupielādēt tērpu",
+        "description": "Button to add a costume by uploading a file in the editor tab"
+    },
+    "gui.costumeTab.addCameraCostume": {
+        "message": "Kamera",
+        "description": "Button to use the camera to create a costume costume in the editor tab"
+    },
+    "gui.extensionLibrary.chooseAnExtension": {
+        "message": "Izvēlēties paplašinājumu",
+        "description": "Heading for the extension library"
+    },
+    "gui.extensionLibrary.extensionUrl": {
+        "message": "Ievadīt URL paplašinājumam",
+        "description": "Prompt for unoffical extension url"
+    },
+    "gui.projectLoader.loadError": {
+        "message": "Neizdevās ielādēt izvēlēto projekta failu.",
+        "description": "An error that displays when a local project file fails to load."
+    },
+    "gui.recordingStep.alertMsg": {
+        "message": "Nevar sākt ierakstīšanu",
+        "description": "Alert for recording error"
+    },
+    "gui.soundLibrary.chooseASound": {
+        "message": "Izvēlēties skaņu",
+        "description": "Heading for the sound library"
+    },
+    "gui.soundTab.fileUploadSound": {
+        "message": "Augšupielādēt skaņu",
+        "description": "Button to upload sound from file in the editor tab"
+    },
+    "gui.soundTab.surpriseSound": {
+        "message": "Pārsteigums",
+        "description": "Button to get a random sound in the editor tab"
+    },
+    "gui.soundTab.recordSound": {
+        "message": "Ierakstīt",
+        "description": "Button to record a sound in the editor tab"
+    },
+    "gui.soundTab.addSoundFromLibrary": {
+        "message": "Izvēlēties skaņu",
+        "description": "Button to add a sound in the editor tab"
+    },
+    "gui.spriteLibrary.chooseASprite": {
+        "message": "Izvēlēties gariņu",
+        "description": "Heading for the sprite library"
+    },
+    "gui.tipsLibrary.tutorials": {
+        "message": "Izvēlēties pamācību",
+        "description": "Heading for the help/tutorials library"
+    },
+    "gui.defaultProject.meow": {
+        "message": "Ņau",
+        "description": "Name for the meow sound"
+    },
+    "gui.defaultProject.variable": {
+        "message": "mans mainīgais",
+        "description": "Name for the default variable"
+    },
+    "gui.howtos.intro-move-sayhello-hat.name": {
+        "message": "Sākot darbu",
+        "description": "Name for the 'Getting Started' how-to"
+    },
+    "gui.howtos.intro-move.step_stepMove": {
+        "message": "Pievienot pārvietošanas bloku",
+        "description": "Step name for 'Add a move block' step"
+    },
+    "gui.howtos.add-a-move-block.step_stepMoveSayHello": {
+        "message": "Spiest zaļo karogu, lai sāktu",
+        "description": "Step name for 'Add A Say Block' step"
+    },
+    "gui.howtos.animate-a-name.name": {
+        "message": "Animēt vārdu",
+        "description": "Name for the 'Animate a Name' how-to"
+    },
+    "gui.howtos.animate-a-name.step_AnimatePickLetter": {
+        "message": "Izvēlies burta gariņu",
+        "description": "Step name for 'Pick a Letter Sprite' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimatePlaySound": {
+        "message": "Atskaņo skaņu kad noklikšķināts",
+        "description": "Step name for 'Play a Sound When Clicked' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimatePickLetter2": {
+        "message": "Izvēlies citu burta gariņu",
+        "description": "Step name for 'Pick Another Letter Sprite"
+    },
+    "gui.howtos.animate-a-name.step_AnimateChangeColor": {
+        "message": "Mainīt krāsu",
+        "description": "Step name for 'Change color' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimateSpin": {
+        "message": "Izvēlēties citu burta gariņu un likt tam griezties",
+        "description": "Step name for 'Pick Another Letter Sprite & Make It Spin' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimateGrow": {
+        "message": "Izvēlēties citu burta gariņu & likt tam augt",
+        "description": "Step name for 'Pick Another Letter Sprite & Make It Grow!' step"
+    },
+    "gui.howtos.make-music.name": {
+        "message": "Veidot mūziku",
+        "description": "Name for the 'Make Music' how-to"
+    },
+    "gui.howtos.Make-Music.step_PickInstrument": {
+        "message": "Izvēlies instrumenta gariņu",
+        "description": "Step name for 'Pick an Instrument Sprite' step"
+    },
+    "gui.howtos.Make-Music.step_PlaySoundClick": {
+        "message": "Atskaņo skaņu kad noklikšķināts",
+        "description": "Step name for 'Play Sound When Clicked' step"
+    },
+    "gui.howtos.Make-Music.step_MakeSong": {
+        "message": "Izveido dziesmu",
+        "description": "Step name for 'Create a Song' step"
+    },
+    "gui.howtos.make-music.step_MakeBeat": {
+        "message": "Izvēlēties bungas & izveidot sitienus",
+        "description": "Step name for 'Choose a Drum & Make a Beat' step"
+    },
+    "gui.howtos.make-music.step_MakeBeatBox": {
+        "message": "Izvēlēties Mikrofona gariņu un pārsteiguma beatbox",
+        "description": "Step name for 'Choose the Microphone Sprite & Surprise Beatbox' step"
+    },
+    "gui.howtos.make-a-game.name": {
+        "message": "Izveidot klikšķināšanas spēli",
+        "description": "Name for the 'Make a Clicker Game' how-to"
+    },
+    "gui.howtos.Make-A-Game.step_GamePickSprite": {
+        "message": "Izvēlies gariņu",
+        "description": "Step name for 'Pick A Sprite' step"
+    },
+    "gui.howtos.make-a-game.step_GamePlaySound": {
+        "message": "Atskaņo skaņu kad noklikšķināts",
+        "description": "Play Sound When Clicked' step"
+    },
+    "gui.howtos.make-a-game.step_GameAddScore": {
+        "message": "Izveido Punktu skaita mainīgo",
+        "description": "Step name for 'Create Score Variable' step"
+    },
+    "gui.howtos.make-a-game.step_GameChangeScore": {
+        "message": "Kad noklikšķināts, palielināt punktu skaitu",
+        "description": "Step name for 'When Clicked Increase Score' step"
+    },
+    "gui.howtos.make-a-game.step_Random": {
+        "message": "Dodies uz nejaušu pozīciju",
+        "description": "Step name for 'Go to a random position' step"
+    },
+    "gui.howtos.make-music.step_GameChangeColor": {
+        "message": "Mainīt krāsu",
+        "description": "Step name for 'Change Color' step"
+    },
+    "gui.howtos.make-music.step_ResetScore": {
+        "message": "Atiestatīt punktu skaitu",
+        "description": "Step name for 'Reset Score' step"
+    },
+    "gui.howtos.make-a-chase-game.name": {
+        "message": "Izveidot ķeršanas spēli",
+        "description": "Name for the 'Make a Chase Game' how-to"
+    },
+    "gui.howtos.Chase-Game.step_BG": {
+        "message": "Pievienot fonu",
+        "description": "Step name for 'Add a Backdrop' step"
+    },
+    "gui.howtos.chase-game.step_AddOcto": {
+        "message": "Pievienot gariņu",
+        "description": "Step name for 'Add a Sprite' step"
+    },
+    "gui.howtos.make-music.step_LeftRight": {
+        "message": "Pārvietoties pa labi & pa kreisi ar bultaustiņiem",
+        "description": "Step name for 'Move Right & Left With Arrow Keys' step"
+    },
+    "gui.howtos.Chase-Game.step_UpDown": {
+        "message": "Pārvietoties pa labi & pa kreisi ar bultaustiņiem",
+        "description": "Step name for 'Move Up & Down With Arrow Keys' step"
+    },
+    "gui.howtos.Chase-Game.step_AddStar": {
+        "message": "Pievienot citu gariņu",
+        "description": "Step name for 'Add Another Sprite' step"
+    },
+    "gui.howtos.Chase-Game.step_MoveRandom": {
+        "message": "Pārvietoties uz nejauši izvēlētām pozīcijām",
+        "description": "Step name for 'Move Randomly' step"
+    },
+    "gui.howtos.Chase-Game.step_WhenTouch": {
+        "message": "Astoņkāja gariņā, kad pieskaras spēlēt skaņu",
+        "description": "Step name for 'In Octopus Sprite, When Touching Play Sound' step"
+    },
+    "gui.howtos.Chase-Game.step_ScoreVariable": {
+        "message": "Izveido Punktu skaita mainīgo",
+        "description": "Step name for 'Create Score Variable"
+    },
+    "gui.howtos.Chase-Game.ScoreWhenTouch": {
+        "message": "Astoņkāja gariņā, kad pieskaras pievienot punktu",
+        "description": "Step name for 'In Octopus Sprite, When Touching Add Score step"
+    },
+    "gui.howtos.add-sprite.name": {
+        "message": "Pievienot gariņu",
+        "description": "Name for the 'Add a Sprite' how-to"
+    },
+    "gui.howtos.add-sprite.step_addSprite": {
+        "message": "Pievienot gariņu",
+        "description": "Step name for 'Add a new sprite' step"
+    },
+    "gui.howtos.add-a-backdrop.name": {
+        "message": "Pievienot fonu",
+        "description": "Name for the 'Add a Backdrop' how-to"
+    },
+    "gui.howtos.change-size.name": {
+        "message": "Mainīt izmēru",
+        "description": "Name for the 'Change Size' how-to"
+    },
+    "gui.howtos.glide-around.name": {
+        "message": "Slidināt apkārt",
+        "description": "Name for the 'Glide Around' how-to"
+    },
+    "gui.howtos.record-a-sound.name": {
+        "message": "Ierakstīt skaņu",
+        "description": "Record A Sound' how-to"
+    },
+    "gui.howtos.spin-video.name": {
+        "message": "Liec tam griezties",
+        "description": "Name for the 'Make It Spin' how-to"
+    },
+    "gui.howtos.hide-and-show.name": {
+        "message": "Slēpt un Parādīt",
+        "description": "Name for the 'Hide and Show' how-to"
+    },
+    "gui.howtos.switch-costume.name": {
+        "message": "Animēt gariņu",
+        "description": "Name for the 'Animate a Sprite' how-to"
+    },
+    "gui.howtos.move-around-with-arrow-keys.name": {
+        "message": "Izmantot bulttaustiņus",
+        "description": "Name for the 'Use Arrow Keys' how-to"
+    },
+    "gui.howtos.add-effects.name": {
+        "message": "Pievienot efektus",
+        "description": "Name for the 'Add Effects' how-to"
+    },
+    "gui.extension.music.name": {
+        "message": "Mūzika",
+        "description": "Name for the 'Music' extension"
+    },
+    "gui.extension.music.description": {
+        "message": "Spēlēt instrumentus un bungas.",
+        "description": "Description for the 'Music' extension"
+    },
+    "gui.extension.pen.name": {
+        "message": "Zīmulis",
+        "description": "Name for the 'Pen' extension"
+    },
+    "gui.extension.pen.description": {
+        "message": "Zīmēt ar saviem gariņiem.",
+        "description": "Description for the 'Pen' extension"
+    },
+    "gui.extension.videosensing.name": {
+        "message": "Video noteikšana",
+        "description": "Name for the 'Video Sensing' extension"
+    },
+    "gui.extension.videosensing.description": {
+        "message": "Kustības sajūta ar kameru.",
+        "description": "Description for the 'Video Sensing' extension"
+    },
+    "gui.extension.translate.name": {
+        "message": "Tulkot",
+        "description": "Name for the Translate extension"
+    },
+    "gui.extension.translate.description": {
+        "message": "Pārtulkot tekstu vairākās valodās.",
+        "description": "Description for the Translate extension"
+    },
+    "gui.extension.microbit.description": {
+        "message": "Savienot savus projektus ar pasauli.",
+        "description": "Description for the 'micro:bit' extension"
+    },
+    "gui.extension.microbit.connectingMessage": {
+        "message": "Savienojas",
+        "description": "Message to help people connect to their micro:bit."
+    },
+    "gui.extension.ev3.description": {
+        "message": "Būvēt interaktīvus robotus un visu ko citu.",
+        "description": "Description for the 'LEGO MINDSTORMS EV3' extension"
+    },
+    "gui.extension.ev3.connectingMessage": {
+        "message": "Savienojas. Pārliecinies, ka tavas EV3 pin kods ir uzstādīts uz 1234.",
+        "description": "Message to help people connect to their EV3. Must note the PIN should be 1234."
+    },
+    "gui.extension.wedo2.description": {
+        "message": "Būvēt ar motoriem un sensoriem.",
+        "description": "Description for the 'LEGO WeDo 2.0' extension"
+    },
+    "gui.extension.wedo2.connectingMessage": {
+        "message": "Savienojas",
+        "description": "Message to help people connect to their WeDo."
+    },
+    "gui.libraryTags.all": {
+        "message": "Visi",
+        "description": "Tag for filtering a library for everything"
+    },
+    "gui.libraryTags.animals": {
+        "message": "Dzīvnieki",
+        "description": "Tag for filtering a library for animals"
+    },
+    "gui.libraryTags.dance": {
+        "message": "Dejas",
+        "description": "Tag for filtering a library for dance"
+    },
+    "gui.libraryTags.effects": {
+        "message": "Efekti",
+        "description": "Tag for filtering a library for effects"
+    },
+    "gui.libraryTags.fantasy": {
+        "message": "Fantāzija",
+        "description": "Tag for filtering a library for fantasy"
+    },
+    "gui.libraryTags.fashion": {
+        "message": "Mode",
+        "description": "Tag for filtering a library for fashion"
+    },
+    "gui.libraryTags.food": {
+        "message": "Ēdiens",
+        "description": "Tag for filtering a library for food"
+    },
+    "gui.libraryTags.indoors": {
+        "message": "Iekštelpas",
+        "description": "Tag for filtering a library for indoors"
+    },
+    "gui.libraryTags.loops": {
+        "message": "Cilpas",
+        "description": "Tag for filtering a library for loops"
+    },
+    "gui.libraryTags.music": {
+        "message": "Mūzika",
+        "description": "Tag for filtering a library for music"
+    },
+    "gui.libraryTags.notes": {
+        "message": "Notis",
+        "description": "Tag for filtering a library for notes"
+    },
+    "gui.libraryTags.outdoors": {
+        "message": "Brīvā daba",
+        "description": "Tag for filtering a library for outdoors"
+    },
+    "gui.libraryTags.patterns": {
+        "message": "Paraugi",
+        "description": "Tag for filtering a library for patterns"
+    },
+    "gui.libraryTags.people": {
+        "message": "Cilvēki",
+        "description": "Tag for filtering a library for people"
+    },
+    "gui.libraryTags.percussion": {
+        "message": "Perkusijas",
+        "description": "Tag for filtering a library for percussion"
+    },
+    "gui.libraryTags.space": {
+        "message": "Kosmoss",
+        "description": "Tag for filtering a library for space"
+    },
+    "gui.libraryTags.sports": {
+        "message": "Sports",
+        "description": "Tag for filtering a library for sports"
+    },
+    "gui.libraryTags.underwater": {
+        "message": "Zemūdens",
+        "description": "Tag for filtering a library for underwater"
+    },
+    "gui.libraryTags.voice": {
+        "message": "Balss",
+        "description": "Tag for filtering a library for voice"
+    },
+    "gui.libraryTags.wacky": {
+        "message": "Wacky",
+        "description": "Tag for filtering a library for wacky"
+    },
+    "gui.opcodeLabels.direction": {
+        "message": "virziens",
+        "description": "Label for the direction monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.xposition": {
+        "message": "x postion",
+        "description": "Label for the x position monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.yposition": {
+        "message": "y postion",
+        "description": "Label for the y position monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.size": {
+        "message": "izmērs",
+        "description": "Label for the size monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.costumename": {
+        "message": "tērpa nosaukums",
+        "description": "Label for the costume name monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.costumenumber": {
+        "message": "costume number",
+        "description": "Label for the costume number monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.backdropname": {
+        "message": "fona nosaukums",
+        "description": "Label for the backdrop name monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.backdropnumber": {
+        "message": "backdrop number",
+        "description": "Label for the backdrop number monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.volume": {
+        "message": "skaļums",
+        "description": "Label for the volume monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.tempo": {
+        "message": "temps",
+        "description": "Label for the tempo monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.answer": {
+        "message": "atbilde",
+        "description": "Label for the answer monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.loudness": {
+        "message": "skaļums",
+        "description": "Label for the loudness monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.username": {
+        "message": "lietotājvārds",
+        "description": "Label for the username monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.year": {
+        "message": "gads",
+        "description": "Label for the current year monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.month": {
+        "message": "mēnesis",
+        "description": "Label for the current month monitor when shown on the stage."
+    },
+    "gui.opcodeLabels.date": {
+        "message": "datums",
+        "description": "Label for the current date monitor when shown on the stage. Shows the current day of the month"
+    },
+    "gui.opcodeLabels.dayofweek": {
+        "message": "dayofweek",
+        "description": "Label for the current dayofweek monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.hour": {
+        "message": "stunda",
+        "description": "Label for the current hour monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.minute": {
+        "message": "minūte",
+        "description": "Label for the current minute monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.second": {
+        "message": "sekunde",
+        "description": "Label for the current second monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.timer": {
+        "message": "taimeris",
+        "description": "Label for the timer monitor when shown on the stage"
+    },
+    "gui.sharedMessages.backdrop": {
+        "message": "fons{index}",
+        "description": "Default name for a new backdrop, scratch will automatically adjust the number if necessary"
+    },
+    "gui.sharedMessages.costume": {
+        "message": "tērps{index}",
+        "description": "Default name for a new costume, scratch will automatically adjust the number if necessary"
+    },
+    "gui.sharedMessages.sprite": {
+        "message": "Gariņš{index}",
+        "description": "Default name for a new sprite, scratch will automatically adjust the number if necessary"
+    },
+    "gui.sharedMessages.pop": {
+        "message": "paukšķis",
+        "description": "Name of the pop sound, the default sound added to a sprite"
+    },
+    "gui.gui.defaultProjectTitle": {
+        "message": "Scratch projekts",
+        "description": "Default title for project"
+    },
+    "gui.backpack.header": {
+        "message": "Mugursoma",
+        "description": "Button to open the backpack"
+    }
+}

@@ -1,0 +1,28 @@
+  
+#######################################
+# Syntax Coloring Map For 
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+i	KEYWORD1
+vol_standard	KEYWORD1
+init_voltage	KEYWORD1
+first_vol	KEYWORD1
+last_vol	KEYWORD1
+temp	KEYWORD1
+counter	KEYWORD1
+timer_index	KEYWORD1
+error	KEYWORD1
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+init	KEYWORD2
+slope	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################

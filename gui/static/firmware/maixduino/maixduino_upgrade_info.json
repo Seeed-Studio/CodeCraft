@@ -1,0 +1,10 @@
+{
+  "en": {
+    "log": "1.D5/D6 pin usage fixed\n2.notes are played properly now\n3.add more lines to the display string\n4.added dual language notification to backup restore",
+    "link": "https://www.tinkergen.com/mark"
+  },
+  "zh": {
+    "log": "1.修复了D5 / D6引脚的使用。\n2.音符正确播放。\n3.显示字符串模块添加更多行。\n4.备份还原中添加了双语通知。",
+    "link": "https://www.tinkergen.com/cn_mark"
+  }
+}

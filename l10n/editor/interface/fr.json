@@ -1,0 +1,2772 @@
+{
+    "gui.soundEditor.echo": {
+        "message": "Echo",
+        "description": "Title of the button to apply the echo effect"
+    },
+    "gui.previewInfo.notnow": {
+        "message": "Pas maintenant",
+        "description": "Label for button to back out of trying Scratch 3.0 Beta"
+    },
+    "gui.howtos.animate-a-name.step_AnimateChangeColor": {
+        "message": "Change la couleur",
+        "description": "Step name for 'Change color' step"
+    },
+    "gui.costumeLibrary.chooseACostume": {
+        "message": "Choisis un costume",
+        "description": "Heading for the costume library"
+    },
+    "gui.library.filterPlaceholder": {
+        "message": "Rechercher",
+        "description": "Placeholder text for library search field"
+    },
+    "gui.unsupportedBrowser.back": {
+        "message": "Retour",
+        "description": "Button to go back in unsupported browser modal"
+    },
+    "gui.stageSelector.addBackdropFromSurprise": {
+        "message": "Surprise",
+        "description": "Button to add a random stage in the target pane"
+    },
+    "gui.comingSoon.message3": {
+        "message": "Nous y travaillons {emoji}",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.unsupportedBrowser.previewfaqlink": {
+        "message": "Aperçu FAQ ",
+        "description": "lien vers la page FAQ de Scratch 3.0 "
+    },
+    "gui.monitor.contextMenu.slider": {
+        "message": "barre de défilement",
+        "description": "Menu item to switch to the slider monitor"
+    },
+    "gui.cards.remove": {
+        "message": "Fermer",
+        "description": "Titre du bouton permettant de fermer la fiche "
+    },
+    "gui.unsupportedBrowser.description": {
+        "message": "Nous sommes désolés, mais scratch 3.0 ne supporte pas Internet Explorer, Vivaldi, Opera ou Silk. Nous vous recommandons d'essayer des navigateurs plus récents, tels que Google Chrome, Mozilla Firefox ou Microsoft Edge.",
+        "description": "Unsupported browser description"
+    },
+    "gui.costumeTab.addSurpriseCostume": {
+        "message": "Surprise",
+        "description": "Button to add a surprise costume in the editor tab"
+    },
+    "gui.costumeTab.drawShape": {
+        "message": "Dessiner des costumes ",
+        "description": ""
+    },
+    "gui.costumeTab.drawDackdrop": {
+        "message": "Dessiner un arrière-plan",
+        "description": ""
+    },
+    "gui.howtos.add-a-move-block.step_stepMoveSayHello": {
+        "message": "Clique sur le drapeau vert pour commencer",
+        "description": "Step name for 'Add A Say Block' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimateSpin": {
+        "message": "Choisis un costume avec une autre lettre & Fais la tourner",
+        "description": "Step name for 'Pick Another Letter Sprite & Make It Spin' step"
+    },
+    "gui.soundEditor.save": {
+        "message": "Sauvegarder",
+        "description": "Title of the button to save trimmed sound"
+    },
+    "gui.howtos.say-hello.name": {
+        "message": "Dire Bonjour",
+        "description": "Name for the 'Say hello' how-to"
+    },
+    "gui.stageHeader.stageSizeUnFull": {
+        "message": "Sortir du mode plein-écran",
+        "description": "Button to get out of full screen mode"
+    },
+    "gui.menuBar.file": {
+        "message": "Fichier",
+        "description": "Text for file dropdown menu"
+    },
+    "gui.stageHeader.stageSizeLarge": {
+        "message": "Passer à la grande scène",
+        "description": "Button to change stage size to large"
+    },
+    "gui.howtos.switch-costume.name": {
+        "message": "Anime un sprite",
+        "description": "Name for the 'Animate a Sprite' how-to"
+    },
+    "gui.howtos.say-hello.step_addSprite": {
+        "message": "Dire Bonjour",
+        "description": "Step name for 'Add a new sprite' step"
+    },
+    "gui.costumeTab.addFileBackdrop": {
+        "message": "Importer un arrière-plan",
+        "description": "Button to add a backdrop by uploading a file in the editor tab"
+    },
+    "gui.soundTab.fileUploadSound": {
+        "message": "Importer un son",
+        "description": "Button to upload sound from file in the editor tab"
+    },
+    "gui.soundEditor.stop": {
+        "message": "Stop",
+        "description": "Title of the button to stop the sound"
+    },
+    "gui.loader.message2": {
+        "message": "Chargement de sprites...",
+        "description": "One of the loading messages"
+    },
+    "gui.stageHeader.fullscreenControl": {
+        "message": "Contrôle du plein écran",
+        "description": "Button to enter/exit full screen mode"
+    },
+    "gui.soundEditor.redo": {
+        "message": "Refaire",
+        "description": "Title of the button to redo"
+    },
+    "gui.importInfo.title": {
+        "message": "Voir un projet Scratch 2.0",
+        "description": "Scratch 2.0 import modal label - for accessibility"
+    },
+    "gui.extensionLibrary.chooseAnExtension": {
+        "message": "Choisis une extension",
+        "description": "Heading for the extension library"
+    },
+    "gui.extensionLibrary.delete": {
+        "message": "Effacer"
+    },
+    "gui.extensionLibrary.add": {
+        "message": "Ajouter"
+    },
+
+    "gui.extensionLibrary.delPromptLabel": {
+        "message": "Avertissement"
+    },
+    "gui.extensionLibrary.delPromptMessage": {
+        "message": "Confirmer la suppression? Vous ne pourrez plus utiliser les blocs de construction de l'extension après sa suppression. "
+    },
+    "gui.extensionLibrary.inUsedPromptMessage": {
+        "message": "L'extension est utilisée et ne peut pas être supprimée pour le moment. "
+    },
+    "gui.extensionLibrary.delCancel": {
+        "message": "Annuler"
+    },
+    "gui.extensionLibrary.delOk": {
+        "message": "Confirmer"
+    },
+
+    "gui.extension.cognitiveservices.name": {
+        "message": "Services Cognitifs"
+    },
+    "gui.extension.cognitiveservices.description": {
+        "message": "L'API des services cognitifs permet aux utilisateurs d'ajouter d'autres fonctionnalités, par exemple vidéos ou liées à la parole. "
+    },
+    "gui.extension.teachablemachine.name": {
+        "message": "Apprentissage automatique "
+    },
+    "gui.extension.teachablemachine.description": {
+        "message": "Avec l'Apprentissage automatique, vous n'avez pas besoin de programmer, mais vous pouvez tout de même former des ordinateurs pour apprendre des choses et établir des réseaux de neurones artificiels qui ressemblent au cerveau humain. "
+    },
+    "gui.extension.teachablemachine.Meteostation": {
+        "message": "Ressentez la différence de changement de données causée par la température et l'humidité dans la station météo"
+    },
+    "gui.extension.3AxisAccelerometer.name": {
+        "message": "Visualisation de l'accéléromètre 3 axes"
+    },
+    "gui.extension.3AxisAccelerometer.description": {
+        "message": "Visualisez la position de l'accéléromètre sur un cube virtuel dans l'espace 3D"
+    },
+    "gui.extension.meteostation.name": {
+        "message": "Station météo"
+    },
+    "gui.extension.meteostation.description": {
+        "message": "Affichez les données environnementales, telles que la température,l'humidité et pression de l'air sur une interface Web futuriste"
+    },
+    "gui.extension.ottoDiyRobot.name": {
+        "message": "Robot bipède "
+    },
+    "gui.extension.ottoDiyRobot.description": {
+        "message": "Blocs pour contrôler un robot bipède, issus de cours niveau collège."
+    },
+    "gui.extension.shieldBot.name": {
+        "message": "Robot Bouclier"
+    },
+    "gui.extension.shieldBot.description": {
+        "message": "Blocs pour contrôler un robot Bouclier."
+    },
+    "gui.extension.mark.name": {
+        "message": "M.A.R.K"
+    },
+    "gui.extension.mark.description": {
+        "message": "Blocs pour contrôler un robot M.A.R.K."
+    },
+    "gui.extension.wireless.name": {
+        "message": "Communication sans fil"
+    },
+    "gui.extension.wireless.description": {
+        "message": "Blocs pour la communication sans fil, y compris WIFi, Bluetooth et infrarouge."
+    },
+    "gui.extension.createSkill.name": {
+        "message": "Créer une compétence"
+    },
+    "gui.extension.createSkill.description": {
+        "message": "Créez de nouvelles séquences de mouvements pour Bittle, afin qu'il puisse apprendre de nouveaux tours."
+    },
+    "gui.extension.calibrateServos.name": {
+        "message": "Calibrer les Servos "
+    },
+    "gui.extension.calibrateServos.description": {
+        "message": "Une interface utilisateur pour un étalonnage pratique de la position initiale du servo"
+    },
+    "gui.webglModal.description": {
+        "message": "Malheureusement il semble que votre navigateur ou votre ordinateur {webGlLink}. Cette technologie est nécessaire pour faire fonctionner Scratch 3.0.",
+        "description": "WebGL missing message"
+    },
+    "gui.previewModal.viewproject": {
+        "message": "Voir un projet 2.0",
+        "description": "Label for button to import a 2.0 project"
+    },
+    "gui.previewInfo.previewfaqlink": {
+        "message": "Aperçu FAQ",
+        "description": "link to Scratch 3.0 preview FAQ page"
+    },
+    "gui.soundEditor.softer": {
+        "message": "Plus doux",
+        "description": "Title of the button to apply thr.softer effect"
+    },
+    "gui.soundEditor.robot": {
+        "message": "Robot",
+        "description": "Title of the button to apply the robot effect"
+    },
+    "gui.menuBar.undo": {
+        "message": "Annuler",
+        "description": "Menu bar item for undoing"
+    },
+    "gui.stageSelector.stage": {
+        "message": "Scène",
+        "description": "Label for the stage in the stage selector"
+    },
+    "gui.webglModal.back": {
+        "message": "Retour",
+        "description": "Label for button go back when browser is unsupported"
+    },
+    "gui.comingSoon.message1": {
+        "message": "Ne t'inquiète pas, nous y travaillons {emoji}",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.howtos.make-a-game.step_ChangeColor": {
+        "message": "Changer la Couleur",
+        "description": "Step name for 'Change Color' step"
+    },
+    "gui.cards.all-how-tos": {
+        "message": "Tous les tutos",
+        "description": "Title for button to return to how-to library"
+    },
+    "gui.soundLibrary.chooseASound": {
+        "message": "Choisis un son",
+        "description": "Heading for the sound library"
+    },
+    "gui.importInfo.invalidFormatError": {
+        "message": "Oh oh, on dirait que le lien de ce projet ou le son id n'a pas l'air correct.",
+        "description": "Invalid project link or id message"
+    },
+    "gui.customProcedures.addAnInputNumberText": {
+        "message": "Ajouter une entrée",
+        "description": "Label for button to add a number/text input"
+    },
+    "gui.menuBar.saveAsCopy": {
+        "message": "Sauvegarder comme copie",
+        "description": "Menu bar item for saving as a copy"
+    },
+    "gui.importModal.viewproject": {
+        "message": "Voir",
+        "description": "Label for button to load a scratch 2.0 project"
+    },
+    "gui.menuBar.new": {
+        "message": "Nouveau",
+        "description": "Menu bar item for creating a new project"
+    },
+    "gui.customProcedures.addALabel": {
+        "message": "Ajouter une étiquette",
+        "description": "Label for button to add a label"
+    },
+    "gui.soundEditor.trim": {
+        "message": "Rogner",
+        "description": "Title of the button to start trimminging the sound"
+    },
+    "gui.cards.see-more": {
+        "message": "Voir plus",
+        "description": "Title for button to see more in how-to library"
+    },
+    "gui.customProcedures.addAnInputBoolean": {
+        "message": "Ajouter une entrée",
+        "description": "Label for button to add a boolean input"
+    },
+    "gui.stageHeader.stageSizeSmall": {
+        "message": "Passer à la petite scène",
+        "description": "Button to change stage size to small"
+    },
+    "gui.menuBar.saveNow": {
+        "message": "Sauvegarder maintenant",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.saving": {
+        "message": "Enregistrer",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.myProduction": {
+        "message": "Mes projets",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.accountSetting": {
+        "message": "Réglages",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.loginOut": {
+        "message": "Se déconnecter",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.nologin": {
+        "message": "Se connecter",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.mainTab.deviceLabel": {
+        "message": "Appareil",
+        "description": ""
+    },
+    "gui.mainTab.stageLabel": {
+        "message": "Scène",
+        "description": ""
+    },
+    "gui.device.selector.adddevice": {
+        "message": "Changer d'appareil ",
+        "description": ""
+    },
+    "gui.device.selector.linkdevice": {
+        "message": "Connecter",
+        "description": ""
+    },
+    "gui.device.delete.promptLabel": {
+        "message": "Avertissement",
+        "description": ""
+    },
+    "gui.device.delete.prompt": {
+        "message": "Souhaitez-vous supprimer cet appareil? ",
+        "description": ""
+    },
+    "gui.device.delete.cancel": {
+        "message": "Annuler",
+        "description": ""
+    },
+    "gui.device.delete.ok": {
+        "message": "Confirmer",
+        "description": ""
+    },
+    "gui.device.featuredText": {
+        "message": "Ajouté",
+        "description": ""
+    },
+    "gui.deviceConnect.modalLabel": {
+        "message": "Connecter l'appareil",
+        "description": ""
+    },
+    "gui.deviceConnect.connectBtn": {
+        "message": "Connecter",
+        "description": ""
+    },
+    "gui.deviceConnect.disconnectBtn": {
+        "message": "Déconnecter",
+        "description": ""
+    },
+    "gui.deviceConnect.promptLabel": {
+        "message": "Avertissement",
+        "description": ""
+    },
+    "gui.deviceConnect.promptTextPrefix": {
+        "message": "Souhaiter-vous vous déconnecter de ",
+        "description": ""
+    },
+    "gui.deviceConnect.promptTextSuffix": {
+        "message": "?",
+        "description": ""
+    },
+    "gui.deviceConnect.cancel": {
+        "message": "Non",
+        "description": ""
+    },
+    "gui.deviceConnect.ok": {
+        "message": "Oui",
+        "description": ""
+    },
+    "gui.deviceConnect.upgradePromptForNormal": {
+        "message": "Mise à jour du micrologiciel disponible.",
+        "description": ""
+    },
+    "gui.deviceConnect.upgradePromptForDavinci": {
+        "message": "Si l'appareil ne fonctionne pas, veuillez mettre à jour le micrologiciel. ",
+        "description": ""
+    },
+    "gui.deviceConnect.upgradeBtn": {
+        "message": "Mettre à jour maintenant",
+        "description": ""
+    },
+    "gui.deviceConnect.moreInformationBtn": {
+        "message": "Plus d'informations",
+        "description": ""
+    },
+    "gui.deviceConnect.showVerison": {
+        "message": "Vérifier la version du micrologiciel"
+    },
+    "gui.deviceConnect.connectionProblems": {
+        "message": "Vous rencontrez des difficultés pour vous connecter? ",
+        "description": ""
+    },
+    "gui.deviceConnect.selectDevices": {
+        "message": "Choisir un appareil",
+        "description": ""
+    },
+    "gui.deviceConnect.noDevices": {
+        "message": "Aucun périphérique trouvé",
+        "description": ""
+    },
+    "gui.deviceConnect.noFoundDevices": {
+        "message": "Essayez-vous de vous connecter pour la première fois et la connexion a échoué?",
+        "description": ""
+    },
+    "gui.deviceConnect.noFoundDevicesPrompt": {
+        "message": "Lors de la première connexion, téléchargez le pilote USB et laissez l'ordinateur détecter votre appareil.",
+        "description": ""
+    },
+    "gui.deviceConnect.driversInfo": {
+        "message": "Télécharger le pilote USB maintenant",
+        "description": ""
+    },
+    "gui.deviceConnect.driversFT232Info": {
+        "message": "Installer le pilote FT232",
+        "description": ""
+    },
+    "gui.settingPage.title": {
+        "message": "Informations sur l'appareil",
+        "description": ""
+    },
+    "gui.settingPage.deviceName": {
+        "message": "Nom：",
+        "description": ""
+    },
+    "gui.settingPage.firmwareVersion": {
+        "message": "Version du micrologiciel：",
+        "description": ""
+    },
+    "gui.settingPage.deviceReturn": {
+        "message": "Confirmer",
+        "description": ""
+    },
+    "gui.upgradeConfirm.txupgrade": {
+        "message": "Mettre à jour",
+        "description": ""
+    },
+    "gui.upgradeConfirm.txcancel": {
+        "message": "Annuler",
+        "description": ""
+    },
+    "gui.upgradeConfirm.title": {
+        "message": "Mettre à jour le micrologiciel",
+        "description": ""
+    },
+    "gui.uploadCode.uploadBtn": {
+        "message": "Téléverser",
+        "description": ""
+    },
+    "gui.uploadCode.downloadBtn": {
+        "message": "Télécharger",
+        "description": ""
+    },
+    "gui.uploadCode.openMonitorBtn": {
+        "message": "Moniteur Série",
+        "description": ""
+    },
+    "gui.uploadCode.disPromptForArdunio": {
+        "message": "Vous avez oublié qc? Veuillez connecter l'appareil avant de téléverser",
+        "description": ""
+    },
+    "gui.uploadCode.disPromptForNormal": {
+        "message": "Veuillez connecter l'appareil avant de téléverser",
+        "description": ""
+    },
+    "gui.device.debugModeLabel": {
+        "message": "Débogage en ligne",
+        "description": ""
+    },
+    "gui.device.onlyOnlinePrompt": {
+        "message": "Supporte uniquement le mode en ligne ",
+        "description": ""
+    },
+    "gui.device.onlyDownloadPrompt": {
+        "message": "Supporte uniquement le mode téléchargement ",
+        "description": ""
+    },
+    "gui.device.onlyOfflinePrompt": {
+        "message": "Supporte uniquement le mode téléversement",
+        "description": ""
+    },
+    "gui.device.unableConnectPrompt": {
+        "message": "Échec de la connexion?",
+        "description": ""
+    },
+    "gui.device.upgradeText": {
+        "message": "Mettre à jour le firmware immédiatement ",
+        "description": ""
+    },
+    "gui.device.g0hold.tipTitleLabel": {
+        "message": "Note: ",
+        "description": ""
+    },
+    "gui.device.g0hold.tipTitle": {
+        "message": "La bonne manière de tenir la carte électronique",
+        "description": ""
+    },
+    "gui.device.g0hold.tipMessage": {
+        "message": "Une mauvaise manipulation peut endommager la carte à cause de l'électricité statique.",
+        "description": ""
+    },
+    "gui.devices.stage.name": {
+        "message": "Mode scène",
+        "description": ""
+    },
+    "gui.devices.grovezero.name":{
+        "message": "Grove Zero",
+        "description": ""
+    },
+    "gui.devices.arduino.name":{
+        "message": "Arduino (Uno/Mega/Kit Débutant)",
+        "description": ""
+    },
+    "gui.devices.microbit.name":{
+        "message": "micro:bit",
+        "description": ""
+    },
+    "gui.devices.mpython.name": {
+        "message": "mPython",
+        "description": ""
+    },
+    "gui.devices.maixduino.name": {
+        "message": "M.A.R.K(cyberEye)",
+        "description": ""
+    },
+    "gui.devices.spec.microbit.name": {
+        "message": "micro:bit",
+        "description": ""
+    },
+    "gui.devices.spec.cyberEye.name": {
+        "message": "M.A.R.K (CyberEye)",
+        "description": ""
+    },
+    "gui.devices.spec.mpython.name": {
+        "message": "mPython",
+        "description": ""
+    },
+    "gui.devices.spec.glint.name": {
+        "message": "GLINT",
+        "description": ""
+    },
+    "gui.sprite.saveAndClose": {
+        "message": "Enregistrer",
+        "description": ""
+    },
+    "gui.upgradeModal.updateCancel": {
+        "message": "Annuler",
+        "description": ""
+    },
+    "gui.upgradeModal.updateRetry": {
+        "message": "Réessayer",
+        "description": ""
+    },
+    "gui.upgradeModal.updateFailOk": {
+        "message": "OK",
+        "description": ""
+    },
+    "gui.connectModal.updateFailTitle": {
+        "message": "La mise à niveau a échoué",
+        "description": ""
+    },
+    "gui.upgradeModal.stageFailTitle": {
+        "message": "Le téléversement a échoué",
+        "description": ""
+    },
+    "gui.upgradeModal.restoreFailTitle": {
+        "message": "La restauration a échoué",
+        "description": ""
+    },
+    "gui.upgradeModal.updateFail": {
+        "message": "La mise à niveau du micrologiciel a échoué, veuillez réessayer",
+        "description": ""
+    },
+    "gui.upgradeModal.stageFail": {
+        "message": "La mise à niveau du micrologiciel a échoué, veuillez réessayer",
+        "description": ""
+    },
+    "gui.upgradeModal.restoreFail": {
+        "message": "Échec de la restauration du micrologiciel, veuillez réessayer ",
+        "description": ""
+    },
+    "gui.updateDownload.updateDownloading": {
+        "message": "Mise à jour du micrologiciel",
+        "description": ""
+    },
+    "gui.updateDownload.dontClose": {
+        "message": "Mise à jour…, ne pas fermer le logiciel.",
+        "description": ""
+    },
+    "gui.updateDownload.updatingStageFirmware": {
+        "message": "Mise à jour du micrologiciel pour le mode scène ",
+        "description": ""
+    },
+    "gui.updateDownload.restoringFirmware": {
+        "message": "Restauration du micrologiciel",
+        "description": ""
+    },
+    "gui.connectModal.upgradingTitle": {
+        "message": "Mise à jour du micrologiciel",
+        "description": ""
+    },
+    "gui.updateDownload.restoringTitle": {
+        "message": "Mettre à jour",
+        "description": ""
+    },
+    "gui.upgradeModal.successContent": {
+        "message": "Le micrologiciel a été mis à niveau vers la dernière version!",
+        "description": ""
+    },
+    "gui.upgradeModal.know": {
+        "message": "OK",
+        "description": ""
+    },
+    "gui.socketIsUsed.title": {
+        "message": "Avertissement"
+    },
+    "gui.socketIsUsed.message": {
+        "message": "L'assistant de connexion Codecraft est occupé. Veuillez arrêter son logiciel connecté et réessayer."
+    },
+    "gui.socketIsUsed.comfirm": {
+        "message": "OK"
+    },
+    "gui.notOpenAssi.title": {
+        "message": "Avertissement"
+    },
+    "gui.notOpenAssi.message": {
+        "message": "L'assistant de connexion d'appareil ne fonctionne pas ~"
+    },
+    "gui.notOpenAssi.descrition": {
+        "message": "Pour connecter l'appareil, vous devez lancer l'Assistant Codecraft. "
+    },
+    "gui.notOpenAssi.linuxmessage": {
+        "message": "L'assistant de connexion d'appareil ne fonctionne pas, veuillez suivre les étapes suivantes "
+    },
+    "gui.notOpenAssi.linuxdescrition": {
+        "message": "1、install deb package.\n2、open terminal，cd /opt/CodecraftAssistant\n3、sudo ./cc-assistant"
+    },
+    "gui.notOpenAssi.goDownload": {
+        "message": "Téléchargez assistant"
+    },
+    "gui.notOpenAssi.getIt": {
+        "message": "OK"
+    },
+    "gui.disConnected.title": {
+        "message": "Avertissement"
+    },
+    "gui.disConnected.suffix": {
+        "message": " déconnecté"
+    },
+    "gui.sprite.delete.prefix": {
+        "message": "Etes-vous sûr de vouloir supprimer "
+    },
+    "gui.sprite.delete.suffix": {
+        "message": "?"
+    },
+    "gui.sprite.promptLabel": {
+        "message": "Avertissement"
+    },
+    "gui.target.sprite.promptLabel": {
+        "message": "Avertissement"
+    },
+    "gui.sprite.prompt": {
+        "message": "Voulez-vous supprimer ce lutin?"
+    },
+    "gui.sprite.cancel": {
+        "message": "Annuler"
+    },
+    "gui.sprite.ok": {
+        "message": "OK"
+    },
+    "gui.upgradeModal.successContentStage": {
+        "message": "Micrologiciel mis à jour",
+        "description": ""
+    },
+    "gui.upgradeModal.successContentRestore": {
+        "message": "Micrologiciel restauré",
+        "description": ""
+    },
+    "gui.connectModal.updateSuc": {
+        "message": "Mise à jour réussie",
+        "description": ""
+    },
+    "gui.upgradeModal.stageSucTitle": {
+        "message": "Mise à jour réussie ",
+        "description": ""
+    },
+    "gui.upgradeModal.restoreSucTitle": {
+        "message": "Restauration réussie",
+        "description": ""
+    },
+    "gui.uploadCode.uploadingMessage": {
+        "message": "Détendez-vous pendant le téléversement",
+        "description": ""
+    },
+    "gui.uploadCode.uploadSuccMessage": {
+        "message": "Téléverser avec succès ",
+        "description": ""
+    },
+    "gui.uploadCode.uploadSuccComfirm": {
+        "message": "Bien reçu",
+        "description": ""
+    },
+    "gui.uploadCode.uploadSuccResetPrompt": {
+        "message": "Voulez-vous exécuter votre programme? Appuyez sur le bouton de réinitialisation sur la carte principale. ",
+        "description": ""
+    },
+    "gui.uploadCode.uploadFailMessage": {
+        "message": "Echec du téléversement",
+        "description": ""
+    },
+    "gui.uploadCode.uploadFailConfirm": {
+        "message": "OK",
+        "description": ""
+    },
+    "gui.uploadCode.uploadTimeoutMessage": {
+        "message": "Oups... dépassement de délai."
+    },
+    "gui.uploadCode.uploadTimeoutConfirm": {
+        "message": "OK"
+    },
+    "gui.uploadCode.uploadTimeoutPrompt": {
+        "message": "Le téléchargement a dépassé le temps imparti, veuillez réessayer. Si l'erreur persiste, essayez les solutions suivantes: "
+    },
+    "gui.uploadCode.timeoutHandleMethodSubLabel1": {
+        "message": "Etape 1. Entrer en mode démarrage (boot) "
+    },
+    "gui.uploadCode.timeoutHandleMethodSub1Info1": {
+        "message": "1. Si la carte principale n'est pas connectée à l'alimentation électrique, appuyez et maintenez le bouton de réinitialisation."
+    },
+    "gui.uploadCode.timeoutHandleMethodSub1Info2": {
+        "message": "2. Connectez la carte principale au port USB de l'ordinateur. "
+    },
+    "gui.uploadCode.timeoutHandleMethodSub1Info3": {
+        "message": "3. Attendez 8 secondes, le voyant d'état clignotera lentement, indiquant qu'il est entré en mode de démarrage."
+    },
+    "gui.uploadCode.timeoutHandleMethodSubLabel2": {
+        "message": "Step 2. Mettez le micrologiciel à jour."
+    },
+    "gui.uploadCode.timeoutHandleMethodSub2Info1": {
+        "message": "1. Entrer en mode démarrage comme à l'étape 1."
+    },
+    "gui.uploadCode.timeoutHandleMethodSub2Info2": {
+        "message": "2. Connectez la carte principale à Codecraft."
+    },
+    "gui.uploadCode.timeoutHandleMethodSub2Info3": {
+        "message": "3. Une fois la connexion établie, vous serez invité à mettre à niveau le micrologiciel."
+    },
+    "gui.uploadCode.arduinoSelect.title": {
+        "message": "Téléverser"
+    },
+    "gui.uploadCode.arduinoSelect.select": {
+        "message": "Choisir un port Série"
+    },
+    "gui.uploadCode.arduinoSelect.confirm": {
+        "message": "OK"
+    },
+    "gui.uploadCode.arduinoSelect.noSerialsPrompt": {
+        "message": "Aucun appareil connecté"
+    },
+    "gui.uploadCode.arduinoSelect.noSelectSerialsPrompt": {
+        "message": "Veuillez sélectionner un port série"
+    },
+    "gui.loginModal.SMSLogin": {
+        "message": "Connectez-vous avec le code de vérification",
+        "description": ""
+    },
+    "gui.loginModal.pwdLogin": {
+        "message": "Mot de passe de connexion",
+        "description": ""
+    },
+    "gui.loginModal.getSMS": {
+        "message": "Obtenez un code de vérification",
+        "description": ""
+    },
+    "gui.loginModal.forgetPwd": {
+        "message": "Mot de passe oublié?",
+        "description": ""
+    },
+    "gui.loginModal.login": {
+        "message": "S'identifier",
+        "description": ""
+    },
+    "gui.loginModal.toLogin": {
+        "message": "S'inscrire",
+        "description": ""
+    },
+    "gui.loginModal.inputVerifiCodePrompt": {
+        "message": "Veuillez saisir votre code de vérification.",
+        "description": ""
+    },
+    "gui.loginModal.inputPwdPrompt": {
+        "message": "Mot de passe (6 à 20 carractères lettres et chiffres) ",
+        "description": ""
+    },
+    "gui.loginModal.inputPwdPrompt2": {
+        "message": "Merci d'indiquer votre mot de passe",
+        "description": ""
+    },
+    "gui.loginModal.inputPhonePrompt": {
+        "message": "Merci d'indiquer votre numéro de téléphone.",
+        "description": ""
+    },
+    "gui.loginModal.inputAcountPrompt": {
+        "message": "Indiquer votre compte",
+        "description": ""
+    },
+    "gui.loginModal.inputLoginPwdPrompt": {
+        "message": "Indiquer votre mot de passe",
+        "description": ""
+    },
+    "gui.loginModal.next": {
+        "message": "Suivant",
+        "description": ""
+    },
+    "gui.loginModal.inputPwdPlaceholder": {
+        "message": " 6 à 20 carractères (lettres et chiffres)",
+        "description": ""
+    },
+    "gui.loginModal.inputNewPwd": {
+        "message": "Indiquer votre nouveau mot de passe",
+        "description": ""
+    },
+    "gui.loginModal.findPwdCompleted": {
+        "message": "Terminer",
+        "description": ""
+    },
+    "gui.loginModal.modifyPwdCompleted": {
+        "message": "Terminer",
+        "description": ""
+    },
+    "gui.loginModal.findPwdTitle": {
+        "message": "RÉCUPÉRER MOT DE PASSE",
+        "description": ""
+    },
+    "gui.loginModal.setting.phone": {
+        "message": "Mobile",
+        "description": ""
+    },
+    "gui.loginModal.setting.password": {
+        "message": "mot de passe",
+        "description": ""
+    },
+    "gui.loginModal.setting.pwdModify": {
+        "message": "Modifier Mot de passe",
+        "description": ""
+    },
+    "gui.loginModal.setting.nickname": {
+        "message": "Nom",
+        "description": ""
+    },
+    "gui.loginModal.setting.title": {
+        "message": "Réglages",
+        "description": ""
+    },
+    "gui.loginModal.setting.sex": {
+        "message": "Genre",
+        "description": ""
+    },
+    "gui.loginModal.sexs.male": {
+        "message": "Masculin",
+        "description": ""
+    },
+    "gui.loginModal.sexs.female": {
+        "message": "Feminin",
+        "description": ""
+    },
+    "gui.loginModal.setting.birthday": {
+        "message": "Date de naissance"
+    },
+    "gui.loginModal.setting.year": {
+        "message": "A"
+    },
+    "gui.loginModal.setting.month": {
+        "message": "M"
+    },
+    "gui.loginModal.setting.day": {
+        "message": "J"
+    },
+    "gui.loginModal.modifyPwdTitle": {
+        "message": "Modifier le mot de passe"
+    },
+    "gui.loginModal.sendedVerificateCodePrompt": {
+        "message": "Code de vérification déjà envoyé sur le téléphone mobile: "
+    },
+    "gui.loginModal.sendedVerificateCodeEmail": {
+        "message": "Un code de vérification est envoyé à votre adresse e-mail: "
+    },
+    "gui.loginModal.willSendPhone": {
+        "message": "Nous enverrons un code de vérification à votre numéro de téléphone enregistré. "
+    },
+    "gui.loginModal.willSendEmail": {
+        "message": "Nous enverrons un code de vérification à votre adresse e-mail enregistrée. "
+    },
+    "gui.loginModal.alreadySentPhone": {
+        "message": "Code de vérification déjà envoyé sur le téléphone mobile: "
+    },
+    "gui.loginModal.alreadySentEmail": {
+        "message": "Un code de vérification est envoyé à votre adresse e-mail:"
+    },
+    "gui.loginModal.registerTemp1": {
+        "message": "S'INSCRIRE"
+    },
+    "gui.loginModal.registerTemp2": {
+        "message": "Profil"
+    },
+    "gui.loginModal.registerStatus": {
+        "message": "Statut"
+    },
+    "gui.loginModal.registerIsTeacher": {
+        "message": "je suis enseignant(e)"
+    },
+    "gui.loginModal.registerIsStudent": {
+        "message": "Je suis étudiant(e)"
+    },
+    "gui.loginModal.registerEmailAgreement": {
+        "message": "Oui, je souhaite recevoir une newsletter avec des idées pédagogiques. "
+    },
+    "gui.loginModal.registerUnSelIndentity": {
+        "message": "Merci d'indiquer votre statut"
+    },
+    "gui.loginModal.invitationCode": {
+        "message": "code d'invitation"
+    },
+    "gui.loginModal.invitationCodeOptional": {
+        "message": "Optionnel"
+    },
+    "gui.loginModal.myInvitationCode": {
+        "message": "Mon code d'invitation"
+    },
+    "gui.loginModal.invitationText": {
+        "message": "Après avoir copié le code d'invitation, envoyez-le à vos amis pour l'indiquer lors de leur inscription. Cela vous aidera à obtenir plus de droits et d'intérêts des créateurs. Le droit d'interprétation appartient à la plateforme des créateurs."
+    },
+    "gui.loginModal.successInvited": {
+        "message": "Amis invités avec succès"
+    },
+    "gui.loginModal.registerTime": {
+        "message": "Moment de l'inscription"
+    },
+    "gui.loginModal.userAccount": {
+        "message": "Compte d'utilisateur"
+    },
+    "gui.loginModal.goLoin": {
+        "message": "Identifiant"
+    },
+    "gui.loginModal.registerCompleted": {
+        "message": "Hourra! Vous êtes prêt!"
+    },
+    "gui.loginModal.isMale": {
+        "message": "masculin"
+    },
+    "gui.loginModal.isFemale": {
+        "message": "féminin"
+    },
+    "gui.loginModal.inputNickName": {
+        "message": "Meci d'entrer votre nom"
+    },
+    "gui.loginModal.logoutTitle": {
+        "message": "Se déconnecter"
+    },
+    "gui.loginModal.logoutPrompt": {
+        "message": "Confirmation de déconnexion?"
+    },
+    "gui.loginModal.logoutOk": {
+        "message": "Confirmer"
+    },
+    "gui.loginModal.logoutCancel": {
+        "message": "Annuler"
+    },
+    "gui.loginModal.uploadAvatar": {
+        "message": "Télécharger / modifier votre avatar "
+    },
+    "gui.library.importProject": {
+        "message": "Importer un projet "
+    },
+    "gui.library.viewAll": {
+        "message": "Voir tout"
+    },
+    "gui.library.viewAlllogin": {
+        "message": "Voir tout (Connexion requise)"
+    },
+    "gui.library.sprite.mine": {
+        "message": "Mon Lutin"
+    },
+    "gui.library.sprite.common": {
+        "message": "Bibliothèque de lutins"
+    },
+    "gui.library.custom.mine": {
+        "message": "Mon costume"
+    },
+    "gui.library.custom.common": {
+        "message": "Bibliothèque de Costumes"
+    },
+    "gui.library.backdrop.mine": {
+        "message": "Mon arrière-plan"
+    },
+    "gui.library.backdrop.common": {
+        "message": "Bibliothèque d'arrière-plans"
+    },
+    "gui.library.sound.mine": {
+        "message": "Mon son"
+    },
+    "gui.library.sound.common": {
+        "message": "Bibliothèque de sons"
+    },
+    "gui.library.localUpload": {
+        "message": "Télécharger"
+    },
+    "gui.library.uploadLimitTwo": {
+        "message": "(Moins de 512kb)"
+    },
+    "gui.library.loadingMessage": {
+        "message": "Chargement en cours, veuillez patienter"
+    },
+    "gui.library.loadMore": {
+        "message": "Charger plus"
+    },
+    "gui.library.noLoginPrompt": {
+        "message": "Connectez-vous pour télécharger vos documents locaux"
+    },
+    "gui.library.login": {
+        "message": "S'identifier"
+    },
+    "gui.library.uploadFailTextTwo": {
+        "message": "Le téléchargement a échoué. Le fichier est trop volumineux. La taille limite du fichier est de 512 Ko"
+    },
+    "gui.howtos.Make-Music.step_CreateASong": {
+        "message": "Créer un morceau",
+        "description": "Step name for 'Create a Song' step"
+    },
+    "gui.SpriteInfo.sprite": {
+        "message": "Sprite",
+        "description": "Sprite info label"
+    },
+    "gui.menuBar.downloadToComputer": {
+        "message": "Sauvegarder sur votre ordinateur",
+        "description": "Menu bar item for downloading a project to your computer"
+    },
+    "gui.menuBar.tutorialsLibrary": {
+        "message": "Tutoriels",
+        "description": "accessibility text for the tutorials button"
+    },
+    "gui.tipsLibrary.tutorials": {
+        "message": "Choisis un tutoriel",
+        "description": "Heading for the help/tutorials library"
+    },
+    "gui.menuBar.projects": {
+        "message": "Projets",
+        "description": ""
+    },
+    "gui.menuBar.ccprojects": {
+        "message": "Projets pour Codecraft",
+        "description": ""
+    },
+    "gui.menuBar.moreprojects": {
+        "message": "Plus de projets",
+        "description": ""
+    },
+    "gui.menuBar.courses": {
+        "message": "Cours",
+        "description": ""
+    },
+    "gui.menuBar.cccourse": {
+        "message": "Cours de codage Codecraft",
+        "description": ""
+    },
+    "gui.menuBar.morecourses": {
+        "message": "Plus de Cours",
+        "description": ""
+    },
+    "gui.menuBar.help": {
+        "message": "Aide",
+        "description": ""
+    },
+    "gui.menuBar.seeHelp": {
+        "message": "Aide en ligne",
+        "description": ""
+    },
+    "gui.menuBar.feedback": {
+        "message": "Retour d'information",
+        "description": ""
+    },
+    "gui.menuBar.checkUpdate": {
+        "message": "Vérifier les mises à jour",
+        "description": ""
+    },
+    "gui.menuBar.downloadcc": {
+        "message": "Télécharger pour PC",
+        "description": ""
+    },
+    "gui.menuBar.about": {
+        "message": "A propos de Codecraft",
+        "description": ""
+    },
+    "gui.menuBar.rescueDevice": {
+        "message": "Dispositif de sauvetage "
+    },
+    "gui.feedback.label": {
+        "message": "Retour d'information",
+        "description": ""
+    },
+    "gui.feedback.cancel": {
+        "message": "Annuler",
+        "description": ""
+    },
+    "gui.feedback.ok": {
+        "message": "Soumettre",
+        "description": ""
+    },
+    "gui.feedback.placeholder": {
+        "message": "Veuillez noter vos commentaires ici.",
+        "description": ""
+    },
+    "gui.feedback.currentVersion": {
+        "message": "Codecraft：v"
+    },
+    "gui.feedback.suggestedExamples": {
+        "message": "Comment décrire le problème"
+    },
+    "gui.feedback.uploadTips": {
+        "message": "Soumettez des pièces jointes (photos, vidéos, ZIP, RAR, CDC ... pas plus de 20M)"
+    },
+    "gui.feedback.buttonUploadFiles": {
+        "message": "Téléverser"
+    },
+    "gui.feedback.deleteUploadFiles": {
+        "message": "Effacer"
+    },
+    "gui.feedback.buttonUploadFilesed": {
+        "message": "Téléverser"
+    },
+    "gui.feedback.submitCurrentProgram": {
+        "message": "Soumettez le programme actuel en même temps"
+    },
+    "gui.feedback.suggestedExamplesContentTitle": {
+        "message": "Décrivez le problème"
+    },
+    "gui.feedback.suggestedExamplesContentExpect": {
+        "message": " a) Que vous attendiez-vous à ce qu'il se passe? "
+    },
+    "gui.feedback.suggestedExamplesContentResult": {
+        "message": " b) Que s'est-il passé à la place?"
+    },
+    "gui.feedback.suggestedExamplesContentStep": {
+        "message": "Décrivez les étapes pour reproduire le problème"
+    },
+    "gui.feedback.suggestedExamplesContentSpecific": {
+        "message": "Merci de décrire par un texte, de préférence étayé de captures d'écran / photos / vidéos."
+    },
+    "gui.feedback.suggestedExamplesContentUpload": {
+        "message": "Vous pouvez placer plusieurs fichiers dans une archive .zip et les joindre à votre demande.        "
+    },
+    "gui.feedback.suggestedExamplesContentFirst": {
+        "message": "1. Aller à ..."
+    },
+    "gui.feedback.suggestedExamplesContentSecond": {
+        "message": "2. Cliquer sur ..."
+    },
+    "gui.feedback.suggestedExamplesContentThird": {
+        "message": "3. Connecter ..."
+    },
+    "gui.feedback.fileLarge": {
+        "message": "Le fichier est trop volumineux"
+    },
+    "gui.feedback.fileUploading": {
+        "message": "Chargement..."
+    },
+    "gui.about.label": {
+        "message": "A propos",
+        "description": ""
+    },
+    "gui.about.verprefix": {
+        "message": "Version：v",
+        "description": ""
+    },
+    "gui.about.description": {
+        "message": "©2020 TinkerGen.com",
+        "description": ""
+    },
+    "gui.menuBar.howToLibrary": {
+        "message": "Bibliothèque de tutos",
+        "description": "accessibility text for the how-to library button"
+    },
+    "gui.costumeTab.addCostumeFromLibrary": {
+        "message": "Choisis un costume",
+        "description": "Button to add a costume in the editor tab"
+    },
+    "gui.epcs.label": {
+        "message": "Mes Projets",
+        "description": ""
+    },
+    "gui.prompt.projectSaveLabel": {
+        "message": "Avertissement",
+        "description": ""
+    },
+    "gui.prompt.projectNoSave": {
+        "message": "Ne pas sauver",
+        "description": ""
+    },
+    "gui.prompt.projectSave": {
+        "message": "Sauver",
+        "description": ""
+    },
+    "gui.library.openLocalProject": {
+        "message": "Ouvrir des projets locaux",
+        "description": ""
+    },
+    "gui.soundTab.addSoundFromLibrary": {
+        "message": "Choisis un son",
+        "description": "Button to add a sound in the editor tab"
+    },
+    "gui.cameraModal.enableCameraCaption": {
+        "message": "Activer l'appareil photo",
+        "description": "A caption for a disabled button prompting the user to enable camera access"
+    },
+    "gui.loader.message5": {
+        "message": "Rassemblement des chats ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message7": {
+        "message": "Gonflement des gobos ...",
+        "description": "One of the loading messages"
+    },
+    "gui.howtos.glide-around.name": {
+        "message": "Glisser tout autour",
+        "description": "Name for the 'Glide Around' how-to"
+    },
+    "gui.howtos.Chase-Game.step_Score": {
+        "message": "Dans Octopus Sprite, lorsque vous touchez Ajouter un score",
+        "description": "Step name for 'In Octopus Sprite, When Touching Add Score step"
+    },
+    "gui.menuBar.uploadFromComputer": {
+        "message": "Importer depuis votre ordinateur",
+        "description": "Menu bar item for uploading a project from your computer"
+    },
+    "gui.menuBar.openLocalProject": {
+        "message": "Ouvrir projets locaux",
+        "description": ""
+    },
+    "gui.howtos.make-music.step_MakeBeat": {
+        "message": "Choisis un tambour & fait un battement",
+        "description": "Step name for 'Choose a Drum & Make a Beat' step"
+    },
+    "gui.customProcedures.ok": {
+        "message": "Ok",
+        "description": "Label for button to save new custom procedure"
+    },
+    "gui.menuBar.LanguageSelector": {
+        "message": "sélecteur de langue",
+        "description": "accessibility text for the language selection menu"
+    },
+    "gui.spriteSelector.addBackdropFromLibrary": {
+        "message": "Choisis un arrière-plan",
+        "description": "Button to add a stage in the target pane from library"
+    },
+    "gui.soundEditor.slower": {
+        "message": "Plus doucement",
+        "description": "Title of the button to apply the slower effect"
+    },
+    "gui.turboMode.active": {
+        "message": "Mode Turbo",
+        "description": "Label indicating turbo mode is active"
+    },
+    "gui.loader.message4": {
+        "message": "Chargement des extensions ...",
+        "description": "One of the loading messages"
+    },
+    "gui.recordingStep.alertMsg": {
+        "message": "Impossible de démarrer l'enregistrement",
+        "description": "Alert for recording error"
+    },
+    "gui.extensionLibrary.extensionUrl": {
+        "message": "Entrer l'URL de l'extension",
+        "description": "Prompt for unoffical extension url"
+    },
+    "gui.customProcedures.cancel": {
+        "message": "Annuler",
+        "description": "Label for button to cancel custom procedure edits"
+    },
+    "gui.howtos.intro-move.step_stepMove": {
+        "message": "Ajoute un bloc de mouvement",
+        "description": "Step name for 'Add a move block' step"
+    },
+    "gui.howtos.animate-a-name.name": {
+        "message": "Anime un nom",
+        "description": "Name for the 'Animate a Name' how-to"
+    },
+    "gui.modal.back": {
+        "message": "Retour",
+        "description": "Back button in modal"
+    },
+    "gui.howtos.animate-a-name.step_AnimateGrow": {
+        "message": "Choisis un costume avec une autre lettre & Fais la grandir",
+        "description": "Step name for 'Pick Another Letter Sprite & Make It Grow!' step"
+    },
+    "gui.recordModal.title": {
+        "message": "Enregistre un Son",
+        "description": "Recording modal title"
+    },
+    "gui.gui.backdropsTab": {
+        "message": "Arrière-plans",
+        "description": "Button to get to the backdrops panel"
+    },
+    "gui.prompt.ok": {
+        "message": "Ok",
+        "description": "Button in prompt for confirming the dialog"
+    },
+    "gui.cameraModal.permissionRequest": {
+        "message": "Nous avons besoin de votre permission pour utiliser votre appareil photo.",
+        "description": "Notification to the user that the app needs camera access"
+    },
+    "gui.recordingStep.permission": {
+        "message": "{arrow}We need your permission to use your microphone",
+        "description": "Permission required notice in recording sound modal. Do not translate {arrow}"
+    },
+    "gui.customProcedures.numberTextType": {
+        "message": "nombre ou texte",
+        "description": "Description of the number/text input type"
+    },
+    "gui.unsupportedBrowser.previewfaq": {
+        "message": "Pour en savoir plus, allez sur la {previewFaqLink}.",
+        "description": "Invitation to try 3.0 preview"
+    },
+    "gui.soundEditor.play": {
+        "message": "Jouer",
+        "description": "Title of the button to start playing the sound"
+    },
+    "gui.cameraModal.retakePhoto": {
+        "message": "Reprendre la photo",
+        "description": "A button that allows the user to take the picture again, replacing the old one"
+    },
+    "gui.howtos.Chase-Game.step_AddStar": {
+        "message": "Ajoute un autre sprite",
+        "description": "Step name for 'Add Another Sprite' step"
+    },
+    "gui.menuBar.share": {
+        "message": "Partager",
+        "description": "Label for project share button"
+    },
+    "gui.crashMessage.description": {
+        "message": "Désolé, mais on dirait que Scratch a crashé. Ce bug a été\nrapporté automatiquement à l'Équipe Scratch. Essayez de recharger la page pour essayer\nà nouveau.",
+        "description": "Message to inform the user that page has crashed."
+    },
+    "gui.webglModal.label": {
+        "message": "Votre navigateur ne supporte pas WebGL",
+        "description": "WebGL missing title"
+    },
+    "gui.importInfo.goback": {
+        "message": "Retour",
+        "description": "Label for button to back out of importing a project"
+    },
+    "gui.monitor.contextMenu.large": {
+        "message": "grande lecture",
+        "description": "Menu item to switch to the large monitor"
+    },
+    "gui.cards.more-things-to-try": {
+        "message": "Plus de choses à essayer !",
+        "description": "Title card with more things to try"
+    },
+    "gui.costumeTab.addCameraCostume": {
+        "message": "Webcam",
+        "description": "Button to use the camera to create a costume costume in the editor tab"
+    },
+    "gui.howtos.Chase-Game.step_UpDown": {
+        "message": "Bouge vers le haut & vers le bas avec les flèches du clavier",
+        "description": "Step name for 'Move Up & Down With Arrow Keys' step"
+    },
+    "gui.spriteLibrary.chooseASprite": {
+        "message": "Choisis un sprite",
+        "description": "Heading for the sprite library"
+    },
+    "gui.loader.headline": {
+        "message": "Chargement du projet",
+        "description": "Main loading message"
+    },
+    "gui.playbackStep.playMsg": {
+        "message": "Jouer",
+        "description": "Stop/Play button in recording playback"
+    },
+    "gui.customProcedures.booleanType": {
+        "message": "booléenne",
+        "description": "Description of the boolean input type"
+    },
+    "gui.importInfo.previewfaqlink": {
+        "message": "Aperçu FAQ",
+        "description": "link to Scratch 3.0 preview FAQ page"
+    },
+    "gui.costumeTab.addBackdropFromLibrary": {
+        "message": "Choisis un arrière-plan",
+        "description": "Button to add a backdrop in the editor tab"
+    },
+    "gui.menuBar.redo": {
+        "message": "Répéter",
+        "description": "Menu bar item for redoing"
+    },
+    "gui.spriteSelector.addSpriteFromPaint": {
+        "message": "Peindre",
+        "description": "Button to add a sprite in the target pane from paint"
+    },
+    "gui.previewInfo.invitation": {
+        "message": "Nous travaillons sur la prochaine version de Scratch. Nous sommes impatients que vous l’essayiez !",
+        "description": "Invitation to try 3.0 Beta"
+    },
+    "gui.backpack.errorBackpack": {
+        "message": "Erreur lors du chargement du sac-à-dos",
+        "description": "Error backpack message"
+    },
+    "gui.crashMessage.title": {
+        "message": "Oups! Un problème est survenu! Raison possible: réseau faible.",
+        "description": "Unhandled error title"
+    },
+    "gui.spriteSelectorItem.contextMenuDuplicate": {
+        "message": "dupliquer",
+        "description": "Menu item to duplicate in the right click menu"
+    },
+    "gui.importInfo.previewfaq": {
+        "message": "Pour en savoir plus, allez sur {previewFaqLink}.",
+        "description": "Invitation to try 3.0 preview"
+    },
+    "gui.previewInfo.previewfaq": {
+        "message": "Pour en savoir plus, allez sur {previewFaqLink}.",
+        "description": "Invitation to try 3.0 Beta"
+    },
+    "gui.howtos.make-music.step_ResetScore": {
+        "message": "Remets le score à zéro",
+        "description": "Step name for 'Reset Score' step"
+    },
+    "gui.howtos.Make-A-Game.step_RandomPosition": {
+        "message": "Aller à une position aléatoire",
+        "description": "Step name for 'Go to a random position' step"
+    },
+    "gui.controls.go": {
+        "message": "Aller",
+        "description": "Green flag button title"
+    },
+    "gui.spriteSelectorItem.contextMenuDelete": {
+        "message": "supprimer",
+        "description": "Menu item to delete in the right click menu"
+    },
+    "gui.howtos.make-music.name": {
+        "message": "Fais de la musique",
+        "description": "Name for the 'Make Music' how-to"
+    },
+    "gui.soundTab.surpriseSound": {
+        "message": "Surprise",
+        "description": "Button to get a random sound in the editor tab"
+    },
+    "gui.howtos.Chase-Game.step_BG": {
+        "message": "Ajoute un arrière-plan",
+        "description": "Step name for 'Add a Backdrop' step"
+    },
+    "gui.stageHeader.stageSizeFull": {
+        "message": "Entrer en mode plein-écran",
+        "description": "Button to change stage size to full screen"
+    },
+    "gui.stageSelector.backdrops": {
+        "message": "Arrière-plans",
+        "description": "Label for the backdrops in the stage selector"
+    },
+    "gui.howtos.hide-and-show.name": {
+        "message": "Se cacher & se montrer",
+        "description": "Name for the 'Hide and Show' how-to"
+    },
+    "gui.SpriteInfo.size": {
+        "message": "Taille",
+        "description": "Sprite info size label"
+    },
+    "gui.SpriteInfo.x": {
+        "message": "x",
+        "description": "x"
+    },
+    "gui.SpriteInfo.y": {
+        "message": "y",
+        "description": "y"
+    },
+    "gui.webglModal.previewfaqlink": {
+        "message": "Aperçu FAQ",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.soundEditor.louder": {
+        "message": "Plus fort",
+        "description": "Title of the button to apply the louder effect"
+    },
+    "gui.previewInfo.welcome": {
+        "message": "Bienvenue sur la bêta de Scratch 3.0",
+        "description": "Header for Preview Info Modal"
+    },
+    "gui.spriteSelector.addSpriteFromSurprise": {
+        "message": "Surprise",
+        "description": "Button to add a random sprite in the target pane"
+    },
+    "gui.howtos.change-size.name": {
+        "message": "Change la taille",
+        "description": "Name for the 'Change Size' how-to"
+    },
+    "gui.extensionLibrary.comingSoon": {
+        "message": "Ça arrive bientôt",
+        "description": "Label for extensions that are not yet implemented"
+    },
+    "gui.SpriteInfo.show": {
+        "message": "Afficher",
+        "description": "Sprite info show label"
+    },
+    "gui.loader.message8": {
+        "message": "Préparation des émojis ...",
+        "description": "One of the loading messages"
+    },
+    "gui.soundEditor.faster": {
+        "message": "Plus vite",
+        "description": "Title of the button to apply the faster effect"
+    },
+    "gui.gui.soundsTab": {
+        "message": "Sons",
+        "description": "Button to get to the sounds panel"
+    },
+    "gui.soundTab.recordSound": {
+        "message": "Enregistrer",
+        "description": "Button to record a sound in the editor tab"
+    },
+    "gui.SpriteInfo.direction": {
+        "message": "Direction",
+        "description": "Sprite info direction label"
+    },
+    "gui.costumeLibrary.chooseABackdrop": {
+        "message": "Choisis un arrière-plan",
+        "description": "Heading for the backdrop library"
+    },
+    "gui.cameraModal.loadingCaption": {
+        "message": "Chargement...",
+        "description": "A caption for a disabled button while the video from the camera is still loading"
+    },
+    "gui.gui.variableScopeOptionAllSprites": {
+        "message": "Pour tous les sprites",
+        "description": "Option message when creating a variable for making it available to all sprites"
+    },
+    "gui.gui.variableScopeOptionSpriteOnly": {
+        "message": "Pour ce sprite uniquement",
+        "description": "Option message when creating a varaible for making it only available to the current sprite"
+    },
+    "gui.gui.variablePrompt": {
+        "message": "Plus d'options",
+        "description": "Dropdown message for variable/list options"
+    },
+    "gui.gui.costumesTab": {
+        "message": "Costumes",
+        "description": "Button to get to the costumes panel"
+    },
+    "gui.gui.addExtension": {
+        "message": "Ajouter une extension",
+        "description": "Button to add an extension in the target pane"
+    },
+    "gui.howtos.add-effects.name": {
+        "message": "Ajouter des effets",
+        "description": "Name for the 'Add Effects' how-to"
+    },
+    "gui.menuBar.giveFeedback": {
+        "message": "Apporter des commentaires",
+        "description": "Label for feedback form modal button"
+    },
+    "gui.cameraModal.cameraModalTitle": {
+        "message": "Prendre une photo",
+        "description": "Title for prompt to take a picture (to add as a new costume)."
+    },
+    "gui.soundEditor.reverse": {
+        "message": "Inverser",
+        "description": "Title of the button to apply the reverse effect"
+    },
+    "gui.webglModal.webgllink": {
+        "message": "ne supporte pas WebGL",
+        "description": "link part of your browser does not support WebGL message"
+    },
+    "gui.menuBar.seeCommunity": {
+        "message": "Voir communauté",
+        "description": "Label for see community button"
+    },
+    "gui.howtos.chase-game.step_AddOcto": {
+        "message": "Ajoute un sprite",
+        "description": "Step name for 'Add a Sprite' step"
+    },
+    "gui.howtos.Chase-Game.step_WhenTouch": {
+        "message": "Dans le sprite pieuvre, Quand touché, Jouer un son",
+        "description": "Step name for 'In Octopus Sprite, When Touching Play Sound' step"
+    },
+    "gui.cameraModal.loadingCameraMessage": {
+        "message": "Chargement de l'appareil photo...",
+        "description": "Notification to the user that the camera is loading"
+    },
+    "gui.costumeTab.addFileCostume": {
+        "message": "Importer un Costume",
+        "description": "Button to add a costume by uploading a file in the editor tab"
+    },
+    "gui.playbackStep.stopMsg": {
+        "message": "Stop",
+        "description": "Stop/Play button in recording playback"
+    },
+    "gui.soundEditor.undo": {
+        "message": "Restaurer",
+        "description": "Title of the button to undo"
+    },
+    "gui.gui.codeTab": {
+        "message": "Code",
+        "description": "Button to get to the code panel"
+    },
+    "gui.spriteSelector.addSpriteFromFile": {
+        "message": "Importer un sprite",
+        "description": "Button to add a sprite in the target pane from file"
+    },
+    "gui.howtos.add-sprite.step_addSprite": {
+        "message": "Ajoute un sprite",
+        "description": "Step name for 'Add a new sprite' step"
+    },
+    "gui.loader.message1": {
+        "message": "Création des blocs ...",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message6": {
+        "message": "Transmission des nanos ...",
+        "description": "One of the loading messages"
+    },
+    "gui.howtos.make-music.step_LeftRight": {
+        "message": "Bouge vers la droite & vers la gauche avec les flèches du clavier",
+        "description": "Step name for 'Move Right & Left With Arrow Keys' step"
+    },
+    "gui.loader.message3": {
+        "message": "Chargement des sons...",
+        "description": "One of the loading messages"
+    },
+    "gui.backpack.header": {
+        "message": "Sac à dos",
+        "description": "Button to open the backpack"
+    },
+    "gui.SpriteInfo.spritePlaceholder": {
+        "message": "Nom",
+        "description": "Placeholder text for sprite name"
+    },
+    "gui.backpack.emptyBackpack": {
+        "message": "Le sac-à-dos est vide",
+        "description": "Empty backpack message"
+    },
+    "gui.previewModal.tryit": {
+        "message": "L'essayer ! {caticon}",
+        "description": "Label for button to try Scratch 3.0 Beta"
+    },
+    "gui.backpack.loadingBackpack": {
+        "message": "Chargement...",
+        "description": "Loading backpack message"
+    },
+    "gui.monitor.contextMenu.default": {
+        "message": "lecture normale",
+        "description": "Menu item to switch to the default monitor"
+    },
+    "gui.controls.stop": {
+        "message": "Stop",
+        "description": "Stop button title"
+    },
+    "gui.howtos.make-a-game.name": {
+        "message": "Créé un jeu de Clicker",
+        "description": "Name for the 'Make a Clicker Game' how-to"
+    },
+    "gui.costumeTab.addBlankCostume": {
+        "message": "Peindre",
+        "description": "Button to add a blank costume in the editor tab"
+    },
+    "gui.howtos.Chase-Game.step_MoveRandom": {
+        "message": "Bouger aléatoirement",
+        "description": "Step name for 'Move Randomly' step"
+    },
+    "gui.customProcedures.runWithoutScreenRefresh": {
+        "message": "Exécuter sans rafraîchissement d'écran",
+        "description": "Label for checkbox to run without screen refresh"
+    },
+    "gui.stageSelector.addBackdropFromFile": {
+        "message": "Importer un arrière-plan",
+        "description": "Button to add a stage in the target pane from file"
+    },
+    "gui.howtos.add-sprite.name": {
+        "message": "Ajoute un sprite",
+        "description": "Name for the 'Add a Sprite' how-to"
+    },
+    "gui.spriteSelector.addSpriteFromLibrary": {
+        "message": "Choisis un sprite",
+        "description": "Button to add a sprite in the target pane from library"
+    },
+    "gui.soundEditor.sound": {
+        "message": "Son",
+        "description": "Label for the name of the sound"
+    },
+    "gui.unsupportedBrowser.label": {
+        "message": "Navigateur non pris en charge",
+        "description": ""
+    },
+    "gui.playbackStep.loadingMsg": {
+        "message": "Chargement...",
+        "description": "Loading/Save button in recording playback"
+    },
+    "gui.howtos.add-a-backdrop.name": {
+        "message": "Ajoute un arrière-plan",
+        "description": "Name for the 'Add a Backdrop' how-to"
+    },
+    "gui.comingSoon.message2": {
+        "message": "Ça arrive bientôt...",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.stageSelector.addBackdropFromPaint": {
+        "message": "Peindre",
+        "description": "Button to add a stage in the target pane from paint"
+    },
+    "gui.cameraModal.takePhoto": {
+        "message": "Prendre une photo",
+        "description": "A button to take a photo"
+    },
+    "gui.playbackStep.saveMsg": {
+        "message": "Sauvegarder",
+        "description": "Loading/Save button in recording playback"
+    },
+    "gui.howtos.make-a-chase-game.name": {
+        "message": "Fais un jeu de Poursuite",
+        "description": "Name for the 'Make a Chase Game' how-to"
+    },
+    "gui.playbackStep.reRecordMsg": {
+        "message": "Réenregistrer",
+        "description": "Button to re-record sound in recording playback"
+    },
+    "gui.importInfo.message": {
+        "message": "Entrer un lien vers un de vos projet Scratch partagé. Les changements faits dans Scratch 3.0 ne seront pas sauvegardés.",
+        "description": "Import project message"
+    },
+    "gui.menuBar.edit": {
+        "message": "Modifier",
+        "description": "Text for edit dropdown menu"
+    },
+    "gui.howtos.intro-move-sayhello-hat.name": {
+        "message": "Prise en main",
+        "description": "Name for the 'Getting Started' how-to"
+    },
+    "gui.cameraModal.save": {
+        "message": "Sauvegarder",
+        "description": "A button that allows the user to save the photo they took as a costume"
+    },
+    "gui.howtos.make-music.step_MakeBeatBox": {
+        "message": "Choisis le sprite micro & la boite à sons surprise",
+        "description": "Step name for 'Choose the Microphone Sprite & Surprise Beatbox' step"
+    },
+    "gui.previewInfo.label": {
+        "message": "Essayer Scratch 3.0",
+        "description": "Scratch 3.0 modal label - for accessibility"
+    },
+    "gui.webglModal.previewfaq": {
+        "message": "Pour en savoir plus, allez sur {previewFaqLink}.",
+        "description": "Scratch 3.0 FAQ description"
+    },
+    "gui.menuBar.turboMode": {
+        "message": "Mode Turbo",
+        "description": "Menu bar item for toggling turbo mode"
+    },
+    "gui.prompt.cancel": {
+        "message": "Annuler",
+        "description": "Button in prompt for cancelling the dialog"
+    },
+    "gui.arduinoMonitor.baudRate": {
+        "message": "Vitesse de transmission",
+        "description": ""
+    },
+    "gui.arduinoMonitor.baudRateText": {
+        "message": "Vitesse de transmission",
+        "description": ""
+    },
+    "gui.arduinoMonitor.autoScroll": {
+        "message": "Défilement automatique",
+        "description": ""
+    },
+    "gui.arduinoMonitor.showTime": {
+        "message": "Afficher l'horodatage",
+        "description": ""
+    },
+    "gui.arduinoMonitor.clean": {
+        "message": "Effacer la sortie",
+        "description": ""
+    },
+    "gui.arduinoMonitor.send": {
+        "message": "Envoyer",
+        "description": ""
+    },
+    "gui.arduinoMonitor.title": {
+        "message": "Moniteur Série"
+    },
+    "gui.menuBar.saveSucc": {
+        "message": "Enregistré",
+        "description": ""
+    },
+    "gui.menuBar.saveFail": {
+        "message": "Échec de la sauvegarde",
+        "description": ""
+    },
+    "gui.menuBar.openProjectFail": {
+        "message": "Échec de l'ouverture du projet",
+        "description": ""
+    },
+    "gui.connectModal.connectSucc": {
+        "message": "Connecté avec succès",
+        "description": ""
+    },
+    "gui.connectModal.connectFail": {
+        "message": "Échec de la connexion, assurez-vous que l'appareil auquel vous vous connectez est le même que celui vers lequel vous passez.",
+        "description": ""
+    },
+    "gui.connectModal.operateSucc": {
+        "message": "Réussi",
+        "description": ""
+    },
+    "gui.connectModal.operateFail": {
+        "message": "Échoué",
+        "description": ""
+    },
+    "gui.loginModal.uploadAvatarHeadFail": {
+        "message": "Le téléchargement a échoué",
+        "description": ""
+    },
+    "gui.findPasswordModal.messageSendFail": {
+        "message": "Échec de l'envoi du code de vérification",
+        "description": ""
+    },
+    "gui.findPasswordModal.pwdModifyFail": {
+        "message": "Echec de la modification du mot de passe",
+        "description": ""
+    },
+    "gui.findPasswordModal.pwdModifySucc": {
+        "message": "Le mot de passe a été changé avec succès",
+        "description": ""
+    },
+    "gui.findPasswordModal.phoneUnregistered": {
+        "message": "Ce numéro de téléphone n'est pas enregistré.",
+        "description": ""
+    },
+    "gui.findPasswordModal.emailUnregistered": {
+        "message": "Cet adresse e-mail n'existait pas, veuillez le vérifier à nouveau.",
+        "description": ""
+    },
+    "gui.findPasswordModal.unableChange": {
+        "message": "Avant de changer votre mot de passe, vous devez être vérifié par SMS.",
+        "description": ""
+    },
+    "gui.findPasswordModal.sendMessageFail": {
+        "message": "Mot de passe défini avec succès, mais le message de notification n'a pas pu être envoyé",
+        "description": ""
+    },
+    "gui.toasts.deleteSucc": {
+        "message": "Suppression réussie",
+        "description": ""
+    },
+    "gui.toasts.deleteFail": {
+        "message": "Suppression échouée",
+        "description": ""
+    },
+    "gui.media.imageSupportPrompt": {
+        "message": "Téléchargements de fichiers .svg, .png, .jpg, .jpeg uniquement pris en charge.",
+        "description": ""
+    },
+    "gui.media.audioSupportPrompt": {
+        "message": "Prend uniquement en charge le téléchargement de fichiers au format .wav et .mp3",
+        "description": ""
+    },
+    "gui.media.uploadSucc": {
+        "message": "Téléchargement réussi",
+        "description": ""
+    },
+    "gui.media.uploadFail": {
+        "message": "Le téléchargement a échoué. Veuillez réessayer",
+        "description": ""
+    },
+    "gui.loginModal.loginSucc": {
+        "message": "Connexion réussie",
+        "description": ""
+    },
+    "gui.loginModal.loginFail": {
+        "message": "Échec de la connexion",
+        "description": ""
+    },
+    "gui.loginModal.registedToLogin": {
+        "message": "Le numéro de téléphone mobile a été enregistré, veuillez vous connecter directement",
+        "description": ""
+    },
+    "gui.loginModal.registedToLoginEmail": {
+        "message": "L'email a été enregistré, veuillez vous connecter directement",
+        "description": ""
+    },
+    "gui.loginModal.unauthorized": {
+        "message": "Échec de la vérification par SMS.",
+        "description": ""
+    },
+    "gui.loginModal.registerFail": {
+        "message": "Échec de l'enregistrement",
+        "description": ""
+    },
+    "gui.loginModal.registerSucc": {
+        "message": "Inscription réussie",
+        "description": ""
+    },
+    "gui.loginModal.getUserInfoFail": {
+        "message": "Échec de la requête des informations utilisateur",
+        "description": ""
+    },
+    "gui.loginModal.logouted": {
+        "message": "Déconnecté",
+        "description": ""
+    },
+    "gui.loginModal.logoutFail": {
+        "message": "Échec de la déconnexion",
+        "description": ""
+    },
+    "gui.loginModal.unregistered": {
+        "message": "Compte non enregistré",
+        "description": ""
+    },
+    "gui.toasts.projectFileSupport": {
+        "message": "Peut uniquement ouvrir les fichiers .cdc, sb3",
+        "description": ""
+    },
+    "gui.loginModal.accountPwdError": {
+        "message": "Compte ou mot de passe incorrect, veuillez réessayer.",
+        "description": ""
+    },
+    "gui.loginModal.emailPwdError": {
+        "message": "Le nom d'utilisateur et le mot de passe que vous avez saisis ne correspondent pas. Veuillez vérifier et réessayer.",
+        "description": ""
+    },
+    "gui.loginModal.verificationCodeError": {
+        "message": "Veuillez saisir un code de vérification correct",
+        "description": ""
+    },
+    "gui.loginModal.phone": {
+        "message": "Téléphone",
+        "description": ""
+    },
+    "gui.loginModal.enterValidateEmail": {
+        "message": "S'il vous plaît, mettez une adresse email valide",
+        "description": ""
+    },
+    "gui.loginModal.loginAttention": {
+        "message": "Remarque: prise en charge uniquement d'un numéro de téléphone de Chine continentale.",
+        "description": ""
+    },
+    "gui.loginModal.loginAttentionTips": {
+        "message": "Si vous possédez un compte, connectez-vous avec votre adresse mail.",
+        "description": ""
+    },
+    "gui.loginModal.password": {
+        "message": "Mot de passe",
+        "description": ""
+    },
+    "gui.loginModal.checkNum": {
+        "message": "Code de vérification",
+        "description": ""
+    },
+    "gui.loginModal.loginTitle": {
+        "message": "SE CONNECTER",
+        "description": ""
+    },
+    "gui.findPasswordModal.enterEmail": {
+        "message": "Veuillez saisir votre adresse e-mail.",
+        "description": ""
+    },
+    "gui.findPasswordModal.enterYourEmail": {
+        "message": "Veuillez saisir votre adresse e-mail.",
+        "description": ""
+    },
+    "gui.findPasswordModal.getVC": {
+        "message": "Envoyez un code de vérification par e-mail",
+        "description": ""
+    },
+    "gui.findPasswordModal.VC": {
+        "message": "Code de vérification",
+        "description": ""
+    },
+    "gui.findPasswordModal.receiveSMC": {
+        "message": "Veuillez entrer votre numéro de téléphone ci-dessous pour recevoir un nouveau de mot de passe.",
+        "description": ""
+    },
+    "gui.findPasswordModal.remind": {
+        "message": "Remarque: prise en charge uniquement d'un numéro de téléphone de Chine continentale.",
+        "description": ""
+    },
+    "gui.findPasswordModal.receiveEmail": {
+        "message": "Veuillez entrer votre numéro de téléphone ci-dessous pour recevoir un nouveau de mot de passe.",
+        "description": ""
+    },
+    "gui.findPasswordModal.findWithEmail": {
+        "message": "Récupérer le mot de passe par email",
+        "description": ""
+    },
+    "gui.findPasswordModal.findWithPhone": {
+        "message": "Récupérer le mot de passe par téléphone",
+        "description": ""
+    },
+    "gui.registerModal.email": {
+        "message": "S'enregistrer avec l'adresse e-mail",
+        "description": ""
+    },
+    "gui.registerModal.phone": {
+        "message": "S'enregistrer avec un numéro de téléphone",
+        "description": ""
+    },
+    "gui.registerModal.registered": {
+        "message": "Vous avez déjà un compte?",
+        "description": ""
+    },
+    "gui.registerModal.toLogin": {
+        "message": "Identifiant",
+        "description": ""
+    },
+    "gui.errComponent.isOffLine": {
+        "message": "Pas de connexion Internet. Veuillez vous connecter à Internet et réessayer.",
+        "description": ""
+    },
+    "gui.loginModal.abusiveRegister": {
+        "message": "Le compte utilisateur demande de manière malveillante le code de vérification par SMS d'enregistrement",
+        "description": ""
+    },
+    "gui.loginModal.pwdLimit": {
+        "message": "6-20 caractères de lettres et de chiffres",
+        "description": ""
+    },
+    "gui.connectModal.connectingMessage": {
+        "message": "Connexion......",
+        "description": ""
+    },
+    "gui.menuBar.relogin": {
+        "message": "Veuillez vous reconnecter."
+    },
+    "gui.menuBar.loginTimeout": {
+        "message": "Délai dépassé. Veuillez vous reconnecter. "
+    },
+    "gui.upload.timeoutHandleMethod2Label": {
+        "message": "Veuillez vérifier si l'appareil est connecté au bon port série. Assurez-vous qu'il s'agit du bon port série avant de télécharger à nouveau. "
+    },
+    "gui.library.roleText": {
+        "message": "ce lutin",
+        "description": ""
+    },
+    "gui.library.customeText": {
+        "message": "ce costume",
+        "description": ""
+    },
+    "gui.library.bgText": {
+        "message": "cet arrière-plan",
+        "description": ""
+    },
+    "gui.library.audioText": {
+        "message": "ce son",
+        "description": ""
+    },
+    "gui.library.deleteRemind": {
+        "message": "Avertissement",
+        "description": ""
+    },
+    "gui.library.deleteText": {
+        "message": "Êtes-vous sûr de vouloir supprimer ce projet?",
+        "description": ""
+    },
+    "gui.library.notDeleteText": {
+        "message": "Annuler",
+        "description": ""
+    },
+    "gui.library.sureDeleteText": {
+        "message": "OK",
+        "description": ""
+    },
+    "gui.deviceConnect.arduinoDriver": {
+        "message": "Sous Windows OS, vous devez installer le pilote Arduino avant la connexion. "
+    },
+    "gui.deviceConnect.cannotConnectCyberEye": {
+        "message": "Impossible de connecter M.A.R.K (cyberEye)? "
+    },
+    "gui.deviceConnect.cannotConnectBittle": {
+        "message": "Impossible de connecter Bittle?"
+    },
+    "gui.deviceConnect.downloadArduinoDriver": {
+        "message": "Télécharger le pilote"
+    },
+    "gui.deviceConnect.downloadUSBDriver": {
+        "message": "Téléchargez maintenant le pilote USB"
+    },
+    "gui.deviceConnect.arduinoDriverDownload": {
+        "message": "Téléchargez maintenant le pilote Arduino"
+    }, 
+    "gui.deviceConnect.arduinoFT232DriverDownload": {
+        "message": "Téléchargez maintenant le pilote FT232"
+    }, 
+    "gui.deviceConnect.downloadCyberEyeDriver": {
+        "message": "Téléchargez maintenant le pilote M.A.R.K(cyberEye)"
+    },
+    "gui.deviceConnect.downloadGlintDriver": {
+        "message": "Téléchargez le pilote USB sur MAC."
+    },
+    "gui.deviceConnect.readDocument": {
+        "message": "Documentation: "
+    },
+    "gui.deviceConnect.notFindDevice": {
+        "message": "Appareil non trouvé?"
+    },
+    "gui.deviceConnect.notFindDeviceText1": {
+        "message": "Veuillez vérifier si l'appareil est connecté à l'aide d'un câble USB et que le pilote USB est installé."
+    },
+    "gui.deviceConnect.notFindDeviceDownload": {
+        "message": "Téléchargez maintenant le pilote USB"
+    },
+    "gui.deviceConnect.cannotConnectGroveZero": {
+        "message": "Vous n'arrivez pas à connecter le Grove Zero?"
+    },
+    "gui.deviceConnect.cannotConnectArduino": {
+        "message": "Vous n'arrivez pas à connecter l'Arduino?"
+    },
+    "gui.deviceConnect.cannotConnectGlint": {
+        "message": "Vous n'arrivez pas à connecter Glint?"
+    },
+    "gui.microbit.microbitDownloadTipsTitle":{
+        "message": "Quelques conseils"
+    },
+    "gui.microbit.microbitModalLabel": {
+        "message": "Après le téléchargement, suivez ces étapes pour exécuter vos programmes!"
+    },
+    "gui.microbit.microbitModalStep1": {
+        "message": "Connectez micro: bit à votre ordinateur portable avec un câble USB"
+    },
+    "gui.microbit.microbitModalStep2": {
+        "message": "Déplacez le fichier .hex vers votre pilote micro: bit"
+    },
+    "gui.microbit.microbitDownloadConfirm": {
+        "message": "Bien reçu"
+    },
+    "gui.pythonDownBinStep.title": {
+        "message": "Mise à jour du micrologiciel"
+    },
+    "gui.pythonDownBinStep.step1Text": {
+        "message": "Dernier micrologiciel："
+    },
+    "gui.pythonDownBinStep.step2Text1": {
+        "message": "Téléchargement..."
+    },
+    "gui.pythonDownBinStep.step2Text2": {
+        "message": "Ne fermez pas Codecraft et n'effectuez aucune autre opération."
+    },
+    "gui.pythonDownBinStep.step3Text1": {
+        "message": "Téléchargement réussi."
+    },
+    "gui.pythonDownBinStep.step3Text2": {
+        "message": "Ne fermez pas Codecraft et n'effectuez aucune autre opération."
+    },
+    "gui.pythonDownBinStep.btText1": {
+        "message": "Télécharger maintenant"
+    },
+    "gui.pythonDownBinStep.btText2": {
+        "message": "Suivant"
+    },
+    "gui.pythonUpgradeSucc.title": {
+        "message": "Mise à jour du micrologiciel"
+    },
+    "gui.pythonUpgradeSucc.succ": {
+        "message": "Téléversé avec succès!"
+    },
+    "gui.pythonUpgradeSucc.btText": {
+        "message": "Bien reçu"
+    },
+    "gui.pythonUpgrade.failText": {
+        "message": "Échec du téléversement！"
+    },
+    "gui.pythonUpgrade.failMessage": {
+        "message": "Assurez-vous de choisir le même appareil que celui auquel vous êtes réellement connecté."
+    },
+    "gui.pythonUpgrade.text": {
+        "message": "Veuillez mettre à jour le micrologiciel comme suit"
+    },
+    "gui.pythonUpgrade.btText": {
+        "message": "Téléverser maintenant"
+    },
+    "gui.pythonUpgrade.notice1": {
+        "message": "Notes："
+    },
+    "gui.pythonUpgrade.notice3": {
+        "message": "• Assurez-vous que l'appareil est connecté à Codecraft dans ce processus. "
+    },
+    "gui.pythonUpgrade.title": {
+        "message": "Mise à jour du micrologiciel"
+    },
+    "gui.pythonUpgrade.text1": {
+        "message": "Téléversement..."
+    },
+    "gui.pythonUpgrade.text2": {
+        "message": "Ne fermez pas Codecraft et n'effectuez aucune autre opération."
+    },
+    "gui.menuBar.uploadPortfolios": {
+        "message": "Téléversement de dossiers"
+    },
+    "gui.checkUpdate.checkVerTitle": {
+        "message": "Recherche de mises à jour",
+        "description": ""
+    },
+    "gui.checkUpdate.latestVersion": {
+        "message": "Super! Vous disposez de la dernière version: "
+    },
+    "gui.checkUpdate.iKnow": {
+        "message": "OK"
+    },
+    "gui.checkUpdate.newVersion": {
+        "message": "Mise à jour du logiciel disponible"
+    },
+    "gui.checkUpdate.updateNow": {
+        "message": "Mettre à jour maintenant"
+    },
+    "gui.checkUpdate.downloadPkg": {
+        "message": "Télécharger"
+    },
+    "gui.checkUpdate.downloading": {
+        "message": "Le package d'installation de Codecraft est en cours de téléchargement, veuillez patienter."
+    },
+    "gui.checkUpdate.downloadCancel": {
+        "message": "Annuler"
+    },
+    "gui.checkUpdate.downloadCancelConfirm": {
+        "message": "Souhaitez-vous annuler le téléchargement?"
+    },
+    "gui.checkUpdate.cancelDownload": {
+        "message": "Annuler"
+    },
+    "gui.checkUpdate.downloadContinue": {
+        "message": "Continuer"
+    },
+    "gui.checkUpdate.retry": {
+        "message": "Réessayer"
+    },
+    "gui.checkUpdate.cancel": {
+        "message": "Annuler"
+    },
+    "gui.checkUpdate.downloadFail": {
+        "message": "Échec du téléchargement"
+    },
+    "gui.library.connectNet": {
+        "message": "Aucun contenu visible, veuillez vous connecter à Internet."
+    },
+    "gui.library.remindText1": {
+        "message": "Désolé, Internet n'est pas connecté, vous ne pouvez pas regarder le programme de démonstration. "
+    },
+    "gui.library.remindText2": {
+        "message": "Une fois Internet connecté, vous pourrez regarder le programme de démonstration et le guide vidéo."
+    },
+    "gui.library.noProject": {
+        "message": "Il n'y a pas encore d'exemple."
+    },
+    "gui.rescueDevice.confirm": {
+        "message": "Forcer le téléversement"
+    },
+    "gui.rescueDevice.title": {
+        "message": "Dispositif de sauvetage"
+    },
+    "gui.rescueDevice.noSerialsPrompt": {
+        "message": "Aucun appareil connecté"
+    },
+    "gui.rescueDevice.noSelectSerialsPrompt": {
+        "message": "Veuillez sélectionner un port série"
+    },
+    "gui.rescueDevice.selectSerialport": {
+        "message": "Sélectionnez le port série"
+    },
+    "gui.rescueDevice.selectDevice": {
+        "message": "Sélectionnez un appareil"
+    },
+    "gui.rescueDevice.notice": {
+        "message": "Remarque: L'opération suivante restaurera le périphérique sélectionné à la dernière version du micrologiciel. De cette manière, le périphérique sera dans l'état disponible."
+    },
+    "gui.loginModal.requiredFiled": {
+        "message": "Ceci est un champ obligatoire"
+    },
+    "gui.net.errorMessage": {
+        "message": "Erreur réseau, veuillez vérifier votre réseau."
+    },
+    "gui.library.tips.crateBtnText":{
+        "message": "Commencer le codage"
+    },
+    "gui.library.tips.mainPage":{
+        "message": "Page d'accueil"
+    },
+    "gui.library.fourYearsOld": {
+        "message": "4-8"
+    },
+    "gui.library.eightYearsOld": {
+        "message": "8-12"
+    },
+    "gui.library.twelveYearsOld": {
+        "message": "12-15"
+    },
+    "gui.library.fifteenYearsOld": {
+        "message": "15-18"
+    },
+    "gui.library.beginner": {
+        "message": "Débutant"
+    },
+    "gui.library.intermediate": {
+        "message": "Intermédiaire"
+    },
+    "gui.library.advanced": {
+        "message": "Expert"
+    },
+    "gui.library.ai":{
+        "message": "IA"
+    },
+    "gui.library.iot":{
+        "message": "IoD"
+    },
+    "gui.library.robotics":{
+        "message": "Robotique"
+    },
+    "gui.library.graphicalProgram":{
+        "message": "Programmation graphique"
+    },
+    "gui.library.pythonProgram":{
+        "message": "Programmation Python"
+    },
+    "gui.library.glint":{
+        "message": "GLINT"
+    },
+    "gui.library.project": {
+        "message": "Projets"
+    },
+    "gui.library.codecraftCourse": {
+        "message": "Cours Codecraft"
+    },
+    "gui.library.projectSample": {
+        "message": "Projets"
+    },
+    "gui.library.zwb": {
+        "message": "Fait pour Apprendre"
+    },
+    "gui.library.mywork": {
+        "message": "Mes projets"
+    },
+    "gui.library.hardwareProducts": {
+        "message": "Matériel pris en charge"
+    },
+    "gui.library.selectHardwareforProgramming": {
+        "message": "Sélectionnez le matériel à programmer"
+    },
+    "gui.library.moreCourses": {
+        "message": "Plus de cours"
+    },
+    "gui.library.moreProject": {
+        "message": "Plus de projets"
+    },
+    "gui.library.author": {
+        "message": "Pas"
+    },
+    "gui.library.product": {
+        "message": "Produit"
+    },
+    "gui.library.age": {
+        "message": "Age"
+    },
+    "gui.library.level": {
+        "message": "Niveau"
+    },
+    "gui.library.popular": {
+        "message": "Popularité"
+    },
+    "gui.library.searchCourses": {
+        "message": "Chercher des cours"
+    },
+    "gui.library.searchProjects": {
+        "message": "Chercher des projets"
+    },
+    "gui.homeTips.vd":{
+        "message": "Voir détails"
+    },
+    "gui.remindSave.title": {
+        "message": "Avertissement"
+    },
+    "gui.remindSave.remindText": {
+        "message": "Le fichier actuel a été modifié. Voulez-vous l'enregistrer?"
+    },
+    "gui.remindSave.save": {
+        "message": "Sauver"
+    },
+    "gui.remindSave.dontSave": {
+        "message": "Ne pas enregistrer"
+    },
+    "gui.remindSave.cancelSave": {
+        "message": "Annuler"
+    },
+    "gui.trainModal.title":{
+        "message": "Formation du modèle "
+    },
+    "gui.trainModal.modelLoading":{
+        "message": "Chargement du modèle ......"
+    },
+    "gui.trainModal.modelResourceLoading":{
+        "message": "Chargement des ressources du modèle......"
+    },
+    "gui.trainModal.result":{
+        "message": "résultat"
+    },
+    "gui.trainModal.newModel":{
+        "message": "Nouveau modèle"
+    },
+    "gui.trainModal.usingModel":{
+        "message": "Utilisation du modèle"
+    },
+    "gui.trainModal.learn":{
+        "message": "Apprendre"
+    },
+    "gui.trainModal.category":{
+        "message": "Catégorie"
+    },
+    "gui.trainModal.sample":{
+        "message": "échantillon"
+    },
+    "gui.trainModal.reset":{
+        "message": "Réinitialiser"
+    },
+    "gui.trainModal.confirm": {
+        "message": "Confirmer"
+    },
+    "gui.trainModal.cancel": {
+        "message": "Annuler"
+    },
+    "gui.trainModal.clearPrompt": {
+        "message": "Etes-vous sûr de vouloir effacer la classification actuelle des échantillons?"
+    },
+    "gui.trainModal.newModelPrompt": {
+        "message": "Un nouveau modèle effacera les données d'entraînement actuelles, poursuivre?"
+    },
+    "gui.trainModal.modelCategoryNumber": {
+        "message": "Nombre de classifications de modèles"
+    },
+    "gui.trainModal.recognitionWindow": {
+        "message": "Fenêtre de reconnaissance"
+    },
+    "gui.trainModal.notSupportMediaDevices": {
+        "message": "Votre navigateur ne prend pas en charge l'accès à vos appareils multimédias"
+    },
+    "gui.workspace.codeDownloadBtn":{
+        "message": "Télécharger"
+    },
+    "gui.library.noMaterial": {
+        "message": "Aucun matériel n'est disponible"
+    },
+    "gui.device.switching.promptMessage": {
+        "message": "Le dispositif de commutation créera un nouveau projet, enregistrer le projet actuel? "
+    },
+    "gui.device.switching.notSave":{
+        "message": "Ne pas enregistrer"
+    },
+    "gui.device.switching.save": {
+        "message": "Enregister"
+    },
+    "gui.deviceSelector.itemviewMore": {
+        "message": "Voir plus"
+    },
+    "gui.deviceInfo.helpDoc":{
+        "message":"Voir documentation"
+    },
+    "gui.deviceInfo.buy":{
+        "message":"ACHETEZ MAINTENANT"
+    },
+    "gui.serialChart.serialChart":{
+        "message":"Traceur série"
+    },
+    "gui.serialChart.download":{
+        "message":"Télécharger"
+    },
+    "gui.deviceInfo.groveZero.description":{
+        "message":"Grove Zero est une gamme de blocs de construction électroniques programmables qui combinent des connexions magnétiques faciles avec un logiciel de programmation graphique pour mettre en œuvre des conceptions fonctionnelles de base. Grove Zero est un excellent outil à la fois pour développer la créativité d'un enfant et pour enseigner les concepts STEM. "
+    },
+    "gui.deviceInfo.microbit.description":{
+        "message":"BBC micro: bit est un micro-ordinateur programmable qui tient dans la paume de votre main. Il offre des possibilités infinies pour mettre en œuvre un large éventail d'idées créatives, allant des robots aux instruments de musique. Pour en savoir plus sur le micro: bit, visitez le site officiel: https://microbit.org"
+    },
+    "gui.deviceInfo.cyberEye.description":{
+        "message":"«Make A Robot Kit», également connu sous le nom «M.A.R.K.» est une voiture intelligente polyvalente conçue pour apprendre l'intelligence artificielle. En utilisant le contrôleur IA fourni avec MARK, un enfant peut implémenter l'identification de la piste, l'identification des panneaux de signalisation et d'autres fonctionnalités d'IA pour assembler une voiture autonome."
+    },
+    "gui.deviceInfo.glint.description":{
+        "message":"GLINT est un produit polyvalent portable pour débutants permettant aux enfants de faire de la programmation avec style. Son interface interactive légère se compose de 12 LED RVB programmables, d'un bouton poussoir et d'un accéléromètre intégré et invite les enfants à accepter les aides à l'enseignement de la programmation. Étant donné que le produit est facile à utiliser, l'expérience du produit et les méthodes d'interaction diversifiées permettent aux enfants d'apprendre et de jouer simultanément, afin de leur permettre d'afficher pleinement leur créativité en matière de programmation."
+    },
+    "gui.deviceInfo.groveJoint.description":{
+        "message":"Grove-Joint présente de nombreuses similitudes avec Seeeduino Lotus. Il s'agit d'une carte de développement de microcontrôleur ATMEGA328 miniature. Il utilise les puces Atmel ATMEGA328P-MU et CH340. Vous pouvez l'utiliser avec des modules Grove pour créer des applications intéressantes de manière pratique et rapide."
+    },
+    "gui.deviceInfo.arduino.description":{
+        "message":"Codecraft prend actuellement en charge les cartes de développement Arduino classiques, telles que Arduino Uno, ainsi que les versions compatibles améliorées basées sur Arduino, telles que: Seeeduino V4.2, Seeeduino Mega, Seeeduino Lotus V1.1, Grove Beginner Kit pour Arduino, etc. temps, il a également largement pris en charge les modules de capteurs bien connus de la série Grove dans l'écosystème Arduino."
+    },
+    "gui.deviceInfo.noDescriptionText":{
+        "message":"Pas d'introduction"
+    },
+    "gui.saveAs.saveAs": {
+        "message": "Enregistrer sous"
+    },
+    "gui.saveAs.documentName": {
+        "message": "Projet"
+    },
+    "gui.courseItem.classHourUnit":{
+        "message": "Leçons"
+    },
+    "gui.coursePage.examples":{
+        "message": "Exemples"
+    },
+    "gui.coursePage.teacherSupport":{
+        "message": "Support enseignants"
+    },
+    "gui.coursePage.studentSupport":{
+        "message": "Support élèves"
+    },
+    "gui.coursePage.relatedGoods":{
+        "message": "Produits connexes"
+    },
+    "gui.coursePage.download":{
+        "message": "Télécharger"
+    },
+    "gui.coursePage.buy":{
+        "message": "Achetez maintenant"
+    },
+    "gui.coursePage.preLesson":{
+        "message": "Précédent"
+    },
+    "gui.coursePage.courseNotExist":{
+        "message": "Ce cours n'existe pas"
+    },
+    "gui.coursePage.nextLesson":{
+        "message": "Suivant"
+    },
+    "gui.coursePage.moreLesson":{
+        "message": "Plus"
+    },
+    "gui.coursePage.prePage":{
+        "message": "Précédent"
+    },
+    "gui.coursePage.nextPage":{
+        "message": "Suivant"
+    },
+    "gui.coursePage.classUnit":{
+        "message": "#"
+    },
+    "gui.coursePage.lessonOutline":{
+        "message": "Plan de la leçon"
+    },
+    "gui.coursePage.zoomInLook":{
+        "message": "Zoomez pour voir les exercices"
+    },
+    "gui.coursePage.singleChoice": {
+        "message": "Choix unique"
+    },
+    "gui.coursePage.multipleChoice": {
+        "message": "Choix multiple"
+    },
+    "gui.coursePage.commitAnswer": {
+        "message": "Soumettre la réponse"
+    },
+    "gui.coursePage.correct": {
+        "message": "Correct"
+    },
+    "gui.coursePage.congratulation": {
+        "message": "Félicitations！ Vous avez choisi la bonne réponse."
+    },
+    "gui.coursePage.doMore": {
+        "message": "Réessayer"
+    },
+    "gui.coursePage.continueStudy": {
+        "message": "Continuer"
+    },
+    "gui.coursePage.error": {
+        "message": "Mauvaise réponse"
+    },
+    "gui.coursePage.considerMore": {
+        "message": "Réfléchissez, vous y êtes presque!"
+    },
+    "gui.coursePage.continueAnswer": {
+        "message": "Continuez à répondre aux questions"
+    },
+    "gui.coursePage.connotPreview": {
+        "message": "Impossible de prévisualiser pour l'instant"
+    },
+    "gui.courseHome.btnBack": {
+        "message": "Retour"
+    },
+    "gui.lessonOutline.btnView":{
+        "message": "Voir"
+    },
+    "gui.Setting.Indentity.label":{
+        "message": "Statut"
+    },
+    "gui.Setting.Indentity.Student":{
+        "message": "Elève"
+    },
+    "gui.Setting.Indentity.Teacher":{
+        "message": "Enseignant"
+    },
+    "gui.Setting.ImageUpload":{
+        "message": "Téléverser"
+    },
+    "gui.extension.modelExtension.name": {
+        "message": "Modèles personnalisés"
+    },
+    "gui.extension.modelExtension.description": {
+        "message": "Créez des blocs de modèles de classification d'image et de détection d'objets personnalisés à utiliser dans Codecraft avec MARK"
+    },
+    "gui.modelExtension.categoryName": {
+        "message": "Modèles personnalisés",
+        "description": ""
+    },
+    "gui.modelExtension.imgModelButton": {
+        "message": "Modèle de classification d'image",
+        "description": ""
+    },
+    "gui.modelExtension.objModelButton": {
+        "message": "Modèle de détection d'objets",
+        "description": ""
+    },
+    "gui.modelExtension.deviceTrainButton": {
+        "message": "Entraînement sur l'appareil",
+        "description": ""
+    },
+    "gui.modelExtension.addModelButton":{
+        "message": "Modèle",
+        "description": ""
+    },
+    "gui.modelExtension.modelFilePath":{
+        "message": "Fichier",
+        "description": ""
+    },
+    "gui.modelExtension.modelFilePath.placeholder":{
+        "message": "Chemin d'accès au fichier de modèle sur la carte SD ou adresse du modèle",
+        "description": ""
+    },
+    "gui.modelExtension.modelFilePath.placeholder2":{
+        "message": "Chemin d'accès au fichier de modèle sur la carte SD",
+        "description": ""
+    },
+    "gui.modelExtension.modelName":{
+        "message": "Nom du modèle",
+        "description": ""
+    },
+    "gui.modelExtension.modelAnchor":{
+        "message": "Ancres",
+        "description": ""
+    },
+    "gui.modelExtension.modelAnchor.placeholder":{
+        "message": "Entrez la chaîne avec des ancres: ,,, par défaut",
+        "description": ""
+    },
+    "gui.modelExtension.modelSamplesNum":{
+        "message": "Nombre d'échantillons",
+        "description": ""
+    },
+    "gui.modelExtension.model.categoryName":{
+        "message": "Nom de catégorie",
+        "description": ""
+    },
+    "gui.modelExtension.saveText":{
+        "message": "Sauver",
+        "description": ""
+    },
+    "gui.modelExtension.cancelText":{
+        "message": "Annuler",
+        "description": ""
+    },
+    "gui.modelExtension.preview":{
+        "message": "Prévisualiser",
+        "description": ""
+    },
+    "gui.modelExtension.signout":{
+        "message": "Sortir",
+        "description": ""
+    },
+    "gui.modelExtension.modelsSave.prompt":{
+        "message": "Il y a une zone de saisie qui n'est pas remplie, veuillez entrer le contenu dans la zone de saisie, ou supprimez les modèles et les zones de saisie inutiles",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.prompt":{
+        "message": "Le modèle est utilisé et ne peut pas être supprimé pour le moment.",
+        "description": ""
+    },
+    "gui.modelExtension.modelCategoryDelete.prompt":{
+        "message": "Le nom de la catégorie est utilisé et ne peut pas être supprimé pour le moment.",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.tipLabel":{
+        "message": "Avertissement",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.message":{
+        "message": "Souhaitez-vous supprimer ce modèle?",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.okText":{
+        "message": "Effacer",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.cancelText":{
+        "message": "Annuler",
+        "description": ""
+    },
+    "gui.modelExtension.modelsSave.succPrompt": {
+        "message": "Enregistré",
+        "description": ""
+    },
+    "gui.modelExtension.modelsSave.isConnect": {
+        "message": "Appareil non connecté",
+        "description": ""
+    },
+    "gui.modelExtension.saveFail": {
+        "message": "Veuillez remplir le nom de la compétence",
+        "description": ""
+    },
+    "gui.modelExtension.cailbrateServos": {
+        "message": "Calibrer les servomoteurs",
+        "description": ""
+    },
+    "gui.modelExtension.createSkill": {
+        "message": "Créer une compétence",
+        "description": ""
+    },
+    "gui.modelExtension.skillName": {
+        "message": "Nom de la compétence:",
+        "description": ""
+    },
+    "gui.modelExtension.setMachineAngle": {
+        "message": "Angle de l'articulation:",
+        "description": ""
+    },
+    "gui.projectPage.sampleCdc": {
+        "message": "Exemples"
+    },
+    "gui.projectPage.none": {
+        "message": "Aucun"
+    },
+    "gui.projectPage.shareLink": {
+        "message": "Partager"
+    },
+    "gui.projectPage.url": {
+        "message": "URL"
+    },
+    "gui.projectPage.cancel": {
+        "message": "Annuler"
+    },
+    "gui.projectPage.copyUrl": {
+        "message": "Copier l'URL"
+    },
+    "gui.projectPage.copyUrlSuccessfully": {
+        "message": "Copié avec succès"
+    },
+    "gui.projectPage.projectNotExist": {
+        "message": "Ce projet n'existe pas"
+    }
+}

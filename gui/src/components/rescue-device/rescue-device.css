@@ -1,0 +1,43 @@
+.modal {
+    width: 34rem;
+    height: 22rem;
+}
+
+.select-box {
+    width: 34rem;
+    margin: 1.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    /* float: left; */
+    line-height: 1.5rem;
+    margin-right: 1rem;
+    width: 8rem;
+    text-align: center;
+}
+
+.select {
+    /* float: left; */
+    width: 22rem;
+}
+
+.bt-center {
+    text-align: center;
+}
+
+.bt {
+    text-align: center;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.text {
+    width: 31rem;
+    margin: 1.5rem;
+    text-align: left;
+    color: #717582;
+    font-size: 14px;
+}

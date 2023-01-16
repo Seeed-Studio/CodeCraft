@@ -1,0 +1,190 @@
+@import "../../css/units.css";
+@import "../../css/colors.css";
+
+.sprite-info {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: $text-primary;
+    /* flex-grow: 1; */
+    /* border-top-left-radius: $space;
+    border-top-right-radius: $space; */
+    padding: 0.56rem 0rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row-primary {
+    margin-top: 0.5rem;
+}
+
+.row-primary2 {
+    margin-top: 0.63rem;
+}
+
+
+.label { opacity: 0.8; }
+
+.group {
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* makes columns, for each label/form group */
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.group-second{
+    margin: 0 0 0 0.45rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* .column {
+    margin-bottom: .25rem;
+} */
+
+/* .icon {
+    width: 100%;
+    height: 100%;
+} */
+
+/* @todo: refactor radio divs to input */
+/* .radio-wrapper {
+    white-space: nowrap; /* make sure visibilty buttons don't wrap */
+/* } */ */
+
+.radio {
+    filter: saturate(0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.44rem 0;
+}
+
+/* 
+.radio-first {
+    border: 1px solid $ui-black-transparent;
+}
+
+[dir="ltr"] .radio-first {
+    border-top-left-radius: $form-radius;
+    border-bottom-left-radius: $form-radius;
+}
+
+[dir="rtl"] .radio-first {
+    border-top-right-radius: $form-radius;
+    border-bottom-right-radius: $form-radius;
+} */
+
+/* .radio-first:focus {
+    border-color: $motion-primary;
+    box-shadow: inset 0 0 0 -2px $ui-black-transparent;
+} */
+
+/* .radio-last {
+    border-bottom: 1px solid $ui-black-transparent;
+    border-top: 1px solid $ui-black-transparent;
+}
+
+[dir="ltr"] .radio-last {
+    border-right: 1px solid $ui-black-transparent;
+    border-left: 1px solid $ui-black-transparent;
+    border-top-right-radius: $form-radius;
+    border-bottom-right-radius: $form-radius;
+}
+
+[dir="rtl"] .radio-last {
+    border-left: 1px solid $ui-black-transparent;
+    border-right: 1px solid $ui-black-transparent;
+    border-top-left-radius: $form-radius;
+    border-bottom-left-radius: $form-radius;
+}
+
+.radio-last:focus {
+    border-color: $motion-primary;
+    box-shadow: inset 0 0 0 -2px $ui-black-transparent;
+} */
+
+.icon {
+    width:1.25rem;
+    height:1.25rem;
+    cursor: pointer;
+    margin: 0.42rem 0.315rem;
+}
+
+.rotation-select {
+    width: 100%;
+    height: 1.85rem;
+    border: 1px solid $ui-black-transparent;
+    user-select: none;
+    outline: none;
+}
+
+.rotation-select:focus {
+    border-color: $motion-primary;
+    box-shadow: inset 0 0 0 1px $ui-black-transparent);
+}
+
+/* .larger-input input {
+    width: 4rem;
+} */
+
+
+/* .spriteInputWrap{
+    width: 6.52rem;
+    height:1.56rem;
+
+}
+
+.spriteInputWrap img{
+    left: 4.5px;
+    top: 4.5px;
+    width:1.25rem;
+    height:1rem;
+    position: absolute;
+} */
+
+.sprite-input {
+    width: 6.52rem;
+    height: 1.56rem;
+    padding: 0 0.46rem;
+}
+
+.xy-input {
+    width:3rem;
+    height:1.25rem;
+    padding-left: 1.3rem;
+}
+
+.xy-input-wrap{
+    width:3rem;
+    height:1.25rem;
+}
+
+.xy-input-label {
+    width:1.38rem;
+}
+
+.sd-input {
+    width:6.13rem;
+    height:1.25rem;
+    padding-left: 2.46rem;
+
+}
+
+.sd-input-wrap {
+    width:6.13rem;
+    height:1.25rem;
+}
+
+.sd-input-label {
+    width:2.5rem;
+}

@@ -1,0 +1,3279 @@
+{
+    "gui.backpack.errorBackpack": {
+        "message": "载入书包时出错了",
+        "description": "Error backpack message"
+    },
+    "gui.backpack.loadingBackpack": {
+        "message": "载入中……",
+        "description": "Loading backpack message"
+    },
+    "gui.backpack.emptyBackpack": {
+        "message": "书包是空的",
+        "description": "Empty backpack message"
+    },
+    "gui.unsupportedBrowser.label": {
+        "message": "不支持当前浏览器",
+        "description": ""
+    },
+    "gui.unsupportedBrowser.description": {
+        "message": "我们很抱歉，Scratch 3.0不支持IE、Vivaldi、Opera或Silk浏览器。我们推荐较新的浏览器，例如谷歌Chrome浏览器，Mozilla火狐浏览器或微软Edge。",
+        "description": "Unsupported browser description"
+    },
+    "gui.unsupportedBrowser.back": {
+        "message": "返回",
+        "description": "Button to go back in unsupported browser modal"
+    },
+    "gui.unsupportedBrowser.previewfaq": {
+        "message": "访问{previewFaqLink}，了解更多。",
+        "description": "Invitation to try 3.0 preview"
+    },
+    "gui.unsupportedBrowser.previewfaqlinktext": {
+        "message": "常见问题",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.cameraModal.cameraModalTitle": {
+        "message": "拍摄",
+        "description": "Title for prompt to take a picture (to add as a new costume)."
+    },
+    "gui.cameraModal.loadingCameraMessage": {
+        "message": "摄像头加载中……",
+        "description": "Notification to the user that the camera is loading"
+    },
+    "gui.cameraModal.permissionRequest": {
+        "message": "需要你的同意才能使用摄像头",
+        "description": "Notification to the user that the app needs camera access"
+    },
+    "gui.cameraModal.retakePhoto": {
+        "message": "重新拍摄",
+        "description": "A button that allows the user to take the picture again, replacing the old one"
+    },
+    "gui.cameraModal.save": {
+        "message": "保存",
+        "description": "A button that allows the user to save the photo they took as a costume"
+    },
+    "gui.cameraModal.takePhoto": {
+        "message": "拍摄照片",
+        "description": "A button to take a photo"
+    },
+    "gui.cameraModal.loadingCaption": {
+        "message": "载入中……",
+        "description": "A caption for a disabled button while the video from the camera is still loading"
+    },
+    "gui.cameraModal.enableCameraCaption": {
+        "message": "启用摄像头",
+        "description": "A caption for a disabled button prompting the user to enable camera access"
+    },
+    "gui.cards.all-tutorials": {
+        "message": "教程",
+        "description": "Title for button to return to tutorials library"
+    },
+    "gui.cards.close": {
+        "message": "关闭",
+        "description": "Title for button to close how-to card"
+    },
+    "gui.cards.more-things-to-try": {
+        "message": "再试试这些！",
+        "description": "Title card with more things to try"
+    },
+    "gui.cards.see-more": {
+        "message": "更多技巧",
+        "description": "Title for button to see more in how-to library"
+    },
+    "gui.comingSoon.message1": {
+        "message": "别急，我们还在做这个 {emoji}",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.comingSoon.message2": {
+        "message": "即将启用...",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.comingSoon.message3": {
+        "message": "还在开发 {emoji}",
+        "description": "One of the \"coming soon\" random messages for yet-to-be-done features"
+    },
+    "gui.connection.auto-scanning.noPeripheralsFound": {
+        "message": "没有发现任何设备",
+        "description": "Text shown when no devices could be found"
+    },
+    "gui.connection.auto-scanning.prescan": {
+        "message": "把设备放在边上，然后开始搜索",
+        "description": "Prompt for beginning the search"
+    },
+    "gui.connection.auto-scanning.pressbutton": {
+        "message": "按下设备上的按钮",
+        "description": "Prompt for pushing the button on the device"
+    },
+    "gui.connection.auto-scanning.start-search": {
+        "message": "开始搜索",
+        "description": "Button in prompt for starting a search"
+    },
+    "gui.connection.connecting-searchbutton": {
+        "message": "正在搜索……",
+        "description": "Label indicating that search is in progress"
+    },
+    "gui.connection.auto-scanning.try-again": {
+        "message": "重试",
+        "description": "Button in prompt for trying a device search again"
+    },
+    "gui.connection.connected": {
+        "message": "已连接",
+        "description": "Message indicating that a device was connected"
+    },
+    "gui.connection.disconnect": {
+        "message": "断开连接",
+        "description": "Button to disconnect the device"
+    },
+    "gui.connection.go-to-editor": {
+        "message": "返回编辑器",
+        "description": "Button to return to the editor"
+    },
+    "gui.connection.connecting-cancelbutton": {
+        "message": "正在连接……",
+        "description": "Label indicating that connection is in progress"
+    },
+    "gui.connection.error.errorMessage": {
+        "message": "呀，好像出错了。",
+        "description": "The device connection process has encountered an error."
+    },
+    "gui.connection.error.tryagainbutton": {
+        "message": "重试",
+        "description": "Button to initiate trying the device connection again after an error"
+    },
+    "gui.connection.error.helpbutton": {
+        "message": "帮助",
+        "description": "Button to view help content"
+    },
+    "gui.connection.peripheral-name-label": {
+        "message": "设备名称",
+        "description": "Label for field showing the device name"
+    },
+    "gui.connection.connect": {
+        "message": "连接",
+        "description": "Button to start connecting to a specific device"
+    },
+    "gui.connection.scanning.lookingforperipherals": {
+        "message": "正在查找设备",
+        "description": "Text shown while scanning for devices"
+    },
+    "gui.connection.scanning.noPeripheralsFound": {
+        "message": "没有发现任何设备",
+        "description": "Text shown when no devices could be found"
+    },
+    "gui.connection.scanning.instructions": {
+        "message": "选择上面列出的设备。",
+        "description": "Prompt for choosing a device to connect to"
+    },
+    "gui.connection.search": {
+        "message": "刷新",
+        "description": "Button in prompt for starting a search"
+    },
+    "gui.connection.unavailable.installscratchlink": {
+        "message": "确保已安装并正在运行Scratch Link",
+        "description": "Message for getting Scratch Link installed"
+    },
+    "gui.connection.unavailable.enablebluetooth": {
+        "message": "请检查蓝牙已经开启",
+        "description": "Message for making sure Bluetooth is enabled"
+    },
+    "gui.connection.unavailable.tryagainbutton": {
+        "message": "重试",
+        "description": "Button to initiate trying the device connection again after an error"
+    },
+    "gui.connection.unavailable.helpbutton": {
+        "message": "帮助",
+        "description": "Button to view help content"
+    },
+    "gui.controls.go": {
+        "message": "运行",
+        "description": "Green flag button title"
+    },
+    "gui.controls.stop": {
+        "message": "停止",
+        "description": "Stop button title"
+    },
+    "gui.crashMessage.label": {
+        "message": "呀，出错了。",
+        "description": "Crash Message title"
+    },
+    "gui.crashMessage.description": {
+        "message": "很抱歉，Scratch出故障了。这个问题已经自动报告给Scratch开发团队。请刷新页面再试试。",
+        "description": "Message to inform the user that page has crashed."
+    },
+    "gui.crashMessage.reload": {
+        "message": "重新载入",
+        "description": "Button to reload the page when page crashes"
+    },
+    "gui.customProcedures.myblockModalTitle": {
+        "message": "制作新的积木",
+        "description": "Title for the modal where you create a custom block."
+    },
+    "gui.customProcedures.addAnInputNumberText": {
+        "message": "添加输入项",
+        "description": "Label for button to add a number/text input"
+    },
+    "gui.customProcedures.numberTextType": {
+        "message": "数字或文本",
+        "description": "Description of the number/text input type"
+    },
+    "gui.customProcedures.addAnInputBoolean": {
+        "message": "添加输入项",
+        "description": "Label for button to add a boolean input"
+    },
+    "gui.customProcedures.booleanType": {
+        "message": "布尔值",
+        "description": "Description of the boolean input type"
+    },
+    "gui.customProcedures.addALabel": {
+        "message": "添加文本标签：",
+        "description": "Label for button to add a label"
+    },
+    "gui.customProcedures.runWithoutScreenRefresh": {
+        "message": "运行时不刷新屏幕",
+        "description": "Label for checkbox to run without screen refresh"
+    },
+    "gui.customProcedures.cancel": {
+        "message": "取消",
+        "description": "Label for button to cancel custom procedure edits"
+    },
+    "gui.customProcedures.ok": {
+        "message": "完成",
+        "description": "Label for button to save new custom procedure"
+    },
+    "gui.SpriteInfo.direction": {
+        "message": "方向",
+        "description": "Sprite info direction label"
+    },
+    "gui.directionPicker.rotationStyles.allAround": {
+        "message": "任意旋转",
+        "description": "Button to change to the all around rotation style"
+    },
+    "gui.directionPicker.rotationStyles.leftRight": {
+        "message": "左右翻转",
+        "description": "Button to change to the left-right rotation style"
+    },
+    "gui.directionPicker.rotationStyles.dontRotate": {
+        "message": "不旋转",
+        "description": "Button to change to the dont rotate rotation style"
+    },
+    "gui.gui.addExtension": {
+        "message": "扩展",
+        "description": "Button to add an extension in the target pane"
+    },
+    "gui.gui.codeTab": {
+        "message": "代码",
+        "description": "Button to get to the code panel"
+    },
+    "gui.gui.backdropsTab": {
+        "message": "背景",
+        "description": "Button to get to the backdrops panel"
+    },
+    "gui.gui.costumesTab": {
+        "message": "造型",
+        "description": "Button to get to the costumes panel"
+    },
+    "gui.gui.soundsTab": {
+        "message": "声音",
+        "description": "Button to get to the sounds panel"
+    },
+    "gui.importInfo.title": {
+        "message": "观看2.0项目",
+        "description": "Scratch 2.0 import modal label - for accessibility"
+    },
+    "gui.importInfo.betamessage": {
+        "message": "键入一个你分享过的Scratch项目链接。在Scratch 3.0 Beta版中做出的更改将无法保存。",
+        "description": "Import project message"
+    },
+    "gui.importInfo.message": {
+        "message": "键入一个你分享过的Scratch项目链接。在Scratch 3.0预览版中做出的更改将无法保存。",
+        "description": "Import project message"
+    },
+    "gui.importInfo.invalidFormatError": {
+        "message": "啊哦，这个项目链接/编号好像不对。",
+        "description": "Invalid project link or id message"
+    },
+    "gui.importModal.viewproject": {
+        "message": "观看",
+        "description": "Label for button to load a scratch 2.0 project"
+    },
+    "gui.importInfo.goback": {
+        "message": "返回",
+        "description": "Label for button to back out of importing a project"
+    },
+    "gui.importInfo.previewfaq": {
+        "message": "访问{previewFaqLink}，了解更多。",
+        "description": "Invitation to try 3.0 preview"
+    },
+    "gui.importInfo.previewfaqlinktext": {
+        "message": "常见问题",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.extensionLibrary.comingSoon": {
+        "message": "即将启用",
+        "description": "Label for extensions that are not yet implemented"
+    },
+    "gui.library.filterPlaceholder": {
+        "message": "搜索",
+        "description": "Placeholder text for library search field"
+    },
+    "gui.library.allTag": {
+        "message": "所有",
+        "description": "Label for library tag to revert to all items after filtering by tag."
+    },
+    "gui.loader.message1": {
+        "message": "正在创建积木……",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message2": {
+        "message": "载入角色……",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message3": {
+        "message": "载入声音……",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message4": {
+        "message": "加载扩展……",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message5": {
+        "message": "呼唤小猫……",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message6": {
+        "message": "传送Nano……",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message7": {
+        "message": "给Gobo充气 …",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.message8": {
+        "message": "准备表情……",
+        "description": "One of the loading messages"
+    },
+    "gui.loader.headline": {
+        "message": "拼命加载中",
+        "description": "Main loading message"
+    },
+    "gui.menuBar.LanguageSelector": {
+        "message": "语言菜单",
+        "description": "accessibility text for the language selection menu"
+    },
+    "gui.menuBar.tutorialsLibrary": {
+        "message": "示例程序",
+        "description": "accessibility text for the tutorials button"
+    },
+    "gui.menuBar.restoreSprite": {
+        "message": "复原删除的角色",
+        "description": "Menu bar item for restoring the last deleted sprite."
+    },
+    "gui.menuBar.restoreSound": {
+        "message": "复原删除的声音",
+        "description": "Menu bar item for restoring the last deleted sound."
+    },
+    "gui.menuBar.restoreCostume": {
+        "message": "复原删除的造型",
+        "description": "Menu bar item for restoring the last deleted costume."
+    },
+    "gui.menuBar.restore": {
+        "message": "恢复",
+        "description": "Menu bar item for restoring the last deleted item in its disabled state."
+    },
+    "gui.menuBar.saveNow": {
+        "message": "保存",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.saving": {
+        "message": "保存中",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.myProduction": {
+        "message": "我的作品",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.accountSetting": {
+        "message": "帐号设置",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.loginOut": {
+        "message": "退出登录",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.nologin": {
+        "message": "未登录",
+        "description": "Menu bar item for saving now"
+    },
+    "gui.menuBar.relogin": {
+        "message": "重新登录"
+    },
+    "gui.menuBar.loginTimeout": {
+        "message": "登录超时，请重新登录"
+    },
+    "gui.menuBar.saveSucc": {
+        "message": "保存成功",
+        "description": ""
+    },
+    "gui.menuBar.saveFail": {
+        "message": "保存失败",
+        "description": ""
+    },
+    "gui.connectModal.connectingMessage": {
+        "message": "正在连接，请稍候...",
+        "description": ""
+    },
+    "gui.connectModal.connectSucc": {
+        "message": "连接成功",
+        "description": ""
+    },
+    "gui.connectModal.connectFail": {
+        "message": "连接失败，请确保实际连接的设备与切换的是同一个设备",
+        "description": ""
+    },
+    "gui.connectModal.operateSucc": {
+        "message": "操作成功",
+        "description": ""
+    },
+    "gui.connectModal.operateFail": {
+        "message": "操作失败",
+        "description": ""
+    },
+    "gui.menuBar.openProjectFail": {
+        "message": "打开工程失败",
+        "description": ""
+    },
+    "gui.loginModal.uploadAvatarHeadFail": {
+        "message": "头像上传失败",
+        "description": ""
+    },
+    "gui.findPasswordModal.messageSendFail": {
+        "message": "验证码发送失败",
+        "description": ""
+    },
+    "gui.findPasswordModal.pwdModifySucc": {
+        "message": "密码修改成功",
+        "description": ""
+    },
+    "gui.findPasswordModal.pwdModifyFail": {
+        "message": "密码修改失败",
+        "description": ""
+    },
+    "gui.findPasswordModal.phoneUnregistered": {
+        "message": "该手机号未注册",
+        "description": ""
+    },
+    "gui.findPasswordModal.emailUnregistered": {
+        "message": "该Email未注册",
+        "description": ""
+    },
+    "gui.findPasswordModal.unableChange": {
+        "message": "用户未通过短信验证码验证，无法直接修改密码",
+        "description": ""
+    },
+    "gui.findPasswordModal.sendMessageFail": {
+        "message": "用户设置密码成功，但通知短信发送失败",
+        "description": ""
+    },
+    "gui.toasts.deleteSucc": {
+        "message": "删除成功",
+        "description": ""
+    },
+    "gui.toasts.deleteFail": {
+        "message": "删除失败",
+        "description": ""
+    },
+    "gui.media.imageSupportPrompt": {
+        "message": "仅支持上传“.svg”、“.png”、“.jpg”、“.jpeg”格式文件",
+        "description": ""
+    },
+    "gui.media.audioSupportPrompt": {
+        "message": "仅支持上传“.wav”、“.mp3”格式文件",
+        "description": ""
+    },
+    "gui.media.uploadSucc": {
+        "message": "上传成功",
+        "description": ""
+    },
+    "gui.media.uploadFail": {
+        "message": "上传失败，请重试",
+        "description": ""
+    },
+    "gui.loginModal.loginSucc": {
+        "message": "登录成功",
+        "description": ""
+    },
+    "gui.loginModal.loginFail": {
+        "message": "登录失败",
+        "description": ""
+    },
+    "gui.loginModal.registedToLogin": {
+        "message": "该手机号已注册，请直接登录",
+        "description": ""
+    },
+    "gui.loginModal.registedToLoginEmail": {
+        "message": "该Email已注册，请直接登录",
+        "description": ""
+    },
+    "gui.loginModal.unauthorized": {
+        "message": "未通过注册短信验证码的验证",
+        "description": ""
+    },
+    "gui.loginModal.registerFail": {
+        "message": "注册失败",
+        "description": ""
+    },
+    "gui.loginModal.registerSucc": {
+        "message": "注册成功",
+        "description": ""
+    },
+    "gui.loginModal.getUserInfoFail": {
+        "message": "查询用户信息失败",
+        "description": ""
+    },
+    "gui.loginModal.logouted": {
+        "message": "已退出登录",
+        "description": ""
+    },
+    "gui.loginModal.logoutFail": {
+        "message": "退出登录失败",
+        "description": ""
+    },
+    "gui.loginModal.unregistered": {
+        "message": "帐户未注册",
+        "description": ""
+    },
+    "gui.loginModal.accountPwdError": {
+        "message": "帐号与密码不匹配，请重新输入",
+        "description": ""
+    },
+    "gui.loginModal.emailPwdError": {
+        "message": "用户名与密码不匹配，请确认后重新输入",
+        "description": ""
+    },
+    "gui.loginModal.verificationCodeError": {
+        "message": "请输入正确的验证码",
+        "description": ""
+    },
+    "gui.loginModal.phone": {
+        "message": "手机号码",
+        "description": ""
+    },
+    "gui.loginModal.enterValidateEmail": {
+        "message": "请输入正确格式的Email",
+        "description": ""
+    },
+    "gui.loginModal.loginAttention": {
+        "message": "注意：仅支持中国大陆地区手机号码",
+        "description": ""
+    },
+    "gui.loginModal.password": {
+        "message": "密码",
+        "description": ""
+    },
+    "gui.loginModal.checkNum": {
+        "message": "验证码",
+        "description": ""
+    },
+    "gui.loginModal.loginTitle": {
+        "message": "登录",
+        "description": ""
+    },
+    "gui.findPasswordModal.enterEmail": {
+        "message": "请输入Email",
+        "description": ""
+    },
+    "gui.findPasswordModal.enterYourEmail": {
+        "message": "请输入您的Email地址",
+        "description": ""
+    },
+    "gui.findPasswordModal.getVC": {
+        "message": "向Email发送验证码",
+        "description": ""
+    },
+    "gui.findPasswordModal.VC": {
+        "message": "验证码",
+        "description": ""
+    },
+    "gui.findPasswordModal.receiveSMC": {
+        "message": "请输入你注册时使用的手机号码，来收取你的新密码短信",
+        "description": ""
+    },
+    "gui.findPasswordModal.remind": {
+        "message": "注意：仅支持中国大陆地区手机号码",
+        "description": ""
+    },
+    "gui.findPasswordModal.receiveEmail": {
+        "message": "请输入你注册时使用的Email地址，来收取你的新密码邮件",
+        "description": ""
+    },
+    "gui.findPasswordModal.findWithEmail": {
+        "message": "通过Email找回密码",
+        "description": ""
+    },
+    "gui.findPasswordModal.findWithPhone": {
+        "message": "通过手机号码找回密码",
+        "description": ""
+    },
+    "gui.registerModal.email": {
+        "message": "Email注册",
+        "description": ""
+    },
+    "gui.registerModal.phone": {
+        "message": "手机号码注册",
+        "description": ""
+    },
+    "gui.registerModal.registered": {
+        "message": "已经注册过？",
+        "description": ""
+    },
+    "gui.registerModal.toLogin": {
+        "message": "立即登录",
+        "description": ""
+    },
+    "gui.errComponent.isOffLine": {
+        "message": "网络未连接，请连接网络后重试",
+        "description": ""
+    },
+    "gui.toasts.projectFileSupport": {
+        "message": "只能打开.cdc格式文件",
+        "description": ""
+    },
+    "gui.loginModal.SMSLogin": {
+        "message": "验证码登录",
+        "description": ""
+    },
+    "gui.loginModal.pwdLogin": {
+        "message": "密码登录",
+        "description": ""
+    },
+    "gui.loginModal.getSMS": {
+        "message": "获取验证码",
+        "description": ""
+    },
+    "gui.loginModal.forgetPwd": {
+        "message": "忘记密码",
+        "description": ""
+    },
+    "gui.loginModal.login": {
+        "message": "登录",
+        "description": ""
+    },
+    "gui.loginModal.toLogin": {
+        "message": "注册",
+        "description": ""
+    },
+    "gui.loginModal.inputVerifiCodePrompt": {
+        "message": "请输入验证码",
+        "description": ""
+    },
+    "gui.loginModal.inputPwdPrompt": {
+        "message": "请输入密码（6-20位字母和数字）",
+        "description": ""
+    },
+    "gui.loginModal.inputPwdPrompt2": {
+        "message": "请输入密码",
+        "description": ""
+    },
+    "gui.loginModal.abusiveRegister": {
+        "message": "用户帐号恶意申请注册短信验证码",
+        "description": ""
+    },
+    "gui.loginModal.pwdLimit": {
+        "message": "请输入6-20位字母或数字",
+        "description": ""
+    },
+    "gui.loginModal.inputPhonePrompt": {
+        "message": "请输入手机号",
+        "description": ""
+    },
+    "gui.loginModal.inputAcountPrompt": {
+        "message": "请输入帐号",
+        "description": ""
+    },
+    "gui.loginModal.inputLoginPwdPrompt": {
+        "message": "请输入登录密码",
+        "description": ""
+    },
+    "gui.loginModal.next": {
+        "message": "下一步",
+        "description": ""
+    },
+    "gui.loginModal.findPwdTitle": {
+        "message": "找回密码",
+        "description": ""
+    },
+    "gui.loginModal.inputPwdPlaceholder": {
+        "message": "6-20位字母和数字",
+        "description": ""
+    },
+    "gui.loginModal.inputNewPwd": {
+        "message": "请输入新密码",
+        "description": ""
+    },
+    "gui.loginModal.setting.phone": {
+        "message": "手机",
+        "description": ""
+    },
+    "gui.loginModal.setting.password": {
+        "message": "密码",
+        "description": ""
+    },
+    "gui.loginModal.setting.pwdModify": {
+        "message": "修改密码",
+        "description": ""
+    },
+    "gui.loginModal.setting.nickname": {
+        "message": "昵称",
+        "description": ""
+    },
+    "gui.loginModal.setting.title": {
+        "message": "帐号设置",
+        "description": ""
+    },
+    "gui.loginModal.setting.sex": {
+        "message": "性别",
+        "description": ""
+    },
+    "gui.loginModal.sexs.male": {
+        "message": "男",
+        "description": ""
+    },
+    "gui.loginModal.sexs.female": {
+        "message": "女",
+        "description": ""
+    },
+    "gui.loginModal.setting.birthday": {
+        "message": "生日"
+    },
+    "gui.loginModal.setting.year": {
+        "message": "年"
+    },
+    "gui.loginModal.setting.month": {
+        "message": "月"
+    },
+    "gui.loginModal.setting.day": {
+        "message": "日"
+    },
+    "gui.loginModal.modifyPwdTitle": {
+        "message": "修改密码"
+    },
+    "gui.loginModal.sendedVerificateCodePrompt": {
+        "message": "将发送验证码至手机："
+    },
+    "gui.loginModal.sendedVerificateCodeEmail": {
+        "message": "已发送验证码至Email："
+    },
+    "gui.loginModal.willSendPhone": {
+        "message": "我们将发送验证码到你的注册手机"
+    },
+    "gui.loginModal.willSendEmail": {
+        "message": "我们将发送验证码到你的注册邮箱"
+    },
+    "gui.loginModal.alreadySentPhone": {
+        "message": "验证码已发送至手机:"
+    },
+    "gui.loginModal.alreadySentEmail": {
+        "message": "验证码已发送至Email:"
+    },
+    "gui.loginModal.registerTemp1": {
+        "message": "注册"
+    },
+    "gui.loginModal.registerTemp2": {
+        "message": "填写基本资料"
+    },
+    "gui.loginModal.registerStatus": {
+        "message": "身份"
+    },
+    "gui.loginModal.registerIsTeacher": {
+        "message": "我是老师"
+    },
+    "gui.loginModal.registerIsStudent": {
+        "message": "我是学生"
+    },
+    "gui.loginModal.registerEmailAgreement": {
+        "message": "我同意订阅科技教育类信息的邮件"
+    },
+    "gui.loginModal.registerUnSelIndentity": {
+        "message": "请选择身份"
+    },
+    "gui.loginModal.invitationCode": {
+        "message": "邀请码"
+    },
+    "gui.loginModal.invitationCodeOptional": {
+        "message": "非必填"
+    },
+    "gui.loginModal.myInvitationCode": {
+        "message": "我的邀请码"
+    },
+    "gui.loginModal.invitationText": {
+        "message": "复制邀请码后，发送给朋友，请朋友注册时填写你的邀请码，助你获得更多造物吧用户权益，解释权归造物吧平台所有。"
+    },
+    "gui.loginModal.successInvited": {
+        "message": "成功邀请的朋友"
+    },
+    "gui.loginModal.registerTime": {
+        "message": "注册时间"
+    },
+    "gui.loginModal.userAccount": {
+        "message": "用户帐号"
+    },
+    "gui.loginModal.goLoin": {
+        "message": "已有帐号，去登录>"
+    },
+    "gui.loginModal.registerCompleted": {
+        "message": "完成注册"
+    },
+    "gui.loginModal.isMale": {
+        "message": "我是男生"
+    },
+    "gui.loginModal.isFemale": {
+        "message": "我是女生"
+    },
+    "gui.loginModal.inputNickName": {
+        "message": "请输入昵称"
+    },
+    "gui.loginModal.uploadAvatar": {
+        "message": "上传头像"
+    },
+    "gui.loginModal.logoutTitle": {
+        "message": "退出登录"
+    },
+    "gui.loginModal.logoutPrompt": {
+        "message": "是否确定退出登录?"
+    },
+    "gui.loginModal.logoutOk": {
+        "message": "确定"
+    },
+    "gui.loginModal.logoutCancel": {
+        "message": "取消"
+    },
+    "gui.loginModal.findPwdCompleted": {
+        "message": "完成",
+        "description": ""
+    },
+    "gui.loginModal.modifyPwdCompleted": {
+        "message": "完成",
+        "description": ""
+    },
+    "gui.mainTab.deviceLabel": {
+        "message": "设备",
+        "description": ""
+    },
+    "gui.mainTab.stageLabel": {
+        "message": "舞台",
+        "description": ""
+    },
+    "gui.device.selector.adddevice": {
+        "message": "切换设备",
+        "description": ""
+    },
+    "gui.device.selector.linkdevice": {
+        "message": "连接设备",
+        "description": ""
+    },
+    "gui.device.featuredText": {
+        "message": "已添加",
+        "description": ""
+    },
+    "gui.device.debugModeLabel": {
+        "message": "在线调试",
+        "description": ""
+    },
+    "gui.device.onlyOnlinePrompt": {
+        "message": "仅支持在线模式",
+        "description": ""
+    },
+    "gui.device.onlyDownloadPrompt": {
+        "message": "仅支持下载模式",
+        "description": ""
+    },
+    "gui.device.onlyOfflinePrompt": {
+        "message": "仅支持上传模式",
+        "description": ""
+    },
+    "gui.device.unableConnectPrompt": {
+        "message": "无法连接成功？",
+        "description": ""
+    },
+    "gui.device.upgradeText": {
+        "message": "立即烧录固件",
+        "description": ""
+    },
+    "gui.device.g0hold.tipTitleLabel": {
+        "message": "请注意：",
+        "description": ""
+    },
+    "gui.device.g0hold.tipTitle": {
+        "message": "手持Main Board的正确方法",
+        "description": ""
+    },
+    "gui.device.g0hold.tipMessage": {
+        "message": "错误的手持方法，可能导致MainBoard被静电损坏",
+        "description": ""
+    },
+    "gui.devices.stage.name": {
+        "message": "舞台模式",
+        "description": ""
+    },
+    "gui.devices.grovezero.name":{
+        "message": "Grove Zero",
+        "description": ""
+    },
+    "gui.devices.arduino.name":{
+        "message": "Arduino (Uno/Mega/BeginnerKit)",
+        "description": ""
+    },
+    "gui.devices.microbit.name":{
+        "message": "micro:bit",
+        "description": ""
+    },
+    "gui.devices.mpython.name": {
+        "message": "掌控板",
+        "description": ""
+    },
+    "gui.devices.maixduino.name": {
+        "message": "M.A.R.K(cyberEye)",
+        "description": ""
+    },
+    "gui.devices.spec.microbit.name": {
+        "message": "micro:bit",
+        "description": ""
+    },
+    "gui.devices.spec.cyberEye.name": {
+        "message": "M.A.R.K (CyberEye)",
+        "description": ""
+    },
+    "gui.devices.spec.mpython.name": {
+        "message": "mPython",
+        "description": ""
+    },
+    "gui.devices.spec.glint.name": {
+        "message": "GLINT",
+        "description": ""
+    },
+    "gui.device.delete.promptLabel": {
+        "message": "提示",
+        "description": ""
+    },
+    "gui.device.delete.prompt": {
+        "message": "是否删除该设备？",
+        "description": ""
+    },
+    "gui.device.delete.cancel": {
+        "message": "不删除",
+        "description": ""
+    },
+    "gui.device.delete.ok": {
+        "message": "删除",
+        "description": ""
+    },
+    "gui.deviceConnect.modalLabel": {
+        "message": "连接设备",
+        "description": ""
+    },
+    "gui.deviceConnect.connectBtn": {
+        "message": "连接",
+        "description": ""
+    },
+    "gui.deviceConnect.disconnectBtn": {
+        "message": "断开连接",
+        "description": ""
+    },
+    "gui.deviceConnect.promptLabel": {
+        "message": "提示",
+        "description": ""
+    },
+    "gui.deviceConnect.promptTextPrefix": {
+        "message": "确定要断开与",
+        "description": ""
+    },
+    "gui.deviceConnect.promptTextSuffix": {
+        "message": "的连接吗？",
+        "description": ""
+    },
+    "gui.deviceConnect.cancel": {
+        "message": "取消",
+        "description": ""
+    },
+    "gui.deviceConnect.ok": {
+        "message": "确定",
+        "description": ""
+    },
+    "gui.deviceConnect.upgradePromptForNormal": {
+        "message": "当前有更新的固件，",
+        "description": ""
+    },
+    "gui.deviceConnect.upgradePromptForDavinci": {
+        "message": "若无法正常使用设备，请更新固件，",
+        "description": ""
+    },
+    "gui.deviceConnect.upgradeBtn": {
+        "message": "立即升级固件",
+        "description": ""
+    },
+    "gui.deviceConnect.moreInformationBtn": {
+        "message": "查看更多",
+        "description": ""
+    },
+    "gui.deviceConnect.showVerison": {
+        "message": "查看我的固件"
+    },
+    "gui.deviceConnect.connectionProblems": {
+        "message": "无法连接？下载更多驱动",
+        "description": ""
+    },
+    "gui.deviceConnect.selectDevices": {
+        "message": "请选择设备",
+        "description": ""
+    },
+    "gui.deviceConnect.noDevices": {
+        "message": "未扫描到设备",
+        "description": ""
+    },
+    "gui.deviceConnect.noFoundDevices": {
+        "message": "首次使用时，无法连接？",
+        "description": ""
+    },
+    "gui.deviceConnect.noFoundDevicesPrompt": {
+        "message": "首次连接时，请下载USB驱动，让电脑检测到您的设备。",
+        "description": ""
+    },
+    "gui.deviceConnect.driversInfo": {
+        "message": "安装驱动",
+        "description": ""
+    },
+    "gui.deviceConnect.driversFT232Info": {
+        "message": "安装FT232驱动",
+        "description": ""
+    },
+    "gui.settingPage.title": {
+        "message": "设备信息",
+        "description": ""
+    },
+    "gui.settingPage.deviceName": {
+        "message": "设备名称：",
+        "description": ""
+    },
+    "gui.settingPage.firmwareVersion": {
+        "message": "固件版本号：",
+        "description": ""
+    },
+    "gui.settingPage.deviceReturn": {
+        "message": "确认",
+        "description": ""
+    },
+    "gui.upgradeConfirm.txupgrade": {
+        "message": "升级",
+        "description": ""
+    },
+    "gui.upgradeConfirm.txcancel": {
+        "message": "取消",
+        "description": ""
+    },
+    "gui.upgradeConfirm.title": {
+        "message": "升级固件",
+        "description": ""
+    },
+    "gui.upgradeModal.updateCancel": {
+        "message": "取消",
+        "description": ""
+    },
+    "gui.upgradeModal.updateRetry": {
+        "message": "重试",
+        "description": ""
+    },
+    "gui.upgradeModal.updateFailOk": {
+        "message": "我知道了",
+        "description": ""
+    },
+    "gui.connectModal.updateFailTitle": {
+        "message": "升级失败",
+        "description": ""
+    },
+    "gui.upgradeModal.stageFailTitle": {
+        "message": "上传失败",
+        "description": ""
+    },
+    "gui.upgradeModal.restoreFailTitle": {
+        "message": "恢复失败",
+        "description": ""
+    },
+    "gui.upgradeModal.updateFail": {
+        "message": "固件升级失败，请重试",
+        "description": ""
+    },
+    "gui.upgradeModal.stageFail": {
+        "message": "固件上传失败，请重试",
+        "description": ""
+    },
+    "gui.upgradeModal.restoreFail": {
+        "message": "固件恢复失败，请重试",
+        "description": ""
+    },
+    "gui.updateDownload.updateDownloading": {
+        "message": "固件升级中",
+        "description": ""
+    },
+    "gui.updateDownload.dontClose": {
+        "message": "请勿关闭软件，并不要进行其他操作",
+        "description": ""
+    },
+    "gui.updateDownload.updatingStageFirmware": {
+        "message": "舞台固件上传中",
+        "description": ""
+    },
+    "gui.updateDownload.restoringFirmware": {
+        "message": "固件恢复中",
+        "description": ""
+    },
+    "gui.connectModal.upgradingTitle": {
+        "message": "Update firmware",
+        "description": ""
+    },
+    "gui.updateDownload.restoringTitle": {
+        "message": "上传舞台固件",
+        "description": ""
+    },
+    "gui.updateDownload.updatingStageTitle": {
+        "message": "恢复固件",
+        "description": ""
+    },
+    "gui.upgradeModal.successContent": {
+        "message": "固件已升级至最新版本！",
+        "description": ""
+    },
+    "gui.upgradeModal.know": {
+        "message": "我知道了",
+        "description": ""
+    },
+    "gui.upgradeModal.successContentStage": {
+        "message": "固件上传成功",
+        "description": ""
+    },
+    "gui.upgradeModal.successContentRestore": {
+        "message": "固件恢复成功",
+        "description": ""
+    },
+    "gui.connectModal.updateSuc": {
+        "message": "升级成功",
+        "description": ""
+    },
+    "gui.upgradeModal.stageSucTitle": {
+        "message": "上传成功",
+        "description": ""
+    },
+    "gui.upgradeModal.restoreSucTitle": {
+        "message": "恢复成功",
+        "description": ""
+    },
+    "gui.uploadCode.uploadingMessage": {
+        "message": "正在上传，请稍候...",
+        "description": ""
+    },
+    "gui.uploadCode.uploadSuccMessage": {
+        "message": "上传成功",
+        "description": ""
+    },
+    "gui.uploadCode.uploadSuccComfirm": {
+        "message": "我知道了",
+        "description": ""
+    },
+    "gui.uploadCode.uploadSuccResetPrompt": {
+        "message": "请点击一下主板Main board的reset键，试试你写的程序吧！",
+        "description": ""
+    },
+    "gui.uploadCode.uploadFailMessage": {
+        "message": "上传失败，请检查你的设备连接或者程序",
+        "description": ""
+    },
+    "gui.uploadCode.uploadFailConfirm": {
+        "message": "我知道了",
+        "description": ""
+    },
+    "gui.uploadCode.uploadTimeoutMessage": {
+        "message": "上传超时"
+    },
+    "gui.uploadCode.uploadTimeoutConfirm": {
+        "message": "我知道了"
+    },
+    "gui.uploadCode.uploadTimeoutPrompt": {
+        "message": "上传超时，请重试。如果还是上传超时，请尝试以下方法："
+    },
+    "gui.uploadCode.timeoutHandleMethodSubLabel1": {
+        "message": "【步骤一】进入boot模式："
+    },
+    "gui.uploadCode.timeoutHandleMethodSub1Info1": {
+        "message": "1、设备未连接电源的情况下：按住主控板复位键"
+    },
+    "gui.uploadCode.timeoutHandleMethodSub1Info2": {
+        "message": "2、设备主控板通过与电脑USB接口连线通电"
+    },
+    "gui.uploadCode.timeoutHandleMethodSub1Info3": {
+        "message": "3、等待8秒左右，status灯会进入慢闪，说明已经进入boot模式"
+    },
+    "gui.uploadCode.timeoutHandleMethodSubLabel2": {
+        "message": "【步骤二】更新固件："
+    },
+    "gui.uploadCode.timeoutHandleMethodSub2Info1": {
+        "message": "1、进入boot模式"
+    },
+    "gui.uploadCode.timeoutHandleMethodSub2Info2": {
+        "message": "2、在Codecraft中连接该设备的主控板"
+    },
+    "gui.uploadCode.timeoutHandleMethodSub2Info3": {
+        "message": "3、连接成功后会提示升级固件"
+    },
+    "gui.socketIsUsed.title": {
+        "message": "提示"
+    },
+    "gui.socketIsUsed.message": {
+        "message": "Codecraft设备助手已被占用，请关闭其它可能连接的软件后重试。"
+    },
+    "gui.socketIsUsed.comfirm": {
+        "message": "确定"
+    },
+    "gui.notOpenAssi.title": {
+        "message": "提示"
+    },
+    "gui.notOpenAssi.message": {
+        "message": "还没有打开设备助手哦~"
+    },
+    "gui.notOpenAssi.descrition": {
+        "message": "连接设备需要先打开下面这个软件，看到它出现在桌面的工具栏就可以了"
+    },
+    "gui.notOpenAssi.linuxmessage": {
+        "message": "还没有打开设备助手，请按以下步骤执行"
+    },
+    "gui.notOpenAssi.linuxdescrition": {
+        "message": "1、安装deb包\n2、打开终端，cd /opt/CodecraftAssistant\n3、sudo ./cc-assistant"
+    },
+    "gui.notOpenAssi.goDownload": {
+        "message": "还没下载，立即下载"
+    },
+    "gui.notOpenAssi.getIt": {
+        "message": "知道了"
+    },
+    "gui.disConnected.title": {
+        "message": "提示"
+    },
+    "gui.disConnected.suffix": {
+        "message": "已断开连接。"
+    },
+    "gui.upload.uploadFailMessage": {
+        "message": "上传失败，请检查你的程序"
+    },
+    "gui.uploadCode.arduinoSelect.title": {
+        "message": "上传"
+    },
+    "gui.sprite.delete.prefix": {
+        "message": "是否删除该"
+    },
+    "gui.sprite.delete.suffix": {
+        "message": "？"
+    },
+    "gui.sprite.promptLabel": {
+        "message": "提示"
+    },
+    "gui.target.sprite.promptLabel": {
+        "message": "提示"
+    },
+    "gui.sprite.prompt": {
+        "message": "是否删除该角色？"
+    },
+    "gui.sprite.cancel": {
+        "message": "不删除"
+    },
+    "gui.sprite.ok": {
+        "message": "删除"
+    },
+    "gui.uploadCode.arduinoSelect.select": {
+        "message": "选择串口"
+    },
+    "gui.uploadCode.arduinoSelect.confirm": {
+        "message": "确定"
+    },
+    "gui.uploadCode.arduinoSelect.noSerialsPrompt": {
+        "message": "未扫描到串口"
+    },
+    "gui.uploadCode.arduinoSelect.noSelectSerialsPrompt": {
+        "message": "请选择串口"
+    },
+    "gui.upload.uploadFailConfirm": {
+        "message": "我知道了"
+    },
+    "gui.upload.uploadSuccMessage": {
+        "message": "上传成功~"
+    },
+    "gui.upload.uploadSuccComfirm": {
+        "message": "我知道了"
+    },
+    "gui.upload.uploadSuccPrompt": {
+        "message": "请点击一下主板Main board的reset键，试试你写的程序吧！"
+    },
+    "gui.upload.uploadingMessage": {
+        "message": "正在上传，请稍候..."
+    },
+    "gui.upload.timeoutHandleMethod2Label": {
+        "message": "请检查串口是否正确连接，并重新确定串口后再尝试上传。"
+    },
+    "gui.library.sprite.mine": {
+        "message": "我的角色"
+    },
+    "gui.library.sprite.common": {
+        "message": "角色库"
+    },
+    "gui.library.custom.mine": {
+        "message": "我的造型"
+    },
+    "gui.library.custom.common": {
+        "message": "造型库"
+    },
+    "gui.library.backdrop.mine": {
+        "message": "我的背景"
+    },
+    "gui.library.backdrop.common": {
+        "message": "背景库"
+    },
+    "gui.library.sound.mine": {
+        "message": "我的声音"
+    },
+    "gui.library.sound.common": {
+        "message": "音效库"
+    },
+    "gui.library.localUpload": {
+        "message": "本地上传"
+    },
+    "gui.library.uploadLimitTwo": {
+        "message": "（512K以内）"
+    },
+    "gui.library.uploadFailTextTwo": {
+        "message": "上传失败，文件过大，请上传512K以内文件"
+    },
+    "gui.library.loadingMessage": {
+        "message": "加载中，请稍候..."
+    },
+    "gui.library.loadMore": {
+        "message": "加载更多"
+    },
+    "gui.library.noLoginPrompt": {
+        "message": "登录后才可以上传本地素材哦～"
+    },
+    "gui.library.login": {
+        "message": "立即登录"
+    },
+    "gui.sprite.saveAndClose": {
+        "message": "确认并关闭",
+        "description": ""
+    },
+    "gui.epcs.label": {
+        "message": "我的作品",
+        "description": ""
+    },
+    "gui.library.openLocalProject": {
+        "message": "打开本地作品",
+        "description": ""
+    },
+    "gui.prompt.projectSaveLabel": {
+        "message": "提示",
+        "description": ""
+    },
+    "gui.prompt.projectNoSave": {
+        "message": "不保存",
+        "description": ""
+    },
+    "gui.prompt.projectSave": {
+        "message": "保存",
+        "description": ""
+    },
+    "gui.menuBar.share": {
+        "message": "分享",
+        "description": "Label for project share button"
+    },
+    "gui.menuBar.file": {
+        "message": "文件",
+        "description": "Text for file dropdown menu"
+    },
+    "gui.menuBar.new": {
+        "message": "新建",
+        "description": "Menu bar item for creating a new project"
+    },
+    "gui.menuBar.saveAsCopy": {
+        "message": "保存副本",
+        "description": "Menu bar item for saving as a copy"
+    },
+    "gui.menuBar.uploadFromComputer": {
+        "message": "打开作品",
+        "description": "Menu bar item for uploading a project from your computer"
+    },
+    "gui.menuBar.openLocalProject": {
+        "message": "打开本地文件",
+        "description": ""
+    },
+    "gui.menuBar.downloadToComputer": {
+        "message": "保存到本地",
+        "description": "Menu bar item for downloading a project to your computer"
+    },
+    "gui.uploadCode.uploadBtn": {
+        "message": "上传",
+        "description": ""
+    },
+    "gui.uploadCode.downloadBtn": {
+        "message": "下载",
+        "description": ""
+    },
+    "gui.uploadCode.openMonitorBtn": {
+        "message": "串口监视器",
+        "description": ""
+    },
+    "gui.uploadCode.disPromptForArdunio": {
+        "message": "连接设备后才能查看“串口监视器”哦",
+        "description": ""
+    },
+    "gui.uploadCode.disPromptForNormal": {
+        "message": "连接设备后才能“上传”哦",
+        "description": ""
+    },
+    "gui.menuBar.edit": {
+        "message": "编辑",
+        "description": "Text for edit dropdown menu"
+    },
+    "gui.menuBar.turboModeOff": {
+        "message": "关闭加速模式",
+        "description": "Menu bar item for turning off turbo mode"
+    },
+    "gui.menuBar.turboModeOn": {
+        "message": "打开加速模式",
+        "description": "Menu bar item for turning on turbo mode"
+    },
+    "gui.menuBar.seeCommunity": {
+        "message": "查看社区",
+        "description": "Label for see community button"
+    },
+    "gui.menuBar.joinScratch": {
+        "message": "加入 Scratch",
+        "description": "Link for creating a Scratch account"
+    },
+    "gui.menuBar.signIn": {
+        "message": "登入",
+        "description": "Link for signing in to your Scratch account"
+    },
+    "gui.menuBar.giveFeedback": {
+        "message": "意见反馈",
+        "description": "Label for feedback form modal button"
+    },
+    "gui.menuBar.projects": {
+        "message": "项目",
+        "description": ""
+    },
+    "gui.menuBar.ccprojects": {
+        "message": "Codecraft项目",
+        "description": ""
+    },
+    "gui.menuBar.moreprojects": {
+        "message": "更多项目",
+        "description": ""
+    },
+    "gui.menuBar.courses": {
+        "message": "课程",
+        "description": ""
+    },
+    "gui.menuBar.cccourse": {
+        "message": "Codecraft编程课",
+        "description": ""
+    },
+    "gui.menuBar.morecourses": {
+        "message": "更多课程",
+        "description": ""
+    },
+    "gui.menuBar.help": {
+        "message": "帮助",
+        "description": ""
+    },
+    "gui.menuBar.seeHelp": {
+        "message": "在线帮助",
+        "description": ""
+    },
+    "gui.menuBar.feedback": {
+        "message": "意见反馈",
+        "description": ""
+    },
+    "gui.menuBar.checkUpdate": {
+        "message": "检查更新",
+        "description": ""
+    },
+    "gui.menuBar.downloadcc": {
+        "message": "下载PC版",
+        "description": ""
+    },
+    "gui.menuBar.about": {
+        "message": "关于 Codecraft",
+        "description": ""
+    },
+    "gui.menuBar.rescueDevice": {
+        "message": "设备救援"
+    },
+    "gui.gui.projectTitlePlaceholder": {
+        "message": "在此填写项目标题",
+        "description": "Placeholder for project title when blank"
+    },
+    "gui.modal.help": {
+        "message": "帮助",
+        "description": "Help button in modal"
+    },
+    "gui.modal.back": {
+        "message": "返回",
+        "description": "Back button in modal"
+    },
+    "gui.monitor.listMonitor.empty": {
+        "message": "(empty)",
+        "description": "Text shown on a list monitor when a list is empty"
+    },
+    "gui.monitor.listMonitor.listLength": {
+        "message": "length {length}",
+        "description": "Length label on list monitors. DO NOT translate {length} (with brackets)."
+    },
+    "gui.monitor.contextMenu.default": {
+        "message": "正常显示",
+        "description": "Menu item to switch to the default monitor"
+    },
+    "gui.monitor.contextMenu.large": {
+        "message": "大字显示",
+        "description": "Menu item to switch to the large monitor"
+    },
+    "gui.monitor.contextMenu.slider": {
+        "message": "滑杆",
+        "description": "Menu item to switch to the slider monitor"
+    },
+    "gui.previewInfo.label": {
+        "message": "尝试一下 Scratch 3.0",
+        "description": "Scratch 3.0 modal label - for accessibility"
+    },
+    "gui.previewInfo.welcome": {
+        "message": "欢迎来到Scratch 3.0 Beta版",
+        "description": "Header for Preview Info Modal"
+    },
+    "gui.previewModal.notnowtooltip": {
+        "message": "下次吧",
+        "description": "Tooltip for Not Now button"
+    },
+    "gui.previewModal.tryittooltip": {
+        "message": "试一试",
+        "description": "Tooltip for Try It button"
+    },
+    "gui.previewModal.viewprojecttooltip": {
+        "message": "观看2.0项目",
+        "description": "Tooltip for View 2.0 Project button"
+    },
+    "gui.previewInfo.betawelcome": {
+        "message": "欢迎来到Scratch 3.0 Beta版",
+        "description": "Header for Beta Info Modal"
+    },
+    "gui.previewInfo.invitation": {
+        "message": "我们正在开发下一代Scratch。我们很想让你试试它！",
+        "description": "Invitation to try 3.0 Beta"
+    },
+    "gui.previewInfo.notnow": {
+        "message": "下次吧",
+        "description": "Label for button to back out of trying Scratch 3.0 Beta"
+    },
+    "gui.previewModal.tryit": {
+        "message": "试用！ {caticon}",
+        "description": "Label for button to try Scratch 3.0 Beta"
+    },
+    "gui.previewModal.viewproject": {
+        "message": "观看2.0项目",
+        "description": "Label for button to import a 2.0 project"
+    },
+    "gui.previewInfo.previewfaq": {
+        "message": "访问{previewFaqLink}，了解更多。",
+        "description": "Invitation to try 3.0 Beta"
+    },
+    "gui.previewInfo.previewfaqlinktext": {
+        "message": "常见问题",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.gui.variableScopeOptionAllSprites": {
+        "message": "适用于所有角色",
+        "description": "Option message when creating a variable for making it available to all sprites"
+    },
+    "gui.gui.variableScopeOptionSpriteOnly": {
+        "message": "仅适用于当前角色",
+        "description": "Option message when creating a varaible for making it only available to the current sprite"
+    },
+    "gui.gui.variablePrompt": {
+        "message": "更多选项",
+        "description": "Dropdown message for variable/list options"
+    },
+    "gui.gui.variablePromptAllSpritesMessage": {
+        "message": "所有角色都可使用该变量。",
+        "description": "A message that displays in a variable modal when the stage is selected indicating that the variable being created will available to all sprites."
+    },
+    "gui.prompt.cancel": {
+        "message": "取消",
+        "description": "Button in prompt for cancelling the dialog"
+    },
+    "gui.prompt.ok": {
+        "message": "确定",
+        "description": "Button in prompt for confirming the dialog"
+    },
+    "gui.playbackStep.stopMsg": {
+        "message": "停止",
+        "description": "Stop/Play button in recording playback"
+    },
+    "gui.playbackStep.playMsg": {
+        "message": "播放",
+        "description": "Stop/Play button in recording playback"
+    },
+    "gui.playbackStep.loadingMsg": {
+        "message": "载入中……",
+        "description": "Loading/Save button in recording playback"
+    },
+    "gui.playbackStep.saveMsg": {
+        "message": "保存",
+        "description": "Loading/Save button in recording playback"
+    },
+    "gui.playbackStep.reRecordMsg": {
+        "message": "重新录制",
+        "description": "Button to re-record sound in recording playback"
+    },
+    "gui.recordModal.title": {
+        "message": "录制声音",
+        "description": "Recording modal title"
+    },
+    "gui.recordingStep.beginRecord": {
+        "message": "点击下面的按钮开始录制",
+        "description": "Message for recording sound modal"
+    },
+    "gui.recordingStep.permission": {
+        "message": "{arrow}我们需要获取你的麦克风权限",
+        "description": "Permission required notice in recording sound modal. Do not translate {arrow}"
+    },
+    "gui.recordingStep.stop": {
+        "message": "停止录制",
+        "description": "Stop recording button label"
+    },
+    "gui.recordingStep.record": {
+        "message": "录制",
+        "description": "Record button label"
+    },
+    "gui.soundEditor.sound": {
+        "message": "声音",
+        "description": "Label for the name of the sound"
+    },
+    "gui.soundEditor.play": {
+        "message": "播放",
+        "description": "Title of the button to start playing the sound"
+    },
+    "gui.soundEditor.stop": {
+        "message": "停止",
+        "description": "Title of the button to stop the sound"
+    },
+    "gui.soundEditor.trim": {
+        "message": "修剪",
+        "description": "Title of the button to start trimminging the sound"
+    },
+    "gui.soundEditor.save": {
+        "message": "保存",
+        "description": "Title of the button to save trimmed sound"
+    },
+    "gui.soundEditor.undo": {
+        "message": "撤销",
+        "description": "Title of the button to undo"
+    },
+    "gui.soundEditor.redo": {
+        "message": "重做",
+        "description": "Title of the button to redo"
+    },
+    "gui.soundEditor.faster": {
+        "message": "快一点",
+        "description": "Title of the button to apply the faster effect"
+    },
+    "gui.soundEditor.slower": {
+        "message": "慢一点",
+        "description": "Title of the button to apply the slower effect"
+    },
+    "gui.soundEditor.echo": {
+        "message": "回声",
+        "description": "Title of the button to apply the echo effect"
+    },
+    "gui.soundEditor.robot": {
+        "message": "机械化",
+        "description": "Title of the button to apply the robot effect"
+    },
+    "gui.soundEditor.louder": {
+        "message": "响一点",
+        "description": "Title of the button to apply the louder effect"
+    },
+    "gui.soundEditor.softer": {
+        "message": "轻一点",
+        "description": "Title of the button to apply thr.softer effect"
+    },
+    "gui.soundEditor.reverse": {
+        "message": "反转",
+        "description": "Title of the button to apply the reverse effect"
+    },
+    "gui.SpriteInfo.spritePlaceholder": {
+        "message": "名字",
+        "description": "Placeholder text for sprite name"
+    },
+    "gui.SpriteInfo.sprite": {
+        "message": "角色",
+        "description": "Sprite info label"
+    },
+    "gui.SpriteInfo.show": {
+        "message": "显示",
+        "description": "Sprite info show label"
+    },
+    "gui.SpriteInfo.size": {
+        "message": "大小",
+        "description": "Sprite info size label"
+    },
+    "gui.SpriteInfo.x": {
+        "message": "x",
+        "description": "x"
+    },
+    "gui.SpriteInfo.y": {
+        "message": "y",
+        "description": "y"
+    },
+    "gui.spriteSelectorItem.contextMenuDuplicate": {
+        "message": "复制",
+        "description": "Menu item to duplicate in the right click menu"
+    },
+    "gui.spriteSelectorItem.contextMenuDelete": {
+        "message": "删除",
+        "description": "Menu item to delete in the right click menu"
+    },
+    "gui.spriteSelectorItem.contextMenuExport": {
+        "message": "导出",
+        "description": "Menu item to export the selected item"
+    },
+    "gui.spriteSelector.addSpriteFromLibrary": {
+        "message": "选择一个角色",
+        "description": "Button to add a sprite in the target pane from library"
+    },
+    "gui.spriteSelector.addSpriteFromPaint": {
+        "message": "绘制",
+        "description": "Button to add a sprite in the target pane from paint"
+    },
+    "gui.costumeTab.drawShape": {
+        "message": "绘制造型",
+        "description": ""
+    },
+    "gui.costumeTab.drawDackdrop": {
+        "message": "绘制背景",
+        "description": ""
+    },
+    "gui.spriteSelector.addSpriteFromSurprise": {
+        "message": "随机",
+        "description": "Button to add a random sprite in the target pane"
+    },
+    "gui.spriteSelector.addSpriteFromFile": {
+        "message": "上传角色",
+        "description": "Button to add a sprite in the target pane from file"
+    },
+    "gui.stageHeader.stageSizeLarge": {
+        "message": "放大舞台",
+        "description": "Button to change stage size to large"
+    },
+    "gui.stageHeader.stageSizeSmall": {
+        "message": "缩小舞台",
+        "description": "Button to change stage size to small"
+    },
+    "gui.stageHeader.stageSizeFull": {
+        "message": "进入全屏模式",
+        "description": "Button to change stage size to full screen"
+    },
+    "gui.stageHeader.stageSizeUnFull": {
+        "message": "退出全屏模式",
+        "description": "Button to get out of full screen mode"
+    },
+    "gui.stageHeader.fullscreenControl": {
+        "message": "全屏模式",
+        "description": "Button to enter/exit full screen mode"
+    },
+    "gui.spriteSelector.addBackdropFromLibrary": {
+        "message": "选择一个背景",
+        "description": "Button to add a stage in the target pane from library"
+    },
+    "gui.stageSelector.addBackdropFromPaint": {
+        "message": "绘制",
+        "description": "Button to add a stage in the target pane from paint"
+    },
+    "gui.stageSelector.addBackdropFromSurprise": {
+        "message": "随机",
+        "description": "Button to add a random stage in the target pane"
+    },
+    "gui.stageSelector.addBackdropFromFile": {
+        "message": "上传背景",
+        "description": "Button to add a stage in the target pane from file"
+    },
+    "gui.stageSelector.stage": {
+        "message": "角色",
+        "description": "Label for the stage in the stage selector"
+    },
+    "gui.stageSelector.backdrops": {
+        "message": "背景",
+        "description": "Label for the backdrops in the stage selector"
+    },
+    "gui.turboMode.active": {
+        "message": "加速模式",
+        "description": "Label indicating turbo mode is active"
+    },
+    "gui.webglModal.label": {
+        "message": "不支持当前浏览器",
+        "description": "WebGL missing title"
+    },
+    "gui.webglModal.description": {
+        "message": "非常遗憾，你的电脑或浏览器{webGlLink}。Scratch 3.0需要该技术才能运行。",
+        "description": "WebGL missing message"
+    },
+    "gui.webglModal.webgllink": {
+        "message": "不支持WebGL",
+        "description": "link part of your browser does not support WebGL message"
+    },
+    "gui.webglModal.back": {
+        "message": "返回",
+        "description": "Label for button go back when browser is unsupported"
+    },
+    "gui.webglModal.previewfaq": {
+        "message": "访问{previewFaqLink}，了解更多。",
+        "description": "Scratch 3.0 FAQ description"
+    },
+    "gui.webglModal.previewfaqlinktext": {
+        "message": "常见问题",
+        "description": "link to Scratch 3.0 FAQ page"
+    },
+    "gui.costumeLibrary.chooseABackdrop": {
+        "message": "选择一个背景",
+        "description": "Heading for the backdrop library"
+    },
+    "gui.costumeLibrary.chooseACostume": {
+        "message": "选择一个造型",
+        "description": "Heading for the costume library"
+    },
+    "gui.costumeTab.addBackdropFromLibrary": {
+        "message": "选择背景",
+        "description": "Button to add a backdrop in the editor tab"
+    },
+    "gui.costumeTab.addCostumeFromLibrary": {
+        "message": "选择造型",
+        "description": "Button to add a costume in the editor tab"
+    },
+    "gui.costumeTab.addBlankCostume": {
+        "message": "绘制",
+        "description": "Button to add a blank costume in the editor tab"
+    },
+    "gui.costumeTab.addSurpriseCostume": {
+        "message": "随机",
+        "description": "Button to add a surprise costume in the editor tab"
+    },
+    "gui.costumeTab.addFileBackdrop": {
+        "message": "上传背景",
+        "description": "Button to add a backdrop by uploading a file in the editor tab"
+    },
+    "gui.costumeTab.addFileCostume": {
+        "message": "上传造型",
+        "description": "Button to add a costume by uploading a file in the editor tab"
+    },
+    "gui.costumeTab.addCameraCostume": {
+        "message": "摄像头",
+        "description": "Button to use the camera to create a costume costume in the editor tab"
+    },
+    "gui.extensionLibrary.chooseAnExtension": {
+        "message": "扩展中心",
+        "description": "Heading for the extension library"
+    },
+    "gui.extensionLibrary.extensionUrl": {
+        "message": "键入扩展的URL",
+        "description": "Prompt for unoffical extension url"
+    },
+    "gui.extensionLibrary.delete": {
+        "message": "删除"
+    },
+    "gui.extensionLibrary.add": {
+        "message": "添加"
+    },
+
+    "gui.extensionLibrary.delPromptLabel": {
+        "message": "提示"
+    },
+    "gui.extensionLibrary.delPromptMessage": {
+        "message": "删除后将不可使用该扩展的积木，是否确定要删除？"
+    },
+    "gui.extensionLibrary.inUsedPromptMessage": {
+        "message": "该扩展正在被使用，不可被删除。"
+    },
+    "gui.extensionLibrary.delCancel": {
+        "message": "取消"
+    },
+    "gui.extensionLibrary.delOk": {
+        "message": "确认"
+    },
+    
+    "gui.extension.cognitiveservices.name": {
+        "message": "认知服务"
+    },
+    "gui.extension.cognitiveservices.description": {
+        "message": "通过认知服务的人工智能API，向应用添加影像，语音功能"
+    },
+    "gui.extension.teachablemachine.name": {
+        "message": "机器学习"
+    },
+    "gui.extension.teachablemachine.description": {
+        "message": "在不直接编程的情况下训练电脑进行学习，创建类似于人脑的人工神经网络"
+    },
+    "gui.extension.3AxisAccelerometer.name": {
+        "message": "三轴加速度计可视化"
+    },
+    "gui.extension.3AxisAccelerometer.description": {
+        "message": "在3D空间中可视化加速度计在虚拟立方体上的位置"
+    },
+    "gui.extension.meteostation.name": {
+        "message": "气象站"
+    },
+    "gui.extension.meteostation.description": {
+        "message": "显示环境数据，例如温度。 科幻Web界面上的湿度和气压"
+    },
+    "gui.extension.teachablemachine.Meteostation": {
+        "message": "感受气象站中温湿度带来的差异数据变化"
+    },
+    "gui.extension.ottoDiyRobot.name": {
+        "message": "双足机器人"
+    },
+    "gui.extension.ottoDiyRobot.description": {
+        "message": "中学课程的双足机器人控制模块"
+    },
+    "gui.extension.shieldBot.name": {
+        "message": "Shield Bot"
+    },
+    "gui.extension.shieldBot.description": {
+        "message": "Shield Bot 控制模块"
+    },
+    "gui.extension.mark.name": {
+        "message": "M.A.R.K小车"
+    },
+    "gui.extension.mark.description": {
+        "message": "M.A.R.K.小车控制模块"
+    },
+    "gui.extension.wireless.name": {
+        "message": "智慧城市"
+    },
+    "gui.extension.wireless.description": {
+        "message": "无线通信模块，包括WIFi，蓝牙和红外发射接收器"
+    },
+    "gui.extension.createSkill.name": {
+        "message": "创建技能"
+    },
+    "gui.extension.createSkill.description": {
+        "message": "为Bittle创造新的运动序列，这样可以使用Bittle学习更多新的技能"
+    },
+    "gui.extension.calibrateServos.name": {
+        "message": "校准舵机"
+    },
+    "gui.extension.calibrateServos.description": {
+        "message": "方便校准舵机初始位置用户界面"
+    },
+    
+    "gui.projectLoader.loadError": {
+        "message": "加载项目文件失败。",
+        "description": "An error that displays when a local project file fails to load."
+    },
+    "gui.recordingStep.alertMsg": {
+        "message": "无法启动录音",
+        "description": "Alert for recording error"
+    },
+    "gui.soundLibrary.chooseASound": {
+        "message": "选择一个声音",
+        "description": "Heading for the sound library"
+    },
+    "gui.soundTab.fileUploadSound": {
+        "message": "上传声音",
+        "description": "Button to upload sound from file in the editor tab"
+    },
+    "gui.soundTab.surpriseSound": {
+        "message": "随机",
+        "description": "Button to get a random sound in the editor tab"
+    },
+    "gui.soundTab.recordSound": {
+        "message": "录制",
+        "description": "Button to record a sound in the editor tab"
+    },
+    "gui.soundTab.addSoundFromLibrary": {
+        "message": "选择声音",
+        "description": "Button to add a sound in the editor tab"
+    },
+    "gui.spriteLibrary.chooseASprite": {
+        "message": "选择一个角色",
+        "description": "Heading for the sprite library"
+    },
+    "gui.tipsLibrary.tutorials": {
+        "message": "示例程序",
+        "description": "Heading for the help/tutorials library"
+    },
+    "gui.feedback.label": {
+        "message": "意见反馈",
+        "description": ""
+    },
+    "gui.feedback.cancel": {
+        "message": "取消",
+        "description": ""
+    },
+    "gui.feedback.ok": {
+        "message": "提交",
+        "description": ""
+    },
+    "gui.feedback.placeholder": {
+        "message": "请输入您的意见反馈",
+        "description": ""
+    },
+    "gui.feedback.currentVersion": {
+        "message": "当前Codecraft版本：v"
+    },
+    "gui.feedback.suggestedExamples": {
+        "message": "如何描述问题的建议"
+    },
+    "gui.feedback.uploadTips": {
+        "message": "提交附件(图片、视频、ZIP、RAR、CDC.......不大于20M)"
+    },
+    "gui.feedback.buttonUploadFiles": {
+        "message": "上传"
+    },
+    "gui.feedback.deleteUploadFiles": {
+        "message": "删除"
+    },
+    "gui.feedback.buttonUploadFilesed": {
+        "message": "重新上传"
+    },
+    "gui.feedback.submitCurrentProgram": {
+        "message": "同时提交当前程序"
+    },
+    "gui.feedback.suggestedExamplesContentTitle": {
+        "message": "首先描述问题"
+    },
+    "gui.feedback.suggestedExamplesContentExpect": {
+        "message": " a）你期望发生什么"
+    },
+    "gui.feedback.suggestedExamplesContentResult": {
+        "message": " b) 结果……        "
+    },
+    "gui.feedback.suggestedExamplesContentStep": {
+        "message": "然后描述重现问题的步骤"
+    },
+    "gui.feedback.suggestedExamplesContentSpecific": {
+        "message": "可以用文字描述，最好有屏幕截图、照片或视频支持。"
+    },
+    "gui.feedback.suggestedExamplesContentUpload": {
+        "message": "可以将多个文件压缩为1个zip包然后上传。"
+    },
+    "gui.feedback.suggestedExamplesContentExample": {
+        "message": "例如："
+    },
+    "gui.feedback.suggestedExamplesContentFirst": {
+        "message": "1. 打开 ..."
+    },
+    "gui.feedback.suggestedExamplesContentSecond": {
+        "message": "2. 单击 ..."
+    },
+    "gui.feedback.suggestedExamplesContentThird": {
+        "message": "3. 连接 ..."
+    },
+    "gui.feedback.fileLarge": {
+        "message": "文件过大"
+    },
+    "gui.feedback.fileUploading": {
+        "message": "正在上传..."
+    },
+    "gui.about.label": {
+        "message": "关于",
+        "description": ""
+    },
+    "gui.about.verprefix": {
+        "message": "版本：v",
+        "description": ""
+    },
+    "gui.about.description": {
+        "message": "© 深圳柴火创客教育服务有限公司 版权所有",
+        "description": ""
+    },
+    "gui.defaultProject.meow": {
+        "message": "喵",
+        "description": "Name for the meow sound"
+    },
+    "gui.defaultProject.variable": {
+        "message": "我的变量",
+        "description": "Name for the default variable"
+    },
+    "gui.howtos.intro-move-sayhello-hat.name": {
+        "message": "入门",
+        "description": "Name for the 'Getting Started' how-to"
+    },
+    "gui.howtos.intro-move.step_stepMove": {
+        "message": "添加「移动」积木",
+        "description": "Step name for 'Add a move block' step"
+    },
+    "gui.howtos.add-a-move-block.step_stepMoveSayHello": {
+        "message": "点击绿旗运行",
+        "description": "Step name for 'Add A Say Block' step"
+    },
+    "gui.howtos.animate-a-name.name": {
+        "message": "姓名动画",
+        "description": "Name for the 'Animate a Name' how-to"
+    },
+    "gui.howtos.animate-a-name.step_AnimatePickLetter": {
+        "message": "选一个字母角色",
+        "description": "Step name for 'Pick a Letter Sprite' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimatePlaySound": {
+        "message": "点击时播放声音",
+        "description": "Step name for 'Play a Sound When Clicked' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimatePickLetter2": {
+        "message": "另选一个字母角色",
+        "description": "Step name for 'Pick Another Letter Sprite"
+    },
+    "gui.howtos.animate-a-name.step_AnimateChangeColor": {
+        "message": "改变颜色",
+        "description": "Step name for 'Change color' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimateSpin": {
+        "message": "选一个字母，让它旋转",
+        "description": "Step name for 'Pick Another Letter Sprite & Make It Spin' step"
+    },
+    "gui.howtos.animate-a-name.step_AnimateGrow": {
+        "message": "另选一个字母，让它变大",
+        "description": "Step name for 'Pick Another Letter Sprite & Make It Grow!' step"
+    },
+    "gui.howtos.make-music.name": {
+        "message": "制作音乐",
+        "description": "Name for the 'Make Music' how-to"
+    },
+    "gui.howtos.Make-Music.step_PickInstrument": {
+        "message": "选一个乐器角色",
+        "description": "Step name for 'Pick an Instrument Sprite' step"
+    },
+    "gui.howtos.Make-Music.step_PlaySoundClick": {
+        "message": "点击时播放声音",
+        "description": "Step name for 'Play Sound When Clicked' step"
+    },
+    "gui.howtos.Make-Music.step_MakeSong": {
+        "message": "创作乐曲",
+        "description": "Step name for 'Create a Song' step"
+    },
+    "gui.howtos.make-music.step_MakeBeat": {
+        "message": "选一种鼓，演奏鼓点",
+        "description": "Step name for 'Choose a Drum & Make a Beat' step"
+    },
+    "gui.howtos.make-music.step_MakeBeatBox": {
+        "message": "\b用麦克风角色演唱节奏口技",
+        "description": "Step name for 'Choose the Microphone Sprite & Surprise Beatbox' step"
+    },
+    "gui.howtos.make-a-game.name": {
+        "message": "制作消除游戏",
+        "description": "Name for the 'Make a Clicker Game' how-to"
+    },
+    "gui.howtos.Make-A-Game.step_GamePickSprite": {
+        "message": "挑选一个角色",
+        "description": "Step name for 'Pick A Sprite' step"
+    },
+    "gui.howtos.make-a-game.step_GamePlaySound": {
+        "message": "点击时播放声音",
+        "description": "Play Sound When Clicked' step"
+    },
+    "gui.howtos.make-a-game.step_GameAddScore": {
+        "message": "建立一个得分变量",
+        "description": "Step name for 'Create Score Variable' step"
+    },
+    "gui.howtos.make-a-game.step_GameChangeScore": {
+        "message": "被点击时增加分数",
+        "description": "Step name for 'When Clicked Increase Score' step"
+    },
+    "gui.howtos.make-a-game.step_Random": {
+        "message": "移动到随机位置",
+        "description": "Step name for 'Go to a random position' step"
+    },
+    "gui.howtos.make-music.step_GameChangeColor": {
+        "message": "改变颜色",
+        "description": "Step name for 'Change Color' step"
+    },
+    "gui.howtos.make-music.step_ResetScore": {
+        "message": "把得分清零",
+        "description": "Step name for 'Reset Score' step"
+    },
+    "gui.howtos.make-a-chase-game.name": {
+        "message": "制作追赶游戏",
+        "description": "Name for the 'Make a Chase Game' how-to"
+    },
+    "gui.howtos.Chase-Game.step_BG": {
+        "message": "添加一个背景",
+        "description": "Step name for 'Add a Backdrop' step"
+    },
+    "gui.howtos.chase-game.step_AddOcto": {
+        "message": "添加一个角色",
+        "description": "Step name for 'Add a Sprite' step"
+    },
+    "gui.howtos.make-music.step_LeftRight": {
+        "message": "用方向键控制左右移动",
+        "description": "Step name for 'Move Right & Left With Arrow Keys' step"
+    },
+    "gui.howtos.Chase-Game.step_UpDown": {
+        "message": "用方向键控制上下移动",
+        "description": "Step name for 'Move Up & Down With Arrow Keys' step"
+    },
+    "gui.howtos.Chase-Game.step_AddStar": {
+        "message": "添加另一个角色",
+        "description": "Step name for 'Add Another Sprite' step"
+    },
+    "gui.howtos.Chase-Game.step_MoveRandom": {
+        "message": "随机移动",
+        "description": "Step name for 'Move Randomly' step"
+    },
+    "gui.howtos.Chase-Game.step_WhenTouch": {
+        "message": "让章鱼被碰到的时候发出声音",
+        "description": "Step name for 'In Octopus Sprite, When Touching Play Sound' step"
+    },
+    "gui.howtos.Chase-Game.step_ScoreVariable": {
+        "message": "建立一个得分变量",
+        "description": "Step name for 'Create Score Variable"
+    },
+    "gui.howtos.Chase-Game.ScoreWhenTouch": {
+        "message": "让章鱼被碰到时，增加得分",
+        "description": "Step name for 'In Octopus Sprite, When Touching Add Score step"
+    },
+    "gui.howtos.add-sprite.name": {
+        "message": "添加一个角色",
+        "description": "Name for the 'Add a Sprite' how-to"
+    },
+    "gui.howtos.add-sprite.step_addSprite": {
+        "message": "添加一个角色",
+        "description": "Step name for 'Add a new sprite' step"
+    },
+    "gui.howtos.add-a-backdrop.name": {
+        "message": "添加一个背景",
+        "description": "Name for the 'Add a Backdrop' how-to"
+    },
+    "gui.howtos.change-size.name": {
+        "message": "变大变小",
+        "description": "Name for the 'Change Size' how-to"
+    },
+    "gui.howtos.glide-around.name": {
+        "message": "滑来滑去",
+        "description": "Name for the 'Glide Around' how-to"
+    },
+    "gui.howtos.record-a-sound.name": {
+        "message": "录制声音",
+        "description": "Record A Sound' how-to"
+    },
+    "gui.howtos.spin-video.name": {
+        "message": "让字母旋转",
+        "description": "Name for the 'Make It Spin' how-to"
+    },
+    "gui.howtos.hide-and-show.name": {
+        "message": "隐藏和出现",
+        "description": "Name for the 'Hide and Show' how-to"
+    },
+    "gui.howtos.switch-costume.name": {
+        "message": "让角色动起来",
+        "description": "Name for the 'Animate a Sprite' how-to"
+    },
+    "gui.howtos.move-around-with-arrow-keys.name": {
+        "message": "使用方向键",
+        "description": "Name for the 'Use Arrow Keys' how-to"
+    },
+    "gui.howtos.add-effects.name": {
+        "message": "添加一些效果",
+        "description": "Name for the 'Add Effects' how-to"
+    },
+    "gui.extension.music.name": {
+        "message": "音乐",
+        "description": "Name for the 'Music' extension"
+    },
+    "gui.extension.music.description": {
+        "message": "演奏乐器，敲锣打鼓。",
+        "description": "Description for the 'Music' extension"
+    },
+    "gui.extension.pen.name": {
+        "message": "画笔",
+        "description": "Name for the 'Pen' extension"
+    },
+    "gui.extension.pen.description": {
+        "message": "绘制角色。",
+        "description": "Description for the 'Pen' extension"
+    },
+    "gui.extension.videosensing.name": {
+        "message": "视频侦测",
+        "description": "Name for the 'Video Sensing' extension"
+    },
+    "gui.extension.videosensing.description": {
+        "message": "使用摄像头侦测运动。",
+        "description": "Description for the 'Video Sensing' extension"
+    },
+    "gui.extension.translate.name": {
+        "message": "翻译",
+        "description": "Name for the Translate extension"
+    },
+    "gui.extension.translate.description": {
+        "message": "把文字翻译成多种语言。",
+        "description": "Description for the Translate extension"
+    },
+    "gui.extension.microbit.description": {
+        "message": "让项目连接到实体世界。",
+        "description": "Description for the 'micro:bit' extension"
+    },
+    "gui.extension.microbit.connectingMessage": {
+        "message": "正在连接",
+        "description": "Message to help people connect to their micro:bit."
+    },
+    "gui.extension.ev3.description": {
+        "message": "搭建交互机器人等。",
+        "description": "Description for the 'LEGO MINDSTORMS EV3' extension"
+    },
+    "gui.extension.ev3.connectingMessage": {
+        "message": "正在连接。请确保EV3上的识别码(PIN)已经设置为1234。",
+        "description": "Message to help people connect to their EV3. Must note the PIN should be 1234."
+    },
+    "gui.extension.wedo2.description": {
+        "message": "支持马达和传感器。",
+        "description": "Description for the 'LEGO WeDo 2.0' extension"
+    },
+    "gui.extension.wedo2.connectingMessage": {
+        "message": "正在连接",
+        "description": "Message to help people connect to their WeDo."
+    },
+    "gui.libraryTags.all": {
+        "message": "所有",
+        "description": "Tag for filtering a library for everything"
+    },
+    "gui.libraryTags.animals": {
+        "message": "动物",
+        "description": "Tag for filtering a library for animals"
+    },
+    "gui.libraryTags.dance": {
+        "message": "舞蹈",
+        "description": "Tag for filtering a library for dance"
+    },
+    "gui.libraryTags.effects": {
+        "message": "效果",
+        "description": "Tag for filtering a library for effects"
+    },
+    "gui.libraryTags.fantasy": {
+        "message": "奇幻",
+        "description": "Tag for filtering a library for fantasy"
+    },
+    "gui.libraryTags.fashion": {
+        "message": "时尚",
+        "description": "Tag for filtering a library for fashion"
+    },
+    "gui.libraryTags.food": {
+        "message": "食物",
+        "description": "Tag for filtering a library for food"
+    },
+    "gui.libraryTags.indoors": {
+        "message": "室内",
+        "description": "Tag for filtering a library for indoors"
+    },
+    "gui.libraryTags.loops": {
+        "message": "循环向",
+        "description": "Tag for filtering a library for loops"
+    },
+    "gui.libraryTags.music": {
+        "message": "音乐",
+        "description": "Tag for filtering a library for music"
+    },
+    "gui.libraryTags.notes": {
+        "message": "注意",
+        "description": "Tag for filtering a library for notes"
+    },
+    "gui.libraryTags.outdoors": {
+        "message": "户外",
+        "description": "Tag for filtering a library for outdoors"
+    },
+    "gui.libraryTags.patterns": {
+        "message": "图案",
+        "description": "Tag for filtering a library for patterns"
+    },
+    "gui.libraryTags.people": {
+        "message": "人物",
+        "description": "Tag for filtering a library for people"
+    },
+    "gui.libraryTags.percussion": {
+        "message": "打击乐器",
+        "description": "Tag for filtering a library for percussion"
+    },
+    "gui.libraryTags.space": {
+        "message": "太空",
+        "description": "Tag for filtering a library for space"
+    },
+    "gui.libraryTags.sports": {
+        "message": "运动",
+        "description": "Tag for filtering a library for sports"
+    },
+    "gui.libraryTags.underwater": {
+        "message": "水下",
+        "description": "Tag for filtering a library for underwater"
+    },
+    "gui.libraryTags.voice": {
+        "message": "人声",
+        "description": "Tag for filtering a library for voice"
+    },
+    "gui.libraryTags.wacky": {
+        "message": "古怪",
+        "description": "Tag for filtering a library for wacky"
+    },
+    "gui.opcodeLabels.direction": {
+        "message": "方向",
+        "description": "Label for the direction monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.xposition": {
+        "message": "x 坐标",
+        "description": "Label for the x position monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.yposition": {
+        "message": "y 坐标",
+        "description": "Label for the y position monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.size": {
+        "message": "大小",
+        "description": "Label for the size monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.costumename": {
+        "message": "造型名称",
+        "description": "Label for the costume name monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.costumenumber": {
+        "message": "造型编号",
+        "description": "Label for the costume number monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.backdropname": {
+        "message": "背景名称",
+        "description": "Label for the backdrop name monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.backdropnumber": {
+        "message": "背景编号",
+        "description": "Label for the backdrop number monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.volume": {
+        "message": "音量",
+        "description": "Label for the volume monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.tempo": {
+        "message": "演奏速度",
+        "description": "Label for the tempo monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.answer": {
+        "message": "回答",
+        "description": "Label for the answer monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.loudness": {
+        "message": "响度",
+        "description": "Label for the loudness monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.username": {
+        "message": "用户名",
+        "description": "Label for the username monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.year": {
+        "message": "年",
+        "description": "Label for the current year monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.month": {
+        "message": "月",
+        "description": "Label for the current month monitor when shown on the stage."
+    },
+    "gui.opcodeLabels.date": {
+        "message": "日",
+        "description": "Label for the current date monitor when shown on the stage. Shows the current day of the month"
+    },
+    "gui.opcodeLabels.dayofweek": {
+        "message": "dayofweek",
+        "description": "Label for the current dayofweek monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.hour": {
+        "message": "时",
+        "description": "Label for the current hour monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.minute": {
+        "message": "分",
+        "description": "Label for the current minute monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.second": {
+        "message": "秒",
+        "description": "Label for the current second monitor when shown on the stage"
+    },
+    "gui.opcodeLabels.timer": {
+        "message": "计时器",
+        "description": "Label for the timer monitor when shown on the stage"
+    },
+    "gui.sharedMessages.backdrop": {
+        "message": "背景{index}",
+        "description": "Default name for a new backdrop, scratch will automatically adjust the number if necessary"
+    },
+    "gui.sharedMessages.costume": {
+        "message": "造型-{index}",
+        "description": "Default name for a new costume, scratch will automatically adjust the number if necessary"
+    },
+    "gui.sharedMessages.sprite": {
+        "message": "角色{index}",
+        "description": "Default name for a new sprite, scratch will automatically adjust the number if necessary"
+    },
+    "gui.sharedMessages.pop": {
+        "message": "啵",
+        "description": "Name of the pop sound, the default sound added to a sprite"
+    },
+    "gui.gui.defaultProjectTitle": {
+        "message": "SuperMaker",
+        "description": "Default title for project"
+    },
+    "gui.backpack.header": {
+        "message": "书包",
+        "description": "Button to open the backpack"
+    },
+    "gui.arduinoMonitor.baudRate": {
+        "message": "波特率",
+        "description": ""
+    },
+    "gui.arduinoMonitor.baudRateText": {
+        "message": "波特率",
+        "description": ""
+    },
+    "gui.arduinoMonitor.autoScroll": {
+        "message": "自动滚屏",
+        "description": ""
+    },
+    "gui.arduinoMonitor.showTime": {
+        "message": "显示时间戳",
+        "description": ""
+    },
+    "gui.arduinoMonitor.clean": {
+        "message": "清空输出",
+        "description": ""
+    },
+    "gui.arduinoMonitor.send": {
+        "message": "发送",
+        "description": ""
+    },
+    "gui.arduinoMonitor.title": {
+        "message": "串口监视器",
+        "description": ""
+    },
+    "gui.library.roleText": {
+        "message": "角色",
+        "description": ""
+    },
+    "gui.library.customeText": {
+        "message": "造型",
+        "description": ""
+    },
+    "gui.library.bgText": {
+        "message": "背景",
+        "description": ""
+    },
+    "gui.library.audioText": {
+        "message": "音效",
+        "description": ""
+    },
+    "gui.library.deleteRemind": {
+        "message": "提示",
+        "description": ""
+    },
+    "gui.library.deleteText": {
+        "message": "是否删除该工程？",
+        "description": ""
+    },
+    "gui.library.notDeleteText": {
+        "message": "不删除",
+        "description": ""
+    },
+    "gui.library.sureDeleteText": {
+        "message": "删除",
+        "description": ""
+    },
+    "gui.deviceConnect.arduinoDriver": {
+        "message": "Windows下需要先安装Arduino驱动，才能连接Arduino。"
+    },
+    "gui.deviceConnect.cannotConnectCyberEye": {
+        "message": "无法连接M.A.R.K(cyberEye)设备？"
+    },
+    "gui.deviceConnect.cannotConnectBittle": {
+        "message": "无法连接Bittle设备？"
+    },
+    "gui.deviceConnect.downloadArduinoDriver": {
+        "message": "下载驱动"
+    },
+    "gui.deviceConnect.downloadUSBDriver": {
+        "message": "下载USB驱动"
+    },
+    "gui.deviceConnect.arduinoDriverDownload": {
+        "message": "下载Arduino驱动"
+    }, 
+    "gui.deviceConnect.arduinoFT232DriverDownload": {
+        "message": "下载FT232驱动"
+    }, 
+    "gui.deviceConnect.downloadCyberEyeDriver": {
+        "message": "下载M.A.R.K(cyberEye)驱动"
+    },
+    "gui.deviceConnect.downloadGlintDriver": {
+        "message": "下载MAC电脑上的USB驱动"
+    },
+    "gui.deviceConnect.readDocument": {
+        "message": "帮助文档："
+    },
+    "gui.deviceConnect.notFindDevice": {
+        "message": "首次使用时，无法连接？"
+    },
+    "gui.deviceConnect.notFindDeviceText1": {
+        "message": "请确保已使用USB线连接设备，并且已安装驱动。"
+    },
+    "gui.deviceConnect.notFindDeviceDownload": {
+        "message": "立即下载驱动"
+    },
+    "gui.deviceConnect.cannotConnectGroveZero": {
+        "message": "无法连接Grove Zero设备？"
+    },
+    "gui.deviceConnect.cannotConnectArduino": {
+        "message": "无法连接Arduino设备？"
+    },
+    "gui.deviceConnect.cannotConnectGlint": {
+        "message": "无法连接超能环设备？"
+    },
+    "gui.microbit.microbitDownloadTipsTitle":{
+        "message": "提示"
+    },
+    "gui.microbit.microbitModalLabel": {
+        "message": "下载成功后，按照以下操作步骤来试试你写的程序吧~"
+    },
+    "gui.microbit.microbitModalStep1": {
+        "message": "用USB数据线连接你的电脑；"
+    },
+    "gui.microbit.microbitModalStep2": {
+        "message": "将下载的.hex文件从计算机移到micro:bit驱动器内"
+    },
+    "gui.microbit.microbitDownloadConfirm": {
+        "message": "知道了"
+    },
+    "gui.pythonDownBinStep.title": {
+        "message": "升级固件"
+    },
+    "gui.pythonDownBinStep.step1Text": {
+        "message": "发现新固件："
+    },
+    "gui.pythonDownBinStep.step2Text1": {
+        "message": "下载中..."
+    },
+    "gui.pythonDownBinStep.step2Text2": {
+        "message": "请勿关闭Codecraft,或进行其他操作"
+    },
+    "gui.pythonDownBinStep.step3Text1": {
+        "message": "下载完成"
+    },
+    "gui.pythonDownBinStep.step3Text2": {
+        "message": "请勿关闭Codecraft,或进行其他操作"
+    },
+    "gui.pythonDownBinStep.btText1": {
+        "message": "下载最新固件"
+    },
+    "gui.pythonDownBinStep.btText2": {
+        "message": "下一步"
+    },
+    "gui.pythonUpgradeSucc.title": {
+        "message": "升级固件"
+    },
+    "gui.pythonUpgradeSucc.succ": {
+        "message": "烧录完成"
+    },
+    "gui.pythonUpgradeSucc.btText": {
+        "message": "我知道了"
+    },
+    "gui.pythonUpgrade.failText": {
+        "message": "烧录失败！"
+    },
+    "gui.pythonUpgrade.failMessage": {
+        "message": "请确保你选择的设备与实际连接的设备一致"
+    },
+    "gui.pythonUpgrade.text": {
+        "message": "请确保按照以下步骤进行固件升级操作"
+    },
+    "gui.pythonUpgrade.btText": {
+        "message": "点击这里立即烧录"
+    },
+    "gui.pythonUpgrade.notice1": {
+        "message": "请注意："
+    },
+    "gui.pythonUpgrade.notice3": {
+        "message": "• 在此过程中，请确保设备与Codecraft保持连接状态"
+    },
+    "gui.pythonUpgrade.title": {
+        "message": "升级固件"
+    },
+    "gui.pythonUpgrade.text1": {
+        "message": "烧录中..."
+    },
+    "gui.pythonUpgrade.text2": {
+        "message": "请勿关闭codecraft，或进行其他操作"
+    },
+    "gui.menuBar.uploadPortfolios": {
+        "message": "上传作品"
+    },
+    "gui.checkUpdate.checkVerTitle": {
+        "message": "检查更新",
+        "description": ""
+    },
+    "gui.checkUpdate.latestVersion": {
+        "message": "当前版本已是最新版本："
+    },
+    "gui.checkUpdate.iKnow": {
+        "message": "确定"
+    },
+    "gui.checkUpdate.newVersion": {
+        "message": "发现新版本 "
+    },
+    "gui.checkUpdate.updateNow": {
+        "message": "立即升级"
+    },
+    "gui.checkUpdate.downloadPkg": {
+        "message": "下载安装包"
+    },
+    "gui.checkUpdate.downloading": {
+        "message": "Codecraft安装包正在下载，请稍候。"
+    },
+    "gui.checkUpdate.downloadCancel": {
+        "message": "取消 (C)"
+    },
+    "gui.checkUpdate.downloadCancelConfirm": {
+        "message": "确认要取消下载吗？"
+    },
+    "gui.checkUpdate.cancelDownload": {
+        "message": "取消下载"
+    },
+    "gui.checkUpdate.downloadContinue": {
+        "message": "继续下载"
+    },
+    "gui.checkUpdate.retry": {
+        "message": "重试"
+    },
+    "gui.checkUpdate.cancel": {
+        "message": "取消"
+    },
+    "gui.checkUpdate.downloadFail": {
+        "message": "下载失败"
+    },
+    "gui.library.connectNet": {
+        "message": "暂无可见内容，请连接网络"
+    },
+    "gui.library.remindText1": {
+        "message": "很抱歉，当前未联网，无法体验示例程序"
+    },
+    "gui.library.remindText2": {
+        "message": "连接网络，即可获得示例程序与视频指引"
+    },
+    "gui.library.noProject": {
+        "message": "暂无示例程序"
+    },
+    "gui.rescueDevice.confirm": {
+        "message": "强制烧录"
+    },
+    "gui.rescueDevice.title": {
+        "message": "设备救援"
+    },
+    "gui.rescueDevice.noSerialsPrompt": {
+        "message": "未扫描到串口"
+    },
+    "gui.rescueDevice.noSelectSerialsPrompt": {
+        "message": "请选择串口"
+    },
+    "gui.rescueDevice.selectSerialport": {
+        "message": "选择串口"
+    },
+    "gui.rescueDevice.selectDevice": {
+        "message": "选择设备"
+    },
+    "gui.rescueDevice.notice": {
+        "message": "注意：通过以下操作，将帮助您选中的设备恢复到该设备最新版本的固件，让设备恢复可用状态。"
+    },
+    "gui.loginModal.requiredFiled": {
+        "message": "输入不能为空"
+    },
+    "gui.net.errorMessage": {
+        "message": "网络异常，请检查您的网络"
+    },
+    "gui.library.tips.crateBtnText":{
+        "message": "开始创作"
+    },
+    "gui.library.tips.mainPage":{
+        "message": "首页"
+    },
+    "gui.library.fourYearsOld":{
+        "message": "4-8岁"
+    },
+    "gui.library.eightYearsOld":{
+        "message": "8-12岁"
+    },
+    "gui.library.twelveYearsOld":{
+        "message": "12-15岁"
+    },
+    "gui.library.fifteenYearsOld":{
+        "message": "15-18岁"
+    },
+    "gui.library.beginner":{
+        "message": "简单"
+    },
+    "gui.library.intermediate":{
+        "message": "中等"
+    },
+    "gui.library.advanced":{
+        "message": "复杂"
+    },
+    "gui.library.ai":{
+        "message": "人工智能"
+    },
+    "gui.library.iot":{
+        "message": "物联网"
+    },
+    "gui.library.robotics":{
+        "message": "机器人"
+    },
+    "gui.library.graphicalProgram":{
+        "message": "图形化编程"
+    },
+    "gui.library.pythonProgram":{
+        "message": "Python编程"
+    },
+    "gui.library.glint":{
+        "message": "超能环"
+    },
+    "gui.library.project": {
+        "message": "项目"
+    },
+    "gui.library.codecraftCourse": {
+        "message": "Codecraft 教程"
+    },
+    "gui.library.projectSample": {
+        "message": "项目示例"
+    },
+    "gui.library.zwb": {
+        "message": "造物吧"
+    },
+    "gui.library.mywork": {
+        "message": "我的作品"
+    },
+    "gui.library.hardwareProducts": {
+        "message": "支持硬件"
+    },
+    "gui.library.selectHardwareforProgramming": {
+        "message": "选择硬件进行编程"
+    },
+    "gui.library.moreCourses": {
+        "message": "更多课程"
+    },
+    "gui.library.importProject": {
+        "message": "导入项目"
+    },
+    "gui.library.viewAlllogin": {
+        "message": "查看全部(需登录)"
+    },
+    "gui.library.viewAll": {
+        "message": "查看全部"
+    },
+    "gui.library.moreProject": {
+        "message": "更多项目"
+    },
+    "gui.library.author": {
+        "message": "作者"
+    },
+    "gui.library.product": {
+        "message": "产品"
+    },
+    "gui.library.age": {
+        "message": "年龄"
+    },
+    "gui.library.level": {
+        "message": "难度"
+    },
+    "gui.library.popular": {
+        "message": "热门"
+    },
+    "gui.library.searchCourses": {
+        "message": "输入关键词搜索课程"
+    },
+    "gui.library.searchProjects": {
+        "message": "输入关键词搜索项目"
+    },
+    "gui.homeTips.vd":{
+        "message": "边看边做"
+    },
+    "gui.remindSave.title": {
+        "message": "提示"
+    },
+    "gui.remindSave.remindText": {
+        "message": "当前文件已修改，是否保存？"
+    },
+    "gui.remindSave.save": {
+        "message": "保存"
+    },
+    "gui.remindSave.dontSave": {
+        "message": "不保存"
+    },
+    "gui.remindSave.cancelSave": {
+        "message": "取消"
+    },
+    "gui.trainModal.title":{
+        "message": "模型训练"
+    },
+    "gui.trainModal.modelLoading":{
+        "message": "模型加载中......"
+    },
+    "gui.trainModal.modelResourceLoading":{
+        "message": "模型资源加载中......"
+    },
+    "gui.trainModal.result":{
+        "message": "结果"
+    },
+    "gui.trainModal.newModel":{
+        "message": "新建模型"
+    },
+    "gui.trainModal.usingModel":{
+        "message": "使用模型"
+    },
+    "gui.trainModal.learn":{
+        "message": "学习"
+    },
+    "gui.trainModal.category":{
+        "message": "类别"
+    },
+    "gui.trainModal.sample":{
+        "message": "样本"
+    },
+    "gui.trainModal.reset":{
+        "message": "重置"
+    },
+    "gui.trainModal.confirm": {
+        "message": "确定"
+    },
+    "gui.trainModal.cancel": {
+        "message": "取消"
+    },
+    "gui.trainModal.clearPrompt": {
+        "message": "确定要清空当前分类的样本吗？"
+    },
+    "gui.trainModal.newModelPrompt": {
+        "message": "新建模型会清空当前训练数据，确定新建吗？"
+    },
+    "gui.trainModal.modelCategoryNumber": {
+        "message": "模型分类的数量"
+    },
+    "gui.trainModal.recognitionWindow": {
+        "message": "识别窗口"
+    },
+    "gui.trainModal.notSupportMediaDevices": {
+        "message": "你的浏览器不支持访问用户媒体设备"
+    },
+    "gui.workspace.codeDownloadBtn":{
+        "message": "下载源码"
+    },
+    "gui.library.noMaterial": {
+        "message": "暂无素材"
+    },
+    "gui.device.switching.promptMessage": {
+        "message": "切换设备将会新建文件，是否保存当前文件？"
+    },
+    "gui.device.switching.notSave":{
+        "message": "不保存"
+    },
+    "gui.device.switching.save": {
+        "message": "保存"
+    },
+    "gui.deviceSelector.itemviewMore": {
+        "message": "查看详情"
+    },
+    "gui.deviceInfo.helpDoc":{
+        "message":"查看帮助文档"
+    },
+    "gui.deviceInfo.buy":{
+        "message":"购买"
+    },
+    "gui.serialChart.serialChart":{
+        "message":"串口图表"
+    },
+    "gui.serialChart.download":{
+        "message":"下载"
+    },
+    "gui.deviceInfo.groveZero.description":{
+        "message":"Grove Zero 是一套可编程的电子积木，通过磁吸简单连接组合，配合图形化编程软件，即可实现简单实用的功能。Grove Zero既可作为培养孩子创造力的工具，又可以成为STEM教育的课堂教具。"
+    },
+    "gui.deviceInfo.microbit.description":{
+        "message":"micro:bit是什么？BBC micro:bit是一个可放在手掌上的可编程的微型电脑。它为实现从机器人到音乐装置等各式各样精彩的创意提供了无限的可能。了解更多，可访问官网地址：https://microbit.org"
+    },
+    "gui.deviceInfo.cyberEye.description":{
+        "message":"M.A.R.K 是一款多功能的小车平台，它专为人工智能学习而设计。孩子可以通过小车自带的AI控制器，实现轨道识别，交通标志识别等功能，从而实现自动驾驶功能。"
+    },
+    "gui.deviceInfo.glint.description":{
+        "message":"超能环是一款拥有精美外观造型的可穿戴多用途儿童编程入⻔产品。 其由12个可编程彩灯，编程按键、运动传感器组成的轻量级交互界面，极大的降低了孩子接纳编程教具的心理门槛。快速上手的产品体验和多样化的交互方式，让孩子学习与玩乐并行，充分展示出自己的编程创意。"
+    },
+    "gui.deviceInfo.groveJoint.description":{
+        "message":"Grove-Joint 与 Seeeduino Lotus 有许多相似之处。这是一个微型 ATMEGA328 单片机开发板。它使用 Atmel ATMEGA328P-MU 和 CH340 芯片。您可以使用它来搭配Grove模块方便、快速地做一些有趣的应用程序。"
+    },
+    "gui.deviceInfo.arduino.description":{
+        "message":"Codecraft 目前已支持经典的 Arduino 开发板，如 Arduino Uno，还有基于 Arduino 的改进兼容版本，如：Seeeduino V4.2，Seeeduino Mega，Seeeduino Lotus V1.1，Grove Beginner Kit for Arduino等。同时也已广泛支持 Arduino 生态中著名的 Grove 系列传感器模块。"
+    },
+    "gui.deviceInfo.noDescriptionText":{
+        "message":"暂无介绍"
+    },
+    "gui.saveAs.saveAs": {
+        "message": "另存为"
+    },
+    "gui.saveAs.documentName": {
+        "message": "文件名称"
+    },
+    "gui.courseItem.classHourUnit":{
+        "message": "课时"
+    },
+    "gui.coursePage.examples":{
+        "message": "示例程序"
+    },
+    "gui.coursePage.teacherSupport":{
+        "message": "老师用资料"
+    },
+    "gui.coursePage.studentSupport":{
+        "message": "学员用资料"
+    },
+    "gui.coursePage.relatedGoods":{
+        "message": "相关产品"
+    },
+    "gui.coursePage.download":{
+        "message": "下载"
+    },
+    "gui.coursePage.buy":{
+        "message": "购买"
+    },
+    "gui.coursePage.preLesson":{
+        "message": "上一课"
+    },
+    "gui.coursePage.courseNotExist":{
+        "message": "课程已失效"
+    },
+    "gui.coursePage.nextLesson":{
+        "message": "下一课"
+    },
+    "gui.coursePage.moreLesson":{
+        "message": "更多"
+    },
+    "gui.coursePage.prePage":{
+        "message": "上一页"
+    },
+    "gui.coursePage.nextPage":{
+        "message": "下一页"
+    },
+    "gui.coursePage.classUnit":{
+        "message": "第#课"
+    },
+    "gui.coursePage.lessonOutline":{
+        "message": "课程大纲"
+    },
+    "gui.coursePage.zoomInLook":{
+        "message": "请放大查看习题"
+    },
+    "gui.coursePage.singleChoice": {
+        "message": "单选题"
+    },
+    "gui.coursePage.multipleChoice": {
+        "message": "多选题"
+    },
+    "gui.coursePage.commitAnswer": {
+        "message": "提交答案"
+    },
+    "gui.coursePage.correct": {
+        "message": "回答正确"
+    },
+    "gui.coursePage.congratulation": {
+        "message": "恭喜你选择了正确的答案！"
+    },
+    "gui.coursePage.doMore": {
+        "message": "再做一次"
+    },
+    "gui.coursePage.continueStudy": {
+        "message": "继续学习"
+    },
+    "gui.coursePage.error": {
+        "message": "答案不正确"
+    },
+    "gui.coursePage.considerMore": {
+        "message": "再想想，就快做出来啦～"
+    },
+    "gui.coursePage.continueAnswer": {
+        "message": "继续答题"
+    },
+    "gui.coursePage.connotPreview": {
+        "message": "暂时无法预览"
+    },
+    "gui.courseHome.btnBack": {
+        "message": "返回"
+    },
+    "gui.lessonOutline.btnView":{
+        "message": "查看"
+    },
+    "gui.Setting.Indentity.label":{
+        "message": "身份"
+    },
+    "gui.Setting.Indentity.Student":{
+        "message": "学生"
+    },
+    "gui.Setting.Indentity.Teacher":{
+        "message": "老师"
+    },
+    "gui.Setting.ImageUpload":{
+        "message": "更换图片"
+    },
+    "gui.extension.modelExtension.name": {
+        "message": "扩展模型"
+    },
+    "gui.extension.modelExtension.description": {
+        "message": "可指定M.A.R.K主控板SD卡上的模型参数，动态增加对应的AI积木"
+    },
+    "gui.modelExtension.categoryName": {
+        "message": "扩展模型",
+        "description": ""
+    },
+    "gui.modelExtension.imgModelButton": {
+        "message": "图像分类模型",
+        "description": ""
+    },
+    "gui.modelExtension.objModelButton": {
+        "message": "物体检测模型",
+        "description": ""
+    },
+    "gui.modelExtension.deviceTrainButton": {
+        "message": "本地训练",
+        "description": ""
+    },
+    "gui.modelExtension.addModelButton":{
+        "message": "添加模型",
+        "description": ""
+    },
+    "gui.modelExtension.modelFilePath":{
+        "message": "文件地址",
+        "description": ""
+    },
+    "gui.modelExtension.modelFilePath.placeholder":{
+        "message": "请输入SD卡上的绝对路径，或者Flash的地址偏移量",
+        "description": ""
+    },
+    "gui.modelExtension.modelFilePath.placeholder2":{
+        "message": "请输入SD卡上的绝对路径",
+        "description": ""
+    },
+    "gui.modelExtension.modelName":{
+        "message": "模型名称",
+        "description": ""
+    },
+    "gui.modelExtension.modelAnchor":{
+        "message": "锚点",
+        "description": ""
+    },
+    "gui.modelExtension.modelAnchor.placeholder":{
+        "message": "请输入英文半角逗号分隔的数字串",
+        "description": ""
+    },
+    "gui.modelExtension.modelSamplesNum":{
+        "message": "样本数量",
+        "description": ""
+    },
+    "gui.modelExtension.model.categoryName":{
+        "message": "分类名称",
+        "description": ""
+    },
+    "gui.modelExtension.saveText":{
+        "message": "保存",
+        "description": ""
+    },
+    "gui.modelExtension.cancelText":{
+        "message": "取消",
+        "description": ""
+    },
+    "gui.modelExtension.preview":{
+        "message": "预览",
+        "description": ""
+    },
+    "gui.modelExtension.signout":{
+        "message": "退出",
+        "description": ""
+    },
+    "gui.modelExtension.modelsSave.prompt":{
+        "message": "有输入框未填，请在输入框内输入内容，或者删除不必要的模型与输入框",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.prompt":{
+        "message": "该模型已被引用，不可删除",
+        "description": ""
+    },
+    "gui.modelExtension.modelCategoryDelete.prompt":{
+        "message": "该分类已被引用，不可删除",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.tipLabel":{
+        "message": "提示",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.message":{
+        "message": "是否删当前模型？",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.okText":{
+        "message": "删除",
+        "description": ""
+    },
+    "gui.modelExtension.modelDelete.cancelText":{
+        "message": "取消",
+        "description": ""
+    },
+    "gui.modelExtension.modelsSave.succPrompt": {
+        "message": "保存成功",
+        "description": ""
+    },
+    "gui.modelExtension.modelsSave.isConnect": {
+        "message": "未连接设备",
+        "description": ""
+    },
+    "gui.modelExtension.saveFail": {
+        "message": "请填写技能名称",
+        "description": ""
+    },
+    "gui.modelExtension.cailbrateServos": {
+        "message": "校准舵机",
+        "description": ""
+    },
+    "gui.modelExtension.createSkill": {
+        "message": "创建技能",
+        "description": ""
+    },
+    "gui.modelExtension.skillName": {
+        "message": "技能名称:",
+        "description": ""
+    },
+    "gui.modelExtension.setMachineAngle": {
+        "message": "设置机器角度:",
+        "description": ""
+    },
+    "gui.projectPage.sampleCdc": {
+        "message": "示例程序"
+    },
+    "gui.projectPage.none": {
+        "message": "无"
+    },
+    "gui.projectPage.shareLink": {
+        "message": "分享链接"
+    },
+    "gui.projectPage.url": {
+        "message": "链接"
+    },
+    "gui.projectPage.cancel": {
+        "message": "取消"
+    },
+    "gui.projectPage.copyUrl": {
+        "message": "复制链接"
+    },
+    "gui.projectPage.copyUrlSuccessfully": {
+        "message": "复制成功"
+    },
+    "gui.projectPage.projectNotExist": {
+        "message": "项目课已失效"
+    }
+}

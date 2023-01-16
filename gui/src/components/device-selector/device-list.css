@@ -1,0 +1,102 @@
+@import "../../css/colors.css";
+@import "../../css/units.css";
+@import "../../css/z-index.css";
+
+.device-list-wrapper{
+    width: 100%;
+    min-height: 6.00125rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.714rem;
+    padding-left: 0.714rem;
+    padding-right: 0.714rem;
+    padding-bottom: $space;
+    overflow-y: auto;
+}
+
+.device-list-wrapper::-webkit-scrollbar {
+    width: 5px;
+    background-color: #eee;
+}
+  
+.device-list-wrapper::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+  
+.device-list-wrapper::-webkit-scrollbar-thumb {
+    background: #D2D7DE;
+    opacity: 0.5;
+    border-radius: 10px;
+}
+  
+.device-list-wrapper::-webkit-scrollbar-button:start {
+    background-size: 12px 12px;
+}
+  
+.device-list-wrapper::-webkit-scrollbar-button:end {
+    background-size: 12px 12px;
+}
+
+.device-wrapper {
+    /*
+        Our goal is to fit sprites evenly in a row without leftover space.
+        Flexbox's `space between` property gets us close, but doesn't flow
+        well when the # of items per row > 1 and less than the max per row.
+
+        Solving by explicitly calc'ing the width of each sprite. Setting
+        `border-box` simplifies things, because content, padding and
+        border-width all are included in the width, leaving us only to subtract
+        the left + right margins.
+
+        @todo: make room for the scrollbar
+    */
+    box-sizing: border-box;
+    /* width: calc((100% / $sprites-per-row ) - $space); */
+    width: auto;
+    margin: calc($space / 2);
+}
+
+.device {
+    width: 100%;
+}
+
+.raised {
+    background-color: rgba(81,221,212,0.4);
+    transition: all 0.25s ease;
+}
+
+.raised:hover {
+    background-color: rgba(81,221,212,0.4);
+    transform: scale(1.05);
+}
+
+.raised:hover {
+    animation-name: wiggle;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    background-color: rgba(81,221,212,0.4);
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(3deg) scale(1.05);}
+    25% {transform: rotate(-3deg) scale(1.05);}
+    50% {transform: rotate(5deg) scale(1.05);}
+    75% {transform: rotate(-2deg) scale(1.05);}
+    100% {transform: rotate(0deg) scale(1.05);}
+}
+
+.receivedBlocks {
+    animation: glowing 250ms;
+}
+
+@keyframes glowing {
+    10% { box-shadow: 0 0 10px #7fff1e; }
+    90% { box-shadow: 0 0 10px #7fff1e; }
+    100% { box-shadow: none; }
+}
+
+.placeholder > .device {
+    background: black;
+    filter: opacity(15%) brightness(0%);
+}

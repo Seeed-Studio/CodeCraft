@@ -1,0 +1,116 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - dev
+      
+jobs:
+  release:
+    name: build and release electron app
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, macos-12, ubuntu-latest]
+
+    steps:
+      - name: Check out git repository
+        uses: actions/checkout@v3.0.0
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3.0.0
+        with:
+          node-version: '14'
+
+      - name: Release for Windows
+        if: matrix.os == 'windows-latest'
+        run: |
+          cd C:\Users
+          mkdir Downloads
+          git clone https://github.com/Seeed-Projects/seeed-codecraft D:\Users\Downloads\ws
+          cd D:
+          cd D:\Users\Downloads\ws\blocks && npm install -y --unsafe-perm=true
+          cd D:\Users\Downloads\ws\blocks && npm run build
+          cd D:\Users\Downloads\ws\l10n && npm install -y --unsafe-perm=true
+          cd D:\Users\Downloads\ws\l10n && npm run build
+          cd D:\Users\Downloads\ws\vm && npm install -y --unsafe-perm=true
+          cd D:\Users\Downloads\ws\vm && npm run build
+          cd D:\Users\Downloads\ws\gui && npm run build-win
+          cd D:\Users\Downloads\ws\gui && Xcopy D:\Users\Downloads\ws\gui\build D:\Users\Downloads\ws\main\app\gui /E/H/C/I 
+          cd D:\Users\Downloads\ws\main\app && npm install -y --unsafe-perm=true && .\node_modules\.bin\electron-rebuild serialport
+          cd D:\Users\Downloads\ws\main && npm install -y --unsafe-perm=true && rm -rf build && npm run publish-win64
+          
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Release for MacOS arm
+        if: matrix.os == 'macos-latest'
+        run: |
+          echo $PWD
+          /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+          export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+          brew install python@2
+          export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
+          alias python=python2
+          export script_dir=$PWD
+          brew install python2
+          cd ${script_dir}/gui && npm install -y --unsafe-perm=true
+          cd ${script_dir}/blocks && npm install -y --unsafe-perm=true
+          cd ${script_dir}/blocks && npm run build
+          cd ${script_dir}/l10n && npm install -y --unsafe-perm=true
+          cd ${script_dir}/l10n && npm run build
+          cd ${script_dir}/vm && npm install -y --unsafe-perm=true
+          cd ${script_dir}/vm && npm run build
+          cd ${script_dir}/gui && npm run build-mac
+          cd ${script_dir}/gui && rm -rf ../main/app/gui && cp -r ./build ../main/app/gui
+          cd ${script_dir}/main/app && npm install -y --unsafe-perm=true && ./node_modules/.bin/electron-rebuild serialport
+          cd ${script_dir}/main && npm install -y --unsafe-perm=true && rm -rf build && npm run publish-mac
+          
+
+      - name: Release for MacOS x86
+        if: matrix.os == 'macos-12'  
+        run: |
+          echo $PWD
+          /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+          export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+          brew install python@2
+          export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
+          alias python=python2
+          export script_dir=$PWD
+          brew install python2
+          cd ${script_dir}/gui && npm install -y --unsafe-perm=true
+          cd ${script_dir}/blocks && npm install -y --unsafe-perm=true
+          cd ${script_dir}/blocks && npm run build
+          cd ${script_dir}/l10n && npm install -y --unsafe-perm=true
+          cd ${script_dir}/l10n && npm run build
+          cd ${script_dir}/vm && npm install -y --unsafe-perm=true
+          cd ${script_dir}/vm && npm run build
+          cd ${script_dir}/gui && npm run build-mac
+          cd ${script_dir}/gui && rm -rf ../main/app/gui && cp -r ./build ../main/app/gui
+          cd ${script_dir}/main/app && npm install -y --unsafe-perm=true && ./node_modules/.bin/electron-rebuild serialport
+          cd ${script_dir}/main && npm install -y --unsafe-perm=true && rm -rf build && npm run publish-mac
+          
+
+      - name: Release for Linux
+        if: matrix.os == 'ubuntu-latest'
+        run: |   
+          sudo apt update &&  sudo apt upgrade -y
+          sudo apt install python2.7 -y 
+          sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 2
+          sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 10
+          
+          echo $PWD
+          export script_dir=$PWD
+          cd ${script_dir}/gui && npm install -y --unsafe-perm=true
+          cd ${script_dir}/blocks && npm install -y --unsafe-perm=true
+          cd ${script_dir}/blocks && npm run build
+          cd ${script_dir}/l10n && npm install -y --unsafe-perm=true
+          cd ${script_dir}/l10n && npm run build
+          cd ${script_dir}/vm && npm install -y --unsafe-perm=true
+          cd ${script_dir}/vm && npm run build
+          cd ${script_dir}/gui && npm run build-mac
+          cd ${script_dir}/gui && rm -rf ../main/app/gui && cp -r ./build ../main/app/gui
+          cd ${script_dir}/main/app && npm install -y --unsafe-perm=true && ./node_modules/.bin/electron-rebuild serialport
+          cd ${script_dir}/main && npm install -y --unsafe-perm=true && rm -rf build && npm run publish-linux

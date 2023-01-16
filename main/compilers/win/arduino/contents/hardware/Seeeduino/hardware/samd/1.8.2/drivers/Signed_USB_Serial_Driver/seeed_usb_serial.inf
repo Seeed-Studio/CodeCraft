@@ -1,0 +1,211 @@
+; Copyright 2012 Blacklabel Development, Inc.
+
+[Strings]
+DriverPackageDisplayName="Seeed USB Driver"
+ManufacturerName="Seeed Technology Inc (www.seeed.cc)"
+ServiceName="USB RS-232 Emulation Driver"
+clio.bootloader.name="Seeeduino Clio bootloader"
+clio.sketch.name="Seeeduino Clio"
+lite.bootloader.name="Seeeduino Lite bootloader"
+lite.sketch.name="Seeeduino Lite"
+xadow.bootloader.name="Xadow bootloader"
+xadow.sketch.name="Xadow Clio"
+seeeduinoV4.name="Seeeduino V4"
+cloud.bootloader.name="Seeeduino Cloud bootloader"
+cloud.sketch.name="Seeeduino Cloud"
+atomNode.bootloader.name="Atom Node bootloader"
+atomNode.sketch.name="Atom Node"
+respeaker.sketch.name="ReSpeaker"
+respeaker.bootloader.name="ReSpeaker bootloader"
+rephone32u4.sketch.name="RePhone 2G 32u4"
+rephone32u4.bootloader.name="RePhone 2G 32u4 bootloader"
+rephoneSAMD.sketch.name="RePhone 2G SAMD21"
+rephoneSAMD.bootloader.name="RePhone 2G SAMD21 bootloader"
+zero.sketch.name="Seeeduino Zero"
+zero.bootloader.name="Seeeduino Zero bootloader"
+lorawan.sketch.name="Seeeduino LoRaWAN"
+lorawan.bootloader.name="Seeeduino LoRaWAN bootloader"
+groveTwoCore.sketch.name="Grove Two Core"
+groveTwoCore.bootloader.name="Grove Two Core bootloader"
+wioTraker.sketch.name="Wio Traker"
+wioTraker.bootloader.name="Wio Traker bootloader"
+lotusM0.sketch.name="Seeeduino Lotus V2 - Cortex-M0"
+lotusM0.bootloader.name="Seeeduino Lotus V2 - Cortex-M0 bootloader"
+CortexM0.sketch.name="Seeeduino Cortex-M0"
+CortexM0.bootloader.name="Seeeduino Cortex-M0 bootloader"
+wioLiteW600.sketch.name="Seeeduino Wio Lite W600"
+wioLiteW600.bootloader.name="Seeeduino Wio Lite W600 bootloader"
+wioBle.sketch.name="Seeeduino Wio Ble W600"
+wioBle.bootloader.name="Seeeduino Wio Ble W600 bootloader"
+femto.sketch.name="Seeeduino femto"
+femto.bootloader.name="Seeeduino femto bootloader"
+wioTerminal.sketch.name="Seeeduino Wio Terminal"
+wioTerminal.bootloader.name="Seeeduino Wio Terminal bootloader"
+XIAO.sketch.name="Seeeduino XIAO"
+XIAO.bootloader.name="Seeeduino XIAO bootloader"
+
+
+[DefaultInstall]
+CopyINF=seeed_usb_serial.inf
+
+[Version]
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Signature="$Windows NT$"
+Provider=%ManufacturerName%
+DriverPackageDisplayName=%DriverPackageDisplayName%
+CatalogFile=seeed_usb_serial.cat
+DriverVer=01/04/2013,1.0.0.0
+
+[Manufacturer]
+%ManufacturerName%=DeviceList, NTamd64, NTia64
+
+[DestinationDirs]
+FakeModemCopyFileSection=12
+DefaultDestDir=12
+
+[DeviceList]
+%clio.sketch.name%=DriverInstall, USB\VID_2886&PID_8001&MI_00
+%clio.bootloader.name%=DriverInstall, USB\VID_2886&PID_0001
+%lite.sketch.name%=DriverInstall, USB\VID_2886&PID_8002&MI_00
+%lite.bootloader.name%=DriverInstall, USB\VID_2886&PID_0002
+%xadow.sketch.name%=DriverInstall, USB\VID_2886&PID_8003&MI_00
+%xadow.bootloader.name%=DriverInstall, USB\VID_2886&PID_0003
+%seeeduinoV4.name%=DriverInstall, USB\VID_2886&PID_0004
+%cloud.sketch.name%=DriverInstall, USB\VID_2886&PID_8005&MI_00
+%cloud.bootloader.name%=DriverInstall, USB\VID_2886&PID_0005
+%atomNode.sketch.name%=DriverInstall, USB\VID_2886&PID_8025&MI_00
+%atomNode.bootloader.name%=DriverInstall, USB\VID_2886&PID_0025
+%respeaker.sketch.name%=DriverInstall, USB\VID_2886&PID_8005&MI_00
+%respeaker.bootloader.name%=DriverInstall, USB\VID_2886&PID_0005
+%rephone32u4.sketch.name%=DriverInstall, USB\VID_2886&PID_8006&MI_00
+%rephone32u4.bootloader.name%=DriverInstall, USB\VID_2886&PID_0006
+%rephoneSAMD.sketch.name%=DriverInstall, USB\VID_2886&PID_800A&MI_00
+%rephoneSAMD.bootloader.name%=DriverInstall, USB\VID_2886&PID_000A
+%zero.sketch.name%=DriverInstall, USB\VID_2886&PID_800B&MI_00
+%zero.bootloader.name%=DriverInstall, USB\VID_2886&PID_000B
+%lorawan.sketch.name%=DriverInstall, USB\VID_2886&PID_800C&MI_00
+%lorawan.bootloader.name%=DriverInstall, USB\VID_2886&PID_000C
+%groveTwoCore.sketch.name%=DriverInstall, USB\VID_2886&PID_800D&MI_00
+%groveTwoCore.bootloader.name%=DriverInstall, USB\VID_2886&PID_000D
+%wioTraker.sketch.name%=DriverInstall, USB\VID_2886&PID_800E&MI_00
+%wioTraker.bootloader.name%=DriverInstall, USB\VID_2886&PID_000E
+%lotusM0.sketch.name%=DriverInstall, USB\VID_2886&PID_8026&MI_00
+%lotusM0.bootloader.name%=DriverInstall, USB\VID_2886&PID_0026
+%CortexM0.sketch.name%=DriverInstall, USB\VID_2886&PID_8027&MI_00
+%CortexM0.bootloader.name%=DriverInstall, USB\VID_2886&PID_0027
+%wioLiteW600.sketch.name%=DriverInstall, USB\VID_2886&PID_8028&MI_00
+%wioLiteW600.bootloader.name%=DriverInstall, USB\VID_2886&PID_0028
+%wioBle.sketch.name%=DriverInstall, USB\VID_2886&PID_802A&MI_00
+%wioBle.bootloader.name%=DriverInstall, USB\VID_2886&PID_002A
+%femto.sketch.name%=DriverInstall, USB\VID_2886&PID_802C&MI_00
+%femto.bootloader.name%=DriverInstall, USB\VID_2886&PID_002C&MI_00
+%wioTerminal.sketch.name%=DriverInstall, USB\VID_2886&PID_802D&MI_00
+%wioTerminal.bootloader.name%=DriverInstall, USB\VID_2886&PID_002D&MI_00
+%XIAO.sketch.name%=DriverInstall, USB\VID_2886&PID_802F&MI_00
+%XIAO.bootloader.name%=DriverInstall, USB\VID_2886&PID_002F&MI_00
+
+[DeviceList.NTamd64]
+%clio.sketch.name%=DriverInstall, USB\VID_2886&PID_8001&MI_00
+%clio.bootloader.name%=DriverInstall, USB\VID_2886&PID_0001
+%lite.sketch.name%=DriverInstall, USB\VID_2886&PID_8002&MI_00
+%lite.bootloader.name%=DriverInstall, USB\VID_2886&PID_0002
+%xadow.sketch.name%=DriverInstall, USB\VID_2886&PID_8003&MI_00
+%xadow.bootloader.name%=DriverInstall, USB\VID_2886&PID_0003
+%seeeduinoV4.name%=DriverInstall, USB\VID_2886&PID_0004
+%cloud.sketch.name%=DriverInstall, USB\VID_2886&PID_8005&MI_00
+%cloud.bootloader.name%=DriverInstall, USB\VID_2886&PID_0005
+%atomNode.sketch.name%=DriverInstall, USB\VID_2886&PID_8025&MI_00
+%atomNode.bootloader.name%=DriverInstall, USB\VID_2886&PID_0025
+%respeaker.sketch.name%=DriverInstall, USB\VID_2886&PID_8005&MI_00
+%respeaker.bootloader.name%=DriverInstall, USB\VID_2886&PID_0005
+%rephone32u4.sketch.name%=DriverInstall, USB\VID_2886&PID_8006&MI_00
+%rephone32u4.bootloader.name%=DriverInstall, USB\VID_2886&PID_0006
+%rephoneSAMD.sketch.name%=DriverInstall, USB\VID_2886&PID_800A&MI_00
+%rephoneSAMD.bootloader.name%=DriverInstall, USB\VID_2886&PID_000A
+%zero.sketch.name%=DriverInstall, USB\VID_2886&PID_800B&MI_00
+%zero.bootloader.name%=DriverInstall, USB\VID_2886&PID_000B
+%lorawan.sketch.name%=DriverInstall, USB\VID_2886&PID_800C&MI_00
+%lorawan.bootloader.name%=DriverInstall, USB\VID_2886&PID_000C
+%groveTwoCore.sketch.name%=DriverInstall, USB\VID_2886&PID_800D&MI_00
+%groveTwoCore.bootloader.name%=DriverInstall, USB\VID_2886&PID_000D
+%wioTraker.sketch.name%=DriverInstall, USB\VID_2886&PID_800E&MI_00
+%wioTraker.bootloader.name%=DriverInstall, USB\VID_2886&PID_000E
+%lotusM0.sketch.name%=DriverInstall, USB\VID_2886&PID_8026&MI_00
+%lotusM0.bootloader.name%=DriverInstall, USB\VID_2886&PID_0026
+%CortexM0.sketch.name%=DriverInstall, USB\VID_2886&PID_8027&MI_00
+%CortexM0.bootloader.name%=DriverInstall, USB\VID_2886&PID_0027
+%wioLiteW600.sketch.name%=DriverInstall, USB\VID_2886&PID_8028&MI_00
+%wioLiteW600.bootloader.name%=DriverInstall, USB\VID_2886&PID_0028
+%wioBle.sketch.name%=DriverInstall, USB\VID_2886&PID_802A&MI_00
+%wioBle.bootloader.name%=DriverInstall, USB\VID_2886&PID_002A
+%femto.sketch.name%=DriverInstall, USB\VID_2886&PID_802C&MI_00
+%femto.bootloader.name%=DriverInstall, USB\VID_2886&PID_002C&MI_00
+%wioTerminal.sketch.name%=DriverInstall, USB\VID_2886&PID_802D&MI_00
+%wioTerminal.bootloader.name%=DriverInstall, USB\VID_2886&PID_002D&MI_00
+%XIAO.sketch.name%=DriverInstall, USB\VID_2886&PID_802F&MI_00
+%XIAO.bootloader.name%=DriverInstall, USB\VID_2886&PID_002F&MI_00
+
+[DeviceList.NTia64]
+%clio.sketch.name%=DriverInstall, USB\VID_2886&PID_8001&MI_00
+%clio.bootloader.name%=DriverInstall, USB\VID_2886&PID_0001
+%lite.sketch.name%=DriverInstall, USB\VID_2886&PID_8002&MI_00
+%lite.bootloader.name%=DriverInstall, USB\VID_2886&PID_0002
+%xadow.sketch.name%=DriverInstall, USB\VID_2886&PID_8003&MI_00
+%xadow.bootloader.name%=DriverInstall, USB\VID_2886&PID_0003
+%seeeduinoV4.name%=DriverInstall, USB\VID_2886&PID_0004
+%cloud.sketch.name%=DriverInstall, USB\VID_2886&PID_8005&MI_00
+%cloud.bootloader.name%=DriverInstall, USB\VID_2886&PID_0005
+%atomNode.sketch.name%=DriverInstall, USB\VID_2886&PID_8025&MI_00
+%atomNode.bootloader.name%=DriverInstall, USB\VID_2886&PID_0025
+%respeaker.sketch.name%=DriverInstall, USB\VID_2886&PID_8005&MI_00
+%respeaker.bootloader.name%=DriverInstall, USB\VID_2886&PID_0005
+%rephone32u4.sketch.name%=DriverInstall, USB\VID_2886&PID_8006&MI_00
+%rephone32u4.bootloader.name%=DriverInstall, USB\VID_2886&PID_0006
+%rephoneSAMD.sketch.name%=DriverInstall, USB\VID_2886&PID_800A&MI_00
+%rephoneSAMD.bootloader.name%=DriverInstall, USB\VID_2886&PID_000A
+%zero.sketch.name%=DriverInstall, USB\VID_2886&PID_800B&MI_00
+%zero.bootloader.name%=DriverInstall, USB\VID_2886&PID_000B
+%lorawan.sketch.name%=DriverInstall, USB\VID_2886&PID_800C&MI_00
+%lorawan.bootloader.name%=DriverInstall, USB\VID_2886&PID_000C
+%groveTwoCore.sketch.name%=DriverInstall, USB\VID_2886&PID_800D&MI_00
+%groveTwoCore.bootloader.name%=DriverInstall, USB\VID_2886&PID_000D
+%wioTraker.sketch.name%=DriverInstall, USB\VID_2886&PID_800E&MI_00
+%wioTraker.bootloader.name%=DriverInstall, USB\VID_2886&PID_000E
+%lotusM0.sketch.name%=DriverInstall, USB\VID_2886&PID_8026&MI_00
+%lotusM0.bootloader.name%=DriverInstall, USB\VID_2886&PID_0026
+%CortexM0.sketch.name%=DriverInstall, USB\VID_2886&PID_8027&MI_00
+%CortexM0.bootloader.name%=DriverInstall, USB\VID_2886&PID_0027
+%wioLiteW600.sketch.name%=DriverInstall, USB\VID_2886&PID_8028&MI_00
+%wioLiteW600.bootloader.name%=DriverInstall, USB\VID_2886&PID_0028
+%wioBle.sketch.name%=DriverInstall, USB\VID_2886&PID_802A&MI_00
+%wioBle.bootloader.name%=DriverInstall, USB\VID_2886&PID_002A
+%femto.sketch.name%=DriverInstall, USB\VID_2886&PID_802C&MI_00
+%femto.bootloader.name%=DriverInstall, USB\VID_2886&PID_002C&MI_00
+%wioTerminal.sketch.name%=DriverInstall, USB\VID_2886&PID_802D&MI_00
+%wioTerminal.bootloader.name%=DriverInstall, USB\VID_2886&PID_002D&MI_00
+%XIAO.sketch.name%=DriverInstall, USB\VID_2886&PID_802F&MI_00
+%XIAO.bootloader.name%=DriverInstall, USB\VID_2886&PID_002F&MI_00
+
+[DriverInstall]
+include=mdmcpq.inf,usb.inf
+CopyFiles = FakeModemCopyFileSection
+AddReg=DriverAddReg
+
+[DriverAddReg]
+HKR,,DevLoader,,*ntkern 
+HKR,,NTMPDriver,,usbser.sys 
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[DriverInstall.Services]
+include=mdmcpq.inf
+AddService=usbser, 0x00000002, DriverService
+
+[DriverService]
+DisplayName=%ServiceName%
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%12%\usbser.sys
+LoadOrderGroup=Base
+

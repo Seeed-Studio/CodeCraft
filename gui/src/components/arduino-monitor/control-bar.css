@@ -1,0 +1,83 @@
+.control-bar {
+    color: #717582;
+}
+
+.cb-box {
+    display: block;
+    float: left;
+    user-select: none;
+    height: 1.2rem;
+    /* padding-top: 0.5rem; */
+    font-size: 0.8rem;
+}
+
+.cb {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 10px;
+    margin-left: 1rem;
+    border: 2px solid #E5E5ED;
+    border-radius: 0.3rem;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.cb-checked {
+    border: 2px solid rgb(93, 227, 182);
+    background: url(./right.svg) rgb(93, 227, 182) no-repeat 0;
+}
+
+/* select */
+
+.slt-box {
+    display: block;
+    float: right;
+    margin-right: 1rem;
+    position: relative;
+    color: #717582;
+    box-sizing: border-box;
+}
+
+.select {
+    font-size: 0.75rem;
+    border-radius: 0.75rem;
+    border: 2px solid rgba(222, 227, 232, 1);
+    background: rgba(255, 255, 255, 1);
+    /* width: 8rem; */
+    line-height: 1.5rem;
+    padding: 0 2rem 0 1rem;
+}
+
+.slt-box:after {
+    content: "";
+    background-image: url(./icon_sadown@2x.png);
+    background-size: 0.63rem 0.38rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1rem;
+    height: 1.5rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+/* bt */
+
+.bt-box {
+    float: right;
+}
+
+.clear-bt {
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    padding: 0 1rem;
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(222, 227, 232, 1);
+    border-radius: 0.75rem;
+    cursor: pointer;
+    user-select: none;
+    color: #717582;
+}

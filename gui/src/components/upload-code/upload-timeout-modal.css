@@ -1,0 +1,174 @@
+/* default */
+
+.upload-timeout-box {
+  width: 23rem;
+  min-height: 15.56rem;
+  padding: 0 1.4rem 1.5rem;
+}
+
+.center-box {
+  text-align: center;
+}
+
+.icon {
+  display: inline-block;
+  margin-top: 1.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+}
+
+.icon-Timeout {
+  background-image: url(./icon-fail.png);
+}
+
+.title {
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  color: rgba(113, 117, 130, 1);
+}
+
+.bt {
+  margin-top: 1.25rem;
+  padding: 0 1.5rem;
+}
+
+.prompt-title {
+  font-size: 0.75rem;
+  color: #ABB9C6;
+  margin-top: 1.87rem;
+}
+
+.prompt-box {
+  width: 20.5rem;
+  border: 2px solid rgba(229, 229, 237, 1);
+  border-radius: 10px;
+  margin-top: 10px;
+  background: #E8EEF3;
+  text-align: left;
+  padding: 0.75rem 0.75rem;
+}
+
+.prompt-text {
+  color: #717582;
+  font-size: 14px;
+}
+
+/* grovezero */
+
+.grovezero-upload-succ-box {
+  width: 364px;
+  height: 310px;
+}
+
+.grovezero-title {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #717582;
+}
+
+.grovezero-prompt {
+  color: #ABB9C6;
+  font-size: 12px;
+  margin-top: 1.25rem;
+  padding: 0 15px;
+}
+
+.grovezero-icon {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 9.68rem;
+  height: 7.6rem;
+  background-image: url(./icon-succ-grovezero.png);
+}
+
+.grovezero-bt {
+  margin-top: 1.25rem;
+}
+
+.prompt-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgba(232, 238, 243, 1);
+  border: 2px solid rgba(229, 229, 237, 1);
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+  text-align: left;
+}
+
+.upload-timeout-content {
+  width: 500px;
+  border-radius: 6px;
+}
+
+.upload-timeout-title {
+  width: 31.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: rgba(42, 140, 255, 1);
+  border-radius: 6px 6px 0px 0px;
+}
+
+.upload-timeout-title>span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
+  margin: 0 12px;
+}
+
+.upload-timeout-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 39px 65px 26px 65px;
+}
+
+.upload-timeout-confirm {
+  width: 300px;
+  height: 36px;
+  line-height: 36px;
+  background: rgba(42, 140, 255, 1);
+  border-radius: 4px;
+  margin: 42px 95px 20px 100px;
+  font-size: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.upload-timeout-splitline {
+  width: 100%;
+  height: 1px;
+  border: 1px solid rgba(204, 204, 204, 1);
+  opacity: 0.4;
+}
+
+.upload-timeout-prompt {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: rgba(85, 85, 85, 1);
+}
+
+.upload-timeout-propmt-label {
+  margin: 6px 0px;
+  font-size: 12px;
+  color: rgba(136, 136, 136, 1);
+}
+
+.upload-timeout-propmt-text {
+  margin: 0px;
+  font-size: 12px;
+  color: rgba(136, 136, 136, 1);
+}
+
+.upload-timeout-message {
+  text-align: center;
+  font-size: 16px;
+  color: rgba(51, 51, 51, 1);
+  cursor: pointer;
+}

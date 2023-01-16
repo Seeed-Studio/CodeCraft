@@ -1,0 +1,42 @@
+#######################################
+# Syntax Coloring Map For Shieldbot
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+readS1	KEYWORD2
+readS2	KEYWORD2
+readS3	KEYWORD2
+readS4	KEYWORD2
+readS5	KEYWORD2
+setMaxSpeed	KEYWORD2
+setMaxLeftSpeed	KEYWORD2
+setMaxRightSpeed	KEYWORD2
+rightMotor	KEYWORD2
+leftMotor	KEYWORD2
+drive	KEYWORD2
+forward	KEYWORD2
+backward	KEYWORD2
+stop	KEYWORD2
+stopRight	KEYWORD2
+stopLeft	KEYWORD2
+fastStop	KEYWORD2
+fastStopRight	KEYWORD2
+fastStopLeft	KEYWORD2
+
+#######################################
+# Instances (KEYWORD1)
+#######################################
+
+Shieldbot	KEYWORD1
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+

@@ -1,0 +1,17 @@
+.remindSaveModal {
+  width: 320px;
+  text-align: center;
+  padding: 0 20px 25px;
+}
+
+.remindText {
+  margin: 10px 0 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #717582;
+}
+
+.remindBtn {
+  min-width: 100px !important;
+  margin-top: 20px !important;
+}

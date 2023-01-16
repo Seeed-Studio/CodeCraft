@@ -1,0 +1,20 @@
+{
+    "name": "ExtFlashLoader",
+    "description": "Downloads application binary to external flash memory connected to ATSAMD51 MCU and run it.",
+    "keywords": "WioTerminal, ATSAMD51",
+    "authors": {
+      "name": "Kenta IDA",
+      "url": "https://github.com/ciniml/",
+      "maintainer": true
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ciniml/ExtFlashLoader"
+    },
+    "version": "0.1.2",
+    "framework": "arduino",
+    "platforms": "atmelsam",
+    "build": {
+      "libArchive": false
+    }
+  }

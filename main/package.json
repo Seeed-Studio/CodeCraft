@@ -1,0 +1,25 @@
+{
+  "name": "codecraft-lite",
+  "version": "1.0.0",
+  "repository": "",
+  "author": "TinkerGen <wenhao.chen@chaihuo.org>",
+  "license": "u9CMTBxDPHPzXtPzvVw",
+  "scripts": {
+    "start": "webpack && cd app && electron .",
+    "publish": "webpack && cd app && electron-builder",
+    "publish-win64": "webpack && cd app && electron-builder --win --x64",
+    "publish-win32": "webpack && cd app && electron-builder --win --ia32",
+    "publish-mac": "webpack && cd app && electron-builder --mac",
+    "publish-linux": "webpack && cd app && electron-builder --linux deb"
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "electron": "^11.5.0",
+    "electron-builder": "^23.0.2",
+    "electron-regedit": "^1.0.6",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^3.0.1"
+  }
+}

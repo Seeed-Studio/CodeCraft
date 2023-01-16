@@ -1,0 +1,115 @@
+.outlined-button {
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  align-items: center;
+  user-select: none;
+  text-align: center;
+  padding: 0px 1.5rem;
+  border-radius: 1.6rem;
+  font-weight: 500;
+  font-size: 0.88rem;
+}
+
+.defaultSize {
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.smallSize {
+  height: 1.88rem;
+  line-height: 1.88rem;
+  padding: 0px 2rem;
+}
+
+.icon {
+  height: 1.5rem;
+  vertical-align: middle;
+}
+
+[dir="ltr"] .icon {
+  margin-right: .5rem;
+  float: left;
+  margin-top: 7px
+}
+
+[dir="rtl"] .icon {
+  margin-left: .5rem;
+  float: right;
+  margin-top: 7px
+}
+
+.content {
+  display: inline;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  box-shadow: 0px 4px 10px 0px rgba(81, 221, 212, 0.5);
+  background: linear-gradient(90deg, rgba(74, 156, 240, 1) 0%, rgba(81, 221, 212, 1) 100%);
+}
+
+.btn-primary:hover {
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  box-shadow: 0px 4px 10px 0px rgba(81, 221, 212, 0.5);
+  background: linear-gradient(90deg, rgba(65, 136, 209, 1) 0%, rgba(71, 192, 184, 1) 100%);
+}
+
+.btn-primary:active {
+  color: rgba(255, 255, 255, 1);
+  opacity: 0.7;
+  box-shadow: none;
+  background: linear-gradient(90deg, rgba(56, 117, 179, 1) 0%, rgba(60, 162, 155, 1) 100%);
+}
+
+.btn-default {
+  color: rgba(171, 185, 198, 1);
+  opacity: 1;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.btn-default:hover {
+  color: rgba(171, 185, 198, 1);
+  opacity: 1;
+  background: rgba(232, 239, 247, 1);
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.btn-default:active {
+  color: rgba(171, 185, 198, 1);
+  opacity: 0.7;
+  box-shadow: none;
+  background: rgba(213, 222, 233, 1);
+}
+
+.btn-disabled {
+  background: rgba(232, 239, 247, 1);
+  box-shadow: none;
+  color: #ABB9C6;
+}
+
+.btn-disabled:hover {
+  background: rgba(232, 239, 247, 1);
+  box-shadow: none;
+  color: #ABB9C6;
+  cursor: not-allowed;
+}
+
+.btn-disabled:active {
+  background: rgba(232, 239, 247, 1);
+  box-shadow: none;
+  color: #ABB9C6;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+
+.btnWarning {
+  color: #fff;
+  background: rgba(255, 118, 134, 1);
+  box-shadow: 0px 4px 16px 0px rgba(255, 118, 134, 0.5);
+}

@@ -1,0 +1,87 @@
+@import "../../css/colors.css";
+@import "../../css/units.css";
+@import "../../css/z-index.css";
+.physical-device-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-top: calc($space / 2);
+  padding-left: calc($space / 2);
+  padding-right: calc($space / 2);
+  padding-bottom: $space;
+  overflow-y: auto;
+}
+
+.physical-device-icon {
+  width: 8.19rem;
+  height: 5.5rem;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.physical-device-item {
+  display: flex;
+  flex-direction: column;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  color: $text-primary;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $ui-black-transparent;
+  border-radius: 10px;
+  margin: $space;
+  text-align: center;
+  cursor: pointer;
+  /* transition: 0.25s ease-out; */
+  user-select: none;
+  touch-action: none;
+  background: #fff;
+  position: relative;
+  width: 12.5rem;
+  height: 12.5rem;
+  overflow: hidden;
+}
+
+.imgContainer {
+  width: 100%;
+  height: 9.13rem;
+  line-height: 9.13rem;
+  background: rgba(242, 247, 251, 1);
+}
+
+.hasSelected {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #4A9CF0;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 0 0 10px 0;
+}
+
+.physical-device-item:hover {
+  border-color: rgba(81, 221, 212, 1);
+}
+
+.physical-device-item-disabled {
+  border-color: transparent;
+  cursor: not-allowed;
+}
+
+.physical-device-item-disabled:hover {
+  border-color: transparent;
+}
+
+.deviceName {
+  height: 3.38rem;
+  line-height: 3.38rem;
+  text-align: center;
+}
+
+.deviceNameText {
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

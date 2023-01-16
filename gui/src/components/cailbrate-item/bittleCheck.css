@@ -1,0 +1,328 @@
+.content{
+    width: 50%;
+    height: 28rem;
+    background-color: #D5DEE9;
+    position: absolute;
+    margin: 0 25%;
+    margin-top: 5rem;
+}
+.preview{
+    position: absolute;
+    top: 10.5rem;
+    z-index: 40;
+}
+.checkBody{
+    position: absolute;
+    top: 7.5rem;
+    left: 25rem;
+    z-index: 40;
+}
+.checkHead{
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+    position: absolute;
+    top: 5.625rem;
+    left: 18.75rem;
+    transform-origin:right bottom;
+    z-index: 40;
+}
+.checkRightForeleg{
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+    cursor: pointer;
+    width: 25rem;
+    height: 13.625rem;
+    top: 12.81rem;
+    left: 12.81rem;
+    position: absolute;
+    z-index: 99;
+    transform-origin:52% 0;
+}
+.checkLeftForeleg{
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+    cursor: pointer;
+    position: absolute;
+
+    width: 25rem;
+    height: 13.625rem;
+    top:13.125rem;
+    left: 11.5625rem;
+    transform-origin:52% 0;
+    z-index: 49;
+}
+.checkLeftHindleg{
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+    cursor: pointer;
+    position: absolute;
+
+    width: 25rem;
+    height: 13.625rem;
+    top: 12.525rem;
+    left: 25rem;
+    transform-origin:52% 0;
+    z-index: 49;
+
+}
+.checkRightHindleg{
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+    cursor: pointer;
+    position: absolute;
+
+    width: 25rem;
+    height: 13.625rem;
+    top: 12.625rem;
+    left: 23.75rem;
+    transform-origin:52% 0;
+    z-index: 99;
+}
+.rightForelegUpperNum{
+    position: absolute;
+    top:6.25rem;
+    left: 50%;
+    z-index: 89;
+    transform: rotate(90deg);
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+    transform-origin: center 10%;
+
+}
+.rightForelegLowerNum{
+    position: absolute;
+    top:0;
+    left: 50%;
+    z-index: 79;
+    transform-origin: center 10%;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+    transform:rotate(0deg);
+}
+.leftForelegUpperNum{
+    position: absolute;
+    transform: rotate(90deg);
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+    top:3.125rem;
+    left:50%;
+    z-index:39;
+    transform-origin: center 10%;
+}
+.leftForelegLowerNum{
+    position: absolute;
+    top:0;
+    left: 50%;
+    z-index:29;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+    transform-origin: center 10%;
+    transform: rotate(0deg);
+
+}
+.leftHindlegLowerNum{
+    position: absolute;
+    top:0;
+    right: 50%;
+    z-index:29;
+    transform-origin: center 10%;
+    transform:rotate(0deg);
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+}
+.leftHindlegUpperNum{
+    position: absolute;
+    top: 3.75rem;
+    left: 42%;
+    z-index:39;
+    transform-origin: center 10%;
+    transform:rotate(90deg);
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+}
+.rightHindlegUpperNum{
+    position: absolute;
+    top: 6.25rem;
+    right: 42%;
+    transform:rotate(90deg);
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+    transform-origin: center 10%;
+    z-index: 89;
+}
+.rightHindlegLowerNum{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform:rotate(0deg);
+    z-index: 79;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s; 
+    transform-origin: center 10%;
+}
+.checkHeadNumber{
+    width: 1.83rem;
+    height: 1.83rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 0.05rem dashed #EB5656;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #E45757;
+    line-height: 1.83rem;
+    text-align: center;
+    position: absolute;
+    top: 10.5rem;
+    left: 25.5rem;
+    z-index: 9999;
+}
+.rightForelegLowerNumber{
+    width: 1.83rem;
+    height: 1.83rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 0.05rem dashed #EB5656;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #E45757;
+    line-height: 1.83rem;
+    text-align: center;
+    position: absolute;
+    top: 13rem;
+    left: 24.5rem;
+    z-index: 9999;
+}
+.rightForelegUpperNumber{
+    width: 1.83rem;
+    height: 1.83rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 0.05rem dashed #EB5656;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #E45757;
+    line-height: 1.83rem;
+    text-align: center;
+    position: absolute;
+    top: 16rem;
+    left: 25.5rem;
+    z-index: 9999;
+}
+.leftForelegLowerNumber{
+    width: 1.83rem;
+    height: 1.83rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 0.05rem dashed #EB5656;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #E45757;
+    line-height: 1.83rem;
+    text-align: center;
+    position: absolute;
+    top: 12.5rem;
+    left: 26rem;
+    z-index: 9999;
+}
+.leftForelegUpperNumber{
+    width: 1.83rem;
+    height: 1.83rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 0.05rem dashed #EB5656;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #E45757;
+    line-height: 1.83rem;
+    text-align: center;
+    position: absolute;
+    top: 18rem;
+    left: 29rem;
+    z-index: 9999;
+}
+.leftHindlegLowerNumber{
+    width: 1.83rem;
+    height: 1.83rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 0.05rem dashed #EB5656;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #E45757;
+    line-height: 1.83rem;
+    text-align: center;
+    position: absolute;
+    top: 13rem;
+    left: 35.5rem;
+    z-index: 9999;
+}
+.leftHindlegUpperNumber{
+    width: 1.83rem;
+    height: 1.83rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 0.05rem dashed #EB5656;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #E45757;
+    line-height: 1.83rem;
+    text-align: center;
+    position: absolute;
+    top: 16.5rem;
+    left: 36.5rem;
+    z-index: 9999;
+}
+.rightHindlegLowerNumber{
+    width: 1.83rem;
+    height: 1.83rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 0.05rem dashed #EB5656;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #E45757;
+    line-height: 1.83rem;
+    text-align: center;
+    position: absolute;
+    top: 12.5rem;
+    left: 37rem;
+    z-index: 9999;
+}
+.rightHindlegUpperNumber{
+    width: 1.83rem;
+    height: 1.83rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 0.05rem dashed #EB5656;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #E45757;
+    line-height: 1.83rem;
+    text-align: center;
+    position: absolute;
+    top: 18rem;
+    left: 39.5rem;
+    z-index: 9999;
+}

@@ -1,0 +1,100 @@
+@import "../../css/z-index.css";
+
+.modal {
+    position: absolute;
+    height: 100%;
+    z-index: 100002;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #D5DEE9;
+}
+.top {
+    width: 100%;
+    height: 84px;
+    display: flex;
+    background:rgba(242,247,251,1);
+}
+
+.topItem {
+    width:33.3%;
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    width:100%;
+    line-height: 85px;
+    height: 100%;
+    font-size:24px;
+    font-weight:500;
+    color:rgba(113,117,130,1);
+}
+
+.topRight {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closeBtn {
+    width: 94px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeIcon {
+    width: 18px;
+    height: 18px;
+}
+/* .cancel{
+    position: absolute;
+    top: 0.2rem;
+    right: 0;
+    z-index: 99;
+} */
+.create-skill-bottom{
+    /* position: fixed; */
+    /* bottom: 0; */
+    width: 100%;
+    height: 84px;
+    background: rgba(0, 0, 0, 0.3);
+    /* opacity: 0.3; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cancel{
+    width: 10.13rem;
+    height: 2.63rem;
+    background: #E8EFF7;
+    border-radius: 1.5rem;
+    border: none;
+    opacity: 1;
+    font-size: 1.75rem;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #ABB9C6;
+    line-height: 1.42rem;
+    margin-right: 2rem;
+    cursor: pointer;
+
+}
+.sumbit{
+    width: 10.13rem;
+    height: 2.63rem;
+    background: #51DDD4;
+    box-shadow: 0rem 0rem 0rem 0rem rgba(81, 221, 212, 0.6);
+    border-radius: 1.5rem;
+    font-size: 1.75rem;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    border: none;
+    opacity: 1;
+    line-height: 1.42rem;
+    cursor: pointer;
+
+}

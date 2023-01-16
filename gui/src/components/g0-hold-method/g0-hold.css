@@ -1,0 +1,49 @@
+.holdpage-wrap{
+  margin: 4px 12px;
+  padding: 16px 10px;
+  background:rgba(242,247,251,1);
+  border-radius:1rem;
+}
+
+.tip-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.tip-title-label{
+  font-size:0.88rem;
+  font-weight:500;
+  color:#FFC033;
+}
+
+.tip-title{
+  font-size:0.88rem;
+  font-weight:400;
+  color:rgba(113,117,130,1);
+  margin-top: 0.5rem;
+}
+
+.tip-message{
+  font-size:0.75rem;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  color:rgba(173,180,208,1);
+  margin-top: 0.5rem;
+}
+
+.tip-image-pane{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.tip-image-pane div{
+  height: auto;
+  flex-grow: 1;
+}
+
+.tip-image-pane div img{
+  width: 100%;
+  height: auto;
+}

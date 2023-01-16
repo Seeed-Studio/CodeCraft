@@ -1,0 +1,70 @@
+.meetTroubleContainer {
+  width: 27rem;
+  height: 12.8rem;
+  margin: 10px auto;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(232, 239, 247, 1);
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  overflow: auto;
+  cursor: default;
+}
+
+.meetTroubleText {
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  padding-left: 20px;
+  position: relative;
+  color: #717582;
+}
+
+.meetTroubleText1 {
+  color: #878787;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+  margin: 0 20px;
+}
+
+.downDriveLink {
+  color: #4A9CF0;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+  margin-left: 20px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.downDriveLink1 {
+  color: #4A9CF0;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.line {
+  margin: 6px 20px;
+  border-bottom: 1px solid #E8EFF7;
+}
+
+.arduinoContainer {
+  margin-top: 0.8rem;
+}
+
+.documentLink {
+  float: right;
+  font-size: 0.75rem;
+  margin-right: 20px;
+}
+
+.toDocumentLink {
+  color: #4A9CF0;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}

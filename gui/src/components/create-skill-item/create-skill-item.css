@@ -1,0 +1,175 @@
+.createSkillItem{
+    width: 100%;
+    height: calc(100vh - 84px);
+    position: relative;
+    overflow: auto;
+}
+.createSkillInfo{
+    display: flex;
+    margin: 1rem 0;
+}
+.skillItem{
+    height: calc(100% - 84px);
+    overflow: auto;
+}
+.createSkillInfoInput{
+    width: 56.13rem;
+    height: 18rem;
+    margin: 0 auto;
+    background-color: #F2F7FB;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    z-index: 999999;
+    margin-bottom: 1rem;
+}
+.createSkillItemInput{
+    display: flex;
+    margin-right: 0.7rem;
+    align-items: center;
+	color: #717582;
+}
+.skill-name-info{
+    width: 56.31rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    border: 0.06rem solid #D5DEE9;
+
+}
+.skill-name-title{
+    font-size: 0.88rem;
+    font-family: Source Han Sans CN;
+    font-weight: 500;
+    color: #717582;
+    width: 9rem;
+    text-align: right;
+    padding-right: 1rem;
+}
+.skill-name-input{
+    width: 22.5rem;
+    height: 1.88rem;
+    background: #FFFFFF;
+    /* border: 0px solid #D5DEE9; */
+    border-radius: 0.25rem;
+    z-index: 9999999;
+	color: #717582;
+	border: 1px solid rgba(213, 222, 233, 0.7);
+}
+.skill-angle-info{
+    display: flex;
+    align-items: baseline;
+    height: 13.5rem;
+    overflow-y: scroll;
+}
+.skill-angle-name{
+    font-size: 0.88rem;
+    font-family: Source Han Sans CN;
+    font-weight: 500;
+    color: #717582;
+    width: 9rem;
+    text-align: right;
+    padding-right: 1rem;
+}
+.item-title{
+    width: 0.44rem;
+    /* height: 0.69rem; */
+    font-size: 0.88rem;
+    font-family: Source Han Sans CN;
+    font-weight: 500;
+    color: #E35C5C;
+    /* margin-left: 0.5rem; */
+    margin-right: 0.8rem;
+}
+.item-input{
+    width: 2.69rem;
+    height: 1.63rem;
+    background: #FFFFFF;
+    border: 1px solid rgba(213, 222, 233, 0.7);
+    border-radius: 0.25rem;
+    text-align: center;
+	color: #717582;
+}
+.del{
+    width: 1.38rem;
+    height: 1.38rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+
+}
+.add{
+    width: 1.38rem;
+    height: 1.38rem;
+    cursor: pointer;
+
+}
+.create-skill-bottom{
+    /* position: fixed; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 84px;
+    background: rgba(0, 0, 0, 0.3);
+    /* opacity: 0.3; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cancel{
+    width: 10.13rem;
+    height: 2.63rem;
+    background: #E8EFF7;
+    border-radius: 1.5rem;
+    border: none;
+    opacity: 1;
+    font-size: 1.45rem;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #ABB9C6;
+    line-height: 1.42rem;
+    margin-right: 2rem;
+    cursor: pointer;
+
+}
+.sumbit{
+    width: 10.13rem;
+    height: 2.63rem;
+    background: #51DDD4;
+    box-shadow: 0rem 0rem 0rem 0rem rgba(81, 221, 212, 0.6);
+    border-radius: 1.5rem;
+    font-size: 1.45rem;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    border: none;
+    opacity: 1;
+    line-height: 1.42rem;
+    cursor: pointer;
+
+}
+.preview{
+    width: 10.13rem;
+    height: 2.63rem;
+    background: #4B9FF0;
+    box-shadow: 0rem 0rem 0rem 0rem rgba(81, 221, 212, 0.6);
+    border-radius: 1.5rem;
+    font-size: 1.45rem;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    border: none;
+    opacity: 1;
+    line-height: 1.42rem;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+/* 谷歌 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+/* 火狐 */
+input{
+    -moz-appearance:textfield;
+}

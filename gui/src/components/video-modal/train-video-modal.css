@@ -1,0 +1,131 @@
+.modal {
+    position: absolute;
+    z-index: 208;
+    width: 280px;
+    height: 388px;
+    right: 50px;
+    top: 80px;
+    background: rgba(255,255,255,1);
+    box-shadow:0px 6px 10px 0px rgba(0,48,104,0.1);
+    border-radius:10px;
+    user-select: none;
+}
+
+.top {
+    width: 100%;
+    height: 56px;
+    /* background:rgba(242,247,251,1); */
+    background: rgba(255,255,255,1);
+}
+
+.title {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    line-height: 56px;
+    height: 100%;
+    font-size:16px;
+    font-weight:500;
+    color:rgba(113,117,130,1);
+}
+
+.topRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 58px;
+    height: 34px;
+    display: flex;
+}
+
+.itemBtn {
+    width: 29px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.closeIcon {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.minimizeIcon {
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.body {
+    width: 280px;
+    height: 332px;
+}
+
+.center {
+    width: 100%;
+    height: calc(100vh - 167px);
+    position: relative;
+    background: rgba(242,247,251,1);
+    display: flex;
+}
+
+
+.cameraContainer {
+    width: 100%;
+    height: 236px;
+}
+
+.camera {
+    margin: 0 10px 10px 10px;
+    width: 260px;
+    height: 226px;
+    border-radius:5px;
+}
+
+.audioContainer {
+    width:260px;
+    height:48px;
+    background:rgba(45,61,85,1);
+    border-radius:5px;
+    margin: 0 10px 10px 10px;
+}
+
+.progress {
+    width: 260px;
+    height: 28px;
+    margin: 0 10px 10px 10px;
+    border-radius:5px;
+    position: relative;
+    display: flex;
+}
+
+.blue {
+    height: 100%;
+    background:rgba(81,221,212,1);
+    border-radius:5px 0 0 5px;
+}
+
+.gray {
+    height: 100%;
+    background:rgba(232,238,243,1);
+    border-radius:0 5px 5px 0;
+}
+
+.allBorderRadius {
+    border-radius:5px 5px 5px 5px;
+}
+
+.confidence {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 28px;
+    line-height: 28px;
+    font-size:16px;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+}
+
