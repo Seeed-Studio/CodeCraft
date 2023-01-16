@@ -24,22 +24,6 @@ export default (Blockly) => {
         932, //# Bb5, 36
     ];
 
-//     const ei_printfDefine = function () {
-//         Blockly.Arduino.define_fun['ei_printf'] =
-// `void ei_printf(const char *format, ...) {
-//     static char print_buf[1024] = { 0 };
-    
-//     va_list args;
-//     va_start(args, format);
-//     int r = vsnprintf(print_buf, sizeof(print_buf), format, args);
-//     va_end(args);
-    
-//     if (r > 0) {
-//         Serial.write(print_buf);
-//     }
-// }`
-//     }
-
     Blockly.Arduino['system_wioterminal_setup_loop'] = Blockly.Arduino['motion_arduino_setup_loop'];
 
     Blockly.Arduino['math_cc_min_0_max_240_number'] = Blockly.Arduino['math_number'];
