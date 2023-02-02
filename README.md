@@ -126,7 +126,7 @@ Once you finish building, you can find the installer under main/build/
 
 `PR welcome`
 
-Thanks for your interest in [contributing](./misc/CONTRIBUTING.md) to this project !
+Here, we’d also love to announce an open call for contributions to Codecraft open source project on GitHub. Whether you're a seasoned programmer or just starting out, we welcome contributions of all levels. From fixing bugs, to implementing new features & new blocks of functions, to make it compatible with more hardware platforms, to improving the overall codebase, there are many ways in which you can contribute to the project. Thanks in advance for your interest in [contributing](./misc/CONTRIBUTING.md) to this project!
 
 ## License
 
