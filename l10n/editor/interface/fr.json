@@ -44,7 +44,7 @@
         "description": "Titre du bouton permettant de fermer la fiche "
     },
     "gui.unsupportedBrowser.description": {
-        "message": "Nous sommes désolés, mais scratch 3.0 ne supporte pas Internet Explorer, Vivaldi, Opera ou Silk. Nous vous recommandons d'essayer des navigateurs plus récents, tels que Google Chrome, Mozilla Firefox ou Microsoft Edge.",
+        "message": "Toutes nos excuses, mais scratch 3.0 ne supporte pas Internet Explorer, Vivaldi, Opera ou Silk. Nous vous recommandons d'essayer des navigateurs plus récents, tels que Google Chrome, Mozilla Firefox ou Microsoft Edge.",
         "description": "Unsupported browser description"
     },
     "gui.costumeTab.addSurpriseCostume": {
@@ -64,7 +64,7 @@
         "description": "Step name for 'Add A Say Block' step"
     },
     "gui.howtos.animate-a-name.step_AnimateSpin": {
-        "message": "Choisis un costume avec une autre lettre & Fais la tourner",
+        "message": "Choisis un costume avec une autre lettre & Fais-la tourner",
         "description": "Step name for 'Pick Another Letter Sprite & Make It Spin' step"
     },
     "gui.soundEditor.save": {
@@ -138,7 +138,7 @@
         "message": "Avertissement"
     },
     "gui.extensionLibrary.delPromptMessage": {
-        "message": "Confirmer la suppression? Vous ne pourrez plus utiliser les blocs de construction de l'extension après sa suppression. "
+        "message": "Confirmer la suppression ? Vous ne pourrez plus utiliser les blocs de construction de l'extension après sa suppression. "
     },
     "gui.extensionLibrary.inUsedPromptMessage": {
         "message": "L'extension est utilisée et ne peut pas être supprimée pour le moment. "
@@ -154,13 +154,13 @@
         "message": "Services Cognitifs"
     },
     "gui.extension.cognitiveservices.description": {
-        "message": "L'API des services cognitifs permet aux utilisateurs d'ajouter d'autres fonctionnalités, par exemple vidéos ou liées à la parole. "
+        "message": "L'API des services cognitifs permet d'ajouter d'autres fonctionnalités, par exemple vidéos ou liées à la parole. "
     },
     "gui.extension.teachablemachine.name": {
         "message": "Apprentissage automatique "
     },
     "gui.extension.teachablemachine.description": {
-        "message": "Avec l'Apprentissage automatique, vous n'avez pas besoin de programmer, mais vous pouvez tout de même former des ordinateurs pour apprendre des choses et établir des réseaux de neurones artificiels qui ressemblent au cerveau humain. "
+        "message": "Avec l'Apprentissage automatique, vous n'avez pas besoin de programmer, mais vous pouvez tout de même former des ordinateurs à apprendre des choses et établir des réseaux de neurones artificiels qui ressemblent au cerveau humain. "
     },
     "gui.extension.teachablemachine.Meteostation": {
         "message": "Ressentez la différence de changement de données causée par la température et l'humidité dans la station météo"
@@ -175,7 +175,7 @@
         "message": "Station météo"
     },
     "gui.extension.meteostation.description": {
-        "message": "Affichez les données environnementales, telles que la température,l'humidité et pression de l'air sur une interface Web futuriste"
+        "message": "Affichez les données environnementales, telles que la température, l'humidité et pression de l'air sur une interface Web futuriste"
     },
     "gui.extension.ottoDiyRobot.name": {
         "message": "Robot bipède "
@@ -211,10 +211,10 @@
         "message": "Calibrer les Servos "
     },
     "gui.extension.calibrateServos.description": {
-        "message": "Une interface utilisateur pour un étalonnage pratique de la position initiale du servo"
+        "message": "Une interface pour un étalonnage pratique de la position initiale du servo"
     },
     "gui.webglModal.description": {
-        "message": "Malheureusement il semble que votre navigateur ou votre ordinateur {webGlLink}. Cette technologie est nécessaire pour faire fonctionner Scratch 3.0.",
+        "message": "Malheureusement, il semble que votre navigateur ou votre ordinateur {webGlLink}. Cette technologie est nécessaire pour faire fonctionner Scratch 3.0.",
         "description": "WebGL missing message"
     },
     "gui.previewModal.viewproject": {
@@ -262,7 +262,7 @@
         "description": "Heading for the sound library"
     },
     "gui.importInfo.invalidFormatError": {
-        "message": "Oh oh, on dirait que le lien de ce projet ou le son id n'a pas l'air correct.",
+        "message": "Oh oh, on dirait que le lien de ce projet ou son id n'est pas correct.",
         "description": "Invalid project link or id message"
     },
     "gui.customProcedures.addAnInputNumberText": {
@@ -346,7 +346,7 @@
         "description": ""
     },
     "gui.device.delete.prompt": {
-        "message": "Souhaitez-vous supprimer cet appareil? ",
+        "message": "Souhaitez-vous supprimer cet appareil ? ",
         "description": ""
     },
     "gui.device.delete.cancel": {
@@ -413,7 +413,7 @@
         "message": "Vérifier la version du micrologiciel"
     },
     "gui.deviceConnect.connectionProblems": {
-        "message": "Vous rencontrez des difficultés pour vous connecter? ",
+        "message": "Vous rencontrez des difficultés pour vous connecter ? ",
         "description": ""
     },
     "gui.deviceConnect.selectDevices": {
@@ -425,7 +425,7 @@
         "description": ""
     },
     "gui.deviceConnect.noFoundDevices": {
-        "message": "Essayez-vous de vous connecter pour la première fois et la connexion a échoué?",
+        "message": "Essayez-vous de vous connecter pour la première fois et la connexion a échoué ?",
         "description": ""
     },
     "gui.deviceConnect.noFoundDevicesPrompt": {
@@ -445,11 +445,11 @@
         "description": ""
     },
     "gui.settingPage.deviceName": {
-        "message": "Nom：",
+        "message": "Nom ：",
         "description": ""
     },
     "gui.settingPage.firmwareVersion": {
-        "message": "Version du micrologiciel：",
+        "message": "Version du micrologiciel ：",
         "description": ""
     },
     "gui.settingPage.deviceReturn": {
@@ -481,7 +481,7 @@
         "description": ""
     },
     "gui.uploadCode.disPromptForArdunio": {
-        "message": "Vous avez oublié qc? Veuillez connecter l'appareil avant de téléverser",
+        "message": "Vous avez oublié quelque chose ? Veuillez connecter l'appareil avant de téléverser",
         "description": ""
     },
     "gui.uploadCode.disPromptForNormal": {
@@ -505,7 +505,7 @@
         "description": ""
     },
     "gui.device.unableConnectPrompt": {
-        "message": "Échec de la connexion?",
+        "message": "Échec de la connexion ?",
         "description": ""
     },
     "gui.device.upgradeText": {
@@ -629,7 +629,7 @@
         "description": ""
     },
     "gui.upgradeModal.successContent": {
-        "message": "Le micrologiciel a été mis à niveau vers la dernière version!",
+        "message": "Le micrologiciel a été mis à niveau vers la dernière version !",
         "description": ""
     },
     "gui.upgradeModal.know": {
@@ -685,7 +685,7 @@
         "message": "Avertissement"
     },
     "gui.sprite.prompt": {
-        "message": "Voulez-vous supprimer ce lutin?"
+        "message": "Voulez-vous supprimer ce lutin ?"
     },
     "gui.sprite.cancel": {
         "message": "Annuler"
@@ -726,7 +726,7 @@
         "description": ""
     },
     "gui.uploadCode.uploadSuccResetPrompt": {
-        "message": "Voulez-vous exécuter votre programme? Appuyez sur le bouton de réinitialisation sur la carte principale. ",
+        "message": "Voulez-vous exécuter votre programme ? Appuyez sur le bouton de réinitialisation sur la carte principale. ",
         "description": ""
     },
     "gui.uploadCode.uploadFailMessage": {
@@ -744,7 +744,7 @@
         "message": "OK"
     },
     "gui.uploadCode.uploadTimeoutPrompt": {
-        "message": "Le téléchargement a dépassé le temps imparti, veuillez réessayer. Si l'erreur persiste, essayez les solutions suivantes: "
+        "message": "Le téléchargement a dépassé le temps imparti, veuillez réessayer. Si l'erreur persiste, essayez les solutions suivantes : "
     },
     "gui.uploadCode.timeoutHandleMethodSubLabel1": {
         "message": "Etape 1. Entrer en mode démarrage (boot) "
@@ -768,7 +768,7 @@
         "message": "2. Connectez la carte principale à Codecraft."
     },
     "gui.uploadCode.timeoutHandleMethodSub2Info3": {
-        "message": "3. Une fois la connexion établie, vous serez invité à mettre à niveau le micrologiciel."
+        "message": "3. Une fois la connexion établie, nous vous inviterons à mettre à niveau le micrologiciel."
     },
     "gui.uploadCode.arduinoSelect.title": {
         "message": "Téléverser"
@@ -798,7 +798,7 @@
         "description": ""
     },
     "gui.loginModal.forgetPwd": {
-        "message": "Mot de passe oublié?",
+        "message": "Mot de passe oublié ?",
         "description": ""
     },
     "gui.loginModal.login": {
@@ -814,7 +814,7 @@
         "description": ""
     },
     "gui.loginModal.inputPwdPrompt": {
-        "message": "Mot de passe (6 à 20 carractères lettres et chiffres) ",
+        "message": "Mot de passe (6 à 20 caractères lettres et chiffres) ",
         "description": ""
     },
     "gui.loginModal.inputPwdPrompt2": {
@@ -838,7 +838,7 @@
         "description": ""
     },
     "gui.loginModal.inputPwdPlaceholder": {
-        "message": " 6 à 20 carractères (lettres et chiffres)",
+        "message": " 6 à 20 caractères (lettres et chiffres)",
         "description": ""
     },
     "gui.loginModal.inputNewPwd": {
@@ -878,7 +878,7 @@
         "description": ""
     },
     "gui.loginModal.setting.sex": {
-        "message": "Genre",
+        "message": "Sexe",
         "description": ""
     },
     "gui.loginModal.sexs.male": {
@@ -886,7 +886,7 @@
         "description": ""
     },
     "gui.loginModal.sexs.female": {
-        "message": "Feminin",
+        "message": "Féminin",
         "description": ""
     },
     "gui.loginModal.setting.birthday": {
@@ -905,22 +905,22 @@
         "message": "Modifier le mot de passe"
     },
     "gui.loginModal.sendedVerificateCodePrompt": {
-        "message": "Code de vérification déjà envoyé sur le téléphone mobile: "
+        "message": "Code de vérification déjà envoyé sur le téléphone mobile : "
     },
     "gui.loginModal.sendedVerificateCodeEmail": {
-        "message": "Un code de vérification est envoyé à votre adresse e-mail: "
+        "message": "Un code de vérification est envoyé à votre adresse e-mail : "
     },
     "gui.loginModal.willSendPhone": {
         "message": "Nous enverrons un code de vérification à votre numéro de téléphone enregistré. "
     },
     "gui.loginModal.willSendEmail": {
-        "message": "Nous enverrons un code de vérification à votre adresse e-mail enregistrée. "
+        "message": "Nous enverrons un code de vérification à votre adresse courriel enregistrée. "
     },
     "gui.loginModal.alreadySentPhone": {
-        "message": "Code de vérification déjà envoyé sur le téléphone mobile: "
+        "message": "Code de vérification déjà envoyé sur le téléphone mobile : "
     },
     "gui.loginModal.alreadySentEmail": {
-        "message": "Un code de vérification est envoyé à votre adresse e-mail:"
+        "message": "Un code de vérification est envoyé à votre adresse e-mail :"
     },
     "gui.loginModal.registerTemp1": {
         "message": "S'INSCRIRE"
@@ -932,10 +932,10 @@
         "message": "Statut"
     },
     "gui.loginModal.registerIsTeacher": {
-        "message": "je suis enseignant(e)"
+        "message": "J'enseigne"
     },
     "gui.loginModal.registerIsStudent": {
-        "message": "Je suis étudiant(e)"
+        "message": "J'étudie"
     },
     "gui.loginModal.registerEmailAgreement": {
         "message": "Oui, je souhaite recevoir une newsletter avec des idées pédagogiques. "
@@ -953,22 +953,22 @@
         "message": "Mon code d'invitation"
     },
     "gui.loginModal.invitationText": {
-        "message": "Après avoir copié le code d'invitation, envoyez-le à vos amis pour l'indiquer lors de leur inscription. Cela vous aidera à obtenir plus de droits et d'intérêts des créateurs. Le droit d'interprétation appartient à la plateforme des créateurs."
+        "message": "Après avoir copié le code d'invitation, envoyez-le à vos contacts qui pourront l'indiquer lors de leur inscription. Cela vous aidera à obtenir plus de droits et d'intérêts des créatrices et des créateurs. Le droit d'interprétation appartient à la plateforme des créatrices et des créateurs."
     },
     "gui.loginModal.successInvited": {
-        "message": "Amis invités avec succès"
+        "message": "Contacts invités avec succès"
     },
     "gui.loginModal.registerTime": {
         "message": "Moment de l'inscription"
     },
     "gui.loginModal.userAccount": {
-        "message": "Compte d'utilisateur"
+        "message": "Compte personnel"
     },
     "gui.loginModal.goLoin": {
         "message": "Identifiant"
     },
     "gui.loginModal.registerCompleted": {
-        "message": "Hourra! Vous êtes prêt!"
+        "message": "Hourra ! Vous allez pouvoir vous lancer !"
     },
     "gui.loginModal.isMale": {
         "message": "masculin"
@@ -977,13 +977,13 @@
         "message": "féminin"
     },
     "gui.loginModal.inputNickName": {
-        "message": "Meci d'entrer votre nom"
+        "message": "Merci d'entrer votre nom"
     },
     "gui.loginModal.logoutTitle": {
         "message": "Se déconnecter"
     },
     "gui.loginModal.logoutPrompt": {
-        "message": "Confirmation de déconnexion?"
+        "message": "Confirmation de déconnexion ?"
     },
     "gui.loginModal.logoutOk": {
         "message": "Confirmer"
@@ -1160,16 +1160,16 @@
         "message": "Décrivez le problème"
     },
     "gui.feedback.suggestedExamplesContentExpect": {
-        "message": " a) Que vous attendiez-vous à ce qu'il se passe? "
+        "message": " a) Que pensiez-vous qu'il allait se passer ? "
     },
     "gui.feedback.suggestedExamplesContentResult": {
-        "message": " b) Que s'est-il passé à la place?"
+        "message": " b) Que s'est-il passé à la place ?"
     },
     "gui.feedback.suggestedExamplesContentStep": {
         "message": "Décrivez les étapes pour reproduire le problème"
     },
     "gui.feedback.suggestedExamplesContentSpecific": {
-        "message": "Merci de décrire par un texte, de préférence étayé de captures d'écran / photos / vidéos."
+        "message": "Merci de décrire le comportement constaté par un texte, de préférence étayé de captures d'écran / photos / vidéos."
     },
     "gui.feedback.suggestedExamplesContentUpload": {
         "message": "Vous pouvez placer plusieurs fichiers dans une archive .zip et les joindre à votre demande.        "
@@ -1262,7 +1262,7 @@
         "description": ""
     },
     "gui.howtos.make-music.step_MakeBeat": {
-        "message": "Choisis un tambour & fait un battement",
+        "message": "Choisis un tambour & joue",
         "description": "Step name for 'Choose a Drum & Make a Beat' step"
     },
     "gui.customProcedures.ok": {
@@ -1286,7 +1286,7 @@
         "description": "Label indicating turbo mode is active"
     },
     "gui.loader.message4": {
-        "message": "Chargement des extensions ...",
+        "message": "Chargement des extensions...",
         "description": "One of the loading messages"
     },
     "gui.recordingStep.alertMsg": {
@@ -1314,7 +1314,7 @@
         "description": "Back button in modal"
     },
     "gui.howtos.animate-a-name.step_AnimateGrow": {
-        "message": "Choisis un costume avec une autre lettre & Fais la grandir",
+        "message": "Choisis un costume avec une autre lettre & Fais-la grandir",
         "description": "Step name for 'Pick Another Letter Sprite & Make It Grow!' step"
     },
     "gui.recordModal.title": {
@@ -1334,7 +1334,7 @@
         "description": "Notification to the user that the app needs camera access"
     },
     "gui.recordingStep.permission": {
-        "message": "{arrow}We need your permission to use your microphone",
+        "message": "{arrow}Nous avons besoin de votre permission pour utiliser votre appareil micro.",
         "description": "Permission required notice in recording sound modal. Do not translate {arrow}"
     },
     "gui.customProcedures.numberTextType": {
@@ -1362,7 +1362,7 @@
         "description": "Label for project share button"
     },
     "gui.crashMessage.description": {
-        "message": "Désolé, mais on dirait que Scratch a crashé. Ce bug a été\nrapporté automatiquement à l'Équipe Scratch. Essayez de recharger la page pour essayer\nà nouveau.",
+        "message": "Toutes nos excuses, mais on dirait que Scratch a crashé. Ce bug a été\nrapporté automatiquement à l'Équipe Scratch. Essayez de recharger la page pour essayer\nà nouveau.",
         "description": "Message to inform the user that page has crashed."
     },
     "gui.webglModal.label": {
@@ -1422,7 +1422,7 @@
         "description": "Button to add a sprite in the target pane from paint"
     },
     "gui.previewInfo.invitation": {
-        "message": "Nous travaillons sur la prochaine version de Scratch. Nous sommes impatients que vous l’essayiez !",
+        "message": "Nous travaillons sur la prochaine version de Scratch. Nous avons hâte que vous l’essayiez !",
         "description": "Invitation to try 3.0 Beta"
     },
     "gui.backpack.errorBackpack": {
@@ -1430,7 +1430,7 @@
         "description": "Error backpack message"
     },
     "gui.crashMessage.title": {
-        "message": "Oups! Un problème est survenu! Raison possible: réseau faible.",
+        "message": "Oups ! Un problème est survenu ! Raison possible : réseau faible.",
         "description": "Unhandled error title"
     },
     "gui.spriteSelectorItem.contextMenuDuplicate": {
@@ -1762,7 +1762,7 @@
         "description": "A button that allows the user to save the photo they took as a costume"
     },
     "gui.howtos.make-music.step_MakeBeatBox": {
-        "message": "Choisis le sprite micro & la boite à sons surprise",
+        "message": "Choisis le sprite micro & la boîte à sons surprise",
         "description": "Step name for 'Choose the Microphone Sprite & Surprise Beatbox' step"
     },
     "gui.previewInfo.label": {
@@ -1857,11 +1857,11 @@
         "description": ""
     },
     "gui.findPasswordModal.emailUnregistered": {
-        "message": "Cet adresse e-mail n'existait pas, veuillez le vérifier à nouveau.",
+        "message": "Cette adresse courriel n'existait pas, veuillez le vérifier à nouveau.",
         "description": ""
     },
     "gui.findPasswordModal.unableChange": {
-        "message": "Avant de changer votre mot de passe, vous devez être vérifié par SMS.",
+        "message": "Avant de changer votre mot de passe, on doit d'abord vérifier votre compte avec un SMS.",
         "description": ""
     },
     "gui.findPasswordModal.sendMessageFail": {
@@ -1877,11 +1877,11 @@
         "description": ""
     },
     "gui.media.imageSupportPrompt": {
-        "message": "Téléchargements de fichiers .svg, .png, .jpg, .jpeg uniquement pris en charge.",
+        "message": "Seuls les fichiers au format .svg, .png, .jpg, .jpeg peuvent être téléversés.",
         "description": ""
     },
     "gui.media.audioSupportPrompt": {
-        "message": "Prend uniquement en charge le téléchargement de fichiers au format .wav et .mp3",
+        "message": "Seuls les fichiers au format .wav et .mp3 peuvent être téléversés",
         "description": ""
     },
     "gui.media.uploadSucc": {
@@ -1905,7 +1905,7 @@
         "description": ""
     },
     "gui.loginModal.registedToLoginEmail": {
-        "message": "L'email a été enregistré, veuillez vous connecter directement",
+        "message": "L'adresse courriel a été enregistrée, veuillez vous connecter directement",
         "description": ""
     },
     "gui.loginModal.unauthorized": {
@@ -1925,7 +1925,7 @@
         "description": ""
     },
     "gui.loginModal.logouted": {
-        "message": "Déconnecté",
+        "message": "Déconnexion réussie",
         "description": ""
     },
     "gui.loginModal.logoutFail": {
@@ -1945,7 +1945,7 @@
         "description": ""
     },
     "gui.loginModal.emailPwdError": {
-        "message": "Le nom d'utilisateur et le mot de passe que vous avez saisis ne correspondent pas. Veuillez vérifier et réessayer.",
+        "message": "L'identifiant et le mot de passe que vous avez saisis ne correspondent pas. Veuillez vérifier et réessayer.",
         "description": ""
     },
     "gui.loginModal.verificationCodeError": {
@@ -1957,15 +1957,15 @@
         "description": ""
     },
     "gui.loginModal.enterValidateEmail": {
-        "message": "S'il vous plaît, mettez une adresse email valide",
+        "message": "S'il vous plaît, mettez une adresse courriel valide",
         "description": ""
     },
     "gui.loginModal.loginAttention": {
-        "message": "Remarque: prise en charge uniquement d'un numéro de téléphone de Chine continentale.",
+        "message": "Remarque : prise en charge uniquement d'un numéro de téléphone de Chine continentale.",
         "description": ""
     },
     "gui.loginModal.loginAttentionTips": {
-        "message": "Si vous possédez un compte, connectez-vous avec votre adresse mail.",
+        "message": "Si vous possédez un compte, connectez-vous avec votre adresse courriel.",
         "description": ""
     },
     "gui.loginModal.password": {
@@ -1981,15 +1981,15 @@
         "description": ""
     },
     "gui.findPasswordModal.enterEmail": {
-        "message": "Veuillez saisir votre adresse e-mail.",
+        "message": "Veuillez saisir votre adresse courriel.",
         "description": ""
     },
     "gui.findPasswordModal.enterYourEmail": {
-        "message": "Veuillez saisir votre adresse e-mail.",
+        "message": "Veuillez saisir votre adresse courriel.",
         "description": ""
     },
     "gui.findPasswordModal.getVC": {
-        "message": "Envoyez un code de vérification par e-mail",
+        "message": "Envoyez un code de vérification par courriel",
         "description": ""
     },
     "gui.findPasswordModal.VC": {
@@ -2001,7 +2001,7 @@
         "description": ""
     },
     "gui.findPasswordModal.remind": {
-        "message": "Remarque: prise en charge uniquement d'un numéro de téléphone de Chine continentale.",
+        "message": "Remarque : prise en charge uniquement d'un numéro de téléphone de Chine continentale.",
         "description": ""
     },
     "gui.findPasswordModal.receiveEmail": {
@@ -2009,7 +2009,7 @@
         "description": ""
     },
     "gui.findPasswordModal.findWithEmail": {
-        "message": "Récupérer le mot de passe par email",
+        "message": "Récupérer le mot de passe par courriel",
         "description": ""
     },
     "gui.findPasswordModal.findWithPhone": {
@@ -2017,7 +2017,7 @@
         "description": ""
     },
     "gui.registerModal.email": {
-        "message": "S'enregistrer avec l'adresse e-mail",
+        "message": "S'enregistrer avec l'adresse courriel",
         "description": ""
     },
     "gui.registerModal.phone": {
@@ -2025,7 +2025,7 @@
         "description": ""
     },
     "gui.registerModal.registered": {
-        "message": "Vous avez déjà un compte?",
+        "message": "Vous avez déjà un compte ?",
         "description": ""
     },
     "gui.registerModal.toLogin": {
@@ -2037,7 +2037,7 @@
         "description": ""
     },
     "gui.loginModal.abusiveRegister": {
-        "message": "Le compte utilisateur demande de manière malveillante le code de vérification par SMS d'enregistrement",
+        "message": "Le compte demande de manière malveillante le code de vérification par SMS d'enregistrement",
         "description": ""
     },
     "gui.loginModal.pwdLimit": {
@@ -2078,7 +2078,7 @@
         "description": ""
     },
     "gui.library.deleteText": {
-        "message": "Êtes-vous sûr de vouloir supprimer ce projet?",
+        "message": "Voulez-vous vraiment supprimer ce projet ?",
         "description": ""
     },
     "gui.library.notDeleteText": {
@@ -2093,10 +2093,10 @@
         "message": "Sous Windows OS, vous devez installer le pilote Arduino avant la connexion. "
     },
     "gui.deviceConnect.cannotConnectCyberEye": {
-        "message": "Impossible de connecter M.A.R.K (cyberEye)? "
+        "message": "Impossible de connecter M.A.R.K (cyberEye) ? "
     },
     "gui.deviceConnect.cannotConnectBittle": {
-        "message": "Impossible de connecter Bittle?"
+        "message": "Impossible de connecter Bittle ?"
     },
     "gui.deviceConnect.downloadArduinoDriver": {
         "message": "Télécharger le pilote"
@@ -2111,16 +2111,16 @@
         "message": "Téléchargez maintenant le pilote FT232"
     }, 
     "gui.deviceConnect.downloadCyberEyeDriver": {
-        "message": "Téléchargez maintenant le pilote M.A.R.K(cyberEye)"
+        "message": "Téléchargez maintenant le pilote M.A.R.K (cyberEye)"
     },
     "gui.deviceConnect.downloadGlintDriver": {
         "message": "Téléchargez le pilote USB sur MAC."
     },
     "gui.deviceConnect.readDocument": {
-        "message": "Documentation: "
+        "message": "Documentation : "
     },
     "gui.deviceConnect.notFindDevice": {
-        "message": "Appareil non trouvé?"
+        "message": "Appareil non trouvé ?"
     },
     "gui.deviceConnect.notFindDeviceText1": {
         "message": "Veuillez vérifier si l'appareil est connecté à l'aide d'un câble USB et que le pilote USB est installé."
@@ -2129,25 +2129,25 @@
         "message": "Téléchargez maintenant le pilote USB"
     },
     "gui.deviceConnect.cannotConnectGroveZero": {
-        "message": "Vous n'arrivez pas à connecter le Grove Zero?"
+        "message": "Vous n'arrivez pas à connecter le Grove Zero ?"
     },
     "gui.deviceConnect.cannotConnectArduino": {
-        "message": "Vous n'arrivez pas à connecter l'Arduino?"
+        "message": "Vous n'arrivez pas à connecter l'Arduino ?"
     },
     "gui.deviceConnect.cannotConnectGlint": {
-        "message": "Vous n'arrivez pas à connecter Glint?"
+        "message": "Vous n'arrivez pas à connecter Glint ?"
     },
     "gui.microbit.microbitDownloadTipsTitle":{
         "message": "Quelques conseils"
     },
     "gui.microbit.microbitModalLabel": {
-        "message": "Après le téléchargement, suivez ces étapes pour exécuter vos programmes!"
+        "message": "Après le téléchargement, suivez ces étapes pour exécuter vos programmes !"
     },
     "gui.microbit.microbitModalStep1": {
-        "message": "Connectez micro: bit à votre ordinateur portable avec un câble USB"
+        "message": "Connectez micro:bit à votre ordinateur portable avec un câble USB"
     },
     "gui.microbit.microbitModalStep2": {
-        "message": "Déplacez le fichier .hex vers votre pilote micro: bit"
+        "message": "Déplacez le fichier .hex vers votre pilote micro:bit"
     },
     "gui.microbit.microbitDownloadConfirm": {
         "message": "Bien reçu"
@@ -2156,7 +2156,7 @@
         "message": "Mise à jour du micrologiciel"
     },
     "gui.pythonDownBinStep.step1Text": {
-        "message": "Dernier micrologiciel："
+        "message": "Dernier micrologiciel ："
     },
     "gui.pythonDownBinStep.step2Text1": {
         "message": "Téléchargement..."
@@ -2186,10 +2186,10 @@
         "message": "Bien reçu"
     },
     "gui.pythonUpgrade.failText": {
-        "message": "Échec du téléversement！"
+        "message": "Échec du téléversement ！"
     },
     "gui.pythonUpgrade.failMessage": {
-        "message": "Assurez-vous de choisir le même appareil que celui auquel vous êtes réellement connecté."
+        "message": "Assurez-vous de choisir le même appareil que celui auquel vous êtes réellement effectué une connexion."
     },
     "gui.pythonUpgrade.text": {
         "message": "Veuillez mettre à jour le micrologiciel comme suit"
@@ -2198,7 +2198,7 @@
         "message": "Téléverser maintenant"
     },
     "gui.pythonUpgrade.notice1": {
-        "message": "Notes："
+        "message": "Notes ："
     },
     "gui.pythonUpgrade.notice3": {
         "message": "• Assurez-vous que l'appareil est connecté à Codecraft dans ce processus. "
@@ -2220,7 +2220,7 @@
         "description": ""
     },
     "gui.checkUpdate.latestVersion": {
-        "message": "Super! Vous disposez de la dernière version: "
+        "message": "Super ! Vous disposez de la dernière version : "
     },
     "gui.checkUpdate.iKnow": {
         "message": "OK"
@@ -2289,7 +2289,7 @@
         "message": "Sélectionnez un appareil"
     },
     "gui.rescueDevice.notice": {
-        "message": "Remarque: L'opération suivante restaurera le périphérique sélectionné à la dernière version du micrologiciel. De cette manière, le périphérique sera dans l'état disponible."
+        "message": "Remarque : L'opération suivante restaurera le périphérique sélectionné à la dernière version du micrologiciel. De cette manière, le périphérique sera dans l'état disponible."
     },
     "gui.loginModal.requiredFiled": {
         "message": "Ceci est un champ obligatoire"
@@ -2316,13 +2316,13 @@
         "message": "15-18"
     },
     "gui.library.beginner": {
-        "message": "Débutant"
+        "message": "Novice"
     },
     "gui.library.intermediate": {
         "message": "Intermédiaire"
     },
     "gui.library.advanced": {
-        "message": "Expert"
+        "message": "Spécialiste"
     },
     "gui.library.ai":{
         "message": "IA"
@@ -2352,7 +2352,7 @@
         "message": "Projets"
     },
     "gui.library.zwb": {
-        "message": "Fait pour Apprendre"
+        "message": "Apprends en Faisant"
     },
     "gui.library.mywork": {
         "message": "Mes projets"
@@ -2376,7 +2376,7 @@
         "message": "Produit"
     },
     "gui.library.age": {
-        "message": "Age"
+        "message": "Âge"
     },
     "gui.library.level": {
         "message": "Niveau"
@@ -2397,7 +2397,7 @@
         "message": "Avertissement"
     },
     "gui.remindSave.remindText": {
-        "message": "Le fichier actuel a été modifié. Voulez-vous l'enregistrer?"
+        "message": "Le fichier actuel a été modifié. Voulez-vous l'enregistrer ?"
     },
     "gui.remindSave.save": {
         "message": "Sauver"
@@ -2445,10 +2445,10 @@
         "message": "Annuler"
     },
     "gui.trainModal.clearPrompt": {
-        "message": "Etes-vous sûr de vouloir effacer la classification actuelle des échantillons?"
+        "message": "Voulez-vous vraiment effacer la classification actuelle des échantillons ?"
     },
     "gui.trainModal.newModelPrompt": {
-        "message": "Un nouveau modèle effacera les données d'entraînement actuelles, poursuivre?"
+        "message": "Un nouveau modèle effacera les données d'entraînement actuelles, poursuivre ?"
     },
     "gui.trainModal.modelCategoryNumber": {
         "message": "Nombre de classifications de modèles"
@@ -2466,7 +2466,7 @@
         "message": "Aucun matériel n'est disponible"
     },
     "gui.device.switching.promptMessage": {
-        "message": "Le dispositif de commutation créera un nouveau projet, enregistrer le projet actuel? "
+        "message": "Le dispositif de commutation créera un nouveau projet, enregistrer le projet actuel ? "
     },
     "gui.device.switching.notSave":{
         "message": "Ne pas enregistrer"
@@ -2490,22 +2490,22 @@
         "message":"Télécharger"
     },
     "gui.deviceInfo.groveZero.description":{
-        "message":"Grove Zero est une gamme de blocs de construction électroniques programmables qui combinent des connexions magnétiques faciles avec un logiciel de programmation graphique pour mettre en œuvre des conceptions fonctionnelles de base. Grove Zero est un excellent outil à la fois pour développer la créativité d'un enfant et pour enseigner les concepts STEM. "
+        "message":"Grove Zero est une gamme de blocs de construction électroniques programmables qui combinent des connexions magnétiques faciles avec un logiciel de programmation graphique pour mettre en œuvre des conceptions fonctionnelles de base. Grove Zero est un excellent outil à la fois pour développer la créativité des enfants et pour enseigner les concepts STEM. "
     },
     "gui.deviceInfo.microbit.description":{
-        "message":"BBC micro: bit est un micro-ordinateur programmable qui tient dans la paume de votre main. Il offre des possibilités infinies pour mettre en œuvre un large éventail d'idées créatives, allant des robots aux instruments de musique. Pour en savoir plus sur le micro: bit, visitez le site officiel: https://microbit.org"
+        "message":"BBC micro:bit est un micro-ordinateur programmable qui tient dans la paume de votre main. Il offre des possibilités infinies pour mettre en œuvre un large éventail d'idées créatives, allant des robots aux instruments de musique. Pour en savoir plus sur le micro:bit, visitez le site officiel : https://microbit.org"
     },
     "gui.deviceInfo.cyberEye.description":{
-        "message":"«Make A Robot Kit», également connu sous le nom «M.A.R.K.» est une voiture intelligente polyvalente conçue pour apprendre l'intelligence artificielle. En utilisant le contrôleur IA fourni avec MARK, un enfant peut implémenter l'identification de la piste, l'identification des panneaux de signalisation et d'autres fonctionnalités d'IA pour assembler une voiture autonome."
+        "message":"« Make A Robot Kit », également connu sous le nom « M.A.R.K. » est une voiture intelligente polyvalente conçue pour apprendre l'intelligence artificielle. En utilisant le contrôleur IA fourni avec MARK, un enfant peut implémenter l'identification de la piste, l'identification des panneaux de signalisation et d'autres fonctionnalités d'IA pour assembler une voiture autonome."
     },
     "gui.deviceInfo.glint.description":{
-        "message":"GLINT est un produit polyvalent portable pour débutants permettant aux enfants de faire de la programmation avec style. Son interface interactive légère se compose de 12 LED RVB programmables, d'un bouton poussoir et d'un accéléromètre intégré et invite les enfants à accepter les aides à l'enseignement de la programmation. Étant donné que le produit est facile à utiliser, l'expérience du produit et les méthodes d'interaction diversifiées permettent aux enfants d'apprendre et de jouer simultanément, afin de leur permettre d'afficher pleinement leur créativité en matière de programmation."
+        "message":"GLINT est un produit polyvalent portable pour novices permettant enfants de faire de la programmation avec style. Son interface interactive légère se compose de 12 LED RVB programmables, d'un bouton poussoir et d'un accéléromètre intégré et invite les enfants à accepter les aides à l'enseignement de la programmation. Étant donné que le produit est facile à utiliser, l'expérience du produit et les méthodes d'interaction diversifiées permettent aux enfants d'apprendre et de jouer simultanément, afin de leur permettre d'afficher pleinement leur créativité en matière de programmation."
     },
     "gui.deviceInfo.groveJoint.description":{
         "message":"Grove-Joint présente de nombreuses similitudes avec Seeeduino Lotus. Il s'agit d'une carte de développement de microcontrôleur ATMEGA328 miniature. Il utilise les puces Atmel ATMEGA328P-MU et CH340. Vous pouvez l'utiliser avec des modules Grove pour créer des applications intéressantes de manière pratique et rapide."
     },
     "gui.deviceInfo.arduino.description":{
-        "message":"Codecraft prend actuellement en charge les cartes de développement Arduino classiques, telles que Arduino Uno, ainsi que les versions compatibles améliorées basées sur Arduino, telles que: Seeeduino V4.2, Seeeduino Mega, Seeeduino Lotus V1.1, Grove Beginner Kit pour Arduino, etc. temps, il a également largement pris en charge les modules de capteurs bien connus de la série Grove dans l'écosystème Arduino."
+        "message":"Codecraft prend actuellement en charge les cartes de développement Arduino classiques, telles que Arduino Uno, ainsi que les versions compatibles améliorées basées sur Arduino, telles que : Seeeduino V4.2, Seeeduino Mega, Seeeduino Lotus V1.1, Grove Beginner Kit pour Arduino, etc. En même temps, il a également largement pris en charge les modules de capteurs bien connus de la série Grove dans l'écosystème Arduino."
     },
     "gui.deviceInfo.noDescriptionText":{
         "message":"Pas d'introduction"
@@ -2523,10 +2523,10 @@
         "message": "Exemples"
     },
     "gui.coursePage.teacherSupport":{
-        "message": "Support enseignants"
+        "message": "Support aux mentors"
     },
     "gui.coursePage.studentSupport":{
-        "message": "Support élèves"
+        "message": "Ressources pour les élèves"
     },
     "gui.coursePage.relatedGoods":{
         "message": "Produits connexes"
@@ -2577,7 +2577,7 @@
         "message": "Correct"
     },
     "gui.coursePage.congratulation": {
-        "message": "Félicitations！ Vous avez choisi la bonne réponse."
+        "message": "Félicitations ！ Vous avez choisi la bonne réponse."
     },
     "gui.coursePage.doMore": {
         "message": "Réessayer"
@@ -2610,7 +2610,7 @@
         "message": "Elève"
     },
     "gui.Setting.Indentity.Teacher":{
-        "message": "Enseignant"
+        "message": "Mentor"
     },
     "gui.Setting.ImageUpload":{
         "message": "Téléverser"
