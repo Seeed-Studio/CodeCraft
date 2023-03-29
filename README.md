@@ -38,7 +38,7 @@ This project requires:
 Clone this repo
 
 ```bash
-git clone -b main https://github.com/Seeed-Projects/seeed-codecraft ~/seeed-codecraft 
+git clone -b main https://github.com/Seeed-Studio/CodeCraft.git ~/seeed-codecraft 
 export workspace=~/seeed-codecraft
 pushd $workspace
 ```
