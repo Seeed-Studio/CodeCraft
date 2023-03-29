@@ -40,7 +40,7 @@ Clone this repo
 ```bash
 git clone -b main https://github.com/Seeed-Projects/seeed-codecraft ~/seeed-codecraft 
 export workspace=~/seeed-codecraft
-pushd workspace
+pushd $workspace
 ```
 
 ### Auto Install
