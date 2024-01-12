@@ -39,7 +39,9 @@ const CORE_EXTENSIONS = [
     'sound',
     'system',
     'display',
-    'azure'
+    'azure',
+    'json',
+    'mqtt'
 ];
 
 // Adjust script coordinates to account for

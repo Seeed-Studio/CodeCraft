@@ -1,8 +1,4 @@
-
-import path from 'path';
 import ElectronStore from 'electron-store';
-
-// const STORE_DIR = path.join($dirname, '../../config/');
 
 class AppConfig {
 

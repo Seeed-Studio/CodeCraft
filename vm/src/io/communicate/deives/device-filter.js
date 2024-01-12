@@ -47,8 +47,6 @@ const getDeviceType = (device) => {
 
     if (!vendorId || !productId) return null;
 
-    if (vendorId === '10c4') return CMC_DEVICE_UNKNOWN;// grovezero dongle
-
     if (vendorId === '0403' && productId === '6010') return CMC_DEVICE_MAIXDUINO; 
 
     if (vendorId === '2886' && productId === '800d') return CMC_DEVICE_DAVINCI_AI;
@@ -61,6 +59,8 @@ const getDeviceType = (device) => {
 
     if (vendorId === '2886' && productId === '0004') return CMC_DEVICE_ARDUINO;
 
+    if (vendorId === '10c4' && productId === 'ea60') return CMC_DEVICE_ARDUINO;
+
     if (vendorId === '2886' && (productId === '802d'||productId === '002d')) return CMC_DEVICE_WIO_TERMINAL;
 
     if (vendorId === '2886' && productId === '8026') return CMC_DEVICE_ARDUINO;
@@ -70,6 +70,8 @@ const getDeviceType = (device) => {
     if (vendorId === '0403' && productId === '6001') return CMC_DEVICE_ARDUINO_MEGA;
 
     if (vendorId === '1a86' && productId === '7523') return CMC_DEVICE_GROVE_JOINS;
+
+    if (vendorId === '10c4') return CMC_DEVICE_UNKNOWN;// grovezero dongle
 
     return null;
 }

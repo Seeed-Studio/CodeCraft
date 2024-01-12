@@ -1,50 +1,5 @@
 const Device = require('../device');
 
-/**
- * micropython 指令应答数据解析 print((0,0,0,0,0))
- * @param {*} buffer
- * @param {*} handleMessage 
- */
-let responseForPrint = '';
-
-const parseCommand = (buffer, handlePrintMessage, handleBroadcastMessage) => {
-    responseForPrint += buffer.toString('utf-8');
-
-    if (responseForPrint.indexOf('waiting for download') > -1) {
-        responseForPrint = '';
-    }
-
-    let printfMethodIndex = responseForPrint.indexOf('printf');
-    let broadcastMethodIndex = responseForPrint.indexOf('broadcast');
-
-    // 解析print resp
-    let firstLeftIndex = responseForPrint.indexOf('(');
-    let firstRightIndex = responseForPrint.indexOf(')');
-
-    //判断合法的打印或者广播
-    if ((printfMethodIndex != -1 || broadcastMethodIndex != -1) &&
-        (firstLeftIndex != -1 && firstRightIndex != -1 && firstRightIndex > firstLeftIndex)) {
-        //截取方法体
-        let chartDataStr = responseForPrint.substring(firstLeftIndex, firstRightIndex + 1);
-        //打印方法
-        if (printfMethodIndex != -1) {
-            if (chartDataStr.split(',').length == 5) {
-                handlePrintMessage(chartDataStr);
-            }
-        } else if (broadcastMethodIndex != -1) {//广播
-            if (chartDataStr.split(',').length == 2) {
-                handleBroadcastMessage(chartDataStr)
-            }
-        }
-        //处理过的字符截取掉
-        responseForPrint = responseForPrint.substring(firstRightIndex + 1);
-
-        // if (firstRightIndex != -1) {
-        //     responseForPrint = responseForPrint.substring(firstRightIndex + 1);
-        // }
-    }
-
-}
 
 class Arduino extends Device {
 
@@ -57,6 +12,7 @@ class Arduino extends Device {
         this.isNeedOpenDevice = false;
         //设备类型
         this.deviceType = '';
+        this.incompletePrintStr = ''
     }
 
     /**
@@ -89,6 +45,13 @@ class Arduino extends Device {
         );
     }
 
+    uploadBin(bin, resolve, reject) {
+        this.burnBin(
+            { bin: bin, type: this.deviceType },
+            resolve, reject
+        );
+    }
+
     /**
      * 数据响应
      * @param {*} data 
@@ -96,7 +59,50 @@ class Arduino extends Device {
     onResponse(data) {
         //剔除全是0的内容
         if (Number(data.join('')) != 0) {
-            parseCommand(data, message => { this.handlePrintMessage(message) }, message => { this.handleBroadcastMessage(message) });
+            let dadaString = data.toString();
+            let collectMethodList = dadaString.split('\r\n');
+            collectMethodList.map((item, index) => {
+                if (item != '') {
+                    let collectMethodIndex = item.indexOf('c:')
+                    let printfMethodIndex = item.indexOf('printf');
+                    let broadcastMethodIndex = item.indexOf('broadcast');
+                    let firstLeftIndex = item.indexOf('(');
+                    let firstRightIndex = item.indexOf(')');
+    
+                    let currentParsing = ''
+                    if (((collectMethodIndex > -1||printfMethodIndex > -1||broadcastMethodIndex > -1) && firstLeftIndex > -1 && firstRightIndex > -1
+                        && (firstRightIndex > firstLeftIndex))) {
+                        currentParsing = item;
+                    } else {
+                        this.incompletePrintStr = this.incompletePrintStr + item;
+                        collectMethodIndex = this.incompletePrintStr.indexOf('c:')
+                        printfMethodIndex = this.incompletePrintStr.indexOf('printf');
+                        broadcastMethodIndex = this.incompletePrintStr.indexOf('broadcast');
+                        firstLeftIndex = this.incompletePrintStr.indexOf('(');
+                        firstRightIndex = this.incompletePrintStr.indexOf(')');
+                        if (((collectMethodIndex > -1||printfMethodIndex > -1||broadcastMethodIndex > -1) && firstLeftIndex > -1 && firstRightIndex > -1
+                            && (firstRightIndex > firstLeftIndex))) {
+                            currentParsing = this.incompletePrintStr;
+                            this.incompletePrintStr = '';
+                        }else if (this.incompletePrintStr.length>600) {//防止普通内容输出内存消耗过大
+                            this.incompletePrintStr = '';
+                        }
+                    }
+                    if (currentParsing.length > 0) {
+                        let chartDataStr = currentParsing.substring(firstLeftIndex + 1, firstRightIndex);
+                        //打印方法
+                        if (printfMethodIndex > -1) {
+                            if (chartDataStr.split(',').length == 5) {
+                                this.handlePrintMessage(chartDataStr);
+                            }
+                        } else if (broadcastMethodIndex > -1) {//广播
+                            if (chartDataStr.split(',').length == 2) {
+                                this.handleBroadcastMessage(chartDataStr)
+                            }
+                        } 
+                    }
+                }
+            })
         }
         this.emit('response', data);
     }
@@ -106,8 +112,8 @@ class Arduino extends Device {
      * @param {*} message 
      */
     handlePrintMessage(message){
-        message = message.replace('(', "");
-        message = message.replace(')', "");
+        // message = message.replace('(', "");
+        // message = message.replace(')', "");
         message = message.replace(' ', "");
         let result = message.split(',')
             .map(item => {
@@ -125,8 +131,8 @@ class Arduino extends Device {
      * @param {*} message 
      */
     handleBroadcastMessage(message){
-        message = message.replace('(', "");
-        message = message.replace(')', "");
+        // message = message.replace('(', "");
+        // message = message.replace(')', "");
         message = message.replace(' ', "");
         let result = message.split(',')
         this.emit("broadcast-response", result);

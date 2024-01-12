@@ -182,6 +182,8 @@ const looks = function () {
                 </shadow>
             </value>
         </block>
+        <block type="looks_maixduino_screen_clear">  
+        </block>  
     </category>
     `;
 }

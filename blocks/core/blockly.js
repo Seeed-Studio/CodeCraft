@@ -71,6 +71,7 @@ goog.require('Blockly.FieldElfLedmatrix');
 goog.require('Blockly.FieldMicbtmatrix');
 goog.require('Blockly.FieldBuzzerNote');
 goog.require('Blockly.FieldRgbmatrix');
+goog.require('Blockly.FieldRedmatrix');
 goog.require('Blockly.FieldDropdownMulti');
 goog.require('Blockly.FieldOledmatrix');
 goog.require('Blockly.FieldOled096matrix');

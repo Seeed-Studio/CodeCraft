@@ -203,13 +203,21 @@ export default (Blockly) => {
   Blockly.Arduino['operator_letter_of'] = function (block) {
     var argument0 = Blockly.Arduino.valueToCode(block, 'LETTER', Blockly.Arduino.ORDER_NONE);
     var argument1 = Blockly.Arduino.valueToCode(block, 'STRING', Blockly.Arduino.ORDER_NONE);
-    var code = 'groveZeroMainBoard.charAt(' + argument1 + ',' + argument0 + ')';
+    Blockly.Arduino.define_fun['charAt'] =
+    'char charAt(char *src,int index)\n' +
+    '{\n' +
+    '    char *p=src; \n' +
+    '    if(index<0||index>strlen(src))\n' +
+    '        return 0;\n' +
+    '    return p[index];\n' +
+    '}\n';
+    var code = 'charAt(' + argument1 + ',' + argument0 + ')';
     return [code, Blockly.Arduino.ORDER_FUNCTION_CALL];
   };
 
   Blockly.Arduino['operator_length'] = function (block) {
     var argument0 = Blockly.Arduino.valueToCode(block, 'STRING', Blockly.Arduino.ORDER_NONE);
-    var code = 'sizeof(' + argument0 + ')';
+    var code = '(sizeof(' + argument0 + ')-1)';
     return [code, Blockly.Arduino.ORDER_FUNCTION_CALL];
   };
 
@@ -230,6 +238,21 @@ export default (Blockly) => {
   Blockly.Arduino['operator_mathop'] = function (block) {
     var argument0 = block.getFieldValue('OPERATOR');
     var argument1 = Blockly.Arduino.valueToCode(block, 'NUM', Blockly.Arduino.ORDER_NONE);
+    if (argument0 == 'sin' || argument0 == 'cos' || argument0 == 'tan') {
+      Blockly.Arduino.definitions_['include_PI'] = '#define PI 3.14159265';
+      Blockly.Arduino.define_fun['degrees_to_radians'] =
+        'double degrees_to_radians(double param)\n' +
+        '{\n' +
+        '    return param * PI / 180.0;\n' +
+        '}\n';
+    } else if (argument0 == 'asin' || argument0 == 'acos' || argument0 == 'atan') {
+      Blockly.Arduino.definitions_['include_PI'] = '#define PI 3.14159265';
+      Blockly.Arduino.define_fun['radians_to_degrees'] =
+        'double radians_to_degrees(double param)\n' +
+        '{\n' +
+        '    return param * 180.0 / PI;\n' +
+        '}\n';
+    }
     argument1 = argument1 === 'NaN' ? '0' : argument1;
     var code;
     switch (argument0) {
@@ -249,10 +272,10 @@ export default (Blockly) => {
         code = 'sin(degrees_to_radians(' + argument1 + '))';
         break;
       case 'cos':
-        code = 'cos(' + argument1 + ')';
+        code = 'cos(degrees_to_radians(' + argument1 + '))';
         break;
       case 'tan':
-        code = 'tan(' + argument1 + ')';
+        code = 'tan(degrees_to_radians(' + argument1 + '))';
         break;
       case 'asin':
         code = 'radians_to_degrees(asin(' + argument1 + '))';

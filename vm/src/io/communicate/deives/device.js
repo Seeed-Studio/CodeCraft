@@ -93,8 +93,25 @@ class Device extends EventEmitter {
      * @param {*} reject 
      */
     upload(code, resolve, reject) {
-
+        reject({
+            data: 'The port does not match the device.',
+        });
     }
+
+    burnBin(_data, resolve, reject) {
+        this._reject = reject;
+        this._resolve = resolve;
+        this.deviceStatus = DEVICE_STATUS_COMPILE;
+        this._commCotext.sendMessage({
+            method: 'uploadBin',
+            data: {
+                comName: this.comName ? this.comName : null,
+                compiler: this.compiler,
+                data: _data,
+            }
+        });
+    }
+
 
     /**
      * 升级
@@ -102,7 +119,7 @@ class Device extends EventEmitter {
      * @param {*} reject 
      */
     upgrade(resolve, reject) {
-
+        
     }
 
     /**
@@ -207,10 +224,16 @@ class Device extends EventEmitter {
                 compileType,
                 content
             } = data;
+            let result;
+            if (typeof content == 'object') {
+                result = JSON.stringify(content)
+            }else {
+                result = content;
+            }
             if (compileSucc) {
                 if (this._resolve) {
                     this._resolve({
-                        data: content,
+                        data: result,
                         compileType: compileType
                     });
                     this.deviceStatus = DEVICE_STATUS_IDLE;
@@ -219,7 +242,49 @@ class Device extends EventEmitter {
                 }
             } else {
                 if (this._reject) {
-                    this._reject();
+                    this._reject({
+                        data: result,
+                        compileType: compileType
+                    });
+                }
+                this.deviceStatus = DEVICE_STATUS_IDLE;
+                this._resolve = null;
+                this._reject = null;
+            }
+        }
+    }
+
+    _handleUploadBin(data) {
+        console.log('data',data)
+        // 正在编译代码
+        if (this.deviceStatus === DEVICE_STATUS_COMPILE) {
+            const {
+                compileSucc,
+                compileType,
+                content
+            } = data;
+            let result;
+            if (typeof content == 'object') {
+                result = JSON.stringify(content)
+            }else {
+                result = content;
+            }
+            if (compileSucc) {
+                if (this._resolve) {
+                    this._resolve({
+                        data: result,
+                        compileType: compileType
+                    });
+                    this.deviceStatus = DEVICE_STATUS_IDLE;
+                    this._resolve = null;
+                    this._reject = null;
+                }
+            } else {
+                if (this._reject) {
+                    this._reject({
+                        data: result,
+                        compileType: compileType
+                    });
                 }
                 this.deviceStatus = DEVICE_STATUS_IDLE;
                 this._resolve = null;
@@ -254,6 +319,10 @@ class Device extends EventEmitter {
             if (respData && respData.data) {
                 this.onResponse(Buffer.from(respData.data));
             }
+        }
+        //上传bin响应
+        if ('uploadBin-resp' === method) {
+            this._handleUploadBin(data);
         }
     }
 

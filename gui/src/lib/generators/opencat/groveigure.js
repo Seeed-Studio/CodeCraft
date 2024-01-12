@@ -8,6 +8,27 @@ export default Blockly => {
         return code;
     };
 
+    //WS2813 Mini 彩灯/灯条
+    Blockly.ArduinoOpenCat['motion_opencat_seeed_rgb_led_mini'] = function (block) {
+        var pin = block.getFieldValue('PIN');
+        var num = block.getFieldValue('NUM');
+
+        var r = Blockly.ArduinoOpenCat.valueToCode(block, 'R', Blockly.ArduinoOpenCat.ORDER_NONE);
+        var g = Blockly.ArduinoOpenCat.valueToCode(block, 'G', Blockly.ArduinoOpenCat.ORDER_NONE);
+        var b = Blockly.ArduinoOpenCat.valueToCode(block, 'B', Blockly.ArduinoOpenCat.ORDER_NONE);
+
+        Blockly.ArduinoOpenCat.definitions_['include_NeoPixel'] = '#include "Adafruit_NeoPixel.h"';
+        Blockly.ArduinoOpenCat.definitions_[`var_NUM_LEDS`] = `#define NUM_LEDS 10`;
+        Blockly.ArduinoOpenCat.definitions_[`var_PIN_${pin}`] = `#define PIN_${pin} ${pin}`;
+        Blockly.ArduinoOpenCat.definitions_[`var_pixels_${pin}`] = `Adafruit_NeoPixel pixels_${pin} = Adafruit_NeoPixel(NUM_LEDS, PIN_${pin}, NEO_GRB + NEO_KHZ800);`;
+
+        Blockly.ArduinoOpenCat.setups_[`setup_neopixel_setBrightness_${pin}`] = `  pixels_${pin}.setBrightness(255);`;
+        Blockly.ArduinoOpenCat.setups_[`setup_neopixel_${pin}`] = `  pixels_${pin}.begin();`;
+        var code = `pixels_${pin}.setPixelColor(${num-1}, pixels_${pin}.Color(${r},${g},${b}));\n`;
+        code += `pixels_${pin}.show();\n`;
+        return code;
+    }
+
     Blockly.ArduinoOpenCat['motion_opencat_seeed_btn'] = function (block) {
         var pin = block.getFieldValue('PIN');
         Blockly.ArduinoOpenCat.setups_['setup_input_' + pin] = 'pinMode(' + pin + ', INPUT);';
@@ -84,23 +105,38 @@ export default Blockly => {
         var code = 'digitalRead(' + pin + ')';
         return [code, Blockly.ArduinoOpenCat.ORDER_ATOMIC];
     };
-
+    //温湿度dht11
     Blockly.ArduinoOpenCat['motion_opencat_seeed_temperature_humidity'] = function (block) {
-        
         var pin = block.getFieldValue('PIN');
         var th = block.getFieldValue('TH');
-
-        Blockly.ArduinoOpenCat.definitions_['include_DHT'] = '#include "SeeedDHT.h"';
-        Blockly.ArduinoOpenCat.definitions_['var_DHT'] = 'DHT dht;';
-        Blockly.ArduinoOpenCat.definitions_[`var_DHTLIB_PIN_${pin}`] = `#define DHTLIB_PIN_${pin} ${pin}`;
-
+        Blockly.ArduinoOpenCat.definitions_['include_DHT'] = '#include "DHT.h"';
+        Blockly.ArduinoOpenCat.definitions_['var_DHTTYPE_11'] = '#define DHTTYPE11 DHT11';
+        Blockly.ArduinoOpenCat.definitions_[`var_DHTPIN`] = `#define DHTPIN ${pin}`;
+        Blockly.ArduinoOpenCat.definitions_[`var_DHT_11`] = `DHT dht11(DHTPIN, DHTTYPE11);`;
+        Blockly.ArduinoOpenCat.setups_['setup_dht_11_begin'] = '  dht11.begin();';
         var code = "";
         if (th == '0') {
-            code = `dht.TemperatureHumidityRead(DHTLIB_PIN_${pin}, 'T')`;
+            code = `dht11.readTemperature()`;
         } else {
-            code = `dht.TemperatureHumidityRead(DHTLIB_PIN_${pin}, 'H')`;
+            code = `dht11.readHumidity()`;
         }
-
+        return [code, Blockly.ArduinoOpenCat.ORDER_ATOMIC];
+    };
+    //温湿度dht20
+    Blockly.ArduinoOpenCat['motion_opencat_seeed_temperature_humidity_dht20'] = function (block) {
+        var th = block.getFieldValue('TH');
+        Blockly.ArduinoOpenCat.definitions_['include_DHT'] = '#include "DHT.h"';
+        Blockly.ArduinoOpenCat.definitions_['include_Wire'] = '#include "Wire.h"';
+        Blockly.ArduinoOpenCat.definitions_['var_DHTTYPE_20'] = '#define DHTTYPE20 DHT20';
+        Blockly.ArduinoOpenCat.definitions_[`var_DHT_20`] = `DHT dht20(DHTTYPE20);`;
+        Blockly.ArduinoOpenCat.setups_['setup_i2c'] = '  Wire.begin();';
+        Blockly.ArduinoOpenCat.setups_['setup_dht_20_begin'] = '  dht20.begin();';
+        var code = "";
+        if (th == '0') {
+            code = `dht20.readTemperature()`;
+        } else {
+            code = `dht20.readHumidity()`;
+        }
         return [code, Blockly.ArduinoOpenCat.ORDER_ATOMIC];
     };
 

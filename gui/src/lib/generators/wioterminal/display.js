@@ -15,7 +15,7 @@ export default (Blockly) => {
     }
 
     Blockly.Arduino['display_wioterminal_screen_towards'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
         let direct = block.getFieldValue('DIRECT');
@@ -24,7 +24,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_set_screen_background_color'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
         
@@ -35,7 +35,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_set_text_size'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
         let size = block.getFieldValue('SIZE');
@@ -44,7 +44,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_set_text_color'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
 
@@ -55,7 +55,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_println_string'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
         let message = Blockly.Arduino.valueToCode(block, 'MESSAGE', Blockly.Arduino.ORDER_NONE) || "";
@@ -64,7 +64,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_print_string_at_point'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
         let message = Blockly.Arduino.valueToCode(block, 'MESSAGE', Blockly.Arduino.ORDER_NONE) || "";
@@ -75,7 +75,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_screen_clear_reset'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
         let color = Blockly.Arduino.valueToCode(block, 'COLOR', Blockly.Arduino.ORDER_NONE) || "#000000";
@@ -85,7 +85,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_show_image'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['include_seeed_fs'] = '#include"Seeed_FS.h"';
         Blockly.Arduino.definitions_['include_raw_image'] = '#include"RawImage.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
@@ -102,7 +102,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_draw_pixel'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
         let x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_NONE);
@@ -114,7 +114,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_draw_line'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
         let p1x = Blockly.Arduino.valueToCode(block, 'P1X', Blockly.Arduino.ORDER_NONE);
@@ -128,7 +128,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_draw_rect'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
         let x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_NONE);
@@ -146,7 +146,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_draw_circle'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
         let x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_NONE);
@@ -163,7 +163,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_draw_triangles'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
         let p1x = Blockly.Arduino.valueToCode(block, 'P1X', Blockly.Arduino.ORDER_NONE);
@@ -183,7 +183,7 @@ export default (Blockly) => {
     };
 
     Blockly.Arduino['display_wioterminal_draw_round_rect'] = function (block) {
-        Blockly.Arduino.definitions_['include_tft'] = '#include"TFT_eSPI.h"';
+        Blockly.Arduino.definitions_['include_tft'] = '#include "TFT_eSPI.h"';
         Blockly.Arduino.definitions_['var_tft'] = 'TFT_eSPI tft;';
         Blockly.Arduino.setups_['setup_tft'] = '  tft.begin();';
         let x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_NONE);

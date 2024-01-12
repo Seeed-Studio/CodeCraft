@@ -56,4 +56,9 @@ export default Blockly => {
         return `draw_rectangle_minmax(${x1}, ${y1}, ${x2}, ${y2})\n`;
     }
 
+    Blockly.Maixduino['looks_maixduino_screen_clear'] = function (block) {
+        Blockly.Maixduino.definitions_['import_camare'] = 'from camera import * ';
+        return `lcd.clear()\n`;
+    }
+
 }

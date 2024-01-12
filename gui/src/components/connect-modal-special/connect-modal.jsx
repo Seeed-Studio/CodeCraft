@@ -379,9 +379,17 @@ class ConnectModalComponent extends React.Component {
    */
   handleScan() {
     this.props.scan().then((data) => {
+      const editingTarget = this.props.vm.editingTarget;
+      const deviceId = editingTarget.getDeviceId();
+      let filterData;
+      if (deviceId == 1010) {
+        filterData = data.filter(item => item.deviceId == deviceId);
+      }else {
+        filterData = data;
+      }
+      
       // 判断是否扫描出来设备
-      // Determine if detect device
-      const hasDevices = data && data.length > 0;
+      const hasDevices = filterData && filterData.length > 0;
       // 未扫描到设备
       // No device detected
       if (!hasDevices) {
@@ -396,10 +404,11 @@ class ConnectModalComponent extends React.Component {
         // 判断当前是否有选中设备
         // Determine if there is a selected device
         const hasCurr = this.state.selectedDevice.hasOwnProperty('comName');
+
         // 判断当前选中的设备，是否断开了；
         // Determine if the selected device disconnected
         const hasCurrDis = () => {
-          return !!data.find((item) => { return item.comName === this.state.selectedDevice.comName });
+          return !!filterData.find((item) => { return item.comName === this.state.selectedDevice.comName });
         }
         // 判断设备是否选择过
         // Determine if the device has been selected before
@@ -407,12 +416,11 @@ class ConnectModalComponent extends React.Component {
           // 设备未选择过
           // No selected before
           this.setState({
-            selectedDevice: data[0]
+            selectedDevice: filterData[0]
           });
         }
         // 保存扫描结果
-        // Save the scan result
-        this.setState({ devices: data });
+        this.setState({ devices: filterData });
       }
     }, () => {
       // 扫描失败，设备默认值

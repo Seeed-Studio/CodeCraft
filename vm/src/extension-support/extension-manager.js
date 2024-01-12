@@ -51,7 +51,7 @@ const builtinExtensions = {
     threeAxisAccelerometer: Scratch3ThreeAxisAccelerometerBlocks,
     meteostation: Scratch3MeteostationBlocks,
     createSkill:scratch3CreateSkill,
-    calibrateServos:Scratch3CalibrateServos,    
+    calibrateServos:Scratch3CalibrateServos
 };
 
 /**

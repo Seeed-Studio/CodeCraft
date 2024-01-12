@@ -21,10 +21,6 @@ class TrainMode {
         this.predictionID = predictionID;
     }
 
-    setBlockOnclick (blockOnclick) {
-        this.blockOnclick = blockOnclick;
-    }
-
     setIsTrain (isTrain) {
         this.isTrain = isTrain;
     }

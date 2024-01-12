@@ -740,8 +740,8 @@ Blockly.Msg.ARDUINO_GROVE_SERIAL_RGB_LED_MATRIX_SHOW_EMOJS = '%1 %2 RGB矩阵 �
 Blockly.Msg.ARDUINO_GROVE_OTTO_DIY_ROBOT1 = '%1 %2 Otto DIY机器人 %3 步数:%4 时间:%5';
 Blockly.Msg.ARDUINO_GROVE_OTTO_DIY_ROBOT2 = '%1 %2 Otto DIY机器人 %3 步数:%4 时间:%5 方向:%6';
 
-Blockly.Msg.ARDUINO_SETUP_LOOP0 = '初始化 setup';
-Blockly.Msg.ARDUINO_SETUP_LOOP2 = '循环 loop';
+Blockly.Msg.ARDUINO_SETUP_LOOP0 = '初始化';
+Blockly.Msg.ARDUINO_SETUP_LOOP2 = '循环';
 Blockly.Msg.ARDUINO_REPEAT = '重复当 %1';
 Blockly.Msg.ARDUINO_BREAK = '中断循环';
 

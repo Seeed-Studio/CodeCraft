@@ -266,7 +266,8 @@ const init = Blockly => {
         delete Blockly.C.definitions_;
         delete Blockly.C.functionNames_;
         Blockly.C.variableDB_.reset();
-        return '#define NULL 0\n' +
+        return '#include "codecraft_def.h"\n' +
+            '#define NULL 0\n' +
             definitions.join('\n') + '\n' + code;
 
     };

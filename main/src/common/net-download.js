@@ -1,6 +1,6 @@
 
 // import { ipcMain } from 'electron';
-
+import path from 'path';
 const fs = require("fs");
 
 /**
@@ -128,9 +128,9 @@ class NetDownload {
                 let name = fileName.substring(0, fileName.lastIndexOf("."));
                 let mills = new Date().getTime();
                 //声明文件路径
-                let filepath = `${packagedir}${name}_${mills}${postfix}`;
+                let filepath = path.join(packagedir, `${name}_${mills}${postfix}`);
                 let timestamp = new Date().getTime();
-                let tempFilePath = `${packagedir}tempfile_${timestamp}`;
+                let tempFilePath = path.join(packagedir, `tempfile_${timestamp}`);
                 //设置文件路径
                 item.setSavePath(tempFilePath);
                 // 设置下载监听

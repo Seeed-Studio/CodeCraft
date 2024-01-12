@@ -1,6 +1,5 @@
 class AccelerometerMode {
     constructor () {
-        this.blockOnclick;
         this.accelerometerCallback;                      
     }
 

@@ -23,10 +23,6 @@ class RecognizeMode {
     setWord (word) {
         this.word = word;
     }
-
-    setBlockOnclick (blockOnclick) {
-        this.blockOnclick = blockOnclick;
-    }
     
 }
 

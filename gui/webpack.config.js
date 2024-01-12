@@ -41,20 +41,13 @@ const base = {
                 // in much lower dependencies.
                 babelrc: false,
                 plugins: [
-                    'syntax-dynamic-import',
-                    'transform-async-to-generator',
-                    'transform-object-rest-spread',
-                    'transform-runtime',
+                    '@babel/plugin-syntax-dynamic-import',
+                    '@babel/plugin-transform-async-to-generator',
+                    '@babel/plugin-proposal-object-rest-spread',
                     ['react-intl', {
                         messagesDir: './translations/messages/'
                     }]],
-                presets: [
-                    [
-                        'env',
-                        { targets: { browsers: ['last 3 versions', 'Safari >= 8', 'iOS >= 8'] } }
-                    ],
-                    'react'
-                ]
+                presets: ['@babel/preset-env', '@babel/preset-react']
             }
 
         },
@@ -67,7 +60,7 @@ const base = {
                 options: {
                     modules: true,
                     importLoaders: 1,
-                    localIdentName: '[local]_[hash:base64:5]',
+                    localIdentName: '[name]_[local]_[hash:base64:5]',
                     camelCase: true
                 }
             }, {
@@ -78,16 +71,24 @@ const base = {
                         return [
                             postcssImport,
                             postcssVars,
-                            autoprefixer({
-                                browsers: ['last 3 versions', 'Safari >= 8', 'iOS >= 8']
-                            })
+                            autoprefixer
                         ];
                     }
                 }
             }]
-        }, {
+        },
+        {
             test: /\.less$/,
             use: ['style-loader', 'css-loader', 'less-loader?modules']
+        },
+        {
+            test: /\.hex$/,
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: 16 * 1024
+                }
+            }]
         }]
     },
     optimization: {
@@ -96,10 +97,10 @@ const base = {
                 include: /\.min\.js$/,
                 uglifyOptions: {
                     compress: {
+                        warnings: false,
                         drop_console: true,
                         drop_debugger: true
-                    },
-                    warnings: false,
+                    }
                 }
             })
         ]
@@ -128,9 +129,11 @@ module.exports = [
         module: {
             rules: base.module.rules.concat([
                 {
-                    test: /\.(svg|png|wav|gif|jpg)$/,
-                    loader: 'file-loader',
+                    test: /\.(svg|png|wav|mp3|gif|jpg|pdf)$/,
+                    loader: 'url-loader',
                     options: {
+                        limit: 2048,
+                        esModule: false,
                         outputPath: 'static/assets/'
                     }
                 }
@@ -175,25 +178,41 @@ module.exports = [
                 filename: 'player.html',
                 title: 'Codecraft: Player Example'
             }),
-            new CopyWebpackPlugin([{
-                from: 'static',
-                to: 'static'
-            }]),
-            new CopyWebpackPlugin([{
-                // from: 'node_modules/scratch-blocks/media',
-                from: '../blocks/media',
-                to: 'static/blocks-media'
-            }]),
-            new CopyWebpackPlugin([{
-                from: 'extensions/**',
-                to: 'static',
-                context: 'src/examples'
-            }]),
-            new CopyWebpackPlugin([{
-                from: 'extension-worker.{js,js.map}',
-                context: '../vm/dist/web'
-                // context: 'node_modules/scratch-vm/dist/web'
-            }])
+            new CopyWebpackPlugin({
+                patterns: [
+                    {
+                        from: 'static',
+                        to: 'static'
+                    }
+                ]
+            }),
+            new CopyWebpackPlugin({
+                patterns: [
+                    {
+                        // from: 'node_modules/scratch-blocks/media',
+                        from: '../blocks/media',
+                        to: 'static/blocks-media'
+                    }
+                ]
+            }),
+            new CopyWebpackPlugin({
+                patterns: [
+                    {
+                        from: 'extensions/**',
+                        to: 'static',
+                        context: 'src/examples'
+                    }
+                ]
+            }),
+            new CopyWebpackPlugin({
+                patterns: [
+                    {
+                        from: 'extension-worker.{js,js.map}',
+                        context: '../vm/dist/web'
+                        // context: 'node_modules/scratch-vm/dist/web'
+                    }
+                ]
+            })
         ])
     })
 ].concat(
@@ -215,9 +234,11 @@ module.exports = [
             module: {
                 rules: base.module.rules.concat([
                     {
-                        test: /\.(svg|png|wav|gif|jpg)$/,
-                        loader: 'file-loader',
+                        test: /\.(svg|png|wav|mp3|gif|jpg|pdf)$/,
+                        loader: 'url-loader',
                         options: {
+                            limit: 2048,
+                            esModule: false,
                             outputPath: 'static/assets/',
                             publicPath: '/static/assets/'
                         }
@@ -225,16 +246,24 @@ module.exports = [
                 ])
             },
             plugins: base.plugins.concat([
-                new CopyWebpackPlugin([{
-                    // from: 'node_modules/scratch-blocks/media',
-                    from: '../blocks/media',
-                    to: 'static/blocks-media'
-                }]),
-                new CopyWebpackPlugin([{
-                    from: 'extension-worker.{js,js.map}',
-                    context: '../vm/dist/web'
-                    // context: 'node_modules/scratch-vm/dist/web'
-                }])
+                new CopyWebpackPlugin({
+                    patterns: [
+                        {
+                            // from: 'node_modules/scratch-blocks/media',
+                            from: '../blocks/media',
+                            to: 'static/blocks-media'
+                        }
+                    ]
+                }),
+                new CopyWebpackPlugin({
+                    patterns: [
+                        {
+                            from: 'extension-worker.{js,js.map}',
+                            context: '../vm/dist/web'
+                            // context: 'node_modules/scratch-vm/dist/web'
+                        }
+                    ]
+                })
             ])
         })) : []
 );

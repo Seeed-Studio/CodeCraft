@@ -1,4 +1,4 @@
-import Serialport from 'serialport';
+import { SerialPort } from 'serialport';
 
 import { EventEmitter } from 'events';
 import bindAll from 'lodash.bindall';
@@ -17,6 +17,41 @@ const SET_OPTIONS = {
     dtr: false,
     rts: false
 }
+
+const parseCommand = (command) => {
+    let __result = [];
+    let __splitData = command.split(" ") || [];
+    if (__splitData) {
+        __splitData.forEach(el => {
+            if (el && el != "") {
+                __result.push(el);
+            }
+        });
+    }
+    return __result;
+}
+
+const parseCommandResp = (respStr) => {
+    let __result = {};
+    let __splitData = respStr.split("\r\n") || [];
+    if (__splitData) {
+        __splitData.forEach(el => {
+            if (el.indexOf("XON/XOFF") != -1) {
+                __result.xonxoff = parseCommand(el)[1]
+            }
+            if (el.indexOf("CTS") != -1) {
+                __result.cts = parseCommand(el)[2]
+            }
+            if (el.indexOf("RTS") != -1) {
+                __result.rts = parseCommand(el)[2]
+            }
+        });
+    }
+    return __result;
+}
+
+
+
 class SerialportCore extends EventEmitter {
 
     constructor() {
@@ -39,7 +74,7 @@ class SerialportCore extends EventEmitter {
      * 静态scan函数
      */
     static scan() {
-        return Serialport.list();
+        return SerialPort.list();
     }
 
     /**
@@ -60,7 +95,7 @@ class SerialportCore extends EventEmitter {
             return Promise.resolve(true);
         }
         return new Promise(resolve => {
-            this.activeDevice = new Serialport(comName, Object.assign({}, SERIALPORT_CONFIG, connectionConfig));
+            this.activeDevice = new SerialPort(Object.assign({path: comName}, SERIALPORT_CONFIG, connectionConfig));
             //链路连接成功后添加 'data' 、 'close'事件
             this.activeDevice.on('data', this.handleResponse);
             this.activeDevice.on('close', this.handleConnectionClose);

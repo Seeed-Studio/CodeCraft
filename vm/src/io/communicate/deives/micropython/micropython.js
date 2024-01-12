@@ -47,7 +47,7 @@ class MicroPython extends ChMicroPython {
                 this.needResetAtOpenSerialP = true;
             }, afterConnDelay);
         }, () => {
-            reject();
+            reject('websocket is disconnected');
         });
     }
 
@@ -217,7 +217,7 @@ class MicroPython extends ChMicroPython {
         } else {
             //连接失败
             if (this._connectReject) {
-                this._connectReject();
+                this._connectReject('cannot recognize the device');
                 this._connectReject = null;
             }
         }

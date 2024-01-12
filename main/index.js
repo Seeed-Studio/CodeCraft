@@ -56,9 +56,8 @@ const inject = () => {
         app.commandLine.appendSwitch('ignore-gpu-blacklist');
         //注册app生命周期事件函数
         app.on('ready', (launchInfo) => {
-            injectStorage(() => {
-                onAppReady(launchInfo)
-            });
+            injectStorage();
+            onAppReady(launchInfo)
         });
         app.on('window-all-closed', onWindowAllClosed);
         app.on('before-quit', onBeforeQuit);

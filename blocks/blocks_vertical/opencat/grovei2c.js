@@ -622,3 +622,32 @@ Blockly.Blocks['motion_opencat_oled33'] = {
       });
   }
 };
+
+//温湿度传感器dht20
+Blockly.Blocks['motion_opencat_seeed_temperature_humidity_dht20'] = {
+  init: function () {
+    this.jsonInit({
+      "message0": Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY_DHT20,
+      "args0": [
+        {
+          "type": "field_image",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/temperature_humidity.svg",
+          "width": 65,
+          "height": 30
+        },
+        {
+          "type": "field_vertical_separator"
+        },
+        {
+          "type": "field_dropdown",
+          "name": "TH",
+          "options": [
+            [Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY_OPT1, '0'],
+            [Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY_OPT2, '1']
+          ]
+        }
+      ],
+      "extensions": ["colours_arduino_grove_i2c", "output_number"]
+    });
+  }
+}

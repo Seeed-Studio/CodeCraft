@@ -197,6 +197,7 @@ ei_printf("connectToHub result: %d\\n", connectResult);
     };
 
     Blockly.Arduino['azure_iot_wioterminal_azure_publish'] = function (block) {
+        let model = block.getFieldValue('MODEL');
         Blockly.Arduino.define_fun['func_getLabelConfidence'] =       
 `float getLabelConfidence(char *label)
 {
@@ -209,6 +210,7 @@ ei_printf("connectToHub result: %d\\n", connectResult);
   }
   return value;
 }`              
+        if (model == '0') {//人工鼻或者气味
           Blockly.Arduino.definitions_['include_MODEL_ID'] = '#define IOT_CONFIG_MODEL_ID         "dtmi:seeedkk:wioterminal:gas_model;1"';
           Blockly.Arduino.define_fun['func_sendTelemetry'] = `
 static az_result sendTelemetry()
@@ -241,8 +243,37 @@ static az_result sendTelemetry()
   mqtt_client.publish(telemetry_topic, az_span_ptr(out_payload), az_span_size(out_payload), false);
   return AZ_OK;
 }`;
-        
+        } else if (model == '1') {//加速度计
+          Blockly.Arduino.definitions_['include_MODEL_ID'] = '#define IOT_CONFIG_MODEL_ID         "dtmi:seeedkk:wioterminal:accelerometer_model;1"';
+          Blockly.Arduino.define_fun['func_sendTelemetry'] = `
+static az_result sendTelemetry()
+{
+  float accelX;
+  float accelY;
+  float accelZ;
+  lis.getAcceleration(&accelX, &accelY, &accelZ);
+  char telemetry_topic[128];
+  if (az_result_failed(az_iot_hub_client_telemetry_get_publish_topic(&HubClient, NULL, telemetry_topic, sizeof(telemetry_topic), NULL)))
+  {
+    return AZ_ERROR_NOT_SUPPORTED;
+  }
+  az_json_writer json_builder;
+  char telemetry_payload[200];
+  AZ_RETURN_IF_FAILED(az_json_writer_init(&json_builder, AZ_SPAN_FROM_BUFFER(telemetry_payload), NULL));
+  AZ_RETURN_IF_FAILED(az_json_writer_append_begin_object(&json_builder));
+  AZ_RETURN_IF_FAILED(az_json_writer_append_property_name(&json_builder, AZ_SPAN_LITERAL_FROM_STR("accelX")));
+  AZ_RETURN_IF_FAILED(az_json_writer_append_double(&json_builder, accelX, 3));
+  AZ_RETURN_IF_FAILED(az_json_writer_append_property_name(&json_builder, AZ_SPAN_LITERAL_FROM_STR("accelY")));
+  AZ_RETURN_IF_FAILED(az_json_writer_append_double(&json_builder, accelY, 3));
+  AZ_RETURN_IF_FAILED(az_json_writer_append_property_name(&json_builder, AZ_SPAN_LITERAL_FROM_STR("accelZ")));
+  AZ_RETURN_IF_FAILED(az_json_writer_append_double(&json_builder, accelZ, 3));
+  AZ_RETURN_IF_FAILED(az_json_writer_append_end_object(&json_builder));
+  const az_span out_payload{ az_json_writer_get_bytes_used_in_destination(&json_builder) };
 
+  mqtt_client.publish(telemetry_topic, az_span_ptr(out_payload), az_span_size(out_payload), false);
+  return AZ_OK;
+}`;
+        } 
         Blockly.Arduino.define_fun['func_sendProperty'] = `
 static az_result sendProperty()
 {

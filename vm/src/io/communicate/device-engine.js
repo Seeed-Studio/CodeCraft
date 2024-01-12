@@ -7,7 +7,7 @@ const { createRescuer } = require('./rescuer/fatory')
 // 设备连接超时时间
 const DEVICE_CONNECT_TIMEOUT = 3 * 1000;
 // 设备上传超时时间
-const DEVICE_UPLOAD_TIMEOUT = 2 * 60 * 1000;
+const DEVICE_UPLOAD_TIMEOUT = 60 * 60 * 1000;
 const DEVICE_UPGRADE_TIMEOUT = 10 * 60 * 1000;
 
 /**
@@ -193,10 +193,10 @@ class DeviceEngine extends EventEmitter {
             this.device.connect(comName, () => {
                 this.clearTimeout();
                 resolve();
-            }, () => {
+            }, (error) => {
                 this.disconnect();
                 this.clearTimeout();
-                reject();
+                reject(error);
             });
             // 设置设备连接超时计时
             this.timeout = setTimeout(() => {
@@ -294,15 +294,67 @@ class DeviceEngine extends EventEmitter {
             this.device.upload(code, (value) => {
                 this.clearTimeout();
                 resolve(value);
-            }, () => {
+            }, (error) => {
                 this.clearTimeout();
-                reject();
+                reject(error);
             });
             // 设置设备连接超时计时
             this.timeout = setTimeout(() => {
                 reject();
             }, DEVICE_UPLOAD_TIMEOUT);
         });
+    }
+
+    uploadBin(bin) {
+        return new Promise((resolve, reject) => {
+            this.device.uploadBin(bin, (value) => {
+                this.clearTimeout();
+                resolve(value);
+            }, (error) => {
+                this.clearTimeout();
+                reject(error);
+            });
+            // 设置设备连接超时计时
+            this.timeout = setTimeout(() => {
+                reject();
+            }, DEVICE_UPLOAD_TIMEOUT);
+        });
+    }
+
+    /**
+    * 检查Arduino库
+    * @param {*} _data
+    */
+    checkLibrary(data) {
+        if (!this._io.isConnected()) {
+            return Promise.reject('socket disconnect...');
+        }
+        return this._io.checkLibrary(data);
+    }
+
+    checkTensorFlowLibrary(data) {
+        if (!this._io.isConnected()) {
+            return Promise.reject('socket disconnect...');
+        }
+        return this._io.checkTensorFlowLibrary(data);
+    }
+
+    /**
+    * 更新Arduino库
+    * @param {*} _data
+    */
+    uploadLibrary(data) {
+        if (!this._io.isConnected()) {
+            return Promise.reject('socket disconnect...');
+        }
+        return this._io.uploadLibrary(data);
+    }
+
+    uploadTensorFlowLibrary(data) {
+        if (!this._io.isConnected()) {
+            return Promise.reject('socket disconnect...');
+        }
+        return this._io.uploadTensorFlowLibrary(data);
     }
 
     /**

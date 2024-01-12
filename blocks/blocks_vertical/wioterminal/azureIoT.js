@@ -136,7 +136,7 @@ Blockly.Blocks['azure_iot_wioterminal_azure_connected'] = {
 Blockly.Blocks['azure_iot_wioterminal_azure_publish'] = {
     init: function () {
         this.jsonInit({
-            "message0": Blockly.Msg.WIO_TERMINAL_PUBLISH_NOSE_AZURE,
+            "message0": Blockly.Msg.WIO_TERMINAL_PUBLISH_AZURE,
             "args0": [
                 {
                     "type": "field_image",
@@ -147,6 +147,14 @@ Blockly.Blocks['azure_iot_wioterminal_azure_publish'] = {
                 {
                     "type": "field_vertical_separator"
                 },
+                {
+                    "type": "field_dropdown",
+                    "name": "MODEL",
+                    "options": [
+                        [Blockly.Msg.WIO_TERMINAL_PUBLISH_AZURE_MODEL_0, '0'],
+                        [Blockly.Msg.WIO_TERMINAL_PUBLISH_AZURE_MODEL_1, '1'],
+                    ],
+                }
             ],
             "extensions": ["colours_wioterminal_azure_iot", "shape_statement"]
         });

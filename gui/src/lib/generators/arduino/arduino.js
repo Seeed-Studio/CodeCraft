@@ -296,7 +296,7 @@ export default (Blockly) => {
     Blockly.Arduino['motion_arduino_figure_output'] = function (block) {
         var pin = block.getFieldValue('PIN');
         var dropdownStat = block.getFieldValue('STAT');
-        Blockly.Arduino.setups_['setup_output_' + pin] = 'pinMode(' + pin + ', OUTPUT);';
+        Blockly.Arduino.setups_['setup_output_' + pin] = '  pinMode(' + pin + ', OUTPUT);';
         var code = 'digitalWrite(' + pin + ',' + dropdownStat + ');\n'
         return code;
     }
@@ -312,7 +312,7 @@ export default (Blockly) => {
         var pin = block.getFieldValue('PIN');
         var dropdownStat = block.getFieldValue('STAT');
 
-        Blockly.Arduino.setups_['setup_output_' + pin] = 'pinMode(' + pin + ', OUTPUT);';
+        Blockly.Arduino.setups_['setup_output_' + pin] = '  pinMode(' + pin + ', OUTPUT);';
         Blockly.Arduino.define_fun['recorder'] =
             'void recorderPlay(uint8_t isPlay)\n{\n' +
             `digitalWrite(${pin}, LOW);\n` +
@@ -326,7 +326,7 @@ export default (Blockly) => {
     Blockly.Arduino['motion_arduino_seeed_buzzer'] = function (block) {
         var pin = block.getFieldValue('PIN');
         var dropdownStat = block.getFieldValue('STAT');
-        Blockly.Arduino.setups_['setup_output_' + pin] = 'pinMode(' + pin + ', OUTPUT);';
+        Blockly.Arduino.setups_['setup_output_' + pin] = '  pinMode(' + pin + ', OUTPUT);';
         var code = 'analogWrite(' + pin + ',' + dropdownStat + ');\n'
         return code;
     }
@@ -335,7 +335,7 @@ export default (Blockly) => {
     /* 数字输入 -------------------------------------------------- */
     Blockly.Arduino['motion_arduino_figure_input'] = function (block) {
         var pin = block.getFieldValue('PIN');
-        Blockly.Arduino.setups_['setup_input_' + pin] = 'pinMode(' + pin + ', INPUT);';
+        Blockly.Arduino.setups_['setup_input_' + pin] = '  pinMode(' + pin + ', INPUT);';
         var code = 'digitalRead(' + pin + ')';
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
@@ -354,7 +354,7 @@ export default (Blockly) => {
 
         var pin = block.getFieldValue('PIN');
         var color = block.getFieldValue('COLOR');
-        Blockly.Arduino.setups_['setup_input_' + pin] = 'pinMode(' + pin + ', INPUT);';
+        Blockly.Arduino.setups_['setup_input_' + pin] = '  pinMode(' + pin + ', INPUT);';
         var code = 'digitalRead(' + pin + ')';
         return [`${color == '0' ? '' : 'not '}${code}`, Blockly.Arduino.ORDER_ATOMIC];
 
@@ -362,14 +362,14 @@ export default (Blockly) => {
 
     Blockly.Arduino['motion_arduino_seeed_line_finder'] = function (block) {
         var pin = block.getFieldValue('PIN');
-        Blockly.Arduino.setups_['setup_input_' + pin] = 'pinMode(' + pin + ', INPUT);';
+        Blockly.Arduino.setups_['setup_input_' + pin] = '  pinMode(' + pin + ', INPUT);';
         var code = '!digitalRead(' + pin + ')';
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
 
     Blockly.Arduino['motion_arduino_seeed_flame'] = function (block) {
         var pin = block.getFieldValue('PIN');
-        Blockly.Arduino.setups_['setup_input_' + pin] = 'pinMode(' + pin + ', INPUT);';
+        Blockly.Arduino.setups_['setup_input_' + pin] = '  pinMode(' + pin + ', INPUT);';
         var code = '!digitalRead(' + pin + ')';
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
@@ -379,13 +379,13 @@ export default (Blockly) => {
     /* 模拟输入 -------------------------------------------------- */
     Blockly.Arduino['motion_arduino_analog_input'] = function (block) {
         var pin = block.getFieldValue('PIN');
-        Blockly.Arduino.setups_['setup_analog_' + pin] = 'pinMode(' + pin + ', 2);';
+        Blockly.Arduino.setups_['setup_analog_' + pin] = '  pinMode(' + pin + ', 2);';
         var code = 'analogRead(' + pin + ')';
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
     Blockly.Arduino['motion_arduino_seeed_light'] = function (block) {
         var pin = block.getFieldValue('PIN');
-        Blockly.Arduino.setups_['setup_analog_' + pin] = 'pinMode(' + pin + ', 0);';
+        Blockly.Arduino.setups_['setup_analog_' + pin] = '  pinMode(' + pin + ', 0);';
         var code = 'analogRead(' + pin + ')';
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
@@ -395,7 +395,7 @@ export default (Blockly) => {
     Blockly.Arduino['motion_arduino_seeed_moisture'] = Blockly.Arduino['motion_arduino_analog_input'];
     Blockly.Arduino['motion_arduino_seeed_temperature'] = function (block) {
         var pin = block.getFieldValue('PIN');
-        Blockly.Arduino.setups_['setup_analog_' + pin] = 'pinMode(' + pin + ', 2);';
+        Blockly.Arduino.setups_['setup_analog_' + pin] = '  pinMode(' + pin + ', 2);';
         var code = 'analogRead(' + pin + ')*0.048';
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
@@ -437,7 +437,7 @@ export default (Blockly) => {
     Blockly.Arduino['motion_arduino_pulse_len'] = function (block) {
         var pin = block.getFieldValue('PIN');
         var stat = block.getFieldValue('STAT');
-        Blockly.Arduino.setups_['setup_input_' + pin] = 'pinMode(' + pin + ', INPUT);';
+        Blockly.Arduino.setups_['setup_input_' + pin] = '  pinMode(' + pin + ', INPUT);';
         var code = `pulseIn(${pin}, ${stat})`;
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
@@ -445,7 +445,7 @@ export default (Blockly) => {
         var pin = block.getFieldValue('PIN');
         var stat = block.getFieldValue('STAT');
         var time = Blockly.Arduino.valueToCode(block, 'TIME', Blockly.Arduino.ORDER_ATOMIC);
-        Blockly.Arduino.setups_['setup_input_' + pin] = 'pinMode(' + pin + ', INPUT);';
+        Blockly.Arduino.setups_['setup_input_' + pin] = '  pinMode(' + pin + ', INPUT);';
         var code = `pulseIn(${pin}, ${stat},${time})`;
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
@@ -527,7 +527,7 @@ export default (Blockly) => {
 // else printf("broadcast(%s,%d)","${opt}",${value});`
         return code;
     }
-
+    
     /* 延时 -------------------------------------------------- */
     Blockly.Arduino['motion_arduino_delay_ms'] = function (block) {
         var time = Blockly.Arduino.valueToCode(block, 'TIME', Blockly.Arduino.ORDER_ATOMIC);
@@ -554,7 +554,7 @@ export default (Blockly) => {
 
     Blockly.Arduino['motion_arduino_seeed_read_gesture'] = function (block) {
         Blockly.Arduino.definitions_['include_paj7620'] = '#include <paj7620.h>';
-        Blockly.Arduino.setups_['setup_paj7620Init'] = 'paj7620Init();';
+        Blockly.Arduino.setups_['setup_paj7620Init'] = '  paj7620Init();';
         // Blockly.Arduino.setups_['setup_var_gesture'] = 'uint8_t gesture;';
         Blockly.Arduino.define_fun['var_gesture'] = 'uint8_t gesture;';
         Blockly.Arduino.define_fun['getGestureValue'] =
@@ -579,7 +579,7 @@ export default (Blockly) => {
         }
         Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
         Blockly.Arduino.definitions_['include_paj7620'] = '#include <paj7620.h>';
-        Blockly.Arduino.setups_['setup_paj7620Init'] = 'paj7620Init();';
+        Blockly.Arduino.setups_['setup_paj7620Init'] = '  paj7620Init();';
         Blockly.Arduino.define_fun['gesture'] =
             `uint8_t getGestureValue(uint8_t addr,uint8_t opt)\n{\nuint8_t data = 0;\nwhile(1){\npaj7620ReadReg(addr, 1, &data);\nif(data != 0) return data == opt;\n}\n}`;
         var code = `getGestureValue(${addr},${opt})`;
@@ -588,7 +588,6 @@ export default (Blockly) => {
 
 
     // 语音识别
-    // `uint8_t softSerialRead()\n{\nwhile(1)\n{\nuint8_t is = softSerial.available();\nif(is) return softSerial.read();\n}\n}`;
     Blockly.Arduino['motion_arduino_seeed_speech_recognizer'] = function (block) {
         var pin = block.getFieldValue('PIN');
         var opt = block.getFieldValue('OPT');
@@ -612,8 +611,8 @@ export default (Blockly) => {
             '    else\n' +
             '        return -1;\n' +
             '}\n';
-        Blockly.Arduino.setups_[`setup_softserial_begin_${pin}`] = `softSerial_${pin}.begin(9600);`;
-        Blockly.Arduino.setups_[`setup_softserial_listen_${pin}`] = `softSerial_${pin}.listen();`;
+        Blockly.Arduino.setups_[`setup_softserial_begin_${pin}`] = `  softSerial_${pin}.begin(9600);`;
+        Blockly.Arduino.setups_[`setup_softserial_listen_${pin}`] = `  softSerial_${pin}.listen();`;
         return [`softSerialRead_${pin}() == ${parseInt(opt) + 1}`, Blockly.Arduino.ORDER_ATOMIC];
     }
 
@@ -640,8 +639,8 @@ export default (Blockly) => {
             '    else\n' +
             '        return -1;\n' +
             '}\n';
-        Blockly.Arduino.setups_[`setup_softserial_begin_${pin}`] = `softSerial_${pin}.begin(9600);`;
-        Blockly.Arduino.setups_[`setup_softserial_listen_${pin}`] = `softSerial_${pin}.listen();`;
+        Blockly.Arduino.setups_[`setup_softserial_begin_${pin}`] = `  softSerial_${pin}.begin(9600);`;
+        Blockly.Arduino.setups_[`setup_softserial_listen_${pin}`] = `  softSerial_${pin}.listen();`;
         return [`softSerialRead_${pin}()`, Blockly.Arduino.ORDER_ATOMIC];
     }
 
@@ -651,32 +650,6 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['include_ultrasonic'] = '#include <Ultrasonic.h>';
         Blockly.Arduino.definitions_[`var_ult${pin}`] = `Ultrasonic ult${pin}(${pin});`;
         var code = `(long)ult${pin}.MeasureInCentimeters()`;
-
-        // var pin = block.getFieldValue('PIN');
-        // Blockly.Arduino.definitions_['include_Ultrasonic'] = '#include <NewPing.h>';
-        // Blockly.Arduino.definitions_['var_Ultrasonic'] =
-        //     `#define MAX_DISTANCE 200\n` +
-        //     `NewPing sonar(${pin}, ${pin}, MAX_DISTANCE);\n` +
-        //     `unsigned int pingSpeed = 50;\n` +
-        //     `unsigned long pingTimer;\n` +
-        //     `float ulrDistance = 0.0;\n` +
-        //     ``;
-        // Blockly.Arduino.setups_['setup_Ultrasonic'] = 'pingTimer = millis();\n';
-        // Blockly.Arduino.define_fun['Ultrasonic'] =
-        //     'void echoCheck() {\n' +
-        //     '    if (sonar.check_timer()) {\n' +
-        //     '        ulrDistance = sonar.ping_result / US_ROUNDTRIP_CM;\n' +
-        //     '    }\n' +
-        //     '}\n' +
-        //     'float getUltValue(){\n' +
-        //     '    if (millis() >= pingTimer) {\n' +
-        //     '        pingTimer += pingSpeed;\n' +
-        //     '        sonar.ping_timer(echoCheck);\n' +
-        //     '    }\n' +
-        //     '    return ulrDistance;\n' +
-        //     '}\n';
-        // var code = 'getUltValue()';
-
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
 
@@ -688,7 +661,7 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['include_SparkFunMiniMoto'] = '#include <SparkFunMiniMoto.h>';
         Blockly.Arduino.definitions_['var_motor0'] = 'MiniMoto motor_CH1(0xC4);';
         Blockly.Arduino.definitions_['var_motor1'] = 'MiniMoto motor_CH2(0xC0);';
-        Blockly.Arduino.setups_['setup_mini_motor_driver'] = 'motor_CH1.stop();\nmotor_CH2.stop();';
+        Blockly.Arduino.setups_['setup_mini_motor_driver'] = '  motor_CH1.stop();\n  motor_CH2.stop();';
         var code = `motor_${ch}.drive(${speed});\n`
         return code;
     }
@@ -698,7 +671,7 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['include_SparkFunMiniMoto'] = '#include <SparkFunMiniMoto.h>';
         Blockly.Arduino.definitions_['var_motor0'] = 'MiniMoto motor_CH1(0xC4);';
         Blockly.Arduino.definitions_['var_motor1'] = 'MiniMoto motor_CH2(0xC0);';
-        Blockly.Arduino.setups_['setup_mini_motor_driver'] = 'motor_CH1.stop();\nmotor_CH2.stop();';
+        Blockly.Arduino.setups_['setup_mini_motor_driver'] = '  motor_CH1.stop();\n  motor_CH2.stop();';
         var code = `motor_${ch}.stop();`
         return code;
     }
@@ -712,7 +685,7 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
         Blockly.Arduino.definitions_['include_rgb_lcd'] = '#include <rgb_lcd.h>';
         Blockly.Arduino.definitions_['var_lcd_rgb'] = 'rgb_lcd lcd;';
-        Blockly.Arduino.setups_['setup_lcd_rgb'] = 'lcd.begin(16, 2);';
+        Blockly.Arduino.setups_['setup_lcd_rgb'] = '  lcd.begin(16, 2);';
         var code = 'lcd.setCursor(0, 0);\n'
         code += 'lcd.print(' + str1 + ');\n';
         code += 'lcd.setCursor(0, 1);\n';
@@ -728,7 +701,7 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
         Blockly.Arduino.definitions_['include_rgb_lcd'] = '#include <rgb_lcd.h>';
         Blockly.Arduino.definitions_['var_lcd_rgb'] = 'rgb_lcd lcd;';
-        Blockly.Arduino.setups_['setup_lcd_rgb'] = 'lcd.begin(16, 2);';
+        Blockly.Arduino.setups_['setup_lcd_rgb'] = '  lcd.begin(16, 2);';
         var code = 'lcd.setCursor(' + column + '-1, ' + row + '-1);\n'
         code += 'lcd.print(' + str + ');\n';
         return code;
@@ -741,7 +714,7 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
         Blockly.Arduino.definitions_['include_rgb_lcd'] = '#include <rgb_lcd.h>';
         Blockly.Arduino.definitions_['var_lcd_rgb'] = 'rgb_lcd lcd;';
-        Blockly.Arduino.setups_['setup_lcd_rgb'] = 'lcd.begin(16, 2);';
+        Blockly.Arduino.setups_['setup_lcd_rgb'] = '  lcd.begin(16, 2);';
         var code = 'lcd.setRGB(' + r + ', ' + g + ', ' + b + ');\n'
         return code;
     }
@@ -751,7 +724,7 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
         Blockly.Arduino.definitions_['include_rgb_lcd'] = '#include <rgb_lcd.h>';
         Blockly.Arduino.definitions_['var_lcd_rgb'] = 'rgb_lcd lcd;';
-        Blockly.Arduino.setups_['setup_lcd_rgb'] = 'lcd.begin(16, 2);';
+        Blockly.Arduino.setups_['setup_lcd_rgb'] = '  lcd.begin(16, 2);';
         var code = 'lcd.' + dropdownStat + '();\n'
         return code;
     }
@@ -827,7 +800,27 @@ export default (Blockly) => {
         return code;
     }
 
+    //WS2813 Mini 彩灯/灯条
+    Blockly.Arduino['motion_arduino_seeed_rgb_led_mini'] = function (block) {
+        var pin = block.getFieldValue('PIN');
+        var num = block.getFieldValue('NUM');
 
+        var r = Blockly.Arduino.valueToCode(block, 'R', Blockly.Arduino.ORDER_NONE);
+        var g = Blockly.Arduino.valueToCode(block, 'G', Blockly.Arduino.ORDER_NONE);
+        var b = Blockly.Arduino.valueToCode(block, 'B', Blockly.Arduino.ORDER_NONE);
+
+        Blockly.Arduino.definitions_['include_NeoPixel'] = '#include "Adafruit_NeoPixel.h"';
+        Blockly.Arduino.definitions_[`var_NUM_LEDS`] = `#define NUM_LEDS 10`;
+        Blockly.Arduino.definitions_[`var_PIN_${pin}`] = `#define PIN_${pin} ${pin}`;
+        Blockly.Arduino.definitions_[`var_pixels_${pin}`] = `Adafruit_NeoPixel pixels_${pin} = Adafruit_NeoPixel(NUM_LEDS, PIN_${pin}, NEO_GRB + NEO_KHZ800);`;
+
+        Blockly.Arduino.setups_[`setup_neopixel_setBrightness_${pin}`] = `  pixels_${pin}.setBrightness(255);`;
+        Blockly.Arduino.setups_[`setup_neopixel_${pin}`] = `  pixels_${pin}.begin();`;
+        var code = `pixels_${pin}.setPixelColor(${num-1}, pixels_${pin}.Color(${r},${g},${b}));\n`;
+        code += `pixels_${pin}.show();\n`;
+        return code;
+    }
+    
     //环形led
     Blockly.Arduino['motion_arduino_seeed_circular_led'] = function (block) {
         try {
@@ -882,7 +875,7 @@ export default (Blockly) => {
             }
             Blockly.Arduino.definitions_['include_grove_led_bar'] = '#include <Grove_LED_Bar.h>';
             Blockly.Arduino.definitions_['var_grove_led_bar'] = `Grove_LED_Bar groveLedBar(${pins[1]}, ${pins[0]},0);`;
-            Blockly.Arduino.setups_['setup_grove_led_bar'] = 'groveLedBar.begin();';
+            Blockly.Arduino.setups_['setup_grove_led_bar'] = '  groveLedBar.begin();';
             stat = stat.split('|');
             var code = '';
             for (var x = 0, s; s = stat[x]; x++) {
@@ -912,8 +905,8 @@ export default (Blockly) => {
 
         Blockly.Arduino.definitions_['include_4digit_display'] = '#include <TM1637.h>';
         Blockly.Arduino.definitions_['var_4digit_display'] = `TM1637 tm1637(${pins[0]}, ${pins[1]});`;
-        Blockly.Arduino.setups_['setup_4digit_display_init'] = 'tm1637.init();';
-        Blockly.Arduino.setups_['setup_4digit_display_set'] = 'tm1637.set(BRIGHT_TYPICAL);';
+        Blockly.Arduino.setups_['setup_4digit_display_init'] = '  tm1637.init();';
+        Blockly.Arduino.setups_['setup_4digit_display_set'] = '  tm1637.set(BRIGHT_TYPICAL);';
         Blockly.Arduino.define_fun['4digit_display']
             = 'void showNumber(uint16_t num)\n'
             + '{\n'
@@ -934,7 +927,7 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
         Blockly.Arduino.definitions_['include_MMA'] = '#include "MMA7660.h"';
         Blockly.Arduino.definitions_['var_MMA'] = 'MMA7660 accelemeter;';
-        Blockly.Arduino.setups_['setup_mmaInit'] = 'accelemeter.init();';
+        Blockly.Arduino.setups_['setup_mmaInit'] = '  accelemeter.init();';
         Blockly.Arduino.define_fun['func_get3ada15Value'] =
             'float get3ada15Value(char xyz)\n' +
             '{\n' +
@@ -953,7 +946,7 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['include_Suli'] = '#include <Suli.h>';
         Blockly.Arduino.definitions_['include_grove_serial_3ada'] = '#include <acc_adxl345_Arduino.h>';
         Blockly.Arduino.definitions_['var_grove_serial_3ada'] = `Acc_Adxl345 acc;`;
-        Blockly.Arduino.setups_['setup_acc_begin'] = 'acc.begin();';
+        Blockly.Arduino.setups_['setup_acc_begin'] = '  acc.begin();';
         Blockly.Arduino.define_fun['func_get3ada16Value'] =
             'float get3ada16Value(char xyz)\n' +
             '{\n' +
@@ -993,74 +986,58 @@ export default (Blockly) => {
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
 
-    //温湿度
+    //温湿度DHT11
     Blockly.Arduino['motion_arduino_seeed_temperature_humidity'] = function (block) {
-
         var pin = block.getFieldValue('PIN');
         var th = block.getFieldValue('TH');
-
-        Blockly.Arduino.definitions_['include_DHT'] = '#include "SeeedDHT.h"';
-        Blockly.Arduino.definitions_['var_DHT'] = 'DHT dht;';
-        Blockly.Arduino.definitions_[`var_DHTLIB_PIN_${pin}`] = `#define DHTLIB_PIN_${pin} ${pin}`;
-
+        Blockly.Arduino.definitions_['include_DHT'] = '#include "DHT.h"';
+        Blockly.Arduino.definitions_['var_DHTTYPE_11'] = '#define DHTTYPE11 DHT11';
+        Blockly.Arduino.definitions_[`var_DHTPIN`] = `#define DHTPIN ${pin}`;
+        Blockly.Arduino.definitions_[`var_DHT_11`] = `DHT dht11(DHTPIN, DHTTYPE11);`;
+        Blockly.Arduino.setups_['setup_dht_11_begin'] = '  dht11.begin();';
         var code = "";
         if (th == '0') {
-            code = `dht.TemperatureHumidityRead(DHTLIB_PIN_${pin}, 'T')`;
+            code = `dht11.readTemperature()`;
         } else {
-            code = `dht.TemperatureHumidityRead(DHTLIB_PIN_${pin}, 'H')`;
+            code = `dht11.readHumidity()`;
         }
-
-        //         #include "SeeedDHT.h" 
-        // DHT dht; 
-        // #define DHTLIB_PIN 6
-        // Blockly.Arduino.definitions_['var_DHT'] =
-        //     `#define DHTLIB_PIN ${pin}\nidDHTLib DHTLib(DHTLIB_PIN);\nfloat DHTTem = 0;\nfloat DHTHum = 0;\nuint8_t dhtLoopNo = 0;\n`;
-
-
-        // Blockly.Arduino.define_fun['dht_getvalue'] =
-        //     'void getDHTvalue(){\n' +
-        //     '    if (dhtLoopNo % 10 != 0) return;\n' +
-        //     '    int result = DHTLib.acquireAndWait();\n' +
-        //     '    while (1)\n' +
-        //     '    {\n' +
-        //     '        if (result != IDDHTLIB_OK) break;\n' +
-        //     '        DHTTem = DHTLib.getCelsius();\n' +
-        //     '        DHTHum = DHTLib.getHumidity();\n' +
-        //     '        dhtLoopNo++;\n' +
-        //     '        return;\n' +
-        //     '    }\n' +
-        //     '}\n' +
-        //     '';
-        // Blockly.Arduino.loops_['DHT_getvalue'] = 'getDHTvalue();';
-        // var code = `DHTTem`;
-        // if (th === '0') {
-        //     code = `DHTTem`;
-        // } else {
-        //     code = 'DHTHum';
-        // }
-
         return [code, Blockly.Arduino.ORDER_ATOMIC];
-
     }
 
-
+    //温湿度DHT20
+    Blockly.Arduino['motion_arduino_seeed_temperature_humidity_dht20'] = function (block) {
+        var th = block.getFieldValue('TH');
+        Blockly.Arduino.definitions_['include_DHT'] = '#include "DHT.h"';
+        Blockly.Arduino.definitions_['include_Wire'] = '#include "Wire.h"';
+        Blockly.Arduino.definitions_['var_DHTTYPE_20'] = '#define DHTTYPE20 DHT20';
+        Blockly.Arduino.definitions_[`var_DHT_20`] = `DHT dht20(DHTTYPE20);`;
+        Blockly.Arduino.setups_['setup_i2c'] = '  Wire.begin();';
+        Blockly.Arduino.setups_['setup_dht_20_begin'] = '  dht20.begin();';
+        var code = "";
+        if (th == '0') {
+            code = `dht20.readTemperature()`;
+        } else {
+            code = `dht20.readHumidity()`;
+        }
+        return [code, Blockly.Arduino.ORDER_ATOMIC];
+    }
+    
     Blockly.Arduino['motion_arduino_seeed_servo_move'] = function (block) {
         var pin = block.getFieldValue('PIN');
         var value_degree = Blockly.Arduino.valueToCode(block, 'DEGREES', Blockly.Arduino.ORDER_NONE);
         var delay_time = Blockly.Arduino.valueToCode(block, 'DELAY_TIME', Blockly.Arduino.ORDER_NONE) || '0';
         Blockly.Arduino.definitions_['include_servo'] = '#include <Servo.h>\n';
         Blockly.Arduino.definitions_['var_servo' + pin] = 'Servo servo_' + pin + ';\n';
-        Blockly.Arduino.setups_['setup_servo_' + pin] = 'servo_' + pin + '.attach(' + pin + ');\n';
+        Blockly.Arduino.setups_['setup_servo_' + pin] = '  servo_' + pin + '.attach(' + pin + ');\n';
         var code = 'servo_' + pin + '.write(' + value_degree + ');\n' + 'delay(' + delay_time + ');\n';
         return code;
     }
-
 
     Blockly.Arduino['motion_arduino_seeed_servo_read_degrees'] = function (block) {
         var pin = block.getFieldValue('PIN');
         Blockly.Arduino.definitions_['include_servo'] = '#include <Servo.h>\n';
         Blockly.Arduino.definitions_['var_servo' + pin] = 'Servo servo_' + pin + ';\n';
-        Blockly.Arduino.setups_['setup_servo_' + pin] = 'servo_' + pin + '.attach(' + pin + ');\n';
+        Blockly.Arduino.setups_['setup_servo_' + pin] = '  servo_' + pin + '.attach(' + pin + ');\n';
         var code = 'servo_' + pin + '.read()';
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
@@ -1113,8 +1090,8 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['include_touch_sensor'] = '#include <i2c_touch_sensor.h>';
         Blockly.Arduino.definitions_['include_MPR121'] = '#include <MPR121.h>';
         Blockly.Arduino.definitions_[`var_touchsensor`] = `i2ctouchsensor touchsensor;`;
-        Blockly.Arduino.setups_['setup_i2c'] = 'Wire.begin();';
-        Blockly.Arduino.setups_['setup_touchsensor_init'] = 'touchsensor.initialize();';
+        Blockly.Arduino.setups_['setup_i2c'] = '  Wire.begin();';
+        Blockly.Arduino.setups_['setup_touchsensor_init'] = '  touchsensor.initialize();';
         Blockly.Arduino.define_fun['touchsensor'] =
             `uint8_t getTouchSensorValue()\n{\ntouchsensor.getTouchState();\nwhile(1)\n{\ntouchsensor.getTouchState();\nfor (int i=0;i<12;i++) if (touchsensor.touched&(1<<i)) return i;\ndelay(100);\n}\n}`;
         var code = `getTouchSensorValue() == ${ch}`;
@@ -1136,7 +1113,7 @@ export default (Blockly) => {
     Blockly.Arduino['motion_arduino_grove_serial_rgb_led_matrix_on_point'] = function (block) {
         Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
         Blockly.Arduino.definitions_['include_rgb_matrix'] = '#include <grove_two_rgb_led_matrix.h>';
-        Blockly.Arduino.setups_['setup_i2c'] = 'Wire.begin();';
+        Blockly.Arduino.setups_['setup_i2c'] = '  Wire.begin();';
         Blockly.Arduino.definitions_['var_rgb_matrix'] = 'GroveTwoRGBLedMatrixClass rgbMatrix;';
 
         let data = [];
@@ -1162,7 +1139,7 @@ export default (Blockly) => {
         var text = Blockly.Arduino.valueToCode(block, 'TEXT', Blockly.Arduino.ORDER_NONE);
         Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
         Blockly.Arduino.definitions_['include_rgb_matrix'] = '#include <grove_two_rgb_led_matrix.h>';
-        Blockly.Arduino.setups_['setup_i2c'] = 'Wire.begin();';
+        Blockly.Arduino.setups_['setup_i2c'] = '  Wire.begin();';
         Blockly.Arduino.definitions_['var_rgb_matrix'] = 'GroveTwoRGBLedMatrixClass rgbMatrix;';
         var strName = Blockly.Arduino.variableDB_.getDistinctName('rgbMatrixStr', Blockly.Variables.NAME_TYPE);
         var code = `char *${strName}=${text};\n`;
@@ -1173,7 +1150,7 @@ export default (Blockly) => {
     Blockly.Arduino['motion_arduino_grove_serial_rgb_led_matrix_show_emoji'] = function (block) {
         Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
         Blockly.Arduino.definitions_['include_rgb_matrix'] = '#include <grove_two_rgb_led_matrix.h>';
-        Blockly.Arduino.setups_['setup_i2c'] = 'Wire.begin();';
+        Blockly.Arduino.setups_['setup_i2c'] = '  Wire.begin();';
         Blockly.Arduino.definitions_['var_rgb_matrix'] = 'GroveTwoRGBLedMatrixClass rgbMatrix;';
 
         let shape = block.getFieldValue('SHAPE');
@@ -1217,14 +1194,88 @@ export default (Blockly) => {
         }
         Blockly.Arduino.define_fun['var_rgb_matrix_data1'] += '}\n';
 
-
-
-
         let code = `setRgbMatrixShapeData(${result});\n`;
         code += `rgbMatrix.displayFrames(rgbMatrixShapeData,0,1,1);\n`;
         return code;
     }
 
+    Blockly.Arduino['motion_arduino_grove_serial_red_led_matrix_on_point'] = function (block) {
+        Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
+        Blockly.Arduino.definitions_['include_rgb_matrix'] = '#include "Grove_LED_Matrix_Driver_HT16K33.h"';
+        Blockly.Arduino.definitions_['var_rgb_matrix'] = 'Matrix_8x8 matrix;';
+
+        Blockly.Arduino.setups_['setup_i2c'] = '  Wire.begin();';
+        Blockly.Arduino.setups_['setup_matrix_init'] = '  matrix.init();';
+        Blockly.Arduino.setups_['setup_matrix_setBrightness'] = '  matrix.setBrightness(0);';
+        Blockly.Arduino.setups_['setup_matrix_setBlinkRate'] = '  matrix.setBlinkRate(BLINK_OFF);';
+
+        var x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_NONE);
+        var y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_NONE);
+        let code = `matrix.setDisplayOrientation(DISPLAY_ROTATE_270);\n`;
+        code += `matrix.writePixel(${x},${y});\n`;
+        code += `matrix.display();\n`;
+        return code;
+    }
+
+    Blockly.Arduino['motion_arduino_grove_serial_red_led_matrix_show_text'] = function (block) {
+        Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
+        Blockly.Arduino.definitions_['include_rgb_matrix'] = '#include "Grove_LED_Matrix_Driver_HT16K33.h"';
+        Blockly.Arduino.definitions_['var_rgb_matrix'] = 'Matrix_8x8 matrix;';
+
+        Blockly.Arduino.setups_['setup_i2c'] = '  Wire.begin();';
+        Blockly.Arduino.setups_['setup_matrix_init'] = '  matrix.init();';
+        Blockly.Arduino.setups_['setup_matrix_setBrightness'] = '  matrix.setBrightness(0);';
+        Blockly.Arduino.setups_['setup_matrix_setBlinkRate'] = '  matrix.setBlinkRate(BLINK_OFF);';
+
+        var text = Blockly.Arduino.valueToCode(block, 'TEXT', Blockly.Arduino.ORDER_NONE);
+        let code = `matrix.setDisplayOrientation(DISPLAY_ROTATE_0);\n`;
+        code += `matrix.writeString(${text}, 1000, ACTION_SCROLLING);\n`;
+        code += `matrix.display();\n`;
+        return code;
+    }
+
+    Blockly.Arduino['motion_arduino_grove_serial_red_led_matrix_show_emoji'] = function (block) {
+        Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
+        Blockly.Arduino.definitions_['include_rgb_matrix'] = '#include "Grove_LED_Matrix_Driver_HT16K33.h"';
+        Blockly.Arduino.definitions_['var_rgb_matrix'] = 'Matrix_8x8 matrix;';
+
+        Blockly.Arduino.setups_['setup_i2c'] = '  Wire.begin();';
+        Blockly.Arduino.setups_['setup_matrix_init'] = '  matrix.init();';
+        Blockly.Arduino.setups_['setup_matrix_setBrightness'] = '  matrix.setBrightness(0);';
+        Blockly.Arduino.setups_['setup_matrix_setBlinkRate'] = '  matrix.setBlinkRate(BLINK_OFF);';
+
+        let shape = block.getFieldValue('SHAPE');
+        
+        let shapeJson = JSON.parse(shape);
+        let matrix = shapeJson.matrix;
+        // 声明矩阵行列
+        let _rows = 8, _cols = 8;
+        // 声明结果字符串
+        let result = '0x';
+        let str = '';
+        // 遍历颜色矩阵
+        let number = 0;
+        for (let i = 0; i < _rows; i++) {
+            for (let j = 0; j < _cols; j++) {
+                number++;
+                let _color = matrix[i][j];
+                if (number == 1) {
+                    str = '';
+                }
+                str += _color;
+                if (number==4) {
+                    let value = parseInt(str, 2);
+                    let _code = value.toString(16)
+                    result += _code;
+                    number = 0;
+                }
+            }
+        }
+        let code = `matrix.setDisplayOrientation(DISPLAY_ROTATE_180);\n`;
+        code += `matrix.writeOnePicture(${result});\n`;
+        code += `matrix.display();\n`;
+        return code;
+    }
 
     Blockly.Arduino['motion_arduino_grove_otto_diy_robot1'] = function (block) {
         Blockly.Arduino.definitions_['include_servo'] = '#include <Servo.h>';
@@ -1232,10 +1283,10 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['include_us'] = '#include <US.h>';
         Blockly.Arduino.definitions_['include_otto'] = '#include <Otto.h>';
         Blockly.Arduino.definitions_['var_otto'] = 'Otto otto;';
-        Blockly.Arduino.setups_['setup_otto_init'] = `otto.init(6,2,7,3,false);`;
-        Blockly.Arduino.setups_['setup_otto_sing'] = 'otto.sing(S_connection);';
-        Blockly.Arduino.setups_['setup_otto_home'] = 'otto.home();';
-        Blockly.Arduino.setups_['setup_otto_delay'] = 'delay(1000);';
+        Blockly.Arduino.setups_['setup_otto_init'] = `  otto.init(6,2,7,3,false);`;
+        Blockly.Arduino.setups_['setup_otto_sing'] = '  otto.sing(S_connection);';
+        Blockly.Arduino.setups_['setup_otto_home'] = '  otto.home();';
+        Blockly.Arduino.setups_['setup_otto_delay'] = '  delay(1000);';
         let opt = block.getFieldValue('OPT');
         let steps = Blockly.Arduino.valueToCode(block, 'STEPS', Blockly.Arduino.ORDER_NONE) || 1;
         var time = Blockly.Arduino.valueToCode(block, 'T', Blockly.Arduino.ORDER_NONE) || 1;
@@ -1256,10 +1307,10 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['include_us'] = '#include <US.h>';
         Blockly.Arduino.definitions_['include_otto'] = '#include <Otto.h>';
         Blockly.Arduino.definitions_['var_otto'] = 'Otto otto;';
-        Blockly.Arduino.setups_['setup_otto_init'] = `otto.init(6,2,7,3,false);`;
-        Blockly.Arduino.setups_['setup_otto_sing'] = 'otto.sing(S_connection);';
-        Blockly.Arduino.setups_['setup_otto_home'] = 'otto.home();';
-        Blockly.Arduino.setups_['setup_otto_delay'] = 'delay(1000);';
+        Blockly.Arduino.setups_['setup_otto_init'] = `  otto.init(6,2,7,3,false);`;
+        Blockly.Arduino.setups_['setup_otto_sing'] = '  otto.sing(S_connection);';
+        Blockly.Arduino.setups_['setup_otto_home'] = '  otto.home();';
+        Blockly.Arduino.setups_['setup_otto_delay'] = '  delay(1000);';
         let opt = block.getFieldValue('OPT');
         let dir = block.getFieldValue('DIR');
         var steps = Blockly.Arduino.valueToCode(block, 'STEPS', Blockly.Arduino.ORDER_NONE) || 1;
@@ -1321,7 +1372,7 @@ export default (Blockly) => {
     Blockly.Arduino['motion_arduino_shield_bot1'] = function (block) {
         Blockly.Arduino.definitions_['include_shieldbot'] = '#include <Shieldbot.h>';
         Blockly.Arduino.definitions_['var_shieldbot'] = 'Shieldbot shieldbot = Shieldbot();';
-        Blockly.Arduino.setups_['setup_shieldbot'] = `shieldbot.setMaxSpeed(255,255);`;
+        Blockly.Arduino.setups_['setup_shieldbot'] = `  shieldbot.setMaxSpeed(255,255);`;
         let v = block.getFieldValue('V');
         let dir = block.getFieldValue('DIR');
         switch (dir) {
@@ -1343,7 +1394,7 @@ export default (Blockly) => {
     Blockly.Arduino['motion_arduino_shield_bot2'] = function (block) {
         Blockly.Arduino.definitions_['include_shieldbot'] = '#include <Shieldbot.h>';
         Blockly.Arduino.definitions_['var_shieldbot'] = 'Shieldbot shieldbot = Shieldbot();';
-        Blockly.Arduino.setups_['setup_shieldbot'] = `shieldbot.setMaxSpeed(255,255);`;
+        Blockly.Arduino.setups_['setup_shieldbot'] = `  shieldbot.setMaxSpeed(255,255);`;
         let position = block.getFieldValue('POSITION');
         switch (position) {
             case 'middle': position = 'CC_POSITION_MIDDLE'; break;
@@ -1365,8 +1416,8 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_['var_CC_COLOR_OTHER'] = '#define CC_COLOR_OTHER 5';
         Blockly.Arduino.definitions_['var_CC_COLOR_WHITE'] = '#define CC_COLOR_WHITE 6';
         Blockly.Arduino.definitions_['var_Adafruit_TCS34725'] = 'Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);';
-        Blockly.Arduino.setups_['setup_var_color'] = 'uint8_t color;';
-        Blockly.Arduino.setups_['setup_Adafruit_TCS34725'] = `tcs.begin();`;
+        Blockly.Arduino.setups_['setup_var_color'] = '  uint8_t color;';
+        Blockly.Arduino.setups_['setup_Adafruit_TCS34725'] = `  tcs.begin();`;
         Blockly.Arduino.definitions_['var_color'] = `uint8_t color;`;
         Blockly.Arduino.define_fun['isColor'] =
 `uint8_t isColor()
@@ -1653,7 +1704,7 @@ export default (Blockly) => {
     Blockly.Arduino['motion_arduino_seeed_water_analog'] = Blockly.Arduino['motion_arduino_analog_input'];
     Blockly.Arduino['motion_arduino_seeed_quality'] = function (block) {
         var pin = block.getFieldValue('PIN');
-        Blockly.Arduino.setups_['setup_input_' + pin] = `airqualitysensor.init(${pin});`;
+        Blockly.Arduino.setups_['setup_input_' + pin] = `  airqualitysensor.init(${pin});`;
 
         Blockly.Arduino.definitions_['include_quality'] = '#include "AirQuality.h"';
         Blockly.Arduino.definitions_['var_quality'] = `AirQuality airqualitysensor;`;
@@ -1797,9 +1848,9 @@ export default (Blockly) => {
 
         //图像交通标示卡片手势检测
     Blockly.Arduino['motion_arduino_traffic_read_sensor'] = function (block) {
-        Blockly.Arduino.setups_['setup_Adafruit_WIRE34725'] = 'Wire.begin();';
+        Blockly.Arduino.setups_['setup_Adafruit_WIRE34725'] = '  Wire.begin();';
         visionDefine();
-        Blockly.Arduino.setups_['setup_card'] = 'uint8_t card;';
+        Blockly.Arduino.setups_['setup_card'] = '  uint8_t card;';
         Blockly.Arduino.define_fun['var_card'] = 'uint8_t card;';
         Blockly.Arduino.define_fun['isCard'] =
 `   
@@ -1825,9 +1876,9 @@ uint8_t isCard(uint8_t visionId)
 
     //图像数字卡片手势检测
     Blockly.Arduino['motion_arduino_number_read_sensor'] = function (block) {
-        Blockly.Arduino.setups_['setup_Adafruit_WIRE34725'] = 'Wire.begin();';
+        Blockly.Arduino.setups_['setup_Adafruit_WIRE34725'] = '  Wire.begin();';
         visionDefine();
-        Blockly.Arduino.setups_['setup_card'] = 'uint8_t card;';
+        Blockly.Arduino.setups_['setup_card'] = '  uint8_t card;';
         Blockly.Arduino.define_fun['var_card'] = 'uint8_t card;';
         Blockly.Arduino.define_fun['isCard'] =
 `   
@@ -1854,9 +1905,9 @@ uint8_t isCard(uint8_t visionId)
 
     //图像图形卡片手势检测
     Blockly.Arduino['motion_arduino_symbol_read_sensor'] = function (block) {
-        Blockly.Arduino.setups_['setup_Adafruit_WIRE34725'] = 'Wire.begin();';
+        Blockly.Arduino.setups_['setup_Adafruit_WIRE34725'] = '  Wire.begin();';
         visionDefine();
-        Blockly.Arduino.setups_['setup_card'] = 'uint8_t card;';
+        Blockly.Arduino.setups_['setup_card'] = '  uint8_t card;';
         Blockly.Arduino.define_fun['var_card'] = 'uint8_t card;';
         Blockly.Arduino.define_fun['isCard'] =
 `   
@@ -1883,9 +1934,9 @@ uint8_t isCard(uint8_t visionId)
     //图像运动手势开启
     Blockly.Arduino['motion_arduino_gesture_read_sensor'] = function (block) {
         Blockly.Arduino.definitions_['Wire'] = '#include <Wire.h>';
-        Blockly.Arduino.setups_['setup_Adafruit_WIRE34725'] = 'Wire.begin();';
+        Blockly.Arduino.setups_['setup_Adafruit_WIRE34725'] = '  Wire.begin();';
         visionDefine();
-        Blockly.Arduino.setups_['setup_var_gesture'] = 'uint8_t gesture;';
+        Blockly.Arduino.setups_['setup_var_gesture'] = '  uint8_t gesture;';
         Blockly.Arduino.define_fun['var_gesture'] = 'uint8_t gesture;';
 
         Blockly.Arduino.define_fun['getGestureValue'] =
@@ -2214,8 +2265,8 @@ uint8_t isCard(uint8_t visionId)
         Blockly.Arduino.definitions_['include_oled'] = '#include <SeeedGrayOLED.h>';
         var shape = block.getFieldValue('SHAPE');
         Blockly.Arduino.definitions_[`var_oled_${id}`] = `const unsigned char oledMatrix_${id}[] PROGMEM = {${shape}};`;
-        Blockly.Arduino.setups_['setup_i2c'] = 'Wire.begin();';
-        Blockly.Arduino.setups_['setup_oled'] = 'SeeedGrayOled.init(SH1107G);';
+        Blockly.Arduino.setups_['setup_i2c'] = '  Wire.begin();';
+        Blockly.Arduino.setups_['setup_oled'] = '  SeeedGrayOled.init(SH1107G);';
         var code = `SeeedGrayOled.drawBitmap(oledMatrix_${id},sizeof oledMatrix_${id});\n`;
         return code;
     }
@@ -2226,8 +2277,8 @@ uint8_t isCard(uint8_t visionId)
         var text = Blockly.Arduino.valueToCode(block, 'TEXT', Blockly.Arduino.ORDER_NONE);
         var row = Blockly.Arduino.valueToCode(block, 'ROW', Blockly.Arduino.ORDER_NONE);
         var col = Blockly.Arduino.valueToCode(block, 'COL', Blockly.Arduino.ORDER_NONE);
-        Blockly.Arduino.setups_['setup_i2c'] = 'Wire.begin();';
-        Blockly.Arduino.setups_['setup_oled'] = 'SeeedGrayOled.init(SH1107G);\nSeeedGrayOled.clearDisplay();';
+        Blockly.Arduino.setups_['setup_i2c'] = '  Wire.begin();';
+        Blockly.Arduino.setups_['setup_oled'] = '  SeeedGrayOled.init(SH1107G);\nSeeedGrayOled.clearDisplay();';
         var code = `SeeedGrayOled.setTextXY(uint8_t(${row}),uint8_t(${col}));\nSeeedGrayOled.putString(${text});\n`;
         return code;
     }
@@ -2235,8 +2286,8 @@ uint8_t isCard(uint8_t visionId)
     Blockly.Arduino['motion_arduino_oled3'] = function () {
         Blockly.Arduino.definitions_['include_i2c'] = '#include <Wire.h>';
         Blockly.Arduino.definitions_['include_oled'] = '#include <SeeedGrayOLED.h>';
-        Blockly.Arduino.setups_['setup_i2c'] = 'Wire.begin();';
-        Blockly.Arduino.setups_['setup_oled'] = 'SeeedGrayOled.init(SH1107G);\nSeeedGrayOled.clearDisplay();';
+        Blockly.Arduino.setups_['setup_i2c'] = '  Wire.begin();';
+        Blockly.Arduino.setups_['setup_oled'] = '  SeeedGrayOled.init(SH1107G);\nSeeedGrayOled.clearDisplay();';
         var code = `SeeedGrayOled.clearDisplay();\n`;
         return code;
     }
@@ -2329,7 +2380,7 @@ uint8_t isCard(uint8_t visionId)
         Blockly.Arduino.definitions_['include_Mark'] = '#include "Mark.h"';
         Blockly.Arduino.definitions_['var_CH_mark'] = 'CH_mark mk;';
 
-        Blockly.Arduino.setups_['init_crickit'] = 'if(!mk.begin()){\n    while(1);\n  }';
+        Blockly.Arduino.setups_['init_crickit'] = '  if(!mk.begin()){\n    while(1);\n  }';
 
         var action = block.getFieldValue('DIR');
         var scale = block.getFieldValue('V');
@@ -2346,7 +2397,7 @@ uint8_t isCard(uint8_t visionId)
         Blockly.Arduino.definitions_['include_Mark'] = '#include "Mark.h"';
         Blockly.Arduino.definitions_['var_CH_mark'] = 'CH_mark mk;';
 
-        Blockly.Arduino.setups_['init_crickit'] = 'if(!mk.begin()){\n    while(1);\n  }';
+        Blockly.Arduino.setups_['init_crickit'] = '  if(!mk.begin()){\n    while(1);\n  }';
 
         var motor = block.getFieldValue('MOTOR');
         var speed = Blockly.Arduino.valueToCode(block, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || '0';
@@ -2367,7 +2418,7 @@ uint8_t isCard(uint8_t visionId)
         Blockly.Arduino.definitions_['include_Mark'] = '#include "Mark.h"';
         Blockly.Arduino.definitions_['var_CH_mark'] = 'CH_mark mk;';
 
-        Blockly.Arduino.setups_['init_crickit'] = 'if(!mk.begin()){\n    while(1);\n  }';
+        Blockly.Arduino.setups_['init_crickit'] = '  if(!mk.begin()){\n    while(1);\n  }';
 
         var motor = block.getFieldValue('MOTOR');
         var angle = Blockly.Arduino.valueToCode(block, 'ANGLE', Blockly.Arduino.ORDER_ATOMIC) || 0;
@@ -2490,80 +2541,33 @@ uint8_t isCard(uint8_t visionId)
     }
 
     Blockly.Arduino['motion_arduino_infrared_send'] = function (block) {
-        // Blockly.Arduino.definitions_['include_IRSendRev'] = '#include <IRSendRev.h>';
-        // Blockly.Arduino.definitions_['var_defInfraredVars'] =
-        //     '#define BIT_LEN         0\n' +
-        //     '#define BIT_START_H     1\n' +
-        //     '#define BIT_START_L     2\n' +
-        //     '#define BIT_DATA_H      3\n' +
-        //     '#define BIT_DATA_L      4\n' +
-        //     '#define BIT_DATA_LEN    5\n' +
-        //     '#define BIT_DATA        6\n' +
-        //     '\n' +
-        //     'unsigned char dta[20];\n' +
-        //     'unsigned char dtaSend[20];\n';
-
-        // Blockly.Arduino.definitions_['var_send_ir_value'] =
-        //     'void send_ir_value(int argu) {\n' +
-        //     '    dtaSend[BIT_LEN]        = 6;\n' +
-        //     '    dtaSend[BIT_START_H]    = 179;\n' +
-        //     '    dtaSend[BIT_START_L]    = 90;\n' +
-        //     '    dtaSend[BIT_DATA_H]     = 11;\n' +
-        //     '    dtaSend[BIT_DATA_L]     = 33;\n' +
-        //     '    dtaSend[BIT_DATA_LEN]   = 1;\n' +
-        //     '    dtaSend[BIT_DATA + 0]     = argu;\n' +
-        //     '    IR.Send(dtaSend, 38);\n' +
-        //     '}\n';
-        // var message = Blockly.Arduino.valueToCode(block, 'MESSAGE', Blockly.Arduino.ORDER_ATOMIC) || '';
-        // return `send_ir_value(${message});\n`;
-
-        Blockly.Arduino.definitions_['include_IRremote'] = '#include <IRremote.h>';
-        Blockly.Arduino.definitions_['var_IRsend'] = 'IRsend irsend;';
-
-        var message = Blockly.Arduino.valueToCode(block, 'MESSAGE', Blockly.Arduino.ORDER_ATOMIC) || '';
-        return `irsend.sendSony(${message}, 32);\n`;
+        Blockly.Arduino.definitions_['include_ir_SendBase'] = '#include <IRLibSendBase.h>';
+        Blockly.Arduino.definitions_['include_ir_P01_NEC'] = '#include <IRLib_P01_NEC.h>';
+        Blockly.Arduino.definitions_['include_ir_Combo'] = '#include <IRLibCombo.h>';
+        Blockly.Arduino.definitions_[`var_IR_SEND_PWM_PIN`] = `#define IR_SEND_PWM_PIN D3`;
+        Blockly.Arduino.definitions_[`var_ir_send`] = `IRsend mySender;`;
+        let address = Blockly.Arduino.valueToCode(block, 'ADDRESS', Blockly.Arduino.ORDER_NONE) || '';
+        address = address.replace(/"/g, '');
+        let code = `mySender.send(NEC,${address},0);`;
+        return code;
     }
 
     Blockly.Arduino['motion_arduino_infrared_receive'] = function (block) {
-        // Blockly.Arduino.definitions_['include_IRSendRev'] = '#include <IRSendRev.h>';
-        // Blockly.Arduino.definitions_['var_defInfraredVars'] =
-        //     '#define BIT_LEN         0\n' +
-        //     '#define BIT_START_H     1\n' +
-        //     '#define BIT_START_L     2\n' +
-        //     '#define BIT_DATA_H      3\n' +
-        //     '#define BIT_DATA_L      4\n' +
-        //     '#define BIT_DATA_LEN    5\n' +
-        //     '#define BIT_DATA        6\n' +
-        //     '\n' +
-        //     'unsigned char dta[20];\n' +
-        //     'unsigned char dtaSend[20];\n';
-        // Blockly.Arduino.definitions_['var_get_ir_value'] =
-        //     'int get_ir_value() {\n' +
-        //     '    if (IR.IsDta())\n' +
-        //     '    {\n' +
-        //     '        IR.Recv(dta);\n' +
-        //     '        return int(dta[BIT_DATA]);\n' +
-        //     '    }\n' +
-        //     '}';
-        // var pin = block.getFieldValue('PIN') || '2';
-        // Blockly.Arduino.setups_['init_IR'] = `IR.Init(${pin});`;
-        // return [`get_ir_value()`, Blockly.Arduino.ORDER_ATOMIC];
         var pin = block.getFieldValue('PIN') || '2';
-
         Blockly.Arduino.definitions_['include_IRremote'] = '#include <IRremote.h>';
         Blockly.Arduino.definitions_['var_IRrecv'] = `IRrecv irrecv(${pin});`;
         Blockly.Arduino.definitions_['var_decode_results'] = 'decode_results results;';
+        Blockly.Arduino.setups_['init_IRIn'] = `  irrecv.enableIRIn();`;
 
-        Blockly.Arduino.definitions_['var_get_ir_value'] =
+        Blockly.Arduino.define_fun['get_ir_value'] =
             'long unsigned int get_ir_value() {\n' +
-            '    if (irrecv.decode(&results))\n' +
-            '    {\n' +
-            '        irrecv.resume();\n' +
-            '        return results.value;\n' +
-            '    }\n' +
-            '    return 0;' +
+            '  if (irrecv.decode(&results))\n' +
+            '  {\n' +
+            '    irrecv.resume();\n' +
+            '    return results.value;\n' +
+            '  }\n' +
+            '  return 0;\n' +
             '}';
-        Blockly.Arduino.setups_['init_IRIn'] = `irrecv.enableIRIn();`;
         return [`get_ir_value()`, Blockly.Arduino.ORDER_ATOMIC];
     }
 
@@ -2588,10 +2592,10 @@ uint8_t isCard(uint8_t visionId)
         Blockly.Arduino.definitions_['include_us'] = '#include <US.h>';
         Blockly.Arduino.definitions_['include_otto'] = '#include <Otto.h>';
         Blockly.Arduino.definitions_['var_otto'] = 'Otto otto;';
-        Blockly.Arduino.setups_['setup_otto_init'] = `otto.init(6,2,7,3,false);`;
-        Blockly.Arduino.setups_['setup_otto_sing'] = 'otto.sing(S_connection);';
-        Blockly.Arduino.setups_['setup_otto_home'] = 'otto.home();';
-        Blockly.Arduino.setups_['setup_otto_delay'] = 'delay(1000);';
+        Blockly.Arduino.setups_['setup_otto_init'] = '  otto.init(6,2,7,3,false);';
+        Blockly.Arduino.setups_['setup_otto_sing'] = '  otto.sing(S_connection);';
+        Blockly.Arduino.setups_['setup_otto_home'] = '  otto.home();';
+        Blockly.Arduino.setups_['setup_otto_delay'] = '  delay(1000);';
         let direct = Blockly.Arduino.valueToCode(block, 'DIRECT', Blockly.Arduino.ORDER_NONE) || '0';
         let steps = Blockly.Arduino.valueToCode(block, 'STEPS', Blockly.Arduino.ORDER_NONE) || 1;
         var time = Blockly.Arduino.valueToCode(block, 'TIMES', Blockly.Arduino.ORDER_NONE) || 1;
@@ -2611,10 +2615,10 @@ uint8_t isCard(uint8_t visionId)
         Blockly.Arduino.definitions_['include_us'] = '#include <US.h>';
         Blockly.Arduino.definitions_['include_otto'] = '#include <Otto.h>';
         Blockly.Arduino.definitions_['var_otto'] = 'Otto otto;';
-        Blockly.Arduino.setups_['setup_otto_init'] = `otto.init(6,2,7,3,false);`;
-        Blockly.Arduino.setups_['setup_otto_sing'] = 'otto.sing(S_connection);';
-        Blockly.Arduino.setups_['setup_otto_home'] = 'otto.home();';
-        Blockly.Arduino.setups_['setup_otto_delay'] = 'delay(1000);';
+        Blockly.Arduino.setups_['setup_otto_init'] = `  otto.init(6,2,7,3,false);`;
+        Blockly.Arduino.setups_['setup_otto_sing'] = '  otto.sing(S_connection);';
+        Blockly.Arduino.setups_['setup_otto_home'] = '  otto.home();';
+        Blockly.Arduino.setups_['setup_otto_delay'] = '  delay(1000);';
         let action = Blockly.Arduino.valueToCode(block, 'ACTION', Blockly.Arduino.ORDER_NONE) || 'Rest';
         let direct = Blockly.Arduino.valueToCode(block, 'DIRECTS', Blockly.Arduino.ORDER_NONE) || '0';
         var steps = Blockly.Arduino.valueToCode(block, 'STEPS', Blockly.Arduino.ORDER_NONE) || 1;
@@ -2690,7 +2694,7 @@ uint8_t isCard(uint8_t visionId)
     Blockly.Arduino['shieldBot_shieldBot1'] = function (block) {
         Blockly.Arduino.definitions_['include_shieldbot'] = '#include <Shieldbot.h>';
         Blockly.Arduino.definitions_['var_shieldbot'] = 'Shieldbot shieldbot = Shieldbot();';
-        Blockly.Arduino.setups_['setup_shieldbot'] = `shieldbot.setMaxSpeed(255,255);`;
+        Blockly.Arduino.setups_['setup_shieldbot'] = `  shieldbot.setMaxSpeed(255,255);`;
 
         let direct = Blockly.Arduino.valueToCode(block, 'DIRECT', Blockly.Arduino.ORDER_NONE) || 'forward';
         let speed = Blockly.Arduino.valueToCode(block, 'SPEED', Blockly.Arduino.ORDER_NONE) || 'low';
@@ -2714,7 +2718,7 @@ uint8_t isCard(uint8_t visionId)
     Blockly.Arduino['shieldBot_shieldBot2'] = function (block) {
         Blockly.Arduino.definitions_['include_shieldbot'] = '#include <Shieldbot.h>';
         Blockly.Arduino.definitions_['var_shieldbot'] = 'Shieldbot shieldbot = Shieldbot();';
-        Blockly.Arduino.setups_['setup_shieldbot'] = `shieldbot.setMaxSpeed(255,255);`;
+        Blockly.Arduino.setups_['setup_shieldbot'] = `  shieldbot.setMaxSpeed(255,255);`;
         let position = Blockly.Arduino.valueToCode(block, 'POSITION', Blockly.Arduino.ORDER_NONE) || 'middle';
         
         switch (position) {
@@ -2753,7 +2757,7 @@ uint8_t isCard(uint8_t visionId)
     Blockly.Arduino['mark_run'] = function (block) {
         Blockly.Arduino.definitions_['include_Mark'] = '#include "Mark.h"';
         Blockly.Arduino.definitions_['var_CH_mark'] = 'CH_mark mk;';
-        Blockly.Arduino.setups_['init_crickit'] = 'if(!mk.begin()){\n    while(1);\n  }';
+        Blockly.Arduino.setups_['init_crickit'] = '  if(!mk.begin()){\n    while(1);\n  }';
 
         let action = Blockly.Arduino.valueToCode(block, 'DIRECT', Blockly.Arduino.ORDER_NONE) || '1';
         let scale = Blockly.Arduino.valueToCode(block, 'SPEED', Blockly.Arduino.ORDER_NONE) || '1';
@@ -2770,7 +2774,7 @@ uint8_t isCard(uint8_t visionId)
         Blockly.Arduino.definitions_['include_Mark'] = '#include "Mark.h"';
         Blockly.Arduino.definitions_['var_CH_mark'] = 'CH_mark mk;';
 
-        Blockly.Arduino.setups_['init_crickit'] = 'if(!mk.begin()){\n    while(1);\n  }';
+        Blockly.Arduino.setups_['init_crickit'] = '  if(!mk.begin()){\n    while(1);\n  }';
 
         let motor = Blockly.Arduino.valueToCode(block, 'MOTOR', Blockly.Arduino.ORDER_NONE) || '1';
         let speed = Blockly.Arduino.valueToCode(block, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || 1;
@@ -2790,7 +2794,7 @@ uint8_t isCard(uint8_t visionId)
         Blockly.Arduino.definitions_['include_Mark'] = '#include "Mark.h"';
         Blockly.Arduino.definitions_['var_CH_mark'] = 'CH_mark mk;';
 
-        Blockly.Arduino.setups_['init_crickit'] = 'if(!mk.begin()){\n    while(1);\n  }';
+        Blockly.Arduino.setups_['init_crickit'] = '  if(!mk.begin()){\n    while(1);\n  }';
 
         let motor = Blockly.Arduino.valueToCode(block, 'MOTOR', Blockly.Arduino.ORDER_NONE) || '1';
         let speed = Blockly.Arduino.valueToCode(block, 'SPEED', Blockly.Arduino.ORDER_ATOMIC) || 1;
@@ -2967,7 +2971,7 @@ uint8_t isCard(uint8_t visionId)
             '    }\n' +
             '    return 0;\n' +
             '}';
-        Blockly.Arduino.setups_['init_IRIn'] = `irrecv.enableIRIn();`;
+        Blockly.Arduino.setups_['init_IRIn'] = `  irrecv.enableIRIn();`;
         return [`get_ir_value()`, Blockly.Arduino.ORDER_ATOMIC];
     }
         /**

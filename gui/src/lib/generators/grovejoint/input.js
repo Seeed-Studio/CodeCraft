@@ -72,12 +72,17 @@ export default (Blockly) => {
 
     // 温湿度  Tempreture and humidity
     Blockly.Arduino['motion_grovejoint_tem_hum_get_value'] = function (block) {
-        Blockly.Arduino.definitions_['include_seeed_dht'] = '#include "SeeedDHT.h"';
-        Blockly.Arduino.definitions_['var_seeed_dht'] = `DHT dht_a5;`;
         var type = block.getFieldValue('TYPE');
-        return [`dht_a5.TemperatureHumidityRead(A5, '${type}')`, Blockly.Arduino.ORDER_ATOMIC]
+        Blockly.Arduino.definitions_['include_DHT'] = '#include "DHT.h"';
+        Blockly.Arduino.definitions_['var_DHTTYPE_11'] = '#define DHTTYPE11 DHT11';
+        Blockly.Arduino.definitions_[`var_DHT_11`] = `DHT dht11(A5, DHTTYPE11);`;
+        Blockly.Arduino.setups_['setup_dht_11_begin'] = '  dht11.begin();';
+        var code = "";
+        if (type == 'T') {
+            code = `dht11.readTemperature()`;
+        } else {
+            code = `dht11.readHumidity()`;
+        }
+        return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
-
-
-
 }

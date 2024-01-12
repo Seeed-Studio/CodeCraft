@@ -38,7 +38,7 @@ import Cards from '../../containers/cards.jsx';
 import Alerts from '../../containers/alerts.jsx';
 import DragLayer from '../../containers/drag-layer.jsx';
 import ToastComponent, { toasts } from '../toast-special/toast.jsx';
-import GraphTrainingModal from '../../containers/graph-training-modal.jsx';
+import GraphTrainingModal from '../graph-training-modal/graph-training-modal.jsx';
 import TrainVideoModal from '../video-modal/train-video-modal.jsx';
 import RecognizeVideoModal from '../video-modal/recognize-video-modal.jsx';
 import ThreeAxisAccelerometerModal from '../three-axis-accelerometer-modal/three-axis-accelerometer-modal.jsx';

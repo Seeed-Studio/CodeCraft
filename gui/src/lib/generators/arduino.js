@@ -255,9 +255,12 @@ const init = (Blockly) => {
         var defvars = [];
         var variables = workspace.getAllVariables();
         for (var i = 0; i < variables.length; i++) {
+            let id = variables[i].getId()
+            var custom_object = Blockly.Arduino.definitions_[`var_custom_${id}`]
             defvars[i] = {
                 name: Blockly.Arduino.variableDB_.getName(variables[i].getId(), Blockly.Variables.NAME_TYPE),
-                type: variables[i].c_type
+                type: variables[i].c_type,
+                isCustom: custom_object != undefined
             }
         }
 
@@ -278,7 +281,9 @@ const init = (Blockly) => {
                 if (type === 'String') {
                     var_code += 'String ' + defvars[i].name + ' = "";\n';
                 } else {
-                    var_code += type + ' ' + defvars[i].name + ';\n';
+                    if (!defvars[i].isCustom) {
+                        var_code += type + ' ' + defvars[i].name + ';\n';
+                    }
                 }
             }
             Blockly.Arduino.definitions_['variables'] = var_code;

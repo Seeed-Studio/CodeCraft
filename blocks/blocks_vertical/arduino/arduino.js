@@ -6,101 +6,6 @@ goog.require('Blockly.Blocks');
 goog.require('Blockly.Colours');
 goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
-var D2D13 = [
-    ['D2', '2'],
-    ['D3', '3'],
-    ['D4', '4'],
-    ['D5', '5'],
-    ['D6', '6'],
-    ['D7', '7'],
-    ['D8', '8'],
-    ['D9', '9'],
-    ['D10', '10'],
-    ['D11', '11'],
-    ['D12', '12'],
-    ['D13', '13'],
-    ['D14', '14'],
-    ['D15', '15'],
-
-    ['D46', '46'],
-    ['D47', '47'],
-    ['D48', '48'],
-    ['D49', '49'],
-];
-
-var P0P13 = [
-    ['0', '0'],
-    ['1', '1'],
-    ['2', '2'],
-    ['3', '3'],
-    ['4', '4'],
-    ['5', '5'],
-    ['6', '6'],
-    ['7', '7'],
-    ['8', '8'],
-    ['9', '9'],
-    ['10', '10'],
-    ['11', '11'],
-    ['12', '12'],
-    ['13', '13'],
-    ['14', '14'],
-    ['15', '15'],
-
-    ['46', '46'],
-    ['47', '47'],
-    ['48', '48'],
-    ['49', '49'],
-];
-
-
-var A0A7 = [
-    ['A0', 'A0'],
-    ['A1', 'A1'],
-    ['A2', 'A2'],
-    ['A3', 'A3'],
-    ['A4', 'A4'],
-    ['A5', 'A5'],
-    ['A6', 'A6'],
-    ['A7', 'A7']
-];
-
-var extensions = {
-    "INPUT_NUMBER": ["colours_sensing", "output_number"],
-    "INPUT_BOOL": ["colours_sensing", "output_boolean"],
-    "OUTPUT": ["colours_looks", "shape_statement"]
-}
-//创建代码块
-function createBlock(img, extensions, msgKey, args = []) {
-    if (img) return {
-        init: function () {
-            this.jsonInit({
-                "message0": Blockly.Msg[msgKey],
-                "args0": [
-                    {
-                        "type": "field_image",
-                        "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/" + img.name,
-                        "width": img.width || 40,
-                        "height": img.height || 30
-                    },
-                    {
-                        "type": "field_vertical_separator"
-                    }
-                ].concat(args),
-                "extensions": extensions
-            });
-        }
-    };
-    else return {
-        init: function () {
-            this.jsonInit({
-                "message0": Blockly.Msg[msgKey],
-                "args0": args,
-                "extensions": extensions
-            });
-        }
-    };
-}
-
 /** 输入 ----------------------------- */
 
 //数字输入
@@ -151,17 +56,6 @@ Blockly.Blocks['motion_arduino_figure_input'] = {
     }
 }
 
-// createBlock(null, ["colours_arduino_input", "output_number"],
-//     'ARDUINO_FIGURE_INPUT',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "PIN",
-//             "options": P0P13.concat(A0A7)
-//         }
-//     ]
-// );
-
 // 模拟输入
 Blockly.Blocks['motion_arduino_analog_input'] = {
     init: function () {
@@ -188,18 +82,6 @@ Blockly.Blocks['motion_arduino_analog_input'] = {
     }
 }
 
-//   createBlock(null, ["colours_arduino_input", "output_number"],
-//     'ARDUINO_ANALOG_INPUT',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "PIN",
-//             "options": A0A7
-//         }
-//     ]
-// );
-
-
 //系统运行时间
 Blockly.Blocks['motion_arduino_sys_time'] = {
     init: function () {
@@ -220,20 +102,6 @@ Blockly.Blocks['motion_arduino_sys_time'] = {
     }
 }
 
-
-// createBlock(null, ["colours_arduino_input", "output_number"],
-//     'ARDUINO_SYS_TIME',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "TYPE",
-//             "options": [
-//                 ['ms', 'ms'],
-//                 ['us', 'us']
-//             ]
-//         }
-//     ]
-// );
 //脉冲长度 
 Blockly.Blocks['motion_arduino_pulse_len'] = {
     init: function () {
@@ -289,26 +157,6 @@ Blockly.Blocks['motion_arduino_pulse_len'] = {
         });
     }
 }
-
-
-//   createBlock(null, ["colours_arduino_input", "output_number"],
-//     'ARDUINO_PULSE_LEN',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "PIN",
-//             "options": P0P13.concat(A0A7)
-//         },
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": [
-//                 ['ON', 'HIGH'],
-//                 ['OFF', 'LOW']
-//             ]
-//         }
-//     ]
-// );
 
 //脉冲长度超时
 Blockly.Blocks['motion_arduino_pulse_len_us'] = {
@@ -370,35 +218,6 @@ Blockly.Blocks['motion_arduino_pulse_len_us'] = {
     }
 }
 
-
-//   createBlock(null, ["colours_arduino_input", "output_number"],
-//     'ARDUINO_PULSE_LEN_US',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "PIN",
-//             "options": P0P13.concat(A0A7)
-//         },
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": [
-//                 ['ON', 'HIGH'],
-//                 ['OFF', 'LOW']
-//             ]
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "TIME"
-//         }
-//     ]
-// );
-
-
-
-
-
-
 /** 输出 ----------------------------- */
 
 //数字输出
@@ -457,26 +276,6 @@ Blockly.Blocks['motion_arduino_figure_output'] = {
     }
 }
 
-
-//   createBlock(null, ["colours_arduino_output", "shape_statement"],
-//     'ARDUINO_FIGURE_OUTPUT',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "PIN",
-//             "options": P0P13.concat(A0A7)
-//         },
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": [
-//                 ['ON', 'HIGH'],
-//                 ['OFF', 'LOW']
-//             ]
-//         }
-//     ]
-// );
-
 //模拟输出
 Blockly.Blocks['motion_arduino_analog_output'] = {
     init: function () {
@@ -504,32 +303,6 @@ Blockly.Blocks['motion_arduino_analog_output'] = {
         });
     }
 }
-
-// createBlock(null, ["colours_arduino_output", "shape_statement"],
-//     'ARDUINO_ANALOG_OUTPUT',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "PIN",
-//             "options": [
-//                 ['3', '3'],
-//                 ['5', '5'],
-//                 ['6', '6'],
-//                 ['9', '9'],
-//                 ['10', '10'],
-//                 ['11', '11'],
-//             ]
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "NUM"
-//         }
-//     ]
-// );
-
-
-
-
 
 /** 串口 ----------------------------- */
 
@@ -561,27 +334,6 @@ Blockly.Blocks['motion_arduino_serial_baud_rate'] = {
     }
 }
 
-//   createBlock(null, ["colours_arduino_serial", "shape_statement"],
-//     'ARDUINO_SERIAL_BAUD_RATE',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "BR",
-//             "options": [
-//                 ['9600', '9600'],
-//                 ['300', '300'],
-//                 ['1200', '1200'],
-//                 ['4800', '4800'],
-//                 ['14400', '14400'],
-//                 ['19200', '19200'],
-//                 ['28800', '28800'],
-//                 ['38400', '38400'],
-//                 ['57600', '57600'],
-//                 ['115200', '115200']
-//             ]
-//         }
-//     ]
-// );
 
 //串口 写入文本
 Blockly.Blocks['motion_arduino_serial_print'] = {
@@ -599,16 +351,6 @@ Blockly.Blocks['motion_arduino_serial_print'] = {
     }
 }
 
-//   createBlock(null, ["colours_arduino_serial", "shape_statement"],
-//     'ARDUINO_SERIAL_PRINT',
-//     [
-//         {
-//             "type": "input_value",
-//             "name": "TEXT"
-//         }
-//     ]
-// );
-
 // 串口 是否有字符
 Blockly.Blocks['motion_arduino_serial_is_readable'] = {
     init: function () {
@@ -618,9 +360,6 @@ Blockly.Blocks['motion_arduino_serial_is_readable'] = {
         });
     }
 }
-//   createBlock(null, ["colours_arduino_serial", "output_boolean"],
-//     'ARDUINO_SERIAL_IS_READABLE'
-// );
 
 //串口 读取字符串
 Blockly.Blocks['motion_arduino_serial_read'] = {
@@ -631,10 +370,6 @@ Blockly.Blocks['motion_arduino_serial_read'] = {
         });
     }
 }
-
-//   createBlock(null, ["colours_arduino_serial", "output_number"],
-//     'ARDUINO_SERIAL_READ'
-// );
 
 //串口 字符串转数值
 Blockly.Blocks['motion_arduino_serial_strtonumber'] = {
@@ -725,18 +460,6 @@ Blockly.Blocks['motion_arduino_broadcast'] = {
     }
 };
 
-
-//    createBlock(null, ["colours_arduino_serial", "output_number"],
-//     'ARDUINO_SERIAL_STR_TONUMBER',
-//     [
-//         {
-//             "type": "input_value",
-//             "name": "TEXT"
-//         }
-//     ]
-// );
-
-
 /** control ----------------------------- */
 
 //延时 毫秒
@@ -755,16 +478,6 @@ Blockly.Blocks['motion_arduino_delay_ms'] = {
     }
 }
 
-//   createBlock(null, ["colours_control", "shape_statement"],
-//     'ARDUINO_DELAY_MS',
-//     [
-//         {
-//             "type": "input_value",
-//             "name": "TIME"
-//         }
-//     ]
-// );
-
 //延时 微秒
 Blockly.Blocks['motion_arduino_delay_us'] = {
     init: function () {
@@ -780,16 +493,6 @@ Blockly.Blocks['motion_arduino_delay_us'] = {
         });
     }
 }
-
-// createBlock(null, ["colours_control", "shape_statement"],
-//     'ARDUINO_DELAY_US',
-//     [
-//         {
-//             "type": "input_value",
-//             "name": "TIME"
-//         }
-//     ]
-// );
 
 Blockly.Blocks['motion_arduino_for'] = {
     init: function () {
@@ -966,15 +669,6 @@ Blockly.Blocks['motion_arduino_keep_wait'] = {
     }
 }
 
-//   createBlock(null, ['shape_end', 'colours_control'],
-//     'ARDUINO_KEEP_WAIT'
-// );
-
-
-
-
-
-
 
 /** grove数字 ----------------------------- */
 
@@ -1052,9 +746,6 @@ Blockly.Blocks['motion_arduino_seeed_water'] = {
     }
 }
 
-//   createBlock({ name: 'water.svg', width: 65 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_WATER', figureBlockArgs);
-
 // 倾斜传感器
 Blockly.Blocks['motion_arduino_seeed_tilt'] = {
     init: function () {
@@ -1101,9 +792,6 @@ Blockly.Blocks['motion_arduino_seeed_tilt'] = {
     }
 }
 
-//   createBlock({ name: 'tilt.svg', width: 48 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_TILT', figureBlockArgs);
-
 //红外接近传感器（Line Finder）
 Blockly.Blocks['motion_arduino_seeed_line_finder'] = {
     init: function () {
@@ -1149,10 +837,6 @@ Blockly.Blocks['motion_arduino_seeed_line_finder'] = {
         });
     }
 }
-
-
-//   createBlock({ name: 'line_finder.svg', width: 48 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_LINE_FINDER', figureBlockArgs);
 
 //红外接近传感器（Line Finder）
 Blockly.Blocks['motion_arduino_seeed_line_finder_r'] = {
@@ -1238,7 +922,7 @@ Blockly.Blocks['motion_arduino_seeed_line_finder_rcolor'] = {
                         ['D48', '48'],
                         ['D49', '49'],
                     ]
-                },  {
+                }, {
                     "type": "field_dropdown",
                     "name": "COLOR",
                     "options": [
@@ -1251,9 +935,6 @@ Blockly.Blocks['motion_arduino_seeed_line_finder_rcolor'] = {
         });
     }
 }
-
-//   createBlock({ name: 'line_finder.svg', width: 48 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_LINE_FINDER_R', figureBlockArgs);
 
 //超声波测距传感器（Ultrasonic Ranger）
 Blockly.Blocks['motion_arduino_seeed_ult'] = {
@@ -1301,9 +982,6 @@ Blockly.Blocks['motion_arduino_seeed_ult'] = {
     }
 }
 
-//   createBlock({ name: 'ult.svg', width: 65 }, ["colours_arduino_grove_igure", "output_number"],
-//     'ARDUINO_SEEED_ULT', figureBlockArgs);
-
 // 按钮按键
 Blockly.Blocks['motion_arduino_seeed_btn'] = {
     init: function () {
@@ -1349,9 +1027,6 @@ Blockly.Blocks['motion_arduino_seeed_btn'] = {
         });
     }
 }
-
-//   createBlock({ name: 'btn.svg', width: 48 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_BTN', figureBlockArgs);
 
 //舵机
 Blockly.Blocks['motion_arduino_seeed_servo_read_degrees'] = {
@@ -1399,10 +1074,6 @@ Blockly.Blocks['motion_arduino_seeed_servo_read_degrees'] = {
     }
 }
 
-
-//   createBlock({ name: 'servo.svg', width: 48 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_SERVO_READ_DEGREES', figureBlockArgs);
-
 // 磁力开关（Magnetic Switch）
 Blockly.Blocks['motion_arduino_seeed_magnetic_switch'] = {
     init: function () {
@@ -1448,9 +1119,6 @@ Blockly.Blocks['motion_arduino_seeed_magnetic_switch'] = {
         });
     }
 }
-
-//   createBlock({ name: 'magnetic_switch.svg', width: 48 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_MAGNETIC_SWITCH', figureBlockArgs);
 
 //人体红外传感器（PIR Motion Sensor）
 Blockly.Blocks['motion_arduino_seeed_pir_motion'] = {
@@ -1498,9 +1166,6 @@ Blockly.Blocks['motion_arduino_seeed_pir_motion'] = {
     }
 }
 
-//   createBlock({ name: 'pir_motion.svg', width: 65 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_PIR_MOTION', figureBlockArgs);
-
 //火焰传感器（Flame Sensor）
 Blockly.Blocks['motion_arduino_seeed_flame'] = {
     init: function () {
@@ -1546,9 +1211,6 @@ Blockly.Blocks['motion_arduino_seeed_flame'] = {
         });
     }
 }
-
-//   createBlock({ name: 'flame.svg', width: 48 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_FLAME', figureBlockArgs);
 
 //碰撞传感器（Collision Sensor）
 Blockly.Blocks['motion_arduino_seeed_collision'] = {
@@ -1596,9 +1258,6 @@ Blockly.Blocks['motion_arduino_seeed_collision'] = {
     }
 }
 
-// createBlock({ name: 'collision.svg', width: 48 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_COLLISION', figureBlockArgs);
-
 // 霍尔电磁开关（Hall Sensor）
 Blockly.Blocks['motion_arduino_seeed_hall'] = {
     init: function () {
@@ -1644,9 +1303,6 @@ Blockly.Blocks['motion_arduino_seeed_hall'] = {
         });
     }
 }
-
-//   createBlock({ name: 'hall.svg', width: 48 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_HALL', figureBlockArgs);
 
 //触摸传感器
 Blockly.Blocks['motion_arduino_seeed_touch'] = {
@@ -1694,28 +1350,87 @@ Blockly.Blocks['motion_arduino_seeed_touch'] = {
     }
 }
 
+Blockly.Blocks['motion_arduino_infrared_send'] = {
+    init: function () {
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_INFRA_RED_SEND,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/icon_barometer_sensor.svg",
+                    "width": 65,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                },
+                {
+                    "type": "input_value",
+                    "name": "ADDRESS"
+                },
+            ],
+            "extensions": ["colours_arduino_grove_igure", "shape_statement"]
+        });
+    }
+}
+
+Blockly.Blocks['motion_arduino_infrared_receive'] = {
+    init: function () {
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_INFRA_RED_RECEIVE,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/icon_infrared_receiver.svg",
+                    "width": 65,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                },
+                {
+                    "type": "field_dropdown",
+                    "name": "PIN",
+                    "options": [
+                        ['D2', '2'],
+                        ['D3', '3'],
+                        ['D4', '4'],
+                        ['D5', '5'],
+                        ['D6', '6'],
+                        ['D7', '7'],
+                        ['D8', '8'],
+                        ['D9', '9'],
+                        ['D10', '10'],
+                        ['D11', '11'],
+                        ['D12', '12'],
+                        ['D13', '13']
+                    ]
+                }
+            ],
+            "extensions": ["colours_arduino_grove_igure", "output_string"]
+        });
+    }
+}
+
 Blockly.Blocks['motion_arduino_seeed_read_gesture'] = {
     init: function () {
-      this.jsonInit({
-        "message0": Blockly.Msg.ARDUINO_SEEED_READ_GESTURE,
-        "args0": [
-          {
-            "type": "field_image",
-            "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/gesture.svg",
-            "width": 48,
-            "height": 30
-          },
-          {
-            "type": "field_vertical_separator"
-          }
-        ],
-        "extensions": ["colours_arduino_grove_i2c", "output_boolean"]
-      });
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_SEEED_READ_GESTURE,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/gesture.svg",
+                    "width": 48,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                }
+            ],
+            "extensions": ["colours_arduino_grove_i2c", "output_boolean"]
+        });
     }
-  };
-
-//   createBlock({ name: 'seeed_touch.svg', width: 48 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_TOUCH', figureBlockArgs);
+};
 
 //手势识别传感器 (Gesture)  向上；向下 ； 向左  ；向右 ； 向前 ；向后 ； 顺时针 ； 逆时针 ；挥手
 Blockly.Blocks['motion_arduino_seeed_gesture'] = {
@@ -1830,42 +1545,6 @@ Blockly.Blocks['motion_arduino_seeed_speech_recognizer'] = {
     }
 }
 
-//   createBlock({ name: 'speech_recognizer.svg', width: 65 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_SPEECH_RECOGNIZER',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "OPT",
-//             "options": [
-//                 ['Turn on the light', '0'],
-//                 ['Turn off the light', '1'],
-//                 ['Play music', '2'],
-//                 ['Pause', '3'],
-//                 ['Next', '4'],
-//                 ['Previous', '5'],
-//                 ['Up', '6'],
-//                 ['Down', '7'],
-//                 ['Turn on the TV', '8'],
-//                 ['Turn off the TV', '9'],
-//                 ['Increase temperature', '10'],
-//                 ['Decrease temperature', '11'],
-//                 ['What’s the time', '12'],
-//                 ['Open the door', '13'],
-//                 ['Close the door', '14'],
-//                 ['Left', '15'],
-//                 ['Right', '16'],
-//                 ['Stop', '17'],
-//                 ['Start', '18'],
-//                 ['Mode 1', '19'],
-//                 ['Mode 2', '20'],
-//                 ['Go', '21']
-//             ]
-//         }
-//     ]
-// );
-
-
 Blockly.Blocks['motion_arduino_seeed_speech_recognizer_getvalue'] = {
     init: function () {
         this.jsonInit({
@@ -1910,14 +1589,6 @@ Blockly.Blocks['motion_arduino_seeed_speech_recognizer_getvalue'] = {
         });
     }
 }
-
-//   createBlock({ name: 'speech_recognizer.svg', width: 65 }, ["colours_arduino_grove_igure", "output_number"],
-//     'ARDUINO_SEEED_SPEECH_RECOGNIZER_GETVALUE',
-//     [
-//         figureBlockArgs[0]
-//     ]
-// );
-
 
 //舵机
 Blockly.Blocks['motion_arduino_seeed_servo_move'] = {
@@ -1973,21 +1644,6 @@ Blockly.Blocks['motion_arduino_seeed_servo_move'] = {
     }
 }
 
-//   createBlock({ name: 'servo.svg', width: 48 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_SERVO_MOVE',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "input_value",
-//             "name": "DEGREES"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "DELAY_TIME"
-//         }
-//     ]
-// );
-
 // //LED灯
 Blockly.Blocks['motion_arduino_seeed_led'] = {
     init: function () {
@@ -2041,21 +1697,6 @@ Blockly.Blocks['motion_arduino_seeed_led'] = {
         });
     }
 }
-
-//   createBlock({ name: 'LED.svg', width: 48 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_LED',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": [
-//                 ['ON', 'HIGH'],
-//                 ['OFF', 'LOW']
-//             ]
-//         }
-//     ]
-// );
 
 // //蜂鸣器 buzzer
 Blockly.Blocks['motion_arduino_seeed_buzzer'] = {
@@ -2111,21 +1752,6 @@ Blockly.Blocks['motion_arduino_seeed_buzzer'] = {
     }
 }
 
-//   createBlock({ name: 'buzzer.svg', width: 48 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_BUZZER',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": [
-//                 ['ON', 'HIGH'],
-//                 ['OFF', 'LOW']
-//             ]
-//         }
-//     ]
-// );
-
 //继电器
 Blockly.Blocks['motion_arduino_seeed_relay'] = {
     init: function () {
@@ -2180,21 +1806,6 @@ Blockly.Blocks['motion_arduino_seeed_relay'] = {
     }
 }
 
-//   createBlock({ name: 'relay.svg', width: 65 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_RELAY',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": [
-//                 ['ON', 'HIGH'],
-//                 ['OFF', 'LOW']
-//             ]
-//         }
-//     ]
-// );
-
 //4位数码显示管 （4 Digit Display）
 Blockly.Blocks['motion_arduino_seeed_4digit_display'] = {
     init: function () {
@@ -2244,17 +1855,6 @@ Blockly.Blocks['motion_arduino_seeed_4digit_display'] = {
         });
     }
 }
-
-//   createBlock({ name: '4digit_display.svg', width: 65 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_4DIGIT_DISPLAY',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "input_value",
-//             "name": "NUM"
-//         }
-//     ]
-// );
 
 //全彩RGB LED灯  （Chainable RGB LED）
 Blockly.Blocks['motion_arduino_seeed_rgb_led'] = {
@@ -2321,34 +1921,6 @@ Blockly.Blocks['motion_arduino_seeed_rgb_led'] = {
         });
     }
 }
-
-
-// createBlock({ name: 'rgb_led.svg', width: 65 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_RGB_LED',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "input_value",
-//             "name": "COLOR"
-//         },
-//         {
-//             "type": "field_dropdown",
-//             "name": "NUM",
-//             "options": [
-//                 ['1', '0'],
-//                 ['2', '1'],
-//                 ['3', '2'],
-//                 ['4', '3'],
-//                 ['5', '4'],
-//                 ['6', '5'],
-//                 ['7', '6'],
-//                 ['8', '7'],
-//                 ['9', '8'],
-//                 ['10', '9'],
-//             ]
-//         }
-//     ]
-// );
 
 Blockly.Blocks['motion_arduino_seeed_rgb_led1'] = {
     init: function () {
@@ -2423,41 +1995,68 @@ Blockly.Blocks['motion_arduino_seeed_rgb_led1'] = {
     }
 }
 
+//WS2813 Mini 彩灯/灯条
+Blockly.Blocks['motion_arduino_seeed_rgb_led_mini'] = {
+    init: function () {
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_SEEED_RGB_LED_MINI,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/rgb_led_mini.svg",
+                    "width": 48,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                },
+                {
+                    "type": "field_dropdown",
+                    "name": "PIN",
+                    "options": [
+                        ['D2', '2'],
+                        ['D3', '3'],
+                        ['D4', '4'],
+                        ['D5', '5'],
+                        ['D6', '6'],
+                        ['D7', '7'],
+                        ['D8', '8'],
+                    ]
+                },
+                {
+                    "type": "input_value",
+                    "name": "R"
+                },
+                {
+                    "type": "input_value",
+                    "name": "G"
+                },
+                {
+                    "type": "input_value",
+                    "name": "B"
+                },
+                {
+                    "type": "field_dropdown",
+                    "name": "NUM",
+                    "options": [
+                        ['1', '1'],
+                        ['2', '2'],
+                        ['3', '3'],
+                        ['4', '4'],
+                        ['5', '5'],
+                        ['6', '6'],
+                        ['7', '7'],
+                        ['8', '8'],
+                        ['9', '9'],
+                        ['10', '10'],
+                    ]
+                }
+            ],
+            "extensions": ["colours_arduino_grove_igure", "shape_statement"],
+        });
+    }
+}
 
-//   createBlock({ name: 'rgb_led.svg', width: 65 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_RGB_LED1',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "input_value",
-//             "name": "R"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "G"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "B"
-//         },
-//         {
-//             "type": "field_dropdown",
-//             "name": "NUM",
-//             "options": [
-//                 ['1', '0'],
-//                 ['2', '1'],
-//                 ['3', '2'],
-//                 ['4', '3'],
-//                 ['5', '4'],
-//                 ['6', '5'],
-//                 ['7', '6'],
-//                 ['8', '7'],
-//                 ['9', '8'],
-//                 ['10', '9'],
-//             ]
-//         }
-//     ]
-// );
 
 //扬声器 （Speaker）
 // C3,D3,E3,F3,G3,A3,B3,C4,D4,E4,F4,G4,A4,B4,C5,D5,E5,F5,G5,A5,B5,结束声音
@@ -2599,37 +2198,6 @@ Blockly.Blocks['motion_arduino_buzzer_speaker'] = {
     }
 }
 
-
-// createBlock({ name: 'speaker.svg', width: 70 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_SPEAKER',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "NOTE",
-//             "options": [
-//                 ['C3', '0'], ['D3', '1'], ['E3', '2'], ['F3', '3'], ['G3', '4'], ['A3', '5'], ['B3', '6'],
-//                 ['C4', '7'], ['D4', '8'], ['E4', '9'], ['F4', '10'], ['G4', '11'], ['A4', '12'], ['B4', '13'],
-//                 ['C5', '14'], ['D5', '15'], ['E5', '16'], ['F5', '17'], ['G5', '18'], ['A5', '19'], ['B5', '20'],
-//                 ['结束声音', '21']
-//             ]
-//         },
-//         {
-//             "type": "field_dropdown",
-//             "name": "BEAT",
-//             "options": [
-//                 ['1', '1'],
-//                 ['1/2', '1/2'],
-//                 ['1/4', '1/4'],
-//                 ['1/8', '1/8'],
-//                 ['2', '2'],
-//                 ['4', '4'],
-//                 ['8', '8']
-//             ]
-//         }
-//     ]
-// );
-
 //录音播放模块 （Recorder)
 Blockly.Blocks['motion_arduino_seeed_recorder'] = {
     init: function () {
@@ -2683,21 +2251,6 @@ Blockly.Blocks['motion_arduino_seeed_recorder'] = {
         });
     }
 }
-
-//   createBlock({ name: 'recorder.svg', width: 65 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_RECORDER',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": [
-//                 ['ON', 'HIGH'],
-//                 ['OFF', 'LOW']
-//             ]
-//         }
-//     ]
-// );
 
 //冷光条驱动 （EL Driver）
 Blockly.Blocks['motion_arduino_seeed_el_driver'] = {
@@ -2753,22 +2306,6 @@ Blockly.Blocks['motion_arduino_seeed_el_driver'] = {
     }
 }
 
-// createBlock({ name: 'el_driver.svg', width: 65 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_EL_DRIVER',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": [
-//                 ['ON', 'HIGH'],
-//                 ['OFF', 'LOW']
-//             ]
-//         }
-//     ]
-// );
-
-
 // 震动马达 Vibration Motor）
 Blockly.Blocks['motion_arduino_seeed_vibration_motor'] = {
     init: function () {
@@ -2822,21 +2359,6 @@ Blockly.Blocks['motion_arduino_seeed_vibration_motor'] = {
         });
     }
 }
-
-// createBlock({ name: 'vibration_motor.svg', width: 48 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_EL_VIBRATION_MOTOR',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": [
-//                 ['ON', 'HIGH'],
-//                 ['OFF', 'LOW']
-//             ]
-//         }
-//     ]
-// );
 
 //电磁铁模块 （Electromagnet）
 Blockly.Blocks['motion_arduino_seeed_electromagnet'] = {
@@ -2892,23 +2414,6 @@ Blockly.Blocks['motion_arduino_seeed_electromagnet'] = {
     }
 }
 
-// createBlock({ name: 'electromagnet.svg', width: 65 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_ELECTROMAGNET',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": [
-//                 ['ON', 'HIGH'],
-//                 ['OFF', 'LOW']
-//             ]
-//         }
-//     ]
-// );
-
-
-
 //迷你风扇  （Mini Fan）
 Blockly.Blocks['motion_arduino_seeed_mini_fan'] = {
     init: function () {
@@ -2961,30 +2466,6 @@ Blockly.Blocks['motion_arduino_seeed_mini_fan'] = {
             "extensions": ["colours_arduino_grove_igure", "shape_statement"],
         });
     }
-}
-
-// createBlock({ name: 'mini_fan.svg', width: 48 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_MINI_FAN',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": [
-//                 ['ON', 'HIGH'],
-//                 ['OFF', 'LOW']
-//             ]
-//         }
-//     ]
-// );
-
-
-function createNnmList(l) {
-    var a = [];
-    for (var i = 0; i < l; i++) {
-        a.push([i.toString(), i.toString()]);
-    }
-    return a;
 }
 
 //LED 灯条 （LED String Light）LED灯条
@@ -3055,31 +2536,6 @@ Blockly.Blocks['motion_arduino_seeed_led_string_light'] = {
         });
     }
 }
-
-
-// createBlock({ name: 'led_string_light.svg', width: 48 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_LED_STRING_LIGHT',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": createNnmList(50)
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "R"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "G"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "B"
-//         }
-//     ]
-// );
 
 //柱状发光二极管 LED Bar）
 Blockly.Blocks['motion_arduino_seeed_led_bar'] = {
@@ -3205,25 +2661,6 @@ Blockly.Blocks['motion_arduino_seeed_circular_led'] = {
     }
 }
 
-
-// createBlock({ name: 'circular_led.svg', width: 48 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_LED_CIRCULAR_LED',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": createNnmList(24)
-//         }
-//     ]
-// );
-
-
-
-
-
-
-
 var analogInputBlockArgs = [
     {
         "type": "field_dropdown",
@@ -3277,9 +2714,6 @@ Blockly.Blocks['motion_arduino_seeed_slide_pot'] = {
     }
 }
 
-// createBlock({ name: 'slide_pot.svg', width: 65 }, ["colours_arduino_grove_analog", "output_number"],
-//     'ARDUINO_SEEED_SLIDE_POT', analogInputBlockArgs);
-
 //土壤湿度传感器（Moisture Sensor）
 Blockly.Blocks['motion_arduino_seeed_moisture'] = {
     init: function () {
@@ -3315,8 +2749,6 @@ Blockly.Blocks['motion_arduino_seeed_moisture'] = {
     }
 }
 
-//   createBlock({ name: 'moisture.svg', width: 65 }, ["colours_arduino_grove_analog", "output_number"],
-//     'ARDUINO_SEEED_MOISTURE', analogInputBlockArgs);
 
 //旋转电位计（模拟）
 Blockly.Blocks['motion_arduino_seeed_rotation'] = {
@@ -3353,9 +2785,6 @@ Blockly.Blocks['motion_arduino_seeed_rotation'] = {
     }
 }
 
-//   createBlock({ name: 'rotation.svg', width: 48 }, ["colours_arduino_grove_analog", "output_number"],
-//     'ARDUINO_SEEED_ROTATION', analogInputBlockArgs);
-
 // 噪声传感器
 Blockly.Blocks['motion_arduino_seeed_sound'] = {
     init: function () {
@@ -3390,9 +2819,6 @@ Blockly.Blocks['motion_arduino_seeed_sound'] = {
         });
     }
 }
-
-//   createBlock({ name: 'sound.svg', width: 48 }, ["colours_arduino_grove_analog", "output_number"],
-//     'ARDUINO_SEEED_SOUND', analogInputBlockArgs);
 
 //光线传感器
 
@@ -3430,9 +2856,6 @@ Blockly.Blocks['motion_arduino_seeed_light'] = {
     }
 }
 
-//   createBlock({ name: 'light.svg', width: 48 }, ["colours_arduino_grove_analog", "output_number"],
-//     'ARDUINO_SEEED_LIGHT', analogInputBlockArgs);
-
 //温度传感器
 Blockly.Blocks['motion_arduino_seeed_temperature'] = {
     init: function () {
@@ -3467,29 +2890,11 @@ Blockly.Blocks['motion_arduino_seeed_temperature'] = {
         });
     }
 }
-
-// createBlock({ name: 'temperature.svg', width: 48 }, ["colours_arduino_grove_analog", "output_number"],
-//     'ARDUINO_SEEED_TEMPERATURE', analogInputBlockArgs);
-
-//温湿度传感器
-// Blockly.Blocks['motion_arduino_seeed_temperature_humidity'] = createBlock({ name: 'temperature_humidity.svg', width: 65 }, ["colours_arduino_grove_igure", "output_number"],
-//     'ARDUINO_SEEED_TEMPERATURE_HUMIDITY',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "TH",
-//             "options": [
-//                 [Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY_OPT1, '0'],
-//                 [Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY_OPT2, '1']
-//             ]
-//         }
-//     ]
-// );
+//温湿度DHT11
 Blockly.Blocks['motion_arduino_seeed_temperature_humidity'] = {
     init: function () {
         this.jsonInit({
-            "message0": Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY,
+            "message0": Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY_DHT11,
             "args0": [
                 {
                     "type": "field_image",
@@ -3533,9 +2938,36 @@ Blockly.Blocks['motion_arduino_seeed_temperature_humidity'] = {
                         [Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY_OPT2, '1']
                     ]
                 }
-
             ],
             "extensions": ["colours_arduino_grove_igure", "output_number"]
+        });
+    }
+}
+//温湿度DHT20
+Blockly.Blocks['motion_arduino_seeed_temperature_humidity_dht20'] = {
+    init: function () {
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY_DHT20,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/temperature_humidity.svg",
+                    "width": 65,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                },
+                {
+                    "type": "field_dropdown",
+                    "name": "TH",
+                    "options": [
+                        [Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY_OPT1, '0'],
+                        [Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY_OPT2, '1']
+                    ]
+                }
+            ],
+            "extensions": ["colours_arduino_grove_i2c", "output_number"]
         });
     }
 }
@@ -3583,25 +3015,6 @@ Blockly.Blocks['motion_arduino_seeed_thumb_joystick'] = {
     }
 }
 
-// createBlock({ name: 'thumb_joystick.svg', width: 65 }, ["colours_arduino_grove_analog", "output_number"],
-//     'ARDUINO_SEEED_THUMB_JOYSTICK',
-//     [
-//         analogInputBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "XY",
-//             "options": [
-//                 ['X', '0'],
-//                 ['Y', '1']
-//             ]
-//         }
-//     ]
-// );
-
-
-
-
-
 //i2c输入
 //全彩背光LCD屏 （LCD RGB Backlight）
 Blockly.Blocks['motion_arduino_grove_serial_lcd_print'] = {
@@ -3631,20 +3044,6 @@ Blockly.Blocks['motion_arduino_grove_serial_lcd_print'] = {
         });
     }
 }
-
-// createBlock({ name: 'serial_lcd_print.svg', width: 65 }, ["colours_arduino_grove_i2c", "shape_statement"],
-//     'ARDUINO_GROVE_SERIAL_LCD_PRINT',
-//     [
-//         {
-//             "type": "input_value",
-//             "name": "TEXT1"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "TEXT2"
-//         }
-//     ]
-// );
 
 Blockly.Blocks['motion_arduino_grove_serial_lcd_print2'] = {
     init: function () {
@@ -3677,24 +3076,6 @@ Blockly.Blocks['motion_arduino_grove_serial_lcd_print2'] = {
         });
     }
 }
-
-// createBlock({ name: 'serial_lcd_print.svg', width: 65 }, ["colours_arduino_grove_i2c", "shape_statement"],
-//     'ARDUINO_GROVE_SERIAL_LCD_PRINT2',
-//     [
-//         {
-//             "type": "input_value",
-//             "name": "ROW"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "COLUMN"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "TEXT"
-//         }
-//     ]
-// );
 
 Blockly.Blocks['motion_arduino_grove_serial_lcd_power'] = {
     init: function () {
@@ -3763,24 +3144,6 @@ Blockly.Blocks['motion_arduino_grove_serial_lcd_setrgb'] = {
     }
 }
 
-// createBlock({ name: 'serial_lcd_print.svg', width: 65 }, ["colours_arduino_grove_i2c", "shape_statement"],
-//     'ARDUINO_GROVE_SERIAL_LCD_SETRGB',
-//     [
-//         {
-//             "type": "input_value",
-//             "name": "R"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "G"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "B"
-//         }
-//     ]
-// );
-
 //三轴数字加速度 （3 Axis Digital Accelerometer）
 Blockly.Blocks['motion_arduino_grove_serial_3ada16'] = {
     init: function () {
@@ -3810,21 +3173,6 @@ Blockly.Blocks['motion_arduino_grove_serial_3ada16'] = {
         });
     }
 }
-
-// createBlock({ name: 'serial_3ada.svg', width: 48 }, ["colours_arduino_grove_i2c", "output_number"],
-//     'ARDUINO_GROVE_SERIAL_3ADA',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "XYZ",
-//             "options": [
-//                 ['X', '0'],
-//                 ['Y', '1'],
-//                 ['Z', '2']
-//             ]
-//         }
-//     ]
-// );
 
 //三轴数字加速度 （3 Axis Digital Accelerometer）
 Blockly.Blocks['motion_arduino_grove_serial_3ada15'] = {
@@ -3886,21 +3234,6 @@ Blockly.Blocks['motion_arduino_grove_serial_3ada_m'] = {
     }
 }
 
-// createBlock({ name: 'serial_3ada.svg', width: 48 }, ["colours_arduino_grove_i2c", "output_number"],
-//     'ARDUINO_GROVE_SERIAL_3ADA15',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "XYZ",
-//             "options": [
-//                 ['X', '0'],
-//                 ['Y', '1'],
-//                 ['Z', '2']
-//             ]
-//         }
-//     ]
-// );
-
 //多通道触摸传感器 （I2C Touch Sensor）
 Blockly.Blocks['motion_arduino_grove_serial_touch'] = {
     init: function () {
@@ -3940,30 +3273,6 @@ Blockly.Blocks['motion_arduino_grove_serial_touch'] = {
     }
 }
 
-// createBlock({ name: 'touch.svg', width: 48 }, ["colours_arduino_grove_i2c", "output_boolean"],
-//     'ARDUINO_GROVE_SERIAL_TOUCH',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "CH",
-//             "options": [
-//                 ['0', '0'],
-//                 ['1', '1'],
-//                 ['2', '2'],
-//                 ['3', '3'],
-//                 ['4', '4'],
-//                 ['5', '5'],
-//                 ['6', '6'],
-//                 ['7', '7'],
-//                 ['8', '8'],
-//                 ['9', '9'],
-//                 ['10', '10'],
-//                 ['11', '11']
-//             ]
-//         }
-//     ]
-// );
-
 //迷你电机驱动模块 （Mini I2C Motor Driver）
 Blockly.Blocks['motion_arduino_grove_serial_mini_motor_driver'] = {
     init: function () {
@@ -3997,25 +3306,6 @@ Blockly.Blocks['motion_arduino_grove_serial_mini_motor_driver'] = {
     }
 }
 
-
-// createBlock({ name: 'mini_motor.svg', width: 65 }, ["colours_arduino_grove_i2c", "shape_statement"],
-//     'ARDUINO_GROVE_SERIAL_MINI_MOTOR_DRIVER',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "CH",
-//             "options": [
-//                 ['M1', 'CH1'],
-//                 ['M2', 'CH2'],
-//             ]
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "SPEED"
-//         }
-//     ]
-// );
-
 Blockly.Blocks['motion_arduino_grove_serial_mini_motor_driver_stop'] = {
     init: function () {
         this.jsonInit({
@@ -4043,20 +3333,6 @@ Blockly.Blocks['motion_arduino_grove_serial_mini_motor_driver_stop'] = {
         });
     }
 }
-
-// createBlock({ name: 'mini_motor.svg', width: 65 }, ["colours_arduino_grove_i2c", "shape_statement"],
-//     'ARDUINO_GROVE_SERIAL_MINI_MOTOR_DRIVER_STOP',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "CH",
-//             "options": [
-//                 ['M1', 'CH1'],
-//                 ['M2', 'CH2'],
-//             ]
-//         }
-//     ]
-// );
 
 //RGB矩阵屏 （RGB LED Matrix）
 //红，橙，黄，绿，青，蓝，紫，粉红，白
@@ -4105,8 +3381,6 @@ Blockly.Blocks['motion_arduino_grove_serial_rgb_led_matrix_on_point'] = {
     }
 };
 
-
-
 Blockly.Blocks['motion_arduino_grove_serial_rgb_led_matrix_show_text'] = {
     init: function () {
         this.jsonInit({
@@ -4130,16 +3404,6 @@ Blockly.Blocks['motion_arduino_grove_serial_rgb_led_matrix_show_text'] = {
         });
     }
 }
-
-//   createBlock({ name: 'rgb_led_matrix.svg', width: 48 }, ["colours_arduino_grove_i2c", "shape_statement"],
-//     'ARDUINO_GROVE_SERIAL_RGB_LED_MATRIX_SHOW_TEXT',
-//     [
-//         {
-//             "type": "input_value",
-//             "name": "TEXT"
-//         }
-//     ]
-// );
 
 Blockly.Blocks['motion_arduino_grove_serial_rgb_led_matrix_show_emoji'] = {
     init: function () {
@@ -4166,17 +3430,83 @@ Blockly.Blocks['motion_arduino_grove_serial_rgb_led_matrix_show_emoji'] = {
     }
 }
 
-// createBlock({ name: 'rgb_led_matrix.svg', width: 48 }, ["colours_arduino_grove_i2c", "shape_statement"],
-//     'ARDUINO_GROVE_SERIAL_RGB_LED_MATRIX_SHOW_EMOJS',
-//     [
-//         {
-//             "type": "field_rgbmatrix",
-//             "name": "SHAPE",
-//             "default": ""
-//         }
-//     ]
-// );
+//RED LED
+Blockly.Blocks['motion_arduino_grove_serial_red_led_matrix_on_point'] = {
+    init: function () {
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_GROVE_SERIAL_RED_LED_MATRIX_ON_POINT,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/rgb_led_matrix.svg",
+                    "width": 48,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                },
+                {
+                    "type": "input_value",
+                    "name": "X"
+                },
+                {
+                    "type": "input_value",
+                    "name": "Y"
+                }
+            ],
+            "extensions": ["colours_arduino_grove_i2c", "shape_statement"]
+        });
+    }
+};
 
+Blockly.Blocks['motion_arduino_grove_serial_red_led_matrix_show_text'] = {
+    init: function () {
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_GROVE_SERIAL_RED_LED_MATRIX_SHOW_TEXT,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/rgb_led_matrix.svg",
+                    "width": 48,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                },
+                {
+                    "type": "input_value",
+                    "name": "TEXT"
+                }
+            ],
+            "extensions": ["colours_arduino_grove_i2c", "shape_statement"],
+        });
+    }
+}
+
+Blockly.Blocks['motion_arduino_grove_serial_red_led_matrix_show_emoji'] = {
+    init: function () {
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_GROVE_SERIAL_RED_LED_MATRIX_SHOW_EMOJS,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/rgb_led_matrix.svg",
+                    "width": 48,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                },
+                {
+                    "type": "field_redmatrix",
+                    "name": "SHAPE",
+                    "default": ""
+                }
+            ],
+            "extensions": ["colours_arduino_grove_i2c", "shape_statement"],
+        });
+    }
+}
 
 Blockly.Blocks['motion_arduino_grove_otto_diy_robot1'] = {
     init: function () {
@@ -4274,8 +3604,6 @@ Blockly.Blocks['motion_arduino_grove_otto_diy_robot2'] = {
     }
 };
 
-
-
 Blockly.Blocks['motion_arduino_shield_bot2'] = {
     init: function () {
         this.jsonInit({
@@ -4353,23 +3681,23 @@ Blockly.Blocks['motion_arduino_shield_bot1'] = {
 
 Blockly.Blocks['motion_arduino_color_read_sensor'] = {
     init: function () {
-      this.jsonInit({
-        "message0": Blockly.Msg.ARDUINO_COLOR_READ_SENSOR,
-        "args0": [
-          {
-            "type": "field_image",
-            "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/color_sensor.svg",
-            "width": 65,
-            "height": 30
-          },
-          {
-            "type": "field_vertical_separator"
-          }
-        ],
-        "extensions": ["colours_arduino_grove_i2c", "output_boolean"]
-      });
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_COLOR_READ_SENSOR,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/color_sensor.svg",
+                    "width": 65,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                }
+            ],
+            "extensions": ["colours_arduino_grove_i2c", "output_boolean"]
+        });
     }
-  };
+};
 
 Blockly.Blocks['motion_arduino_color_sensor'] = {
     init: function () {
@@ -4405,87 +3733,87 @@ Blockly.Blocks['motion_arduino_color_sensor'] = {
 };
 //图像交通标示卡片手势检测
 Blockly.Blocks['motion_arduino_traffic_read_sensor'] = {
-  init: function () {
-    this.jsonInit({
-      "message0": Blockly.Msg.ARDUINO_VISION_READ_TRAFFIC_SENSOR,
-      "args0": [
-        {
-          "type": "field_image",
-          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/vision_sensor.svg",
-          "width": 48,
-          "height": 30
-        },
-        {
-          "type": "field_vertical_separator"
-        }
-      ],
-      "extensions": ["colours_arduino_grove_i2c", "output_boolean"]
-    });
-  }
+    init: function () {
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_VISION_READ_TRAFFIC_SENSOR,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/vision_sensor.svg",
+                    "width": 48,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                }
+            ],
+            "extensions": ["colours_arduino_grove_i2c", "output_boolean"]
+        });
+    }
 };
 
 //图像数字卡片手势检测
 Blockly.Blocks['motion_arduino_number_read_sensor'] = {
-  init: function () {
-    this.jsonInit({
-      "message0": Blockly.Msg.ARDUINO_VISION_READ_NUMBER_SENSOR,
-      "args0": [
-        {
-          "type": "field_image",
-          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/vision_sensor.svg",
-          "width": 48,
-          "height": 30
-        },
-        {
-          "type": "field_vertical_separator"
-        }
-      ],
-      "extensions": ["colours_arduino_grove_i2c", "output_boolean"]
-    });
-  }
+    init: function () {
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_VISION_READ_NUMBER_SENSOR,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/vision_sensor.svg",
+                    "width": 48,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                }
+            ],
+            "extensions": ["colours_arduino_grove_i2c", "output_boolean"]
+        });
+    }
 };
 
 //图像图形卡片手势检测
 Blockly.Blocks['motion_arduino_symbol_read_sensor'] = {
-  init: function () {
-    this.jsonInit({
-      "message0": Blockly.Msg.ARDUINO_VISION_READ_SYMBOL_SENSOR,
-      "args0": [
-        {
-          "type": "field_image",
-          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/vision_sensor.svg",
-          "width": 48,
-          "height": 30
-        },
-        {
-          "type": "field_vertical_separator"
-        }
-      ],
-      "extensions": ["colours_arduino_grove_i2c", "output_boolean"]
-    });
-  }
+    init: function () {
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_VISION_READ_SYMBOL_SENSOR,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/vision_sensor.svg",
+                    "width": 48,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                }
+            ],
+            "extensions": ["colours_arduino_grove_i2c", "output_boolean"]
+        });
+    }
 };
 
 //图像运动手势开启
 Blockly.Blocks['motion_arduino_gesture_read_sensor'] = {
-  init: function () {
-    this.jsonInit({
-      "message0": Blockly.Msg.ARDUINO_VISION_READ_GESTURE_SENSOR,
-      "args0": [
-        {
-          "type": "field_image",
-          "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/vision_sensor.svg",
-          "width": 48,
-          "height": 30
-        },
-        {
-          "type": "field_vertical_separator"
-        },
+    init: function () {
+        this.jsonInit({
+            "message0": Blockly.Msg.ARDUINO_VISION_READ_GESTURE_SENSOR,
+            "args0": [
+                {
+                    "type": "field_image",
+                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/vision_sensor.svg",
+                    "width": 48,
+                    "height": 30
+                },
+                {
+                    "type": "field_vertical_separator"
+                },
 
-      ],
-      "extensions": ["colours_arduino_grove_i2c", "output_boolean"]
-    });
-  }
+            ],
+            "extensions": ["colours_arduino_grove_i2c", "output_boolean"]
+        });
+    }
 };
 
 Blockly.Blocks['motion_arduino_webserver_init'] = {
@@ -4583,9 +3911,6 @@ Blockly.Blocks['motion_arduino_webserver_show'] = {
 };
 
 
-
-
-
 //"电压传感器（模块图片）管脚【A0】(Voltage PIN#[A0])"
 Blockly.Blocks['motion_arduino_seeed_voltage'] = {
     init: function () {
@@ -4620,10 +3945,6 @@ Blockly.Blocks['motion_arduino_seeed_voltage'] = {
         });
     }
 }
-
-
-// createBlock({ name: 'voltage.svg', width: 65 }, ["colours_arduino_grove_analog", "output_number"],
-//     'ARDUINO_SEEED_VOLTAGE', analogInputBlockArgs);
 
 //"空气污染传感器Quality
 Blockly.Blocks['motion_arduino_seeed_quality'] = {
@@ -4660,9 +3981,6 @@ Blockly.Blocks['motion_arduino_seeed_quality'] = {
     }
 }
 
-// createBlock({ name: 'quality.svg', width: 65 }, ["colours_arduino_grove_analog", "output_number"],
-//     'ARDUINO_SEEED_QUALITY', analogInputBlockArgs);
-
 //"水分子检测传感器（模块图片）管脚【A0】 (Water level PIN#[A0] )"
 Blockly.Blocks['motion_arduino_seeed_water_analog'] = {
     init: function () {
@@ -4697,9 +4015,6 @@ Blockly.Blocks['motion_arduino_seeed_water_analog'] = {
         });
     }
 }
-
-// createBlock({ name: 'water.svg', width: 65 }, ["colours_arduino_grove_analog", "output_number"],
-//     'ARDUINO_SEEED_WATER_ANALOG', analogInputBlockArgs);
 
 //震动传感器（模块图片）管脚【D2】(Vibration PIN#[D2]) 
 Blockly.Blocks['motion_arduino_seeed_vibration'] = {
@@ -4746,9 +4061,6 @@ Blockly.Blocks['motion_arduino_seeed_vibration'] = {
         });
     }
 }
-
-// createBlock({ name: 'vibration.svg', width: 65 }, ["colours_arduino_grove_igure", "output_boolean"],
-//     'ARDUINO_SEEED_VIBRATION', figureBlockArgs);
 
 //"雾化器（模块图片）管脚【D2】设为【开】（Humidifier PIN#【D2】Stat【ON】）"
 Blockly.Blocks['motion_arduino_seeed_humidifier'] = {
@@ -4804,23 +4116,6 @@ Blockly.Blocks['motion_arduino_seeed_humidifier'] = {
     }
 }
 
-
-// createBlock({ name: 'humidifier.svg', width: 65 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_SEEED_HUMIDIFIER',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "field_dropdown",
-//             "name": "STAT",
-//             "options": [
-//                 ['ON', 'HIGH'],
-//                 ['OFF', 'LOW']
-//             ]
-//         }
-//     ]);
-
-
-
 Blockly.Blocks['motion_arduino_seeed_led_analog'] = {
     init: function () {
         this.jsonInit({
@@ -4856,27 +4151,6 @@ Blockly.Blocks['motion_arduino_seeed_led_analog'] = {
         });
     }
 }
-// createBlock({ name: 'LED.svg', width: 48 }, ["colours_arduino_grove_analog", "shape_statement"],
-//     'ARDUINO_SEEED_LED_ANALOG',
-//     [
-//         {
-//             "type": "field_dropdown",
-//             "name": "PIN",
-//             "options": [
-//                 ['3', '3'],
-//                 ['5', '5'],
-//                 ['6', '6'],
-//                 ['9', '9'],
-//                 ['10', '10'],
-//                 ['11', '11'],
-//             ]
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "NUM"
-//         }
-//     ]
-// );
 
 //图像识别传感器(模块图片)识别球体？(Ball detected?)
 Blockly.Blocks['motion_arduino_vision_sensor1'] = {
@@ -5171,7 +4445,7 @@ Blockly.Blocks['motion_arduino_vision_sensor10'] = {
                         [Blockly.Msg.ARDUINO_VISION_SENSOR10_OPT3, 'CARD_LEFTWARD'],
                         [Blockly.Msg.ARDUINO_VISION_SENSOR10_OPT4, 'CARD_RIGHTWARD'],
                         [Blockly.Msg.ARDUINO_VISION_SENSOR10_OPT5, 'CARD_PUSH_DOWN'],
-                        [Blockly.Msg.ARDUINO_VISION_SENSOR10_OPT6, 'CARD_LIFT_UP']  
+                        [Blockly.Msg.ARDUINO_VISION_SENSOR10_OPT6, 'CARD_LIFT_UP']
                     ]
                 }
             ],
@@ -5436,32 +4710,6 @@ Blockly.Blocks['motion_arduino_led_strip1'] = {
     }
 }
 
-
-
-// createBlock({ name: 'RGB_LED_Strip.svg', width: 65 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_LED_STRIP1',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "input_value",
-//             "name": "R"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "G"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "B"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "NO"
-//         }
-//     ]);
-
-
-
 Blockly.Blocks['motion_arduino_led_strip2'] = {
     init: function () {
         this.jsonInit({
@@ -5658,83 +4906,3 @@ Blockly.Blocks['motion_arduino_rtc_gettime'] = {
         });
     }
 }
-
-Blockly.Blocks['motion_arduino_infrared_send'] = {
-    init: function () {
-        this.jsonInit({
-            "message0": Blockly.Msg.ARDUINO_INFRA_RED_SEND,
-            "args0": [
-                {
-                    "type": "field_image",
-                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/icon_barometer_sensor.svg",
-                    "width": 65,
-                    "height": 30
-                },
-                {
-                    "type": "field_vertical_separator"
-                },
-                {
-                    "type": "input_value",
-                    "name": "MESSAGE"
-                }
-            ],
-            "extensions": ["colours_arduino_grove_igure", "shape_statement"]
-        });
-    }
-}
-
-Blockly.Blocks['motion_arduino_infrared_receive'] = {
-    init: function () {
-        this.jsonInit({
-            "message0": Blockly.Msg.ARDUINO_INFRA_RED_RECEIVE,
-            "args0": [
-                {
-                    "type": "field_image",
-                    "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/icon_infrared_receiver.svg",
-                    "width": 65,
-                    "height": 30
-                },
-                {
-                    "type": "field_vertical_separator"
-                },
-                {
-                    "type": "field_dropdown",
-                    "name": "PIN",
-                    "options": [
-                        ['D2', '2'],
-                        ['D3', '3'],
-                        ['D4', '4'],
-                        ['D5', '5'],
-                        ['D6', '6'],
-                        ['D7', '7'],
-                        ['D8', '8'],
-                        ['D9', '9'],
-                        ['D10', '10'],
-                        ['D11', '11'],
-                        ['D12', '12'],
-                        ['D13', '13']
-                    ]
-                }
-            ],
-            "extensions": ["colours_arduino_grove_igure", "output_string"]
-        });
-    }
-}
-
-// createBlock({ name: 'RGB_LED_Strip.svg', width: 65 }, ["colours_arduino_grove_igure", "shape_statement"],
-//     'ARDUINO_LED_STRIP2',
-//     [
-//         figureBlockArgs[0],
-//         {
-//             "type": "input_value",
-//             "name": "R"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "G"
-//         },
-//         {
-//             "type": "input_value",
-//             "name": "B"
-//         }
-//     ]);

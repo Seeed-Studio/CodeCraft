@@ -1,3 +1,4 @@
+// import ScratchBlocks from '../../../../blocks';
 
 const categorySeparator = '<sep gap="36"/>';
 
@@ -653,12 +654,113 @@ const azureIoT = function () {
         </block>
         <block type="azure_iot_wioterminal_azure_start"></block>
         <block type="azure_iot_wioterminal_azure_connected"></block>
+        <block type="azure_iot_wioterminal_azure_publish"></block>
         ${blockSeparator}
         <block type="azure_iot_wioterminal_runClassifier_artificial_nose"></block>
-        <block type="azure_iot_wioterminal_azure_publish"></block>
     </category>
     `;
 };
+
+const json = function () {
+    return `
+    <category name="%{BKY_CATEGORY_WIO_TERMINAL_JSON}" colour="#57d4c7" secondaryColour="#57d4c7" id="json">
+        <block type="json_wioterminal_json_setvalue">
+            <value name="KEY">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>   
+            </value> 
+            <value name="VALUE">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>   
+            </value>
+            <value name="BROADCAST_OPTION">
+                <shadow type="json_wioterminal_json_menu"></shadow>
+            </value>
+        </block>
+        <block type="json_wioterminal_json_getvalue">
+            <value name="BROADCAST_OPTION">
+                <shadow type="json_wioterminal_json_menu"></shadow>
+            </value>
+            <value name="KEY">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>   
+            </value> 
+        </block>
+        <block type="json_wioterminal_json_object">
+            <value name="BROADCAST_OPTION">
+                <shadow type="json_wioterminal_json_menu"></shadow>
+            </value>
+        </block>
+    </category>
+    `;
+}
+
+const mqtt = function () {
+    return `
+    <category name="%{BKY_CATEGORY_WIO_TERMINAL_MQTT}" colour="#ab57e6" secondaryColour="#ab57e6" id="mqtt">
+        <block type="mqtt_wioterminal_set_wifi">
+            <value name="SSID">
+                <shadow type="text">
+                    <field name="TEXT">ssid</field>
+                </shadow>
+            </value>
+            <value name="PWD">
+                <shadow type="text">
+                    <field name="TEXT">password</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="mqtt_wioterminal_set_mqtt">
+            <value name="BROKER">
+                <shadow type="text">
+                    <field name="TEXT">broker.hivemq.com</field>
+                </shadow>
+            </value>
+            <value name="DEVICE">
+                <shadow type="text">
+                    <field name="TEXT">device</field>
+                </shadow>
+            </value>
+            <value name="NAME">
+                <shadow type="text">
+                    <field name="TEXT">username</field>
+                </shadow>
+            </value>
+            <value name="PASSWORD">
+                <shadow type="text">
+                    <field name="TEXT">password</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="mqtt_wioterminal_connect_mqtt"></block>
+        <block type="mqtt_wioterminal_connected"></block>
+        ${blockSeparator}
+        <block type="mqtt_wioterminal_received">
+            <value name="BROADCAST_OPTION">
+                <shadow type="mqtt_wioterminal_channel_menu"></shadow>
+            </value>
+        </block>
+        <block type="mqtt_wioterminal_subscribe">
+            <value name="BROADCAST_OPTION">
+                <shadow type="mqtt_wioterminal_channel_menu"></shadow>
+            </value>
+        </block>
+        <block type="mqtt_wioterminal_publish">
+            <value name="VALUE">
+                <shadow type="text">
+                    <field name="TEXT">data</field>
+                </shadow>   
+            </value>
+            <value name="BROADCAST_OPTION">
+                <shadow type="mqtt_wioterminal_channel_menu"></shadow>
+            </value>
+        </block>
+    </category>
+    `;
+}
 
 const xmlOpen = '<xml style="display: none">';
 const xmlClose = '</xml>';
@@ -687,7 +789,9 @@ const makeToolboxXML = function (extension) {
         operators(), gap,
         variables(), gap,
         grove(), gap,
-        azureIoT()
+        azureIoT(), gap,
+        json(), gap,
+        mqtt()
     ];
 
     if (xml) {

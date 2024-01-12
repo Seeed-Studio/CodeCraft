@@ -250,6 +250,8 @@ Blockly.ScratchBlocks.VerticalExtensions.registerAll = function() {
         "wioterminal_system",
         "wioterminal_display",
         "wioterminal_azure_iot",
+        "wioterminal_json",
+        "wioterminal_mqtt",
 
         "maixdunio_looks",
         "maixdunio_camera",

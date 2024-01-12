@@ -56,7 +56,9 @@ const CORE_EXTENSIONS = [
     'sound',
     'system',
     'display',
-    'azure'
+    'azure',
+    'json',
+    'mqtt'
 ];
 
 // Constants referring to 'primitive' blocks that are usually shadows,

@@ -45,6 +45,63 @@ Blockly.Blocks['motion_opencat_seeed_led'] = {
   }
 }
 
+//WS2813 Mini 彩灯/灯条
+Blockly.Blocks['motion_opencat_seeed_rgb_led_mini'] = {
+  init: function () {
+      this.jsonInit({
+          "message0": Blockly.Msg.ARDUINO_SEEED_RGB_LED_MINI,
+          "args0": [
+              {
+                  "type": "field_image",
+                  "src": Blockly.mainWorkspace.options.pathToMedia + "codecraft/icons/arduino/rgb_led_mini.svg",
+                  "width": 48,
+                  "height": 30
+              },
+              {
+                  "type": "field_vertical_separator"
+              },
+              {
+                  "type": "field_dropdown",
+                  "name": "PIN",
+                  "options": [
+                      ['D6', '6'],
+                      ['D8', '8'],
+                  ]
+              },
+              {
+                  "type": "input_value",
+                  "name": "R"
+              },
+              {
+                  "type": "input_value",
+                  "name": "G"
+              },
+              {
+                  "type": "input_value",
+                  "name": "B"
+              },
+              {
+                  "type": "field_dropdown",
+                  "name": "NUM",
+                  "options": [
+                      ['1', '1'],
+                      ['2', '2'],
+                      ['3', '3'],
+                      ['4', '4'],
+                      ['5', '5'],
+                      ['6', '6'],
+                      ['7', '7'],
+                      ['8', '8'],
+                      ['9', '9'],
+                      ['10', '10'],
+                  ]
+              }
+          ],
+          "extensions": ["colours_arduino_grove_igure", "shape_statement"],
+      });
+  }
+}
+
 Blockly.Blocks['motion_opencat_seeed_btn'] = {
   init: function () {
     this.jsonInit({
@@ -378,11 +435,11 @@ Blockly.Blocks['motion_opencat_seeed_hall'] = {
     });
   }
 }
-
+//温湿度传感器dht11
 Blockly.Blocks['motion_opencat_seeed_temperature_humidity'] = {
   init: function () {
     this.jsonInit({
-      "message0": Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY,
+      "message0": Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY_DHT11,
       "args0": [
         {
           "type": "field_image",
@@ -398,9 +455,7 @@ Blockly.Blocks['motion_opencat_seeed_temperature_humidity'] = {
           "name": "PIN",
           "options": [
             ['D6', '6'],
-            // ['D7', '7'],
             ['D8', '8'],
-            // ['D9', '9'],
           ]
         },
         {
@@ -411,7 +466,6 @@ Blockly.Blocks['motion_opencat_seeed_temperature_humidity'] = {
             [Blockly.Msg.ARDUINO_SEEED_TEMPERATURE_HUMIDITY_OPT2, '1']
           ]
         }
-
       ],
       "extensions": ["colours_arduino_grove_igure", "output_number"]
     });

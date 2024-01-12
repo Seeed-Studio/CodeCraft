@@ -1,6 +1,17 @@
 const io = require('socket.io-client');
 const { EventEmitter } = require('events');
-const { usable, getDeviceType } = require('./deives/device-filter');
+const { 
+    usable,
+    getDeviceType,
+    CMC_DEVICE_GROVEZERO,
+    CMC_DEVICE_ARDUINO,
+    CMC_DEVICE_ARDUINO_MEGA,
+    CMC_DEVICE_DAVINCI_AI,
+    CMC_DEVICE_GROVE_JOINS,
+    CMC_DEVICE_WIO_TERMINAL,
+    CMC_DEVICE_OPENCAT,
+    CMC_DEVICE_MAIXDUINO,
+ } = require('./deives/device-filter');
 
 
 const SOCKET_SERVER_URL = 'http://localhost:62377';
@@ -205,6 +216,107 @@ class SocketService extends EventEmitter {
         });
     }
 
+    //检查arduino库是否已经部署
+    checkLibrary(data) {
+        return new Promise((resolve, reject) => {
+            this._reject = reject;
+            this._resolve = resolve;
+            this.sendMessage({
+                method: 'checkLibrary',
+                data: data
+            });
+        });
+    }
+
+    //检查上传部署TensorFlow arduino库是否已经部署
+    checkTensorFlowLibrary(data) {
+        return new Promise((resolve, reject) => {
+            this._reject = reject;
+            this._resolve = resolve;
+            this.sendMessage({
+                method: 'checkTensorFlowLibrary',
+                data: data
+            });
+        });
+    }
+
+    //上传部署arduino库
+    uploadLibrary(data, resolve, reject) {
+        return new Promise((resolve, reject) => {
+            this._reject = reject;
+            this._resolve = resolve;
+            this.sendMessage({
+                method: 'uploadLibrary',
+                data: data
+            });
+        });
+    }
+
+    //上传部署TensorFlow arduino库
+    uploadTensorFlowLibrary(data, resolve, reject) {
+        return new Promise((resolve, reject) => {
+            this._reject = reject;
+            this._resolve = resolve;
+            this.sendMessage({
+                method: 'uploadTensorFlowLibrary',
+                data: data
+            });
+        });
+    }
+
+    /**
+    * 处理arduino库上传响应
+    * @param {*} result 
+    */
+    handleUploadLibrary(data) {
+        const {
+            success
+        } = data
+        if (this._resolve) {
+            this._resolve(success);
+        }
+        this._resolve = null;
+        this._reject = null;
+    }
+
+    handleeUploadTensorFlowLibrary(data) {
+        const {
+            success
+        } = data
+        if (this._resolve) {
+            this._resolve(success);
+        }
+        this._resolve = null;
+        this._reject = null;
+    }
+
+    /**
+     * 处理检查arduino库响应
+     * @param {*} result 
+     */
+    handleCheckLibrary(data) {
+        const {
+            libraryExist
+        } = data
+        if (this._resolve) {
+            this._resolve(libraryExist);
+        }
+        this._resolve = null;
+        this._reject = null;
+    }
+
+
+    handleCheckTensorFlowLibrary(data) {
+        const {
+            libraryExist
+        } = data
+        if (this._resolve) {
+            this._resolve(libraryExist);
+        }
+        this._resolve = null;
+        this._reject = null;
+    }
+
     /**
      * 断开连接
      */
@@ -236,9 +348,26 @@ class SocketService extends EventEmitter {
      */
     handleScan(data) {
         let devices = data.filter(item => { return usable(item) }).map(item => {
+            let deviceType = getDeviceType(item);
+            let deviceId = 0
+            if (deviceType == CMC_DEVICE_GROVEZERO) {
+                deviceId = 1001;
+            }else if (deviceType == CMC_DEVICE_ARDUINO || deviceType == CMC_DEVICE_ARDUINO_MEGA) {
+                deviceId = 1002;
+            }else if (deviceType == CMC_DEVICE_DAVINCI_AI) {
+                deviceId = 1004;
+            }else if (deviceType == CMC_DEVICE_MAIXDUINO) {
+                deviceId = 1005;
+            }else if (deviceType == CMC_DEVICE_GROVE_JOINS) {
+                deviceId = 1006;
+            }else if (deviceType == CMC_DEVICE_OPENCAT) {
+                deviceId = 1009;
+            }else if (deviceType == CMC_DEVICE_WIO_TERMINAL) {
+                deviceId = 1010;
+            }
             return Object.assign(item, {
-                deviceType: getDeviceType(item),
-                comName: item.comName || item.path
+                deviceType: deviceType,
+                deviceId: deviceId
             });
         }).sort(({ comName: comNameA }, { comName: comNameB }) => {
             return comNameA.localeCompare(comNameB);
@@ -259,18 +388,14 @@ class SocketService extends EventEmitter {
         // 处理设备扫描结果
         if ('device-scan' === method) {
             this.handleScan(data);
-        }
-        // 设备连接成功
-        else if ('device-connect' === method) {
+        }else if ('device-connect' === method) {// 设备连接成功
             // 更新设备连接状态
             this._equipmentConnected = data;
             // 设备连接成功
             if (this._equipmentConnected) {
                 this.emit('device-connect');
             }
-        }
-        // 设备断开
-        else if ('device-disconnect' === method) {
+        }else if ('device-disconnect' === method) {// 设备断开
             // 只有设备连接成功后，才触发断开
             if (this._equipmentConnected) {
                 // 更新设备连接状态
@@ -287,7 +412,16 @@ class SocketService extends EventEmitter {
             }
             // 重置 disType 状态
             this._disType = 0; 
+        }else if ('uploadLibrary-resp' === method) {//上传arduino库
+            this.handleUploadLibrary(data);
+        }else if ('uploadTensorFlowLibrary-resp' === method) {//上传arduino库
+            this.handleeUploadTensorFlowLibrary(data);
+        }else if ('checkLibrary-resp' === method) {//检查arduino库是否存在
+            this.handleCheckLibrary(data);
+        }else if ('checkTensorFlowLibrary-resp' === method) {//检查arduino库是否存在
+            this.handleCheckTensorFlowLibrary(data);
         }
+
         // 处理其他消息
         this.emit('message', message);
     }

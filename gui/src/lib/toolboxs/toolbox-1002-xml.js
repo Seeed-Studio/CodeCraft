@@ -28,7 +28,7 @@ const input = function () {
         <block type="motion_arduino_pulse_len">
         </block>
         <block type="motion_arduino_pulse_len_us">
-                <value name="TIME">
+            <value name="TIME">
                 <shadow type="math_number">
                     <field name="NUM">0</field>
                 </shadow>   
@@ -167,7 +167,28 @@ const groveIgure = function (isStage, targetId, name) {
                     <field name="NUM">0</field>
                 </shadow>
             </value> 
-            
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="motion_arduino_seeed_rgb_led_mini">
+            <value name="R">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="G">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="B">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value> 
             <value name="NUM">
                 <shadow type="math_number">
                     <field name="NUM">1</field>
@@ -273,11 +294,34 @@ const groveIgure = function (isStage, targetId, name) {
         <block type="motion_arduino_seeed_temperature_humidity">        
         </block>
         ${blockSeparator}
+        <block type="motion_arduino_infrared_send">
+            <value name="ADDRESS">
+                <shadow type="math_number">
+                    <field name="TEXT">123</field>
+                </shadow>
+            </value>
+        </block>  
+        <block type="motion_arduino_infrared_receive"/>
+        ${blockSeparator}
         <block type="motion_arduino_seeed_speech_recognizer"/>        
         <block type="motion_arduino_seeed_speech_recognizer_getvalue"/>
     </category>
     `;
 }
+// ${blockSeparator}
+// <block type="motion_arduino_lotusv_setble"> 
+//     <value name="ID">
+//         <shadow type="text">
+//             <field name="TEXT">SeeedBTSlave</field>
+//         </shadow>   
+//     </value>
+//     <value name="PWD">
+//         <shadow type="text">
+//             <field name="TEXT">1234</field>
+//         </shadow>   
+//     </value>      
+// </block>       
+// <block type="motion_arduino_lotusv_getblevalue"/>  
 
 const groveAnalog = function (isStage, targetId, name) {
     return `
@@ -418,6 +462,30 @@ const groveI2C = function (isStage, targetId, name) {
 
         <block type="motion_arduino_grove_serial_rgb_led_matrix_show_emoji">
         </block>
+        <block type="motion_arduino_grove_serial_red_led_matrix_on_point">
+            <value name="X">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value> 
+            <value name="Y">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value> 
+        </block>
+
+ 
+        <block type="motion_arduino_grove_serial_red_led_matrix_show_text">
+            <value name="TEXT">
+                <shadow type="text">
+                    <field name="TEXT">hello</field>
+                </shadow>
+            </value> 
+        </block>
+
+        <block type="motion_arduino_grove_serial_red_led_matrix_show_emoji">
+        </block>
         
         <block type="motion_arduino_color_read_sensor">
         </block>
@@ -467,7 +535,8 @@ const groveI2C = function (isStage, targetId, name) {
         ${blockSeparator}
         <block type="motion_arduino_pressure_sensor">
         </block>
-
+        <block type="motion_arduino_seeed_temperature_humidity_dht20">        
+        </block>
         ${blockSeparator}
         <block type="motion_arduino_oled1"/>
         <block type="motion_arduino_oled2">
@@ -508,7 +577,7 @@ const groveI2C = function (isStage, targetId, name) {
             </value>
         </block>
         <block type="motion_arduino_oled33"/>
-        ${blockSeparator}
+        ${blockSeparator} 
         <block type="motion_arduino_rtc_setdatetime">
             <value name="YEAR">
                 <shadow type="math_number">
@@ -615,8 +684,8 @@ const control = function () {
 
 
 const operators = function () {
-    const apple = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_APPLE', 'apple');
-    const letter = ScratchBlocks.ScratchMsgs.translate('OPERATORS_LETTEROF_APPLE', 'a');
+    // const apple = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_APPLE', 'apple');
+    // const letter = ScratchBlocks.ScratchMsgs.translate('OPERATORS_LETTEROF_APPLE', 'a');
     return `
     <category name="%{BKY_CATEGORY_OPERATORS}" id="operators" colour="#6DCF68" secondaryColour="#389438">
         <block type="operator_add">
@@ -760,17 +829,48 @@ const operators = function () {
         </block>
 
         ${blockSeparator}
-        <block type="operator_contains" id="operator_contains">
+        <block type="operator_join">
             <value name="STRING1">
-            <shadow type="text">
-                <field name="TEXT">${apple}</field>
-            </shadow>
+                <shadow type="text">
+                    <field name="TEXT">apple</field>
+                </shadow>
             </value>
             <value name="STRING2">
-            <shadow type="text">
-                <field name="TEXT">${letter}</field>
-            </shadow>
+                <shadow type="text">
+                    <field name="TEXT">banana</field>
+                </shadow>
             </value>
+        </block>
+        <block type="operator_letter_of">
+            <value name="LETTER">
+                <shadow type="math_cc_positive_whole_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="STRING">
+                <shadow type="text">
+                    <field name="TEXT">apple</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="operator_length">
+            <value name="STRING">
+                <shadow type="text">
+                    <field name="TEXT">apple</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="operator_contains" id="operator_contains">
+          <value name="STRING1">
+            <shadow type="text">
+              <field name="TEXT">apple</field>
+            </shadow>
+          </value>
+          <value name="STRING2">
+            <shadow type="text">
+              <field name="TEXT">a</field>
+            </shadow>
+          </value>
         </block>
         ${blockSeparator}
         <block type="operator_and"/>
@@ -849,6 +949,42 @@ const myBlocks = function () {
     `;
 };
 
+const json = function () {
+    return `
+    <category name="%{BKY_CATEGORY_WIO_TERMINAL_JSON}" colour="#57d4c7" secondaryColour="#57d4c7" id="json">
+        <block type="json_wioterminal_json_setvalue">
+            <value name="KEY">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>   
+            </value> 
+            <value name="VALUE">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>   
+            </value>
+            <value name="BROADCAST_OPTION">
+                <shadow type="json_wioterminal_json_menu"></shadow>
+            </value>
+        </block>
+        <block type="json_wioterminal_json_getvalue">
+            <value name="BROADCAST_OPTION">
+                <shadow type="json_wioterminal_json_menu"></shadow>
+            </value>
+            <value name="KEY">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>   
+            </value> 
+        </block>
+        <block type="json_wioterminal_json_object">
+            <value name="BROADCAST_OPTION">
+                <shadow type="json_wioterminal_json_menu"></shadow>
+            </value>
+        </block>
+    </category>
+    `;
+}
 
 const xmlOpen = '<xml style="display: none">';
 const xmlClose = '</xml>';
@@ -874,6 +1010,7 @@ const makeToolboxXML = function (extension) {
         serial(), gap,
 
         control(), gap,
+        // sensing(), gap,
         operators(), gap,
         variables(), gap,
 
@@ -882,6 +1019,15 @@ const makeToolboxXML = function (extension) {
         groveIgure(), gap,
         groveAnalog(), gap,
         groveI2C(), gap,
+        json(), gap,
+        // robotKit(), gap,
+        // ottodiy(), gap,
+        // shieldbot(), gap,
+
+        // test(), gap,
+
+
+        // myBlocks()
     ];
 
     if (xml) {

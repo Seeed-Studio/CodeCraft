@@ -28,6 +28,8 @@ export default (Blockly) => {
     return [code, Blockly.Arduino.ORDER_ATOMIC];
   };
 
+  Blockly.Arduino['math_cc_positive_whole_number'] = Blockly.Arduino['math_number'];
+
   Blockly.Arduino['colour_picker'] = function (block) {
     var code = block.getFieldValue('COLOUR');
     return [`"${code}"`, Blockly.Arduino.ORDER_ATOMIC];

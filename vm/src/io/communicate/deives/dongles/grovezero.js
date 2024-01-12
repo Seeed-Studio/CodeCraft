@@ -70,8 +70,12 @@ class Grovezero extends MainControl {
                 } = result;
                 console.log('compileType : ' + compileType);
                 this._upgradeHex(data);
-            }, () => {
-                this._reject('compile fail');
+            }, (error) => {
+                const {
+                    data,
+                } = error;
+                console.log(error)
+                this._reject(data);
             });
     }
 

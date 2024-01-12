@@ -2,8 +2,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactModal from 'react-modal';
-import { FormattedMessage } from 'react-intl';
-
+import icon_min from './icon_min.png';
+import icon_del from './icon_del.png';
+import icon_return from './icon_return.png';
 import styles from './modal.css';
 
 const ModalComponent = props => {
@@ -47,13 +48,13 @@ const ModalComponent = props => {
         <div className={styles.rightTopBar}>
             {showMin &&
                 <spsn className={styles.titleMin}>
-                    <img src={require('./icon_min.png')} alt="" />
+                    <img src={icon_min} alt="" />
                 </spsn>}
             {showClose &&
                 <span
                     onClick={onClose || onRequestClose}
                     className={styles.titleClose}>
-                    <img src={require('./icon_del.png')} alt="" />
+                    <img src={icon_del} alt="" />
                 </span>}
         </div>
         {visiableTitle &&
@@ -66,7 +67,7 @@ const ModalComponent = props => {
                     <span className={styles.titleText}>
                         {showReturn &&
                             <span className={styles.titleReture} onClick={toBack}>
-                                <img src={require('./icon_return.png')} alt="" />
+                                <img src={icon_return} alt="" />
                             </span>}
                         <span>{title}</span>
                     </span>}

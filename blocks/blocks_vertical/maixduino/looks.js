@@ -190,6 +190,18 @@ Blockly.Blocks['looks_maixduino_draw_rectangle'] = {
   }
 }
 
+Blockly.Blocks['looks_maixduino_screen_clear'] = {
+  init: function () {
+    this.jsonInit({
+      "message0": Blockly.Msg.MAIXDUINO_DISPLAY_CLEAR_SCREEN,
+      "args0": [
+      ],
+      "category": Blockly.Categories.sensing,
+      "extensions": ["colours_maixdunio_looks", "shape_statement"]
+    });
+  }
+}
+
 Blockly.Blocks['looks_maixduino_draw_rectangle_wh'] = {
   init: function () {
     this.jsonInit({

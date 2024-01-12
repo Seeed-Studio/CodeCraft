@@ -1,6 +1,5 @@
 class MeteostationMode {
     constructor () {
-        this.blockOnclick;
         this.meteostationCallback;                      
     }
 

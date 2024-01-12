@@ -3,12 +3,8 @@
 
 # NPM
 /node_modules
-/__config
-/__imgCache
-/buildCache
 yarn.lock
 package-lock.json
-yarn-error.log
 npm-*
 
 # generated locale files
@@ -23,5 +19,6 @@ app/shell
 app/node_modules
 app/yarn.lock
 app/package-lock.json
-app/yarn-error.log
-
+buildTemp
+compilers
+script/grovezero/codecraft_usr.c

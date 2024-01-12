@@ -163,7 +163,7 @@ Blockly.FieldRgbmatrix.prototype.createField = function () {
   fieldBox.appendChild(this.initSelect_());
   fieldBox.appendChild(this.matrixTipsX());
   fieldBox.appendChild(this.matrixTipsY());
-  fieldBox.appendChild(this.Determine_());
+  fieldBox.appendChild(this.determine_());
 
   let editdiv = this.edit();
   Blockly.FieldRgbmatrix.prototype.editdiv = editdiv;
@@ -207,7 +207,7 @@ Blockly.FieldRgbmatrix.prototype.onHide_ = function () {
 
 
 //创建确定按钮
-Blockly.FieldRgbmatrix.prototype.Determine_ = function () {
+Blockly.FieldRgbmatrix.prototype.determine_ = function () {
   let self = this;
   let determine = document.createElement('div');
   determine.style.width = `6rem`;
@@ -304,7 +304,6 @@ Blockly.FieldRgbmatrix.prototype.eraser = function () {
 
   rubber.style.width = '1.6rem';
   rubber.style.height = '1.6rem';
-  console.log(self.buttonstatus);
   if (self.buttonstatus === "lift") {
     eraser.style.background = 'rgba(0,0,0,0)';
     rubber.style.backgroundImage = 'url("' + Blockly.mainWorkspace.options.pathToMedia + 'codecraft/field/icon_eraser_orange@2x.png")';

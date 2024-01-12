@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { dialog } from 'electron';
 
+
 class ProjectSaveModule {
 
   constructor(window) {
@@ -25,7 +26,7 @@ class ProjectSaveModule {
   /**
    * 保存文件
    */
-  async handleProjectSave(args) {
+  handleProjectSave(args) {
     const { data, projectName, localProjectPath } = args;
     let buffer = Buffer.from(data);
     const options = {
@@ -38,15 +39,23 @@ class ProjectSaveModule {
       fs.writeFileSync(localProjectPath, buffer);
       this.send('project-path', localProjectPath);
     } else {
-      let returnValue = await dialog.showSaveDialog(this.window, options);
-      if (returnValue.canceled) {
+      dialog.showSaveDialog(this.window, options).then(result => {
+        if (!result.canceled && result.filePath) {
+          this.currentProjectPath = result.filePath;
+          fs.writeFile(this.currentProjectPath, buffer, (err) => {
+            if (err) {
+              this.send('project-path', '');
+            } else {
+              this.send('project-path', this.currentProjectPath);
+            }
+          });
+        } else {
+          this.send('project-path', '');
+        }
+      }).catch(err => {
+        console.log(err)
         this.send('project-path', '');
-      } else {
-        let filePath = returnValue.filePath
-        this.currentProjectPath = filePath;
-        fs.writeFileSync(filePath, buffer);
-        this.send('project-path', filePath);
-      }
+      })
     }
   }
 

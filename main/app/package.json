@@ -3,11 +3,11 @@
   "productName": "Codecraft-Lite",
   "description": "Codecraft software.",
   "homepage": "https://ide.tinkergen.com/",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "shell/index.js",
   "author": {
     "name": "TinkerGen",
-    "email": "wenhao.chen@chaihuo.org"
+    "email": "wenhao.chen@seeed.cc"
   },
   "build": {
     "appId": "xExtOuxIAYRB",
@@ -58,12 +58,12 @@
         "to": "compilers/arduino-libraries"
       },
       {
-        "from": "../buildCacheTemplate",
-        "to": "buildCacheTemplate"
+        "from": "../buildPath",
+        "to": "buildTemp"
       },
       {
-        "from": "../buildScript",
-        "to": "buildScript"
+        "from": "../script",
+        "to": "script"
       },
       {
         "from": "../static",
@@ -76,8 +76,8 @@
     ]
   },
   "devDependencies": {
-    "electron": "^11.5.0",
-    "electron-rebuild": "^1.7.3"
+    "@electron/rebuild": "^3.2.10",
+    "electron": "^22.3.0"
   },
   "dependencies": {
     "auto-launch": "^5.0.5",
@@ -86,9 +86,10 @@
     "electron-store": "^2.0.0",
     "electron-updater": "^4.0.0",
     "express": "^4.16.4",
+    "jszip": "^3.6.0",
     "lodash.bindall": "^4.4.0",
     "node-fetch": "^2.6.0",
-    "serialport": "^8.0.8",
-    "socket.io": "^2.1.1"
+    "serialport": "^10.5.0",
+    "socket.io": "2.1.1"
   }
 }

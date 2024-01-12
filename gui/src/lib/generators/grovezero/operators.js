@@ -152,6 +152,21 @@ export default (Blockly) => {
   Blockly.C['operator_mathop'] = function (block) {
     var argument0 = block.getFieldValue('OPERATOR');
     var argument1 = Blockly.C.valueToCode(block, 'NUM', Blockly.C.ORDER_NONE);
+    if (argument0 == 'sin' || argument0 == 'cos' || argument0 == 'tan') {
+      Blockly.C.definitions_['include_PI'] = '#define PI 3.14159265';
+      Blockly.C.definitions_['degrees_to_radians'] =
+        'float degrees_to_radians(float param)\n' +
+        '{\n' +
+        '    return param * PI / 180.0;\n' +
+        '}\n';
+    } else if (argument0 == 'asin' || argument0 == 'acos' || argument0 == 'atan') {
+      Blockly.C.definitions_['include_PI'] = '#define PI 3.14159265';
+      Blockly.C.definitions_['radians_to_degrees'] =
+        'float radians_to_degrees(float param)\n' +
+        '{\n' +
+        '    return param * 180.0 / PI;\n' +
+        '}\n';
+    }
     var code;
     switch (argument0) {
       case 'abs':
@@ -167,13 +182,13 @@ export default (Blockly) => {
         code = `grovezero->math->sqrt((float)${argument1})`;
         break;
       case 'sin':
-        code = `grovezero->math->sin((float)${argument1})`;
+        code = `grovezero->math->sin(degrees_to_radians((float)${argument1}))`;
         break;
       case 'cos':
-        code = `grovezero->math->cos((float)${argument1})`;
+        code = `grovezero->math->cos(degrees_to_radians((float)${argument1}))`;
         break;
       case 'tan':
-        code = `grovezero->math->tan((float)${argument1})`;
+        code = `grovezero->math->tan(degrees_to_radians((float)${argument1}))`;
         break;
       case 'asin':
         code = 'radians_to_degrees(asin(' + argument1 + '))';

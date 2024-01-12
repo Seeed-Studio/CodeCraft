@@ -26,10 +26,6 @@ class Scratch3ThreeAxisAccelerometerBlocks {
     }
 
     showThreeAxisAccelerometer(args) {
-        // let blockOnclick = this.runtime.accelerometerMode.blockOnclick;
-        // if(blockOnclick){
-        //     blockOnclick();
-        // }
         let x = args.X;
         let y = args.Y;
         let z = args.Z;

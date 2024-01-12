@@ -88,25 +88,26 @@ class NetProxyMgr {
                 clientReq.setHeader('Content-Type', 'application/json');
                 // 注册响应回调
                 clientReq.on('response', (response) => {
-                    // console.log(`STATUS: ${response.statusCode}`)
-                    // console.log(`HEADERS: ${JSON.stringify(response.headers)}`)
                     response.on('data', (chunk) => {
-                        console.log(`BODY: ${chunk}`);
+                        // console.log(`BODY: ${chunk}`);
                         let content = chunk && chunk.toString();
-                        let contentJson = JSON.parse(content);
-                        console.log('contentJson', contentJson)
-                        // 请求成功
-                        if (contentJson
-                            && contentJson.errorCode === SUCC) {
-                            contentJson.versionNo = params.version;
-                            resolve(contentJson);
-                        } else {
-                            if (!contentJson) {
-                                reject(ERROR_CODE_NOCONTENT);
+                        try {
+                            let contentJson = JSON.parse(content);
+                            // 请求成功
+                            if (contentJson
+                                && contentJson.errorCode === SUCC) {
+                                contentJson.versionNo = params.version;
+                                resolve(contentJson);
                             } else {
-                                let code = contentJson.errorCode, message = contentJson.errorMessage;
-                                reject(code, message);
+                                if (!contentJson) {
+                                    reject(ERROR_CODE_NOCONTENT);
+                                } else {
+                                    let code = contentJson.errorCode, message = contentJson.errorMessage;
+                                    reject(code, message);
+                                }
                             }
+                        } catch (error) {
+                            reject();
                         }
                     });
                     response.on('error', (error) => {

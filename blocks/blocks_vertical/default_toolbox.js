@@ -33,6 +33,9 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
 '</category>' +
 
   '<category name="%{BKY_CATEGORY_MOTION}" id="motion" colour="#4C97FF" secondaryColour="#3373CC">' +
+  '<block type="motion_arduino_grove_serial_red_led_matrix_show_emoji"/>' +
+  '<block type="motion_arduino_grove_serial_rgb_led_matrix_show_emoji"/>' +
+  '<block type="looks_g0_ledmatrix_show_shape"/>' +
   '<block type="motion_arduino_oled11"/>' +
   '<block type="motion_arduino_oled1"/>' +
   '<block type="event_opencat_ir_remotecontrol"/>' +

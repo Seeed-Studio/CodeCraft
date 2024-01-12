@@ -26,10 +26,6 @@ class Scratch3MeteostationBlocks {
     }
 
     showMeteostation(args) {
-        // let blockOnclick = this.runtime.accelerometerMode.blockOnclick;
-        // if(blockOnclick){
-        //     blockOnclick();
-        // }
         let temperature = args.TEMP;
         let humidity = args.HUM;
         let pressure = args.PRE;

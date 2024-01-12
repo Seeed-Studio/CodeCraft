@@ -3,7 +3,6 @@ import net from './common/net';
 import netDownload from './common/net-download';
 import appConfig from './common/store';
 import { injectImageCache } from './common/image-cache';
-import { initCCLibrariesDir } from './common/utils';
 import { exec } from 'child_process';
 import path from 'path';
 import url from 'url';
@@ -17,6 +16,7 @@ import ProjectSaveModule from './modules/projectSave-module'
 import WindowModule from './modules/window-module'
 import packageJson from './config/package.json'
 import localMenuMessages from './l10n/message';
+import { initCCLibrariesDir } from './common/utils';
 
 const menuMessages = {
   version: "app.menu.version",
@@ -31,11 +31,10 @@ const DRIVERS_DIR = path.join($dirname, '../../drivers/');
 
 // 自启动对象 兼容Mac Win Linux 
 let autoLaunch = new AutoLaunch({
-  name: packageJson.productName
+  name: 'Codecraft'
 });
 
-// 窗口对象
-var window = null;
+
 // 生命socket服务
 var socketService = null;
 var upgradeModule = null;
@@ -56,7 +55,7 @@ const installDrivers = () => {
   if (os.platform() === 'darwin') {
     cmd = `cd ${g0DriverPath}/mac && open Driver.pkg`;
   } else {
-    cmd = `cd ${g0DriverPath} && install.bat`;
+    cmd = `cd ${g0DriverPath} && \\install.bat`;
   }
   // 触发安装g0驱动， 暂不关注成功失败
   exec(cmd, (error) => {
@@ -68,7 +67,7 @@ const installDrivers = () => {
 const regeditStartUp = () => {
   autoLaunch.isEnabled().then(isEnabled => {
     if (isEnabled) return;
-    autoLaunch.enable();
+    autoLaunch.enable(); //暂时只在Mac下使用
     appConfig.setValue('isStartUp', true);
   });
 }
@@ -121,17 +120,12 @@ const onAppReady = (launchInfo) => {
   if (isFirstStart) {
     installDrivers();
     appConfig.setValue('isFirstStart', false);
-    console.log('isFirstStart : ' + appConfig.getValue('isFirstStart', true));
   }
 
   // xcode-select --install
   if(os.platform() === 'darwin') {
     exec('xcode-select --install');
   }
-
-  // 注册app退出事件
-  // ipcMain.on('app-exit', () => app.exit());
-  ipcMain.on('get-applocal', event => event.returnValue = local);
 
   //创建托盘程序右键菜单
   //定义托盘菜单
@@ -192,28 +186,24 @@ const onAppReady = (launchInfo) => {
   appTray.setContextMenu(contextMenu);
   //注册appTray点击事件
   appTray.on('click', () => {
-    if (window &&
-      window.isVisible() &&
-      window.isMinimized()) {
+    if (window.isVisible()
+      && window.isMinimized()) {
       window.restore();
     }
   });
-
+  // 注册app退出事件
+  ipcMain.on('app-exit', () => app.exit());
+  ipcMain.on('get-applocal', event => event.returnValue = local);
   // 实例化window
-  window = new BrowserWindow({
+  const window = new BrowserWindow({
     show: false,
     autoHideMenuBar: true,
-    title: packageJson.productName,
-    webPreferences: { webSecurity: false },
+    title: "Codecraft-PC",
+    webPreferences: {
+      preload: path.join($dirname, '../../static/preload.js')
+    }
   });
-  window.maximize();
 
-  //window监听
-  // window.on('show', () => appTray.setHighlightMode('selection'))
-  // window.on('hide', () => appTray.setHighlightMode('never'));
-  window.once('ready-to-show', () => window.show());
-
-  /**-------------页面加载------------**/
   //URL地址
   const loadURL = url.format({
     pathname: path.join($dirname, '../gui/index.html'),
@@ -221,9 +211,21 @@ const onAppReady = (launchInfo) => {
     protocol: 'file:'
   })
   window.loadURL(loadURL);
-  //dev test
   // window.loadURL('http://localhost:8601');
   // window.webContents.openDevTools();
+  
+  window.maximize();
+
+  //window监听
+  window.on('show', () => {
+    // appTray.setHighlightMode('always')
+  })
+  window.on('hide', () => {
+    // appTray.setHighlightMode('never')
+  });
+  window.once('ready-to-show', () => window.show());
+
+
   /**-------------页面加载------------**/
   //初始化图片缓存
   injectImageCache();

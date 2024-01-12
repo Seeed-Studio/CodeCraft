@@ -65,8 +65,8 @@ const control = function () {
 };
 
 const operators = function () {
-    const apple = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_APPLE', 'apple');
-    const letter = ScratchBlocks.ScratchMsgs.translate('OPERATORS_LETTEROF_APPLE', 'a');
+    // const apple = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_APPLE', 'apple');
+    // const letter = ScratchBlocks.ScratchMsgs.translate('OPERATORS_LETTEROF_APPLE', 'a');
     return `
     <category name="%{BKY_CATEGORY_OPERATORS}" id="operators" colour="#6DCF68" secondaryColour="#389438">
         <block type="operator_add">
@@ -205,17 +205,48 @@ const operators = function () {
             </value>
         </block>
         ${blockSeparator}
-        <block type="operator_contains" id="operator_contains">
+        <block type="operator_join">
             <value name="STRING1">
                 <shadow type="text">
-                    <field name="TEXT">${apple}</field>
+                    <field name="TEXT">apple</field>
                 </shadow>
             </value>
             <value name="STRING2">
                 <shadow type="text">
-                    <field name="TEXT">${letter}</field>
+                    <field name="TEXT">banana</field>
                 </shadow>
             </value>
+        </block>
+        <block type="operator_letter_of">
+            <value name="LETTER">
+                <shadow type="math_cc_positive_whole_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="STRING">
+                <shadow type="text">
+                    <field name="TEXT">apple</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="operator_length">
+            <value name="STRING">
+                <shadow type="text">
+                    <field name="TEXT">apple</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="operator_contains" id="operator_contains">
+          <value name="STRING1">
+            <shadow type="text">
+              <field name="TEXT">apple</field>
+            </shadow>
+          </value>
+          <value name="STRING2">
+            <shadow type="text">
+              <field name="TEXT">a</field>
+            </shadow>
+          </value>
         </block>
         ${blockSeparator}
         <block type="operator_and"/>
@@ -391,7 +422,29 @@ const skill = function () {
 const groveIgure = function () {
     return `
     <category name="%{BKY_CATEGORY_ARDUINO_GROVE_IGURE}" colour="#E16BB0" secondaryColour="#CA569A" id="groveIgure">
-        <block type="motion_opencat_seeed_led"/>        
+        <block type="motion_opencat_seeed_led"/>
+        <block type="motion_opencat_seeed_rgb_led_mini">
+            <value name="R">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="G">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="B">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value> 
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
         <block type="motion_opencat_seeed_btn"/> 
         <block type="motion_opencat_seeed_tilt"/> 
         <block type="motion_opencat_seeed_touch"/> 
@@ -474,6 +527,7 @@ const groveI2C = function (isStage, targetId, name) {
         <block type="motion_opencat_vision_sensor10"/>
         <block type="motion_opencat_vision_sensor11"/>
         <block type="motion_opencat_vision_sensor12"/>
+        <block type="motion_opencat_seeed_temperature_humidity_dht20"/>
         ${blockSeparator}
         <block type="motion_opencat_oled11"/>
         <block type="motion_opencat_oled22">

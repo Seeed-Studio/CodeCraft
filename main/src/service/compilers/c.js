@@ -16,9 +16,9 @@ if (platform == 'darwin') {
 const CODE_FILE_NAME = 'codecraft_usr.c';
 const CODE_HEX_FILE_NAME = 'code.hex';
 //build command file
-const CODE_SCRIPT_DIR = path.join($dirname, '../../buildScript/grovezero/');
+const CODE_FILE_DIR = path.join($dirname, '../../script/grovezero/');
 //build cache dir
-const CODE_BUILD_DIR = path.join($dirname, '../../buildCache/grovezero/');
+const CODE_BUILD_DIR = path.join($dirname, '../../buildTemp/grovezero/');
 //compile file dir
 const CODE_COMPILER_DIR = path.join($dirname, `../../compilers/${system}/c/bin/`);
 
@@ -39,9 +39,9 @@ class CppCompiler {
                 //保存成功
                 if (reslut) {
                     //开始编译文件
-                    let command = `cd ${CODE_SCRIPT_DIR} && `;
+                    let command = `cd "${CODE_FILE_DIR}" && `;
                     if ('darwin' === platform || 'linux' === platform) {
-                        command = command + `export GNU_INSTALL_ROOT=${CODE_COMPILER_DIR} && make clean && make all`;
+                        command = command + `export GNU_INSTALL_ROOT="${CODE_COMPILER_DIR}" && make clean && make all`;
                     } else {
                         command = command + `set PATH=${CODE_COMPILER_DIR};%PATH% && .\\clean && .\\gen_burnl3`;
                     }
@@ -73,7 +73,7 @@ class CppCompiler {
      */
     _saveCode(code) {
         // 生成文件目录
-        const filepath = path.join(CODE_BUILD_DIR, CODE_FILE_NAME);
+        const filepath = path.join(CODE_FILE_DIR, CODE_FILE_NAME);
         const buffer = Buffer.from(code);
         // 写入文件
         return new Promise(resolve => {

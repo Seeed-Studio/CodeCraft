@@ -4,6 +4,7 @@ class CodeEditor {
         this.model = null;
         this.code = '';
         this.language = 'python';
+        this.binUrl = '';
     }
 
     init(el) {
@@ -58,6 +59,13 @@ class CodeEditor {
         return this.code;
     }
 
+    setBinUrl(binUrl) {
+        this.binUrl = binUrl;
+    }
+
+    getBinUrl() {
+        return this.binUrl;
+    }
 
     setLanguage(language) {
         this.language = language;

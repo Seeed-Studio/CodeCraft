@@ -6,7 +6,6 @@ const getDeviceType = (socketIo, comName) => {
         timer = setTimeout(() => {
             deviceType = 'device';
             socketIo.disconnect();
-            console.log('setTimeout');
         }, 1000);
         const handleMessage = async (msg) => {
             const { method, data } = msg;

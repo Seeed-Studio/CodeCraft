@@ -5,12 +5,8 @@ const {
     get,
     set
 } = require('./local-storage')
-
+const { getImgCacheDir } = require('./utils');
 const IMAGE_CACHE_MAPFILE_NAME = 'imagesCache';
-const IMAGE_CACHE_PATH = path.join($dirname, '../../__imgCache');
-
-const BUILDCACHE_TEMPLATE_PATH = path.join($dirname, '../../buildCacheTemplate');
-const BUILDCACHE_PATH = path.join($dirname, '../../buildCache');
 
 let __lowPriorityQueue = []
 let __highPriorityQueue = []
@@ -58,58 +54,11 @@ const download = (url, path) => {
 }
 
 
-const copy = function (src, dst) {
-    let paths = fs.readdirSync(src);
-    paths.forEach(function (path) {
-        var _src = src + '/' + path;
-        var _dst = dst + '/' + path;
-        fs.stat(_src, function (err, stats) { 
-            if (err) throw err;
-            if (stats.isFile()) { //如果是个文件则拷贝 
-                let readable = fs.createReadStream(_src);
-                let writable = fs.createWriteStream(_dst);
-                readable.pipe(writable);
-            } else if (stats.isDirectory()) { 
-                checkDirectory(_src, _dst, copy);
-            }
-        });
-    });
-}
-var checkDirectory = function (src, dst, callback) {
-    fs.access(dst, fs.constants.F_OK, (err) => {
-        if (err) {
-            fs.mkdirSync(dst);
-            callback(src, dst);
-        } else {
-            callback(src, dst);
-        }
-    });
-};
-
-const initBuildCacheDir = async () => {
-    fs.access(BUILDCACHE_PATH, fs.constants.F_OK, (err) => {
-        if (err) {
-            fs.mkdirSync(BUILDCACHE_PATH);
-            checkDirectory(BUILDCACHE_TEMPLATE_PATH, BUILDCACHE_PATH, copy)
-        }
-    });
-}
-
 /**
  * 初始化
  */
 const injectImageCache = async () => {
     try {
-        //init build cache 
-        initBuildCacheDir()
-
-        //检测并创建图片缓存目录
-        fs.access(IMAGE_CACHE_PATH, fs.constants.F_OK, (err) => {
-            if (err) {
-                fs.mkdirSync(IMAGE_CACHE_PATH);
-            }
-        });
-
         //读取本地缓存文件
         get(IMAGE_CACHE_MAPFILE_NAME, (error, data) => {
             if (!error) {
@@ -163,7 +112,7 @@ const saveItemCache = ({
 }) => {
     try {
         //声明文件目录、文件路径
-        let fpath = path.join(IMAGE_CACHE_PATH, `./image_cache__${coskey}`);
+        let fpath = path.join(getImgCacheDir(), `./image_cache__${coskey}`);
         //下载文件
         download(url, fpath).then(() => {
             //保存当前文件映射关系
@@ -183,7 +132,7 @@ const saveItemCache = ({
 const deepCopy = (srcpath, coskey) => {
     try {
         //声明文件目录、文件路径
-        let dstpath = path.join(IMAGE_CACHE_PATH, `./image_cache__${coskey}`);
+        let dstpath = path.join(getImgCacheDir(), `./image_cache__${coskey}`);
         // 创建读取流
         let readable = fs.createReadStream(srcpath);
         // 创建写入流

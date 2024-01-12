@@ -1,10 +1,9 @@
 import os from 'os';
-import path from 'path';
 import process from 'child_process';
-
 import packageJson from '../config/package.json';
 import net from '../common/net.js';
 import netDownload from '../common/net-download.js';
+import { getCCPkgsDir } from '../common/utils';
 
 const UPGARDE_STATUS_IDLE = 0;
 
@@ -43,8 +42,6 @@ const getPlatformType = () => {
 
 //版本更新接口
 const URL_CHECK_VERSION = '/ResourceServiceCenter/cctool/QueryCCToolPkgVersion';
-//定义安装包路径
-const DIR_PACKAGE = path.join($dirname, '../../pkgs/');
 
 class UpgradeModule {
 
@@ -123,7 +120,9 @@ class UpgradeModule {
      */
     handlePkgDownload(arg) {
         // 触发文件下载
-        netDownload.download(arg.url, arg.fileName, DIR_PACKAGE, {
+        // 定义安装包路径
+        let ccLibrariesDir = getCCPkgsDir();
+        netDownload.download(arg.url, arg.fileName, ccLibrariesDir, {
             onSucc: (localpath) => {
                 // 发送成功事件
                 this.send('download-succ', localpath);

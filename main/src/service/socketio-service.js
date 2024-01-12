@@ -1,10 +1,13 @@
 import SocketCore from './socketio-lib';
 import SerialportCore from './serialport';
-import path from 'path';
 import { exec } from 'child_process';
 import os from 'os';
 import { createCompiler } from './compilers/compiler-factory';
-
+import bindAll from 'lodash.bindall';
+import JSZip from 'jszip';
+import path from 'path';
+import fs from 'fs';
+import { getCCLibrariesDir } from '../common/utils';
 import {
     getFirmwareInfo,
     getFirmwareFile
@@ -13,16 +16,8 @@ import {
 import {
     saveMaterialImage,
     getMaterialImage,
-    savePlatformMaterials,
-    getPlatformMaterials,
-    deleteUserMaterial,
-    saveUserMaterials,
-    getUserMaterials,
     clearCacheDownloadQueue
 } from '../modules/material-module';
-
-
-import bindAll from 'lodash.bindall';
 
 const URL_MAIN = '/';
 
@@ -51,6 +46,23 @@ const HTTP_RESP_HEADERS = {
     'Content-Type': 'text/plain; charset=utf-8',
     'Access-Control-Allow-Origin': '*'
 };
+
+
+const deleteFolder = function (path) {
+    var files = [];
+    if (fs.existsSync(path)) {
+        files = fs.readdirSync(path);
+        files.forEach(function (file, index) {
+            var curPath = path + "/" + file;
+            if (fs.statSync(curPath).isDirectory()) { // recurse
+                deleteFolder(curPath);
+            } else { // delete file
+                fs.unlinkSync(curPath);
+            }
+        });
+        fs.rmdirSync(path);
+    }
+}
 
 /**
  * 安装驱动
@@ -164,6 +176,11 @@ class SocketIOService {
             'handleResponse',
             'handleConnectionClose',
             'handleUpdateBaudRate',
+            'handleUploadLibrary',
+            'handleUploadTensorFlowLibrary',
+            'handleCheckLibrary',
+            'handleCheckTensorFlowLibrary',
+            'handleUploadBin',
             'onRequest'
         ]);
 
@@ -279,6 +296,24 @@ class SocketIOService {
         //更新波特率
         else if ('update-baudrate' === method) {
             this.handleUpdateBaudRate(data);
+        }
+        //更新arduino library
+        else if ('uploadLibrary' === method) {
+            this.handleUploadLibrary(data);
+        }
+        else if ('uploadTensorFlowLibrary' === method) {
+            this.handleUploadTensorFlowLibrary(data);
+        }
+        //检查arduino library是否存在
+        else if ('checkLibrary' === method) {
+            this.handleCheckLibrary(data);
+        }
+        else if ('checkTensorFlowLibrary' === method) {
+            this.handleCheckTensorFlowLibrary(data);
+        }
+        //烧录bin文件
+        else if ('uploadBin' === method) {
+            this.handleUploadBin(data);
         }
         // 检查更新
         else if ('versionupgrade' === method) {
@@ -447,6 +482,157 @@ class SocketIOService {
         
     }
 
+    async handleUploadLibrary(data) {
+        let zip = new JSZip();
+
+        let blob = data.blob
+        let projectId = data.projectId
+
+        //转换压缩包对象
+        let orginData = await zip.loadAsync(blob, { optimizedBinaryString: true });
+        let files = orginData.files;
+        
+        //库目录
+        let ccLibrariesDir = getCCLibrariesDir();
+        let savePath = `ei-project_${projectId}`;
+        // let savePath = `../../compilers/arduino/contents/libraries/ei-project_${projectId}`;
+        // let libraryDir = path.join($dirname, savePath);
+
+        let libraryDir = path.join(ccLibrariesDir, savePath);
+        //如果已经存在就删除
+        if (fs.existsSync(libraryDir)) {
+            deleteFolder(libraryDir);
+        }
+        fs.mkdirSync(libraryDir, {
+            recursive: true
+        });
+
+        try {
+            for (let filename of Object.keys(files)) {
+                // let t = filename.slice(filename.indexOf('/'));
+                // if (t=='/') {
+                //     continue;
+                // }
+                // let dest = path.join($dirname, savePath, filename);
+                let dest = path.join(libraryDir, filename);
+                // 如果该文件为目录需先创建文件夹
+                if (files[filename].dir) {
+                    fs.mkdirSync(dest, {
+                        recursive: true
+                    });
+                } else {
+                    //porting目录除了这几个文件，都要删掉
+                    if (/^src\/edge-impulse-sdk\/porting\//.test(filename)) {
+                        if (
+                            filename == 'src/edge-impulse-sdk/porting/ei_classifier_porting.h' ||
+                            filename == 'src/edge-impulse-sdk/porting/ei_logging.h' ||
+                            /^src\/edge-impulse-sdk\/porting\/arduino\//.test(filename)) {
+                            files[filename].async('nodebuffer')
+                                .then(content => fs.writeFileSync(dest, content));
+                        }
+                    } else {
+                        // 把每个文件buffer写到硬盘中 
+                        files[filename].async('nodebuffer')
+                            .then(content => fs.writeFileSync(dest, content));
+                    }
+                }
+            }
+
+            this.sendMessage({
+                method: 'uploadLibrary-resp',
+                data: {
+                    success: true,
+                }
+            });
+
+        } catch (error) {
+            this.sendMessage({
+                method: 'uploadLibrary-resp',
+                data: {
+                    success: false,
+                }
+            });
+            console.error('save zip files encountered error!', error.message);
+        }
+    }
+
+    async handleUploadTensorFlowLibrary(data) {
+        let content = data.content
+        let projectId = data.projectId
+        let labels = data.labels
+        let labelstr = JSON.stringify(labels).replace('[','').replace(']','')
+        try {
+            //库目录
+            let ccLibrariesDir = getCCLibrariesDir();
+            let savePath = `tf_project_${projectId}`;
+
+            let libraryDir = path.join(ccLibrariesDir, savePath);
+            //如果已经存在就删除
+            if (fs.existsSync(libraryDir)) {
+                deleteFolder(libraryDir);
+            }
+            fs.mkdirSync(libraryDir, {
+                recursive: true
+            });
+            let dest = path.join(libraryDir, `model_${projectId}.h`);
+            content = content + 
+`const char* LABELS[] = {
+    ${labelstr}
+};
+              `
+            fs.writeFileSync(dest, content)
+
+            this.sendMessage({
+                method: 'uploadTensorFlowLibrary-resp',
+                data: {
+                    success: true,
+                }
+            });
+        } catch (error) {
+            this.sendMessage({
+                method: 'uploadTensorFlowLibrary-resp',
+                data: {
+                    success: false,
+                }
+            });
+        }
+    }
+
+    handleCheckLibrary(data) {
+        let projectId = data.projectId;
+        //库目录
+        // let savePath = `../../compilers/arduino/contents/libraries/ei-project_${projectId}`;
+        let ccLibrariesDir = getCCLibrariesDir();
+        let savePath = `ei-project_${projectId}`;
+        let libraryDir = path.join(ccLibrariesDir, savePath);
+        // let libraryDir = path.join($dirname, savePath);
+
+        let libraryExist = fs.existsSync(libraryDir);
+
+        this.sendMessage({
+            method: 'checkLibrary-resp',
+            data: {
+                libraryExist,
+            }
+        });
+    }
+
+    handleCheckTensorFlowLibrary(data) {
+        let projectId = data.projectId;
+        let ccLibrariesDir = getCCLibrariesDir();
+        let savePath = `tf_project_${projectId}`;
+        let libraryDir = path.join(ccLibrariesDir, savePath);
+
+        let libraryExist = fs.existsSync(libraryDir);
+
+        this.sendMessage({
+            method: 'checkTensorFlowLibrary-resp',
+            data: {
+                libraryExist,
+            }
+        });
+    }
+
     /**
      * 发送消息
      * @param {*} message 
@@ -461,9 +647,16 @@ class SocketIOService {
      */
     handleScan() {
         SerialportCore.scan().then(data => {
+            var newdata = []
+            data.map((item) => {
+                var dest = {}
+                Object.assign(dest, item)
+                dest.comName = item.path;
+                newdata.push(dest)
+            })
             const response = {
                 method: 'device-scan',
-                data: data
+                data: newdata
             }
             this.sendMessage(response);
         });
@@ -527,7 +720,7 @@ class SocketIOService {
         } = wdata;
         //获取对应的编译器
         let compilerObj = createCompiler(compiler);
-        if (comName) compilerObj.comName = comName;
+        if (comName) compilerObj.path = comName;
         if (compilerObj) {
             compilerObj.compiler(data).then(
                 (result) => {
@@ -536,16 +729,17 @@ class SocketIOService {
                         data: {
                             compileSucc: true,
                             compileType: compiler,
-                            content: result ? result.toString() : ""
+                            content: result ? typeof result == "string" ? result : result.toString() : ""
                         }
                     });
                 },
-                () => {
+                (error) => {
                     this.sendMessage({
                         method: 'compile-resp',
                         data: {
                             compileSucc: false,
-                            compileType: compiler
+                            compileType: compiler,
+                            content: error ? typeof error == "string" ? error : error.toString() : ""
                         }
                     });
                 }
@@ -553,6 +747,58 @@ class SocketIOService {
         } else {
             this.sendMessage({
                 method: 'compile-resp',
+                data: {
+                    compileSucc: false,
+                    compileType: 'empty'
+                }
+            });
+        }
+    }
+
+    /**
+    * 直接烧录bin或者hex文件
+    *    {
+    *        content: result,
+    *        compileSucc: true,
+    *        compileType: compiler
+    *    }
+    * @param {*} wdata
+    */
+    handleUploadBin(wdata) {
+        const {
+            compiler,
+            data,
+            comName
+        } = wdata;
+        //获取对应的编译器
+        let compilerObj = createCompiler(compiler);
+        if (comName) compilerObj.path = comName;
+        if (compilerObj) {
+            compilerObj.uploadBin(data).then(
+                (result) => {
+                    this.sendMessage({
+                        method: 'uploadBin-resp',
+                        data: {
+                            compileSucc: true,
+                            compileType: compiler,
+                            content: result ? typeof result == "string" ? result : result.toString() : ""
+                        }
+                    });
+                },
+                (error) => {
+                    this.sendMessage({
+                        method: 'uploadBin-resp',
+                        data: {
+                            compileSucc: false,
+                            compileType: compiler,
+                            content: error ? typeof error == "string" ? error : error.toString() : ""
+                        }
+                    });
+                }
+            );
+        } else {
+            this.sendMessage({
+                method: 'uploadBin-resp',
                 data: {
                     compileSucc: false,
                     compileType: 'empty'
@@ -582,7 +828,6 @@ class SocketIOService {
         console.log('handleConnectionError error : ' + error);
         this.sendMessage({ method: 'device-disconnect' });
     }
-
 
     /**
      * onError
