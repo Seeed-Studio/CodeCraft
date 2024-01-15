@@ -30,18 +30,8 @@ You can download the latest version from [the download page from our website](ht
 ## Prerequisites
 
 This project requires:
-- [Node.js 14+](https://nodejs.org/)
-- [Python 2.x](https://www.python.org/downloads/release/python-272/), and make it as the default version
-
-## Build
-
-Clone this repo
-
-```bash
-git clone -b main https://github.com/Seeed-Studio/CodeCraft.git ~/seeed-codecraft 
-export workspace=~/seeed-codecraft
-pushd $workspace
-```
+- [Node.js 16+](https://nodejs.org/)
+- [Python 2.x](https://www.python.org/downloads/release/python-272/), or [Python 3.x](https://www.python.org/downloads/) and make it as the default version
 
 ### Auto Install
 
@@ -60,16 +50,16 @@ bash run-win64.sh
 ### Manual Installation
 
 ```bash
-cd ${workspace}/blocks
+cd ./blocks
 npm install && npm run build
 
-cd ${workspace}/l10n
+cd ./l10n
 npm install && npm run build
 
-cd ${workspace}/vm
+cd ./vm
 npm install && npm run build
 
-cd ${workspace}/gui
+cd ./gui
 npm install
 ```
 
@@ -88,8 +78,8 @@ npm run build-win
 #### Build main app
 
 ```bash
-rm -r ${workspace}/main/app/gui && cp -r ./build ${workspace}/main/app/gui
-cd ${workspace}/main/app
+rm -r ../main/app/gui && cp -r ./build ../main/app/gui
+cd ./main/app
 npm install
 ./node_modules/.bin/electron-rebuild serialport
 
@@ -97,7 +87,7 @@ npm install
 # system, you need to open powershell as an administrator, and then execute 
 # Set-ExecutionPolicy RemoteSigned
 
-cd ${workspace}/main
+cd ./main
 npm install
 rm -r build 
 ```
