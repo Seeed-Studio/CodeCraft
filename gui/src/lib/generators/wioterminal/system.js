@@ -528,7 +528,7 @@ tft.drawString("OK", 120, 100);\n`
         tflite_include();
         Blockly.Arduino.definitions_['include_tensorflow_model'] = `#include "model_${projectId}.h"`;
         Blockly.Arduino.definitions_['var_num_labels'] = '#define NUM_LABELS (sizeof(LABELS) / sizeof(LABELS[0]))';
-        Blockly.Arduino.definitions_['var_num_samples'] = 'const int numSamples = 1000;';
+        Blockly.Arduino.definitions_['var_num_samples'] = 'const int numSamples = 100;';
         Blockly.Arduino.definitions_['var_max_confidence_label'] = 'const char* maxConfidenceLabel;';
         tflite_define(30 * 1024);
         tflite_setup();
@@ -570,19 +570,19 @@ void runClassifier()
         Blockly.Arduino.definitions_['include_tensorflow_model'] = `#include "model_${projectId}.h"`;
         Blockly.Arduino.definitions_['var_num_labels'] = '#define NUM_LABELS (sizeof(LABELS) / sizeof(LABELS[0]))';
         Blockly.Arduino.definitions_['var_mfcc'] = 
-`#define NUM_SEC 10
-#define NUM_FRAMES NUM_SEC / 0.1
+`#define NUM_SEC 5
+#define NUM_FRAMES NUM_SEC / 0.025
 #define NUM_MFCC_COEFFS 13
-#define FRAME_LEN ((int16_t)(16000 * 0.001 * 100))
+#define FRAME_LEN ((int16_t)(16000 * 0.001 * 25))
 #define FRAME_SHIFT 0
-#define CLASSIFIER_SLICE_SIZE 1600        
+#define CLASSIFIER_SLICE_SIZE 400     
 `
         Blockly.Arduino.definitions_['var_max_confidence_label'] = 'const char* maxConfidenceLabel;';
         tflite_define(30 * 1024);
         Blockly.Arduino.definitions_['var_sound_classifier_head'] = 
 `enum
 {
-    ADC_BUF_LEN = 1600
+    ADC_BUF_LEN = 400
 };
 typedef struct
 {
@@ -737,13 +737,16 @@ void config_dma_adc()
     inference.buf_count = 0;
     inference.n_samples = CLASSIFIER_SLICE_SIZE;
     inference.buf_ready = 0;
-    recording = 1;
-    recording_win = NUM_FRAMES;
     config_dma_adc();
 `;
         Blockly.Arduino.define_fun['func_runClassifier'] = 
 `void runClassifier()
 {
+    if(!recording){
+      recording = 1;
+      recording_win = NUM_FRAMES;
+      delay(1);
+    }
     while (recording_win > 0)
     {
         delay(1);
@@ -770,8 +773,6 @@ void config_dma_adc()
             maxConfidenceLabel = label;
         }
     }
-    recording = 1;
-    recording_win = NUM_FRAMES;
 }`
         var code = `runClassifier();\n`;
         return code;

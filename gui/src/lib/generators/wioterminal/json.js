@@ -20,7 +20,7 @@ export default (Blockly) => {
         Blockly.Arduino.definitions_[`var_custom_${obj.value}`] = `JSONVar ${json};`;
         let key = Blockly.Arduino.valueToCode(block, 'KEY', Blockly.Arduino.ORDER_NONE);
         let value = Blockly.Arduino.valueToCode(block, 'VALUE', Blockly.Arduino.ORDER_NONE);
-        let code = `${json}[${key}] = ${value};\n`;
+        let code = `${json}[${key}] = (String)${value};\n`;
         return code;
     }
 
@@ -34,7 +34,7 @@ export default (Blockly) => {
         let json = obj.text;
         Blockly.Arduino.definitions_[`var_custom_${obj.value}`] = `JSONVar ${json};`;
         let key = Blockly.Arduino.valueToCode(block, 'KEY', Blockly.Arduino.ORDER_NONE);
-        let code = `${json}[${key}]`;
+        let code = `(const String&)${json}[${key}]`;
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }
 
