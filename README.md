@@ -75,7 +75,7 @@ npm run build-mac
 npm run build-win
 ```
 
-#### Build main app
+Build main app
 
 ```bash
 rm -r ../main/app/gui && cp -r ./build ../main/app/gui
@@ -112,6 +112,43 @@ npm run publish-win64
 
 Once you finish building, you can find the installer under main/build/
 
+### Debug Mode
+If you want to enter debug mode and debug the gui, you need to run the gui locally first. The gui depends on block, l10n, and vm, so you need to compile these three projects first.
+```bash
+cd ./blocks
+npm install && npm run build
+
+cd ./l10n
+npm install && npm run build
+
+cd ./vm
+npm install && npm run build
+
+cd ./gui
+npm run start
+```
+At this time, a front-end service is running in the current terminal. localhost:8601
+
+Then modify window load URL.
+
+Line 213 in /main/src/application.js
+
+```bash
+Comment out the line.
+window.loadURL(loadURL);
+
+Open the line.
+window.loadURL('http://localhost:8601');
+
+If you need the console, open the line.
+window.webContents.openDevTools();
+```
+Open a new terminal
+
+```bash
+cd ./main
+npm run start
+```
 ## Contribute
 
 `PR welcome`
