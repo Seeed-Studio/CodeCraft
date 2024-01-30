@@ -150,6 +150,39 @@ Open a new terminal
 cd ./main
 npm run start
 ```
+
+## Add block and library
+### block shape and type definition
+
+block directory: blocks/blocks_vertical
+
+block l10n directory: blocks/msg/scratch_msgs.js
+
+The block type value must start with 'argument', 'colour', 'control', 'data', 'event', 'looks', 'math', 'motion', 'operator', 'procedures', 'sensing', 'sound', 'system', 'display', 'azure', 'json', 'mqtt'. these values ​​are defined in CORE_EXTENSIONS of vm/src/serialization/sb2.js and sb3.js files
+
+### block code definition
+code directory: gui/src/lib/generators/${device}/
+
+### block ui render
+ui xml directory: gui/lib/toolboxs/toolbox-${deviceId}-xml.js
+```bash
+1001: grove zero
+1002: arduino
+1004: micro:bit
+1005: mark
+1006: grove joint
+1007: mPython
+1008: glint
+1009: bittle
+1010: wio terminal
+```
+
+### arduino library
+library directory: main/compilers/arduino-libraries/
+
+You can put your arduino library in this directory
+
+
 ## Contribute
 
 `PR welcome`
