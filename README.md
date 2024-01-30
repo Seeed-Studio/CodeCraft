@@ -114,6 +114,7 @@ Once you finish building, you can find the installer under main/build/
 
 ### Debug Mode
 If you want to enter debug mode and debug the gui, you need to run the gui locally first. The gui depends on block, l10n, and vm, so you need to compile these three projects first.
+
 ```bash
 cd ./blocks
 npm install && npm run build
@@ -127,7 +128,7 @@ npm install && npm run build
 cd ./gui
 npm run start
 ```
-At this time, a front-end service is running in the current terminal. localhost:8601
+At this time, a web service is running in the current terminal. localhost:8601
 
 Then modify window load URL.
 
