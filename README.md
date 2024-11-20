@@ -192,3 +192,6 @@ Here, we’d also love to announce an open call for contributions to Codecraft o
 ## License
 
 The code contained in this repository and the executable distributions are licensed under the terms of the Apache License 2.0. The executable distributions contain third-party code licensed under other compatible licenses such as BSD-3.
+
+
+TODO: add documentation on how to create new modules
