@@ -38,8 +38,10 @@ export default (Blockly) => {
 
     //超声波
     Blockly.Arduino['grove_wioterminal_seeed_ult'] = function (block) {
+        var th = Blockly.Arduino.valueToCode(block, 'PIN', Blockly.Arduino.ORDER_ATOMIC) || '0';
+
         Blockly.Arduino.definitions_['include_ultrasonic'] = '#include <Ultrasonic.h>';
-        Blockly.Arduino.definitions_[`var_ult`] = `Ultrasonic ult(0);`;
+        Blockly.Arduino.definitions_[`var_ult`] = `Ultrasonic ult(${th});`;
         var code = `(long)ult.MeasureInCentimeters()`;
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     }

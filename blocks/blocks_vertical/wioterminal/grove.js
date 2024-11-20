@@ -141,6 +141,10 @@ Blockly.Blocks['grove_wioterminal_seeed_ult'] = {
                 {
                     "type": "field_vertical_separator"
                 },
+                {
+                    "type": "input_value",
+                    "name": "PIN"
+                },
             ],
             "extensions": ["colours_arduino_grove_igure", "output_number"],
         });

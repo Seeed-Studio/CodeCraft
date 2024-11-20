@@ -566,7 +566,14 @@ const grove = function () {
         </block>
         <block type="grove_wioterminal_seeed_line_finder">        
         </block>
-        <block type="grove_wioterminal_seeed_ult">        
+        <block type="grove_wioterminal_seeed_ult">
+        
+                    <value name="PIN">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+
         </block>
         <block type="grove_wioterminal_seeed_pir_motion">        
         </block>
