@@ -3,7 +3,7 @@
 [![Feature Requests](./misc/main.jpg)](https://www.yuque.com/tinkergen-help-en/codecraft?language=en-us)
 
 **Codecraft is a graphical programming software which is based on [Scratch 3.0](https://scratch.mit.edu/). It targets teenagers of age 7-16, compatible with WIN/MAC.**  
-By using a drag-and-drop interface, Codecraft has been helping users program without the need to write code in traditional text-based programming languages. Since its’ launch in 2018, it’s designed to make it easier for beginners, especially STEAM classrooms, to embrace coding to create projects and prototypes. With a focus on programming microcontrollers and IoT devices, Codecraft has been adapted and trusted by thousands of users all around the world. In 2022, Codecraft was recognized as [Bett Awards Finalist](https://www.seeedstudio.com/blog/2022/04/06/seeed-studio-codecraft-recognized-finalist-by-edtech-awards-2022/) and [The Edtech Awards Cool Tool Finalist](https://www.seeedstudio.com/blog/2022/04/06/seeed-studio-codecraft-recognized-finalist-by-edtech-awards-2022/), two important and in prestigious awards the education technology industry. 
+By using a drag-and-drop interface, Codecraft has been helping users program without the need to write code in traditional text-based programming languages. Since its’ launch in 2018, it’s designed to make it easier for beginners, especially STEAM classrooms, to embrace coding to create projects and prototypes. With a focus on programming microcontrollers and IoT devices, Codecraft has been adapted and trusted by thousands of users all around the world. In 2022, Codecraft was recognized as [Bett Awards Finalist](https://www.seeedstudio.com/blog/2022/04/06/seeed-studio-codecraft-recognized-finalist-by-edtech-awards-2022/) and [The Edtech Awards Cool Tool Finalist](https://www.seeedstudio.com/blog/2022/04/06/seeed-studio-codecraft-recognized-finalist-by-edtech-awards-2022/), two important and in prestigious awards the education technology industry.
 
 [Codecraft help online](https://www.yuque.com/tinkergen-help-en/codecraft?language=en-us)
 
@@ -30,8 +30,11 @@ You can download the latest version from [the download page from our website](ht
 ## Prerequisites
 
 This project requires:
+
 - [Node.js 16+](https://nodejs.org/)
+- [PNPM 9+](https://pnpm.io/)
 - [Python 2.x](https://www.python.org/downloads/release/python-272/), or [Python 3.x](https://www.python.org/downloads/) and make it as the default version
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/)
 
 ### Auto Install
 
@@ -51,28 +54,28 @@ bash run-win64.sh
 
 ```bash
 cd ./blocks
-npm install && npm run build
+pnpm install && pnpm build
 
 cd ./l10n
-npm install && npm run build
+pnpm install && pnpm build
 
 cd ./vm
-npm install && npm run build
+pnpm install && pnpm build
 
 cd ./gui
-npm install
+pnpm install
 ```
 
 - For mac or linux like
 
 ```bash
-npm run build-mac
+pnpm build-mac
 ```
 
 - For win
 
 ```bash
-npm run build-win
+pnpm build-win
 ```
 
 Build main app
@@ -80,54 +83,56 @@ Build main app
 ```bash
 rm -r ../main/app/gui && cp -r ./build ../main/app/gui
 cd ./main/app
-npm install
+pnpm install
 ./node_modules/.bin/electron-rebuild serialport
 
-# If the error message “script is prohibited on this system” appears on the Windows   
-# system, you need to open powershell as an administrator, and then execute 
+# If the error message “script is prohibited on this system” appears on the Windows
+# system, you need to open powershell as an administrator, and then execute
 # Set-ExecutionPolicy RemoteSigned
 
 cd ./main
-npm install
-rm -r build 
+pnpm install
+rm -r build
 ```
 
 - For Mac
 
 ```bash
-npm run publish-mac
+pnpm publish-mac
 ```
 
 - For Linux like
 
 ```bash
-npm run publish-linux
+pnpm publish-linux
 ```
 
 - For Windows
 
 ```bash
-npm run publish-win64
+pnpm publish-win64
 ```
 
 Once you finish building, you can find the installer under main/build/
 
 ### Debug Mode
+
 If you want to enter debug mode and debug the gui, you need to run the gui locally first. The gui depends on block, l10n, and vm, so you need to compile these three projects first.
 
 ```bash
 cd ./blocks
-npm install && npm run build
+pnpm install && pnpm build
 
 cd ./l10n
-npm install && npm run build
+pnpm install && pnpm build
 
 cd ./vm
-npm install && npm run build
+pnpm install && pnpm build
 
 cd ./gui
-npm run start
+pnpm start
 ```
+
 At this time, a web service is running in the current terminal. localhost:8601
 
 Then modify window load URL.
@@ -144,14 +149,16 @@ window.loadURL('http://localhost:8601');
 If you need the console, open the line.
 window.webContents.openDevTools();
 ```
+
 Open a new terminal
 
 ```bash
 cd ./main
-npm run start
+pnpm start
 ```
 
 ## Add block and library
+
 ### block shape and type definition
 
 block directory: blocks/blocks_vertical
@@ -161,10 +168,13 @@ block l10n directory: blocks/msg/scratch_msgs.js
 The block type value must start with 'argument', 'colour', 'control', 'data', 'event', 'looks', 'math', 'motion', 'operator', 'procedures', 'sensing', 'sound', 'system', 'display', 'azure', 'json', 'mqtt'. these values ​​are defined in CORE_EXTENSIONS of vm/src/serialization/sb2.js and sb3.js files
 
 ### block code definition
+
 code directory: gui/src/lib/generators/${device}/
 
 ### block ui render
+
 ui xml directory: gui/lib/toolboxs/toolbox-${deviceId}-xml.js
+
 ```bash
 1001: grove zero
 1002: arduino
@@ -178,10 +188,10 @@ ui xml directory: gui/lib/toolboxs/toolbox-${deviceId}-xml.js
 ```
 
 ### arduino library
+
 library directory: main/compilers/arduino-libraries/
 
 You can put your arduino library in this directory
-
 
 ## Contribute
 
@@ -192,6 +202,5 @@ Here, we’d also love to announce an open call for contributions to Codecraft o
 ## License
 
 The code contained in this repository and the executable distributions are licensed under the terms of the Apache License 2.0. The executable distributions contain third-party code licensed under other compatible licenses such as BSD-3.
-
 
 TODO: add documentation on how to create new modules

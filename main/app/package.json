@@ -91,5 +91,11 @@
     "node-fetch": "^2.6.0",
     "serialport": "^10.5.0",
     "socket.io": "2.1.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@serialport/bindings-cpp",
+      "electron"
+    ]
   }
 }
